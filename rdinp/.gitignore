@@ -1,0 +1,28 @@
+# Locally generated evidence and fixture inputs.
+**/runs/
+**/manual-evidence/
+artifacts/
+*.sqlite*
+*.db
+*.log
+*.jsonl
+
+# Environments and build products.
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.exe
+*.zip
+*.tar.gz
+
+# Credentials and editor state.
+.env
+.env.*
+*.pem
+*.key
+*.pfx
+*.p12
+.vscode/
+.idea/
+

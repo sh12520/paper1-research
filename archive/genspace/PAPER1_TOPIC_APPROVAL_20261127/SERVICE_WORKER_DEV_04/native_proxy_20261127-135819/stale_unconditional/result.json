@@ -1,0 +1,17 @@
+{
+  "case": "stale_unconditional",
+  "A_status": 200,
+  "before_A_same_etag": false,
+  "before_A_value": {
+    "dial": "127.0.0.1:8672"
+  },
+  "initial_value": {
+    "dial": "127.0.0.1:8669"
+  },
+  "final_backend": "A",
+  "final_sha256": "dd13e1d063ed2a5e9c4551ccfd6949e0fe68ecf6684c1a6b9f338c0e0917798b",
+  "deadline_ns": null,
+  "A_sent_after_deadline": null,
+  "manager_rejected": false,
+  "matches_expected_control": true
+}

@@ -1,0 +1,306 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "urn:rdinp:a1:contracts:2",
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "plan",
+  "policy",
+  "timing"
+ ],
+ "properties": {
+  "plan": {
+   "$ref": "#/$defs/plan"
+  },
+  "policy": {
+   "$ref": "#/$defs/policy"
+  },
+  "timing": {
+   "$ref": "#/$defs/timing"
+  }
+ },
+ "$defs": {
+  "uint": {
+   "type": "integer",
+   "minimum": 0,
+   "maximum": 9007199254740991
+  },
+  "pos": {
+   "type": "integer",
+   "minimum": 1,
+   "maximum": 9007199254740991
+  },
+  "hash": {
+   "type": "string",
+   "pattern": "^[0-9a-f]{64}$"
+  },
+  "revision": {
+   "const": "RDINP-A1-CANDIDATE-2"
+  },
+  "phase": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "phase",
+    "requestLossBound",
+    "responseLossBound",
+    "attempts",
+    "retryMs",
+    "cleanMs",
+    "cutoffMs",
+    "transitionMs"
+   ],
+   "properties": {
+    "phase": {
+     "enum": [
+      "INTENT_INITIAL",
+      "INTENT_REPLAY",
+      "COMMIT_INITIAL",
+      "COMMIT_REPLAY"
+     ]
+    },
+    "requestLossBound": {
+     "type": "integer",
+     "minimum": 0,
+     "maximum": 16
+    },
+    "responseLossBound": {
+     "type": "integer",
+     "minimum": 0,
+     "maximum": 16
+    },
+    "attempts": {
+     "type": "integer",
+     "minimum": 1,
+     "maximum": 289
+    },
+    "retryMs": {
+     "$ref": "#/$defs/pos"
+    },
+    "cleanMs": {
+     "$ref": "#/$defs/pos"
+    },
+    "cutoffMs": {
+     "$ref": "#/$defs/pos"
+    },
+    "transitionMs": {
+     "$ref": "#/$defs/uint"
+    }
+   }
+  },
+  "plan": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "revision",
+    "initialBudgetMs",
+    "phases",
+    "rejectDeadlineMs",
+    "terminalDeadlineMs",
+    "leaseNs",
+    "cleanupBudgetMs",
+    "requestDeliveryNs",
+    "serverPrecheckNs",
+    "sendJitterNs"
+   ],
+   "properties": {
+    "revision": {
+     "$ref": "#/$defs/revision"
+    },
+    "phases": {
+     "type": "array",
+     "minItems": 4,
+     "maxItems": 4,
+     "items": {
+      "$ref": "#/$defs/phase"
+     }
+    },
+    "rejectDeadlineMs": {
+     "$ref": "#/$defs/pos"
+    },
+    "terminalDeadlineMs": {
+     "$ref": "#/$defs/pos"
+    },
+    "leaseNs": {
+     "$ref": "#/$defs/pos"
+    },
+    "cleanupBudgetMs": {
+     "$ref": "#/$defs/pos"
+    },
+    "requestDeliveryNs": {
+     "$ref": "#/$defs/uint"
+    },
+    "serverPrecheckNs": {
+     "$ref": "#/$defs/uint"
+    },
+    "sendJitterNs": {
+     "$ref": "#/$defs/uint"
+    },
+    "initialBudgetMs": {
+     "$ref": "#/$defs/pos"
+    }
+   }
+  },
+  "policy": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "revision",
+    "clientRules",
+    "resourceRules",
+    "clockRules",
+    "transportRules"
+   ],
+   "properties": {
+    "revision": {
+     "$ref": "#/$defs/revision"
+    },
+    "clientRules": {
+     "const": {
+      "attemptLifetime": "UNTIL_PHASE_CUTOFF",
+      "completionEvent": "VERIFIED_PHASE_WINNER_LATCH",
+      "deadlineEquality": "FAIL_CLOSED",
+      "commitPossibleWriteAhead": true,
+      "onlineUnknownClosurePromised": false,
+      "firstEffectPhasePrerequisites": true
+     }
+    },
+    "resourceRules": {
+     "type": "object",
+     "additionalProperties": false,
+     "required": [
+      "authorityKind",
+      "leaseEvent",
+      "commitTailBudgetNs",
+      "commitTailMarginNs",
+      "cleanupDispatchBudgetMs",
+      "cleanupCompletionBudgetMs"
+     ],
+     "properties": {
+      "authorityKind": {
+       "const": "SQLITE_LOGICAL_QUOTA"
+      },
+      "leaseEvent": {
+       "const": "DURABLE_COMMIT_RETURN"
+      },
+      "commitTailBudgetNs": {
+       "$ref": "#/$defs/pos"
+      },
+      "commitTailMarginNs": {
+       "$ref": "#/$defs/uint"
+      },
+      "cleanupDispatchBudgetMs": {
+       "$ref": "#/$defs/pos"
+      },
+      "cleanupCompletionBudgetMs": {
+       "$ref": "#/$defs/pos"
+      }
+     }
+    },
+    "clockRules": {
+     "type": "object",
+     "additionalProperties": false,
+     "required": [
+      "clientUnit",
+      "serverUnit",
+      "bootBound",
+      "requireNondecreasing",
+      "maxTimestampNs",
+      "clientRateLowerPpm",
+      "serverRateUpperPpm",
+      "clientObservationErrorNs",
+      "serverObservationErrorNs"
+     ],
+     "properties": {
+      "clientUnit": {
+       "const": "NANOSECONDS"
+      },
+      "serverUnit": {
+       "const": "NANOSECONDS"
+      },
+      "bootBound": {
+       "const": true
+      },
+      "requireNondecreasing": {
+       "const": true
+      },
+      "maxTimestampNs": {
+       "const": 9007199254740991
+      },
+      "clientRateLowerPpm": {
+       "$ref": "#/$defs/pos"
+      },
+      "serverRateUpperPpm": {
+       "$ref": "#/$defs/pos"
+      },
+      "clientObservationErrorNs": {
+       "$ref": "#/$defs/uint"
+      },
+      "serverObservationErrorNs": {
+       "$ref": "#/$defs/uint"
+      }
+     }
+    },
+    "transportRules": {
+     "const": {
+      "binding": "HTTP_JSON_ES256_DETACHED_JWS",
+      "messageAccounting": "LOGICAL_ENDPOINT_SENDS",
+      "applicationDuplicationInGuarantee": "NONE",
+      "transparentApplicationRetries": false,
+      "redirectsAllowed": false,
+      "sameAttemptRawIdentityRequired": true,
+      "admittedArrivalReplyPolicy": "ONE_CORRELATED_REPLY_UNDER_LIVE_BOUNDED_EXECUTION"
+     }
+    }
+   }
+  },
+  "timing": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "protocolRevision",
+    "contractKind",
+    "phasePlanRawSha256",
+    "policyProfileDigest",
+    "timeUnit",
+    "successRejectPublishBudget",
+    "successCommitPublishBudget",
+    "failureDispatchBudget",
+    "failurePublishBudget",
+    "deadlineSafetyMargin"
+   ],
+   "properties": {
+    "protocolRevision": {
+     "$ref": "#/$defs/revision"
+    },
+    "contractKind": {
+     "const": "CONDITIONAL_BILATERAL_LOGICAL_AUTHORITY"
+    },
+    "phasePlanRawSha256": {
+     "$ref": "#/$defs/hash"
+    },
+    "policyProfileDigest": {
+     "$ref": "#/$defs/hash"
+    },
+    "timeUnit": {
+     "const": "MILLISECONDS"
+    },
+    "successRejectPublishBudget": {
+     "$ref": "#/$defs/uint"
+    },
+    "successCommitPublishBudget": {
+     "$ref": "#/$defs/uint"
+    },
+    "failureDispatchBudget": {
+     "$ref": "#/$defs/uint"
+    },
+    "failurePublishBudget": {
+     "$ref": "#/$defs/uint"
+    },
+    "deadlineSafetyMargin": {
+     "$ref": "#/$defs/uint"
+    }
+   }
+  }
+ }
+}

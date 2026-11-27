@@ -1,0 +1,17 @@
+{
+  "case": "expired_dispatch_guard",
+  "A_status": null,
+  "before_A_same_etag": true,
+  "before_A_value": {
+    "dial": "127.0.0.1:9435"
+  },
+  "initial_value": {
+    "dial": "127.0.0.1:9435"
+  },
+  "final_backend": "initial",
+  "final_sha256": "e22988f18b19110bd677066bbcfdf45bd7970a5fd9be56b5e9be4edcedf744d9",
+  "deadline_ns": 100613127337800,
+  "A_sent_after_deadline": null,
+  "manager_rejected": true,
+  "matches_expected_control": true
+}

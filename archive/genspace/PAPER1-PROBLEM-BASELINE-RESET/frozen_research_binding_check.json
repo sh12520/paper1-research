@@ -1,0 +1,21 @@
+{
+  "advisory_markdown_sha256": "78a17e632e63c5e53e9a877e0b8e89cc7f25825528d33c01836857efe605d082",
+  "approved_readiness_sha256": null,
+  "approved_release_sha256": null,
+  "authorization_flags": {
+    "CONFIRM": false,
+    "METHOD_HOLDOUT": false
+  },
+  "authorization_sha256": "bc79872fbed17a017397e20e68c35b6f78668636dedf690bd4319f514d2101d4",
+  "final_candidate_manifest_sha256": "60bef57c1566be900f41b336f9f74b41dc80076132d3f48864d75b0292aae533",
+  "frozen_config_present": false,
+  "readiness_receipt_present": false,
+  "sealed_release_receipt_present": false,
+  "verified_file_counts": {
+    "approval_documents": 4,
+    "base_infrastructure": 16,
+    "candidate_assets": 75,
+    "candidate_sources": 148,
+    "proof_infrastructure": 8
+  }
+}

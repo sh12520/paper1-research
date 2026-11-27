@@ -1,0 +1,1453 @@
+{
+  "depth": [
+    {
+      "depth1_agreement": 569,
+      "depth1_deadlock_resolved_only_at_depth2": 40,
+      "depth2_agreement": 609,
+      "depth2_only_agreement": 40,
+      "depth2_only_rate": 0.041666666666666664,
+      "grouping": "ALL",
+      "n": 960
+    },
+    {
+      "depth1_agreement": 177,
+      "depth1_deadlock_resolved_only_at_depth2": 12,
+      "depth2_agreement": 189,
+      "depth2_only_agreement": 12,
+      "depth2_only_rate": 0.05,
+      "family": "F1",
+      "grouping": "family",
+      "n": 240
+    },
+    {
+      "depth1_agreement": 50,
+      "depth1_deadlock_resolved_only_at_depth2": 23,
+      "depth2_agreement": 73,
+      "depth2_only_agreement": 23,
+      "depth2_only_rate": 0.09583333333333334,
+      "family": "F2",
+      "grouping": "family",
+      "n": 240
+    },
+    {
+      "depth1_agreement": 166,
+      "depth1_deadlock_resolved_only_at_depth2": 5,
+      "depth2_agreement": 171,
+      "depth2_only_agreement": 5,
+      "depth2_only_rate": 0.020833333333333332,
+      "family": "F3",
+      "grouping": "family",
+      "n": 240
+    },
+    {
+      "depth1_agreement": 176,
+      "depth1_deadlock_resolved_only_at_depth2": 0,
+      "depth2_agreement": 176,
+      "depth2_only_agreement": 0,
+      "depth2_only_rate": 0.0,
+      "family": "F4",
+      "grouping": "family",
+      "n": 240
+    },
+    {
+      "depth1_agreement": 116,
+      "depth1_deadlock_resolved_only_at_depth2": 18,
+      "depth2_agreement": 134,
+      "depth2_only_agreement": 18,
+      "depth2_only_rate": 0.05625,
+      "grouping": "resource_pressure",
+      "n": 320,
+      "resource_pressure": "high"
+    },
+    {
+      "depth1_agreement": 250,
+      "depth1_deadlock_resolved_only_at_depth2": 2,
+      "depth2_agreement": 252,
+      "depth2_only_agreement": 2,
+      "depth2_only_rate": 0.00625,
+      "grouping": "resource_pressure",
+      "n": 320,
+      "resource_pressure": "low"
+    },
+    {
+      "depth1_agreement": 203,
+      "depth1_deadlock_resolved_only_at_depth2": 20,
+      "depth2_agreement": 223,
+      "depth2_only_agreement": 20,
+      "depth2_only_rate": 0.0625,
+      "grouping": "resource_pressure",
+      "n": 320,
+      "resource_pressure": "medium"
+    },
+    {
+      "depth1_agreement": 223,
+      "depth1_deadlock_resolved_only_at_depth2": 25,
+      "depth2_agreement": 248,
+      "depth2_only_agreement": 25,
+      "depth2_only_rate": 0.052083333333333336,
+      "grouping": "preference_conflict",
+      "n": 480,
+      "preference_conflict": "high"
+    },
+    {
+      "depth1_agreement": 346,
+      "depth1_deadlock_resolved_only_at_depth2": 15,
+      "depth2_agreement": 361,
+      "depth2_only_agreement": 15,
+      "depth2_only_rate": 0.03125,
+      "grouping": "preference_conflict",
+      "n": 480,
+      "preference_conflict": "medium"
+    },
+    {
+      "capability_richness": "rich",
+      "depth1_agreement": 349,
+      "depth1_deadlock_resolved_only_at_depth2": 31,
+      "depth2_agreement": 380,
+      "depth2_only_agreement": 31,
+      "depth2_only_rate": 0.06458333333333334,
+      "grouping": "capability_richness",
+      "n": 480
+    },
+    {
+      "capability_richness": "sparse",
+      "depth1_agreement": 220,
+      "depth1_deadlock_resolved_only_at_depth2": 9,
+      "depth2_agreement": 229,
+      "depth2_only_agreement": 9,
+      "depth2_only_rate": 0.01875,
+      "grouping": "capability_richness",
+      "n": 480
+    },
+    {
+      "capability_richness": "rich",
+      "depth1_agreement": 3,
+      "depth1_deadlock_resolved_only_at_depth2": 8,
+      "depth2_agreement": 11,
+      "depth2_only_agreement": 8,
+      "depth2_only_rate": 0.4,
+      "family": "F1",
+      "grouping": "family+resource_pressure+preference_conflict+capability_richness",
+      "n": 20,
+      "preference_conflict": "high",
+      "resource_pressure": "high"
+    },
+    {
+      "capability_richness": "sparse",
+      "depth1_agreement": 4,
+      "depth1_deadlock_resolved_only_at_depth2": 4,
+      "depth2_agreement": 8,
+      "depth2_only_agreement": 4,
+      "depth2_only_rate": 0.2,
+      "family": "F1",
+      "grouping": "family+resource_pressure+preference_conflict+capability_richness",
+      "n": 20,
+      "preference_conflict": "high",
+      "resource_pressure": "high"
+    },
+    {
+      "capability_richness": "rich",
+      "depth1_agreement": 20,
+      "depth1_deadlock_resolved_only_at_depth2": 0,
+      "depth2_agreement": 20,
+      "depth2_only_agreement": 0,
+      "depth2_only_rate": 0.0,
+      "family": "F1",
+      "grouping": "family+resource_pressure+preference_conflict+capability_richness",
+      "n": 20,
+      "preference_conflict": "medium",
+      "resource_pressure": "high"
+    },
+    {
+      "capability_richness": "sparse",
+      "depth1_agreement": 9,
+      "depth1_deadlock_resolved_only_at_depth2": 0,
+      "depth2_agreement": 9,
+      "depth2_only_agreement": 0,
+      "depth2_only_rate": 0.0,
+      "family": "F1",
+      "grouping": "family+resource_pressure+preference_conflict+capability_richness",
+      "n": 20,
+      "preference_conflict": "medium",
+      "resource_pressure": "high"
+    },
+    {
+      "capability_richness": "rich",
+      "depth1_agreement": 20,
+      "depth1_deadlock_resolved_only_at_depth2": 0,
+      "depth2_agreement": 20,
+      "depth2_only_agreement": 0,
+      "depth2_only_rate": 0.0,
+      "family": "F1",
+      "grouping": "family+resource_pressure+preference_conflict+capability_richness",
+      "n": 20,
+      "preference_conflict": "high",
+      "resource_pressure": "low"
+    },
+    {
+      "capability_richness": "sparse",
+      "depth1_agreement": 16,
+      "depth1_deadlock_resolved_only_at_depth2": 0,
+      "depth2_agreement": 16,
+      "depth2_only_agreement": 0,
+      "depth2_only_rate": 0.0,
+      "family": "F1",
+      "grouping": "family+resource_pressure+preference_conflict+capability_richness",
+      "n": 20,
+      "preference_conflict": "high",
+      "resource_pressure": "low"
+    },
+    {
+      "capability_richness": "rich",
+      "depth1_agreement": 20,
+      "depth1_deadlock_resolved_only_at_depth2": 0,
+      "depth2_agreement": 20,
+      "depth2_only_agreement": 0,
+      "depth2_only_rate": 0.0,
+      "family": "F1",
+      "grouping": "family+resource_pressure+preference_conflict+capability_richness",
+      "n": 20,
+      "preference_conflict": "medium",
+      "resource_pressure": "low"
+    },
+    {
+      "capability_richness": "sparse",
+      "depth1_agreement": 20,
+      "depth1_deadlock_resolved_only_at_depth2": 0,
+      "depth2_agreement": 20,
+      "depth2_only_agreement": 0,
+      "depth2_only_rate": 0.0,
+      "family": "F1",
+      "grouping": "family+resource_pressure+preference_conflict+capability_richness",
+      "n": 20,
+      "preference_conflict": "medium",
+      "resource_pressure": "low"
+    },
+    {
+      "capability_richness": "rich",
+      "depth1_agreement": 20,
+      "depth1_deadlock_resolved_only_at_depth2": 0,
+      "depth2_agreement": 20,
+      "depth2_only_agreement": 0,
+      "depth2_only_rate": 0.0,
+      "family": "F1",
+      "grouping": "family+resource_pressure+preference_conflict+capability_richness",
+      "n": 20,
+      "preference_conflict": "high",
+      "resource_pressure": "medium"
+    },
+    {
+      "capability_richness": "sparse",
+      "depth1_agreement": 11,
+      "depth1_deadlock_resolved_only_at_depth2": 0,
+      "depth2_agreement": 11,
+      "depth2_only_agreement": 0,
+      "depth2_only_rate": 0.0,
+      "family": "F1",
+      "grouping": "family+resource_pressure+preference_conflict+capability_richness",
+      "n": 20,
+      "preference_conflict": "high",
+      "resource_pressure": "medium"
+    },
+    {
+      "capability_richness": "rich",
+      "depth1_agreement": 20,
+      "depth1_deadlock_resolved_only_at_depth2": 0,
+      "depth2_agreement": 20,
+      "depth2_only_agreement": 0,
+      "depth2_only_rate": 0.0,
+      "family": "F1",
+      "grouping": "family+resource_pressure+preference_conflict+capability_richness",
+      "n": 20,
+      "preference_conflict": "medium",
+      "resource_pressure": "medium"
+    },
+    {
+      "capability_richness": "sparse",
+      "depth1_agreement": 14,
+      "depth1_deadlock_resolved_only_at_depth2": 0,
+      "depth2_agreement": 14,
+      "depth2_only_agreement": 0,
+      "depth2_only_rate": 0.0,
+      "family": "F1",
+      "grouping": "family+resource_pressure+preference_conflict+capability_richness",
+      "n": 20,
+      "preference_conflict": "medium",
+      "resource_pressure": "medium"
+    },
+    {
+      "capability_richness": "rich",
+      "depth1_agreement": 0,
+      "depth1_deadlock_resolved_only_at_depth2": 0,
+      "depth2_agreement": 0,
+      "depth2_only_agreement": 0,
+      "depth2_only_rate": 0.0,
+      "family": "F2",
+      "grouping": "family+resource_pressure+preference_conflict+capability_richness",
+      "n": 20,
+      "preference_conflict": "high",
+      "resource_pressure": "high"
+    },
+    {
+      "capability_richness": "sparse",
+      "depth1_agreement": 0,
+      "depth1_deadlock_resolved_only_at_depth2": 0,
+      "depth2_agreement": 0,
+      "depth2_only_agreement": 0,
+      "depth2_only_rate": 0.0,
+      "family": "F2",
+      "grouping": "family+resource_pressure+preference_conflict+capability_richness",
+      "n": 20,
+      "preference_conflict": "high",
+      "resource_pressure": "high"
+    },
+    {
+      "capability_richness": "rich",
+      "depth1_agreement": 0,
+      "depth1_deadlock_resolved_only_at_depth2": 1,
+      "depth2_agreement": 1,
+      "depth2_only_agreement": 1,
+      "depth2_only_rate": 0.05,
+      "family": "F2",
+      "grouping": "family+resource_pressure+preference_conflict+capability_richness",
+      "n": 20,
+      "preference_conflict": "medium",
+      "resource_pressure": "high"
+    },
+    {
+      "capability_richness": "sparse",
+      "depth1_agreement": 0,
+      "depth1_deadlock_resolved_only_at_depth2": 0,
+      "depth2_agreement": 0,
+      "depth2_only_agreement": 0,
+      "depth2_only_rate": 0.0,
+      "family": "F2",
+      "grouping": "family+resource_pressure+preference_conflict+capability_richness",
+      "n": 20,
+      "preference_conflict": "medium",
+      "resource_pressure": "high"
+    },
+    {
+      "capability_richness": "rich",
+      "depth1_agreement": 6,
+      "depth1_deadlock_resolved_only_at_depth2": 1,
+      "depth2_agreement": 7,
+      "depth2_only_agreement": 1,
+      "depth2_only_rate": 0.05,
+      "family": "F2",
+      "grouping": "family+resource_pressure+preference_conflict+capability_richness",
+      "n": 20,
+      "preference_conflict": "high",
+      "resource_pressure": "low"
+    },
+    {
+      "capability_richness": "sparse",
+      "depth1_agreement": 1,
+      "depth1_deadlock_resolved_only_at_depth2": 1,
+      "depth2_agreement": 2,
+      "depth2_only_agreement": 1,
+      "depth2_only_rate": 0.05,
+      "family": "F2",
+      "grouping": "family+resource_pressure+preference_conflict+capability_richness",
+      "n": 20,
+      "preference_conflict": "high",
+      "resource_pressure": "low"
+    },
+    {
+      "capability_richness": "rich",
+      "depth1_agreement": 20,
+      "depth1_deadlock_resolved_only_at_depth2": 0,
+      "depth2_agreement": 20,
+      "depth2_only_agreement": 0,
+      "depth2_only_rate": 0.0,
+      "family": "F2",
+      "grouping": "family+resource_pressure+preference_conflict+capability_richness",
+      "n": 20,
+      "preference_conflict": "medium",
+      "resource_pressure": "low"
+    },
+    {
+      "capability_richness": "sparse",
+      "depth1_agreement": 10,
+      "depth1_deadlock_resolved_only_at_depth2": 0,
+      "depth2_agreement": 10,
+      "depth2_only_agreement": 0,
+      "depth2_only_rate": 0.0,
+      "family": "F2",
+      "grouping": "family+resource_pressure+preference_conflict+capability_richness",
+      "n": 20,
+      "preference_conflict": "medium",
+      "resource_pressure": "low"
+    },
+    {
+      "capability_richness": "rich",
+      "depth1_agreement": 0,
+      "depth1_deadlock_resolved_only_at_depth2": 5,
+      "depth2_agreement": 5,
+      "depth2_only_agreement": 5,
+      "depth2_only_rate": 0.25,
+      "family": "F2",
+      "grouping": "family+resource_pressure+preference_conflict+capability_richness",
+      "n": 20,
+      "preference_conflict": "high",
+      "resource_pressure": "medium"
+    },
+    {
+      "capability_richness": "sparse",
+      "depth1_agreement": 0,
+      "depth1_deadlock_resolved_only_at_depth2": 1,
+      "depth2_agreement": 1,
+      "depth2_only_agreement": 1,
+      "depth2_only_rate": 0.05,
+      "family": "F2",
+      "grouping": "family+resource_pressure+preference_conflict+capability_richness",
+      "n": 20,
+      "preference_conflict": "high",
+      "resource_pressure": "medium"
+    },
+    {
+      "capability_richness": "rich",
+      "depth1_agreement": 8,
+      "depth1_deadlock_resolved_only_at_depth2": 12,
+      "depth2_agreement": 20,
+      "depth2_only_agreement": 12,
+      "depth2_only_rate": 0.6,
+      "family": "F2",
+      "grouping": "family+resource_pressure+preference_conflict+capability_richness",
+      "n": 20,
+      "preference_conflict": "medium",
+      "resource_pressure": "medium"
+    },
+    {
+      "capability_richness": "sparse",
+      "depth1_agreement": 5,
+      "depth1_deadlock_resolved_only_at_depth2": 2,
+      "depth2_agreement": 7,
+      "depth2_only_agreement": 2,
+      "depth2_only_rate": 0.1,
+      "family": "F2",
+      "grouping": "family+resource_pressure+preference_conflict+capability_richness",
+      "n": 20,
+      "preference_conflict": "medium",
+      "resource_pressure": "medium"
+    },
+    {
+      "capability_richness": "rich",
+      "depth1_agreement": 7,
+      "depth1_deadlock_resolved_only_at_depth2": 4,
+      "depth2_agreement": 11,
+      "depth2_only_agreement": 4,
+      "depth2_only_rate": 0.2,
+      "family": "F3",
+      "grouping": "family+resource_pressure+preference_conflict+capability_richness",
+      "n": 20,
+      "preference_conflict": "high",
+      "resource_pressure": "high"
+    },
+    {
+      "capability_richness": "sparse",
+      "depth1_agreement": 3,
+      "depth1_deadlock_resolved_only_at_depth2": 1,
+      "depth2_agreement": 4,
+      "depth2_only_agreement": 1,
+      "depth2_only_rate": 0.05,
+      "family": "F3",
+      "grouping": "family+resource_pressure+preference_conflict+capability_richness",
+      "n": 20,
+      "preference_conflict": "high",
+      "resource_pressure": "high"
+    },
+    {
+      "capability_richness": "rich",
+      "depth1_agreement": 20,
+      "depth1_deadlock_resolved_only_at_depth2": 0,
+      "depth2_agreement": 20,
+      "depth2_only_agreement": 0,
+      "depth2_only_rate": 0.0,
+      "family": "F3",
+      "grouping": "family+resource_pressure+preference_conflict+capability_richness",
+      "n": 20,
+      "preference_conflict": "medium",
+      "resource_pressure": "high"
+    },
+    {
+      "capability_richness": "sparse",
+      "depth1_agreement": 8,
+      "depth1_deadlock_resolved_only_at_depth2": 0,
+      "depth2_agreement": 8,
+      "depth2_only_agreement": 0,
+      "depth2_only_rate": 0.0,
+      "family": "F3",
+      "grouping": "family+resource_pressure+preference_conflict+capability_richness",
+      "n": 20,
+      "preference_conflict": "medium",
+      "resource_pressure": "high"
+    },
+    {
+      "capability_richness": "rich",
+      "depth1_agreement": 18,
+      "depth1_deadlock_resolved_only_at_depth2": 0,
+      "depth2_agreement": 18,
+      "depth2_only_agreement": 0,
+      "depth2_only_rate": 0.0,
+      "family": "F3",
+      "grouping": "family+resource_pressure+preference_conflict+capability_richness",
+      "n": 20,
+      "preference_conflict": "high",
+      "resource_pressure": "low"
+    },
+    {
+      "capability_richness": "sparse",
+      "depth1_agreement": 11,
+      "depth1_deadlock_resolved_only_at_depth2": 0,
+      "depth2_agreement": 11,
+      "depth2_only_agreement": 0,
+      "depth2_only_rate": 0.0,
+      "family": "F3",
+      "grouping": "family+resource_pressure+preference_conflict+capability_richness",
+      "n": 20,
+      "preference_conflict": "high",
+      "resource_pressure": "low"
+    },
+    {
+      "capability_richness": "rich",
+      "depth1_agreement": 20,
+      "depth1_deadlock_resolved_only_at_depth2": 0,
+      "depth2_agreement": 20,
+      "depth2_only_agreement": 0,
+      "depth2_only_rate": 0.0,
+      "family": "F3",
+      "grouping": "family+resource_pressure+preference_conflict+capability_richness",
+      "n": 20,
+      "preference_conflict": "medium",
+      "resource_pressure": "low"
+    },
+    {
+      "capability_richness": "sparse",
+      "depth1_agreement": 16,
+      "depth1_deadlock_resolved_only_at_depth2": 0,
+      "depth2_agreement": 16,
+      "depth2_only_agreement": 0,
+      "depth2_only_rate": 0.0,
+      "family": "F3",
+      "grouping": "family+resource_pressure+preference_conflict+capability_richness",
+      "n": 20,
+      "preference_conflict": "medium",
+      "resource_pressure": "low"
+    },
+    {
+      "capability_richness": "rich",
+      "depth1_agreement": 20,
+      "depth1_deadlock_resolved_only_at_depth2": 0,
+      "depth2_agreement": 20,
+      "depth2_only_agreement": 0,
+      "depth2_only_rate": 0.0,
+      "family": "F3",
+      "grouping": "family+resource_pressure+preference_conflict+capability_richness",
+      "n": 20,
+      "preference_conflict": "high",
+      "resource_pressure": "medium"
+    },
+    {
+      "capability_richness": "sparse",
+      "depth1_agreement": 7,
+      "depth1_deadlock_resolved_only_at_depth2": 0,
+      "depth2_agreement": 7,
+      "depth2_only_agreement": 0,
+      "depth2_only_rate": 0.0,
+      "family": "F3",
+      "grouping": "family+resource_pressure+preference_conflict+capability_richness",
+      "n": 20,
+      "preference_conflict": "high",
+      "resource_pressure": "medium"
+    },
+    {
+      "capability_richness": "rich",
+      "depth1_agreement": 20,
+      "depth1_deadlock_resolved_only_at_depth2": 0,
+      "depth2_agreement": 20,
+      "depth2_only_agreement": 0,
+      "depth2_only_rate": 0.0,
+      "family": "F3",
+      "grouping": "family+resource_pressure+preference_conflict+capability_richness",
+      "n": 20,
+      "preference_conflict": "medium",
+      "resource_pressure": "medium"
+    },
+    {
+      "capability_richness": "sparse",
+      "depth1_agreement": 16,
+      "depth1_deadlock_resolved_only_at_depth2": 0,
+      "depth2_agreement": 16,
+      "depth2_only_agreement": 0,
+      "depth2_only_rate": 0.0,
+      "family": "F3",
+      "grouping": "family+resource_pressure+preference_conflict+capability_richness",
+      "n": 20,
+      "preference_conflict": "medium",
+      "resource_pressure": "medium"
+    },
+    {
+      "capability_richness": "rich",
+      "depth1_agreement": 8,
+      "depth1_deadlock_resolved_only_at_depth2": 0,
+      "depth2_agreement": 8,
+      "depth2_only_agreement": 0,
+      "depth2_only_rate": 0.0,
+      "family": "F4",
+      "grouping": "family+resource_pressure+preference_conflict+capability_richness",
+      "n": 20,
+      "preference_conflict": "high",
+      "resource_pressure": "high"
+    },
+    {
+      "capability_richness": "sparse",
+      "depth1_agreement": 5,
+      "depth1_deadlock_resolved_only_at_depth2": 0,
+      "depth2_agreement": 5,
+      "depth2_only_agreement": 0,
+      "depth2_only_rate": 0.0,
+      "family": "F4",
+      "grouping": "family+resource_pressure+preference_conflict+capability_richness",
+      "n": 20,
+      "preference_conflict": "high",
+      "resource_pressure": "high"
+    },
+    {
+      "capability_richness": "rich",
+      "depth1_agreement": 20,
+      "depth1_deadlock_resolved_only_at_depth2": 0,
+      "depth2_agreement": 20,
+      "depth2_only_agreement": 0,
+      "depth2_only_rate": 0.0,
+      "family": "F4",
+      "grouping": "family+resource_pressure+preference_conflict+capability_richness",
+      "n": 20,
+      "preference_conflict": "medium",
+      "resource_pressure": "high"
+    },
+    {
+      "capability_richness": "sparse",
+      "depth1_agreement": 9,
+      "depth1_deadlock_resolved_only_at_depth2": 0,
+      "depth2_agreement": 9,
+      "depth2_only_agreement": 0,
+      "depth2_only_rate": 0.0,
+      "family": "F4",
+      "grouping": "family+resource_pressure+preference_conflict+capability_richness",
+      "n": 20,
+      "preference_conflict": "medium",
+      "resource_pressure": "high"
+    },
+    {
+      "capability_richness": "rich",
+      "depth1_agreement": 19,
+      "depth1_deadlock_resolved_only_at_depth2": 0,
+      "depth2_agreement": 19,
+      "depth2_only_agreement": 0,
+      "depth2_only_rate": 0.0,
+      "family": "F4",
+      "grouping": "family+resource_pressure+preference_conflict+capability_richness",
+      "n": 20,
+      "preference_conflict": "high",
+      "resource_pressure": "low"
+    },
+    {
+      "capability_richness": "sparse",
+      "depth1_agreement": 13,
+      "depth1_deadlock_resolved_only_at_depth2": 0,
+      "depth2_agreement": 13,
+      "depth2_only_agreement": 0,
+      "depth2_only_rate": 0.0,
+      "family": "F4",
+      "grouping": "family+resource_pressure+preference_conflict+capability_richness",
+      "n": 20,
+      "preference_conflict": "high",
+      "resource_pressure": "low"
+    },
+    {
+      "capability_richness": "rich",
+      "depth1_agreement": 20,
+      "depth1_deadlock_resolved_only_at_depth2": 0,
+      "depth2_agreement": 20,
+      "depth2_only_agreement": 0,
+      "depth2_only_rate": 0.0,
+      "family": "F4",
+      "grouping": "family+resource_pressure+preference_conflict+capability_richness",
+      "n": 20,
+      "preference_conflict": "medium",
+      "resource_pressure": "low"
+    },
+    {
+      "capability_richness": "sparse",
+      "depth1_agreement": 20,
+      "depth1_deadlock_resolved_only_at_depth2": 0,
+      "depth2_agreement": 20,
+      "depth2_only_agreement": 0,
+      "depth2_only_rate": 0.0,
+      "family": "F4",
+      "grouping": "family+resource_pressure+preference_conflict+capability_richness",
+      "n": 20,
+      "preference_conflict": "medium",
+      "resource_pressure": "low"
+    },
+    {
+      "capability_richness": "rich",
+      "depth1_agreement": 20,
+      "depth1_deadlock_resolved_only_at_depth2": 0,
+      "depth2_agreement": 20,
+      "depth2_only_agreement": 0,
+      "depth2_only_rate": 0.0,
+      "family": "F4",
+      "grouping": "family+resource_pressure+preference_conflict+capability_richness",
+      "n": 20,
+      "preference_conflict": "high",
+      "resource_pressure": "medium"
+    },
+    {
+      "capability_richness": "sparse",
+      "depth1_agreement": 11,
+      "depth1_deadlock_resolved_only_at_depth2": 0,
+      "depth2_agreement": 11,
+      "depth2_only_agreement": 0,
+      "depth2_only_rate": 0.0,
+      "family": "F4",
+      "grouping": "family+resource_pressure+preference_conflict+capability_richness",
+      "n": 20,
+      "preference_conflict": "high",
+      "resource_pressure": "medium"
+    },
+    {
+      "capability_richness": "rich",
+      "depth1_agreement": 20,
+      "depth1_deadlock_resolved_only_at_depth2": 0,
+      "depth2_agreement": 20,
+      "depth2_only_agreement": 0,
+      "depth2_only_rate": 0.0,
+      "family": "F4",
+      "grouping": "family+resource_pressure+preference_conflict+capability_richness",
+      "n": 20,
+      "preference_conflict": "medium",
+      "resource_pressure": "medium"
+    },
+    {
+      "capability_richness": "sparse",
+      "depth1_agreement": 11,
+      "depth1_deadlock_resolved_only_at_depth2": 0,
+      "depth2_agreement": 11,
+      "depth2_only_agreement": 0,
+      "depth2_only_rate": 0.0,
+      "family": "F4",
+      "grouping": "family+resource_pressure+preference_conflict+capability_richness",
+      "n": 20,
+      "preference_conflict": "medium",
+      "resource_pressure": "medium"
+    }
+  ],
+  "family": [
+    {
+      "C_only_sufficient": 57,
+      "D_and_O_both_necessary": 1,
+      "D_and_O_tied_minimal": 1,
+      "D_only_sufficient": 1,
+      "O_only_sufficient": 783,
+      "P_only_sufficient": 61,
+      "b2_agreement": 330,
+      "family": "ALL",
+      "full_gain_b2": 842,
+      "full_o1_agreement": 1172,
+      "min_cardinality_1": 802,
+      "min_cardinality_2": 40,
+      "min_cardinality_3": 0,
+      "min_cardinality_4": 0,
+      "multi_group_necessary": 40,
+      "multi_group_necessary_rate": 0.047505938242280284,
+      "n": 1920,
+      "no_offload_minus_b2_pp": 6.302083333333333,
+      "no_offload_sufficient": 121,
+      "no_offload_sufficient_rate": 0.14370546318289787,
+      "offload_necessary": 721,
+      "offload_necessary_rate": 0.8562945368171021,
+      "offload_only_reproduces_full_gain_rate": 0.9299287410926366,
+      "offload_only_sufficient": 783,
+      "offload_only_sufficient_rate": 0.9299287410926366,
+      "other_multi_group_necessary": 39
+    },
+    {
+      "C_only_sufficient": 57,
+      "D_and_O_both_necessary": 0,
+      "D_and_O_tied_minimal": 0,
+      "D_only_sufficient": 0,
+      "O_only_sufficient": 213,
+      "P_only_sufficient": 0,
+      "b2_agreement": 130,
+      "family": "F1",
+      "full_gain_b2": 234,
+      "full_o1_agreement": 364,
+      "min_cardinality_1": 222,
+      "min_cardinality_2": 12,
+      "min_cardinality_3": 0,
+      "min_cardinality_4": 0,
+      "multi_group_necessary": 12,
+      "multi_group_necessary_rate": 0.05128205128205128,
+      "n": 480,
+      "no_offload_minus_b2_pp": 11.875,
+      "no_offload_sufficient": 57,
+      "no_offload_sufficient_rate": 0.24358974358974358,
+      "offload_necessary": 177,
+      "offload_necessary_rate": 0.7564102564102564,
+      "offload_only_reproduces_full_gain_rate": 0.9102564102564102,
+      "offload_only_sufficient": 213,
+      "offload_only_sufficient_rate": 0.9102564102564102,
+      "other_multi_group_necessary": 12
+    },
+    {
+      "C_only_sufficient": 0,
+      "D_and_O_both_necessary": 1,
+      "D_and_O_tied_minimal": 1,
+      "D_only_sufficient": 1,
+      "O_only_sufficient": 99,
+      "P_only_sufficient": 0,
+      "b2_agreement": 0,
+      "family": "F2",
+      "full_gain_b2": 122,
+      "full_o1_agreement": 122,
+      "min_cardinality_1": 99,
+      "min_cardinality_2": 23,
+      "min_cardinality_3": 0,
+      "min_cardinality_4": 0,
+      "multi_group_necessary": 23,
+      "multi_group_necessary_rate": 0.1885245901639344,
+      "n": 480,
+      "no_offload_minus_b2_pp": 0.20833333333333334,
+      "no_offload_sufficient": 1,
+      "no_offload_sufficient_rate": 0.00819672131147541,
+      "offload_necessary": 121,
+      "offload_necessary_rate": 0.9918032786885246,
+      "offload_only_reproduces_full_gain_rate": 0.8114754098360656,
+      "offload_only_sufficient": 99,
+      "offload_only_sufficient_rate": 0.8114754098360656,
+      "other_multi_group_necessary": 22
+    },
+    {
+      "C_only_sufficient": 0,
+      "D_and_O_both_necessary": 0,
+      "D_and_O_tied_minimal": 0,
+      "D_only_sufficient": 0,
+      "O_only_sufficient": 242,
+      "P_only_sufficient": 61,
+      "b2_agreement": 82,
+      "family": "F3",
+      "full_gain_b2": 257,
+      "full_o1_agreement": 339,
+      "min_cardinality_1": 252,
+      "min_cardinality_2": 5,
+      "min_cardinality_3": 0,
+      "min_cardinality_4": 0,
+      "multi_group_necessary": 5,
+      "multi_group_necessary_rate": 0.019455252918287938,
+      "n": 480,
+      "no_offload_minus_b2_pp": 13.125,
+      "no_offload_sufficient": 63,
+      "no_offload_sufficient_rate": 0.245136186770428,
+      "offload_necessary": 194,
+      "offload_necessary_rate": 0.754863813229572,
+      "offload_only_reproduces_full_gain_rate": 0.9416342412451362,
+      "offload_only_sufficient": 242,
+      "offload_only_sufficient_rate": 0.9416342412451362,
+      "other_multi_group_necessary": 5
+    },
+    {
+      "C_only_sufficient": 0,
+      "D_and_O_both_necessary": 0,
+      "D_and_O_tied_minimal": 0,
+      "D_only_sufficient": 0,
+      "O_only_sufficient": 229,
+      "P_only_sufficient": 0,
+      "b2_agreement": 118,
+      "family": "F4",
+      "full_gain_b2": 229,
+      "full_o1_agreement": 347,
+      "min_cardinality_1": 229,
+      "min_cardinality_2": 0,
+      "min_cardinality_3": 0,
+      "min_cardinality_4": 0,
+      "multi_group_necessary": 0,
+      "multi_group_necessary_rate": 0.0,
+      "n": 480,
+      "no_offload_minus_b2_pp": 0.0,
+      "no_offload_sufficient": 0,
+      "no_offload_sufficient_rate": 0.0,
+      "offload_necessary": 229,
+      "offload_necessary_rate": 1.0,
+      "offload_only_reproduces_full_gain_rate": 1.0,
+      "offload_only_sufficient": 229,
+      "offload_only_sufficient_rate": 1.0,
+      "other_multi_group_necessary": 0
+    }
+  ],
+  "min_cardinality_tied_subsets": [
+    {
+      "family": "ALL",
+      "subset": "EMPTY",
+      "subset_mask": 0,
+      "target_denominator": 842,
+      "tied_minimal_count": 0
+    },
+    {
+      "family": "ALL",
+      "subset": "C",
+      "subset_mask": 1,
+      "target_denominator": 842,
+      "tied_minimal_count": 57
+    },
+    {
+      "family": "ALL",
+      "subset": "D",
+      "subset_mask": 2,
+      "target_denominator": 842,
+      "tied_minimal_count": 1
+    },
+    {
+      "family": "ALL",
+      "subset": "CD",
+      "subset_mask": 3,
+      "target_denominator": 842,
+      "tied_minimal_count": 0
+    },
+    {
+      "family": "ALL",
+      "subset": "P",
+      "subset_mask": 4,
+      "target_denominator": 842,
+      "tied_minimal_count": 61
+    },
+    {
+      "family": "ALL",
+      "subset": "CP",
+      "subset_mask": 5,
+      "target_denominator": 842,
+      "tied_minimal_count": 0
+    },
+    {
+      "family": "ALL",
+      "subset": "DP",
+      "subset_mask": 6,
+      "target_denominator": 842,
+      "tied_minimal_count": 0
+    },
+    {
+      "family": "ALL",
+      "subset": "CDP",
+      "subset_mask": 7,
+      "target_denominator": 842,
+      "tied_minimal_count": 0
+    },
+    {
+      "family": "ALL",
+      "subset": "O",
+      "subset_mask": 8,
+      "target_denominator": 842,
+      "tied_minimal_count": 783
+    },
+    {
+      "family": "ALL",
+      "subset": "CO",
+      "subset_mask": 9,
+      "target_denominator": 842,
+      "tied_minimal_count": 12
+    },
+    {
+      "family": "ALL",
+      "subset": "DO",
+      "subset_mask": 10,
+      "target_denominator": 842,
+      "tied_minimal_count": 1
+    },
+    {
+      "family": "ALL",
+      "subset": "CDO",
+      "subset_mask": 11,
+      "target_denominator": 842,
+      "tied_minimal_count": 0
+    },
+    {
+      "family": "ALL",
+      "subset": "PO",
+      "subset_mask": 12,
+      "target_denominator": 842,
+      "tied_minimal_count": 27
+    },
+    {
+      "family": "ALL",
+      "subset": "CPO",
+      "subset_mask": 13,
+      "target_denominator": 842,
+      "tied_minimal_count": 0
+    },
+    {
+      "family": "ALL",
+      "subset": "DPO",
+      "subset_mask": 14,
+      "target_denominator": 842,
+      "tied_minimal_count": 0
+    },
+    {
+      "family": "ALL",
+      "subset": "CDPO",
+      "subset_mask": 15,
+      "target_denominator": 842,
+      "tied_minimal_count": 0
+    },
+    {
+      "family": "F1",
+      "subset": "EMPTY",
+      "subset_mask": 0,
+      "target_denominator": 234,
+      "tied_minimal_count": 0
+    },
+    {
+      "family": "F1",
+      "subset": "C",
+      "subset_mask": 1,
+      "target_denominator": 234,
+      "tied_minimal_count": 57
+    },
+    {
+      "family": "F1",
+      "subset": "D",
+      "subset_mask": 2,
+      "target_denominator": 234,
+      "tied_minimal_count": 0
+    },
+    {
+      "family": "F1",
+      "subset": "CD",
+      "subset_mask": 3,
+      "target_denominator": 234,
+      "tied_minimal_count": 0
+    },
+    {
+      "family": "F1",
+      "subset": "P",
+      "subset_mask": 4,
+      "target_denominator": 234,
+      "tied_minimal_count": 0
+    },
+    {
+      "family": "F1",
+      "subset": "CP",
+      "subset_mask": 5,
+      "target_denominator": 234,
+      "tied_minimal_count": 0
+    },
+    {
+      "family": "F1",
+      "subset": "DP",
+      "subset_mask": 6,
+      "target_denominator": 234,
+      "tied_minimal_count": 0
+    },
+    {
+      "family": "F1",
+      "subset": "CDP",
+      "subset_mask": 7,
+      "target_denominator": 234,
+      "tied_minimal_count": 0
+    },
+    {
+      "family": "F1",
+      "subset": "O",
+      "subset_mask": 8,
+      "target_denominator": 234,
+      "tied_minimal_count": 213
+    },
+    {
+      "family": "F1",
+      "subset": "CO",
+      "subset_mask": 9,
+      "target_denominator": 234,
+      "tied_minimal_count": 12
+    },
+    {
+      "family": "F1",
+      "subset": "DO",
+      "subset_mask": 10,
+      "target_denominator": 234,
+      "tied_minimal_count": 0
+    },
+    {
+      "family": "F1",
+      "subset": "CDO",
+      "subset_mask": 11,
+      "target_denominator": 234,
+      "tied_minimal_count": 0
+    },
+    {
+      "family": "F1",
+      "subset": "PO",
+      "subset_mask": 12,
+      "target_denominator": 234,
+      "tied_minimal_count": 0
+    },
+    {
+      "family": "F1",
+      "subset": "CPO",
+      "subset_mask": 13,
+      "target_denominator": 234,
+      "tied_minimal_count": 0
+    },
+    {
+      "family": "F1",
+      "subset": "DPO",
+      "subset_mask": 14,
+      "target_denominator": 234,
+      "tied_minimal_count": 0
+    },
+    {
+      "family": "F1",
+      "subset": "CDPO",
+      "subset_mask": 15,
+      "target_denominator": 234,
+      "tied_minimal_count": 0
+    },
+    {
+      "family": "F2",
+      "subset": "EMPTY",
+      "subset_mask": 0,
+      "target_denominator": 122,
+      "tied_minimal_count": 0
+    },
+    {
+      "family": "F2",
+      "subset": "C",
+      "subset_mask": 1,
+      "target_denominator": 122,
+      "tied_minimal_count": 0
+    },
+    {
+      "family": "F2",
+      "subset": "D",
+      "subset_mask": 2,
+      "target_denominator": 122,
+      "tied_minimal_count": 1
+    },
+    {
+      "family": "F2",
+      "subset": "CD",
+      "subset_mask": 3,
+      "target_denominator": 122,
+      "tied_minimal_count": 0
+    },
+    {
+      "family": "F2",
+      "subset": "P",
+      "subset_mask": 4,
+      "target_denominator": 122,
+      "tied_minimal_count": 0
+    },
+    {
+      "family": "F2",
+      "subset": "CP",
+      "subset_mask": 5,
+      "target_denominator": 122,
+      "tied_minimal_count": 0
+    },
+    {
+      "family": "F2",
+      "subset": "DP",
+      "subset_mask": 6,
+      "target_denominator": 122,
+      "tied_minimal_count": 0
+    },
+    {
+      "family": "F2",
+      "subset": "CDP",
+      "subset_mask": 7,
+      "target_denominator": 122,
+      "tied_minimal_count": 0
+    },
+    {
+      "family": "F2",
+      "subset": "O",
+      "subset_mask": 8,
+      "target_denominator": 122,
+      "tied_minimal_count": 99
+    },
+    {
+      "family": "F2",
+      "subset": "CO",
+      "subset_mask": 9,
+      "target_denominator": 122,
+      "tied_minimal_count": 0
+    },
+    {
+      "family": "F2",
+      "subset": "DO",
+      "subset_mask": 10,
+      "target_denominator": 122,
+      "tied_minimal_count": 1
+    },
+    {
+      "family": "F2",
+      "subset": "CDO",
+      "subset_mask": 11,
+      "target_denominator": 122,
+      "tied_minimal_count": 0
+    },
+    {
+      "family": "F2",
+      "subset": "PO",
+      "subset_mask": 12,
+      "target_denominator": 122,
+      "tied_minimal_count": 22
+    },
+    {
+      "family": "F2",
+      "subset": "CPO",
+      "subset_mask": 13,
+      "target_denominator": 122,
+      "tied_minimal_count": 0
+    },
+    {
+      "family": "F2",
+      "subset": "DPO",
+      "subset_mask": 14,
+      "target_denominator": 122,
+      "tied_minimal_count": 0
+    },
+    {
+      "family": "F2",
+      "subset": "CDPO",
+      "subset_mask": 15,
+      "target_denominator": 122,
+      "tied_minimal_count": 0
+    },
+    {
+      "family": "F3",
+      "subset": "EMPTY",
+      "subset_mask": 0,
+      "target_denominator": 257,
+      "tied_minimal_count": 0
+    },
+    {
+      "family": "F3",
+      "subset": "C",
+      "subset_mask": 1,
+      "target_denominator": 257,
+      "tied_minimal_count": 0
+    },
+    {
+      "family": "F3",
+      "subset": "D",
+      "subset_mask": 2,
+      "target_denominator": 257,
+      "tied_minimal_count": 0
+    },
+    {
+      "family": "F3",
+      "subset": "CD",
+      "subset_mask": 3,
+      "target_denominator": 257,
+      "tied_minimal_count": 0
+    },
+    {
+      "family": "F3",
+      "subset": "P",
+      "subset_mask": 4,
+      "target_denominator": 257,
+      "tied_minimal_count": 61
+    },
+    {
+      "family": "F3",
+      "subset": "CP",
+      "subset_mask": 5,
+      "target_denominator": 257,
+      "tied_minimal_count": 0
+    },
+    {
+      "family": "F3",
+      "subset": "DP",
+      "subset_mask": 6,
+      "target_denominator": 257,
+      "tied_minimal_count": 0
+    },
+    {
+      "family": "F3",
+      "subset": "CDP",
+      "subset_mask": 7,
+      "target_denominator": 257,
+      "tied_minimal_count": 0
+    },
+    {
+      "family": "F3",
+      "subset": "O",
+      "subset_mask": 8,
+      "target_denominator": 257,
+      "tied_minimal_count": 242
+    },
+    {
+      "family": "F3",
+      "subset": "CO",
+      "subset_mask": 9,
+      "target_denominator": 257,
+      "tied_minimal_count": 0
+    },
+    {
+      "family": "F3",
+      "subset": "DO",
+      "subset_mask": 10,
+      "target_denominator": 257,
+      "tied_minimal_count": 0
+    },
+    {
+      "family": "F3",
+      "subset": "CDO",
+      "subset_mask": 11,
+      "target_denominator": 257,
+      "tied_minimal_count": 0
+    },
+    {
+      "family": "F3",
+      "subset": "PO",
+      "subset_mask": 12,
+      "target_denominator": 257,
+      "tied_minimal_count": 5
+    },
+    {
+      "family": "F3",
+      "subset": "CPO",
+      "subset_mask": 13,
+      "target_denominator": 257,
+      "tied_minimal_count": 0
+    },
+    {
+      "family": "F3",
+      "subset": "DPO",
+      "subset_mask": 14,
+      "target_denominator": 257,
+      "tied_minimal_count": 0
+    },
+    {
+      "family": "F3",
+      "subset": "CDPO",
+      "subset_mask": 15,
+      "target_denominator": 257,
+      "tied_minimal_count": 0
+    },
+    {
+      "family": "F4",
+      "subset": "EMPTY",
+      "subset_mask": 0,
+      "target_denominator": 229,
+      "tied_minimal_count": 0
+    },
+    {
+      "family": "F4",
+      "subset": "C",
+      "subset_mask": 1,
+      "target_denominator": 229,
+      "tied_minimal_count": 0
+    },
+    {
+      "family": "F4",
+      "subset": "D",
+      "subset_mask": 2,
+      "target_denominator": 229,
+      "tied_minimal_count": 0
+    },
+    {
+      "family": "F4",
+      "subset": "CD",
+      "subset_mask": 3,
+      "target_denominator": 229,
+      "tied_minimal_count": 0
+    },
+    {
+      "family": "F4",
+      "subset": "P",
+      "subset_mask": 4,
+      "target_denominator": 229,
+      "tied_minimal_count": 0
+    },
+    {
+      "family": "F4",
+      "subset": "CP",
+      "subset_mask": 5,
+      "target_denominator": 229,
+      "tied_minimal_count": 0
+    },
+    {
+      "family": "F4",
+      "subset": "DP",
+      "subset_mask": 6,
+      "target_denominator": 229,
+      "tied_minimal_count": 0
+    },
+    {
+      "family": "F4",
+      "subset": "CDP",
+      "subset_mask": 7,
+      "target_denominator": 229,
+      "tied_minimal_count": 0
+    },
+    {
+      "family": "F4",
+      "subset": "O",
+      "subset_mask": 8,
+      "target_denominator": 229,
+      "tied_minimal_count": 229
+    },
+    {
+      "family": "F4",
+      "subset": "CO",
+      "subset_mask": 9,
+      "target_denominator": 229,
+      "tied_minimal_count": 0
+    },
+    {
+      "family": "F4",
+      "subset": "DO",
+      "subset_mask": 10,
+      "target_denominator": 229,
+      "tied_minimal_count": 0
+    },
+    {
+      "family": "F4",
+      "subset": "CDO",
+      "subset_mask": 11,
+      "target_denominator": 229,
+      "tied_minimal_count": 0
+    },
+    {
+      "family": "F4",
+      "subset": "PO",
+      "subset_mask": 12,
+      "target_denominator": 229,
+      "tied_minimal_count": 0
+    },
+    {
+      "family": "F4",
+      "subset": "CPO",
+      "subset_mask": 13,
+      "target_denominator": 229,
+      "tied_minimal_count": 0
+    },
+    {
+      "family": "F4",
+      "subset": "DPO",
+      "subset_mask": 14,
+      "target_denominator": 229,
+      "tied_minimal_count": 0
+    },
+    {
+      "family": "F4",
+      "subset": "CDPO",
+      "subset_mask": 15,
+      "target_denominator": 229,
+      "tied_minimal_count": 0
+    }
+  ],
+  "n": 1920,
+  "scope": "exploratory_same_instance_no_confirmation"
+}

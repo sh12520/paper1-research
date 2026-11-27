@@ -1,0 +1,20 @@
+{
+  "instance_id": "F1__medium__medium__rich__d2__s0",
+  "serialized_sha256": "0946cca50d7a620accec9f1f482495854c3d9f253e8bd382a547cf915cb0d5b1",
+  "python_version": "3.12.14",
+  "numpy_version": "2.3.5",
+  "scope": "unmodified FLAT public make_plan only, after graph load, binding, and view setup",
+  "budget": 5000,
+  "conditioned_candidates_scored_sorted": 1252611,
+  "historical_candidate_count_match": true,
+  "historical_selected_class_rank": 10,
+  "working_set_warm_bytes": 405827584,
+  "process_peak_before_plan_bytes": 527060992,
+  "working_set_max_sample_in_plan_bytes": 559337472,
+  "process_peak_at_plan_return_bytes": 559337472,
+  "working_set_at_plan_return_bytes": 416931840,
+  "plan_elapsed_seconds_with_sampler": 1.1493161999969743,
+  "in_plan_sample_count": 73,
+  "nominal_sample_interval_seconds": 0.005,
+  "system_min_available_bytes": 2605576192
+}

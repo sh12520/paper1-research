@@ -1,0 +1,20 @@
+{
+  "checks": {
+    "beats_flat": false,
+    "beats_random": true,
+    "beats_random_families_at_least_3": true,
+    "multi_group_nonzero": true,
+    "no_opponent_private_leakage": true,
+    "orc_at_least_080": true
+  },
+  "confirmation_gate": false,
+  "development_only": true,
+  "families_beating_random": [
+    "F1",
+    "F2",
+    "F3",
+    "F4"
+  ],
+  "privacy_audit": "results/method_dev_v1/information_audit_result.json",
+  "status": "METHOD_WEAK_V1"
+}

@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "unchanged_protected_input_count": 232,
+  "frozen_config_exists": false,
+  "required_report_local_links": "PASS",
+  "archived_depth3_gate": "DEPTH3_PARTIAL",
+  "revalidated_checkpoints": 72,
+  "deliverables": [
+    "DEPTH3_GATE_INTERPRETATION.md",
+    "PAPER_CONTRIBUTION_BOUNDARIES.md",
+    "PAPER_METHOD_EVALUATION_DESIGN.md",
+    "METHOD_CONFIRMATION_PREREGISTRATION_DRAFT.md",
+    "PAPER_OUTLINE_V1.md"
+  ]
+}

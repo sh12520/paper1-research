@@ -1,0 +1,11 @@
+{
+  "files_checked": 16415,
+  "changed": [],
+  "missing": [],
+  "unexpected_files_in_input_roots": [],
+  "confirm_allowed": false,
+  "pilot_authorization_sha256": "85c56a9326e5431eba77cb011370b64bdb32f1d6e7c1b1987014d605492fb8ff",
+  "pilot_authorization_unchanged": true,
+  "frozen_config_exists": false,
+  "pass": true
+}

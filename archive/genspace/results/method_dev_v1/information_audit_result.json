@@ -1,0 +1,89 @@
+{
+  "audit_note": "19 unit tests plus 924 selected-candidate reference checks, 17-pattern V2 scope audit, and 80 batch-vs-sequential protocol checks under corrected turns; independent repeat is not an adversarial isolation proof",
+  "config_sha256": "fdef08444bbaaec239ff4134e5ff389eb3c297ed7f8561307df8a85f23bdbfb6",
+  "differential_evidence": {
+    "alternating_turn_counterexample.json": {
+      "note": "historical pre-fix counterexample; corrected behavior checked by independent unit tests",
+      "pass": true,
+      "sha256": "5e0dd9c9b8b96582d473d48a086df98b6c45caae5ef0c8c0dc5d677d452164b9",
+      "source_matches": true
+    },
+    "batch_differential_audit.json": {
+      "pass": true,
+      "sha256": "9babd07c0211b88a6c4cd0db1887ef88c354f36fb27e827d007e9214b9387cc1",
+      "source_matches": true
+    },
+    "optimization_preview/fixed_high_budget_audit.json": {
+      "pass": true,
+      "sha256": "e5c07ba8a16fd35dd99cec4666dafc42b0622e189ebd0d18017bd6e8eac1e58b",
+      "source_matches": true
+    },
+    "optimization_preview/integrated_protocol_equivalence.json": {
+      "pass": true,
+      "sha256": "e2f12288114f9a7f9ab731ef9754d267b20217ad0f2b08fb2dd8c3193b93faad",
+      "source_matches": true
+    },
+    "optimization_preview/packed_schedule_audit.json": {
+      "pass": true,
+      "sha256": "1999bd794b530e3657bea06c332e6c785c842cd6b53c45bbf62800d56cfa31f1",
+      "source_matches": true
+    },
+    "v2_universe_audit.json": {
+      "pass": true,
+      "sha256": "b3ae6169c76486c9e9affbc0352806e3c4c1729c622862dd6194ab948e55bc9b",
+      "source_matches": true
+    }
+  },
+  "errors": [],
+  "full_private_fast_evaluate_guard": "blocked in 16-fixture 5-method protocol-equivalence test; no invocation",
+  "global_frequency_config_order_matches_literal": true,
+  "no_new_instance_seed_guard": "generation and benchmark instance-seed derivation blocked in fixture/protocol audits; RANDOM-BUDGET uses a deterministic PRNG input derived solely from allowlisted public fields",
+  "pass": true,
+  "runtime_boundary": "sanitized public view and separate local private agent ports; labels, opponent values, O1 and attribution do not enter runtime arguments",
+  "source_hashes": {
+    "harness.py": "2dd57d3f1880e5e5c33002748c3dbe918285b166593f5d883fa631a10fc709c9",
+    "private_protocol.py": "b22e390a812d966b12ddb8fc851819186f25ccf8fb6fcd118d12fc3c04585a34",
+    "public_search.py": "b4b47d94fc5c34ce9ddfb23dba98164bb9b59c2b6502cf15f86527e97935f589",
+    "runtime.py": "a58211b8516a470652451b3456c15f62c290da18c98c9b180155a737a8c21eaf"
+  },
+  "test_count": 19,
+  "tests": [
+    {
+      "output": "----------------------------------------------------------------------\nRan 5 tests in 2.747s\n\nOK\n",
+      "returncode": 0,
+      "sha256": "cab63a82c4cc2ed3296e5b942f50d91090f6e53779fa1dafab8ab33d3ba8d4e9",
+      "suite": "test_privacy_independent.py"
+    },
+    {
+      "output": "----------------------------------------------------------------------\nRan 4 tests in 0.020s\n\nOK\n",
+      "returncode": 0,
+      "sha256": "fe6156e484cd9293bdbbb7e0e79f86e1d81ec590e37121581ed76fb7ff2ef930",
+      "suite": "test_public_search.py"
+    },
+    {
+      "output": "----------------------------------------------------------------------\nRan 4 tests in 2.937s\n\nOK\n",
+      "returncode": 0,
+      "sha256": "e3a62c32e52036da745c3a683caead7c4f827a89c5f4f87778f7836fe3b3f141",
+      "suite": "test_runtime_min.py"
+    },
+    {
+      "output": "----------------------------------------------------------------------\nRan 1 test in 6.224s\n\nOK\n",
+      "returncode": 0,
+      "sha256": "0992d3f6bdd545a515f2c5a4e0e3a3a465772630d08b84862113829e4df3ceac",
+      "suite": "test_resume_independent.py"
+    },
+    {
+      "output": "----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n",
+      "returncode": 0,
+      "sha256": "3ccbcbf4b33f75d5d521be91ac19d20f477d6593bd5f6c2b2275502828ad9df5",
+      "suite": "test_alternating_protocol_independent.py"
+    },
+    {
+      "output": "----------------------------------------------------------------------\nRan 3 tests in 0.000s\n\nOK\n",
+      "returncode": 0,
+      "sha256": "ebb49b69899491dae65c7888b55d1416d753dbe6be49d5265d3e75875e3af2af",
+      "suite": "test_protocol_turn.py"
+    }
+  ],
+  "trusted_process_limit": "API/data-flow audit in trusted single Python process; not OS, cryptographic or malicious-introspection isolation"
+}

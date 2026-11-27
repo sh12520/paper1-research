@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://genspace.invalid/schemas/capability.schema.json",
+  "title": "Capability declaration",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "provider", "input_types", "output_types", "preconditions", "effects", "resource_cost", "execution_cost", "supported_scope"],
+  "properties": {
+    "id": {"type": "string", "minLength": 1},
+    "provider": {"type": "string", "minLength": 1},
+    "input_types": {"$ref": "#/$defs/strings"},
+    "output_types": {"$ref": "#/$defs/strings"},
+    "preconditions": {"$ref": "#/$defs/strings"},
+    "effects": {"$ref": "#/$defs/strings"},
+    "resource_cost": {"type": "object", "propertyNames": {"enum": ["RAN", "FH", "EDGE"]}, "additionalProperties": {"type": "number", "minimum": 0}},
+    "execution_cost": {"type": "number", "minimum": 0},
+    "supported_scope": {"$ref": "#/$defs/strings"}
+  },
+  "$defs": {"strings": {"type": "array", "items": {"type": "string", "minLength": 1}}}
+}

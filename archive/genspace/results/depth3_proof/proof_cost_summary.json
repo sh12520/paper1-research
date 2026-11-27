@@ -1,0 +1,359 @@
+{
+  "planned_queries": 24,
+  "completed_queries": 24,
+  "verified_queries": 24,
+  "exact_checkpoints": 72,
+  "sealed_protocol_replays": 24,
+  "bindings": {
+    "snapshot_sha256": "b11c320219c6de92d890040d3b97345271423a34de9ec0430240fde0cde7fe1a",
+    "candidate_source_tree_sha256": "320f956834af272f24b43db9721bbd67247af1fd159e52fe776a5bdd6fa26ca7",
+    "prior_readiness_sha256": "9643c24d7ea59eae58b348cbae2c1a38bd42d13742b328788d8695b82c0a1833",
+    "auth_sha256": "bc79872fbed17a017397e20e68c35b6f78668636dedf690bd4319f514d2101d4",
+    "development_seal_sha256": "8e63d43a823525a59f59d81d680423a931557cfa13fa7318965888e698561517",
+    "proof_sources_sha256": {
+      "symbolic_format.py": "0c915e53d1dfae9b8f74f2ae001bde474f9b8d9b072df3a5d8aa1e4847d6a554",
+      "native_symbolic_producer.py": "3e0cd7e683914deeb937fb944fd648ac86118b7d4ba7e2d0842ec36d158d3a2a",
+      "symbolic_verifier.py": "796eea3bafba42a01eb829c6dbfecd970ffb6978305f6aec1476fff4fbf7fcbf",
+      "cover_verifier.py": "548b718616d237daaf45a895c4ce07ea6c3340f55964a678b9c8951e6dc3f37f",
+      "run_depth3_proofs.py": "b817c0376029e7eca6d59d5848b7108b65a41f097c3379a43b571a89eaefac93"
+    }
+  },
+  "cohorts": {
+    "all": {
+      "emission_s": {
+        "n": 24,
+        "median": 0.9853769999899669,
+        "p95": 37.06071780499913,
+        "minimum": 0.1680857999890577,
+        "maximum": 38.54503060001298,
+        "total": 130.01377399996272
+      },
+      "replay_wall_s": {
+        "n": 24,
+        "median": 0.7916029000043636,
+        "p95": 36.65152263001217,
+        "minimum": 0.060913799999980256,
+        "maximum": 38.131839699984994,
+        "total": 125.49187749999692
+      },
+      "observation_s": {
+        "n": 24,
+        "median": 0.07879795016197022,
+        "p95": 0.3904378499762968,
+        "minimum": 0.000518999935593456,
+        "maximum": 0.5963596002548002,
+        "total": 2.80101790005574
+      },
+      "serialize_s": {
+        "n": 24,
+        "median": 0.05956954999419395,
+        "p95": 0.23587145500350742,
+        "minimum": 0.0013993000029586256,
+        "maximum": 0.2603033999912441,
+        "total": 1.8137631999561563
+      },
+      "check_s": {
+        "n": 24,
+        "median": 2.8252689499931876,
+        "p95": 43.17553593499319,
+        "minimum": 0.21799880001344718,
+        "maximum": 49.748105999984546,
+        "total": 178.99175630000536
+      },
+      "proof_nodes": {
+        "n": 24,
+        "median": 2875.0,
+        "p95": 8466.999999999998,
+        "minimum": 36.0,
+        "maximum": 8794.0,
+        "total": 80189
+      },
+      "shared_nodes": {
+        "n": 24,
+        "median": 1650.5,
+        "p95": 6259.249999999997,
+        "minimum": 31.0,
+        "maximum": 7458.0,
+        "total": 52755
+      },
+      "raw_bytes": {
+        "n": 24,
+        "median": 1104861.5,
+        "p95": 3075589.9499999993,
+        "minimum": 16029.0,
+        "maximum": 3201452.0,
+        "total": 30532979
+      },
+      "compressed_bytes": {
+        "n": 24,
+        "median": 364339.0,
+        "p95": 1113263.9499999995,
+        "minimum": 3321.0,
+        "maximum": 1155017.0,
+        "total": 10229376
+      },
+      "emit_peak_rss": {
+        "n": 24,
+        "median": 47480832.0,
+        "p95": 128868147.2,
+        "minimum": 36470784.0,
+        "maximum": 131530752.0,
+        "total": 1437425664
+      },
+      "check_peak_rss": {
+        "n": 24,
+        "median": 48138240.0,
+        "p95": 140682649.6,
+        "minimum": 36704256.0,
+        "maximum": 145727488.0,
+        "total": 1496461312
+      },
+      "minimum_available": {
+        "n": 24,
+        "median": 2445320192.0,
+        "p95": 4659312640.0,
+        "minimum": 1769205760.0,
+        "maximum": 4681207808.0,
+        "total": 77635678208
+      },
+      "proof_steps": {
+        "n": 24,
+        "median": 6072.0,
+        "p95": 18313.349999999995,
+        "minimum": 93.0,
+        "maximum": 21333.0,
+        "total": 171241
+      }
+    },
+    "rich": {
+      "emission_s": {
+        "n": 12,
+        "median": 1.2737306499911938,
+        "p95": 33.79728682999993,
+        "minimum": 0.6806687000207603,
+        "maximum": 38.54503060001298,
+        "total": 80.59747399998014
+      },
+      "replay_wall_s": {
+        "n": 12,
+        "median": 1.0956169499986572,
+        "p95": 33.37750247499643,
+        "minimum": 0.5053369000088423,
+        "maximum": 38.131839699984994,
+        "total": 77.95625400001882
+      },
+      "observation_s": {
+        "n": 12,
+        "median": 0.09499885023979004,
+        "p95": 0.4404904802853705,
+        "minimum": 0.06364089957787655,
+        "maximum": 0.5963596002548002,
+        "total": 1.9289278010255657
+      },
+      "serialize_s": {
+        "n": 12,
+        "median": 0.07272400001238566,
+        "p95": 0.23305053499061615,
+        "minimum": 0.04940809999243356,
+        "maximum": 0.23692930000834167,
+        "total": 1.20165969998925
+      },
+      "check_s": {
+        "n": 12,
+        "median": 3.016437099999166,
+        "p95": 33.32130909499681,
+        "minimum": 1.6427865999867208,
+        "maximum": 46.870870999991894,
+        "total": 95.55025199995725
+      },
+      "proof_nodes": {
+        "n": 12,
+        "median": 3527.0,
+        "p95": 8010.999999999999,
+        "minimum": 2648.0,
+        "maximum": 8638.0,
+        "total": 51993
+      },
+      "shared_nodes": {
+        "n": 12,
+        "median": 2187.5,
+        "p95": 5753.249999999999,
+        "minimum": 1390.0,
+        "maximum": 6449.0,
+        "total": 33565
+      },
+      "raw_bytes": {
+        "n": 12,
+        "median": 1415050.0,
+        "p95": 2939829.6499999994,
+        "minimum": 1024029.0,
+        "maximum": 3201452.0,
+        "total": 19900673
+      },
+      "compressed_bytes": {
+        "n": 12,
+        "median": 472159.5,
+        "p95": 1028037.1499999999,
+        "minimum": 335038.0,
+        "maximum": 1145224.0,
+        "total": 6728325
+      },
+      "emit_peak_rss": {
+        "n": 12,
+        "median": 56010752.0,
+        "p95": 129708236.8,
+        "minimum": 45490176.0,
+        "maximum": 131530752.0,
+        "total": 805806080
+      },
+      "check_peak_rss": {
+        "n": 12,
+        "median": 58085376.0,
+        "p95": 143118745.6,
+        "minimum": 45658112.0,
+        "maximum": 145727488.0,
+        "total": 848015360
+      },
+      "minimum_available": {
+        "n": 12,
+        "median": 2407006208.0,
+        "p95": 4606541209.6,
+        "minimum": 1769205760.0,
+        "maximum": 4620718080.0,
+        "total": 38089461760
+      },
+      "proof_steps": {
+        "n": 12,
+        "median": 7789.0,
+        "p95": 18909.699999999997,
+        "minimum": 5278.0,
+        "maximum": 21333.0,
+        "total": 117518
+      }
+    },
+    "short_domain": {
+      "emission_s": {
+        "n": 5,
+        "median": 0.1731652999878861,
+        "p95": 0.20753978000138887,
+        "minimum": 0.1680857999890577,
+        "maximum": 0.21441580000100657,
+        "total": 0.9061446999548934
+      },
+      "replay_wall_s": {
+        "n": 5,
+        "median": 0.0655996999994386,
+        "p95": 0.0736242200131528,
+        "minimum": 0.060913799999980256,
+        "maximum": 0.07389970001531765,
+        "total": 0.33705299999564886
+      },
+      "observation_s": {
+        "n": 5,
+        "median": 0.0016399997984990478,
+        "p95": 0.001875679852673784,
+        "minimum": 0.000518999935593456,
+        "maximum": 0.0019275998347438872,
+        "total": 0.007070299470797181
+      },
+      "serialize_s": {
+        "n": 5,
+        "median": 0.002651299990247935,
+        "p95": 0.003821799997240305,
+        "minimum": 0.0013993000029586256,
+        "maximum": 0.004047299997182563,
+        "total": 0.012955999991390854
+      },
+      "check_s": {
+        "n": 5,
+        "median": 0.32950040002469905,
+        "p95": 0.4463061000045854,
+        "minimum": 0.21799880001344718,
+        "maximum": 0.46982490000664257,
+        "total": 1.6725454000406899
+      },
+      "proof_nodes": {
+        "n": 5,
+        "median": 104.0,
+        "p95": 107.2,
+        "minimum": 36.0,
+        "maximum": 108.0,
+        "total": 456
+      },
+      "shared_nodes": {
+        "n": 5,
+        "median": 96.0,
+        "p95": 96.0,
+        "minimum": 31.0,
+        "maximum": 96.0,
+        "total": 415
+      },
+      "raw_bytes": {
+        "n": 5,
+        "median": 44501.0,
+        "p95": 45257.8,
+        "minimum": 16029.0,
+        "maximum": 45445.0,
+        "total": 194984
+      },
+      "compressed_bytes": {
+        "n": 5,
+        "median": 7653.0,
+        "p95": 8034.4,
+        "minimum": 3321.0,
+        "maximum": 8098.0,
+        "total": 34386
+      },
+      "emit_peak_rss": {
+        "n": 5,
+        "median": 36954112.0,
+        "p95": 37025382.4,
+        "minimum": 36470784.0,
+        "maximum": 37036032.0,
+        "total": 184332288
+      },
+      "check_peak_rss": {
+        "n": 5,
+        "median": 37281792.0,
+        "p95": 37516083.2,
+        "minimum": 36704256.0,
+        "maximum": 37535744.0,
+        "total": 185757696
+      },
+      "minimum_available": {
+        "n": 5,
+        "median": 4628291584.0,
+        "p95": 4676884070.4,
+        "minimum": 2095190016.0,
+        "maximum": 4681207808.0,
+        "total": 18231984128
+      },
+      "proof_steps": {
+        "n": 5,
+        "median": 252.0,
+        "p95": 256.8,
+        "minimum": 93.0,
+        "maximum": 258.0,
+        "total": 1107
+      }
+    }
+  },
+  "projected_480": {
+    "emission_s": 2600.2754799992545,
+    "check_s": 3579.8351260001073,
+    "raw_bytes": 610659580,
+    "compressed_bytes": 204587520,
+    "compressed_dual_copy_bytes": 409175040,
+    "checksum_and_full_recheck_s": 3579.8351260001073,
+    "uncertainty": "24 development fixtures, all high conflict and one index; arithmetic extrapolation only"
+  },
+  "disk_free_bytes": 131506954240,
+  "offline_stage_limits": {
+    "wall_s": 180,
+    "rss_mib": 2048,
+    "prelaunch_mib": 2048,
+    "emergency_mib": 768,
+    "serialized_mib": 96,
+    "nodes": 200000
+  }
+}

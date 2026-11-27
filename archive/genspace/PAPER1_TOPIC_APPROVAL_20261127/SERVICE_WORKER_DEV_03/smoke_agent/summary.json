@@ -1,0 +1,84 @@
+{
+  "scope": "controlled same-host live-paused worker and sandbox SQLite publication",
+  "policy_timing_scope": "deadline check is a local observe-before-commit gate, not a hard commit bound",
+  "asset_sha256": {
+    "camera": "b0793d2adda0fa6ae899c03989482bff9a42d3d5690fc7e3648f2795d730c23a",
+    "coffee": "cc02f8ca188b167c775a7101b5d767d1e71792cf762c33d6fa15a4599b5a8de7"
+  },
+  "reference_result_sha256": {
+    "camera": "e22988f18b19110bd677066bbcfdf45bd7970a5fd9be56b5e9be4edcedf744d9",
+    "coffee": "bc491e552e9a11655276eedd077e8b51904762cfe475e6030fd14eb822fee706"
+  },
+  "source_sha256": {
+    "run_effect_baseline.py": "85a0579b9d614de0db1301d21d0e3727f5ada9e1ee20b1f6aad4fcdeb1155d9b",
+    "DEV01/run_study.py": "8a8b49934404e556ac3d9a0cccc2dce3b37376043e43a358c1ab4c55c69087c6"
+  },
+  "cases": [
+    {
+      "condition": "STALE_AFTER_NEW",
+      "policy": "IDEMPOTENCY_ONLY",
+      "old_worker_alive_at_release": true,
+      "old_publish_attempt": "APPLIED",
+      "visible_before_old": "B",
+      "visible_after_old": "A",
+      "effect_count": 2,
+      "matched_reference_output": true,
+      "duplicate_replay_without_write": true
+    },
+    {
+      "condition": "STALE_AFTER_NEW",
+      "policy": "FENCE_AND_IDEMPOTENCY",
+      "old_worker_alive_at_release": true,
+      "old_publish_attempt": "STALE_GENERATION",
+      "visible_before_old": "B",
+      "visible_after_old": "B",
+      "effect_count": 1,
+      "matched_reference_output": true,
+      "duplicate_replay_without_write": true
+    },
+    {
+      "condition": "STALE_AFTER_NEW",
+      "policy": "FENCE_DEADLINE_IDEMPOTENCY",
+      "old_worker_alive_at_release": true,
+      "old_publish_attempt": "STALE_GENERATION",
+      "visible_before_old": "B",
+      "visible_after_old": "B",
+      "effect_count": 1,
+      "matched_reference_output": true,
+      "duplicate_replay_without_write": true
+    },
+    {
+      "condition": "LATE_SAME_GENERATION",
+      "policy": "IDEMPOTENCY_ONLY",
+      "old_worker_alive_at_release": true,
+      "old_publish_attempt": "APPLIED",
+      "visible_before_old": null,
+      "visible_after_old": "A",
+      "effect_count": 1,
+      "matched_reference_output": true,
+      "duplicate_replay_without_write": true
+    },
+    {
+      "condition": "LATE_SAME_GENERATION",
+      "policy": "FENCE_AND_IDEMPOTENCY",
+      "old_worker_alive_at_release": true,
+      "old_publish_attempt": "APPLIED",
+      "visible_before_old": null,
+      "visible_after_old": "A",
+      "effect_count": 1,
+      "matched_reference_output": true,
+      "duplicate_replay_without_write": true
+    },
+    {
+      "condition": "LATE_SAME_GENERATION",
+      "policy": "FENCE_DEADLINE_IDEMPOTENCY",
+      "old_worker_alive_at_release": true,
+      "old_publish_attempt": "DEADLINE_EXPIRED",
+      "visible_before_old": null,
+      "visible_after_old": null,
+      "effect_count": 0,
+      "matched_reference_output": null,
+      "duplicate_replay_without_write": null
+    }
+  ]
+}

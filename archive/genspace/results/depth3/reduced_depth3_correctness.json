@@ -1,0 +1,227 @@
+{
+  "status": "PASS",
+  "fixture": "F1__medium__medium__rich__d2__s0",
+  "cursor": "depth_search:DepthCursor",
+  "cases": [
+    {
+      "case": "conditional-delay",
+      "depth": 2,
+      "profiles": 2,
+      "syntax": 74,
+      "all_signatures": 20,
+      "structural_signatures": 18,
+      "partial_bounds_checked": 102,
+      "abstract_complete_keys_checked": 74,
+      "pruned_domains_checked": 11,
+      "syntax_leaves_checked": 74,
+      "live_skeleton_bounds_checked": 33,
+      "live_assignment_bounds_checked": 17,
+      "eligible_signatures_by_group": {
+        "1": 8,
+        "2": 10,
+        "3": 0,
+        "4": 0
+      },
+      "exact_complete_order_score_bits_witness": "PASS"
+    },
+    {
+      "case": "conditional-delay",
+      "depth": 3,
+      "profiles": 2,
+      "syntax": 5552,
+      "all_signatures": 45,
+      "structural_signatures": 43,
+      "partial_bounds_checked": 7754,
+      "abstract_complete_keys_checked": 5552,
+      "pruned_domains_checked": 53,
+      "syntax_leaves_checked": 5552,
+      "live_skeleton_bounds_checked": 498,
+      "live_assignment_bounds_checked": 41,
+      "eligible_signatures_by_group": {
+        "1": 9,
+        "2": 34,
+        "3": 0,
+        "4": 0
+      },
+      "exact_complete_order_score_bits_witness": "PASS",
+      "structural_signatures_new_at_depth3": 25
+    },
+    {
+      "case": "phased-validity",
+      "depth": 2,
+      "profiles": 2,
+      "syntax": 74,
+      "all_signatures": 32,
+      "structural_signatures": 30,
+      "partial_bounds_checked": 102,
+      "abstract_complete_keys_checked": 74,
+      "pruned_domains_checked": 3,
+      "syntax_leaves_checked": 74,
+      "live_skeleton_bounds_checked": 33,
+      "live_assignment_bounds_checked": 33,
+      "eligible_signatures_by_group": {
+        "1": 30,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "exact_complete_order_score_bits_witness": "PASS"
+    },
+    {
+      "case": "phased-validity",
+      "depth": 3,
+      "profiles": 2,
+      "syntax": 5552,
+      "all_signatures": 80,
+      "structural_signatures": 78,
+      "partial_bounds_checked": 7754,
+      "abstract_complete_keys_checked": 5552,
+      "pruned_domains_checked": 3,
+      "syntax_leaves_checked": 5552,
+      "live_skeleton_bounds_checked": 498,
+      "live_assignment_bounds_checked": 95,
+      "eligible_signatures_by_group": {
+        "1": 78,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "exact_complete_order_score_bits_witness": "PASS",
+      "structural_signatures_new_at_depth3": 48
+    },
+    {
+      "case": "offload",
+      "depth": 2,
+      "profiles": 2,
+      "syntax": 6,
+      "all_signatures": 4,
+      "structural_signatures": 2,
+      "partial_bounds_checked": 6,
+      "abstract_complete_keys_checked": 6,
+      "pruned_domains_checked": 3,
+      "syntax_leaves_checked": 6,
+      "live_skeleton_bounds_checked": 5,
+      "live_assignment_bounds_checked": 1,
+      "eligible_signatures_by_group": {
+        "1": 2,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "exact_complete_order_score_bits_witness": "PASS"
+    },
+    {
+      "case": "offload",
+      "depth": 3,
+      "profiles": 2,
+      "syntax": 8,
+      "all_signatures": 4,
+      "structural_signatures": 2,
+      "partial_bounds_checked": 8,
+      "abstract_complete_keys_checked": 8,
+      "pruned_domains_checked": 3,
+      "syntax_leaves_checked": 8,
+      "live_skeleton_bounds_checked": 7,
+      "live_assignment_bounds_checked": 1,
+      "eligible_signatures_by_group": {
+        "1": 2,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "exact_complete_order_score_bits_witness": "PASS",
+      "structural_signatures_new_at_depth3": 0
+    },
+    {
+      "case": "offload-unavailable",
+      "depth": 2,
+      "profiles": 2,
+      "syntax": 2,
+      "all_signatures": 2,
+      "structural_signatures": 0,
+      "partial_bounds_checked": 2,
+      "abstract_complete_keys_checked": 2,
+      "pruned_domains_checked": 4,
+      "syntax_leaves_checked": 2,
+      "live_skeleton_bounds_checked": 0,
+      "live_assignment_bounds_checked": 0,
+      "eligible_signatures_by_group": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "exact_complete_order_score_bits_witness": "PASS"
+    },
+    {
+      "case": "offload-unavailable",
+      "depth": 3,
+      "profiles": 2,
+      "syntax": 2,
+      "all_signatures": 2,
+      "structural_signatures": 0,
+      "partial_bounds_checked": 2,
+      "abstract_complete_keys_checked": 2,
+      "pruned_domains_checked": 4,
+      "syntax_leaves_checked": 2,
+      "live_skeleton_bounds_checked": 0,
+      "live_assignment_bounds_checked": 0,
+      "eligible_signatures_by_group": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "exact_complete_order_score_bits_witness": "PASS",
+      "structural_signatures_new_at_depth3": 0
+    },
+    {
+      "case": "four-groups",
+      "depth": 2,
+      "profiles": 1,
+      "syntax": 61,
+      "all_signatures": 27,
+      "structural_signatures": 18,
+      "partial_bounds_checked": 198,
+      "abstract_complete_keys_checked": 61,
+      "pruned_domains_checked": 34,
+      "syntax_leaves_checked": 61,
+      "live_skeleton_bounds_checked": 141,
+      "live_assignment_bounds_checked": 18,
+      "eligible_signatures_by_group": {
+        "1": 4,
+        "2": 14,
+        "3": 0,
+        "4": 0
+      },
+      "exact_complete_order_score_bits_witness": "PASS"
+    },
+    {
+      "case": "four-groups",
+      "depth": 3,
+      "profiles": 1,
+      "syntax": 7565,
+      "all_signatures": 480,
+      "structural_signatures": 479,
+      "partial_bounds_checked": 24950,
+      "abstract_complete_keys_checked": 7565,
+      "pruned_domains_checked": 27,
+      "syntax_leaves_checked": 7565,
+      "live_skeleton_bounds_checked": 20039,
+      "live_assignment_bounds_checked": 476,
+      "eligible_signatures_by_group": {
+        "1": 5,
+        "2": 40,
+        "3": 186,
+        "4": 248
+      },
+      "exact_complete_order_score_bits_witness": "PASS",
+      "structural_signatures_new_at_depth3": 461
+    }
+  ],
+  "depth_search_sha256": "abc26e9793376863321d04701cb011075fef52c4447c8311eb8cf7be5baa1631",
+  "predicate_negative_control": {
+    "status": "PASS",
+    "exception": "unsupported public predicate basis"
+  }
+}

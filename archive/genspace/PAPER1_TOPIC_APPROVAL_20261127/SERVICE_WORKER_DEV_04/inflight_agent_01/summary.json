@@ -1,0 +1,47 @@
+{
+  "scope": "one host, isolated Caddy process and local backend threads, held response control",
+  "reference_sha256": {
+    "A": "e22988f18b19110bd677066bbcfdf45bd7970a5fd9be56b5e9be4edcedf744d9",
+    "B": "bc491e552e9a11655276eedd077e8b51904762cfe475e6030fd14eb822fee706"
+  },
+  "old_backend_released_ns": 100756324807500,
+  "old_frontend_response": {
+    "status": 200,
+    "backend": "A",
+    "sha256": "e22988f18b19110bd677066bbcfdf45bd7970a5fd9be56b5e9be4edcedf744d9",
+    "bytes": 154810,
+    "sent_ns": 100756265203900,
+    "observed_ns": 100756325927300
+  },
+  "first_new_B_frontend_response": {
+    "status": 200,
+    "backend": "B",
+    "sha256": "bc491e552e9a11655276eedd077e8b51904762cfe475e6030fd14eb822fee706",
+    "bytes": 157791,
+    "sent_ns": 100756316200000,
+    "observed_ns": 100756324437700
+  },
+  "post_release_probe": {
+    "status": 200,
+    "backend": "B",
+    "sha256": "bc491e552e9a11655276eedd077e8b51904762cfe475e6030fd14eb822fee706",
+    "bytes": 157791,
+    "sent_ns": 100756326624400,
+    "observed_ns": 100756351386300
+  },
+  "admin_patch_response": {
+    "status": 200,
+    "sent_ns": 100756289149000,
+    "reply_ns": 100756292418000,
+    "response_body": "",
+    "request_if_match": "\"/config/apps/http/servers/dev04/routes/0/handle/0/upstreams/0 74a012c7808dca6a\""
+  },
+  "B_observed_while_old_backend_held": true,
+  "admin_ack_observed_while_old_backend_held": true,
+  "old_A_response_observed_after_B": true,
+  "old_A_response_observed_after_admin_ack": true,
+  "observed_hold_after_patch_submitted_ms": 35.486,
+  "monitor_pre_release_budget_ms": 700,
+  "binary_sha256": "2622e239c79df700b0eb92cbd950d1edee365e155a7859f358f0e55f002df591",
+  "source_sha256": "4b8355920e3323a792f491ffe021735bd479fe607906c3a8ec02f05b0e17e6af"
+}

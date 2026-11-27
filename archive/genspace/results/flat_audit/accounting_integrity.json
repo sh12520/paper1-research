@@ -1,0 +1,16 @@
+{
+  "rows": 1920,
+  "target_ranks": 842,
+  "availability_registry_variants": 16,
+  "scopes": {
+    "1": {
+      "legal_structural_full_rich": 1512,
+      "legal_structural_method_eligible_rich": 1512
+    },
+    "2": {
+      "legal_structural_full_rich": 1394037,
+      "legal_structural_method_eligible_rich": 1252611
+    }
+  },
+  "complete": true
+}

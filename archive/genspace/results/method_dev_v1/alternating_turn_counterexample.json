@@ -1,0 +1,52 @@
+{
+  "actual_first_agent": 0,
+  "batch_one_history": [
+    {
+      "agent": 0,
+      "candidate_id": 1,
+      "message": "PROPOSE"
+    },
+    {
+      "agent": 1,
+      "candidate_id": 1,
+      "message": "REJECT"
+    },
+    {
+      "agent": 0,
+      "candidate_id": 2,
+      "message": "PROPOSE"
+    },
+    {
+      "agent": 1,
+      "candidate_id": 2,
+      "message": "REJECT"
+    }
+  ],
+  "batch_two_history": [
+    {
+      "agent": 0,
+      "candidate_id": 3,
+      "message": "PROPOSE"
+    },
+    {
+      "agent": 1,
+      "candidate_id": 3,
+      "message": "REJECT"
+    },
+    {
+      "agent": 1,
+      "candidate_id": 4,
+      "message": "PROPOSE"
+    },
+    {
+      "agent": 0,
+      "candidate_id": 4,
+      "message": "REJECT"
+    }
+  ],
+  "expected_first_agent_after_last_A_proposal": 1,
+  "issue": "batch_boundary_turn_inferred_from_proposal_count_not_last_proposer",
+  "scope": "synthetic deterministic mock agents; no benchmark instance or RNG",
+  "source_sha256": "527ba34e757da8fc81145ec1f1fed9e4342863e60a8b905ffa6faf90cacfb8ff",
+  "status": "COUNTEREXAMPLE"
+}

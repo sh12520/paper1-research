@@ -1,0 +1,13 @@
+{
+  "scope": "controlled local process kill before committing pure calculation result",
+  "initial_process_waited": true,
+  "initial_process_exit_code": 1,
+  "original_activation_cutoff_passed": true,
+  "first_state_after_restart": "IN_PROGRESS",
+  "next_attempt": "BUSY",
+  "original_worker_pid": 29132,
+  "recovery_process_pid": 30316,
+  "application_starts": 1,
+  "durable_results": 0,
+  "asset_sha256": "b0793d2adda0fa6ae899c03989482bff9a42d3d5690fc7e3648f2795d730c23a"
+}

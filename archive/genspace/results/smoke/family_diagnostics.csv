@@ -1,0 +1,17 @@
+﻿agreements,all_one,all_zero,deadlocks,family,instances,method
+0,False,True,48,F1,48,B0
+4,False,False,44,F1,48,B1
+13,False,False,35,F1,48,B2
+37,False,False,11,F1,48,O1
+0,False,True,48,F2,48,B0
+0,False,True,48,F2,48,B1
+0,False,True,48,F2,48,B2
+16,False,False,32,F2,48,O1
+0,False,True,48,F3,48,B0
+6,False,False,42,F3,48,B1
+10,False,False,38,F3,48,B2
+37,False,False,11,F3,48,O1
+0,False,True,48,F4,48,B0
+3,False,False,45,F4,48,B1
+11,False,False,37,F4,48,B2
+34,False,False,14,F4,48,O1

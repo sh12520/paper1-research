@@ -1,0 +1,217 @@
+{
+  "audit4": [
+    "F1__medium__high__rich__d2__s0",
+    "F2__medium__high__rich__d2__s0",
+    "F3__medium__high__rich__d2__s0",
+    "F4__medium__high__rich__d2__s0"
+  ],
+  "fresh_repeat16": [
+    "F1__medium__high__sparse__d1__s0",
+    "F1__medium__high__sparse__d2__s0",
+    "F1__medium__high__rich__d1__s0",
+    "F1__medium__high__rich__d2__s0",
+    "F2__medium__high__sparse__d1__s0",
+    "F2__medium__high__sparse__d2__s0",
+    "F2__medium__high__rich__d1__s0",
+    "F2__medium__high__rich__d2__s0",
+    "F3__medium__high__sparse__d1__s0",
+    "F3__medium__high__sparse__d2__s0",
+    "F3__medium__high__rich__d1__s0",
+    "F3__medium__high__rich__d2__s0",
+    "F4__medium__high__sparse__d1__s0",
+    "F4__medium__high__sparse__d2__s0",
+    "F4__medium__high__rich__d1__s0",
+    "F4__medium__high__rich__d2__s0"
+  ],
+  "instances": [
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 1,
+        "preference_conflict": "high",
+        "resource_pressure": "medium"
+      },
+      "family": "F1",
+      "instance_id": "F1__medium__high__sparse__d1__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 2,
+        "preference_conflict": "high",
+        "resource_pressure": "medium"
+      },
+      "family": "F1",
+      "instance_id": "F1__medium__high__sparse__d2__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 1,
+        "preference_conflict": "high",
+        "resource_pressure": "medium"
+      },
+      "family": "F1",
+      "instance_id": "F1__medium__high__rich__d1__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 2,
+        "preference_conflict": "high",
+        "resource_pressure": "medium"
+      },
+      "family": "F1",
+      "instance_id": "F1__medium__high__rich__d2__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 1,
+        "preference_conflict": "high",
+        "resource_pressure": "medium"
+      },
+      "family": "F2",
+      "instance_id": "F2__medium__high__sparse__d1__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 2,
+        "preference_conflict": "high",
+        "resource_pressure": "medium"
+      },
+      "family": "F2",
+      "instance_id": "F2__medium__high__sparse__d2__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 1,
+        "preference_conflict": "high",
+        "resource_pressure": "medium"
+      },
+      "family": "F2",
+      "instance_id": "F2__medium__high__rich__d1__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 2,
+        "preference_conflict": "high",
+        "resource_pressure": "medium"
+      },
+      "family": "F2",
+      "instance_id": "F2__medium__high__rich__d2__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 1,
+        "preference_conflict": "high",
+        "resource_pressure": "medium"
+      },
+      "family": "F3",
+      "instance_id": "F3__medium__high__sparse__d1__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 2,
+        "preference_conflict": "high",
+        "resource_pressure": "medium"
+      },
+      "family": "F3",
+      "instance_id": "F3__medium__high__sparse__d2__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 1,
+        "preference_conflict": "high",
+        "resource_pressure": "medium"
+      },
+      "family": "F3",
+      "instance_id": "F3__medium__high__rich__d1__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 2,
+        "preference_conflict": "high",
+        "resource_pressure": "medium"
+      },
+      "family": "F3",
+      "instance_id": "F3__medium__high__rich__d2__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 1,
+        "preference_conflict": "high",
+        "resource_pressure": "medium"
+      },
+      "family": "F4",
+      "instance_id": "F4__medium__high__sparse__d1__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 2,
+        "preference_conflict": "high",
+        "resource_pressure": "medium"
+      },
+      "family": "F4",
+      "instance_id": "F4__medium__high__sparse__d2__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 1,
+        "preference_conflict": "high",
+        "resource_pressure": "medium"
+      },
+      "family": "F4",
+      "instance_id": "F4__medium__high__rich__d1__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 2,
+        "preference_conflict": "high",
+        "resource_pressure": "medium"
+      },
+      "family": "F4",
+      "instance_id": "F4__medium__high__rich__d2__s0",
+      "seed_index": 0
+    }
+  ],
+  "namespace": "GENSPACE-FAIL-01-ENGINEERING-SHADOW",
+  "planned_count": 16,
+  "rerun8": [
+    "F1__medium__high__sparse__d2__s0",
+    "F1__medium__high__rich__d2__s0",
+    "F2__medium__high__sparse__d2__s0",
+    "F2__medium__high__rich__d2__s0",
+    "F3__medium__high__sparse__d2__s0",
+    "F3__medium__high__rich__d2__s0",
+    "F4__medium__high__sparse__d2__s0",
+    "F4__medium__high__rich__d2__s0"
+  ],
+  "run_id": "ENGINEERING-SHADOW-01"
+}

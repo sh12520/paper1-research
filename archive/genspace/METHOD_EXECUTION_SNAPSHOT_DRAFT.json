@@ -1,0 +1,64 @@
+{
+  "payload": {
+    "authorization_is_external": true,
+    "budget": {
+      "depth3": {
+        "frontier": 260000,
+        "native_expansions": 2000000,
+        "wall_seconds": 45
+      },
+      "emergency_available_mib": 768,
+      "numerical_threads": {
+        "MKL_NUM_THREADS": "1",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1"
+      },
+      "original_depth": {
+        "frontier": 180000,
+        "native_expansions": 300000,
+        "wall_seconds": 12
+      },
+      "prelaunch_available_mib": 2048,
+      "rss_mib": 2048
+    },
+    "candidate_source_tree_sha256": "320f956834af272f24b43db9721bbd67247af1fd159e52fe776a5bdd6fa26ca7",
+    "infrastructure_sha256_by_file": {
+      "results/method_holdout_readiness/check_holdout_integration.py": "174b6844c1623d03926e77809800341f5ef698ebb84dad72be8c430b66dd4eea",
+      "results/method_holdout_readiness/check_holdout_route.py": "6fd1cad3e86ab4a2ad482fa37d6caf569b0683b562eb6b388352f1a7193bb89c",
+      "results/method_holdout_readiness/check_supervisor_recovery.py": "b6353fcb98b37cc0afbc04759c9178beee6d62c25da7a66f3febb9bc99e10d02",
+      "results/method_holdout_readiness/check_unseen_additional_depth2.py": "cbdd53b5643ca1ecae0c60a2d629ab879e13851722ff22ff41f266ac597891a3",
+      "results/method_holdout_readiness/check_unseen_verifier.py": "fb7115fdcaf3fe8619b5300a401e698e131d82da951670704ac3fe708d891645",
+      "results/method_holdout_readiness/holdout_assets.py": "7dfd96a215afa671283017b744a8e51621432c8d36467a684fcac86e31719472",
+      "results/method_holdout_readiness/holdout_route.py": "983cc59091405f6c63e4630b4fd18c71ab555f7c90980e8a6077b735075da35c",
+      "results/method_holdout_readiness/holdout_runner.py": "0c9f12f5f4ec2a8ce752a1964a5db50b972223cc8819830dda48ea30014acd9b",
+      "results/method_holdout_readiness/holdout_statistics_adapter.py": "3637c1f9337011408c06e29e023a6713fbcb670b1aecf5ca85be9593b5253a64",
+      "results/method_holdout_readiness/holdout_supervisor.py": "1446def36935a3d226c836d75591d66233d583eedd16692120c728cbd11c3edd",
+      "results/method_holdout_readiness/holdout_transactions.py": "a39aaf591bc01cb90f8ab51ffbe0b80dce187691d9a27720da4b2749e8f5d8b2",
+      "results/method_holdout_readiness/holdout_worker.py": "44ae384dd832d09456913f0122868aad8c2ebdd9f2e52b72c822885d64a5615c",
+      "results/method_holdout_readiness/method_statistics.py": "a26251b3793ae074837d2704d8fab318568af77f9557ceef8a6c5149c4afe41e",
+      "results/method_holdout_readiness/prepare_method_holdout.py": "d42aaef7355fffaea41e409d71e0b4a57949ed184bce4971af97829e80917e66",
+      "results/method_holdout_readiness/test_method_statistics.py": "be6f099457c983a71a7f41e88e05d5b4aafdc48446785f9882e0673f41e7c710",
+      "results/method_holdout_readiness/unseen_verifier.py": "9cfc3cea5a67afe9b7a4706ff04cb93c2d4dcbcc47e8faa79e4be0e999296725"
+    },
+    "model": {
+      "config_sha256": "7b968f4023f2f543ad02dca9b038fb67bdc8b6951aee46b8cc16fc3a92da9a9b",
+      "model_fingerprint": "449502d2c2a80da7f1899f8827812f4fafc3a8c5145048b5977a4a4432ab6e40",
+      "registry_fingerprint": "3b47f8575ed5ca0d506340e43786b21e1366c2c3e75f5314d113f19bad5cd231"
+    },
+    "namespace": "GENSPACE-METHOD-HOLDOUT-V1",
+    "plan_sha256": "a17fed60a43dac73bb864d2237c1d364d02db630b7b6e932c695d1808fa7605a",
+    "prior_manifest_sha256": "52db743977f7ebde3c447656cabf534440dcc9403dd278b9c5898b9ab0421fd0",
+    "runtime": {
+      "implementation": "CPython",
+      "numpy": "2.3.5",
+      "platform": "win32",
+      "pointer_bits": 64,
+      "python": "3.12.14",
+      "python_executable_sha256": "9165bc4b4bd49bf9942a5e7b42a171fd46a71b77ca77a1cf574a51657c1b7bb4"
+    },
+    "status": "DRAFT_PREPARED_EXECUTION"
+  },
+  "payload_sha256": "c0243d23898e792fe047a413aaf2fd6a790c34e192dbf0caf0fd45aabe175768",
+  "scope": "method-holdout-prepared-execution-v1",
+  "snapshot_version": 1
+}

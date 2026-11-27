@@ -1,0 +1,23 @@
+{
+  "budget_matches": {
+    "100": true,
+    "1000": true,
+    "10000": true,
+    "500": true,
+    "5000": true
+  },
+  "history_count": 9998,
+  "history_equal": true,
+  "pass": true,
+  "record_sha256": {
+    "results\\method_dev_v1\\optimization_preview\\integrated_index102\\F1__low__high__sparse__d2__s2\\record.json": "42c471ce20dd8782b9818261bfa873ad637c4c52d0f59661c4cc33d164e7dbc0",
+    "results\\method_dev_v1\\profile_index102\\F1__low__high__sparse__d2__s2\\record.json": "30b1f5a20547adc183e421c9a357eed7a48b3b0dd002111350866162b451c32c"
+  },
+  "scope": "one original PILOT fixture; excludes timing and interpreter call count",
+  "source_sha256": {
+    "harness.py": "2dd57d3f1880e5e5c33002748c3dbe918285b166593f5d883fa631a10fc709c9",
+    "private_protocol.py": "527ba34e757da8fc81145ec1f1fed9e4342863e60a8b905ffa6faf90cacfb8ff",
+    "public_search.py": "b4b47d94fc5c34ce9ddfb23dba98164bb9b59c2b6502cf15f86527e97935f589",
+    "runtime.py": "a58211b8516a470652451b3456c15f62c290da18c98c9b180155a737a8c21eaf"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "task_id": "0-2-c2_query",
+  "method": "C2_QUERY",
+  "scenario": "clean",
+  "selected": "edge",
+  "on_time": true,
+  "end_to_end_ms": 257.6903,
+  "edge_starts": 1,
+  "edge_grants": 1,
+  "unused_lease_ms": 0,
+  "granted_slot_ms": 127.6387,
+  "output_side_pixels": 512,
+  "valid_output_sha256": "bc491e552e9a11655276eedd077e8b51904762cfe475e6030fd14eb822fee706",
+  "source_bytes": 466706,
+  "control_body_bytes": 9476,
+  "data_body_bytes": 832893,
+  "rdinp_terminal": "COMMITTED"
+}

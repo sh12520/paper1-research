@@ -1,0 +1,8 @@
+{
+  "tag": "v2.11.9",
+  "download_url": "https://github.com/caddyserver/caddy/releases/download/v2.11.9/caddy_2.11.9_windows_amd64.zip",
+  "sha_source": "https://github.com/caddyserver/caddy/releases/expanded_assets/v2.11.9",
+  "zip_sha256": "ad93112d335ee687100c4c9f11bced16ca590377976b7fe7883882b9e797e472",
+  "exe_sha256": "2622e239c79df700b0eb92cbd950d1edee365e155a7859f358f0e55f002df591",
+  "size_bytes": 18384117
+}

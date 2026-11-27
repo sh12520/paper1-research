@@ -1,0 +1,30 @@
+{
+  "status": "METHOD_READY_FOR_FREEZE_REVIEW",
+  "reason": "同域配对显示在线优势，且单因素测试支持至少一项领域抽象减少展开。",
+  "planned_attempts": 1248,
+  "observed_attempts": 1248,
+  "protocol_match": 1248,
+  "exact_checkpoints": 4590,
+  "planned_checkpoints": 4800,
+  "protected_files_unchanged": 232,
+  "development_plan_sha256": "966d8c40a07eee54e6d88ae13296b77b63142a7e5e91eb97d3993d03faf00cb6",
+  "shared_immutable_kernel_sources": {
+    "results/depth3/run_depth3.py": "d93665199ec383d30057dca06c1e8439db2970146b125d081accc09218514f93",
+    "results/depth3/depth_search.py": "abc26e9793376863321d04701cb011075fef52c4447c8311eb8cf7be5baa1631",
+    "results/depth3/check_reduced_depth3.py": "5814fbbbaa37b126d5187f556a3b755954919e4c5c2ac63b885daab88eb808d8",
+    "results/grammar_dedup/dedup_search.py": "425b326fc4c86d80359fc2b078a499bbae26f820297de660b5ca30fa3d17f6bf",
+    "results/grammar_gate/grammar_search.py": "e6eea34e87ab339a07a7b0b31e6287bd3113738d6b60c5996b0fc8e9dcd0d126",
+    "results/grammar_gate/abstract_semantics.py": "2d4a9357220e5305829c576e75a77d32424de14c86ad8c2a0beaa86c0e826b7d",
+    "results/grammar_gate/guard.py": "20cbca66fc92dd80b2ea626720f6fea88b442a16cb1d559951aedc1017e2b52a",
+    "results/grammar_gate/protocol_adapter.py": "3134284f3c07fa62591343eee33319ae848fa6e60d1bc8f7dea0bfc8f5f96776"
+  },
+  "candidate_method_sources": {
+    "run_comparison.py": "2f6ffa0ef84ea0164c5c280354ad9d50803c8d6bcb59d4326e9f2d731135a57c",
+    "check_reduced.py": "cd14172e1dbfc123a0abffa6c617098e544543e1e50646a69794ce5baa0870a7",
+    "generic_search.py": "9e10d9063a5958103ea39c0cea587e15ed837743aa8e4e062bf65eb879754331",
+    "ablations.py": "d0d6753b04981583a1720a01f3ca9d3dcb39cc8ea5c4ead79d25e836d2c11de7",
+    "index_controls.py": "afd86cc13fe044bb1b93f378193dae569c7804235f5d297bee7a8ad7bbdb4c2d"
+  },
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "numpy": "2.3.5"
+}

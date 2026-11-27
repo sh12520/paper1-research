@@ -1,0 +1,13 @@
+scenario,method,released,edge_on_time,fallback_on_time,missed,edge_starts,end_to_end_ms_median,end_to_end_ms_min,end_to_end_ms_max,unused_slot_ms_mean,control_body_bytes_median,data_body_bytes_median
+clean,C2_CONFIRM,3,3,0,0,3,352.348,312.948,369.116,0.0,13921,832897
+clean,C2_QUERY,3,3,0,0,3,257.69,201.821,370.901,0.0,9476,832893
+clean,IDEMPOTENT_LEASE,3,3,0,0,3,76.454,58.171,84.56,0.0,163,832909
+first_reply_lost,C2_CONFIRM,3,3,0,0,3,369.384,344.146,477.41,0.0,15118,832897
+first_reply_lost,C2_QUERY,3,3,0,0,3,305.114,217.123,320.164,0.0,12900,832893
+first_reply_lost,IDEMPOTENT_LEASE,3,3,0,0,3,80.74,40.882,85.479,0.0,197,832909
+commit_replies_lost,C2_CONFIRM,3,0,3,0,0,574.838,563.191,587.666,390.572,8628,0
+commit_replies_lost,C2_QUERY,3,3,0,0,3,389.452,219.654,458.435,0.0,11053,832893
+commit_replies_lost,IDEMPOTENT_LEASE,3,3,0,0,3,62.716,56.555,65.726,0.0,197,832909
+commit_and_status_unavailable,C2_CONFIRM,3,0,3,0,0,563.926,559.698,578.138,357.327,10869,0
+commit_and_status_unavailable,C2_QUERY,3,0,3,0,0,570.812,561.876,573.551,425.535,8596,0
+commit_and_status_unavailable,IDEMPOTENT_LEASE,3,0,3,0,0,569.4,565.163,573.46,555.798,68,0

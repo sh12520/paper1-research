@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "preparation": {
+    "status": "DRAFT_PREPARED_DEPTH3_PROOF_EXECUTION",
+    "snapshot_sha256": "b11c320219c6de92d890040d3b97345271423a34de9ec0430240fde0cde7fe1a",
+    "depth3_proof_addendum_sha256": "281bec8773cadbd761adb44b5895c0cb33c9c0b63dd3fdccfd122a6bde4a2701",
+    "bound_proof_sources": 8,
+    "counts": {
+      "attempts": 35520,
+      "depth3": 480,
+      "endpoint_a": 720,
+      "original": 2880
+    }
+  },
+  "default_disabled": true,
+  "confirm_denied": true,
+  "wrong_proof_budget_rejected": true,
+  "fixture": "F1__low__high__sparse__d2__s0",
+  "engineering_handoff": [
+    {
+      "method": "GENERIC_ABSTRACT_BEST_FIRST",
+      "adjudicated_status": "EXACT_DOMAIN_EXHAUSTED_SHORT",
+      "checkpoints": [
+        "EXACT_TOPK_FULL_LENGTH",
+        "EXACT_DOMAIN_EXHAUSTED_SHORT",
+        "EXACT_DOMAIN_EXHAUSTED_SHORT"
+      ],
+      "archive_rechecked_on_resume": true,
+      "sidecar_proof_sha256": "e0b852cf87e8db75f1b11cfe011baedc85592fbf32e87ed721c68714c6bb9c50"
+    },
+    {
+      "method": "CURRENT_ON_DEMAND_GRAMMAR_SEARCH",
+      "adjudicated_status": "NOT_CERTIFIED_RESOURCE_LIMIT",
+      "checkpoints": [
+        "NOT_CERTIFIED_RESOURCE_LIMIT",
+        "NOT_CERTIFIED_RESOURCE_LIMIT",
+        "NOT_CERTIFIED_RESOURCE_LIMIT"
+      ],
+      "archive_rechecked_on_resume": false,
+      "sidecar_proof_sha256": null
+    }
+  ]
+}

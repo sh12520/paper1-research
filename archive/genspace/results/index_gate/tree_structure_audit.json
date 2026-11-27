@@ -1,0 +1,16 @@
+{
+  "contract": {
+    "nodes_checked": 142517,
+    "leaves_checked": 71274,
+    "root_partitions": 31,
+    "unique_classes": 1252611,
+    "summary_checks": "PASS"
+  },
+  "generic": {
+    "nodes_checked": 131071,
+    "leaves_checked": 65536,
+    "root_partitions": 1,
+    "unique_classes": 1252611,
+    "summary_checks": "PASS"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "snapshot_sha256": "c45633c085d0b0cac05564255db4f18552eb20c4cec06f4d0fcd846a3a4f9a9d",
+  "snapshot_verified": true,
+  "authorization": {
+    "namespace": "GENSPACE-FAIL-01-SMOKE",
+    "snapshot_sha256": "c45633c085d0b0cac05564255db4f18552eb20c4cec06f4d0fcd846a3a4f9a9d",
+    "authorization_version": 2
+  },
+  "state_snapshot_hash": "c45633c085d0b0cac05564255db4f18552eb20c4cec06f4d0fcd846a3a4f9a9d",
+  "per_item_pre_post_verified": true,
+  "guard_events_path": "D:\\\u610f\u56fe\u534f\u5546\u8bba\u6587\\\u8bba\u65871\\GENSPACE-FAIL-01\\results\\smoke02_preflight\\guard_events.jsonl",
+  "guard_initial_baseline": {
+    "execution_snapshot": "c45633c085d0b0cac05564255db4f18552eb20c4cec06f4d0fcd846a3a4f9a9d",
+    "authorization": "66b885c21aa5eaec4eff152e7fd57e5bb19ad37082b23d59da25513c9939531d",
+    "formal_plan": "36a53aa0c3c6968fe2114903faf060203acbc0fad4207a136bfb7093790b2215",
+    "preregistration": "0bb5918dcc4d909bf7685570b99dc5cee451bbdbd561921d4ece0d15f8a22d85"
+  },
+  "current_hashes": {
+    "execution_snapshot": "c45633c085d0b0cac05564255db4f18552eb20c4cec06f4d0fcd846a3a4f9a9d",
+    "authorization": "66b885c21aa5eaec4eff152e7fd57e5bb19ad37082b23d59da25513c9939531d",
+    "formal_plan": "36a53aa0c3c6968fe2114903faf060203acbc0fad4207a136bfb7093790b2215",
+    "preregistration": "0bb5918dcc4d909bf7685570b99dc5cee451bbdbd561921d4ece0d15f8a22d85"
+  },
+  "guard_completed": true,
+  "guard_integrity_termination_or_fatal": false,
+  "guard_wall_seconds": 947.2815244197845,
+  "planned_stop_segments": 0,
+  "memory_pause_segments": 0,
+  "prelaunch_wait_records": 0,
+  "prelaunch_samples_included": 3,
+  "physical_total_bytes": 16909066240,
+  "min_sampled_available_bytes": 2227712000,
+  "estimated_peak_system_used_bytes": 14681354240,
+  "observed_child_root_peak_working_set_bytes": 762011648,
+  "orchestrator_peak_measured": false,
+  "preregistered_fast_phase_memory_events_recorded": false,
+  "protocol_deviation_requires_review": true,
+  "preregistered_instance_boundary_and_child_exit_memory_events_recorded": false,
+  "protocol_deviation_description": "FAST stage, instance start/end, and child-exit complete worker/orchestrator and system memory samples were not recorded."
+}

@@ -1,0 +1,25 @@
+{
+  "format": "method-depth3-proof-execution-addendum-v1",
+  "status": "DRAFT_PREPARED_EXECUTION",
+  "scope": "GENSPACE-METHOD-HOLDOUT-V1",
+  "base_snapshot_sha256": "b11c320219c6de92d890040d3b97345271423a34de9ec0430240fde0cde7fe1a",
+  "plan_sha256": "a17fed60a43dac73bb864d2237c1d364d02db630b7b6e932c695d1808fa7605a",
+  "proof_policy": {
+    "stage_wall_s": 180,
+    "worker_working_set_bytes": 2147483648,
+    "prelaunch_available_bytes": 2147483648,
+    "emergency_available_bytes": 805306368,
+    "proof_bytes": 100663296,
+    "pool_nodes": 200000
+  },
+  "infrastructure_sha256_by_file": {
+    "results/depth3_proof/cover_verifier.py": "548b718616d237daaf45a895c4ce07ea6c3340f55964a678b9c8951e6dc3f37f",
+    "results/depth3_proof/method_proof_bridge.py": "dfc69df5d7ef17b049d54abc4f237b79975129441f29960170eebd543178ddd0",
+    "results/depth3_proof/method_proof_cache.py": "4211b0690b3155bd377c8098db8b248866485d35d11e53f220bbcd389d6b8a53",
+    "results/depth3_proof/native_symbolic_producer.py": "3e0cd7e683914deeb937fb944fd648ac86118b7d4ba7e2d0842ec36d158d3a2a",
+    "results/depth3_proof/prepare_holdout_proof_entry.py": "2141813c8c269b650ef5dc6f2d30a007d7823f178f89a300dd8cbd0c720ae018",
+    "results/depth3_proof/run_depth3_proofs.py": "b817c0376029e7eca6d59d5848b7108b65a41f097c3379a43b571a89eaefac93",
+    "results/depth3_proof/symbolic_format.py": "0c915e53d1dfae9b8f74f2ae001bde474f9b8d9b072df3a5d8aa1e4847d6a554",
+    "results/depth3_proof/symbolic_verifier.py": "796eea3bafba42a01eb829c6dbfecd970ffb6978305f6aec1476fff4fbf7fcbf"
+  }
+}

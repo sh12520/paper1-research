@@ -1,0 +1,36 @@
+{
+  "config_hash": "7b968f4023f2f543ad02dca9b038fb67bdc8b6951aee46b8cc16fc3a92da9a9b",
+  "dependency_environment": {
+    "python_cache_tag": "cpython-314",
+    "python_implementation": "CPython",
+    "python_soabi": "cp314-win_amd64",
+    "python_version": "3.14.4",
+    "runtime_dependencies": []
+  },
+  "dependency_hash": "fe06a603fac7194536b710b5aa1507f83a79d0c6c57b200694123ee339073779",
+  "source_hash": "b016ae3985a51c137877525c8a14320e50c1f45fbba9665da185208ac2a34b94",
+  "sources": {
+    "src/canonical_cases.py": "3b260a87e196a95445ffda344072b6e763a3cc6d749197af054e48e5ac42fb2c",
+    "src/engine.py": "477116089b011ed617f704861bce0dffd24885f77e2c0d935b66183ec1a44411",
+    "src/engineering_perf.py": "8b6801d6d2cbbcf8166aa36215b00c4227bbef8323111464975d299b606c49a7",
+    "src/enumeration.py": "6eb44e1dd1697a122c01c9ce8de072a06cafb518e9321276cad35c092671763e",
+    "src/fingerprints.py": "ee33dacf890954cac52ebf626eb9f93660fd31a194213257cfab491be6dac78f",
+    "src/instances.py": "55b79ea592d4436038e6bdfd1535ca5d687d2b01d080c6d720cfec4053f246a7",
+    "src/models.py": "14f88bec9bd8563fdf98f6ff87dcfa704af962cfd80674b211cc23917c93369c",
+    "src/registry.py": "407ac57e975a797f2634eb1439cc97ba327717e044b1031a8d305e1cf78f9c22",
+    "src/runner.py": "9ebd6371120b36bcaf5028a8d9f2c67a6ecb952cd1dfb8b061e1d32cfb1a7a92",
+    "src/semantic_dp.py": "f73607bd20b740557f205e6f60009392717a382c771fb1266376e03902370790",
+    "src/state_machine.py": "4337cc969a9259ba922089034a22524414f203b13dfa7e046e56bc5d4744926f",
+    "tests/test_canonical_cases.py": "2e307fe32a0f145bb1dfee6482c3323fc0dae6d7304340cfd136125a36f82302",
+    "tests/test_engine_core.py": "7a5d88c7171589ff99cdc9d5cd8763842023b3f4ae536499ca9e3e6396fdc10a",
+    "tests/test_enumeration_public.py": "1593dbea8e4c13faa0762eda6f76ae8fa4daace3fafa647e6fe38d31b353b3f5",
+    "tests/test_fingerprints.py": "f9d9f4ce83432e34d0855522aa75b25a46e8c513cc97dd491a6beea4c1edb569",
+    "tests/test_instances.py": "36c046adbb952e52f9778d434417956aa0de288cae1d9bd3ef0255e7f57e02a3",
+    "tests/test_paired_preparation.py": "f0034dcd1ffc0f0ebbb79988b5c20375033bbcd01eed99a6dd45ce645de062eb",
+    "tests/test_runner_semantic.py": "4cfc1ca5abeb97cad244f5cc45e837605724a574d5d34914d411c0c17937f88c",
+    "tests/test_semantic_dp.py": "b3c74d33ac1885e249d8984ee3e319814a48125ba375f81a470d194472af1f27",
+    "tests/test_state_machine.py": "fc3bfead284063aaf50f987f24e7f17572ecf9d42b1084979a1b2c5d15697d80",
+    "tools/audit_semantic_reference.py": "ff81ccf61e7c03ac05592a35b890e27b0a47888778449b4c0bc03cb2b9477d3c"
+  },
+  "version": 1
+}

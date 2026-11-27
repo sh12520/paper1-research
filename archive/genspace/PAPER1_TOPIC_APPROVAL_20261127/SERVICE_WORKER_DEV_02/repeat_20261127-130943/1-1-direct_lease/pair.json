@@ -1,0 +1,34 @@
+[
+  {
+    "task_id": "first",
+    "published_source": "local",
+    "on_time": true,
+    "latency_ms": 577.2419,
+    "result_sha256": "d5fa1153c8c823ce248ac0663fec2fa0d0e3f783a03e7233413dee45a4f5ab21",
+    "release_ns": 97749470474900,
+    "publish_ns": 97750047716800,
+    "pair_id": "1-1-direct_lease",
+    "method": "DIRECT_LEASE",
+    "condition": "first_proof_blackout",
+    "asset": "camera.png",
+    "worker_pid": 7792,
+    "c2_state": null,
+    "application_slot_final": "EXPIRED"
+  },
+  {
+    "task_id": "next",
+    "published_source": "edge",
+    "on_time": true,
+    "latency_ms": 196.1001,
+    "result_sha256": "bc491e552e9a11655276eedd077e8b51904762cfe475e6030fd14eb822fee706",
+    "release_ns": 97750371206300,
+    "publish_ns": 97750567306400,
+    "pair_id": "1-1-direct_lease",
+    "method": "DIRECT_LEASE",
+    "condition": "first_proof_blackout",
+    "asset": "coffee.png",
+    "worker_pid": 7792,
+    "c2_state": null,
+    "application_slot_final": "RESULT"
+  }
+]

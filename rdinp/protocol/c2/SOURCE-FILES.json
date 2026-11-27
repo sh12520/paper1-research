@@ -1,0 +1,26 @@
+{
+  "revision": "RDINP-A1-CANDIDATE-2",
+  "files": [
+    "authority.py",
+    "contracts.py",
+    "crypto.py",
+    "endpoint.py",
+    "events.py",
+    "initiator.py",
+    "message.schema.json",
+    "contracts.schema.json",
+    "trust.schema.json",
+    "openapi.json",
+    "requirements.txt",
+    "CONTRACT.md",
+    "SIGNING-AND-PREIMAGES.md",
+    "CONDITIONAL-PROOF.md",
+    "local_demo.py",
+    "test_candidate.py",
+    "test_minimal_fixes.py",
+    "crash_initiator.py",
+    "crash_responder.py",
+    "run_validation.py",
+    "SOURCE-FILES.json"
+  ]
+}

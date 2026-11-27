@@ -1,0 +1,12 @@
+{
+  "scope": "single supervised local worker, pure calculation, sole side effect is the durable result",
+  "reclamation_while_owner_live": "OWNER_ALIVE",
+  "reclamation_after_wait_confirms_exit": "RETIRED",
+  "first_outcome": "abandoned with separate reason, not a successful result",
+  "next_task": "RESULT",
+  "next_result_sha256": "e22988f18b19110bd677066bbcfdf45bd7970a5fd9be56b5e9be4edcedf744d9",
+  "actual_worker_starts": 2,
+  "durable_results": 1,
+  "owner_handle_pid": 13480,
+  "exit_code": 1
+}

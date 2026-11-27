@@ -1,0 +1,19 @@
+{
+  "authorization_version": 2,
+  "namespace_authorizations": {
+    "CONFIRM": {
+      "allowed": false
+    },
+    "ENGINEERING_SHADOW": {
+      "allowed": true,
+      "required_snapshot_sha256": "de8e0901bc9dd8876468b72b5aa8e065575879ab7259d0d56ba0819ab5bbb6c9"
+    },
+    "PILOT": {
+      "allowed": false
+    },
+    "SMOKE": {
+      "allowed": true,
+      "required_snapshot_sha256": "c45633c085d0b0cac05564255db4f18552eb20c4cec06f4d0fcd846a3a4f9a9d"
+    }
+  }
+}

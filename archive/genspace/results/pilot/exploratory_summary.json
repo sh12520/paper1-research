@@ -1,0 +1,662 @@
+{
+  "complete": 1920,
+  "degenerate_configurations": 96,
+  "families": [
+    {
+      "B0_agreement": 0,
+      "B0_application_utility_mean": null,
+      "B0_candidate_count_mean": 1.0,
+      "B0_deadlock": 480,
+      "B0_nash_welfare_mean": null,
+      "B0_network_utility_mean": null,
+      "B0_rate": 0.0,
+      "B0_verified_count_mean": 0.0,
+      "B1_agreement": 45,
+      "B1_application_utility_mean": 0.5527174802840591,
+      "B1_candidate_count_mean": 8.0,
+      "B1_deadlock": 435,
+      "B1_nash_welfare_mean": 0.41388346368024154,
+      "B1_network_utility_mean": 0.7486061277223937,
+      "B1_rate": 0.09375,
+      "B1_verified_count_mean": 0.2625,
+      "B2_agreement": 130,
+      "B2_application_utility_mean": 0.63482410131821,
+      "B2_candidate_count_mean": 27.0,
+      "B2_deadlock": 350,
+      "B2_nash_welfare_mean": 0.4390992055881539,
+      "B2_network_utility_mean": 0.693527883703724,
+      "B2_rate": 0.2708333333333333,
+      "B2_verified_count_mean": 2.2125,
+      "O1_agreement": 364,
+      "O1_application_utility_mean": 0.7342278666574038,
+      "O1_candidate_count_mean": 450486.1125,
+      "O1_deadlock": 116,
+      "O1_nash_welfare_mean": 0.4653622776752204,
+      "O1_network_utility_mean": 0.6366531073638554,
+      "O1_rate": 0.7583333333333333,
+      "O1_verified_count_mean": 13162.275,
+      "b1_b2_deadlock_novel_count": 234,
+      "b1_b2_deadlock_novel_rate": 1.0,
+      "b1_b2_deadlock_o1_agreement_count": 234,
+      "b1_deadlock_denominator": 435,
+      "family": "F1",
+      "n": 480,
+      "o1_minus_b1": 0.6645833333333333,
+      "o1_minus_b2": 0.4875,
+      "resolution_rate": 0.7333333333333333,
+      "resolved": 319,
+      "resolved_structural_novel_count": 288,
+      "resolved_structural_novel_rate": 0.9028213166144201,
+      "structural_agreement_count": 318
+    },
+    {
+      "B0_agreement": 0,
+      "B0_application_utility_mean": null,
+      "B0_candidate_count_mean": 1.0,
+      "B0_deadlock": 480,
+      "B0_nash_welfare_mean": null,
+      "B0_network_utility_mean": null,
+      "B0_rate": 0.0,
+      "B0_verified_count_mean": 0.0,
+      "B1_agreement": 0,
+      "B1_application_utility_mean": null,
+      "B1_candidate_count_mean": 8.0,
+      "B1_deadlock": 480,
+      "B1_nash_welfare_mean": null,
+      "B1_network_utility_mean": null,
+      "B1_rate": 0.0,
+      "B1_verified_count_mean": 0.0,
+      "B2_agreement": 0,
+      "B2_application_utility_mean": null,
+      "B2_candidate_count_mean": 27.0,
+      "B2_deadlock": 480,
+      "B2_nash_welfare_mean": null,
+      "B2_network_utility_mean": null,
+      "B2_rate": 0.0,
+      "B2_verified_count_mean": 0.0,
+      "O1_agreement": 122,
+      "O1_application_utility_mean": 0.6401840304806466,
+      "O1_candidate_count_mean": 431453.25,
+      "O1_deadlock": 358,
+      "O1_nash_welfare_mean": 0.4223013890754516,
+      "O1_network_utility_mean": 0.6614183508462892,
+      "O1_rate": 0.25416666666666665,
+      "O1_verified_count_mean": 834.7875,
+      "b1_b2_deadlock_novel_count": 122,
+      "b1_b2_deadlock_novel_rate": 1.0,
+      "b1_b2_deadlock_o1_agreement_count": 122,
+      "b1_deadlock_denominator": 480,
+      "family": "F2",
+      "n": 480,
+      "o1_minus_b1": 0.25416666666666665,
+      "o1_minus_b2": 0.25416666666666665,
+      "resolution_rate": 0.25416666666666665,
+      "resolved": 122,
+      "resolved_structural_novel_count": 122,
+      "resolved_structural_novel_rate": 1.0,
+      "structural_agreement_count": 122
+    },
+    {
+      "B0_agreement": 0,
+      "B0_application_utility_mean": null,
+      "B0_candidate_count_mean": 1.0,
+      "B0_deadlock": 480,
+      "B0_nash_welfare_mean": null,
+      "B0_network_utility_mean": null,
+      "B0_rate": 0.0,
+      "B0_verified_count_mean": 0.0,
+      "B1_agreement": 40,
+      "B1_application_utility_mean": 0.5494021976754851,
+      "B1_candidate_count_mean": 8.0,
+      "B1_deadlock": 440,
+      "B1_nash_welfare_mean": 0.410896702667206,
+      "B1_network_utility_mean": 0.7479854153941081,
+      "B1_rate": 0.08333333333333333,
+      "B1_verified_count_mean": 0.21666666666666667,
+      "B2_agreement": 82,
+      "B2_application_utility_mean": 0.6153990703575413,
+      "B2_candidate_count_mean": 27.0,
+      "B2_deadlock": 398,
+      "B2_nash_welfare_mean": 0.4297007401715817,
+      "B2_network_utility_mean": 0.7013126669888686,
+      "B2_rate": 0.17083333333333334,
+      "B2_verified_count_mean": 1.30625,
+      "O1_agreement": 339,
+      "O1_application_utility_mean": 0.7322285477513774,
+      "O1_candidate_count_mean": 412650.73125,
+      "O1_deadlock": 141,
+      "O1_nash_welfare_mean": 0.46262785096649933,
+      "O1_network_utility_mean": 0.6343644431311426,
+      "O1_rate": 0.70625,
+      "O1_verified_count_mean": 10895.735416666666,
+      "b1_b2_deadlock_novel_count": 257,
+      "b1_b2_deadlock_novel_rate": 1.0,
+      "b1_b2_deadlock_o1_agreement_count": 257,
+      "b1_deadlock_denominator": 440,
+      "family": "F3",
+      "n": 480,
+      "o1_minus_b1": 0.6229166666666667,
+      "o1_minus_b2": 0.5354166666666667,
+      "resolution_rate": 0.6795454545454546,
+      "resolved": 299,
+      "resolved_structural_novel_count": 284,
+      "resolved_structural_novel_rate": 0.9498327759197325,
+      "structural_agreement_count": 309
+    },
+    {
+      "B0_agreement": 0,
+      "B0_application_utility_mean": null,
+      "B0_candidate_count_mean": 1.0,
+      "B0_deadlock": 480,
+      "B0_nash_welfare_mean": null,
+      "B0_network_utility_mean": null,
+      "B0_rate": 0.0,
+      "B0_verified_count_mean": 0.0,
+      "B1_agreement": 40,
+      "B1_application_utility_mean": 0.5492890570752287,
+      "B1_candidate_count_mean": 8.0,
+      "B1_deadlock": 440,
+      "B1_nash_welfare_mean": 0.4109590283798855,
+      "B1_network_utility_mean": 0.7481091708468244,
+      "B1_rate": 0.08333333333333333,
+      "B1_verified_count_mean": 0.22916666666666666,
+      "B2_agreement": 118,
+      "B2_application_utility_mean": 0.6402466348019692,
+      "B2_candidate_count_mean": 27.0,
+      "B2_deadlock": 362,
+      "B2_nash_welfare_mean": 0.4383131434911705,
+      "B2_network_utility_mean": 0.6864331567987016,
+      "B2_rate": 0.24583333333333332,
+      "B2_verified_count_mean": 2.1125,
+      "O1_agreement": 347,
+      "O1_application_utility_mean": 0.7384020949456505,
+      "O1_candidate_count_mean": 451637.38125,
+      "O1_deadlock": 133,
+      "O1_nash_welfare_mean": 0.46903407629759736,
+      "O1_network_utility_mean": 0.6375638539005741,
+      "O1_rate": 0.7229166666666667,
+      "O1_verified_count_mean": 6470.83125,
+      "b1_b2_deadlock_novel_count": 229,
+      "b1_b2_deadlock_novel_rate": 1.0,
+      "b1_b2_deadlock_o1_agreement_count": 229,
+      "b1_deadlock_denominator": 440,
+      "family": "F4",
+      "n": 480,
+      "o1_minus_b1": 0.6395833333333333,
+      "o1_minus_b2": 0.4770833333333333,
+      "resolution_rate": 0.6977272727272728,
+      "resolved": 307,
+      "resolved_structural_novel_count": 283,
+      "resolved_structural_novel_rate": 0.9218241042345277,
+      "structural_agreement_count": 311
+    }
+  ],
+  "mechanisms": [
+    {
+      "denominator": 1172,
+      "family": "ALL",
+      "mechanism": "STATIC",
+      "scope": "all_o1_agreements",
+      "selected_count": 112
+    },
+    {
+      "denominator": 1172,
+      "family": "ALL",
+      "mechanism": "STATE_CONDITIONAL",
+      "scope": "all_o1_agreements",
+      "selected_count": 22
+    },
+    {
+      "denominator": 1172,
+      "family": "ALL",
+      "mechanism": "DELAYED_START",
+      "scope": "all_o1_agreements",
+      "selected_count": 1
+    },
+    {
+      "denominator": 1172,
+      "family": "ALL",
+      "mechanism": "TEMPORAL_PHASED",
+      "scope": "all_o1_agreements",
+      "selected_count": 39
+    },
+    {
+      "denominator": 1172,
+      "family": "ALL",
+      "mechanism": "OFFLOAD",
+      "scope": "all_o1_agreements",
+      "selected_count": 1040
+    },
+    {
+      "denominator": 1172,
+      "family": "ALL",
+      "mechanism": "HYBRID",
+      "scope": "all_o1_agreements",
+      "selected_count": 42
+    },
+    {
+      "denominator": 842,
+      "family": "ALL",
+      "mechanism": "STATIC",
+      "scope": "b1_b2_deadlocks_resolved",
+      "selected_count": 0
+    },
+    {
+      "denominator": 842,
+      "family": "ALL",
+      "mechanism": "STATE_CONDITIONAL",
+      "scope": "b1_b2_deadlocks_resolved",
+      "selected_count": 22
+    },
+    {
+      "denominator": 842,
+      "family": "ALL",
+      "mechanism": "DELAYED_START",
+      "scope": "b1_b2_deadlocks_resolved",
+      "selected_count": 1
+    },
+    {
+      "denominator": 842,
+      "family": "ALL",
+      "mechanism": "TEMPORAL_PHASED",
+      "scope": "b1_b2_deadlocks_resolved",
+      "selected_count": 38
+    },
+    {
+      "denominator": 842,
+      "family": "ALL",
+      "mechanism": "OFFLOAD",
+      "scope": "b1_b2_deadlocks_resolved",
+      "selected_count": 823
+    },
+    {
+      "denominator": 842,
+      "family": "ALL",
+      "mechanism": "HYBRID",
+      "scope": "b1_b2_deadlocks_resolved",
+      "selected_count": 42
+    },
+    {
+      "denominator": 364,
+      "family": "F1",
+      "mechanism": "STATIC",
+      "scope": "all_o1_agreements",
+      "selected_count": 46
+    },
+    {
+      "denominator": 364,
+      "family": "F1",
+      "mechanism": "STATE_CONDITIONAL",
+      "scope": "all_o1_agreements",
+      "selected_count": 22
+    },
+    {
+      "denominator": 364,
+      "family": "F1",
+      "mechanism": "DELAYED_START",
+      "scope": "all_o1_agreements",
+      "selected_count": 0
+    },
+    {
+      "denominator": 364,
+      "family": "F1",
+      "mechanism": "TEMPORAL_PHASED",
+      "scope": "all_o1_agreements",
+      "selected_count": 0
+    },
+    {
+      "denominator": 364,
+      "family": "F1",
+      "mechanism": "OFFLOAD",
+      "scope": "all_o1_agreements",
+      "selected_count": 309
+    },
+    {
+      "denominator": 364,
+      "family": "F1",
+      "mechanism": "HYBRID",
+      "scope": "all_o1_agreements",
+      "selected_count": 13
+    },
+    {
+      "denominator": 234,
+      "family": "F1",
+      "mechanism": "STATIC",
+      "scope": "b1_b2_deadlocks_resolved",
+      "selected_count": 0
+    },
+    {
+      "denominator": 234,
+      "family": "F1",
+      "mechanism": "STATE_CONDITIONAL",
+      "scope": "b1_b2_deadlocks_resolved",
+      "selected_count": 22
+    },
+    {
+      "denominator": 234,
+      "family": "F1",
+      "mechanism": "DELAYED_START",
+      "scope": "b1_b2_deadlocks_resolved",
+      "selected_count": 0
+    },
+    {
+      "denominator": 234,
+      "family": "F1",
+      "mechanism": "TEMPORAL_PHASED",
+      "scope": "b1_b2_deadlocks_resolved",
+      "selected_count": 0
+    },
+    {
+      "denominator": 234,
+      "family": "F1",
+      "mechanism": "OFFLOAD",
+      "scope": "b1_b2_deadlocks_resolved",
+      "selected_count": 225
+    },
+    {
+      "denominator": 234,
+      "family": "F1",
+      "mechanism": "HYBRID",
+      "scope": "b1_b2_deadlocks_resolved",
+      "selected_count": 13
+    },
+    {
+      "denominator": 122,
+      "family": "F2",
+      "mechanism": "STATIC",
+      "scope": "all_o1_agreements",
+      "selected_count": 0
+    },
+    {
+      "denominator": 122,
+      "family": "F2",
+      "mechanism": "STATE_CONDITIONAL",
+      "scope": "all_o1_agreements",
+      "selected_count": 0
+    },
+    {
+      "denominator": 122,
+      "family": "F2",
+      "mechanism": "DELAYED_START",
+      "scope": "all_o1_agreements",
+      "selected_count": 1
+    },
+    {
+      "denominator": 122,
+      "family": "F2",
+      "mechanism": "TEMPORAL_PHASED",
+      "scope": "all_o1_agreements",
+      "selected_count": 23
+    },
+    {
+      "denominator": 122,
+      "family": "F2",
+      "mechanism": "OFFLOAD",
+      "scope": "all_o1_agreements",
+      "selected_count": 122
+    },
+    {
+      "denominator": 122,
+      "family": "F2",
+      "mechanism": "HYBRID",
+      "scope": "all_o1_agreements",
+      "selected_count": 24
+    },
+    {
+      "denominator": 122,
+      "family": "F2",
+      "mechanism": "STATIC",
+      "scope": "b1_b2_deadlocks_resolved",
+      "selected_count": 0
+    },
+    {
+      "denominator": 122,
+      "family": "F2",
+      "mechanism": "STATE_CONDITIONAL",
+      "scope": "b1_b2_deadlocks_resolved",
+      "selected_count": 0
+    },
+    {
+      "denominator": 122,
+      "family": "F2",
+      "mechanism": "DELAYED_START",
+      "scope": "b1_b2_deadlocks_resolved",
+      "selected_count": 1
+    },
+    {
+      "denominator": 122,
+      "family": "F2",
+      "mechanism": "TEMPORAL_PHASED",
+      "scope": "b1_b2_deadlocks_resolved",
+      "selected_count": 23
+    },
+    {
+      "denominator": 122,
+      "family": "F2",
+      "mechanism": "OFFLOAD",
+      "scope": "b1_b2_deadlocks_resolved",
+      "selected_count": 122
+    },
+    {
+      "denominator": 122,
+      "family": "F2",
+      "mechanism": "HYBRID",
+      "scope": "b1_b2_deadlocks_resolved",
+      "selected_count": 24
+    },
+    {
+      "denominator": 339,
+      "family": "F3",
+      "mechanism": "STATIC",
+      "scope": "all_o1_agreements",
+      "selected_count": 30
+    },
+    {
+      "denominator": 339,
+      "family": "F3",
+      "mechanism": "STATE_CONDITIONAL",
+      "scope": "all_o1_agreements",
+      "selected_count": 0
+    },
+    {
+      "denominator": 339,
+      "family": "F3",
+      "mechanism": "DELAYED_START",
+      "scope": "all_o1_agreements",
+      "selected_count": 0
+    },
+    {
+      "denominator": 339,
+      "family": "F3",
+      "mechanism": "TEMPORAL_PHASED",
+      "scope": "all_o1_agreements",
+      "selected_count": 16
+    },
+    {
+      "denominator": 339,
+      "family": "F3",
+      "mechanism": "OFFLOAD",
+      "scope": "all_o1_agreements",
+      "selected_count": 298
+    },
+    {
+      "denominator": 339,
+      "family": "F3",
+      "mechanism": "HYBRID",
+      "scope": "all_o1_agreements",
+      "selected_count": 5
+    },
+    {
+      "denominator": 257,
+      "family": "F3",
+      "mechanism": "STATIC",
+      "scope": "b1_b2_deadlocks_resolved",
+      "selected_count": 0
+    },
+    {
+      "denominator": 257,
+      "family": "F3",
+      "mechanism": "STATE_CONDITIONAL",
+      "scope": "b1_b2_deadlocks_resolved",
+      "selected_count": 0
+    },
+    {
+      "denominator": 257,
+      "family": "F3",
+      "mechanism": "DELAYED_START",
+      "scope": "b1_b2_deadlocks_resolved",
+      "selected_count": 0
+    },
+    {
+      "denominator": 257,
+      "family": "F3",
+      "mechanism": "TEMPORAL_PHASED",
+      "scope": "b1_b2_deadlocks_resolved",
+      "selected_count": 15
+    },
+    {
+      "denominator": 257,
+      "family": "F3",
+      "mechanism": "OFFLOAD",
+      "scope": "b1_b2_deadlocks_resolved",
+      "selected_count": 247
+    },
+    {
+      "denominator": 257,
+      "family": "F3",
+      "mechanism": "HYBRID",
+      "scope": "b1_b2_deadlocks_resolved",
+      "selected_count": 5
+    },
+    {
+      "denominator": 347,
+      "family": "F4",
+      "mechanism": "STATIC",
+      "scope": "all_o1_agreements",
+      "selected_count": 36
+    },
+    {
+      "denominator": 347,
+      "family": "F4",
+      "mechanism": "STATE_CONDITIONAL",
+      "scope": "all_o1_agreements",
+      "selected_count": 0
+    },
+    {
+      "denominator": 347,
+      "family": "F4",
+      "mechanism": "DELAYED_START",
+      "scope": "all_o1_agreements",
+      "selected_count": 0
+    },
+    {
+      "denominator": 347,
+      "family": "F4",
+      "mechanism": "TEMPORAL_PHASED",
+      "scope": "all_o1_agreements",
+      "selected_count": 0
+    },
+    {
+      "denominator": 347,
+      "family": "F4",
+      "mechanism": "OFFLOAD",
+      "scope": "all_o1_agreements",
+      "selected_count": 311
+    },
+    {
+      "denominator": 347,
+      "family": "F4",
+      "mechanism": "HYBRID",
+      "scope": "all_o1_agreements",
+      "selected_count": 0
+    },
+    {
+      "denominator": 229,
+      "family": "F4",
+      "mechanism": "STATIC",
+      "scope": "b1_b2_deadlocks_resolved",
+      "selected_count": 0
+    },
+    {
+      "denominator": 229,
+      "family": "F4",
+      "mechanism": "STATE_CONDITIONAL",
+      "scope": "b1_b2_deadlocks_resolved",
+      "selected_count": 0
+    },
+    {
+      "denominator": 229,
+      "family": "F4",
+      "mechanism": "DELAYED_START",
+      "scope": "b1_b2_deadlocks_resolved",
+      "selected_count": 0
+    },
+    {
+      "denominator": 229,
+      "family": "F4",
+      "mechanism": "TEMPORAL_PHASED",
+      "scope": "b1_b2_deadlocks_resolved",
+      "selected_count": 0
+    },
+    {
+      "denominator": 229,
+      "family": "F4",
+      "mechanism": "OFFLOAD",
+      "scope": "b1_b2_deadlocks_resolved",
+      "selected_count": 229
+    },
+    {
+      "denominator": 229,
+      "family": "F4",
+      "mechanism": "HYBRID",
+      "scope": "b1_b2_deadlocks_resolved",
+      "selected_count": 0
+    }
+  ],
+  "overall": {
+    "B0_agreement": 0,
+    "B0_application_utility_mean": null,
+    "B0_candidate_count_mean": 1.0,
+    "B0_deadlock": 1920,
+    "B0_nash_welfare_mean": null,
+    "B0_network_utility_mean": null,
+    "B0_rate": 0.0,
+    "B0_verified_count_mean": 0.0,
+    "B1_agreement": 125,
+    "B1_application_utility_mean": 0.5505594944224897,
+    "B1_candidate_count_mean": 8.0,
+    "B1_deadlock": 1795,
+    "B1_nash_welfare_mean": 0.4119918808599562,
+    "B1_network_utility_mean": 0.7482484735771601,
+    "B1_rate": 0.06510416666666667,
+    "B1_verified_count_mean": 0.17708333333333334,
+    "B2_agreement": 330,
+    "B2_application_utility_mean": 0.6319362419615699,
+    "B2_candidate_count_mean": 27.0,
+    "B2_deadlock": 1590,
+    "B2_nash_welfare_mean": 0.4364827525832965,
+    "B2_network_utility_mean": 0.6929253820509641,
+    "B2_rate": 0.171875,
+    "B2_verified_count_mean": 1.4078125,
+    "O1_agreement": 1172,
+    "O1_application_utility_mean": 0.7250959042796856,
+    "O1_candidate_count_mean": 436556.86875,
+    "O1_deadlock": 748,
+    "O1_nash_welfare_mean": 0.4611760277251663,
+    "O1_network_utility_mean": 0.6388387145124976,
+    "O1_rate": 0.6104166666666667,
+    "O1_verified_count_mean": 7840.907291666666,
+    "b1_b2_deadlock_novel_count": 842,
+    "b1_b2_deadlock_novel_rate": 1.0,
+    "b1_b2_deadlock_o1_agreement_count": 842,
+    "b1_deadlock_denominator": 1795,
+    "n": 1920,
+    "o1_minus_b1": 0.5453125000000001,
+    "o1_minus_b2": 0.4385416666666667,
+    "resolution_rate": 0.5832869080779944,
+    "resolved": 1047,
+    "resolved_structural_novel_count": 977,
+    "resolved_structural_novel_rate": 0.933142311365807,
+    "structural_agreement_count": 1060
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "base_identity_format": "GENSPACE-FAIL-01-METHOD-HOLDOUT-V1::{family}__{pressure}__{conflict}__{richness}__d{original_depth}__i{index:02d}",
+  "base_index_labels": {
+    "first": 0,
+    "last": 29,
+    "meaning": "ordinal slot labels only",
+    "width": 2
+  },
+  "counts": {
+    "base_configurations": 96,
+    "base_slots": 2880,
+    "derived_configurations": 48,
+    "derived_high": 240,
+    "derived_medium": 240,
+    "derived_slots": 480,
+    "primary_A_configs": 24,
+    "primary_A_slots": 720
+  },
+  "derived_identity_format": "{base_identity}::effective_d3",
+  "derived_index_labels": {
+    "effective_depth": 3,
+    "first": 0,
+    "last": 9,
+    "source_original_depth": 2
+  },
+  "execution_authorized": false,
+  "field_order": [
+    "family",
+    "resource_pressure",
+    "preference_conflict",
+    "capability_richness",
+    "composition_depth"
+  ],
+  "future_result_root": "results/method_confirmation",
+  "grid": {
+    "capability_richness": [
+      "sparse",
+      "rich"
+    ],
+    "composition_depth": [
+      1,
+      2
+    ],
+    "family": [
+      "F1",
+      "F2",
+      "F3",
+      "F4"
+    ],
+    "preference_conflict": [
+      "medium",
+      "high"
+    ],
+    "resource_pressure": [
+      "low",
+      "medium",
+      "high"
+    ]
+  },
+  "namespace_registered": false,
+  "ordered_base_identity_vector_sha256": "6f965c5d9708a42f1cff5cae6f29fa07221974f300d68945fa87e5ea713d79a9",
+  "ordered_derived_identity_vector_sha256": "88d8deed428864419b2446fc50e65bf3ef51fcb778568662a361a989032160fa",
+  "ordered_identity_vector_digest_format": "SHA256 of UTF-8 compact JSON, recursively sorted object keys",
+  "primary_A_configuration_rule": {
+    "capability_richness": "rich",
+    "composition_depth": 2
+  },
+  "proposed_namespace": "GENSPACE-FAIL-01-METHOD-HOLDOUT-V1",
+  "review": "PAPER-METHOD-FREEZE-REVIEW-01",
+  "status": "DRAFT_IDENTITY_ONLY"
+}

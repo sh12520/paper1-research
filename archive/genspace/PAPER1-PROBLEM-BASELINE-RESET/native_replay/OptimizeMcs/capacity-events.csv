@@ -1,0 +1,4 @@
+simulation_time_ns,application_relative_time_ns,old_capacity_mbps,new_capacity_mbps
+400000000,0,2000,2250
+2400000000,2000000000,2250,1000
+3400000000,3000000000,1000,2250

@@ -1,0 +1,36 @@
+{
+  "no_seed_or_instance_generator_called": true,
+  "pass": true,
+  "real_candidate_checks": 924,
+  "real_fixture_count": 48,
+  "real_outcomes": {
+    "PASS": 396,
+    "V4": 528
+  },
+  "seconds": 4.869490099998075,
+  "source_sha256": {
+    "private_protocol.py": "b22e390a812d966b12ddb8fc851819186f25ccf8fb6fcd118d12fc3c04585a34",
+    "public_search.py": "b4b47d94fc5c34ce9ddfb23dba98164bb9b59c2b6502cf15f86527e97935f589",
+    "runtime.py": "a58211b8516a470652451b3456c15f62c290da18c98c9b180155a737a8c21eaf"
+  },
+  "synthetic_public_only_boundaries": [
+    {
+      "boundary": 0.39999999999999997,
+      "outcomes": [
+        "V4"
+      ]
+    },
+    {
+      "boundary": 0.4,
+      "outcomes": [
+        "PASS"
+      ]
+    },
+    {
+      "boundary": 0.4000000000000001,
+      "outcomes": [
+        "PASS"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+[
+  {
+    "task_id": "first",
+    "published_source": "local",
+    "on_time": true,
+    "latency_ms": 585.9321,
+    "result_sha256": "0da1d366798933792e54510f75fa3d219a28888f72ffc16ba231d68847c55a30",
+    "release_ns": 97741905897100,
+    "publish_ns": 97742491829200,
+    "pair_id": "1-0-c2_auth_query",
+    "method": "C2_AUTH_QUERY",
+    "condition": "first_proof_blackout",
+    "asset": "astronaut.png",
+    "worker_pid": 26012,
+    "c2_state": "RECOVERY_REQUIRED",
+    "application_slot_final": "EXPIRED"
+  },
+  {
+    "task_id": "next",
+    "published_source": "local",
+    "on_time": true,
+    "latency_ms": 568.963,
+    "result_sha256": "d5fa1153c8c823ce248ac0663fec2fa0d0e3f783a03e7233413dee45a4f5ab21",
+    "release_ns": 97742806000900,
+    "publish_ns": 97743374963900,
+    "pair_id": "1-0-c2_auth_query",
+    "method": "C2_AUTH_QUERY",
+    "condition": "first_proof_blackout",
+    "asset": "camera.png",
+    "worker_pid": 26012,
+    "c2_state": "REJECTED",
+    "application_slot_final": "EXPIRED"
+  }
+]

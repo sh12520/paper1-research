@@ -1,0 +1,3 @@
+-r protocol/c2/requirements.txt
+Pillow==12.0.0
+

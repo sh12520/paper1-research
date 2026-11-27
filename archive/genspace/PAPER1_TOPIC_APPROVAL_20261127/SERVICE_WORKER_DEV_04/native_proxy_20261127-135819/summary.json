@@ -1,0 +1,122 @@
+{
+  "scope": "one Windows host, separate Caddy process, real loopback reverse-proxy side effect, controlled publisher wait",
+  "version": "v2.11.9 h1:bhZtcRKQOq0fuLvEgCdPYvUxXyGn9kzjG4lh2332DTE=",
+  "binary_sha256": "2622e239c79df700b0eb92cbd950d1edee365e155a7859f358f0e55f002df591",
+  "source_sha256": "293ae0ba16eed13eb74f1010855eb64527f05f1b12a110026352e12138d7b2ca",
+  "input_sha256": {
+    "initial": "b0793d2adda0fa6ae899c03989482bff9a42d3d5690fc7e3648f2795d730c23a",
+    "A": "88431cd9653ccd539741b555fb0a46b61558b301d4110412b5bc28b5e3ea6cb5",
+    "B": "cc02f8ca188b167c775a7101b5d767d1e71792cf762c33d6fa15a4599b5a8de7"
+  },
+  "reference_png_sha256": {
+    "initial": "e22988f18b19110bd677066bbcfdf45bd7970a5fd9be56b5e9be4edcedf744d9",
+    "A": "dd13e1d063ed2a5e9c4551ccfd6949e0fe68ecf6684c1a6b9f338c0e0917798b",
+    "B": "bc491e552e9a11655276eedd077e8b51904762cfe475e6030fd14eb822fee706"
+  },
+  "cases": [
+    {
+      "case": "stale_unconditional",
+      "A_status": 200,
+      "before_A_same_etag": false,
+      "before_A_value": {
+        "dial": "127.0.0.1:8672"
+      },
+      "initial_value": {
+        "dial": "127.0.0.1:8669"
+      },
+      "final_backend": "A",
+      "final_sha256": "dd13e1d063ed2a5e9c4551ccfd6949e0fe68ecf6684c1a6b9f338c0e0917798b",
+      "deadline_ns": null,
+      "A_sent_after_deadline": null,
+      "manager_rejected": false,
+      "matches_expected_control": true
+    },
+    {
+      "case": "stale_if_match",
+      "A_status": 412,
+      "before_A_same_etag": false,
+      "before_A_value": {
+        "dial": "127.0.0.1:8672"
+      },
+      "initial_value": {
+        "dial": "127.0.0.1:8669"
+      },
+      "final_backend": "B",
+      "final_sha256": "bc491e552e9a11655276eedd077e8b51904762cfe475e6030fd14eb822fee706",
+      "deadline_ns": null,
+      "A_sent_after_deadline": null,
+      "manager_rejected": false,
+      "matches_expected_control": true
+    },
+    {
+      "case": "expired_if_match",
+      "A_status": 200,
+      "before_A_same_etag": true,
+      "before_A_value": {
+        "dial": "127.0.0.1:8669"
+      },
+      "initial_value": {
+        "dial": "127.0.0.1:8669"
+      },
+      "final_backend": "A",
+      "final_sha256": "dd13e1d063ed2a5e9c4551ccfd6949e0fe68ecf6684c1a6b9f338c0e0917798b",
+      "deadline_ns": 100645769910500,
+      "A_sent_after_deadline": true,
+      "manager_rejected": false,
+      "matches_expected_control": true
+    },
+    {
+      "case": "aba_if_match",
+      "A_status": 200,
+      "before_A_same_etag": true,
+      "before_A_value": {
+        "dial": "127.0.0.1:8669"
+      },
+      "initial_value": {
+        "dial": "127.0.0.1:8669"
+      },
+      "final_backend": "A",
+      "final_sha256": "dd13e1d063ed2a5e9c4551ccfd6949e0fe68ecf6684c1a6b9f338c0e0917798b",
+      "deadline_ns": null,
+      "A_sent_after_deadline": null,
+      "manager_rejected": false,
+      "matches_expected_control": true
+    },
+    {
+      "case": "aba_unique_id_if_match",
+      "A_status": 412,
+      "before_A_same_etag": false,
+      "before_A_value": {
+        "@id": "generation-2",
+        "dial": "127.0.0.1:8669"
+      },
+      "initial_value": {
+        "@id": "generation-0",
+        "dial": "127.0.0.1:8669"
+      },
+      "final_backend": "initial",
+      "final_sha256": "e22988f18b19110bd677066bbcfdf45bd7970a5fd9be56b5e9be4edcedf744d9",
+      "deadline_ns": null,
+      "A_sent_after_deadline": null,
+      "manager_rejected": false,
+      "matches_expected_control": true
+    },
+    {
+      "case": "expired_dispatch_guard",
+      "A_status": null,
+      "before_A_same_etag": true,
+      "before_A_value": {
+        "dial": "127.0.0.1:8669"
+      },
+      "initial_value": {
+        "dial": "127.0.0.1:8669"
+      },
+      "final_backend": "initial",
+      "final_sha256": "e22988f18b19110bd677066bbcfdf45bd7970a5fd9be56b5e9be4edcedf744d9",
+      "deadline_ns": 100648167084100,
+      "A_sent_after_deadline": null,
+      "manager_rejected": true,
+      "matches_expected_control": true
+    }
+  ]
+}

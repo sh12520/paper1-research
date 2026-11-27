@@ -1,0 +1,18 @@
+{
+  "task_id": "0-0-c2_confirm",
+  "method": "C2_CONFIRM",
+  "scenario": "clean",
+  "selected": "edge",
+  "on_time": true,
+  "end_to_end_ms": 352.3478,
+  "edge_starts": 1,
+  "edge_grants": 1,
+  "unused_lease_ms": 0,
+  "granted_slot_ms": 172.3128,
+  "output_side_pixels": 512,
+  "valid_output_sha256": "dd13e1d063ed2a5e9c4551ccfd6949e0fe68ecf6684c1a6b9f338c0e0917798b",
+  "source_bytes": 791555,
+  "control_body_bytes": 13921,
+  "data_body_bytes": 1255349,
+  "rdinp_terminal": "COMMITTED"
+}

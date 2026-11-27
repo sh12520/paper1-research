@@ -1,0 +1,58 @@
+[
+  {
+    "instance_id": "F1__medium__medium__rich__d2__s0",
+    "depth": 1,
+    "profiles": 3,
+    "syntax_leaves": 30,
+    "exact_structural_classes": 24,
+    "prefixes": {
+      "10": 10,
+      "50": 24,
+      "100": 24,
+      "500": 24
+    },
+    "total_order_score_bits_and_witness": "PASS"
+  },
+  {
+    "instance_id": "F1__medium__medium__rich__d2__s0",
+    "depth": 2,
+    "profiles": 3,
+    "syntax_leaves": 1893,
+    "exact_structural_classes": 579,
+    "prefixes": {
+      "10": 10,
+      "50": 50,
+      "100": 100,
+      "500": 500
+    },
+    "total_order_score_bits_and_witness": "PASS"
+  },
+  {
+    "instance_id": "F4__low__medium__sparse__d2__s0",
+    "depth": 1,
+    "profiles": 3,
+    "syntax_leaves": 15,
+    "exact_structural_classes": 9,
+    "prefixes": {
+      "10": 9,
+      "50": 9,
+      "100": 9,
+      "500": 9
+    },
+    "total_order_score_bits_and_witness": "PASS"
+  },
+  {
+    "instance_id": "F4__low__medium__sparse__d2__s0",
+    "depth": 2,
+    "profiles": 3,
+    "syntax_leaves": 243,
+    "exact_structural_classes": 36,
+    "prefixes": {
+      "10": 10,
+      "50": 36,
+      "100": 36,
+      "500": 36
+    },
+    "total_order_score_bits_and_witness": "PASS"
+  }
+]

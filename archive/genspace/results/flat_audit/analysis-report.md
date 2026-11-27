@@ -1,0 +1,9 @@
+# Descriptive development audit
+
+The analysis unit is one of 1,920 preserved paired PILOT instances; the primary cohort consists of 842 instances with B2 disagreement and full-O1 agreement. At the B=5,000 checkpoint the original FLAT method succeeds in 842/842 of that cohort. These are development observations, not confirmation evidence. The 842 ranks and Top-K checks read private acceptance only after reconstructing the public ordering; this information was never given back to the methods.
+
+The implementation scans all 1,394,064 graph records' role metadata before B2 and a second time after B2 failure. Conditional structural proxy scoring is median 1,512 and p95 1,252,611 candidates in the target cohort, while exact verification is median/p95 43/43 including 27 B2 checks. The first mutually acceptable structural candidate has rank median/p95/p99/max 1/10/127/1,009. See the root `FLAT_BASELINE_AUDIT_REPORT.md`, `SEARCH_COST_ACCOUNTING.md`, `FLAT_SUCCESS_RANK_ANALYSIS.md` and `FLAT_TOPK_COMPOSITION.md` for exact definitions, family breakdown and GLOBAL results.
+
+Timing is a separate 96-configuration stratified engineering replay (37 of these instances in the target cohort), not 842 timing runs. All 192 instrumented method replays reproduced the original non-time fields through B=5,000 and the corresponding negotiation-history prefix. In the target timing sample, feature calculation and conditioning account for 76.22% and 14.53% of FLAT total elapsed work. The current full-scan implementation is the bottleneck; whether an index can recover the same order and decisions without scanning is an open method-design question. `METHOD_RUNTIME_DECOMPOSITION.md` gives the complete phase statistics and measurement boundaries.
+
+Figures and their caveats are described in `figure-catalog.md`. No inferential or confirmatory result is asserted.

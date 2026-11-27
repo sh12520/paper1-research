@@ -1,0 +1,3348 @@
+{
+  "scope": "Historical TFH development reuse, descriptive only",
+  "uncertainty": "No confidence interval or significance test. Medians and observed ranges across complete runs. Paired mode comparisons use the joint-complete intersection of archived RngRun indices. Execution failures may be informative.",
+  "deadline_ns": 10000000,
+  "phase_bin_ns": 100000000,
+  "capacity_profiles": [
+    {
+      "profile": "C2000",
+      "start_s": "0",
+      "end_s": "5",
+      "capacity_mbps": "2000",
+      "phase": "CONSTANT",
+      "recovery_1_end_s": ""
+    },
+    {
+      "profile": "T1",
+      "start_s": "0",
+      "end_s": "2",
+      "capacity_mbps": "2250",
+      "phase": "PRE",
+      "recovery_1_end_s": "4"
+    },
+    {
+      "profile": "T1",
+      "start_s": "2",
+      "end_s": "3",
+      "capacity_mbps": "1000",
+      "phase": "LOW",
+      "recovery_1_end_s": "4"
+    },
+    {
+      "profile": "T1",
+      "start_s": "3",
+      "end_s": "5",
+      "capacity_mbps": "2250",
+      "phase": "RECOVERY",
+      "recovery_1_end_s": "4"
+    },
+    {
+      "profile": "T2",
+      "start_s": "0",
+      "end_s": "1.5",
+      "capacity_mbps": "2400",
+      "phase": "PRE",
+      "recovery_1_end_s": "4.5"
+    },
+    {
+      "profile": "T2",
+      "start_s": "1.5",
+      "end_s": "3.5",
+      "capacity_mbps": "1400",
+      "phase": "LOW",
+      "recovery_1_end_s": "4.5"
+    },
+    {
+      "profile": "T2",
+      "start_s": "3.5",
+      "end_s": "5",
+      "capacity_mbps": "2400",
+      "phase": "RECOVERY",
+      "recovery_1_end_s": "4.5"
+    }
+  ],
+  "run_failures": [
+    {
+      "identity": "OptimizeRBs-R7-T2",
+      "rng_run": 7,
+      "method": "OptimizeRBs",
+      "profile": "T2",
+      "status": "EXECUTION_FAILURE",
+      "exit_code": "3",
+      "start": "2026-11-10T01:07:51.370537+08:00",
+      "end": "2026-11-10T01:11:03.657513+08:00",
+      "failure_simulation_time_s": "4.062974991",
+      "metadata_sha256": "b7e4bba4c641feb7fe9372550634c053e38354313285ba2c792ddb5fd3d66b11"
+    },
+    {
+      "identity": "Postponing-R10-T2",
+      "rng_run": 10,
+      "method": "Postponing",
+      "profile": "T2",
+      "status": "EXECUTION_FAILURE",
+      "exit_code": "3",
+      "start": "2026-11-10T02:49:38.554952+08:00",
+      "end": "2026-11-10T02:52:52.738757+08:00",
+      "failure_simulation_time_s": "4.191724991",
+      "metadata_sha256": "932e40b740ac37ef7639597b79dd4f3ae861b806413bf83e46d989a600f9505f"
+    },
+    {
+      "identity": "OptimizeRBs-R11-T1",
+      "rng_run": 11,
+      "method": "OptimizeRBs",
+      "profile": "T1",
+      "status": "EXECUTION_FAILURE",
+      "exit_code": "3",
+      "start": "2026-11-10T03:11:42.150120+08:00",
+      "end": "2026-11-10T03:15:53.165623+08:00",
+      "failure_simulation_time_s": "5.281849991",
+      "metadata_sha256": "88f180a899a85e713794161b237049965a82c11305135fd816340d09ccb9cca3"
+    },
+    {
+      "identity": "OptimizeRBs-R13-T1",
+      "rng_run": 13,
+      "method": "OptimizeRBs",
+      "profile": "T1",
+      "status": "EXECUTION_FAILURE",
+      "exit_code": "3",
+      "start": "2026-11-10T04:16:00.785368+08:00",
+      "end": "2026-11-10T04:19:14.727882+08:00",
+      "failure_simulation_time_s": "3.890349991",
+      "metadata_sha256": "5389bcd9b6480e249bba422d8f9d852de96091e7841dd147e0377c1afd8beee2"
+    },
+    {
+      "identity": "OptimizeRBs-R15-T1",
+      "rng_run": 15,
+      "method": "OptimizeRBs",
+      "profile": "T1",
+      "status": "EXECUTION_FAILURE",
+      "exit_code": "3",
+      "start": "2026-11-10T05:21:10.758813+08:00",
+      "end": "2026-11-10T05:24:23.197653+08:00",
+      "failure_simulation_time_s": "4.055349991",
+      "metadata_sha256": "e2a554d2515d31b04f787349fd8a630fb692ebb20da9846c49b1759f4afabe1d"
+    }
+  ],
+  "cohorts": [
+    {
+      "profile": "T1",
+      "control": "C2000",
+      "cohort": "LOW",
+      "method": "OptimizeMcs",
+      "traffic": "AR_Video",
+      "paired_rng_runs": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "transient_violation_pp": {
+        "n": 10,
+        "median": 78.4398342853556,
+        "min": 47.77777777777778,
+        "max": 89.01098901098901
+      },
+      "control_violation_pp": {
+        "n": 10,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "paired_violation_delta_pp": {
+        "n": 10,
+        "median": 78.4398342853556,
+        "min": 47.77777777777778,
+        "max": 89.01098901098901
+      },
+      "transient_generated_sum": 1799,
+      "transient_timely_sum": 422,
+      "transient_late_sum": 1377,
+      "transient_unobserved_sum": 0,
+      "control_generated_sum": 1799,
+      "control_timely_sum": 1799,
+      "control_late_sum": 0,
+      "control_unobserved_sum": 0,
+      "pairs_full_ip_rx_bytes_equal": 10
+    },
+    {
+      "profile": "T1",
+      "control": "C2000",
+      "cohort": "LOW",
+      "method": "OptimizeMcs",
+      "traffic": "CG",
+      "paired_rng_runs": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "transient_violation_pp": {
+        "n": 10,
+        "median": 100.0,
+        "min": 100.0,
+        "max": 100.0
+      },
+      "control_violation_pp": {
+        "n": 10,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "paired_violation_delta_pp": {
+        "n": 10,
+        "median": 100.0,
+        "min": 100.0,
+        "max": 100.0
+      },
+      "transient_generated_sum": 1797,
+      "transient_timely_sum": 0,
+      "transient_late_sum": 1797,
+      "transient_unobserved_sum": 0,
+      "control_generated_sum": 1797,
+      "control_timely_sum": 1797,
+      "control_late_sum": 0,
+      "control_unobserved_sum": 0,
+      "pairs_full_ip_rx_bytes_equal": 10
+    },
+    {
+      "profile": "T1",
+      "control": "C2000",
+      "cohort": "LOW",
+      "method": "OptimizeMcs",
+      "traffic": "VR",
+      "paired_rng_runs": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "transient_violation_pp": {
+        "n": 10,
+        "median": 99.86111111111111,
+        "min": 98.88268156424581,
+        "max": 100.0
+      },
+      "control_violation_pp": {
+        "n": 10,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "paired_violation_delta_pp": {
+        "n": 10,
+        "median": 99.86111111111111,
+        "min": 98.88268156424581,
+        "max": 100.0
+      },
+      "transient_generated_sum": 3605,
+      "transient_timely_sum": 13,
+      "transient_late_sum": 3592,
+      "transient_unobserved_sum": 0,
+      "control_generated_sum": 3605,
+      "control_timely_sum": 3605,
+      "control_late_sum": 0,
+      "control_unobserved_sum": 0,
+      "pairs_full_ip_rx_bytes_equal": 10
+    },
+    {
+      "profile": "T1",
+      "control": "C2000",
+      "cohort": "LOW",
+      "method": "OptimizeRBs",
+      "traffic": "AR_Video",
+      "paired_rng_runs": [
+        7,
+        8,
+        9,
+        10,
+        12,
+        14,
+        16
+      ],
+      "transient_violation_pp": {
+        "n": 7,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "control_violation_pp": {
+        "n": 7,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "paired_violation_delta_pp": {
+        "n": 7,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "transient_generated_sum": 1259,
+      "transient_timely_sum": 1259,
+      "transient_late_sum": 0,
+      "transient_unobserved_sum": 0,
+      "control_generated_sum": 1259,
+      "control_timely_sum": 1259,
+      "control_late_sum": 0,
+      "control_unobserved_sum": 0,
+      "pairs_full_ip_rx_bytes_equal": 7
+    },
+    {
+      "profile": "T1",
+      "control": "C2000",
+      "cohort": "LOW",
+      "method": "OptimizeRBs",
+      "traffic": "CG",
+      "paired_rng_runs": [
+        7,
+        8,
+        9,
+        10,
+        12,
+        14,
+        16
+      ],
+      "transient_violation_pp": {
+        "n": 7,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "control_violation_pp": {
+        "n": 7,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "paired_violation_delta_pp": {
+        "n": 7,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "transient_generated_sum": 1260,
+      "transient_timely_sum": 1260,
+      "transient_late_sum": 0,
+      "transient_unobserved_sum": 0,
+      "control_generated_sum": 1260,
+      "control_timely_sum": 1260,
+      "control_late_sum": 0,
+      "control_unobserved_sum": 0,
+      "pairs_full_ip_rx_bytes_equal": 7
+    },
+    {
+      "profile": "T1",
+      "control": "C2000",
+      "cohort": "LOW",
+      "method": "OptimizeRBs",
+      "traffic": "VR",
+      "paired_rng_runs": [
+        7,
+        8,
+        9,
+        10,
+        12,
+        14,
+        16
+      ],
+      "transient_violation_pp": {
+        "n": 7,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "control_violation_pp": {
+        "n": 7,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "paired_violation_delta_pp": {
+        "n": 7,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "transient_generated_sum": 2530,
+      "transient_timely_sum": 2530,
+      "transient_late_sum": 0,
+      "transient_unobserved_sum": 0,
+      "control_generated_sum": 2530,
+      "control_timely_sum": 2530,
+      "control_late_sum": 0,
+      "control_unobserved_sum": 0,
+      "pairs_full_ip_rx_bytes_equal": 7
+    },
+    {
+      "profile": "T1",
+      "control": "C2000",
+      "cohort": "LOW",
+      "method": "Postponing",
+      "traffic": "AR_Video",
+      "paired_rng_runs": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "transient_violation_pp": {
+        "n": 10,
+        "median": 25.347610180012417,
+        "min": 21.11111111111111,
+        "max": 31.86813186813187
+      },
+      "control_violation_pp": {
+        "n": 10,
+        "median": 1.1111454057223988,
+        "min": 0.5555555555555556,
+        "max": 3.3707865168539324
+      },
+      "paired_violation_delta_pp": {
+        "n": 10,
+        "median": 23.67783985102421,
+        "min": 18.53932584269663,
+        "max": 30.76923076923077
+      },
+      "transient_generated_sum": 1799,
+      "transient_timely_sum": 1336,
+      "transient_late_sum": 463,
+      "transient_unobserved_sum": 0,
+      "control_generated_sum": 1799,
+      "control_timely_sum": 1774,
+      "control_late_sum": 25,
+      "control_unobserved_sum": 0,
+      "pairs_full_ip_rx_bytes_equal": 7
+    },
+    {
+      "profile": "T1",
+      "control": "C2000",
+      "cohort": "LOW",
+      "method": "Postponing",
+      "traffic": "CG",
+      "paired_rng_runs": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "transient_violation_pp": {
+        "n": 10,
+        "median": 47.63345747982619,
+        "min": 44.632768361581924,
+        "max": 59.668508287292816
+      },
+      "control_violation_pp": {
+        "n": 10,
+        "median": 1.9429612025062504,
+        "min": 1.1049723756906078,
+        "max": 5.0
+      },
+      "paired_violation_delta_pp": {
+        "n": 10,
+        "median": 45.833204728541006,
+        "min": 43.0939226519337,
+        "max": 55.80110497237569
+      },
+      "transient_generated_sum": 1797,
+      "transient_timely_sum": 904,
+      "transient_late_sum": 893,
+      "transient_unobserved_sum": 0,
+      "control_generated_sum": 1797,
+      "control_timely_sum": 1757,
+      "control_late_sum": 40,
+      "control_unobserved_sum": 0,
+      "pairs_full_ip_rx_bytes_equal": 7
+    },
+    {
+      "profile": "T1",
+      "control": "C2000",
+      "cohort": "LOW",
+      "method": "Postponing",
+      "traffic": "VR",
+      "paired_rng_runs": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "transient_violation_pp": {
+        "n": 10,
+        "median": 69.13701622971286,
+        "min": 47.61904761904762,
+        "max": 81.94444444444444
+      },
+      "control_violation_pp": {
+        "n": 10,
+        "median": 2.616120218579235,
+        "min": 1.9283746556473829,
+        "max": 10.555555555555555
+      },
+      "paired_violation_delta_pp": {
+        "n": 10,
+        "median": 66.34207240948814,
+        "min": 40.056022408963585,
+        "max": 76.51933701657458
+      },
+      "transient_generated_sum": 3605,
+      "transient_timely_sum": 1161,
+      "transient_late_sum": 2443,
+      "transient_unobserved_sum": 1,
+      "control_generated_sum": 3605,
+      "control_timely_sum": 3467,
+      "control_late_sum": 120,
+      "control_unobserved_sum": 18,
+      "pairs_full_ip_rx_bytes_equal": 4
+    },
+    {
+      "profile": "T1",
+      "control": "C2250",
+      "cohort": "RECOVERY-1",
+      "method": "OptimizeMcs",
+      "traffic": "AR_Video",
+      "paired_rng_runs": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "transient_violation_pp": {
+        "n": 10,
+        "median": 2.492326580724371,
+        "min": 0.0,
+        "max": 3.867403314917127
+      },
+      "control_violation_pp": {
+        "n": 10,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "paired_violation_delta_pp": {
+        "n": 10,
+        "median": 2.492326580724371,
+        "min": 0.0,
+        "max": 3.867403314917127
+      },
+      "transient_generated_sum": 1804,
+      "transient_timely_sum": 1765,
+      "transient_late_sum": 39,
+      "transient_unobserved_sum": 0,
+      "control_generated_sum": 1804,
+      "control_timely_sum": 1804,
+      "control_late_sum": 0,
+      "control_unobserved_sum": 0,
+      "pairs_full_ip_rx_bytes_equal": null
+    },
+    {
+      "profile": "T1",
+      "control": "C2250",
+      "cohort": "RECOVERY-1",
+      "method": "OptimizeMcs",
+      "traffic": "CG",
+      "paired_rng_runs": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "transient_violation_pp": {
+        "n": 10,
+        "median": 31.111111111111114,
+        "min": 19.444444444444443,
+        "max": 46.666666666666664
+      },
+      "control_violation_pp": {
+        "n": 10,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "paired_violation_delta_pp": {
+        "n": 10,
+        "median": 31.111111111111114,
+        "min": 19.444444444444443,
+        "max": 46.666666666666664
+      },
+      "transient_generated_sum": 1801,
+      "transient_timely_sum": 1208,
+      "transient_late_sum": 593,
+      "transient_unobserved_sum": 0,
+      "control_generated_sum": 1801,
+      "control_timely_sum": 1801,
+      "control_late_sum": 0,
+      "control_unobserved_sum": 0,
+      "pairs_full_ip_rx_bytes_equal": null
+    },
+    {
+      "profile": "T1",
+      "control": "C2250",
+      "cohort": "RECOVERY-1",
+      "method": "OptimizeMcs",
+      "traffic": "VR",
+      "paired_rng_runs": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "transient_violation_pp": {
+        "n": 10,
+        "median": 47.654210430453524,
+        "min": 36.312849162011176,
+        "max": 62.674094707520894
+      },
+      "control_violation_pp": {
+        "n": 10,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "paired_violation_delta_pp": {
+        "n": 10,
+        "median": 47.654210430453524,
+        "min": 36.312849162011176,
+        "max": 62.674094707520894
+      },
+      "transient_generated_sum": 3607,
+      "transient_timely_sum": 1900,
+      "transient_late_sum": 1707,
+      "transient_unobserved_sum": 0,
+      "control_generated_sum": 3607,
+      "control_timely_sum": 3607,
+      "control_late_sum": 0,
+      "control_unobserved_sum": 0,
+      "pairs_full_ip_rx_bytes_equal": null
+    },
+    {
+      "profile": "T1",
+      "control": "C2250",
+      "cohort": "RECOVERY-1",
+      "method": "OptimizeRBs",
+      "traffic": "AR_Video",
+      "paired_rng_runs": [
+        7,
+        8,
+        9,
+        10,
+        12,
+        14,
+        16
+      ],
+      "transient_violation_pp": {
+        "n": 7,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "control_violation_pp": {
+        "n": 7,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "paired_violation_delta_pp": {
+        "n": 7,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "transient_generated_sum": 1261,
+      "transient_timely_sum": 1261,
+      "transient_late_sum": 0,
+      "transient_unobserved_sum": 0,
+      "control_generated_sum": 1261,
+      "control_timely_sum": 1261,
+      "control_late_sum": 0,
+      "control_unobserved_sum": 0,
+      "pairs_full_ip_rx_bytes_equal": null
+    },
+    {
+      "profile": "T1",
+      "control": "C2250",
+      "cohort": "RECOVERY-1",
+      "method": "OptimizeRBs",
+      "traffic": "CG",
+      "paired_rng_runs": [
+        7,
+        8,
+        9,
+        10,
+        12,
+        14,
+        16
+      ],
+      "transient_violation_pp": {
+        "n": 7,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "control_violation_pp": {
+        "n": 7,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "paired_violation_delta_pp": {
+        "n": 7,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "transient_generated_sum": 1262,
+      "transient_timely_sum": 1262,
+      "transient_late_sum": 0,
+      "transient_unobserved_sum": 0,
+      "control_generated_sum": 1262,
+      "control_timely_sum": 1262,
+      "control_late_sum": 0,
+      "control_unobserved_sum": 0,
+      "pairs_full_ip_rx_bytes_equal": null
+    },
+    {
+      "profile": "T1",
+      "control": "C2250",
+      "cohort": "RECOVERY-1",
+      "method": "OptimizeRBs",
+      "traffic": "VR",
+      "paired_rng_runs": [
+        7,
+        8,
+        9,
+        10,
+        12,
+        14,
+        16
+      ],
+      "transient_violation_pp": {
+        "n": 7,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "control_violation_pp": {
+        "n": 7,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "paired_violation_delta_pp": {
+        "n": 7,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "transient_generated_sum": 2525,
+      "transient_timely_sum": 2525,
+      "transient_late_sum": 0,
+      "transient_unobserved_sum": 0,
+      "control_generated_sum": 2525,
+      "control_timely_sum": 2525,
+      "control_late_sum": 0,
+      "control_unobserved_sum": 0,
+      "pairs_full_ip_rx_bytes_equal": null
+    },
+    {
+      "profile": "T1",
+      "control": "C2250",
+      "cohort": "RECOVERY-LATE",
+      "method": "OptimizeMcs",
+      "traffic": "AR_Video",
+      "paired_rng_runs": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "transient_violation_pp": {
+        "n": 10,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "control_violation_pp": {
+        "n": 10,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "paired_violation_delta_pp": {
+        "n": 10,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "transient_generated_sum": 1801,
+      "transient_timely_sum": 1801,
+      "transient_late_sum": 0,
+      "transient_unobserved_sum": 0,
+      "control_generated_sum": 1801,
+      "control_timely_sum": 1801,
+      "control_late_sum": 0,
+      "control_unobserved_sum": 0,
+      "pairs_full_ip_rx_bytes_equal": null
+    },
+    {
+      "profile": "T1",
+      "control": "C2250",
+      "cohort": "RECOVERY-LATE",
+      "method": "OptimizeMcs",
+      "traffic": "CG",
+      "paired_rng_runs": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "transient_violation_pp": {
+        "n": 10,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "control_violation_pp": {
+        "n": 10,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "paired_violation_delta_pp": {
+        "n": 10,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "transient_generated_sum": 1804,
+      "transient_timely_sum": 1804,
+      "transient_late_sum": 0,
+      "transient_unobserved_sum": 0,
+      "control_generated_sum": 1804,
+      "control_timely_sum": 1804,
+      "control_late_sum": 0,
+      "control_unobserved_sum": 0,
+      "pairs_full_ip_rx_bytes_equal": null
+    },
+    {
+      "profile": "T1",
+      "control": "C2250",
+      "cohort": "RECOVERY-LATE",
+      "method": "OptimizeMcs",
+      "traffic": "VR",
+      "paired_rng_runs": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "transient_violation_pp": {
+        "n": 10,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "control_violation_pp": {
+        "n": 10,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.27932960893854747
+      },
+      "paired_violation_delta_pp": {
+        "n": 10,
+        "median": 0.0,
+        "min": -0.27932960893854747,
+        "max": 0.0
+      },
+      "transient_generated_sum": 3600,
+      "transient_timely_sum": 3600,
+      "transient_late_sum": 0,
+      "transient_unobserved_sum": 0,
+      "control_generated_sum": 3600,
+      "control_timely_sum": 3599,
+      "control_late_sum": 0,
+      "control_unobserved_sum": 1,
+      "pairs_full_ip_rx_bytes_equal": null
+    },
+    {
+      "profile": "T1",
+      "control": "C2250",
+      "cohort": "RECOVERY-LATE",
+      "method": "OptimizeRBs",
+      "traffic": "AR_Video",
+      "paired_rng_runs": [
+        7,
+        8,
+        9,
+        10,
+        12,
+        14,
+        16
+      ],
+      "transient_violation_pp": {
+        "n": 7,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "control_violation_pp": {
+        "n": 7,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "paired_violation_delta_pp": {
+        "n": 7,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "transient_generated_sum": 1262,
+      "transient_timely_sum": 1262,
+      "transient_late_sum": 0,
+      "transient_unobserved_sum": 0,
+      "control_generated_sum": 1262,
+      "control_timely_sum": 1262,
+      "control_late_sum": 0,
+      "control_unobserved_sum": 0,
+      "pairs_full_ip_rx_bytes_equal": null
+    },
+    {
+      "profile": "T1",
+      "control": "C2250",
+      "cohort": "RECOVERY-LATE",
+      "method": "OptimizeRBs",
+      "traffic": "CG",
+      "paired_rng_runs": [
+        7,
+        8,
+        9,
+        10,
+        12,
+        14,
+        16
+      ],
+      "transient_violation_pp": {
+        "n": 7,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "control_violation_pp": {
+        "n": 7,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "paired_violation_delta_pp": {
+        "n": 7,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "transient_generated_sum": 1262,
+      "transient_timely_sum": 1262,
+      "transient_late_sum": 0,
+      "transient_unobserved_sum": 0,
+      "control_generated_sum": 1262,
+      "control_timely_sum": 1262,
+      "control_late_sum": 0,
+      "control_unobserved_sum": 0,
+      "pairs_full_ip_rx_bytes_equal": null
+    },
+    {
+      "profile": "T1",
+      "control": "C2250",
+      "cohort": "RECOVERY-LATE",
+      "method": "OptimizeRBs",
+      "traffic": "VR",
+      "paired_rng_runs": [
+        7,
+        8,
+        9,
+        10,
+        12,
+        14,
+        16
+      ],
+      "transient_violation_pp": {
+        "n": 7,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "control_violation_pp": {
+        "n": 7,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "paired_violation_delta_pp": {
+        "n": 7,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "transient_generated_sum": 2520,
+      "transient_timely_sum": 2520,
+      "transient_late_sum": 0,
+      "transient_unobserved_sum": 0,
+      "control_generated_sum": 2520,
+      "control_timely_sum": 2520,
+      "control_late_sum": 0,
+      "control_unobserved_sum": 0,
+      "pairs_full_ip_rx_bytes_equal": null
+    },
+    {
+      "profile": "T2",
+      "control": "C2000",
+      "cohort": "LOW",
+      "method": "OptimizeMcs",
+      "traffic": "AR_Video",
+      "paired_rng_runs": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "transient_violation_pp": {
+        "n": 10,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "control_violation_pp": {
+        "n": 10,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "paired_violation_delta_pp": {
+        "n": 10,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "transient_generated_sum": 3599,
+      "transient_timely_sum": 3599,
+      "transient_late_sum": 0,
+      "transient_unobserved_sum": 0,
+      "control_generated_sum": 3599,
+      "control_timely_sum": 3599,
+      "control_late_sum": 0,
+      "control_unobserved_sum": 0,
+      "pairs_full_ip_rx_bytes_equal": 10
+    },
+    {
+      "profile": "T2",
+      "control": "C2000",
+      "cohort": "LOW",
+      "method": "OptimizeMcs",
+      "traffic": "CG",
+      "paired_rng_runs": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "transient_violation_pp": {
+        "n": 10,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "control_violation_pp": {
+        "n": 10,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "paired_violation_delta_pp": {
+        "n": 10,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "transient_generated_sum": 3598,
+      "transient_timely_sum": 3598,
+      "transient_late_sum": 0,
+      "transient_unobserved_sum": 0,
+      "control_generated_sum": 3598,
+      "control_timely_sum": 3598,
+      "control_late_sum": 0,
+      "control_unobserved_sum": 0,
+      "pairs_full_ip_rx_bytes_equal": 10
+    },
+    {
+      "profile": "T2",
+      "control": "C2000",
+      "cohort": "LOW",
+      "method": "OptimizeMcs",
+      "traffic": "VR",
+      "paired_rng_runs": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "transient_violation_pp": {
+        "n": 10,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "control_violation_pp": {
+        "n": 10,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "paired_violation_delta_pp": {
+        "n": 10,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "transient_generated_sum": 7207,
+      "transient_timely_sum": 7207,
+      "transient_late_sum": 0,
+      "transient_unobserved_sum": 0,
+      "control_generated_sum": 7207,
+      "control_timely_sum": 7207,
+      "control_late_sum": 0,
+      "control_unobserved_sum": 0,
+      "pairs_full_ip_rx_bytes_equal": 9
+    },
+    {
+      "profile": "T2",
+      "control": "C2000",
+      "cohort": "LOW",
+      "method": "OptimizeRBs",
+      "traffic": "AR_Video",
+      "paired_rng_runs": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "transient_violation_pp": {
+        "n": 9,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "control_violation_pp": {
+        "n": 9,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "paired_violation_delta_pp": {
+        "n": 9,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "transient_generated_sum": 3239,
+      "transient_timely_sum": 3239,
+      "transient_late_sum": 0,
+      "transient_unobserved_sum": 0,
+      "control_generated_sum": 3239,
+      "control_timely_sum": 3239,
+      "control_late_sum": 0,
+      "control_unobserved_sum": 0,
+      "pairs_full_ip_rx_bytes_equal": 9
+    },
+    {
+      "profile": "T2",
+      "control": "C2000",
+      "cohort": "LOW",
+      "method": "OptimizeRBs",
+      "traffic": "CG",
+      "paired_rng_runs": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "transient_violation_pp": {
+        "n": 9,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.2785515320334262
+      },
+      "control_violation_pp": {
+        "n": 9,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "paired_violation_delta_pp": {
+        "n": 9,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.2785515320334262
+      },
+      "transient_generated_sum": 3240,
+      "transient_timely_sum": 3239,
+      "transient_late_sum": 1,
+      "transient_unobserved_sum": 0,
+      "control_generated_sum": 3240,
+      "control_timely_sum": 3240,
+      "control_late_sum": 0,
+      "control_unobserved_sum": 0,
+      "pairs_full_ip_rx_bytes_equal": 9
+    },
+    {
+      "profile": "T2",
+      "control": "C2000",
+      "cohort": "LOW",
+      "method": "OptimizeRBs",
+      "traffic": "VR",
+      "paired_rng_runs": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "transient_violation_pp": {
+        "n": 9,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 9.470752089136491
+      },
+      "control_violation_pp": {
+        "n": 9,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 5.277777777777778
+      },
+      "paired_violation_delta_pp": {
+        "n": 9,
+        "median": 0.0,
+        "min": -5.277777777777778,
+        "max": 8.4958217270195
+      },
+      "transient_generated_sum": 6490,
+      "transient_timely_sum": 6422,
+      "transient_late_sum": 3,
+      "transient_unobserved_sum": 65,
+      "control_generated_sum": 6490,
+      "control_timely_sum": 6445,
+      "control_late_sum": 7,
+      "control_unobserved_sum": 38,
+      "pairs_full_ip_rx_bytes_equal": 6
+    },
+    {
+      "profile": "T2",
+      "control": "C2000",
+      "cohort": "LOW",
+      "method": "Postponing",
+      "traffic": "AR_Video",
+      "paired_rng_runs": [
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "transient_violation_pp": {
+        "n": 9,
+        "median": 5.524861878453039,
+        "min": 3.3333333333333335,
+        "max": 6.983240223463687
+      },
+      "control_violation_pp": {
+        "n": 9,
+        "median": 1.3850415512465375,
+        "min": 0.5555555555555556,
+        "max": 2.2222222222222223
+      },
+      "paired_violation_delta_pp": {
+        "n": 9,
+        "median": 4.143646408839779,
+        "min": 2.23463687150838,
+        "max": 6.145251396648044
+      },
+      "transient_generated_sum": 3239,
+      "transient_timely_sum": 3072,
+      "transient_late_sum": 167,
+      "transient_unobserved_sum": 0,
+      "control_generated_sum": 3239,
+      "control_timely_sum": 3195,
+      "control_late_sum": 44,
+      "control_unobserved_sum": 0,
+      "pairs_full_ip_rx_bytes_equal": 5
+    },
+    {
+      "profile": "T2",
+      "control": "C2000",
+      "cohort": "LOW",
+      "method": "Postponing",
+      "traffic": "CG",
+      "paired_rng_runs": [
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "transient_violation_pp": {
+        "n": 9,
+        "median": 15.041782729805014,
+        "min": 10.614525139664805,
+        "max": 24.233983286908078
+      },
+      "control_violation_pp": {
+        "n": 9,
+        "median": 1.9498607242339834,
+        "min": 1.1142061281337048,
+        "max": 3.35195530726257
+      },
+      "paired_violation_delta_pp": {
+        "n": 9,
+        "median": 13.01939058171745,
+        "min": 8.938547486033519,
+        "max": 21.16991643454039
+      },
+      "transient_generated_sum": 3238,
+      "transient_timely_sum": 2728,
+      "transient_late_sum": 510,
+      "transient_unobserved_sum": 0,
+      "control_generated_sum": 3238,
+      "control_timely_sum": 3171,
+      "control_late_sum": 67,
+      "control_unobserved_sum": 0,
+      "pairs_full_ip_rx_bytes_equal": 9
+    },
+    {
+      "profile": "T2",
+      "control": "C2000",
+      "cohort": "LOW",
+      "method": "Postponing",
+      "traffic": "VR",
+      "paired_rng_runs": [
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "transient_violation_pp": {
+        "n": 9,
+        "median": 15.716272600834492,
+        "min": 11.0803324099723,
+        "max": 25.27777777777778
+      },
+      "control_violation_pp": {
+        "n": 9,
+        "median": 3.0428769017980635,
+        "min": 2.0775623268698062,
+        "max": 9.749303621169917
+      },
+      "paired_violation_delta_pp": {
+        "n": 9,
+        "median": 10.249307479224376,
+        "min": 6.8245125348189415,
+        "max": 18.344827586206897
+      },
+      "transient_generated_sum": 6485,
+      "transient_timely_sum": 5419,
+      "transient_late_sum": 1043,
+      "transient_unobserved_sum": 23,
+      "control_generated_sum": 6485,
+      "control_timely_sum": 6213,
+      "control_late_sum": 229,
+      "control_unobserved_sum": 43,
+      "pairs_full_ip_rx_bytes_equal": 3
+    },
+    {
+      "profile": "T2",
+      "control": "C2400",
+      "cohort": "RECOVERY-1",
+      "method": "OptimizeMcs",
+      "traffic": "AR_Video",
+      "paired_rng_runs": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "transient_violation_pp": {
+        "n": 10,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "control_violation_pp": {
+        "n": 10,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "paired_violation_delta_pp": {
+        "n": 10,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "transient_generated_sum": 1801,
+      "transient_timely_sum": 1801,
+      "transient_late_sum": 0,
+      "transient_unobserved_sum": 0,
+      "control_generated_sum": 1801,
+      "control_timely_sum": 1801,
+      "control_late_sum": 0,
+      "control_unobserved_sum": 0,
+      "pairs_full_ip_rx_bytes_equal": null
+    },
+    {
+      "profile": "T2",
+      "control": "C2400",
+      "cohort": "RECOVERY-1",
+      "method": "OptimizeMcs",
+      "traffic": "CG",
+      "paired_rng_runs": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "transient_violation_pp": {
+        "n": 10,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "control_violation_pp": {
+        "n": 10,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "paired_violation_delta_pp": {
+        "n": 10,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "transient_generated_sum": 1803,
+      "transient_timely_sum": 1803,
+      "transient_late_sum": 0,
+      "transient_unobserved_sum": 0,
+      "control_generated_sum": 1803,
+      "control_timely_sum": 1803,
+      "control_late_sum": 0,
+      "control_unobserved_sum": 0,
+      "pairs_full_ip_rx_bytes_equal": null
+    },
+    {
+      "profile": "T2",
+      "control": "C2400",
+      "cohort": "RECOVERY-1",
+      "method": "OptimizeMcs",
+      "traffic": "VR",
+      "paired_rng_runs": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "transient_violation_pp": {
+        "n": 10,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "control_violation_pp": {
+        "n": 10,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "paired_violation_delta_pp": {
+        "n": 10,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "transient_generated_sum": 3603,
+      "transient_timely_sum": 3603,
+      "transient_late_sum": 0,
+      "transient_unobserved_sum": 0,
+      "control_generated_sum": 3603,
+      "control_timely_sum": 3603,
+      "control_late_sum": 0,
+      "control_unobserved_sum": 0,
+      "pairs_full_ip_rx_bytes_equal": null
+    },
+    {
+      "profile": "T2",
+      "control": "C2400",
+      "cohort": "RECOVERY-1",
+      "method": "OptimizeRBs",
+      "traffic": "AR_Video",
+      "paired_rng_runs": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "transient_violation_pp": {
+        "n": 9,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "control_violation_pp": {
+        "n": 9,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "paired_violation_delta_pp": {
+        "n": 9,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "transient_generated_sum": 1620,
+      "transient_timely_sum": 1620,
+      "transient_late_sum": 0,
+      "transient_unobserved_sum": 0,
+      "control_generated_sum": 1620,
+      "control_timely_sum": 1620,
+      "control_late_sum": 0,
+      "control_unobserved_sum": 0,
+      "pairs_full_ip_rx_bytes_equal": null
+    },
+    {
+      "profile": "T2",
+      "control": "C2400",
+      "cohort": "RECOVERY-1",
+      "method": "OptimizeRBs",
+      "traffic": "CG",
+      "paired_rng_runs": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "transient_violation_pp": {
+        "n": 9,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "control_violation_pp": {
+        "n": 9,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "paired_violation_delta_pp": {
+        "n": 9,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "transient_generated_sum": 1622,
+      "transient_timely_sum": 1622,
+      "transient_late_sum": 0,
+      "transient_unobserved_sum": 0,
+      "control_generated_sum": 1622,
+      "control_timely_sum": 1622,
+      "control_late_sum": 0,
+      "control_unobserved_sum": 0,
+      "pairs_full_ip_rx_bytes_equal": null
+    },
+    {
+      "profile": "T2",
+      "control": "C2400",
+      "cohort": "RECOVERY-1",
+      "method": "OptimizeRBs",
+      "traffic": "VR",
+      "paired_rng_runs": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "transient_violation_pp": {
+        "n": 9,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 12.154696132596685
+      },
+      "control_violation_pp": {
+        "n": 9,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 11.878453038674033
+      },
+      "paired_violation_delta_pp": {
+        "n": 9,
+        "median": 0.0,
+        "min": -0.5571030640668511,
+        "max": 0.2762430939226519
+      },
+      "transient_generated_sum": 3245,
+      "transient_timely_sum": 3167,
+      "transient_late_sum": 17,
+      "transient_unobserved_sum": 61,
+      "control_generated_sum": 3245,
+      "control_timely_sum": 3166,
+      "control_late_sum": 18,
+      "control_unobserved_sum": 61,
+      "pairs_full_ip_rx_bytes_equal": null
+    },
+    {
+      "profile": "T2",
+      "control": "C2400",
+      "cohort": "RECOVERY-LATE",
+      "method": "OptimizeMcs",
+      "traffic": "AR_Video",
+      "paired_rng_runs": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "transient_violation_pp": {
+        "n": 10,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "control_violation_pp": {
+        "n": 10,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "paired_violation_delta_pp": {
+        "n": 10,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "transient_generated_sum": 902,
+      "transient_timely_sum": 902,
+      "transient_late_sum": 0,
+      "transient_unobserved_sum": 0,
+      "control_generated_sum": 902,
+      "control_timely_sum": 902,
+      "control_late_sum": 0,
+      "control_unobserved_sum": 0,
+      "pairs_full_ip_rx_bytes_equal": null
+    },
+    {
+      "profile": "T2",
+      "control": "C2400",
+      "cohort": "RECOVERY-LATE",
+      "method": "OptimizeMcs",
+      "traffic": "CG",
+      "paired_rng_runs": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "transient_violation_pp": {
+        "n": 10,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "control_violation_pp": {
+        "n": 10,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "paired_violation_delta_pp": {
+        "n": 10,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "transient_generated_sum": 902,
+      "transient_timely_sum": 902,
+      "transient_late_sum": 0,
+      "transient_unobserved_sum": 0,
+      "control_generated_sum": 902,
+      "control_timely_sum": 902,
+      "control_late_sum": 0,
+      "control_unobserved_sum": 0,
+      "pairs_full_ip_rx_bytes_equal": null
+    },
+    {
+      "profile": "T2",
+      "control": "C2400",
+      "cohort": "RECOVERY-LATE",
+      "method": "OptimizeMcs",
+      "traffic": "VR",
+      "paired_rng_runs": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "transient_violation_pp": {
+        "n": 10,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "control_violation_pp": {
+        "n": 10,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "paired_violation_delta_pp": {
+        "n": 10,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "transient_generated_sum": 1798,
+      "transient_timely_sum": 1798,
+      "transient_late_sum": 0,
+      "transient_unobserved_sum": 0,
+      "control_generated_sum": 1798,
+      "control_timely_sum": 1798,
+      "control_late_sum": 0,
+      "control_unobserved_sum": 0,
+      "pairs_full_ip_rx_bytes_equal": null
+    },
+    {
+      "profile": "T2",
+      "control": "C2400",
+      "cohort": "RECOVERY-LATE",
+      "method": "OptimizeRBs",
+      "traffic": "AR_Video",
+      "paired_rng_runs": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "transient_violation_pp": {
+        "n": 9,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "control_violation_pp": {
+        "n": 9,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "paired_violation_delta_pp": {
+        "n": 9,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "transient_generated_sum": 813,
+      "transient_timely_sum": 813,
+      "transient_late_sum": 0,
+      "transient_unobserved_sum": 0,
+      "control_generated_sum": 813,
+      "control_timely_sum": 813,
+      "control_late_sum": 0,
+      "control_unobserved_sum": 0,
+      "pairs_full_ip_rx_bytes_equal": null
+    },
+    {
+      "profile": "T2",
+      "control": "C2400",
+      "cohort": "RECOVERY-LATE",
+      "method": "OptimizeRBs",
+      "traffic": "CG",
+      "paired_rng_runs": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "transient_violation_pp": {
+        "n": 9,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "control_violation_pp": {
+        "n": 9,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 1.1111111111111112
+      },
+      "paired_violation_delta_pp": {
+        "n": 9,
+        "median": 0.0,
+        "min": -1.1111111111111112,
+        "max": 0.0
+      },
+      "transient_generated_sum": 813,
+      "transient_timely_sum": 813,
+      "transient_late_sum": 0,
+      "transient_unobserved_sum": 0,
+      "control_generated_sum": 813,
+      "control_timely_sum": 811,
+      "control_late_sum": 2,
+      "control_unobserved_sum": 0,
+      "pairs_full_ip_rx_bytes_equal": null
+    },
+    {
+      "profile": "T2",
+      "control": "C2400",
+      "cohort": "RECOVERY-LATE",
+      "method": "OptimizeRBs",
+      "traffic": "VR",
+      "paired_rng_runs": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "transient_violation_pp": {
+        "n": 9,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 13.333333333333334
+      },
+      "control_violation_pp": {
+        "n": 9,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 13.333333333333334
+      },
+      "paired_violation_delta_pp": {
+        "n": 9,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "transient_generated_sum": 1619,
+      "transient_timely_sum": 1574,
+      "transient_late_sum": 9,
+      "transient_unobserved_sum": 36,
+      "control_generated_sum": 1619,
+      "control_timely_sum": 1574,
+      "control_late_sum": 9,
+      "control_unobserved_sum": 36,
+      "pairs_full_ip_rx_bytes_equal": null
+    }
+  ],
+  "between_modes": [
+    {
+      "profile": "T1",
+      "traffic": "VR",
+      "lhs_method": "OptimizeMcs",
+      "rhs_method": "OptimizeRBs",
+      "paired_rng_runs": [
+        7,
+        8,
+        9,
+        10,
+        12,
+        14,
+        16
+      ],
+      "identical_generated_count_pairs": 7,
+      "violation_delta_pp_rhs_minus_lhs": {
+        "n": 7,
+        "median": -100.0,
+        "min": -100.0,
+        "max": -99.43820224719101
+      },
+      "modeled_fh_mbit_delta_rhs_minus_lhs": {
+        "n": 7,
+        "median": -729.7425600000001,
+        "min": -898.0011300000001,
+        "max": -635.6094659999999
+      },
+      "air_rb_sample_sum_delta_rhs_minus_lhs": {
+        "n": 7,
+        "median": -3024160.0,
+        "min": -3068649.0,
+        "max": -2986212.0
+      },
+      "fh_active_p95_mbps_delta_rhs_minus_lhs": {
+        "n": 7,
+        "median": 424.31999999999994,
+        "min": 419.328,
+        "max": 491.472
+      }
+    },
+    {
+      "profile": "T1",
+      "traffic": "CG",
+      "lhs_method": "OptimizeMcs",
+      "rhs_method": "OptimizeRBs",
+      "paired_rng_runs": [
+        7,
+        8,
+        9,
+        10,
+        12,
+        14,
+        16
+      ],
+      "identical_generated_count_pairs": 7,
+      "violation_delta_pp_rhs_minus_lhs": {
+        "n": 7,
+        "median": -100.0,
+        "min": -100.0,
+        "max": -100.0
+      },
+      "modeled_fh_mbit_delta_rhs_minus_lhs": {
+        "n": 7,
+        "median": -729.7425600000001,
+        "min": -898.0011300000001,
+        "max": -635.6094659999999
+      },
+      "air_rb_sample_sum_delta_rhs_minus_lhs": {
+        "n": 7,
+        "median": -3024160.0,
+        "min": -3068649.0,
+        "max": -2986212.0
+      },
+      "fh_active_p95_mbps_delta_rhs_minus_lhs": {
+        "n": 7,
+        "median": 424.31999999999994,
+        "min": 419.328,
+        "max": 491.472
+      }
+    },
+    {
+      "profile": "T1",
+      "traffic": "AR_Video",
+      "lhs_method": "OptimizeMcs",
+      "rhs_method": "OptimizeRBs",
+      "paired_rng_runs": [
+        7,
+        8,
+        9,
+        10,
+        12,
+        14,
+        16
+      ],
+      "identical_generated_count_pairs": 7,
+      "violation_delta_pp_rhs_minus_lhs": {
+        "n": 7,
+        "median": -75.41899441340782,
+        "min": -83.79888268156425,
+        "max": -47.77777777777778
+      },
+      "modeled_fh_mbit_delta_rhs_minus_lhs": {
+        "n": 7,
+        "median": -729.7425600000001,
+        "min": -898.0011300000001,
+        "max": -635.6094659999999
+      },
+      "air_rb_sample_sum_delta_rhs_minus_lhs": {
+        "n": 7,
+        "median": -3024160.0,
+        "min": -3068649.0,
+        "max": -2986212.0
+      },
+      "fh_active_p95_mbps_delta_rhs_minus_lhs": {
+        "n": 7,
+        "median": 424.31999999999994,
+        "min": 419.328,
+        "max": 491.472
+      }
+    },
+    {
+      "profile": "T1",
+      "traffic": "VR",
+      "lhs_method": "OptimizeMcs",
+      "rhs_method": "Postponing",
+      "paired_rng_runs": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "identical_generated_count_pairs": 10,
+      "violation_delta_pp_rhs_minus_lhs": {
+        "n": 10,
+        "median": -30.446265938069217,
+        "min": -51.5406162464986,
+        "max": -17.22222222222223
+      },
+      "modeled_fh_mbit_delta_rhs_minus_lhs": {
+        "n": 10,
+        "median": -752.5840589999999,
+        "min": -926.0062560000001,
+        "max": -476.61541799999986
+      },
+      "air_rb_sample_sum_delta_rhs_minus_lhs": {
+        "n": 10,
+        "median": -3052558.5,
+        "min": -3079690.0,
+        "max": -2954692.0
+      },
+      "fh_active_p95_mbps_delta_rhs_minus_lhs": {
+        "n": 10,
+        "median": 273.4319999999999,
+        "min": 252.33599999999979,
+        "max": 336.72
+      }
+    },
+    {
+      "profile": "T1",
+      "traffic": "CG",
+      "lhs_method": "OptimizeMcs",
+      "rhs_method": "Postponing",
+      "paired_rng_runs": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "identical_generated_count_pairs": 10,
+      "violation_delta_pp_rhs_minus_lhs": {
+        "n": 10,
+        "median": -52.36654252017381,
+        "min": -55.367231638418076,
+        "max": -40.331491712707184
+      },
+      "modeled_fh_mbit_delta_rhs_minus_lhs": {
+        "n": 10,
+        "median": -752.5840589999999,
+        "min": -926.0062560000001,
+        "max": -476.61541799999986
+      },
+      "air_rb_sample_sum_delta_rhs_minus_lhs": {
+        "n": 10,
+        "median": -3052558.5,
+        "min": -3079690.0,
+        "max": -2954692.0
+      },
+      "fh_active_p95_mbps_delta_rhs_minus_lhs": {
+        "n": 10,
+        "median": 273.4319999999999,
+        "min": 252.33599999999979,
+        "max": 336.72
+      }
+    },
+    {
+      "profile": "T1",
+      "traffic": "AR_Video",
+      "lhs_method": "OptimizeMcs",
+      "rhs_method": "Postponing",
+      "paired_rng_runs": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "identical_generated_count_pairs": 10,
+      "violation_delta_pp_rhs_minus_lhs": {
+        "n": 10,
+        "median": -54.60117939168218,
+        "min": -59.550561797752806,
+        "max": -26.11111111111111
+      },
+      "modeled_fh_mbit_delta_rhs_minus_lhs": {
+        "n": 10,
+        "median": -752.5840589999999,
+        "min": -926.0062560000001,
+        "max": -476.61541799999986
+      },
+      "air_rb_sample_sum_delta_rhs_minus_lhs": {
+        "n": 10,
+        "median": -3052558.5,
+        "min": -3079690.0,
+        "max": -2954692.0
+      },
+      "fh_active_p95_mbps_delta_rhs_minus_lhs": {
+        "n": 10,
+        "median": 273.4319999999999,
+        "min": 252.33599999999979,
+        "max": 336.72
+      }
+    },
+    {
+      "profile": "T1",
+      "traffic": "VR",
+      "lhs_method": "OptimizeRBs",
+      "rhs_method": "Postponing",
+      "paired_rng_runs": [
+        7,
+        8,
+        9,
+        10,
+        12,
+        14,
+        16
+      ],
+      "identical_generated_count_pairs": 7,
+      "violation_delta_pp_rhs_minus_lhs": {
+        "n": 7,
+        "median": 68.61111111111111,
+        "min": 60.22099447513812,
+        "max": 78.7292817679558
+      },
+      "modeled_fh_mbit_delta_rhs_minus_lhs": {
+        "n": 7,
+        "median": -81.31507199999987,
+        "min": -120.95322599999986,
+        "max": -5.23184399999991
+      },
+      "air_rb_sample_sum_delta_rhs_minus_lhs": {
+        "n": 7,
+        "median": -32509.0,
+        "min": -48210.0,
+        "max": -9961.0
+      },
+      "fh_active_p95_mbps_delta_rhs_minus_lhs": {
+        "n": 7,
+        "median": -166.9920000000002,
+        "min": -179.712,
+        "max": -166.9920000000002
+      }
+    },
+    {
+      "profile": "T1",
+      "traffic": "CG",
+      "lhs_method": "OptimizeRBs",
+      "rhs_method": "Postponing",
+      "paired_rng_runs": [
+        7,
+        8,
+        9,
+        10,
+        12,
+        14,
+        16
+      ],
+      "identical_generated_count_pairs": 7,
+      "violation_delta_pp_rhs_minus_lhs": {
+        "n": 7,
+        "median": 47.22222222222222,
+        "min": 45.30386740331492,
+        "max": 52.22222222222222
+      },
+      "modeled_fh_mbit_delta_rhs_minus_lhs": {
+        "n": 7,
+        "median": -81.31507199999987,
+        "min": -120.95322599999986,
+        "max": -5.23184399999991
+      },
+      "air_rb_sample_sum_delta_rhs_minus_lhs": {
+        "n": 7,
+        "median": -32509.0,
+        "min": -48210.0,
+        "max": -9961.0
+      },
+      "fh_active_p95_mbps_delta_rhs_minus_lhs": {
+        "n": 7,
+        "median": -166.9920000000002,
+        "min": -179.712,
+        "max": -166.9920000000002
+      }
+    },
+    {
+      "profile": "T1",
+      "traffic": "AR_Video",
+      "lhs_method": "OptimizeRBs",
+      "rhs_method": "Postponing",
+      "paired_rng_runs": [
+        7,
+        8,
+        9,
+        10,
+        12,
+        14,
+        16
+      ],
+      "identical_generated_count_pairs": 7,
+      "violation_delta_pp_rhs_minus_lhs": {
+        "n": 7,
+        "median": 25.555555555555557,
+        "min": 21.666666666666668,
+        "max": 28.88888888888889
+      },
+      "modeled_fh_mbit_delta_rhs_minus_lhs": {
+        "n": 7,
+        "median": -81.31507199999987,
+        "min": -120.95322599999986,
+        "max": -5.23184399999991
+      },
+      "air_rb_sample_sum_delta_rhs_minus_lhs": {
+        "n": 7,
+        "median": -32509.0,
+        "min": -48210.0,
+        "max": -9961.0
+      },
+      "fh_active_p95_mbps_delta_rhs_minus_lhs": {
+        "n": 7,
+        "median": -166.9920000000002,
+        "min": -179.712,
+        "max": -166.9920000000002
+      }
+    },
+    {
+      "profile": "T2",
+      "traffic": "VR",
+      "lhs_method": "OptimizeMcs",
+      "rhs_method": "OptimizeRBs",
+      "paired_rng_runs": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "identical_generated_count_pairs": 9,
+      "violation_delta_pp_rhs_minus_lhs": {
+        "n": 9,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 9.470752089136491
+      },
+      "modeled_fh_mbit_delta_rhs_minus_lhs": {
+        "n": 9,
+        "median": -674.3152560000001,
+        "min": -873.505866,
+        "max": -245.29200600000013
+      },
+      "air_rb_sample_sum_delta_rhs_minus_lhs": {
+        "n": 9,
+        "median": -2991079.0,
+        "min": -3043383.0,
+        "max": -2864904.0
+      },
+      "fh_active_p95_mbps_delta_rhs_minus_lhs": {
+        "n": 9,
+        "median": 559.1039999999998,
+        "min": 551.8272000000015,
+        "max": 631.9247999999982
+      }
+    },
+    {
+      "profile": "T2",
+      "traffic": "CG",
+      "lhs_method": "OptimizeMcs",
+      "rhs_method": "OptimizeRBs",
+      "paired_rng_runs": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "identical_generated_count_pairs": 9,
+      "violation_delta_pp_rhs_minus_lhs": {
+        "n": 9,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.2785515320334262
+      },
+      "modeled_fh_mbit_delta_rhs_minus_lhs": {
+        "n": 9,
+        "median": -674.3152560000001,
+        "min": -873.505866,
+        "max": -245.29200600000013
+      },
+      "air_rb_sample_sum_delta_rhs_minus_lhs": {
+        "n": 9,
+        "median": -2991079.0,
+        "min": -3043383.0,
+        "max": -2864904.0
+      },
+      "fh_active_p95_mbps_delta_rhs_minus_lhs": {
+        "n": 9,
+        "median": 559.1039999999998,
+        "min": 551.8272000000015,
+        "max": 631.9247999999982
+      }
+    },
+    {
+      "profile": "T2",
+      "traffic": "AR_Video",
+      "lhs_method": "OptimizeMcs",
+      "rhs_method": "OptimizeRBs",
+      "paired_rng_runs": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "identical_generated_count_pairs": 9,
+      "violation_delta_pp_rhs_minus_lhs": {
+        "n": 9,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "modeled_fh_mbit_delta_rhs_minus_lhs": {
+        "n": 9,
+        "median": -674.3152560000001,
+        "min": -873.505866,
+        "max": -245.29200600000013
+      },
+      "air_rb_sample_sum_delta_rhs_minus_lhs": {
+        "n": 9,
+        "median": -2991079.0,
+        "min": -3043383.0,
+        "max": -2864904.0
+      },
+      "fh_active_p95_mbps_delta_rhs_minus_lhs": {
+        "n": 9,
+        "median": 559.1039999999998,
+        "min": 551.8272000000015,
+        "max": 631.9247999999982
+      }
+    },
+    {
+      "profile": "T2",
+      "traffic": "VR",
+      "lhs_method": "OptimizeMcs",
+      "rhs_method": "Postponing",
+      "paired_rng_runs": [
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "identical_generated_count_pairs": 9,
+      "violation_delta_pp_rhs_minus_lhs": {
+        "n": 9,
+        "median": 15.716272600834492,
+        "min": 11.0803324099723,
+        "max": 25.27777777777778
+      },
+      "modeled_fh_mbit_delta_rhs_minus_lhs": {
+        "n": 9,
+        "median": -711.3350099999998,
+        "min": -899.678772,
+        "max": -492.33054600000014
+      },
+      "air_rb_sample_sum_delta_rhs_minus_lhs": {
+        "n": 9,
+        "median": -3039844.0,
+        "min": -3058565.0,
+        "max": -2970094.0
+      },
+      "fh_active_p95_mbps_delta_rhs_minus_lhs": {
+        "n": 9,
+        "median": 249.60000000000014,
+        "min": 239.61599999999999,
+        "max": 312.43679999999836
+      }
+    },
+    {
+      "profile": "T2",
+      "traffic": "CG",
+      "lhs_method": "OptimizeMcs",
+      "rhs_method": "Postponing",
+      "paired_rng_runs": [
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "identical_generated_count_pairs": 9,
+      "violation_delta_pp_rhs_minus_lhs": {
+        "n": 9,
+        "median": 15.041782729805014,
+        "min": 10.614525139664805,
+        "max": 24.233983286908078
+      },
+      "modeled_fh_mbit_delta_rhs_minus_lhs": {
+        "n": 9,
+        "median": -711.3350099999998,
+        "min": -899.678772,
+        "max": -492.33054600000014
+      },
+      "air_rb_sample_sum_delta_rhs_minus_lhs": {
+        "n": 9,
+        "median": -3039844.0,
+        "min": -3058565.0,
+        "max": -2970094.0
+      },
+      "fh_active_p95_mbps_delta_rhs_minus_lhs": {
+        "n": 9,
+        "median": 249.60000000000014,
+        "min": 239.61599999999999,
+        "max": 312.43679999999836
+      }
+    },
+    {
+      "profile": "T2",
+      "traffic": "AR_Video",
+      "lhs_method": "OptimizeMcs",
+      "rhs_method": "Postponing",
+      "paired_rng_runs": [
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "identical_generated_count_pairs": 9,
+      "violation_delta_pp_rhs_minus_lhs": {
+        "n": 9,
+        "median": 5.524861878453039,
+        "min": 3.3333333333333335,
+        "max": 6.983240223463687
+      },
+      "modeled_fh_mbit_delta_rhs_minus_lhs": {
+        "n": 9,
+        "median": -711.3350099999998,
+        "min": -899.678772,
+        "max": -492.33054600000014
+      },
+      "air_rb_sample_sum_delta_rhs_minus_lhs": {
+        "n": 9,
+        "median": -3039844.0,
+        "min": -3058565.0,
+        "max": -2970094.0
+      },
+      "fh_active_p95_mbps_delta_rhs_minus_lhs": {
+        "n": 9,
+        "median": 249.60000000000014,
+        "min": 239.61599999999999,
+        "max": 312.43679999999836
+      }
+    },
+    {
+      "profile": "T2",
+      "traffic": "VR",
+      "lhs_method": "OptimizeRBs",
+      "rhs_method": "Postponing",
+      "paired_rng_runs": [
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "identical_generated_count_pairs": 8,
+      "violation_delta_pp_rhs_minus_lhs": {
+        "n": 8,
+        "median": 12.802726405443615,
+        "min": 7.103064066852367,
+        "max": 25.27777777777778
+      },
+      "modeled_fh_mbit_delta_rhs_minus_lhs": {
+        "n": 8,
+        "median": -79.2296429999999,
+        "min": -247.03854,
+        "max": -26.17290600000001
+      },
+      "air_rb_sample_sum_delta_rhs_minus_lhs": {
+        "n": 8,
+        "median": -41793.5,
+        "min": -105190.0,
+        "max": -11516.0
+      },
+      "fh_active_p95_mbps_delta_rhs_minus_lhs": {
+        "n": 8,
+        "median": -316.75199999999995,
+        "min": -319.48799999999983,
+        "max": -306.76800000000003
+      }
+    },
+    {
+      "profile": "T2",
+      "traffic": "CG",
+      "lhs_method": "OptimizeRBs",
+      "rhs_method": "Postponing",
+      "paired_rng_runs": [
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "identical_generated_count_pairs": 8,
+      "violation_delta_pp_rhs_minus_lhs": {
+        "n": 8,
+        "median": 15.075836419847562,
+        "min": 10.86350974930362,
+        "max": 23.955431754874652
+      },
+      "modeled_fh_mbit_delta_rhs_minus_lhs": {
+        "n": 8,
+        "median": -79.2296429999999,
+        "min": -247.03854,
+        "max": -26.17290600000001
+      },
+      "air_rb_sample_sum_delta_rhs_minus_lhs": {
+        "n": 8,
+        "median": -41793.5,
+        "min": -105190.0,
+        "max": -11516.0
+      },
+      "fh_active_p95_mbps_delta_rhs_minus_lhs": {
+        "n": 8,
+        "median": -316.75199999999995,
+        "min": -319.48799999999983,
+        "max": -306.76800000000003
+      }
+    },
+    {
+      "profile": "T2",
+      "traffic": "AR_Video",
+      "lhs_method": "OptimizeRBs",
+      "rhs_method": "Postponing",
+      "paired_rng_runs": [
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "identical_generated_count_pairs": 8,
+      "violation_delta_pp_rhs_minus_lhs": {
+        "n": 8,
+        "median": 5.671018196844248,
+        "min": 3.3333333333333335,
+        "max": 6.983240223463687
+      },
+      "modeled_fh_mbit_delta_rhs_minus_lhs": {
+        "n": 8,
+        "median": -79.2296429999999,
+        "min": -247.03854,
+        "max": -26.17290600000001
+      },
+      "air_rb_sample_sum_delta_rhs_minus_lhs": {
+        "n": 8,
+        "median": -41793.5,
+        "min": -105190.0,
+        "max": -11516.0
+      },
+      "fh_active_p95_mbps_delta_rhs_minus_lhs": {
+        "n": 8,
+        "median": -316.75199999999995,
+        "min": -319.48799999999983,
+        "max": -306.76800000000003
+      }
+    }
+  ],
+  "optimize_mcs_t1_ip_availability_proxy": [
+    {
+      "traffic": "AR_Audio",
+      "cohort": "LOW",
+      "zero_timely_bins_per_run": {
+        "n": 10,
+        "median": 0.0,
+        "min": 0,
+        "max": 0
+      },
+      "nonempty_bins_per_run": {
+        "n": 10,
+        "median": 10.0,
+        "min": 10,
+        "max": 10
+      },
+      "missed_deadline_pp": {
+        "n": 10,
+        "median": 12.6,
+        "min": 5.2,
+        "max": 24.666666666666668
+      }
+    },
+    {
+      "traffic": "AR_Audio",
+      "cohort": "RECOVERY-1",
+      "zero_timely_bins_per_run": {
+        "n": 10,
+        "median": 0.0,
+        "min": 0,
+        "max": 0
+      },
+      "nonempty_bins_per_run": {
+        "n": 10,
+        "median": 10.0,
+        "min": 10,
+        "max": 10
+      },
+      "missed_deadline_pp": {
+        "n": 10,
+        "median": 0.2,
+        "min": 0.0,
+        "max": 1.7333333333333334
+      }
+    },
+    {
+      "traffic": "AR_Pose",
+      "cohort": "LOW",
+      "zero_timely_bins_per_run": {
+        "n": 10,
+        "median": 0.0,
+        "min": 0,
+        "max": 0
+      },
+      "nonempty_bins_per_run": {
+        "n": 10,
+        "median": 10.0,
+        "min": 10,
+        "max": 10
+      },
+      "missed_deadline_pp": {
+        "n": 10,
+        "median": 12.399999999999999,
+        "min": 4.933333333333334,
+        "max": 24.666666666666668
+      }
+    },
+    {
+      "traffic": "AR_Pose",
+      "cohort": "RECOVERY-1",
+      "zero_timely_bins_per_run": {
+        "n": 10,
+        "median": 0.0,
+        "min": 0,
+        "max": 0
+      },
+      "nonempty_bins_per_run": {
+        "n": 10,
+        "median": 10.0,
+        "min": 10,
+        "max": 10
+      },
+      "missed_deadline_pp": {
+        "n": 10,
+        "median": 0.2,
+        "min": 0.0,
+        "max": 1.7333333333333334
+      }
+    },
+    {
+      "traffic": "AR_Video",
+      "cohort": "LOW",
+      "zero_timely_bins_per_run": {
+        "n": 10,
+        "median": 0.0,
+        "min": 0,
+        "max": 1
+      },
+      "nonempty_bins_per_run": {
+        "n": 10,
+        "median": 10.0,
+        "min": 10,
+        "max": 10
+      },
+      "missed_deadline_pp": {
+        "n": 10,
+        "median": 78.4398342853556,
+        "min": 47.77777777777778,
+        "max": 89.01098901098901
+      }
+    },
+    {
+      "traffic": "AR_Video",
+      "cohort": "RECOVERY-1",
+      "zero_timely_bins_per_run": {
+        "n": 10,
+        "median": 0.0,
+        "min": 0,
+        "max": 0
+      },
+      "nonempty_bins_per_run": {
+        "n": 10,
+        "median": 10.0,
+        "min": 10,
+        "max": 10
+      },
+      "missed_deadline_pp": {
+        "n": 10,
+        "median": 2.492326580724371,
+        "min": 0.0,
+        "max": 3.867403314917127
+      }
+    },
+    {
+      "traffic": "CG",
+      "cohort": "LOW",
+      "zero_timely_bins_per_run": {
+        "n": 10,
+        "median": 10.0,
+        "min": 10,
+        "max": 10
+      },
+      "nonempty_bins_per_run": {
+        "n": 10,
+        "median": 10.0,
+        "min": 10,
+        "max": 10
+      },
+      "missed_deadline_pp": {
+        "n": 10,
+        "median": 100.0,
+        "min": 100.0,
+        "max": 100.0
+      }
+    },
+    {
+      "traffic": "CG",
+      "cohort": "RECOVERY-1",
+      "zero_timely_bins_per_run": {
+        "n": 10,
+        "median": 2.5,
+        "min": 1,
+        "max": 4
+      },
+      "nonempty_bins_per_run": {
+        "n": 10,
+        "median": 10.0,
+        "min": 10,
+        "max": 10
+      },
+      "missed_deadline_pp": {
+        "n": 10,
+        "median": 31.111111111111114,
+        "min": 19.444444444444443,
+        "max": 46.666666666666664
+      }
+    },
+    {
+      "traffic": "VR",
+      "cohort": "LOW",
+      "zero_timely_bins_per_run": {
+        "n": 10,
+        "median": 9.5,
+        "min": 9,
+        "max": 10
+      },
+      "nonempty_bins_per_run": {
+        "n": 10,
+        "median": 10.0,
+        "min": 10,
+        "max": 10
+      },
+      "missed_deadline_pp": {
+        "n": 10,
+        "median": 99.86111111111111,
+        "min": 98.88268156424581,
+        "max": 100.0
+      }
+    },
+    {
+      "traffic": "VR",
+      "cohort": "RECOVERY-1",
+      "zero_timely_bins_per_run": {
+        "n": 10,
+        "median": 4.0,
+        "min": 2,
+        "max": 5
+      },
+      "nonempty_bins_per_run": {
+        "n": 10,
+        "median": 10.0,
+        "min": 10,
+        "max": 10
+      },
+      "missed_deadline_pp": {
+        "n": 10,
+        "median": 47.654210430453524,
+        "min": 36.312849162011176,
+        "max": 62.674094707520894
+      }
+    },
+    {
+      "traffic": "VoIP",
+      "cohort": "LOW",
+      "zero_timely_bins_per_run": {
+        "n": 10,
+        "median": 0.0,
+        "min": 0,
+        "max": 0
+      },
+      "nonempty_bins_per_run": {
+        "n": 10,
+        "median": 10.0,
+        "min": 8,
+        "max": 10
+      },
+      "missed_deadline_pp": {
+        "n": 10,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      }
+    },
+    {
+      "traffic": "VoIP",
+      "cohort": "RECOVERY-1",
+      "zero_timely_bins_per_run": {
+        "n": 10,
+        "median": 0.0,
+        "min": 0,
+        "max": 0
+      },
+      "nonempty_bins_per_run": {
+        "n": 10,
+        "median": 10.0,
+        "min": 8,
+        "max": 10
+      },
+      "missed_deadline_pp": {
+        "n": 10,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      }
+    }
+  ],
+  "observed_recovery": [
+    {
+      "profile": "T1",
+      "method": "OptimizeMcs",
+      "traffic": "VR",
+      "observed_rng_runs": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "status_counts": {
+        "OBSERVED": 10
+      },
+      "observed_recovery_time_s": {
+        "n": 10,
+        "median": 0.55,
+        "min": 0.4,
+        "max": 0.7
+      }
+    },
+    {
+      "profile": "T1",
+      "method": "OptimizeMcs",
+      "traffic": "CG",
+      "observed_rng_runs": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "status_counts": {
+        "OBSERVED": 10
+      },
+      "observed_recovery_time_s": {
+        "n": 10,
+        "median": 0.4,
+        "min": 0.3,
+        "max": 0.5
+      }
+    },
+    {
+      "profile": "T1",
+      "method": "OptimizeMcs",
+      "traffic": "AR_Video",
+      "observed_rng_runs": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "status_counts": {
+        "OBSERVED": 10
+      },
+      "observed_recovery_time_s": {
+        "n": 10,
+        "median": 0.1,
+        "min": 0.0,
+        "max": 0.4
+      }
+    },
+    {
+      "profile": "T2",
+      "method": "OptimizeMcs",
+      "traffic": "VR",
+      "observed_rng_runs": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "status_counts": {
+        "OBSERVED": 10
+      },
+      "observed_recovery_time_s": {
+        "n": 10,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      }
+    },
+    {
+      "profile": "T2",
+      "method": "OptimizeMcs",
+      "traffic": "CG",
+      "observed_rng_runs": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "status_counts": {
+        "OBSERVED": 10
+      },
+      "observed_recovery_time_s": {
+        "n": 10,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      }
+    },
+    {
+      "profile": "T2",
+      "method": "OptimizeMcs",
+      "traffic": "AR_Video",
+      "observed_rng_runs": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "status_counts": {
+        "OBSERVED": 10
+      },
+      "observed_recovery_time_s": {
+        "n": 10,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      }
+    },
+    {
+      "profile": "T1",
+      "method": "OptimizeRBs",
+      "traffic": "VR",
+      "observed_rng_runs": [
+        7,
+        8,
+        9,
+        10,
+        12,
+        14,
+        16
+      ],
+      "status_counts": {
+        "OBSERVED": 7
+      },
+      "observed_recovery_time_s": {
+        "n": 7,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      }
+    },
+    {
+      "profile": "T1",
+      "method": "OptimizeRBs",
+      "traffic": "CG",
+      "observed_rng_runs": [
+        7,
+        8,
+        9,
+        10,
+        12,
+        14,
+        16
+      ],
+      "status_counts": {
+        "OBSERVED": 7
+      },
+      "observed_recovery_time_s": {
+        "n": 7,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      }
+    },
+    {
+      "profile": "T1",
+      "method": "OptimizeRBs",
+      "traffic": "AR_Video",
+      "observed_rng_runs": [
+        7,
+        8,
+        9,
+        10,
+        12,
+        14,
+        16
+      ],
+      "status_counts": {
+        "OBSERVED": 7
+      },
+      "observed_recovery_time_s": {
+        "n": 7,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      }
+    },
+    {
+      "profile": "T2",
+      "method": "OptimizeRBs",
+      "traffic": "VR",
+      "observed_rng_runs": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "status_counts": {
+        "OBSERVED": 9
+      },
+      "observed_recovery_time_s": {
+        "n": 9,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      }
+    },
+    {
+      "profile": "T2",
+      "method": "OptimizeRBs",
+      "traffic": "CG",
+      "observed_rng_runs": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "status_counts": {
+        "OBSERVED": 9
+      },
+      "observed_recovery_time_s": {
+        "n": 9,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      }
+    },
+    {
+      "profile": "T2",
+      "method": "OptimizeRBs",
+      "traffic": "AR_Video",
+      "observed_rng_runs": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "status_counts": {
+        "OBSERVED": 9
+      },
+      "observed_recovery_time_s": {
+        "n": 9,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      }
+    }
+  ],
+  "archive_run_status_counts": {
+    "PASS": 125,
+    "EXECUTION_FAILURE": 5
+  },
+  "input_sha256": {
+    "TFH02_PRIMARY_RUN_LEVEL_RESULTS.csv": "1e14e6ee2bffcd1815ce81b1716142f38719b053c2e3b99fc2893ce0b7bd8af1",
+    "TFH02_RECOVERY_RUN_LEVEL_RESULTS.csv": "71417a7439312eb24e114c370c55c334ab298c9080f4302f39c5eecef2baab55",
+    "TFH02_RESOURCE_SHAPING_FINAL.csv": "a932f0bb8e1e7bc0b41ecb78138a53dee4b6806844e16c25e196f898ea1d14bd",
+    "TFH02_RUN_MANIFEST.csv": "f22d2f211215e360c7ef140957d8fe8a918154e1dd1d19460c275e92817273ff",
+    "TFH02_CAPACITY_PROFILES.csv": "4df5fad00a3680df132ff91a9ca5bf18ac34159f17570170ebfca9444abb7cee",
+    "TFH02_DEADLINE_RECOVERY_TIME.csv": "b7071e9ce3405a7fbf0f0aa502254b308eb9759e0eb59bd313097bd8cc2e892a",
+    "OPTIMIZE_MCS_DATAGRAMS.csv.gz": "e0b313bc190dcff6d0edc51ecf0ee83321ab623976ce780fb544ffb180b3820f"
+  }
+}

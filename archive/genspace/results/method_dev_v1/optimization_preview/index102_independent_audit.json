@@ -1,0 +1,24 @@
+{
+  "budget_matches": {
+    "100": true,
+    "1000": true,
+    "10000": true,
+    "500": true,
+    "5000": true
+  },
+  "history_equal": true,
+  "history_message_count": 9998,
+  "pass": true,
+  "record_sha256": {
+    "results\\method_dev_v1\\optimization_preview\\index102_final\\F1__low__high__sparse__d2__s2\\record.json": "702af294c9aec89d27e9c33b43b6549e65145b442320eba722b54f489d5da714",
+    "results\\method_dev_v1\\profile_index102\\F1__low__high__sparse__d2__s2\\record.json": "30b1f5a20547adc183e421c9a357eed7a48b3b0dd002111350866162b451c32c"
+  },
+  "scope": "one pre-existing PILOT fixture; excludes timing and interpreter implementation call count",
+  "verification_calls": {
+    "100": 100,
+    "1000": 1000,
+    "10000": 8391,
+    "500": 500,
+    "5000": 5000
+  }
+}

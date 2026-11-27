@@ -1,0 +1,64 @@
+{
+  "cases": [
+    {
+      "variant": "sender_check_only",
+      "scope": "controlled local request hold after sender deadline check",
+      "caddy_pid": 26176,
+      "sender_before_cutoff_ms": 249.1689,
+      "gateway_before_cutoff_ms": 248.3287,
+      "actuator_called": true,
+      "actuator_http_status": 200,
+      "final_readback": {
+        "backend": "A",
+        "sha256": "dd13e1d063ed2a5e9c4551ccfd6949e0fe68ecf6684c1a6b9f338c0e0917798b",
+        "bytes": 149781,
+        "observed_ns": 100761656231200
+      },
+      "final_readback_after_cutoff_ms": 85.4512,
+      "deadline_ns": 100761570780000,
+      "sender_request_ns": 100761321611100,
+      "delivery_trace": {
+        "gateway_received_ns": 100761322451300,
+        "gateway_outcome": {
+          "status": 200,
+          "sent_ns": 100761596261600,
+          "reply_ns": 100761624972400,
+          "response_body": "",
+          "request_if_match": "\"/config/apps/http/servers/dev04/routes/0/handle/0/upstreams/0 60ea4ee00275e6d6\""
+        }
+      }
+    },
+    {
+      "variant": "actuator_gate",
+      "scope": "controlled local request hold after sender deadline check",
+      "caddy_pid": 12252,
+      "sender_before_cutoff_ms": 248.7837,
+      "gateway_before_cutoff_ms": 247.7339,
+      "actuator_called": false,
+      "actuator_http_status": null,
+      "final_readback": {
+        "backend": "initial",
+        "sha256": "e22988f18b19110bd677066bbcfdf45bd7970a5fd9be56b5e9be4edcedf744d9",
+        "bytes": 154810,
+        "observed_ns": 100762531560700
+      },
+      "final_readback_after_cutoff_ms": 40.8906,
+      "deadline_ns": 100762490670100,
+      "sender_request_ns": 100762241886400,
+      "delivery_trace": {
+        "gateway_received_ns": 100762242936200,
+        "gateway_outcome": {
+          "status": null,
+          "received_late_and_rejected": true,
+          "decision_ns": 100762516105400
+        }
+      }
+    }
+  ],
+  "reference": {
+    "initial": "e22988f18b19110bd677066bbcfdf45bd7970a5fd9be56b5e9be4edcedf744d9",
+    "A": "dd13e1d063ed2a5e9c4551ccfd6949e0fe68ecf6684c1a6b9f338c0e0917798b"
+  },
+  "harness_sha256": "a728884086abe17d40c5e3214c9f34b9d68246d5ed58905fb03edda88bcdcac7",
+  "caddy_sha256": "2622e239c79df700b0eb92cbd950d1edee365e155a7859f358f0e55f002df591"
+}

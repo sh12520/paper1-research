@@ -1,0 +1,11 @@
+{
+  "confirm_allowed": false,
+  "frozen_config_exists": false,
+  "historical_artifacts_changed": 0,
+  "historical_artifacts_checked": 8758,
+  "instances_count": 1920,
+  "no_new_random_instances": true,
+  "pilot_manifest_sha256": "d19271de711004b512a446abfc36c83c527d9c7ed656eb14174147a6416a6654",
+  "python": "3.12.14",
+  "snapshot_sha256": "18c3ef2eda454dd91a607eaecdd7501f5f82624f907d09bd6939cc77dd6bec0f"
+}

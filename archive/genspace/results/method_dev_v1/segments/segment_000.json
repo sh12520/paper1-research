@@ -1,0 +1,16 @@
+{
+  "end": 1795004659.1902754,
+  "launcher_sha256": "c4906ee282391aeb4d804224f4ee2a5a4f69a5ed0e668cc1b2d1f963a78fe351",
+  "log": "results\\method_dev_v1\\segments\\segment_000.log",
+  "minimum_available": 2564956160,
+  "peak_worker_working_set": 645271552,
+  "prelaunch_available": [
+    4991778816,
+    5021786112,
+    5009539072
+  ],
+  "returncode": 4294967295,
+  "snapshot_sha256": "18c3ef2eda454dd91a607eaecdd7501f5f82624f907d09bd6939cc77dd6bec0f",
+  "start": 1795003494.348041,
+  "status": "ERROR"
+}

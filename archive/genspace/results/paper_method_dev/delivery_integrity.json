@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "attempts": 1248,
+  "checkpoint_counts": {
+    "EXACT_TOPK_FULL_LENGTH": 4206,
+    "EXACT_DOMAIN_EXHAUSTED_SHORT": 384,
+    "NOT_CERTIFIED_WITHIN_BUDGET": 210
+  },
+  "protected_files_unchanged": 232,
+  "no_frozen_config": true,
+  "legacy_confirm_closed": true,
+  "candidate_version_and_report_hashes": {
+    "PAPER_GENERIC_BASELINE_SPEC.md": "e7f999922b1a76fbcac5c915ce1a5382e1d1029eb248bc68ab2c2877679dacf2",
+    "PAPER_BASELINE_CORRECTNESS_REPORT.md": "e25ad8b1908c0a01bf9cf8fa4c1933c1c7fea5ecdea247ff8088e2a9b50506d0",
+    "PAPER_ABLATION_SPEC.md": "4a6885ea5d00ff37e5efaac44438ce072f2dc52f2e8c38246581a52da60b16c8",
+    "PAPER_ABLATION_CORRECTNESS.md": "7bd10656e20e32d3f078fdf69a642b115d0a9389a769d1e0d2f48aba063fe960",
+    "PAPER_DEVELOPMENT_COMPARISON.md": "5bb03870ee5400adc46ca2786a5d55b203cf8edee042285fdd375c2e2dc14b55",
+    "PAPER_COST_FAIRNESS_AUDIT.md": "ea085f979946fc8be28d8853beeb9d0ec6e314952874d3cd923f44a763153e68",
+    "PAPER_METHOD_FREEZE_RECOMMENDATION.md": "af7ad5667a547aa8fec3dd3460a1c4b6bdbafcac7559b770669d15f68ab63af1",
+    "METHOD_CONFIRMATION_PREREGISTRATION_DRAFT.md": "f515e5091159808cb0328bbd2804276bfd73c722be05f322695fa20bfc37afca",
+    "results/paper_method_dev/per_query.csv": "dcdc262a13de1152133d8fe4bcd796333f91343e769cc4e226d1c0928874ab72",
+    "results/paper_method_dev/comparison_summary.csv": "f833b2ee95eaa8c993440d0cc309b402b81a4b48aa7c90498b8de8f4bec002a0",
+    "results/paper_method_dev/ablation_summary.csv": "b8714eb65418af30e9078685ec16a047374945fddd80e2ed486056a7688aac1b",
+    "results/paper_method_dev/development_decision.json": "abb081f2966afbf46d12554b8cc5a8513f7761b1fca85e184d5be87eb2dc0e09",
+    "results/paper_method_dev/development_plan.json": "966d8c40a07eee54e6d88ae13296b77b63142a7e5e91eb97d3993d03faf00cb6",
+    "results/paper_method_dev/cold_start_costs.json": "e3c5d9e3e593f2f67b245476341b3b740bc5dc5ffa543a432e6707bd8597c2f8",
+    "results/paper_method_dev/reduced_correctness.json": "ed1582e0280484d833dcba8ea2dd6ff41b28fd4c39d908947605d599d5c62fd2",
+    "results/paper_method_dev/generic_bound_checks.json": "c0115d25967399b0443375dca836da505d0b582bb8dbd476cdba6b4b9d86bd8a",
+    "results/paper_method_dev/figures/paired_latency.png": "8f88b97407d4334aa51a1e3b068f91ec2020f6e67dc73c3229ad37fe85e2adb1",
+    "results/paper_method_dev/figures/ablation_work_coverage.png": "ce199e9339a0bbf5e026869217bbcd46966f9372377f4b6a59df598945c9e032"
+  }
+}

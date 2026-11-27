@@ -1,0 +1,8 @@
+{
+  "all_main_results_same_snapshot": true,
+  "all_segments_same_snapshot": true,
+  "final_verifier": "PASS",
+  "note": "Live verifier is called by the common engine; this record audits logged pre/post checks and segment bindings, not unsampled instants.",
+  "snapshot_sha256": "18c3ef2eda454dd91a607eaecdd7501f5f82624f907d09bd6939cc77dd6bec0f",
+  "state_snapshot_sha256": "18c3ef2eda454dd91a607eaecdd7501f5f82624f907d09bd6939cc77dd6bec0f"
+}

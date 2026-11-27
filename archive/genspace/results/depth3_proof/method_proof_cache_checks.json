@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "fixtures": [
+    {
+      "status": "PASS",
+      "fixture": "F4__medium__high__sparse__d2__s0",
+      "genesis_proof_sha256": "ad581f6f076251a841eeaffc51182400de47a1c859b481257ee81a2cbb2cb6c8",
+      "returned": 81,
+      "exhausted": true,
+      "same_process_reuse": true,
+      "bounded_fresh_recheck": true,
+      "stale_snapshot_rejected": true,
+      "tampered_compressed_file_rejected": true,
+      "job_emit_final_active": 0,
+      "job_check_final_active": 0,
+      "production_authorization": {
+        "CONFIRM": false,
+        "METHOD_HOLDOUT": false
+      }
+    },
+    {
+      "status": "PASS",
+      "fixture": "F2__medium__high__rich__d2__s0",
+      "genesis_proof_sha256": "7b71473b7e3cf0df133ad9540655e7c399e11141ca5368f90c121ffbca786a87",
+      "returned": 500,
+      "exhausted": false,
+      "same_process_reuse": true,
+      "bounded_fresh_recheck": true,
+      "stale_snapshot_rejected": true,
+      "tampered_compressed_file_rejected": true,
+      "job_emit_final_active": 0,
+      "job_check_final_active": 0,
+      "production_authorization": {
+        "CONFIRM": false,
+        "METHOD_HOLDOUT": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+condition,method,task,released,edge_on_time,local_on_time,late,median_ms
+clean,C2_AUTH_QUERY,first,3,2,1,0,350.297
+clean,C2_AUTH_QUERY,next,3,0,3,0,567.131
+clean,DIRECT_LEASE,first,3,3,0,0,133.132
+clean,DIRECT_LEASE,next,3,3,0,0,116.44
+first_proof_blackout,C2_AUTH_QUERY,first,3,0,3,0,570.888
+first_proof_blackout,C2_AUTH_QUERY,next,3,0,3,0,567.423
+first_proof_blackout,DIRECT_LEASE,first,3,0,3,0,576.381
+first_proof_blackout,DIRECT_LEASE,next,3,3,0,0,176.079

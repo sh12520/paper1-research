@@ -1,0 +1,186 @@
+{
+  "model_draft": {
+    "horizon": 3,
+    "states": [
+      "still",
+      "moving"
+    ],
+    "scalar_domains": {
+      "m0": {
+        "quality": [
+          0.8
+        ],
+        "deadline": [
+          1.0
+        ],
+        "rate": [
+          1.0
+        ]
+      },
+      "mr": {
+        "quality": [
+          0.4,
+          0.8
+        ],
+        "deadline": [
+          1.0,
+          2.0
+        ],
+        "rate": [
+          0.5,
+          1.0
+        ]
+      },
+      "b2": {
+        "quality": [
+          0.4,
+          0.6,
+          0.8
+        ],
+        "deadline": [
+          1.0,
+          1.5,
+          2.0
+        ],
+        "rate": [
+          0.5,
+          0.75,
+          1.0
+        ]
+      }
+    },
+    "conditions": [
+      "moving"
+    ],
+    "durations": [
+      1
+    ],
+    "offsets": [
+      1
+    ],
+    "intervals": [
+      [
+        0,
+        2
+      ]
+    ],
+    "offload_levels": [
+      "edge"
+    ],
+    "pressure_ran_baseline": {
+      "low": 0.92,
+      "medium": 0.72,
+      "high": 0.52
+    },
+    "pressure_uniform_jitter": [
+      -0.04,
+      0.04
+    ],
+    "family_ran_multiplier": {
+      "F1_moving": 0.68,
+      "F2_time0": 0.35,
+      "F3_time0": 0.65,
+      "F4_all": 0.72
+    },
+    "fh_capacity_intercept": 0.75,
+    "fh_capacity_slope": 0.1,
+    "edge_capacity_intercept": 0.8,
+    "edge_capacity_slope": 0.1,
+    "demand": {
+      "fh_rate_factor": 0.4,
+      "offload_ran_factor": 0.5,
+      "offload_fh_factor": 0.7,
+      "offload_edge_factor": 0.5
+    },
+    "application_weight_ranges": {
+      "quality": [
+        0.5,
+        0.8
+      ],
+      "latency": [
+        0.1,
+        0.3
+      ],
+      "start_delay": [
+        0.05,
+        0.2
+      ],
+      "switching": [
+        0.02,
+        0.12
+      ]
+    },
+    "network_weight_ranges": {
+      "ran": [
+        0.2,
+        0.4
+      ],
+      "fh": [
+        0.1,
+        0.3
+      ],
+      "edge": [
+        0.1,
+        0.3
+      ],
+      "policy_complexity": [
+        0.03,
+        0.12
+      ],
+      "switching": [
+        0.03,
+        0.12
+      ]
+    },
+    "application_reservation": {
+      "medium": [
+        0.5,
+        0.62
+      ],
+      "high": [
+        0.62,
+        0.74
+      ]
+    },
+    "network_reservation": {
+      "medium": [
+        0.38,
+        0.5
+      ],
+      "high": [
+        0.5,
+        0.62
+      ]
+    },
+    "sparse_structural_group_drop_probability": 0.5,
+    "public_hard_constraints": {
+      "min_active_slots": 1,
+      "min_quality": 0.0,
+      "max_deadline": 2.0,
+      "reservation_supported": true
+    }
+  },
+  "capability_cost_accounting": {
+    "resource_cost_per_active_cell": {
+      "enable_edge_offload": {
+        "EDGE": 0.1
+      }
+    },
+    "execution_cost_per_active_cell": {
+      "observe_motion_state": 0.01,
+      "set_quality": 0.01,
+      "select_latency_profile": 0.01,
+      "set_rate": 0.01,
+      "schedule_start": 0.01,
+      "set_validity_interval": 0.01,
+      "apply_conditional_policy": 0.02,
+      "apply_phased_policy": 0.02,
+      "enable_edge_offload": 0.02,
+      "reserve_ran_resource": 0.01,
+      "reserve_fh_resource": 0.01,
+      "reserve_edge_compute": 0.01
+    },
+    "accounting_rule": "active_path_distinct_roles_per_active_cell_setup_zero",
+    "setup_cost": 0
+  }
+}

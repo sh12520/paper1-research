@@ -1,0 +1,1039 @@
+{
+  "kind": "HISTORICAL_LOG_RECOMPUTATION_NOT_NEW_RUN",
+  "fixtures": 105,
+  "winnerPaths": 218,
+  "missing": [],
+  "C_overrun_paths": 170,
+  "C_overrun_fixtures": 73,
+  "all": {
+    "n": 218,
+    "C_ms": {
+      "n": 218,
+      "median": 181.76335,
+      "mean": 199.90445642201834,
+      "min": 67.4029,
+      "max": 860.7712
+    },
+    "due_to_send_ms": {
+      "n": 218,
+      "median": 29.69435,
+      "mean": 54.98929495412844,
+      "min": 3.5474,
+      "max": 530.3171
+    },
+    "send_to_receive_ms": {
+      "n": 218,
+      "median": 97.01505,
+      "mean": 111.50527247706422,
+      "min": 37.3737,
+      "max": 337.5141
+    },
+    "receive_to_verify_record_ms": {
+      "n": 218,
+      "median": 9.25715,
+      "mean": 10.668013302752293,
+      "min": 6.2438,
+      "max": 35.239
+    },
+    "verify_record_to_upper_ms": {
+      "n": 218,
+      "median": 13.2674,
+      "mean": 22.741875688073396,
+      "min": 1.0192,
+      "max": 205.9468
+    },
+    "upper_to_persist_record_ms": {
+      "n": 218,
+      "median": 13.90535,
+      "mean": 17.54340412844037,
+      "min": 5.7746,
+      "max": 217.7336
+    }
+  },
+  "clean": {
+    "n": 101,
+    "C_ms": {
+      "n": 101,
+      "median": 201.2222,
+      "mean": 215.7360277227723,
+      "min": 67.4029,
+      "max": 860.7712
+    },
+    "due_to_send_ms": {
+      "n": 101,
+      "median": 25.4325,
+      "mean": 54.607670297029706,
+      "min": 3.8961,
+      "max": 530.3171
+    },
+    "send_to_receive_ms": {
+      "n": 101,
+      "median": 104.767,
+      "mean": 120.74613366336634,
+      "min": 37.3737,
+      "max": 337.5141
+    },
+    "receive_to_verify_record_ms": {
+      "n": 101,
+      "median": 8.8691,
+      "mean": 10.002431683168316,
+      "min": 6.2438,
+      "max": 35.239
+    },
+    "verify_record_to_upper_ms": {
+      "n": 101,
+      "median": 18.5665,
+      "mean": 30.37979207920792,
+      "min": 1.1493,
+      "max": 182.6457
+    },
+    "upper_to_persist_record_ms": {
+      "n": 101,
+      "median": 16.4045,
+      "mean": 20.532370297029704,
+      "min": 5.7746,
+      "max": 217.7336
+    }
+  },
+  "clean_by_mode": {
+    "B2": {
+      "n": 24,
+      "C_ms": {
+        "n": 24,
+        "median": 215.051,
+        "mean": 251.17354583333332,
+        "min": 89.421,
+        "max": 860.7712
+      },
+      "due_to_send_ms": {
+        "n": 24,
+        "median": 35.346500000000006,
+        "mean": 78.42455416666667,
+        "min": 16.9379,
+        "max": 530.3171
+      },
+      "send_to_receive_ms": {
+        "n": 24,
+        "median": 103.36675,
+        "mean": 130.02772083333332,
+        "min": 52.114,
+        "max": 309.8729
+      },
+      "receive_to_verify_record_ms": {
+        "n": 24,
+        "median": 8.551449999999999,
+        "mean": 9.185041666666667,
+        "min": 6.2438,
+        "max": 14.9559
+      },
+      "verify_record_to_upper_ms": {
+        "n": 24,
+        "median": 14.7265,
+        "mean": 33.536229166666665,
+        "min": 1.896,
+        "max": 182.6457
+      },
+      "upper_to_persist_record_ms": {
+        "n": 24,
+        "median": 13.10645,
+        "mean": 24.1785,
+        "min": 5.7746,
+        "max": 217.7336
+      }
+    },
+    "B3": {
+      "n": 33,
+      "C_ms": {
+        "n": 33,
+        "median": 156.6169,
+        "mean": 177.9722909090909,
+        "min": 67.4029,
+        "max": 376.5231
+      },
+      "due_to_send_ms": {
+        "n": 33,
+        "median": 19.865,
+        "mean": 28.17539696969697,
+        "min": 5.5917,
+        "max": 193.5708
+      },
+      "send_to_receive_ms": {
+        "n": 33,
+        "median": 104.6971,
+        "mean": 115.07954848484849,
+        "min": 37.3737,
+        "max": 289.2646
+      },
+      "receive_to_verify_record_ms": {
+        "n": 33,
+        "median": 9.3193,
+        "mean": 9.936812121212121,
+        "min": 6.4642,
+        "max": 17.3627
+      },
+      "verify_record_to_upper_ms": {
+        "n": 33,
+        "median": 15.484,
+        "mean": 24.780533333333334,
+        "min": 1.1519,
+        "max": 117.2991
+      },
+      "upper_to_persist_record_ms": {
+        "n": 33,
+        "median": 17.9876,
+        "mean": 18.651545454545456,
+        "min": 7.4356,
+        "max": 35.6744
+      }
+    },
+    "B4": {
+      "n": 44,
+      "C_ms": {
+        "n": 44,
+        "median": 205.4758,
+        "mean": 224.729275,
+        "min": 85.5655,
+        "max": 547.9488
+      },
+      "due_to_send_ms": {
+        "n": 44,
+        "median": 27.57845,
+        "mean": 61.440847727272725,
+        "min": 3.8961,
+        "max": 385.9415
+      },
+      "send_to_receive_ms": {
+        "n": 44,
+        "median": 108.58080000000001,
+        "mean": 119.93338863636363,
+        "min": 38.1069,
+        "max": 337.5141
+      },
+      "receive_to_verify_record_ms": {
+        "n": 44,
+        "median": 8.5593,
+        "mean": 10.497495454545454,
+        "min": 6.8745,
+        "max": 35.239
+      },
+      "verify_record_to_upper_ms": {
+        "n": 44,
+        "median": 26.4003,
+        "mean": 32.85754318181818,
+        "min": 1.1493,
+        "max": 120.719
+      },
+      "upper_to_persist_record_ms": {
+        "n": 44,
+        "median": 16.3267,
+        "mean": 19.954190909090908,
+        "min": 7.6553,
+        "max": 77.0259
+      }
+    }
+  },
+  "tail_n": 79,
+  "tail_overruns": [
+    {
+      "fixture": "cases/003-clean-1-B4",
+      "case": "clean",
+      "mode": "B4",
+      "seed": 1,
+      "tail_ms": 68.936,
+      "bound_ms": 50.0,
+      "overrun": true,
+      "durable_before_lease": true,
+      "remaining_lease_ms": 9146.6998,
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\003-clean-1-B4\\server.events.jsonl",
+      "check_line": 37,
+      "return_line": 42
+    },
+    {
+      "fixture": "cases/018-clean-6-B2",
+      "case": "clean",
+      "mode": "B2",
+      "seed": 6,
+      "tail_ms": 52.6151,
+      "bound_ms": 50.0,
+      "overrun": true,
+      "durable_before_lease": true,
+      "remaining_lease_ms": 9487.6454,
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\018-clean-6-B2\\server.events.jsonl",
+      "check_line": 25,
+      "return_line": 28
+    },
+    {
+      "fixture": "cases/051-late_response-1-B2",
+      "case": "late_response",
+      "mode": "B2",
+      "seed": 1,
+      "tail_ms": 68.2422,
+      "bound_ms": 50.0,
+      "overrun": true,
+      "durable_before_lease": true,
+      "remaining_lease_ms": 9437.5203,
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\051-late_response-1-B2\\server.events.jsonl",
+      "check_line": 21,
+      "return_line": 22
+    },
+    {
+      "fixture": "cases/090-tail_overrun-0-B3",
+      "case": "tail_overrun",
+      "mode": "B3",
+      "seed": 0,
+      "tail_ms": 75.3747,
+      "bound_ms": 50.0,
+      "overrun": true,
+      "durable_before_lease": true,
+      "remaining_lease_ms": 9818.8827,
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\090-tail_overrun-0-B3\\server.events.jsonl",
+      "check_line": 13,
+      "return_line": 18
+    },
+    {
+      "fixture": "cases/091-tail_overrun-0-B2",
+      "case": "tail_overrun",
+      "mode": "B2",
+      "seed": 0,
+      "tail_ms": 81.694,
+      "bound_ms": 50.0,
+      "overrun": true,
+      "durable_before_lease": true,
+      "remaining_lease_ms": 9804.2484,
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\091-tail_overrun-0-B2\\server.events.jsonl",
+      "check_line": 13,
+      "return_line": 18
+    },
+    {
+      "fixture": "cases/092-tail_overrun-0-B4",
+      "case": "tail_overrun",
+      "mode": "B4",
+      "seed": 0,
+      "tail_ms": 74.3407,
+      "bound_ms": 50.0,
+      "overrun": true,
+      "durable_before_lease": true,
+      "remaining_lease_ms": 9659.494,
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\092-tail_overrun-0-B4\\server.events.jsonl",
+      "check_line": 25,
+      "return_line": 30
+    }
+  ],
+  "clean_transition_overruns": [
+    {
+      "fixture": "cases/000-clean-0-B2",
+      "case": "clean",
+      "mode": "B2",
+      "phase": "INTENT_INITIAL",
+      "kind": "transition_to_next_origin",
+      "ms": 320.5477,
+      "declared_ms": 20,
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\000-clean-0-B2\\client.events.jsonl",
+      "line": 12
+    },
+    {
+      "fixture": "cases/001-clean-0-B4",
+      "case": "clean",
+      "mode": "B4",
+      "phase": "INTENT_REPLAY",
+      "kind": "transition_to_next_origin",
+      "ms": 50.1361,
+      "declared_ms": 20,
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\001-clean-0-B4\\client.events.jsonl",
+      "line": 33
+    },
+    {
+      "fixture": "cases/001-clean-0-B4",
+      "case": "clean",
+      "mode": "B4",
+      "phase": "COMMIT_INITIAL",
+      "kind": "transition_to_next_origin",
+      "ms": 46.712,
+      "declared_ms": 20,
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\001-clean-0-B4\\client.events.jsonl",
+      "line": 56
+    },
+    {
+      "fixture": "cases/002-clean-0-B3",
+      "case": "clean",
+      "mode": "B3",
+      "phase": "INTENT_INITIAL",
+      "kind": "transition_to_next_origin",
+      "ms": 45.5247,
+      "declared_ms": 20,
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\002-clean-0-B3\\client.events.jsonl",
+      "line": 10
+    },
+    {
+      "fixture": "cases/003-clean-1-B4",
+      "case": "clean",
+      "mode": "B4",
+      "phase": "INTENT_INITIAL",
+      "kind": "transition_to_next_origin",
+      "ms": 33.2717,
+      "declared_ms": 20,
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\003-clean-1-B4\\client.events.jsonl",
+      "line": 12
+    },
+    {
+      "fixture": "cases/003-clean-1-B4",
+      "case": "clean",
+      "mode": "B4",
+      "phase": "INTENT_REPLAY",
+      "kind": "transition_to_next_origin",
+      "ms": 53.9568,
+      "declared_ms": 20,
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\003-clean-1-B4\\client.events.jsonl",
+      "line": 33
+    },
+    {
+      "fixture": "cases/005-clean-1-B2",
+      "case": "clean",
+      "mode": "B2",
+      "phase": "INTENT_INITIAL",
+      "kind": "transition_to_next_origin",
+      "ms": 97.3584,
+      "declared_ms": 20,
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\005-clean-1-B2\\client.events.jsonl",
+      "line": 13
+    },
+    {
+      "fixture": "cases/006-clean-2-B4",
+      "case": "clean",
+      "mode": "B4",
+      "phase": "INTENT_INITIAL",
+      "kind": "transition_to_next_origin",
+      "ms": 80.2934,
+      "declared_ms": 20,
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\006-clean-2-B4\\client.events.jsonl",
+      "line": 10
+    },
+    {
+      "fixture": "cases/006-clean-2-B4",
+      "case": "clean",
+      "mode": "B4",
+      "phase": "INTENT_REPLAY",
+      "kind": "transition_to_next_origin",
+      "ms": 43.3534,
+      "declared_ms": 20,
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\006-clean-2-B4\\client.events.jsonl",
+      "line": 25
+    },
+    {
+      "fixture": "cases/006-clean-2-B4",
+      "case": "clean",
+      "mode": "B4",
+      "phase": "COMMIT_INITIAL",
+      "kind": "transition_to_next_origin",
+      "ms": 61.0922,
+      "declared_ms": 20,
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\006-clean-2-B4\\client.events.jsonl",
+      "line": 49
+    },
+    {
+      "fixture": "cases/007-clean-2-B3",
+      "case": "clean",
+      "mode": "B3",
+      "phase": "INTENT_INITIAL",
+      "kind": "transition_to_next_origin",
+      "ms": 56.0371,
+      "declared_ms": 20,
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\007-clean-2-B3\\client.events.jsonl",
+      "line": 11
+    },
+    {
+      "fixture": "cases/007-clean-2-B3",
+      "case": "clean",
+      "mode": "B3",
+      "phase": "COMMIT_INITIAL",
+      "kind": "transition_to_next_origin",
+      "ms": 23.9357,
+      "declared_ms": 20,
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\007-clean-2-B3\\client.events.jsonl",
+      "line": 26
+    },
+    {
+      "fixture": "cases/008-clean-2-B2",
+      "case": "clean",
+      "mode": "B2",
+      "phase": "INTENT_INITIAL",
+      "kind": "transition_to_next_origin",
+      "ms": 58.4993,
+      "declared_ms": 20,
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\008-clean-2-B2\\client.events.jsonl",
+      "line": 12
+    },
+    {
+      "fixture": "cases/009-clean-3-B4",
+      "case": "clean",
+      "mode": "B4",
+      "phase": "INTENT_REPLAY",
+      "kind": "transition_to_next_origin",
+      "ms": 60.8572,
+      "declared_ms": 20,
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\009-clean-3-B4\\client.events.jsonl",
+      "line": 34
+    },
+    {
+      "fixture": "cases/009-clean-3-B4",
+      "case": "clean",
+      "mode": "B4",
+      "phase": "COMMIT_INITIAL",
+      "kind": "transition_to_next_origin",
+      "ms": 20.7504,
+      "declared_ms": 20,
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\009-clean-3-B4\\client.events.jsonl",
+      "line": 54
+    },
+    {
+      "fixture": "cases/010-clean-3-B3",
+      "case": "clean",
+      "mode": "B3",
+      "phase": "INTENT_INITIAL",
+      "kind": "transition_to_next_origin",
+      "ms": 42.6402,
+      "declared_ms": 20,
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\010-clean-3-B3\\client.events.jsonl",
+      "line": 13
+    },
+    {
+      "fixture": "cases/010-clean-3-B3",
+      "case": "clean",
+      "mode": "B3",
+      "phase": "COMMIT_INITIAL",
+      "kind": "transition_to_next_origin",
+      "ms": 66.9017,
+      "declared_ms": 20,
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\010-clean-3-B3\\client.events.jsonl",
+      "line": 34
+    },
+    {
+      "fixture": "cases/011-clean-3-B2",
+      "case": "clean",
+      "mode": "B2",
+      "phase": "INTENT_INITIAL",
+      "kind": "transition_to_next_origin",
+      "ms": 30.2645,
+      "declared_ms": 20,
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\011-clean-3-B2\\client.events.jsonl",
+      "line": 11
+    },
+    {
+      "fixture": "cases/012-clean-4-B4",
+      "case": "clean",
+      "mode": "B4",
+      "phase": "INTENT_INITIAL",
+      "kind": "transition_to_next_origin",
+      "ms": 28.8026,
+      "declared_ms": 20,
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\012-clean-4-B4\\client.events.jsonl",
+      "line": 12
+    },
+    {
+      "fixture": "cases/012-clean-4-B4",
+      "case": "clean",
+      "mode": "B4",
+      "phase": "INTENT_REPLAY",
+      "kind": "transition_to_next_origin",
+      "ms": 38.1455,
+      "declared_ms": 20,
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\012-clean-4-B4\\client.events.jsonl",
+      "line": 34
+    },
+    {
+      "fixture": "cases/012-clean-4-B4",
+      "case": "clean",
+      "mode": "B4",
+      "phase": "COMMIT_INITIAL",
+      "kind": "transition_to_next_origin",
+      "ms": 32.7197,
+      "declared_ms": 20,
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\012-clean-4-B4\\client.events.jsonl",
+      "line": 57
+    },
+    {
+      "fixture": "cases/013-clean-4-B3",
+      "case": "clean",
+      "mode": "B3",
+      "phase": "INTENT_INITIAL",
+      "kind": "transition_to_next_origin",
+      "ms": 40.3154,
+      "declared_ms": 20,
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\013-clean-4-B3\\client.events.jsonl",
+      "line": 11
+    },
+    {
+      "fixture": "cases/013-clean-4-B3",
+      "case": "clean",
+      "mode": "B3",
+      "phase": "COMMIT_INITIAL",
+      "kind": "transition_to_next_origin",
+      "ms": 49.9525,
+      "declared_ms": 20,
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\013-clean-4-B3\\client.events.jsonl",
+      "line": 27
+    },
+    {
+      "fixture": "cases/014-clean-4-B2",
+      "case": "clean",
+      "mode": "B2",
+      "phase": "INTENT_INITIAL",
+      "kind": "transition_to_next_origin",
+      "ms": 31.4723,
+      "declared_ms": 20,
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\014-clean-4-B2\\client.events.jsonl",
+      "line": 10
+    },
+    {
+      "fixture": "cases/015-clean-5-B4",
+      "case": "clean",
+      "mode": "B4",
+      "phase": "INTENT_INITIAL",
+      "kind": "transition_to_next_origin",
+      "ms": 27.7431,
+      "declared_ms": 20,
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\015-clean-5-B4\\client.events.jsonl",
+      "line": 12
+    },
+    {
+      "fixture": "cases/015-clean-5-B4",
+      "case": "clean",
+      "mode": "B4",
+      "phase": "INTENT_REPLAY",
+      "kind": "transition_to_next_origin",
+      "ms": 29.2249,
+      "declared_ms": 20,
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\015-clean-5-B4\\client.events.jsonl",
+      "line": 32
+    },
+    {
+      "fixture": "cases/015-clean-5-B4",
+      "case": "clean",
+      "mode": "B4",
+      "phase": "COMMIT_INITIAL",
+      "kind": "transition_to_next_origin",
+      "ms": 27.5478,
+      "declared_ms": 20,
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\015-clean-5-B4\\client.events.jsonl",
+      "line": 48
+    },
+    {
+      "fixture": "cases/016-clean-5-B3",
+      "case": "clean",
+      "mode": "B3",
+      "phase": "INTENT_INITIAL",
+      "kind": "transition_to_next_origin",
+      "ms": 23.4874,
+      "declared_ms": 20,
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\016-clean-5-B3\\client.events.jsonl",
+      "line": 9
+    },
+    {
+      "fixture": "cases/016-clean-5-B3",
+      "case": "clean",
+      "mode": "B3",
+      "phase": "COMMIT_INITIAL",
+      "kind": "transition_to_next_origin",
+      "ms": 37.3293,
+      "declared_ms": 20,
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\016-clean-5-B3\\client.events.jsonl",
+      "line": 23
+    },
+    {
+      "fixture": "cases/017-clean-5-B2",
+      "case": "clean",
+      "mode": "B2",
+      "phase": "INTENT_INITIAL",
+      "kind": "transition_to_next_origin",
+      "ms": 22.9804,
+      "declared_ms": 20,
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\017-clean-5-B2\\client.events.jsonl",
+      "line": 12
+    },
+    {
+      "fixture": "cases/018-clean-6-B2",
+      "case": "clean",
+      "mode": "B2",
+      "phase": "INTENT_INITIAL",
+      "kind": "transition_to_next_origin",
+      "ms": 32.5253,
+      "declared_ms": 20,
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\018-clean-6-B2\\client.events.jsonl",
+      "line": 14
+    },
+    {
+      "fixture": "cases/019-clean-6-B4",
+      "case": "clean",
+      "mode": "B4",
+      "phase": "INTENT_INITIAL",
+      "kind": "transition_to_next_origin",
+      "ms": 24.5738,
+      "declared_ms": 20,
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\019-clean-6-B4\\client.events.jsonl",
+      "line": 13
+    },
+    {
+      "fixture": "cases/020-clean-6-B3",
+      "case": "clean",
+      "mode": "B3",
+      "phase": "INTENT_INITIAL",
+      "kind": "transition_to_next_origin",
+      "ms": 31.753,
+      "declared_ms": 20,
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\020-clean-6-B3\\client.events.jsonl",
+      "line": 13
+    },
+    {
+      "fixture": "cases/020-clean-6-B3",
+      "case": "clean",
+      "mode": "B3",
+      "phase": "COMMIT_INITIAL",
+      "kind": "transition_to_next_origin",
+      "ms": 33.5395,
+      "declared_ms": 20,
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\020-clean-6-B3\\client.events.jsonl",
+      "line": 34
+    },
+    {
+      "fixture": "cases/021-clean-7-B2",
+      "case": "clean",
+      "mode": "B2",
+      "phase": "INTENT_INITIAL",
+      "kind": "transition_to_next_origin",
+      "ms": 28.1347,
+      "declared_ms": 20,
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\021-clean-7-B2\\client.events.jsonl",
+      "line": 12
+    },
+    {
+      "fixture": "cases/022-clean-7-B3",
+      "case": "clean",
+      "mode": "B3",
+      "phase": "INTENT_INITIAL",
+      "kind": "transition_to_next_origin",
+      "ms": 37.221,
+      "declared_ms": 20,
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\022-clean-7-B3\\client.events.jsonl",
+      "line": 9
+    },
+    {
+      "fixture": "cases/023-clean-7-B4",
+      "case": "clean",
+      "mode": "B4",
+      "phase": "INTENT_REPLAY",
+      "kind": "transition_to_next_origin",
+      "ms": 37.185,
+      "declared_ms": 20,
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\023-clean-7-B4\\client.events.jsonl",
+      "line": 20
+    },
+    {
+      "fixture": "cases/024-clean-8-B2",
+      "case": "clean",
+      "mode": "B2",
+      "phase": "INTENT_INITIAL",
+      "kind": "transition_to_next_origin",
+      "ms": 25.5745,
+      "declared_ms": 20,
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\024-clean-8-B2\\client.events.jsonl",
+      "line": 13
+    },
+    {
+      "fixture": "cases/025-clean-8-B3",
+      "case": "clean",
+      "mode": "B3",
+      "phase": "INTENT_INITIAL",
+      "kind": "transition_to_next_origin",
+      "ms": 24.5455,
+      "declared_ms": 20,
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\025-clean-8-B3\\client.events.jsonl",
+      "line": 11
+    },
+    {
+      "fixture": "cases/025-clean-8-B3",
+      "case": "clean",
+      "mode": "B3",
+      "phase": "COMMIT_INITIAL",
+      "kind": "transition_to_next_origin",
+      "ms": 44.1588,
+      "declared_ms": 20,
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\025-clean-8-B3\\client.events.jsonl",
+      "line": 30
+    },
+    {
+      "fixture": "cases/026-clean-8-B4",
+      "case": "clean",
+      "mode": "B4",
+      "phase": "INTENT_INITIAL",
+      "kind": "transition_to_next_origin",
+      "ms": 26.6122,
+      "declared_ms": 20,
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\026-clean-8-B4\\client.events.jsonl",
+      "line": 13
+    },
+    {
+      "fixture": "cases/026-clean-8-B4",
+      "case": "clean",
+      "mode": "B4",
+      "phase": "INTENT_REPLAY",
+      "kind": "transition_to_next_origin",
+      "ms": 56.3059,
+      "declared_ms": 20,
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\026-clean-8-B4\\client.events.jsonl",
+      "line": 34
+    },
+    {
+      "fixture": "cases/026-clean-8-B4",
+      "case": "clean",
+      "mode": "B4",
+      "phase": "COMMIT_INITIAL",
+      "kind": "transition_to_next_origin",
+      "ms": 27.1254,
+      "declared_ms": 20,
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\026-clean-8-B4\\client.events.jsonl",
+      "line": 55
+    },
+    {
+      "fixture": "cases/028-clean-9-B3",
+      "case": "clean",
+      "mode": "B3",
+      "phase": "INTENT_INITIAL",
+      "kind": "transition_to_next_origin",
+      "ms": 50.4635,
+      "declared_ms": 20,
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\028-clean-9-B3\\client.events.jsonl",
+      "line": 13
+    },
+    {
+      "fixture": "cases/028-clean-9-B3",
+      "case": "clean",
+      "mode": "B3",
+      "phase": "COMMIT_INITIAL",
+      "kind": "transition_to_next_origin",
+      "ms": 39.9403,
+      "declared_ms": 20,
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\028-clean-9-B3\\client.events.jsonl",
+      "line": 34
+    },
+    {
+      "fixture": "cases/029-clean-9-B2",
+      "case": "clean",
+      "mode": "B2",
+      "phase": "INTENT_INITIAL",
+      "kind": "transition_to_next_origin",
+      "ms": 47.8074,
+      "declared_ms": 20,
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\029-clean-9-B2\\client.events.jsonl",
+      "line": 13
+    },
+    {
+      "fixture": "cases/030-clean-10-B3",
+      "case": "clean",
+      "mode": "B3",
+      "phase": "INTENT_INITIAL",
+      "kind": "transition_to_next_origin",
+      "ms": 40.1337,
+      "declared_ms": 20,
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\030-clean-10-B3\\client.events.jsonl",
+      "line": 13
+    },
+    {
+      "fixture": "cases/030-clean-10-B3",
+      "case": "clean",
+      "mode": "B3",
+      "phase": "COMMIT_INITIAL",
+      "kind": "transition_to_next_origin",
+      "ms": 31.0515,
+      "declared_ms": 20,
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\030-clean-10-B3\\client.events.jsonl",
+      "line": 35
+    },
+    {
+      "fixture": "cases/031-clean-10-B4",
+      "case": "clean",
+      "mode": "B4",
+      "phase": "INTENT_REPLAY",
+      "kind": "transition_to_next_origin",
+      "ms": 26.6395,
+      "declared_ms": 20,
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\031-clean-10-B4\\client.events.jsonl",
+      "line": 29
+    },
+    {
+      "fixture": "cases/031-clean-10-B4",
+      "case": "clean",
+      "mode": "B4",
+      "phase": "COMMIT_INITIAL",
+      "kind": "transition_to_next_origin",
+      "ms": 28.7608,
+      "declared_ms": 20,
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\031-clean-10-B4\\client.events.jsonl",
+      "line": 51
+    },
+    {
+      "fixture": "cases/032-clean-10-B2",
+      "case": "clean",
+      "mode": "B2",
+      "phase": "INTENT_INITIAL",
+      "kind": "transition_to_next_origin",
+      "ms": 76.5163,
+      "declared_ms": 20,
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\032-clean-10-B2\\client.events.jsonl",
+      "line": 12
+    },
+    {
+      "fixture": "cases/033-clean-11-B2",
+      "case": "clean",
+      "mode": "B2",
+      "phase": "INTENT_INITIAL",
+      "kind": "transition_to_next_origin",
+      "ms": 30.5715,
+      "declared_ms": 20,
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\033-clean-11-B2\\client.events.jsonl",
+      "line": 14
+    },
+    {
+      "fixture": "cases/034-clean-11-B4",
+      "case": "clean",
+      "mode": "B4",
+      "phase": "INTENT_REPLAY",
+      "kind": "transition_to_next_origin",
+      "ms": 52.4089,
+      "declared_ms": 20,
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\034-clean-11-B4\\client.events.jsonl",
+      "line": 21
+    },
+    {
+      "fixture": "cases/035-clean-11-B3",
+      "case": "clean",
+      "mode": "B3",
+      "phase": "INTENT_INITIAL",
+      "kind": "transition_to_next_origin",
+      "ms": 66.3105,
+      "declared_ms": 20,
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\035-clean-11-B3\\client.events.jsonl",
+      "line": 13
+    },
+    {
+      "fixture": "cases/035-clean-11-B3",
+      "case": "clean",
+      "mode": "B3",
+      "phase": "COMMIT_INITIAL",
+      "kind": "transition_to_next_origin",
+      "ms": 38.8151,
+      "declared_ms": 20,
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\035-clean-11-B3\\client.events.jsonl",
+      "line": 32
+    }
+  ],
+  "clean_publication_overruns": [
+    {
+      "fixture": "cases/001-clean-0-B4",
+      "case": "clean",
+      "mode": "B4",
+      "phase": "COMMIT_REPLAY",
+      "kind": "last_winner_to_publication",
+      "ms": 108.3877,
+      "declared_ms": 100,
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\001-clean-0-B4\\client.events.jsonl",
+      "line": 83
+    }
+  ],
+  "premise_violations": [
+    {
+      "fixture": "cases/003-clean-1-B4",
+      "case": "clean",
+      "mode": "B4",
+      "claim": "STRICT_TAIL",
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\003-clean-1-B4\\server.events.jsonl",
+      "line": 43
+    },
+    {
+      "fixture": "cases/004-clean-1-B3",
+      "case": "clean",
+      "mode": "B3",
+      "claim": "INITIAL_BUDGET",
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\004-clean-1-B3\\client.events.jsonl",
+      "line": 3
+    },
+    {
+      "fixture": "cases/018-clean-6-B2",
+      "case": "clean",
+      "mode": "B2",
+      "claim": "STRICT_TAIL",
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\018-clean-6-B2\\server.events.jsonl",
+      "line": 29
+    },
+    {
+      "fixture": "cases/027-clean-9-B4",
+      "case": "clean",
+      "mode": "B4",
+      "claim": "INITIAL_BUDGET",
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\027-clean-9-B4\\client.events.jsonl",
+      "line": 3
+    },
+    {
+      "fixture": "cases/051-late_response-1-B2",
+      "case": "late_response",
+      "mode": "B2",
+      "claim": "STRICT_TAIL",
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\051-late_response-1-B2\\server.events.jsonl",
+      "line": 23
+    },
+    {
+      "fixture": "cases/072-initial_over_budget-0-B4",
+      "case": "initial_over_budget",
+      "mode": "B4",
+      "claim": "INITIAL_BUDGET",
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\072-initial_over_budget-0-B4\\client.events.jsonl",
+      "line": 3
+    },
+    {
+      "fixture": "cases/073-initial_over_budget-0-B3",
+      "case": "initial_over_budget",
+      "mode": "B3",
+      "claim": "INITIAL_BUDGET",
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\073-initial_over_budget-0-B3\\client.events.jsonl",
+      "line": 3
+    },
+    {
+      "fixture": "cases/074-initial_over_budget-0-B2",
+      "case": "initial_over_budget",
+      "mode": "B2",
+      "claim": "INITIAL_BUDGET",
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\074-initial_over_budget-0-B2\\client.events.jsonl",
+      "line": 3
+    },
+    {
+      "fixture": "cases/090-tail_overrun-0-B3",
+      "case": "tail_overrun",
+      "mode": "B3",
+      "claim": "STRICT_TAIL",
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\090-tail_overrun-0-B3\\server.events.jsonl",
+      "line": 19
+    },
+    {
+      "fixture": "cases/091-tail_overrun-0-B2",
+      "case": "tail_overrun",
+      "mode": "B2",
+      "claim": "STRICT_TAIL",
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\091-tail_overrun-0-B2\\server.events.jsonl",
+      "line": 19
+    },
+    {
+      "fixture": "cases/092-tail_overrun-0-B4",
+      "case": "tail_overrun",
+      "mode": "B4",
+      "claim": "STRICT_TAIL",
+      "source": "C:\\Users\\16043\\Documents\\Codex\\2026-08-07\\a2a-acp-adp-json-schema-6g\\outputs\\rdinp-d5-local-evaluation-20261023\\runs\\20261023T055804Z-full-039790\\cases\\092-tail_overrun-0-B4\\server.events.jsonl",
+      "line": 31
+    }
+  ],
+  "limits": [
+    "All components use one role clock; no cross-role timestamp subtraction.",
+    "send_to_receive includes client trace/scheduler, loopback HTTP, authority work, signing and return; it is not pure network RTT.",
+    "VERIFY_DONE and PERSISTED use record timestamps, not separate physical boundaries.",
+    "Partitions are descriptive observations, not causal CPU/fsync attribution or worst-case certification.",
+    "Transition checks are descriptive for the chosen mode execution path; they do not re-prove variant budget formulae."
+  ]
+}

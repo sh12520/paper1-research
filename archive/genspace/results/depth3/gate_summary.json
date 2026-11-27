@@ -1,0 +1,1337 @@
+{
+  "status": "DEPTH3_PARTIAL",
+  "depth2_regression": "PASS",
+  "online_seal_sha256": "8e63d43a823525a59f59d81d680423a931557cfa13fa7318965888e698561517",
+  "graph_independence": "PASS",
+  "case_count": 24,
+  "certificate_rows": 72,
+  "unsound": 0,
+  "certified": {
+    "10": 24,
+    "100": 24,
+    "500": 24
+  },
+  "full_length_certified": {
+    "10": 24,
+    "100": 19,
+    "500": 19
+  },
+  "k500_coverage": {
+    "F1/sparse": [
+      "high",
+      "medium"
+    ],
+    "F1/rich": [
+      "high",
+      "low",
+      "medium"
+    ],
+    "F2/sparse": [
+      "low",
+      "medium"
+    ],
+    "F2/rich": [
+      "high",
+      "low",
+      "medium"
+    ],
+    "F3/sparse": [
+      "low",
+      "medium"
+    ],
+    "F3/rich": [
+      "high",
+      "low",
+      "medium"
+    ],
+    "F4/sparse": [
+      "low"
+    ],
+    "F4/rich": [
+      "high",
+      "low",
+      "medium"
+    ]
+  },
+  "work": {
+    "10": {
+      "all_attempts": {
+        "elapsed_s": {
+          "n": 24,
+          "median": 0.29780335001123603,
+          "p95": 25.27550539498042,
+          "minimum": 0.04972240002825856,
+          "maximum": 26.80421539998497
+        },
+        "cursor_elapsed_s": {
+          "n": 24,
+          "median": 0.29780335001123603,
+          "p95": 25.27550539498042,
+          "minimum": 0.04972240002825856,
+          "maximum": 26.80421539998497
+        },
+        "query_elapsed_s": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "partial_generated": {
+          "n": 24,
+          "median": 1661.5,
+          "p95": 5289.399999999999,
+          "minimum": 29.0,
+          "maximum": 6000.0
+        },
+        "partial_expanded": {
+          "n": 24,
+          "median": 1512.0,
+          "p95": 185281.79999999993,
+          "minimum": 17.0,
+          "maximum": 189572.0
+        },
+        "frontier_peak": {
+          "n": 24,
+          "median": 1033.0,
+          "p95": 3204.8999999999996,
+          "minimum": 8.0,
+          "maximum": 3237.0
+        },
+        "unique_semantics": {
+          "n": 24,
+          "median": 54.0,
+          "p95": 63.0,
+          "minimum": 12.0,
+          "maximum": 63.0
+        },
+        "scores": {
+          "n": 24,
+          "median": 54.0,
+          "p95": 63.0,
+          "minimum": 12.0,
+          "maximum": 63.0
+        },
+        "duplicates": {
+          "n": 24,
+          "median": 0.0,
+          "p95": 0.0,
+          "minimum": 0.0,
+          "maximum": 0.0
+        },
+        "witness_asts_materialized": {
+          "n": 24,
+          "median": 10.0,
+          "p95": 10.0,
+          "minimum": 10.0,
+          "maximum": 10.0
+        },
+        "witness_recipe_evaluations": {
+          "n": 24,
+          "median": 307.0,
+          "p95": 6476.949999999987,
+          "minimum": 30.0,
+          "maximum": 71440.0
+        },
+        "template_count": {
+          "n": 24,
+          "median": 47.0,
+          "p95": 1233.4499999999985,
+          "minimum": 1.0,
+          "maximum": 1338.0
+        },
+        "symbolic_shapes": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "symbolic_cases": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "template_build_s": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "template_payload_bytes": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "peak_working_set_bytes": {
+          "n": 24,
+          "median": 133097472.0,
+          "p95": 148900249.6,
+          "minimum": 39649280.0,
+          "maximum": 149684224.0
+        },
+        "shape_nodes_generated": {
+          "n": 24,
+          "median": 1287.5,
+          "p95": 4367.0,
+          "minimum": 7.0,
+          "maximum": 4473.0
+        },
+        "shape_nodes_expanded": {
+          "n": 24,
+          "median": 516.0,
+          "p95": 2675.749999999998,
+          "minimum": 7.0,
+          "maximum": 2906.0
+        },
+        "assignment_nodes_expanded": {
+          "n": 24,
+          "median": 109.0,
+          "p95": 143.0,
+          "minimum": 7.0,
+          "maximum": 143.0
+        },
+        "symbolic_shapes_compiled": {
+          "n": 24,
+          "median": 107.0,
+          "p95": 805.049999999999,
+          "minimum": 3.0,
+          "maximum": 898.0
+        },
+        "partition_probes": {
+          "n": 24,
+          "median": 847.0,
+          "p95": 182528.74999999994,
+          "minimum": 3.0,
+          "maximum": 186603.0
+        },
+        "merged_template_states": {
+          "n": 24,
+          "median": 800.0,
+          "p95": 181270.29999999993,
+          "minimum": 2.0,
+          "maximum": 185240.0
+        },
+        "duplicate_states_eliminated": {
+          "n": 24,
+          "median": 800.0,
+          "p95": 181270.29999999993,
+          "minimum": 2.0,
+          "maximum": 185240.0
+        },
+        "max_observed_profile_slots": {
+          "n": 24,
+          "median": 5.0,
+          "p95": 8.0,
+          "minimum": 1.0,
+          "maximum": 8.0
+        },
+        "lower_bound_evaluations": {
+          "n": 24,
+          "median": 1603.0,
+          "p95": 5256.999999999999,
+          "minimum": 17.0,
+          "maximum": 5982.0
+        },
+        "buffered_complete": {
+          "n": 24,
+          "median": 44.0,
+          "p95": 53.0,
+          "minimum": 2.0,
+          "maximum": 53.0
+        },
+        "template_recipes": {
+          "n": 24,
+          "median": 847.0,
+          "p95": 182503.74999999994,
+          "minimum": 3.0,
+          "maximum": 186578.0
+        },
+        "exact_state_keys": {
+          "n": 24,
+          "median": 356.0,
+          "p95": 1444.7999999999988,
+          "minimum": 22.0,
+          "maximum": 1548.0
+        }
+      },
+      "certified": {
+        "elapsed_s": {
+          "n": 24,
+          "median": 0.29780335001123603,
+          "p95": 25.27550539498042,
+          "minimum": 0.04972240002825856,
+          "maximum": 26.80421539998497
+        },
+        "cursor_elapsed_s": {
+          "n": 24,
+          "median": 0.29780335001123603,
+          "p95": 25.27550539498042,
+          "minimum": 0.04972240002825856,
+          "maximum": 26.80421539998497
+        },
+        "query_elapsed_s": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "partial_generated": {
+          "n": 24,
+          "median": 1661.5,
+          "p95": 5289.399999999999,
+          "minimum": 29.0,
+          "maximum": 6000.0
+        },
+        "partial_expanded": {
+          "n": 24,
+          "median": 1512.0,
+          "p95": 185281.79999999993,
+          "minimum": 17.0,
+          "maximum": 189572.0
+        },
+        "frontier_peak": {
+          "n": 24,
+          "median": 1033.0,
+          "p95": 3204.8999999999996,
+          "minimum": 8.0,
+          "maximum": 3237.0
+        },
+        "unique_semantics": {
+          "n": 24,
+          "median": 54.0,
+          "p95": 63.0,
+          "minimum": 12.0,
+          "maximum": 63.0
+        },
+        "scores": {
+          "n": 24,
+          "median": 54.0,
+          "p95": 63.0,
+          "minimum": 12.0,
+          "maximum": 63.0
+        },
+        "duplicates": {
+          "n": 24,
+          "median": 0.0,
+          "p95": 0.0,
+          "minimum": 0.0,
+          "maximum": 0.0
+        },
+        "witness_asts_materialized": {
+          "n": 24,
+          "median": 10.0,
+          "p95": 10.0,
+          "minimum": 10.0,
+          "maximum": 10.0
+        },
+        "witness_recipe_evaluations": {
+          "n": 24,
+          "median": 307.0,
+          "p95": 6476.949999999987,
+          "minimum": 30.0,
+          "maximum": 71440.0
+        },
+        "template_count": {
+          "n": 24,
+          "median": 47.0,
+          "p95": 1233.4499999999985,
+          "minimum": 1.0,
+          "maximum": 1338.0
+        },
+        "symbolic_shapes": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "symbolic_cases": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "template_build_s": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "template_payload_bytes": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "peak_working_set_bytes": {
+          "n": 24,
+          "median": 133097472.0,
+          "p95": 148900249.6,
+          "minimum": 39649280.0,
+          "maximum": 149684224.0
+        },
+        "shape_nodes_generated": {
+          "n": 24,
+          "median": 1287.5,
+          "p95": 4367.0,
+          "minimum": 7.0,
+          "maximum": 4473.0
+        },
+        "shape_nodes_expanded": {
+          "n": 24,
+          "median": 516.0,
+          "p95": 2675.749999999998,
+          "minimum": 7.0,
+          "maximum": 2906.0
+        },
+        "assignment_nodes_expanded": {
+          "n": 24,
+          "median": 109.0,
+          "p95": 143.0,
+          "minimum": 7.0,
+          "maximum": 143.0
+        },
+        "symbolic_shapes_compiled": {
+          "n": 24,
+          "median": 107.0,
+          "p95": 805.049999999999,
+          "minimum": 3.0,
+          "maximum": 898.0
+        },
+        "partition_probes": {
+          "n": 24,
+          "median": 847.0,
+          "p95": 182528.74999999994,
+          "minimum": 3.0,
+          "maximum": 186603.0
+        },
+        "merged_template_states": {
+          "n": 24,
+          "median": 800.0,
+          "p95": 181270.29999999993,
+          "minimum": 2.0,
+          "maximum": 185240.0
+        },
+        "duplicate_states_eliminated": {
+          "n": 24,
+          "median": 800.0,
+          "p95": 181270.29999999993,
+          "minimum": 2.0,
+          "maximum": 185240.0
+        },
+        "max_observed_profile_slots": {
+          "n": 24,
+          "median": 5.0,
+          "p95": 8.0,
+          "minimum": 1.0,
+          "maximum": 8.0
+        },
+        "lower_bound_evaluations": {
+          "n": 24,
+          "median": 1603.0,
+          "p95": 5256.999999999999,
+          "minimum": 17.0,
+          "maximum": 5982.0
+        },
+        "buffered_complete": {
+          "n": 24,
+          "median": 44.0,
+          "p95": 53.0,
+          "minimum": 2.0,
+          "maximum": 53.0
+        },
+        "template_recipes": {
+          "n": 24,
+          "median": 847.0,
+          "p95": 182503.74999999994,
+          "minimum": 3.0,
+          "maximum": 186578.0
+        },
+        "exact_state_keys": {
+          "n": 24,
+          "median": 356.0,
+          "p95": 1444.7999999999988,
+          "minimum": 22.0,
+          "maximum": 1548.0
+        }
+      }
+    },
+    "100": {
+      "all_attempts": {
+        "elapsed_s": {
+          "n": 24,
+          "median": 0.62816664998536,
+          "p95": 26.899567950000343,
+          "minimum": 0.05909080000128597,
+          "maximum": 28.757144499977585
+        },
+        "cursor_elapsed_s": {
+          "n": 24,
+          "median": 0.62816664998536,
+          "p95": 26.899567950000343,
+          "minimum": 0.05909080000128597,
+          "maximum": 28.757144499977585
+        },
+        "query_elapsed_s": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "partial_generated": {
+          "n": 24,
+          "median": 2576.0,
+          "p95": 7934.25,
+          "minimum": 47.0,
+          "maximum": 9985.0
+        },
+        "partial_expanded": {
+          "n": 24,
+          "median": 2745.0,
+          "p95": 189722.34999999998,
+          "minimum": 23.0,
+          "maximum": 193197.0
+        },
+        "frontier_peak": {
+          "n": 24,
+          "median": 1459.5,
+          "p95": 4903.149999999999,
+          "minimum": 8.0,
+          "maximum": 5439.0
+        },
+        "unique_semantics": {
+          "n": 24,
+          "median": 117.0,
+          "p95": 151.64999999999998,
+          "minimum": 27.0,
+          "maximum": 261.0
+        },
+        "scores": {
+          "n": 24,
+          "median": 117.0,
+          "p95": 151.64999999999998,
+          "minimum": 27.0,
+          "maximum": 261.0
+        },
+        "duplicates": {
+          "n": 24,
+          "median": 0.0,
+          "p95": 0.0,
+          "minimum": 0.0,
+          "maximum": 0.0
+        },
+        "witness_asts_materialized": {
+          "n": 24,
+          "median": 100.0,
+          "p95": 100.0,
+          "minimum": 27.0,
+          "maximum": 100.0
+        },
+        "witness_recipe_evaluations": {
+          "n": 24,
+          "median": 2280.0,
+          "p95": 504307.69999999885,
+          "minimum": 81.0,
+          "maximum": 596760.0
+        },
+        "template_count": {
+          "n": 24,
+          "median": 64.0,
+          "p95": 1306.4999999999995,
+          "minimum": 1.0,
+          "maximum": 1340.0
+        },
+        "symbolic_shapes": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "symbolic_cases": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "template_build_s": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "template_payload_bytes": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "peak_working_set_bytes": {
+          "n": 24,
+          "median": 133156864.0,
+          "p95": 148920524.8,
+          "minimum": 39780352.0,
+          "maximum": 149684224.0
+        },
+        "shape_nodes_generated": {
+          "n": 24,
+          "median": 1595.5,
+          "p95": 4467.0,
+          "minimum": 7.0,
+          "maximum": 5566.0
+        },
+        "shape_nodes_expanded": {
+          "n": 24,
+          "median": 696.5,
+          "p95": 2798.499999999999,
+          "minimum": 7.0,
+          "maximum": 3236.0
+        },
+        "assignment_nodes_expanded": {
+          "n": 24,
+          "median": 257.0,
+          "p95": 1464.099999999998,
+          "minimum": 13.0,
+          "maximum": 1799.0
+        },
+        "symbolic_shapes_compiled": {
+          "n": 24,
+          "median": 176.0,
+          "p95": 842.8499999999996,
+          "minimum": 3.0,
+          "maximum": 940.0
+        },
+        "partition_probes": {
+          "n": 24,
+          "median": 1692.0,
+          "p95": 185522.59999999998,
+          "minimum": 3.0,
+          "maximum": 189608.0
+        },
+        "merged_template_states": {
+          "n": 24,
+          "median": 1628.0,
+          "p95": 184191.09999999998,
+          "minimum": 2.0,
+          "maximum": 188243.0
+        },
+        "duplicate_states_eliminated": {
+          "n": 24,
+          "median": 1628.0,
+          "p95": 184191.09999999998,
+          "minimum": 2.0,
+          "maximum": 188243.0
+        },
+        "max_observed_profile_slots": {
+          "n": 24,
+          "median": 6.0,
+          "p95": 8.0,
+          "minimum": 1.0,
+          "maximum": 8.0
+        },
+        "lower_bound_evaluations": {
+          "n": 24,
+          "median": 2369.0,
+          "p95": 7826.25,
+          "minimum": 20.0,
+          "maximum": 9850.0
+        },
+        "buffered_complete": {
+          "n": 24,
+          "median": 17.0,
+          "p95": 51.64999999999998,
+          "minimum": 0.0,
+          "maximum": 161.0
+        },
+        "template_recipes": {
+          "n": 24,
+          "median": 1692.0,
+          "p95": 185497.59999999998,
+          "minimum": 3.0,
+          "maximum": 189583.0
+        },
+        "exact_state_keys": {
+          "n": 24,
+          "median": 756.0,
+          "p95": 4955.349999999993,
+          "minimum": 40.0,
+          "maximum": 6012.0
+        }
+      },
+      "certified": {
+        "elapsed_s": {
+          "n": 24,
+          "median": 0.62816664998536,
+          "p95": 26.899567950000343,
+          "minimum": 0.05909080000128597,
+          "maximum": 28.757144499977585
+        },
+        "cursor_elapsed_s": {
+          "n": 24,
+          "median": 0.62816664998536,
+          "p95": 26.899567950000343,
+          "minimum": 0.05909080000128597,
+          "maximum": 28.757144499977585
+        },
+        "query_elapsed_s": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "partial_generated": {
+          "n": 24,
+          "median": 2576.0,
+          "p95": 7934.25,
+          "minimum": 47.0,
+          "maximum": 9985.0
+        },
+        "partial_expanded": {
+          "n": 24,
+          "median": 2745.0,
+          "p95": 189722.34999999998,
+          "minimum": 23.0,
+          "maximum": 193197.0
+        },
+        "frontier_peak": {
+          "n": 24,
+          "median": 1459.5,
+          "p95": 4903.149999999999,
+          "minimum": 8.0,
+          "maximum": 5439.0
+        },
+        "unique_semantics": {
+          "n": 24,
+          "median": 117.0,
+          "p95": 151.64999999999998,
+          "minimum": 27.0,
+          "maximum": 261.0
+        },
+        "scores": {
+          "n": 24,
+          "median": 117.0,
+          "p95": 151.64999999999998,
+          "minimum": 27.0,
+          "maximum": 261.0
+        },
+        "duplicates": {
+          "n": 24,
+          "median": 0.0,
+          "p95": 0.0,
+          "minimum": 0.0,
+          "maximum": 0.0
+        },
+        "witness_asts_materialized": {
+          "n": 24,
+          "median": 100.0,
+          "p95": 100.0,
+          "minimum": 27.0,
+          "maximum": 100.0
+        },
+        "witness_recipe_evaluations": {
+          "n": 24,
+          "median": 2280.0,
+          "p95": 504307.69999999885,
+          "minimum": 81.0,
+          "maximum": 596760.0
+        },
+        "template_count": {
+          "n": 24,
+          "median": 64.0,
+          "p95": 1306.4999999999995,
+          "minimum": 1.0,
+          "maximum": 1340.0
+        },
+        "symbolic_shapes": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "symbolic_cases": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "template_build_s": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "template_payload_bytes": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "peak_working_set_bytes": {
+          "n": 24,
+          "median": 133156864.0,
+          "p95": 148920524.8,
+          "minimum": 39780352.0,
+          "maximum": 149684224.0
+        },
+        "shape_nodes_generated": {
+          "n": 24,
+          "median": 1595.5,
+          "p95": 4467.0,
+          "minimum": 7.0,
+          "maximum": 5566.0
+        },
+        "shape_nodes_expanded": {
+          "n": 24,
+          "median": 696.5,
+          "p95": 2798.499999999999,
+          "minimum": 7.0,
+          "maximum": 3236.0
+        },
+        "assignment_nodes_expanded": {
+          "n": 24,
+          "median": 257.0,
+          "p95": 1464.099999999998,
+          "minimum": 13.0,
+          "maximum": 1799.0
+        },
+        "symbolic_shapes_compiled": {
+          "n": 24,
+          "median": 176.0,
+          "p95": 842.8499999999996,
+          "minimum": 3.0,
+          "maximum": 940.0
+        },
+        "partition_probes": {
+          "n": 24,
+          "median": 1692.0,
+          "p95": 185522.59999999998,
+          "minimum": 3.0,
+          "maximum": 189608.0
+        },
+        "merged_template_states": {
+          "n": 24,
+          "median": 1628.0,
+          "p95": 184191.09999999998,
+          "minimum": 2.0,
+          "maximum": 188243.0
+        },
+        "duplicate_states_eliminated": {
+          "n": 24,
+          "median": 1628.0,
+          "p95": 184191.09999999998,
+          "minimum": 2.0,
+          "maximum": 188243.0
+        },
+        "max_observed_profile_slots": {
+          "n": 24,
+          "median": 6.0,
+          "p95": 8.0,
+          "minimum": 1.0,
+          "maximum": 8.0
+        },
+        "lower_bound_evaluations": {
+          "n": 24,
+          "median": 2369.0,
+          "p95": 7826.25,
+          "minimum": 20.0,
+          "maximum": 9850.0
+        },
+        "buffered_complete": {
+          "n": 24,
+          "median": 17.0,
+          "p95": 51.64999999999998,
+          "minimum": 0.0,
+          "maximum": 161.0
+        },
+        "template_recipes": {
+          "n": 24,
+          "median": 1692.0,
+          "p95": 185497.59999999998,
+          "minimum": 3.0,
+          "maximum": 189583.0
+        },
+        "exact_state_keys": {
+          "n": 24,
+          "median": 756.0,
+          "p95": 4955.349999999993,
+          "minimum": 40.0,
+          "maximum": 6012.0
+        }
+      }
+    },
+    "500": {
+      "all_attempts": {
+        "elapsed_s": {
+          "n": 24,
+          "median": 0.8455729999986943,
+          "p95": 27.385469279998507,
+          "minimum": 0.0591030000068713,
+          "maximum": 29.455729299981613
+        },
+        "cursor_elapsed_s": {
+          "n": 24,
+          "median": 0.8455729999986943,
+          "p95": 27.385469279998507,
+          "minimum": 0.0591030000068713,
+          "maximum": 29.455729299981613
+        },
+        "query_elapsed_s": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "partial_generated": {
+          "n": 24,
+          "median": 3841.5,
+          "p95": 10289.249999999996,
+          "minimum": 47.0,
+          "maximum": 11185.0
+        },
+        "partial_expanded": {
+          "n": 24,
+          "median": 3265.5,
+          "p95": 191260.45,
+          "minimum": 23.0,
+          "maximum": 195861.0
+        },
+        "frontier_peak": {
+          "n": 24,
+          "median": 2007.0,
+          "p95": 5412.55,
+          "minimum": 8.0,
+          "maximum": 5745.0
+        },
+        "unique_semantics": {
+          "n": 24,
+          "median": 580.5,
+          "p95": 709.65,
+          "minimum": 27.0,
+          "maximum": 819.0
+        },
+        "scores": {
+          "n": 24,
+          "median": 580.5,
+          "p95": 709.65,
+          "minimum": 27.0,
+          "maximum": 819.0
+        },
+        "duplicates": {
+          "n": 24,
+          "median": 0.0,
+          "p95": 0.0,
+          "minimum": 0.0,
+          "maximum": 0.0
+        },
+        "witness_asts_materialized": {
+          "n": 24,
+          "median": 500.0,
+          "p95": 500.0,
+          "minimum": 27.0,
+          "maximum": 500.0
+        },
+        "witness_recipe_evaluations": {
+          "n": 24,
+          "median": 14133.0,
+          "p95": 632783.3999999994,
+          "minimum": 81.0,
+          "maximum": 710433.0
+        },
+        "template_count": {
+          "n": 24,
+          "median": 64.0,
+          "p95": 1337.55,
+          "minimum": 1.0,
+          "maximum": 1401.0
+        },
+        "symbolic_shapes": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "symbolic_cases": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "template_build_s": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "template_payload_bytes": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "peak_working_set_bytes": {
+          "n": 24,
+          "median": 133287936.0,
+          "p95": 149158502.4,
+          "minimum": 39780352.0,
+          "maximum": 149684224.0
+        },
+        "shape_nodes_generated": {
+          "n": 24,
+          "median": 1605.0,
+          "p95": 4515.0,
+          "minimum": 7.0,
+          "maximum": 5982.0
+        },
+        "shape_nodes_expanded": {
+          "n": 24,
+          "median": 698.5,
+          "p95": 2898.2999999999997,
+          "minimum": 7.0,
+          "maximum": 3603.0
+        },
+        "assignment_nodes_expanded": {
+          "n": 24,
+          "median": 846.0,
+          "p95": 1962.5499999999984,
+          "minimum": 13.0,
+          "maximum": 2237.0
+        },
+        "symbolic_shapes_compiled": {
+          "n": 24,
+          "median": 176.0,
+          "p95": 894.25,
+          "minimum": 3.0,
+          "maximum": 1091.0
+        },
+        "partition_probes": {
+          "n": 24,
+          "median": 1692.0,
+          "p95": 186581.7,
+          "minimum": 3.0,
+          "maximum": 191158.0
+        },
+        "merged_template_states": {
+          "n": 24,
+          "median": 1628.0,
+          "p95": 185219.15,
+          "minimum": 2.0,
+          "maximum": 189732.0
+        },
+        "duplicate_states_eliminated": {
+          "n": 24,
+          "median": 1628.0,
+          "p95": 185219.15,
+          "minimum": 2.0,
+          "maximum": 189732.0
+        },
+        "max_observed_profile_slots": {
+          "n": 24,
+          "median": 6.0,
+          "p95": 8.0,
+          "minimum": 1.0,
+          "maximum": 8.0
+        },
+        "lower_bound_evaluations": {
+          "n": 24,
+          "median": 3146.0,
+          "p95": 9781.199999999997,
+          "minimum": 20.0,
+          "maximum": 10528.0
+        },
+        "buffered_complete": {
+          "n": 24,
+          "median": 80.5,
+          "p95": 209.64999999999998,
+          "minimum": 0.0,
+          "maximum": 319.0
+        },
+        "template_recipes": {
+          "n": 24,
+          "median": 1692.0,
+          "p95": 186556.7,
+          "minimum": 3.0,
+          "maximum": 191133.0
+        },
+        "exact_state_keys": {
+          "n": 24,
+          "median": 2389.0,
+          "p95": 6270.399999999996,
+          "minimum": 40.0,
+          "maximum": 7212.0
+        }
+      },
+      "certified": {
+        "elapsed_s": {
+          "n": 24,
+          "median": 0.8455729999986943,
+          "p95": 27.385469279998507,
+          "minimum": 0.0591030000068713,
+          "maximum": 29.455729299981613
+        },
+        "cursor_elapsed_s": {
+          "n": 24,
+          "median": 0.8455729999986943,
+          "p95": 27.385469279998507,
+          "minimum": 0.0591030000068713,
+          "maximum": 29.455729299981613
+        },
+        "query_elapsed_s": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "partial_generated": {
+          "n": 24,
+          "median": 3841.5,
+          "p95": 10289.249999999996,
+          "minimum": 47.0,
+          "maximum": 11185.0
+        },
+        "partial_expanded": {
+          "n": 24,
+          "median": 3265.5,
+          "p95": 191260.45,
+          "minimum": 23.0,
+          "maximum": 195861.0
+        },
+        "frontier_peak": {
+          "n": 24,
+          "median": 2007.0,
+          "p95": 5412.55,
+          "minimum": 8.0,
+          "maximum": 5745.0
+        },
+        "unique_semantics": {
+          "n": 24,
+          "median": 580.5,
+          "p95": 709.65,
+          "minimum": 27.0,
+          "maximum": 819.0
+        },
+        "scores": {
+          "n": 24,
+          "median": 580.5,
+          "p95": 709.65,
+          "minimum": 27.0,
+          "maximum": 819.0
+        },
+        "duplicates": {
+          "n": 24,
+          "median": 0.0,
+          "p95": 0.0,
+          "minimum": 0.0,
+          "maximum": 0.0
+        },
+        "witness_asts_materialized": {
+          "n": 24,
+          "median": 500.0,
+          "p95": 500.0,
+          "minimum": 27.0,
+          "maximum": 500.0
+        },
+        "witness_recipe_evaluations": {
+          "n": 24,
+          "median": 14133.0,
+          "p95": 632783.3999999994,
+          "minimum": 81.0,
+          "maximum": 710433.0
+        },
+        "template_count": {
+          "n": 24,
+          "median": 64.0,
+          "p95": 1337.55,
+          "minimum": 1.0,
+          "maximum": 1401.0
+        },
+        "symbolic_shapes": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "symbolic_cases": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "template_build_s": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "template_payload_bytes": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "peak_working_set_bytes": {
+          "n": 24,
+          "median": 133287936.0,
+          "p95": 149158502.4,
+          "minimum": 39780352.0,
+          "maximum": 149684224.0
+        },
+        "shape_nodes_generated": {
+          "n": 24,
+          "median": 1605.0,
+          "p95": 4515.0,
+          "minimum": 7.0,
+          "maximum": 5982.0
+        },
+        "shape_nodes_expanded": {
+          "n": 24,
+          "median": 698.5,
+          "p95": 2898.2999999999997,
+          "minimum": 7.0,
+          "maximum": 3603.0
+        },
+        "assignment_nodes_expanded": {
+          "n": 24,
+          "median": 846.0,
+          "p95": 1962.5499999999984,
+          "minimum": 13.0,
+          "maximum": 2237.0
+        },
+        "symbolic_shapes_compiled": {
+          "n": 24,
+          "median": 176.0,
+          "p95": 894.25,
+          "minimum": 3.0,
+          "maximum": 1091.0
+        },
+        "partition_probes": {
+          "n": 24,
+          "median": 1692.0,
+          "p95": 186581.7,
+          "minimum": 3.0,
+          "maximum": 191158.0
+        },
+        "merged_template_states": {
+          "n": 24,
+          "median": 1628.0,
+          "p95": 185219.15,
+          "minimum": 2.0,
+          "maximum": 189732.0
+        },
+        "duplicate_states_eliminated": {
+          "n": 24,
+          "median": 1628.0,
+          "p95": 185219.15,
+          "minimum": 2.0,
+          "maximum": 189732.0
+        },
+        "max_observed_profile_slots": {
+          "n": 24,
+          "median": 6.0,
+          "p95": 8.0,
+          "minimum": 1.0,
+          "maximum": 8.0
+        },
+        "lower_bound_evaluations": {
+          "n": 24,
+          "median": 3146.0,
+          "p95": 9781.199999999997,
+          "minimum": 20.0,
+          "maximum": 10528.0
+        },
+        "buffered_complete": {
+          "n": 24,
+          "median": 80.5,
+          "p95": 209.64999999999998,
+          "minimum": 0.0,
+          "maximum": 319.0
+        },
+        "template_recipes": {
+          "n": 24,
+          "median": 1692.0,
+          "p95": 186556.7,
+          "minimum": 3.0,
+          "maximum": 191133.0
+        },
+        "exact_state_keys": {
+          "n": 24,
+          "median": 2389.0,
+          "p95": 6270.399999999996,
+          "minimum": 40.0,
+          "maximum": 7212.0
+        }
+      }
+    }
+  },
+  "final_query_work": {
+    "final_query_elapsed_s": {
+      "n": 24,
+      "median": 2.183527500004857,
+      "p95": 31.252171779992928,
+      "minimum": 0.08737220001057722,
+      "maximum": 32.348588299995754
+    },
+    "final_query_peak_working_set_bytes": {
+      "n": 24,
+      "median": 136658944.0,
+      "p95": 153931366.39999998,
+      "minimum": 39780352.0,
+      "maximum": 161456128.0
+    },
+    "final_verifier_calls": {
+      "n": 24,
+      "median": 43.0,
+      "p95": 5000.0,
+      "minimum": 27.0,
+      "maximum": 5000.0
+    },
+    "final_proposal_rounds": {
+      "n": 24,
+      "median": 10.0,
+      "p95": 2323.9999999999973,
+      "minimum": 0.0,
+      "maximum": 4982.0
+    }
+  },
+  "limit_counts": {
+    "10": {},
+    "100": {},
+    "500": {}
+  },
+  "incomplete_certificate_rows": 0,
+  "exhausted_short_k500": {
+    "F1__low__high__sparse__d2__s0": 81,
+    "F2__high__high__sparse__d2__s0": 27,
+    "F3__high__high__sparse__d2__s0": 81,
+    "F4__medium__high__sparse__d2__s0": 81,
+    "F4__high__high__sparse__d2__s0": 81
+  }
+}

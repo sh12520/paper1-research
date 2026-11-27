@@ -1,0 +1,34 @@
+[
+  {
+    "task_id": "first",
+    "published_source": "edge",
+    "on_time": true,
+    "latency_ms": 174.1023,
+    "result_sha256": "dd13e1d063ed2a5e9c4551ccfd6949e0fe68ecf6684c1a6b9f338c0e0917798b",
+    "release_ns": 97516240531500,
+    "publish_ns": 97516414633800,
+    "pair_id": "0-0-direct_lease",
+    "method": "DIRECT_LEASE",
+    "condition": "clean",
+    "asset": "astronaut.png",
+    "worker_pid": 18156,
+    "c2_state": null,
+    "application_slot_final": "RESULT"
+  },
+  {
+    "task_id": "next",
+    "published_source": "edge",
+    "on_time": true,
+    "latency_ms": 118.1343,
+    "result_sha256": "e22988f18b19110bd677066bbcfdf45bd7970a5fd9be56b5e9be4edcedf744d9",
+    "release_ns": 97517141602400,
+    "publish_ns": 97517259736700,
+    "pair_id": "0-0-direct_lease",
+    "method": "DIRECT_LEASE",
+    "condition": "clean",
+    "asset": "camera.png",
+    "worker_pid": 18156,
+    "c2_state": null,
+    "application_slot_final": "RESULT"
+  }
+]

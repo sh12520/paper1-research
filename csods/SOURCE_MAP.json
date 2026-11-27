@@ -1,0 +1,110 @@
+[
+  {
+    "path": "csods/models.py",
+    "original": "src/models.py",
+    "original_sha256": "14f88bec9bd8563fdf98f6ff87dcfa704af962cfd80674b211cc23917c93369c",
+    "export_change": "Copied verbatim."
+  },
+  {
+    "path": "csods/engine.py",
+    "original": "src/engine.py",
+    "original_sha256": "477116089b011ed617f704861bce0dffd24885f77e2c0d935b66183ec1a44411",
+    "export_change": "Copied verbatim."
+  },
+  {
+    "path": "csods/registry.py",
+    "original": "src/registry.py",
+    "original_sha256": "407ac57e975a797f2634eb1439cc97ba327717e044b1031a8d305e1cf78f9c22",
+    "export_change": "Copied verbatim."
+  },
+  {
+    "path": "csods/instances.py",
+    "original": "src/instances.py",
+    "original_sha256": "1e32934bf1a46efebb7fda692df424ca7d52cdedd7e622b6b0ad1f98a3807627",
+    "export_change": "Retains instance types, serialization, configuration loading, capability binding, and valuation. Removes original seed generation and archival execution gates."
+  },
+  {
+    "path": "csods/compact_semantics.py",
+    "original": "src/compact_semantics.py",
+    "original_sha256": "8291e74b00f2bf5fb0db2f23eda0db31009a4aff54968d618de2cf1a6f626620",
+    "export_change": "Copied verbatim."
+  },
+  {
+    "path": "csods/state_machine.py",
+    "original": "src/state_machine.py",
+    "original_sha256": "f7d529a29eb7cb7f58f2a80448ce5eceff3ec4bcb60edd8f27cbba09a1bb7db9",
+    "export_change": "Copied verbatim."
+  },
+  {
+    "path": "csods/enumeration.py",
+    "original": "src/enumeration.py",
+    "original_sha256": "6eb44e1dd1697a122c01c9ce8de072a06cafb518e9321276cad35c092671763e",
+    "export_change": "Copied verbatim."
+  },
+  {
+    "path": "csods/canonical_cases.py",
+    "original": "src/canonical_cases.py",
+    "original_sha256": "3b260a87e196a95445ffda344072b6e763a3cc6d749197af054e48e5ac42fb2c",
+    "export_change": "Copied verbatim."
+  },
+  {
+    "path": "csods/depth_search.py",
+    "original": "results/depth3/depth_search.py",
+    "original_sha256": "abc26e9793376863321d04701cb011075fef52c4447c8311eb8cf7be5baa1631",
+    "export_change": "Relative package imports only."
+  },
+  {
+    "path": "csods/abstract_semantics.py",
+    "original": "results/grammar_gate/abstract_semantics.py",
+    "original_sha256": "2d4a9357220e5305829c576e75a77d32424de14c86ad8c2a0beaa86c0e826b7d",
+    "export_change": "Relative package imports only."
+  },
+  {
+    "path": "csods/grammar_search.py",
+    "original": "results/grammar_gate/grammar_search.py",
+    "original_sha256": "e6eea34e87ab339a07a7b0b31e6287bd3113738d6b60c5996b0fc8e9dcd0d126",
+    "export_change": "Relative package imports only."
+  },
+  {
+    "path": "csods/dedup_search.py",
+    "original": "results/grammar_dedup/dedup_search.py",
+    "original_sha256": "425b326fc4c86d80359fc2b078a499bbae26f820297de660b5ca30fa3d17f6bf",
+    "export_change": "Relative package imports only."
+  },
+  {
+    "path": "csods/generic_search.py",
+    "original": "results/paper_method_dev/generic_search.py",
+    "original_sha256": "9e10d9063a5958103ea39c0cea587e15ed837743aa8e4e062bf65eb879754331",
+    "export_change": "Relative package imports only."
+  },
+  {
+    "path": "csods/ablations.py",
+    "original": "results/paper_method_dev/ablations.py",
+    "original_sha256": "d0d6753b04981583a1720a01f3ca9d3dcb39cc8ea5c4ead79d25e836d2c11de7",
+    "export_change": "Relative package imports only."
+  },
+  {
+    "path": "tests/test_canonical_cases.py",
+    "original": "tests/test_canonical_cases.py",
+    "original_sha256": "2e307fe32a0f145bb1dfee6482c3323fc0dae6d7304340cfd136125a36f82302",
+    "export_change": "Package import names only."
+  },
+  {
+    "path": "schemas/capability.schema.json",
+    "original": "schemas/capability.schema.json",
+    "original_sha256": "0aa046b7b29d6e5186138111bbb5500f8f95544989fb3345df1263d6927f84f1",
+    "export_change": "Copied verbatim."
+  },
+  {
+    "path": "schemas/contract.schema.json",
+    "original": "schemas/contract.schema.json",
+    "original_sha256": "80a9d8bc284eb1a109544256f573b46088678057ac198b3ca204c159cfc0c0f2",
+    "export_change": "Copied verbatim."
+  },
+  {
+    "path": "config.yaml",
+    "original": "config.yaml",
+    "original_sha256": "7b968f4023f2f543ad02dca9b038fb67bdc8b6951aee46b8cc16fc3a92da9a9b",
+    "export_change": "Preserves the model and capability cost fields. Omits archival experiment settings and seed configuration."
+  }
+]

@@ -1,0 +1,163 @@
+{
+  "mode": "OptimizeMcs",
+  "argv": [
+    "D:\\msys2\\home\\16043\\research\\TFH02-SUBMISSION-CAMPAIGN-20261110-003718\\artifacts\\contrib\\nr\\examples\\ns3.42-cttc-nr-fh-xr.exe",
+    "--fhCapacity=2000",
+    "--fhControlMethod=OptimizeMcs",
+    "--frequency=30e9",
+    "--bandwidth=400e6",
+    "--numerology=3",
+    "--deployment=SIMPLE",
+    "--arUeNum=3",
+    "--vrUeNum=3",
+    "--cgUeNum=3",
+    "--voiceUeNum=3",
+    "--appDuration=5000",
+    "--enableTDD4_1=1",
+    "--enableMimoFeedback=1",
+    "--txPower=30",
+    "--distance=2",
+    "--channelUpdatePeriod=0",
+    "--channelConditionUpdatePeriod=0",
+    "--enableShadowing=0",
+    "--isLos=1",
+    "--enableHarqRetx=1",
+    "--useFixedMcs=0",
+    "--enableInterServ=0",
+    "--enablePdcpDiscarding=1",
+    "--schedulerType=PF",
+    "--reorderingTimerMs=10",
+    "--RngRun=7",
+    "--tfhProfile=transient"
+  ],
+  "exit_code": 0,
+  "wall_s": 471.4210000000021,
+  "minimum_available_bytes": 1683337216,
+  "exe_sha256": "d6f7167aa8ae029bed97f547d87b4efd1e2eaa1045952e6a52ad052f3ffcdd1d",
+  "nr_dll_sha256": "211e09bea88ea38e1c9b83d49f0d3a5802f1b6a9125ff48f5eb99c9d1474f035",
+  "reference_metadata_sha256": "f94bb671958ba403a8fdca80e7d9eefc6880d401ff3629839a581da58542b517",
+  "traffic": {
+    "all": {
+      "AR_Pose": {
+        "tx": 3750,
+        "within_10ms": 3629,
+        "late": 121,
+        "not_observed": 0
+      },
+      "AR_Video": {
+        "tx": 903,
+        "within_10ms": 749,
+        "late": 154,
+        "not_observed": 0
+      },
+      "AR_Audio": {
+        "tx": 3750,
+        "within_10ms": 3629,
+        "late": 121,
+        "not_observed": 0
+      },
+      "VR": {
+        "tx": 1793,
+        "within_10ms": 1214,
+        "late": 579,
+        "not_observed": 0
+      },
+      "CG": {
+        "tx": 900,
+        "within_10ms": 637,
+        "late": 263,
+        "not_observed": 0
+      },
+      "VoIP": {
+        "tx": 264,
+        "within_10ms": 264,
+        "late": 0,
+        "not_observed": 0
+      }
+    },
+    "LOW": {
+      "AR_Pose": {
+        "tx": 750,
+        "within_10ms": 630,
+        "late": 120,
+        "not_observed": 0
+      },
+      "AR_Video": {
+        "tx": 180,
+        "within_10ms": 31,
+        "late": 149,
+        "not_observed": 0
+      },
+      "AR_Audio": {
+        "tx": 750,
+        "within_10ms": 630,
+        "late": 120,
+        "not_observed": 0
+      },
+      "VR": {
+        "tx": 356,
+        "within_10ms": 2,
+        "late": 354,
+        "not_observed": 0
+      },
+      "CG": {
+        "tx": 179,
+        "within_10ms": 0,
+        "late": 179,
+        "not_observed": 0
+      },
+      "VoIP": {
+        "tx": 71,
+        "within_10ms": 71,
+        "late": 0,
+        "not_observed": 0
+      }
+    },
+    "RECOVERY1": {
+      "AR_Pose": {
+        "tx": 750,
+        "within_10ms": 749,
+        "late": 1,
+        "not_observed": 0
+      },
+      "AR_Video": {
+        "tx": 181,
+        "within_10ms": 176,
+        "late": 5,
+        "not_observed": 0
+      },
+      "AR_Audio": {
+        "tx": 750,
+        "within_10ms": 749,
+        "late": 1,
+        "not_observed": 0
+      },
+      "VR": {
+        "tx": 359,
+        "within_10ms": 134,
+        "late": 225,
+        "not_observed": 0
+      },
+      "CG": {
+        "tx": 180,
+        "within_10ms": 96,
+        "late": 84,
+        "not_observed": 0
+      },
+      "VoIP": {
+        "tx": 58,
+        "within_10ms": 58,
+        "late": 0,
+        "not_observed": 0
+      }
+    }
+  },
+  "source_tx_sha256": "e85a87f7f82c83cfb6e86b652414238800368383534995c313408f3df6faa2ec",
+  "capacity_sha256": "fa0cb7c02a27aeed8d27d1dc915021592d91e13655409b8867f369c1bcd37f5b",
+  "topology_sha256": "41787ddd631524717c344122b7cead7ddf095b89bf281cb6566293f456b02c11",
+  "raw_archive_byte_matches": {
+    "uePositions.txt": true,
+    "capacity-events.csv": true,
+    "packet-events.csv": true
+  }
+}

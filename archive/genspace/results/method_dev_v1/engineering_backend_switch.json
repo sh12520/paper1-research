@@ -1,0 +1,10 @@
+{
+  "completed_records": 230,
+  "event": "INTENTIONAL_STOP_FOR_EQUIVALENCE_AUDITED_BACKEND_REPLACEMENT",
+  "old_directory": "results\\method_dev_v1\\run",
+  "old_run_eligible_for_final_results": false,
+  "old_segment_status": "ERROR from intentional worker termination; not a study or model failure",
+  "preview_audit_sha256": "d6b2ba2f8f18f92eb95ac172181a797153502158ff47eb9d9b02b064daddb2c4",
+  "reason": "preserve original records separately; restart full 1920 under a new single bound source/config manifest",
+  "time": 1795004682.5580108
+}

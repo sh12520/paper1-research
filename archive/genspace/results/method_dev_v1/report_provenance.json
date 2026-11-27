@@ -1,0 +1,19 @@
+{
+  "config_sha256": "fdef08444bbaaec239ff4134e5ff389eb3c297ed7f8561307df8a85f23bdbfb6",
+  "method_source_hashes": {
+    "harness.py": "2dd57d3f1880e5e5c33002748c3dbe918285b166593f5d883fa631a10fc709c9",
+    "private_protocol.py": "b22e390a812d966b12ddb8fc851819186f25ccf8fb6fcd118d12fc3c04585a34",
+    "public_search.py": "b4b47d94fc5c34ce9ddfb23dba98164bb9b59c2b6502cf15f86527e97935f589",
+    "runtime.py": "a58211b8516a470652451b3456c15f62c290da18c98c9b180155a737a8c21eaf"
+  },
+  "no_benchmark_instance_seed_generation": true,
+  "no_new_random_instances": true,
+  "pilot_execution_snapshot_sha256": "18c3ef2eda454dd91a607eaecdd7501f5f82624f907d09bd6939cc77dd6bec0f",
+  "pilot_identity_plan_sha256": "3e70c49620ff50f7a02fbb4bbbaa7e3ec3531e4caff7d2acd43c2f37b175939d",
+  "pilot_instance_manifest_sha256": "d19271de711004b512a446abfc36c83c527d9c7ed656eb14174147a6416a6654",
+  "plotter_sha256": "25006ff6ba36ed5f3a1526034b58363d266eecb62a5f0a7632dba489bbfbc9f5",
+  "random_baseline_note": "Method PRNG is deterministically seeded from allowed sanitized public fields; it does not generate benchmark instances.",
+  "reporter_sha256": "cfb57ce517a3134badb56e88e219cecba66ce3b374d1383c9e87e07e691f0a07",
+  "run_directory": "D:\\\u610f\u56fe\u534f\u5546\u8bba\u6587\\\u8bba\u65871\\GENSPACE-FAIL-01\\results\\method_dev_v1\\run_protocol_fixed",
+  "run_manifest_sha256": "1c581ede5874d498fb8b25ce779d9f1685177b30f0cc3e19d24a48cacca21aff"
+}

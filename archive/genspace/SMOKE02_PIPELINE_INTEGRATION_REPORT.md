@@ -1,0 +1,11 @@
+# SMOKE02 ROUTING CLOSE-01
+
+Status: **BLOCKED — SHADOW diagnostic completed; SMOKE-02 is not authorized.**
+
+The native SHADOW route executed 16/16 main instances, a planned 8/16 stop and validated resume, four delayed fresh-child candidate audits, 8 fresh reruns and 16 fresh repeats. The shared C01–C13 aggregator returned PASS on the shadow run. A preexisting serialized ENGINEERING fixture matched its pre-routing four-method reference in all non-timing fields. A separate 16-instance SHADOW private-preference noninterference check passed. These are engineering checks and do not evaluate Gate A–E, significance, or a research hypothesis.
+
+Execution remains SHADOW-specific: `tools/shadow_integration.py` rejects any other namespace before generating an instance and does not implement a common, parameterized future SMOKE execution path. Its transaction implementation and incomplete-batch/post-main recovery have not been shown equivalent to the previously audited full atomic/resume primitive. In particular, the planned 8/16 normal stop does not validate every emergency pause or interrupted partial batch. A shared formal SMOKE orchestrator and complete recovery tests remain required before readiness can be declared.
+
+The shadow and formal snapshots are each accepted by the existing verifier. The final `SMOKE02_AUTHORIZATION_STATE.json` is bound to the formal snapshot and retains `shadow_allowed=true`, `smoke_allowed=false`, `pilot_allowed=false`, and `confirm_allowed=false`. However, the current SHADOW orchestrator's default authorization verifier always expects a state bound to the SHADOW snapshot, so after the formal-state replacement that SHADOW gate correctly fails closed. The state used during the completed shadow run is preserved under `results/smoke02_shadow/authorization_state_shadow.json`; no manual restoration was used or should be taken as closing this integration gap.
+
+The formal 192-slot identity template was validated without generating or reading SMOKE, PILOT or CONFIRM instances or seeds. No FROZEN_CONFIG was created. The exact semantic oracle, graph, resource and utility formulas, research sampling distributions, and Gate A–E were not changed. `benchmark_verified` denotes only the frozen abstract benchmark semantics and is not proof of execution on a real network.

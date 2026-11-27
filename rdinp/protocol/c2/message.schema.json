@@ -1,0 +1,416 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "urn:rdinp:a1:message:2",
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "revision",
+  "kind",
+  "negotiationId",
+  "intentId",
+  "phase",
+  "attempt",
+  "messageId",
+  "nonce",
+  "sender",
+  "recipient",
+  "timingContractDigest",
+  "requestRawSha256",
+  "requestJcsSha256",
+  "body",
+  "signature"
+ ],
+ "properties": {
+  "revision": {
+   "const": "RDINP-A1-CANDIDATE-2"
+  },
+  "kind": {
+   "enum": [
+    "INTENT",
+    "COMMIT",
+    "DECISION",
+    "RECEIPT",
+    "PROBLEM"
+   ]
+  },
+  "negotiationId": {
+   "$ref": "#/$defs/id"
+  },
+  "intentId": {
+   "$ref": "#/$defs/id"
+  },
+  "phase": {
+   "enum": [
+    "INTENT_INITIAL",
+    "INTENT_REPLAY",
+    "COMMIT_INITIAL",
+    "COMMIT_REPLAY"
+   ]
+  },
+  "attempt": {
+   "type": "integer",
+   "minimum": 0,
+   "maximum": 288
+  },
+  "messageId": {
+   "$ref": "#/$defs/id"
+  },
+  "nonce": {
+   "$ref": "#/$defs/id"
+  },
+  "sender": {
+   "$ref": "#/$defs/id"
+  },
+  "recipient": {
+   "$ref": "#/$defs/id"
+  },
+  "timingContractDigest": {
+   "$ref": "#/$defs/hash"
+  },
+  "requestRawSha256": {
+   "$ref": "#/$defs/optionalHash"
+  },
+  "requestJcsSha256": {
+   "$ref": "#/$defs/optionalHash"
+  },
+  "body": {
+   "oneOf": [
+    {
+     "$ref": "#/$defs/request"
+    },
+    {
+     "$ref": "#/$defs/outcome"
+    },
+    {
+     "$ref": "#/$defs/problem"
+    }
+   ]
+  },
+  "signature": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "kid",
+    "value"
+   ],
+   "properties": {
+    "kid": {
+     "$ref": "#/$defs/id"
+    },
+    "value": {
+     "type": "string",
+     "minLength": 20,
+     "maxLength": 2048
+    }
+   }
+  }
+ },
+ "allOf": [
+  {
+   "if": {
+    "properties": {
+     "kind": {
+      "enum": [
+       "INTENT",
+       "COMMIT"
+      ]
+     }
+    }
+   },
+   "then": {
+    "properties": {
+     "body": {
+      "$ref": "#/$defs/request"
+     },
+     "requestRawSha256": {
+      "const": ""
+     },
+     "requestJcsSha256": {
+      "const": ""
+     }
+    }
+   }
+  },
+  {
+   "if": {
+    "properties": {
+     "kind": {
+      "enum": [
+       "DECISION",
+       "RECEIPT"
+      ]
+     }
+    }
+   },
+   "then": {
+    "properties": {
+     "body": {
+      "$ref": "#/$defs/outcome"
+     },
+     "requestRawSha256": {
+      "$ref": "#/$defs/hash"
+     },
+     "requestJcsSha256": {
+      "$ref": "#/$defs/hash"
+     }
+    }
+   }
+  },
+  {
+   "if": {
+    "properties": {
+     "kind": {
+      "const": "PROBLEM"
+     }
+    }
+   },
+   "then": {
+    "properties": {
+     "body": {
+      "$ref": "#/$defs/problem"
+     },
+     "requestRawSha256": {
+      "$ref": "#/$defs/hash"
+     },
+     "requestJcsSha256": {
+      "$ref": "#/$defs/hash"
+     }
+    }
+   }
+  }
+ ],
+ "$defs": {
+  "id": {
+   "type": "string",
+   "pattern": "^[A-Za-z0-9_.:-]{1,128}$"
+  },
+  "hash": {
+   "type": "string",
+   "pattern": "^[0-9a-f]{64}$"
+  },
+  "optionalHash": {
+   "type": "string",
+   "pattern": "^([0-9a-f]{64})?$"
+  },
+  "uint": {
+   "type": "integer",
+   "minimum": 0,
+   "maximum": 9007199254740991
+  },
+  "request": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "units",
+    "decisionDigest",
+    "epoch",
+    "token"
+   ],
+   "properties": {
+    "units": {
+     "type": "integer",
+     "minimum": 1,
+     "maximum": 9007199254740991
+    },
+    "decisionDigest": {
+     "$ref": "#/$defs/optionalHash"
+    },
+    "epoch": {
+     "$ref": "#/$defs/uint"
+    },
+    "token": {
+     "type": "string",
+     "pattern": "^([A-Za-z0-9_.:-]{1,128})?$"
+    }
+   }
+  },
+  "outcome": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "status",
+    "decisionId",
+    "units",
+    "epoch",
+    "token",
+    "leaseUntilNs",
+    "reason",
+    "decisionDigest",
+    "receiptDigest"
+   ],
+   "properties": {
+    "status": {
+     "enum": [
+      "RESERVED",
+      "REJECTED",
+      "COMMITTED",
+      "NOT_APPLIED"
+     ]
+    },
+    "decisionId": {
+     "$ref": "#/$defs/id"
+    },
+    "units": {
+     "type": "integer",
+     "minimum": 1,
+     "maximum": 9007199254740991
+    },
+    "epoch": {
+     "$ref": "#/$defs/uint"
+    },
+    "token": {
+     "type": "string",
+     "maxLength": 128
+    },
+    "leaseUntilNs": {
+     "$ref": "#/$defs/uint"
+    },
+    "reason": {
+     "type": "string",
+     "maxLength": 128
+    },
+    "decisionDigest": {
+     "$ref": "#/$defs/hash"
+    },
+    "receiptDigest": {
+     "$ref": "#/$defs/optionalHash"
+    }
+   },
+   "allOf": [
+    {
+     "if": {
+      "properties": {
+       "status": {
+        "enum": [
+         "RESERVED",
+         "COMMITTED",
+         "NOT_APPLIED"
+        ]
+       }
+      }
+     },
+     "then": {
+      "properties": {
+       "token": {
+        "$ref": "#/$defs/id"
+       },
+       "leaseUntilNs": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 9007199254740991
+       }
+      }
+     }
+    },
+    {
+     "if": {
+      "properties": {
+       "status": {
+        "const": "RESERVED"
+       }
+      }
+     },
+     "then": {
+      "properties": {
+       "reason": {
+        "const": "ADMITTED"
+       },
+       "receiptDigest": {
+        "const": ""
+       }
+      }
+     }
+    },
+    {
+     "if": {
+      "properties": {
+       "status": {
+        "const": "REJECTED"
+       }
+      }
+     },
+     "then": {
+      "properties": {
+       "token": {
+        "const": ""
+       },
+       "leaseUntilNs": {
+        "const": 0
+       },
+       "reason": {
+        "const": "CAPACITY"
+       },
+       "receiptDigest": {
+        "const": ""
+       }
+      }
+     }
+    },
+    {
+     "if": {
+      "properties": {
+       "status": {
+        "const": "COMMITTED"
+       }
+      }
+     },
+     "then": {
+      "properties": {
+       "reason": {
+        "const": "APPLIED"
+       },
+       "receiptDigest": {
+        "$ref": "#/$defs/hash"
+       }
+      }
+     }
+    },
+    {
+     "if": {
+      "properties": {
+       "status": {
+        "const": "NOT_APPLIED"
+       }
+      }
+     },
+     "then": {
+      "properties": {
+       "reason": {
+        "const": "EXPIRED"
+       },
+       "receiptDigest": {
+        "$ref": "#/$defs/hash"
+       }
+      }
+     }
+    }
+   ]
+  },
+  "problem": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "code",
+    "authoritative"
+   ],
+   "properties": {
+    "code": {
+     "enum": [
+      "EXPIRED",
+      "ORDER",
+      "IDENTITY",
+      "ATTEMPT_CONFLICT",
+      "NONCE_CONFLICT",
+      "TAIL_GUARD",
+      "CLOCK",
+      "INTERNAL_UNKNOWN",
+      "CONFIGURATION"
+     ]
+    },
+    "authoritative": {
+     "const": false
+    }
+   }
+  }
+ }
+}

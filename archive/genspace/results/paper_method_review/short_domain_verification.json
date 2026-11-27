@@ -1,0 +1,153 @@
+{
+  "status": "PASS",
+  "archived_gate_status": "DEPTH3_PARTIAL",
+  "development_seal_sha256": "8e63d43a823525a59f59d81d680423a931557cfa13fa7318965888e698561517",
+  "cases": [
+    {
+      "instance_id": "F1__low__high__sparse__d2__s0",
+      "operator_domains": {
+        "ValidFor": [
+          [
+            0,
+            2
+          ]
+        ],
+        "Offload": [
+          "edge"
+        ]
+      },
+      "profiles": 27,
+      "raw_syntax_all": 405,
+      "semantic_all": 108,
+      "semantic_static": 27,
+      "semantic_structural": 81,
+      "semantic_count_by_mechanism_groups": {
+        "1": 54,
+        "2": 27,
+        "0": 27
+      },
+      "sealed_emitted_count": 81,
+      "domain_equality": "PASS",
+      "order_bits_and_witness": "PASS",
+      "exhaustion_certificates": "PASS",
+      "prefix_sha256": "051ca6aa3548bcadb83fdb2f946285d004e53d7f2f712b5a93c0dbe7d9e69beb",
+      "sealed_case_sha256": "84cd488da3d960a99cd9b0bc6c2cc5904830026d3eae498d23a52d7e1327ef42"
+    },
+    {
+      "instance_id": "F2__high__high__sparse__d2__s0",
+      "operator_domains": {
+        "ValidFor": [
+          [
+            0,
+            2
+          ]
+        ]
+      },
+      "profiles": 27,
+      "raw_syntax_all": 108,
+      "semantic_all": 54,
+      "semantic_static": 27,
+      "semantic_structural": 27,
+      "semantic_count_by_mechanism_groups": {
+        "0": 27,
+        "1": 27
+      },
+      "sealed_emitted_count": 27,
+      "domain_equality": "PASS",
+      "order_bits_and_witness": "PASS",
+      "exhaustion_certificates": "PASS",
+      "prefix_sha256": "63838513c6650edb879b78d8d8a32341a79351c58820a90cd41dc1956164de24",
+      "sealed_case_sha256": "7f44c1eefee51b42a7697ee26621fae95fa5553fd9a379d54b23528d27cc20db"
+    },
+    {
+      "instance_id": "F3__high__high__sparse__d2__s0",
+      "operator_domains": {
+        "ValidFor": [
+          [
+            0,
+            2
+          ]
+        ],
+        "Offload": [
+          "edge"
+        ]
+      },
+      "profiles": 27,
+      "raw_syntax_all": 405,
+      "semantic_all": 108,
+      "semantic_static": 27,
+      "semantic_structural": 81,
+      "semantic_count_by_mechanism_groups": {
+        "1": 54,
+        "2": 27,
+        "0": 27
+      },
+      "sealed_emitted_count": 81,
+      "domain_equality": "PASS",
+      "order_bits_and_witness": "PASS",
+      "exhaustion_certificates": "PASS",
+      "prefix_sha256": "889a136b3079b87f8afe70d84f7999c373d37fbd184cffc8fcdf8108175085ae",
+      "sealed_case_sha256": "52d032ec0c772fa9d29841b964ac5f19c79d922839508a8e2110a4038cc92ef8"
+    },
+    {
+      "instance_id": "F4__medium__high__sparse__d2__s0",
+      "operator_domains": {
+        "ValidFor": [
+          [
+            0,
+            2
+          ]
+        ],
+        "Offload": [
+          "edge"
+        ]
+      },
+      "profiles": 27,
+      "raw_syntax_all": 405,
+      "semantic_all": 108,
+      "semantic_static": 27,
+      "semantic_structural": 81,
+      "semantic_count_by_mechanism_groups": {
+        "1": 54,
+        "2": 27,
+        "0": 27
+      },
+      "sealed_emitted_count": 81,
+      "domain_equality": "PASS",
+      "order_bits_and_witness": "PASS",
+      "exhaustion_certificates": "PASS",
+      "prefix_sha256": "b17d75b5bfefdfd0c750f4dc4571fcb48cde08b237d7a283d6991332830847e7",
+      "sealed_case_sha256": "d2c42e661e5133c8d34e917245f67b0ffa55b47df92c8f84d03974de030f8869"
+    },
+    {
+      "instance_id": "F4__high__high__sparse__d2__s0",
+      "operator_domains": {
+        "ValidFor": [
+          [
+            0,
+            2
+          ]
+        ],
+        "Offload": [
+          "edge"
+        ]
+      },
+      "profiles": 27,
+      "raw_syntax_all": 405,
+      "semantic_all": 108,
+      "semantic_static": 27,
+      "semantic_structural": 81,
+      "semantic_count_by_mechanism_groups": {
+        "1": 54,
+        "2": 27,
+        "0": 27
+      },
+      "sealed_emitted_count": 81,
+      "domain_equality": "PASS",
+      "order_bits_and_witness": "PASS",
+      "exhaustion_certificates": "PASS",
+      "prefix_sha256": "3820ce2949f24b4872fb174a0997a039c9413c469bb29d1966b9c7a56ea6914a",
+      "sealed_case_sha256": "b54406a190910403cdeeb7f1428271d32346e889e8920dddbb08e193aff3b0c7"
+    }
+  ]
+}

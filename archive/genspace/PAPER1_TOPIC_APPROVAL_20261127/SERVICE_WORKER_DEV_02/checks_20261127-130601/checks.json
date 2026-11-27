@@ -1,0 +1,14 @@
+{
+  "wrong_key_and_body_and_route_rejected": true,
+  "wrong_reply_nonce_and_route_rejected": true,
+  "live_grant_exact_after_restart": true,
+  "expired_first_never_started": true,
+  "next_executed_once": true,
+  "completed_result_exact_after_restart": true,
+  "worker_pids": [
+    31440,
+    34472,
+    30856
+  ],
+  "scope": "same-host graceful process restart with no inflight computation"
+}

@@ -1,0 +1,2120 @@
+{
+  "identity_slots_only": true,
+  "instances": [
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 1,
+        "preference_conflict": "medium",
+        "resource_pressure": "low"
+      },
+      "family": "F1",
+      "instance_id": "F1__low__medium__sparse__d1__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 1,
+        "preference_conflict": "medium",
+        "resource_pressure": "low"
+      },
+      "family": "F1",
+      "instance_id": "F1__low__medium__sparse__d1__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 2,
+        "preference_conflict": "medium",
+        "resource_pressure": "low"
+      },
+      "family": "F1",
+      "instance_id": "F1__low__medium__sparse__d2__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 2,
+        "preference_conflict": "medium",
+        "resource_pressure": "low"
+      },
+      "family": "F1",
+      "instance_id": "F1__low__medium__sparse__d2__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 1,
+        "preference_conflict": "medium",
+        "resource_pressure": "low"
+      },
+      "family": "F1",
+      "instance_id": "F1__low__medium__rich__d1__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 1,
+        "preference_conflict": "medium",
+        "resource_pressure": "low"
+      },
+      "family": "F1",
+      "instance_id": "F1__low__medium__rich__d1__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 2,
+        "preference_conflict": "medium",
+        "resource_pressure": "low"
+      },
+      "family": "F1",
+      "instance_id": "F1__low__medium__rich__d2__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 2,
+        "preference_conflict": "medium",
+        "resource_pressure": "low"
+      },
+      "family": "F1",
+      "instance_id": "F1__low__medium__rich__d2__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 1,
+        "preference_conflict": "high",
+        "resource_pressure": "low"
+      },
+      "family": "F1",
+      "instance_id": "F1__low__high__sparse__d1__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 1,
+        "preference_conflict": "high",
+        "resource_pressure": "low"
+      },
+      "family": "F1",
+      "instance_id": "F1__low__high__sparse__d1__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 2,
+        "preference_conflict": "high",
+        "resource_pressure": "low"
+      },
+      "family": "F1",
+      "instance_id": "F1__low__high__sparse__d2__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 2,
+        "preference_conflict": "high",
+        "resource_pressure": "low"
+      },
+      "family": "F1",
+      "instance_id": "F1__low__high__sparse__d2__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 1,
+        "preference_conflict": "high",
+        "resource_pressure": "low"
+      },
+      "family": "F1",
+      "instance_id": "F1__low__high__rich__d1__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 1,
+        "preference_conflict": "high",
+        "resource_pressure": "low"
+      },
+      "family": "F1",
+      "instance_id": "F1__low__high__rich__d1__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 2,
+        "preference_conflict": "high",
+        "resource_pressure": "low"
+      },
+      "family": "F1",
+      "instance_id": "F1__low__high__rich__d2__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 2,
+        "preference_conflict": "high",
+        "resource_pressure": "low"
+      },
+      "family": "F1",
+      "instance_id": "F1__low__high__rich__d2__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 1,
+        "preference_conflict": "medium",
+        "resource_pressure": "medium"
+      },
+      "family": "F1",
+      "instance_id": "F1__medium__medium__sparse__d1__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 1,
+        "preference_conflict": "medium",
+        "resource_pressure": "medium"
+      },
+      "family": "F1",
+      "instance_id": "F1__medium__medium__sparse__d1__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 2,
+        "preference_conflict": "medium",
+        "resource_pressure": "medium"
+      },
+      "family": "F1",
+      "instance_id": "F1__medium__medium__sparse__d2__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 2,
+        "preference_conflict": "medium",
+        "resource_pressure": "medium"
+      },
+      "family": "F1",
+      "instance_id": "F1__medium__medium__sparse__d2__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 1,
+        "preference_conflict": "medium",
+        "resource_pressure": "medium"
+      },
+      "family": "F1",
+      "instance_id": "F1__medium__medium__rich__d1__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 1,
+        "preference_conflict": "medium",
+        "resource_pressure": "medium"
+      },
+      "family": "F1",
+      "instance_id": "F1__medium__medium__rich__d1__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 2,
+        "preference_conflict": "medium",
+        "resource_pressure": "medium"
+      },
+      "family": "F1",
+      "instance_id": "F1__medium__medium__rich__d2__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 2,
+        "preference_conflict": "medium",
+        "resource_pressure": "medium"
+      },
+      "family": "F1",
+      "instance_id": "F1__medium__medium__rich__d2__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 1,
+        "preference_conflict": "high",
+        "resource_pressure": "medium"
+      },
+      "family": "F1",
+      "instance_id": "F1__medium__high__sparse__d1__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 1,
+        "preference_conflict": "high",
+        "resource_pressure": "medium"
+      },
+      "family": "F1",
+      "instance_id": "F1__medium__high__sparse__d1__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 2,
+        "preference_conflict": "high",
+        "resource_pressure": "medium"
+      },
+      "family": "F1",
+      "instance_id": "F1__medium__high__sparse__d2__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 2,
+        "preference_conflict": "high",
+        "resource_pressure": "medium"
+      },
+      "family": "F1",
+      "instance_id": "F1__medium__high__sparse__d2__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 1,
+        "preference_conflict": "high",
+        "resource_pressure": "medium"
+      },
+      "family": "F1",
+      "instance_id": "F1__medium__high__rich__d1__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 1,
+        "preference_conflict": "high",
+        "resource_pressure": "medium"
+      },
+      "family": "F1",
+      "instance_id": "F1__medium__high__rich__d1__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 2,
+        "preference_conflict": "high",
+        "resource_pressure": "medium"
+      },
+      "family": "F1",
+      "instance_id": "F1__medium__high__rich__d2__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 2,
+        "preference_conflict": "high",
+        "resource_pressure": "medium"
+      },
+      "family": "F1",
+      "instance_id": "F1__medium__high__rich__d2__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 1,
+        "preference_conflict": "medium",
+        "resource_pressure": "high"
+      },
+      "family": "F1",
+      "instance_id": "F1__high__medium__sparse__d1__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 1,
+        "preference_conflict": "medium",
+        "resource_pressure": "high"
+      },
+      "family": "F1",
+      "instance_id": "F1__high__medium__sparse__d1__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 2,
+        "preference_conflict": "medium",
+        "resource_pressure": "high"
+      },
+      "family": "F1",
+      "instance_id": "F1__high__medium__sparse__d2__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 2,
+        "preference_conflict": "medium",
+        "resource_pressure": "high"
+      },
+      "family": "F1",
+      "instance_id": "F1__high__medium__sparse__d2__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 1,
+        "preference_conflict": "medium",
+        "resource_pressure": "high"
+      },
+      "family": "F1",
+      "instance_id": "F1__high__medium__rich__d1__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 1,
+        "preference_conflict": "medium",
+        "resource_pressure": "high"
+      },
+      "family": "F1",
+      "instance_id": "F1__high__medium__rich__d1__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 2,
+        "preference_conflict": "medium",
+        "resource_pressure": "high"
+      },
+      "family": "F1",
+      "instance_id": "F1__high__medium__rich__d2__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 2,
+        "preference_conflict": "medium",
+        "resource_pressure": "high"
+      },
+      "family": "F1",
+      "instance_id": "F1__high__medium__rich__d2__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 1,
+        "preference_conflict": "high",
+        "resource_pressure": "high"
+      },
+      "family": "F1",
+      "instance_id": "F1__high__high__sparse__d1__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 1,
+        "preference_conflict": "high",
+        "resource_pressure": "high"
+      },
+      "family": "F1",
+      "instance_id": "F1__high__high__sparse__d1__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 2,
+        "preference_conflict": "high",
+        "resource_pressure": "high"
+      },
+      "family": "F1",
+      "instance_id": "F1__high__high__sparse__d2__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 2,
+        "preference_conflict": "high",
+        "resource_pressure": "high"
+      },
+      "family": "F1",
+      "instance_id": "F1__high__high__sparse__d2__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 1,
+        "preference_conflict": "high",
+        "resource_pressure": "high"
+      },
+      "family": "F1",
+      "instance_id": "F1__high__high__rich__d1__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 1,
+        "preference_conflict": "high",
+        "resource_pressure": "high"
+      },
+      "family": "F1",
+      "instance_id": "F1__high__high__rich__d1__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 2,
+        "preference_conflict": "high",
+        "resource_pressure": "high"
+      },
+      "family": "F1",
+      "instance_id": "F1__high__high__rich__d2__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 2,
+        "preference_conflict": "high",
+        "resource_pressure": "high"
+      },
+      "family": "F1",
+      "instance_id": "F1__high__high__rich__d2__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 1,
+        "preference_conflict": "medium",
+        "resource_pressure": "low"
+      },
+      "family": "F2",
+      "instance_id": "F2__low__medium__sparse__d1__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 1,
+        "preference_conflict": "medium",
+        "resource_pressure": "low"
+      },
+      "family": "F2",
+      "instance_id": "F2__low__medium__sparse__d1__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 2,
+        "preference_conflict": "medium",
+        "resource_pressure": "low"
+      },
+      "family": "F2",
+      "instance_id": "F2__low__medium__sparse__d2__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 2,
+        "preference_conflict": "medium",
+        "resource_pressure": "low"
+      },
+      "family": "F2",
+      "instance_id": "F2__low__medium__sparse__d2__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 1,
+        "preference_conflict": "medium",
+        "resource_pressure": "low"
+      },
+      "family": "F2",
+      "instance_id": "F2__low__medium__rich__d1__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 1,
+        "preference_conflict": "medium",
+        "resource_pressure": "low"
+      },
+      "family": "F2",
+      "instance_id": "F2__low__medium__rich__d1__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 2,
+        "preference_conflict": "medium",
+        "resource_pressure": "low"
+      },
+      "family": "F2",
+      "instance_id": "F2__low__medium__rich__d2__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 2,
+        "preference_conflict": "medium",
+        "resource_pressure": "low"
+      },
+      "family": "F2",
+      "instance_id": "F2__low__medium__rich__d2__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 1,
+        "preference_conflict": "high",
+        "resource_pressure": "low"
+      },
+      "family": "F2",
+      "instance_id": "F2__low__high__sparse__d1__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 1,
+        "preference_conflict": "high",
+        "resource_pressure": "low"
+      },
+      "family": "F2",
+      "instance_id": "F2__low__high__sparse__d1__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 2,
+        "preference_conflict": "high",
+        "resource_pressure": "low"
+      },
+      "family": "F2",
+      "instance_id": "F2__low__high__sparse__d2__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 2,
+        "preference_conflict": "high",
+        "resource_pressure": "low"
+      },
+      "family": "F2",
+      "instance_id": "F2__low__high__sparse__d2__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 1,
+        "preference_conflict": "high",
+        "resource_pressure": "low"
+      },
+      "family": "F2",
+      "instance_id": "F2__low__high__rich__d1__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 1,
+        "preference_conflict": "high",
+        "resource_pressure": "low"
+      },
+      "family": "F2",
+      "instance_id": "F2__low__high__rich__d1__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 2,
+        "preference_conflict": "high",
+        "resource_pressure": "low"
+      },
+      "family": "F2",
+      "instance_id": "F2__low__high__rich__d2__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 2,
+        "preference_conflict": "high",
+        "resource_pressure": "low"
+      },
+      "family": "F2",
+      "instance_id": "F2__low__high__rich__d2__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 1,
+        "preference_conflict": "medium",
+        "resource_pressure": "medium"
+      },
+      "family": "F2",
+      "instance_id": "F2__medium__medium__sparse__d1__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 1,
+        "preference_conflict": "medium",
+        "resource_pressure": "medium"
+      },
+      "family": "F2",
+      "instance_id": "F2__medium__medium__sparse__d1__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 2,
+        "preference_conflict": "medium",
+        "resource_pressure": "medium"
+      },
+      "family": "F2",
+      "instance_id": "F2__medium__medium__sparse__d2__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 2,
+        "preference_conflict": "medium",
+        "resource_pressure": "medium"
+      },
+      "family": "F2",
+      "instance_id": "F2__medium__medium__sparse__d2__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 1,
+        "preference_conflict": "medium",
+        "resource_pressure": "medium"
+      },
+      "family": "F2",
+      "instance_id": "F2__medium__medium__rich__d1__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 1,
+        "preference_conflict": "medium",
+        "resource_pressure": "medium"
+      },
+      "family": "F2",
+      "instance_id": "F2__medium__medium__rich__d1__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 2,
+        "preference_conflict": "medium",
+        "resource_pressure": "medium"
+      },
+      "family": "F2",
+      "instance_id": "F2__medium__medium__rich__d2__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 2,
+        "preference_conflict": "medium",
+        "resource_pressure": "medium"
+      },
+      "family": "F2",
+      "instance_id": "F2__medium__medium__rich__d2__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 1,
+        "preference_conflict": "high",
+        "resource_pressure": "medium"
+      },
+      "family": "F2",
+      "instance_id": "F2__medium__high__sparse__d1__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 1,
+        "preference_conflict": "high",
+        "resource_pressure": "medium"
+      },
+      "family": "F2",
+      "instance_id": "F2__medium__high__sparse__d1__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 2,
+        "preference_conflict": "high",
+        "resource_pressure": "medium"
+      },
+      "family": "F2",
+      "instance_id": "F2__medium__high__sparse__d2__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 2,
+        "preference_conflict": "high",
+        "resource_pressure": "medium"
+      },
+      "family": "F2",
+      "instance_id": "F2__medium__high__sparse__d2__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 1,
+        "preference_conflict": "high",
+        "resource_pressure": "medium"
+      },
+      "family": "F2",
+      "instance_id": "F2__medium__high__rich__d1__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 1,
+        "preference_conflict": "high",
+        "resource_pressure": "medium"
+      },
+      "family": "F2",
+      "instance_id": "F2__medium__high__rich__d1__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 2,
+        "preference_conflict": "high",
+        "resource_pressure": "medium"
+      },
+      "family": "F2",
+      "instance_id": "F2__medium__high__rich__d2__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 2,
+        "preference_conflict": "high",
+        "resource_pressure": "medium"
+      },
+      "family": "F2",
+      "instance_id": "F2__medium__high__rich__d2__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 1,
+        "preference_conflict": "medium",
+        "resource_pressure": "high"
+      },
+      "family": "F2",
+      "instance_id": "F2__high__medium__sparse__d1__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 1,
+        "preference_conflict": "medium",
+        "resource_pressure": "high"
+      },
+      "family": "F2",
+      "instance_id": "F2__high__medium__sparse__d1__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 2,
+        "preference_conflict": "medium",
+        "resource_pressure": "high"
+      },
+      "family": "F2",
+      "instance_id": "F2__high__medium__sparse__d2__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 2,
+        "preference_conflict": "medium",
+        "resource_pressure": "high"
+      },
+      "family": "F2",
+      "instance_id": "F2__high__medium__sparse__d2__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 1,
+        "preference_conflict": "medium",
+        "resource_pressure": "high"
+      },
+      "family": "F2",
+      "instance_id": "F2__high__medium__rich__d1__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 1,
+        "preference_conflict": "medium",
+        "resource_pressure": "high"
+      },
+      "family": "F2",
+      "instance_id": "F2__high__medium__rich__d1__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 2,
+        "preference_conflict": "medium",
+        "resource_pressure": "high"
+      },
+      "family": "F2",
+      "instance_id": "F2__high__medium__rich__d2__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 2,
+        "preference_conflict": "medium",
+        "resource_pressure": "high"
+      },
+      "family": "F2",
+      "instance_id": "F2__high__medium__rich__d2__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 1,
+        "preference_conflict": "high",
+        "resource_pressure": "high"
+      },
+      "family": "F2",
+      "instance_id": "F2__high__high__sparse__d1__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 1,
+        "preference_conflict": "high",
+        "resource_pressure": "high"
+      },
+      "family": "F2",
+      "instance_id": "F2__high__high__sparse__d1__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 2,
+        "preference_conflict": "high",
+        "resource_pressure": "high"
+      },
+      "family": "F2",
+      "instance_id": "F2__high__high__sparse__d2__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 2,
+        "preference_conflict": "high",
+        "resource_pressure": "high"
+      },
+      "family": "F2",
+      "instance_id": "F2__high__high__sparse__d2__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 1,
+        "preference_conflict": "high",
+        "resource_pressure": "high"
+      },
+      "family": "F2",
+      "instance_id": "F2__high__high__rich__d1__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 1,
+        "preference_conflict": "high",
+        "resource_pressure": "high"
+      },
+      "family": "F2",
+      "instance_id": "F2__high__high__rich__d1__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 2,
+        "preference_conflict": "high",
+        "resource_pressure": "high"
+      },
+      "family": "F2",
+      "instance_id": "F2__high__high__rich__d2__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 2,
+        "preference_conflict": "high",
+        "resource_pressure": "high"
+      },
+      "family": "F2",
+      "instance_id": "F2__high__high__rich__d2__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 1,
+        "preference_conflict": "medium",
+        "resource_pressure": "low"
+      },
+      "family": "F3",
+      "instance_id": "F3__low__medium__sparse__d1__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 1,
+        "preference_conflict": "medium",
+        "resource_pressure": "low"
+      },
+      "family": "F3",
+      "instance_id": "F3__low__medium__sparse__d1__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 2,
+        "preference_conflict": "medium",
+        "resource_pressure": "low"
+      },
+      "family": "F3",
+      "instance_id": "F3__low__medium__sparse__d2__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 2,
+        "preference_conflict": "medium",
+        "resource_pressure": "low"
+      },
+      "family": "F3",
+      "instance_id": "F3__low__medium__sparse__d2__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 1,
+        "preference_conflict": "medium",
+        "resource_pressure": "low"
+      },
+      "family": "F3",
+      "instance_id": "F3__low__medium__rich__d1__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 1,
+        "preference_conflict": "medium",
+        "resource_pressure": "low"
+      },
+      "family": "F3",
+      "instance_id": "F3__low__medium__rich__d1__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 2,
+        "preference_conflict": "medium",
+        "resource_pressure": "low"
+      },
+      "family": "F3",
+      "instance_id": "F3__low__medium__rich__d2__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 2,
+        "preference_conflict": "medium",
+        "resource_pressure": "low"
+      },
+      "family": "F3",
+      "instance_id": "F3__low__medium__rich__d2__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 1,
+        "preference_conflict": "high",
+        "resource_pressure": "low"
+      },
+      "family": "F3",
+      "instance_id": "F3__low__high__sparse__d1__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 1,
+        "preference_conflict": "high",
+        "resource_pressure": "low"
+      },
+      "family": "F3",
+      "instance_id": "F3__low__high__sparse__d1__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 2,
+        "preference_conflict": "high",
+        "resource_pressure": "low"
+      },
+      "family": "F3",
+      "instance_id": "F3__low__high__sparse__d2__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 2,
+        "preference_conflict": "high",
+        "resource_pressure": "low"
+      },
+      "family": "F3",
+      "instance_id": "F3__low__high__sparse__d2__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 1,
+        "preference_conflict": "high",
+        "resource_pressure": "low"
+      },
+      "family": "F3",
+      "instance_id": "F3__low__high__rich__d1__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 1,
+        "preference_conflict": "high",
+        "resource_pressure": "low"
+      },
+      "family": "F3",
+      "instance_id": "F3__low__high__rich__d1__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 2,
+        "preference_conflict": "high",
+        "resource_pressure": "low"
+      },
+      "family": "F3",
+      "instance_id": "F3__low__high__rich__d2__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 2,
+        "preference_conflict": "high",
+        "resource_pressure": "low"
+      },
+      "family": "F3",
+      "instance_id": "F3__low__high__rich__d2__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 1,
+        "preference_conflict": "medium",
+        "resource_pressure": "medium"
+      },
+      "family": "F3",
+      "instance_id": "F3__medium__medium__sparse__d1__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 1,
+        "preference_conflict": "medium",
+        "resource_pressure": "medium"
+      },
+      "family": "F3",
+      "instance_id": "F3__medium__medium__sparse__d1__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 2,
+        "preference_conflict": "medium",
+        "resource_pressure": "medium"
+      },
+      "family": "F3",
+      "instance_id": "F3__medium__medium__sparse__d2__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 2,
+        "preference_conflict": "medium",
+        "resource_pressure": "medium"
+      },
+      "family": "F3",
+      "instance_id": "F3__medium__medium__sparse__d2__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 1,
+        "preference_conflict": "medium",
+        "resource_pressure": "medium"
+      },
+      "family": "F3",
+      "instance_id": "F3__medium__medium__rich__d1__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 1,
+        "preference_conflict": "medium",
+        "resource_pressure": "medium"
+      },
+      "family": "F3",
+      "instance_id": "F3__medium__medium__rich__d1__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 2,
+        "preference_conflict": "medium",
+        "resource_pressure": "medium"
+      },
+      "family": "F3",
+      "instance_id": "F3__medium__medium__rich__d2__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 2,
+        "preference_conflict": "medium",
+        "resource_pressure": "medium"
+      },
+      "family": "F3",
+      "instance_id": "F3__medium__medium__rich__d2__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 1,
+        "preference_conflict": "high",
+        "resource_pressure": "medium"
+      },
+      "family": "F3",
+      "instance_id": "F3__medium__high__sparse__d1__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 1,
+        "preference_conflict": "high",
+        "resource_pressure": "medium"
+      },
+      "family": "F3",
+      "instance_id": "F3__medium__high__sparse__d1__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 2,
+        "preference_conflict": "high",
+        "resource_pressure": "medium"
+      },
+      "family": "F3",
+      "instance_id": "F3__medium__high__sparse__d2__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 2,
+        "preference_conflict": "high",
+        "resource_pressure": "medium"
+      },
+      "family": "F3",
+      "instance_id": "F3__medium__high__sparse__d2__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 1,
+        "preference_conflict": "high",
+        "resource_pressure": "medium"
+      },
+      "family": "F3",
+      "instance_id": "F3__medium__high__rich__d1__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 1,
+        "preference_conflict": "high",
+        "resource_pressure": "medium"
+      },
+      "family": "F3",
+      "instance_id": "F3__medium__high__rich__d1__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 2,
+        "preference_conflict": "high",
+        "resource_pressure": "medium"
+      },
+      "family": "F3",
+      "instance_id": "F3__medium__high__rich__d2__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 2,
+        "preference_conflict": "high",
+        "resource_pressure": "medium"
+      },
+      "family": "F3",
+      "instance_id": "F3__medium__high__rich__d2__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 1,
+        "preference_conflict": "medium",
+        "resource_pressure": "high"
+      },
+      "family": "F3",
+      "instance_id": "F3__high__medium__sparse__d1__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 1,
+        "preference_conflict": "medium",
+        "resource_pressure": "high"
+      },
+      "family": "F3",
+      "instance_id": "F3__high__medium__sparse__d1__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 2,
+        "preference_conflict": "medium",
+        "resource_pressure": "high"
+      },
+      "family": "F3",
+      "instance_id": "F3__high__medium__sparse__d2__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 2,
+        "preference_conflict": "medium",
+        "resource_pressure": "high"
+      },
+      "family": "F3",
+      "instance_id": "F3__high__medium__sparse__d2__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 1,
+        "preference_conflict": "medium",
+        "resource_pressure": "high"
+      },
+      "family": "F3",
+      "instance_id": "F3__high__medium__rich__d1__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 1,
+        "preference_conflict": "medium",
+        "resource_pressure": "high"
+      },
+      "family": "F3",
+      "instance_id": "F3__high__medium__rich__d1__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 2,
+        "preference_conflict": "medium",
+        "resource_pressure": "high"
+      },
+      "family": "F3",
+      "instance_id": "F3__high__medium__rich__d2__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 2,
+        "preference_conflict": "medium",
+        "resource_pressure": "high"
+      },
+      "family": "F3",
+      "instance_id": "F3__high__medium__rich__d2__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 1,
+        "preference_conflict": "high",
+        "resource_pressure": "high"
+      },
+      "family": "F3",
+      "instance_id": "F3__high__high__sparse__d1__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 1,
+        "preference_conflict": "high",
+        "resource_pressure": "high"
+      },
+      "family": "F3",
+      "instance_id": "F3__high__high__sparse__d1__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 2,
+        "preference_conflict": "high",
+        "resource_pressure": "high"
+      },
+      "family": "F3",
+      "instance_id": "F3__high__high__sparse__d2__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 2,
+        "preference_conflict": "high",
+        "resource_pressure": "high"
+      },
+      "family": "F3",
+      "instance_id": "F3__high__high__sparse__d2__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 1,
+        "preference_conflict": "high",
+        "resource_pressure": "high"
+      },
+      "family": "F3",
+      "instance_id": "F3__high__high__rich__d1__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 1,
+        "preference_conflict": "high",
+        "resource_pressure": "high"
+      },
+      "family": "F3",
+      "instance_id": "F3__high__high__rich__d1__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 2,
+        "preference_conflict": "high",
+        "resource_pressure": "high"
+      },
+      "family": "F3",
+      "instance_id": "F3__high__high__rich__d2__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 2,
+        "preference_conflict": "high",
+        "resource_pressure": "high"
+      },
+      "family": "F3",
+      "instance_id": "F3__high__high__rich__d2__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 1,
+        "preference_conflict": "medium",
+        "resource_pressure": "low"
+      },
+      "family": "F4",
+      "instance_id": "F4__low__medium__sparse__d1__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 1,
+        "preference_conflict": "medium",
+        "resource_pressure": "low"
+      },
+      "family": "F4",
+      "instance_id": "F4__low__medium__sparse__d1__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 2,
+        "preference_conflict": "medium",
+        "resource_pressure": "low"
+      },
+      "family": "F4",
+      "instance_id": "F4__low__medium__sparse__d2__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 2,
+        "preference_conflict": "medium",
+        "resource_pressure": "low"
+      },
+      "family": "F4",
+      "instance_id": "F4__low__medium__sparse__d2__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 1,
+        "preference_conflict": "medium",
+        "resource_pressure": "low"
+      },
+      "family": "F4",
+      "instance_id": "F4__low__medium__rich__d1__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 1,
+        "preference_conflict": "medium",
+        "resource_pressure": "low"
+      },
+      "family": "F4",
+      "instance_id": "F4__low__medium__rich__d1__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 2,
+        "preference_conflict": "medium",
+        "resource_pressure": "low"
+      },
+      "family": "F4",
+      "instance_id": "F4__low__medium__rich__d2__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 2,
+        "preference_conflict": "medium",
+        "resource_pressure": "low"
+      },
+      "family": "F4",
+      "instance_id": "F4__low__medium__rich__d2__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 1,
+        "preference_conflict": "high",
+        "resource_pressure": "low"
+      },
+      "family": "F4",
+      "instance_id": "F4__low__high__sparse__d1__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 1,
+        "preference_conflict": "high",
+        "resource_pressure": "low"
+      },
+      "family": "F4",
+      "instance_id": "F4__low__high__sparse__d1__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 2,
+        "preference_conflict": "high",
+        "resource_pressure": "low"
+      },
+      "family": "F4",
+      "instance_id": "F4__low__high__sparse__d2__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 2,
+        "preference_conflict": "high",
+        "resource_pressure": "low"
+      },
+      "family": "F4",
+      "instance_id": "F4__low__high__sparse__d2__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 1,
+        "preference_conflict": "high",
+        "resource_pressure": "low"
+      },
+      "family": "F4",
+      "instance_id": "F4__low__high__rich__d1__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 1,
+        "preference_conflict": "high",
+        "resource_pressure": "low"
+      },
+      "family": "F4",
+      "instance_id": "F4__low__high__rich__d1__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 2,
+        "preference_conflict": "high",
+        "resource_pressure": "low"
+      },
+      "family": "F4",
+      "instance_id": "F4__low__high__rich__d2__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 2,
+        "preference_conflict": "high",
+        "resource_pressure": "low"
+      },
+      "family": "F4",
+      "instance_id": "F4__low__high__rich__d2__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 1,
+        "preference_conflict": "medium",
+        "resource_pressure": "medium"
+      },
+      "family": "F4",
+      "instance_id": "F4__medium__medium__sparse__d1__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 1,
+        "preference_conflict": "medium",
+        "resource_pressure": "medium"
+      },
+      "family": "F4",
+      "instance_id": "F4__medium__medium__sparse__d1__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 2,
+        "preference_conflict": "medium",
+        "resource_pressure": "medium"
+      },
+      "family": "F4",
+      "instance_id": "F4__medium__medium__sparse__d2__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 2,
+        "preference_conflict": "medium",
+        "resource_pressure": "medium"
+      },
+      "family": "F4",
+      "instance_id": "F4__medium__medium__sparse__d2__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 1,
+        "preference_conflict": "medium",
+        "resource_pressure": "medium"
+      },
+      "family": "F4",
+      "instance_id": "F4__medium__medium__rich__d1__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 1,
+        "preference_conflict": "medium",
+        "resource_pressure": "medium"
+      },
+      "family": "F4",
+      "instance_id": "F4__medium__medium__rich__d1__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 2,
+        "preference_conflict": "medium",
+        "resource_pressure": "medium"
+      },
+      "family": "F4",
+      "instance_id": "F4__medium__medium__rich__d2__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 2,
+        "preference_conflict": "medium",
+        "resource_pressure": "medium"
+      },
+      "family": "F4",
+      "instance_id": "F4__medium__medium__rich__d2__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 1,
+        "preference_conflict": "high",
+        "resource_pressure": "medium"
+      },
+      "family": "F4",
+      "instance_id": "F4__medium__high__sparse__d1__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 1,
+        "preference_conflict": "high",
+        "resource_pressure": "medium"
+      },
+      "family": "F4",
+      "instance_id": "F4__medium__high__sparse__d1__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 2,
+        "preference_conflict": "high",
+        "resource_pressure": "medium"
+      },
+      "family": "F4",
+      "instance_id": "F4__medium__high__sparse__d2__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 2,
+        "preference_conflict": "high",
+        "resource_pressure": "medium"
+      },
+      "family": "F4",
+      "instance_id": "F4__medium__high__sparse__d2__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 1,
+        "preference_conflict": "high",
+        "resource_pressure": "medium"
+      },
+      "family": "F4",
+      "instance_id": "F4__medium__high__rich__d1__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 1,
+        "preference_conflict": "high",
+        "resource_pressure": "medium"
+      },
+      "family": "F4",
+      "instance_id": "F4__medium__high__rich__d1__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 2,
+        "preference_conflict": "high",
+        "resource_pressure": "medium"
+      },
+      "family": "F4",
+      "instance_id": "F4__medium__high__rich__d2__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 2,
+        "preference_conflict": "high",
+        "resource_pressure": "medium"
+      },
+      "family": "F4",
+      "instance_id": "F4__medium__high__rich__d2__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 1,
+        "preference_conflict": "medium",
+        "resource_pressure": "high"
+      },
+      "family": "F4",
+      "instance_id": "F4__high__medium__sparse__d1__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 1,
+        "preference_conflict": "medium",
+        "resource_pressure": "high"
+      },
+      "family": "F4",
+      "instance_id": "F4__high__medium__sparse__d1__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 2,
+        "preference_conflict": "medium",
+        "resource_pressure": "high"
+      },
+      "family": "F4",
+      "instance_id": "F4__high__medium__sparse__d2__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 2,
+        "preference_conflict": "medium",
+        "resource_pressure": "high"
+      },
+      "family": "F4",
+      "instance_id": "F4__high__medium__sparse__d2__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 1,
+        "preference_conflict": "medium",
+        "resource_pressure": "high"
+      },
+      "family": "F4",
+      "instance_id": "F4__high__medium__rich__d1__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 1,
+        "preference_conflict": "medium",
+        "resource_pressure": "high"
+      },
+      "family": "F4",
+      "instance_id": "F4__high__medium__rich__d1__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 2,
+        "preference_conflict": "medium",
+        "resource_pressure": "high"
+      },
+      "family": "F4",
+      "instance_id": "F4__high__medium__rich__d2__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 2,
+        "preference_conflict": "medium",
+        "resource_pressure": "high"
+      },
+      "family": "F4",
+      "instance_id": "F4__high__medium__rich__d2__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 1,
+        "preference_conflict": "high",
+        "resource_pressure": "high"
+      },
+      "family": "F4",
+      "instance_id": "F4__high__high__sparse__d1__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 1,
+        "preference_conflict": "high",
+        "resource_pressure": "high"
+      },
+      "family": "F4",
+      "instance_id": "F4__high__high__sparse__d1__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 2,
+        "preference_conflict": "high",
+        "resource_pressure": "high"
+      },
+      "family": "F4",
+      "instance_id": "F4__high__high__sparse__d2__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "sparse",
+        "composition_depth": 2,
+        "preference_conflict": "high",
+        "resource_pressure": "high"
+      },
+      "family": "F4",
+      "instance_id": "F4__high__high__sparse__d2__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 1,
+        "preference_conflict": "high",
+        "resource_pressure": "high"
+      },
+      "family": "F4",
+      "instance_id": "F4__high__high__rich__d1__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 1,
+        "preference_conflict": "high",
+        "resource_pressure": "high"
+      },
+      "family": "F4",
+      "instance_id": "F4__high__high__rich__d1__s1",
+      "seed_index": 1
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 2,
+        "preference_conflict": "high",
+        "resource_pressure": "high"
+      },
+      "family": "F4",
+      "instance_id": "F4__high__high__rich__d2__s0",
+      "seed_index": 0
+    },
+    {
+      "configuration": {
+        "capability_richness": "rich",
+        "composition_depth": 2,
+        "preference_conflict": "high",
+        "resource_pressure": "high"
+      },
+      "family": "F4",
+      "instance_id": "F4__high__high__rich__d2__s1",
+      "seed_index": 1
+    }
+  ],
+  "namespace": "GENSPACE-FAIL-01-SMOKE",
+  "planned_count": 192,
+  "run_id": "SMOKE-02"
+}

@@ -1,0 +1,14 @@
+{
+  "graph_and_availability_load": {
+    "availability_index_count": 17,
+    "availability_indices_load_s": 0.9156609999918146,
+    "graph_load_s": 0.5757193000026746
+  },
+  "index_load_breakdown": {
+    "contract_tree_load_s": 0.23863419999543112,
+    "generic_tree_load_s": 0.11513079999713227,
+    "shared_features_load_s": 0.19140539999352768
+  },
+  "index_load_s": 0.5507327999948757,
+  "process_peak_working_set_bytes": 503382016
+}

@@ -1,0 +1,86 @@
+{
+  "status": "PASS",
+  "source_fixture": "F1__medium__medium__rich__d2__s0",
+  "checks": [
+    {
+      "scope": "conditional",
+      "depth": 2,
+      "strategy": "mrv",
+      "raw_syntax": 38,
+      "eligible_signatures": 4,
+      "frontier_terms": 94,
+      "covering_terms": 85,
+      "pruned_terms": 9
+    },
+    {
+      "scope": "conditional",
+      "depth": 2,
+      "strategy": "preorder",
+      "raw_syntax": 38,
+      "eligible_signatures": 4,
+      "frontier_terms": 94,
+      "covering_terms": 85,
+      "pruned_terms": 9
+    },
+    {
+      "scope": "conditional-delay",
+      "depth": 2,
+      "strategy": "mrv",
+      "raw_syntax": 74,
+      "eligible_signatures": 18,
+      "frontier_terms": 174,
+      "covering_terms": 165,
+      "pruned_terms": 9
+    },
+    {
+      "scope": "conditional-delay",
+      "depth": 2,
+      "strategy": "preorder",
+      "raw_syntax": 74,
+      "eligible_signatures": 18,
+      "frontier_terms": 174,
+      "covering_terms": 165,
+      "pruned_terms": 9
+    },
+    {
+      "scope": "validity-offload",
+      "depth": 3,
+      "strategy": "mrv",
+      "raw_syntax": 30,
+      "eligible_signatures": 6,
+      "frontier_terms": 58,
+      "covering_terms": 57,
+      "pruned_terms": 1
+    },
+    {
+      "scope": "validity-offload",
+      "depth": 3,
+      "strategy": "preorder",
+      "raw_syntax": 30,
+      "eligible_signatures": 6,
+      "frontier_terms": 58,
+      "covering_terms": 57,
+      "pruned_terms": 1
+    },
+    {
+      "scope": "four-groups",
+      "depth": 2,
+      "strategy": "mrv",
+      "raw_syntax": 61,
+      "eligible_signatures": 18,
+      "frontier_terms": 238,
+      "covering_terms": 215,
+      "pruned_terms": 13
+    },
+    {
+      "scope": "four-groups",
+      "depth": 2,
+      "strategy": "preorder",
+      "raw_syntax": 61,
+      "eligible_signatures": 18,
+      "frontier_terms": 238,
+      "covering_terms": 215,
+      "pruned_terms": 13
+    }
+  ]
+}

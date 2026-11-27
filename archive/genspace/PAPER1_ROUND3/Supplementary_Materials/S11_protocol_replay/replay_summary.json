@@ -1,0 +1,57 @@
+{
+  "attempts": 1248,
+  "status_counts": {
+    "PARTIAL_PREFIX": 418,
+    "COMPLETE": 784,
+    "INSUFFICIENT_PREFIX": 46
+  },
+  "budget_max_counts": {
+    "500": 412,
+    "5000": 784,
+    "0": 46,
+    "100": 6
+  },
+  "distinct_query_prefix_contexts": 171,
+  "summary": [
+    {
+      "budget": 100,
+      "replayed": 1202,
+      "omitted": 46,
+      "public_pool": 33681,
+      "calls": 76275,
+      "median_proposals": 10.0,
+      "total_proposals": 21322,
+      "agreements": 685
+    },
+    {
+      "budget": 500,
+      "replayed": 1196,
+      "omitted": 52,
+      "public_pool": 90845,
+      "calls": 242463,
+      "median_proposals": 10.0,
+      "total_proposals": 60779,
+      "agreements": 696
+    },
+    {
+      "budget": 1000,
+      "replayed": 784,
+      "omitted": 464,
+      "public_pool": 16041,
+      "calls": 36463,
+      "median_proposals": 1.0,
+      "total_proposals": 5460,
+      "agreements": 696
+    },
+    {
+      "budget": 5000,
+      "replayed": 784,
+      "omitted": 464,
+      "public_pool": 16041,
+      "calls": 36463,
+      "median_proposals": 1.0,
+      "total_proposals": 5460,
+      "agreements": 696
+    }
+  ]
+}

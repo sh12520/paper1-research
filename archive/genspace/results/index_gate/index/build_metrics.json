@@ -1,0 +1,31 @@
+{
+  "graph_and_availability_load": {
+    "availability_index_count": 17,
+    "availability_indices_load_s": 0.9301553999976022,
+    "graph_load_s": 0.45623900000646245
+  },
+  "graph_bytes": 7464460,
+  "graph_plus_index_bytes": 165112963,
+  "index_build_s": 20.866013699996984,
+  "index_bytes_total": 157648503,
+  "peak_build_working_set_bytes": 864468992,
+  "shared_bytes": 51583460,
+  "shared_features_s": 0.8946708000003127,
+  "trees": {
+    "contract": {
+      "build_s": 10.342718700005207,
+      "leaves": 71274,
+      "nodes": 142517,
+      "roots": 31,
+      "serialized_bytes": 55036723
+    },
+    "generic": {
+      "build_s": 8.932862700006808,
+      "leaves": 65536,
+      "nodes": 131071,
+      "roots": 1,
+      "serialized_bytes": 51019057
+    }
+  },
+  "version": "INDEX-GATE-01-public-tree-v1"
+}

@@ -1,0 +1,72 @@
+{
+  "candidate_asset_files_verified": 75,
+  "candidate_method_source_files_verified": 148,
+  "candidate_method_source_tree_sha256": "320f956834af272f24b43db9721bbd67247af1fd159e52fe776a5bdd6fa26ca7",
+  "current_cursor_sha256": "abc26e9793376863321d04701cb011075fef52c4447c8311eb8cf7be5baa1631",
+  "decision": "HOLDOUT_READINESS_BLOCKED",
+  "development_checks": {
+    "depth_le_2_independent_checkpoints": 16,
+    "rich_depth3_checkpoints_blocked": 3,
+    "route": 5,
+    "statistics": 16,
+    "warm_supervisor_and_recovery": true
+  },
+  "execution_authorized": false,
+  "generic_cursor_sha256": "9e10d9063a5958103ea39c0cea587e15ed837743aa8e4e062bf65eb879754331",
+  "holdout_instance_or_seed_generation": false,
+  "immutable_prior_manifest_sha256": "52db743977f7ebde3c447656cabf534440dcc9403dd278b9c5898b9ab0421fd0",
+  "namespace": "GENSPACE-METHOD-HOLDOUT-V1",
+  "old_confirmation_authorized": false,
+  "original_registry_model_config_fingerprints": {
+    "config_sha256": "7b968f4023f2f543ad02dca9b038fb67bdc8b6951aee46b8cc16fc3a92da9a9b",
+    "model_fingerprint": "449502d2c2a80da7f1899f8827812f4fafc3a8c5145048b5977a4a4432ab6e40",
+    "registry_fingerprint": "3b47f8575ed5ca0d506340e43786b21e1366c2c3e75f5314d113f19bad5cd231"
+  },
+  "preparation_artifacts_sha256_by_file": {
+    "METHOD_AUTHORIZATION_STATE.json": "bc79872fbed17a017397e20e68c35b6f78668636dedf690bd4319f514d2101d4",
+    "METHOD_CONFIRMATION_PREREGISTRATION_V1_FINAL_DRAFT.md": "23ae2ddc5eccadb4e8dc4b1622c7762c59258d0dae356dab63fe6c7e411fd516",
+    "METHOD_EXECUTION_SNAPSHOT_DRAFT.json": "b11c320219c6de92d890040d3b97345271423a34de9ec0430240fde0cde7fe1a",
+    "METHOD_HOLDOUT_IDENTITY_PLAN_DRAFT.json": "a17fed60a43dac73bb864d2237c1d364d02db630b7b6e932c695d1808fa7605a",
+    "METHOD_HOLDOUT_READINESS_REPORT.md": "2f362d8295e127867f3bc46d5b728671d21dbea065df99cdb720eabf545757de",
+    "METHOD_HOLDOUT_RESOURCE_PLAN.md": "fe47bc6118bc33ead6baead1a437bfac19464f48b8f578c2481c2a42924a9c53",
+    "METHOD_HOLDOUT_ROUTE_AUDIT.md": "b276b08e38154cfbfd0300dfcfb4291f62c891c118fe93cd686a3c4d54dfb067",
+    "METHOD_STATISTICS_IMPLEMENTATION_AUDIT.md": "6c160e545599a58b0885bb6cca08c0fce66b28b56bfedc54a8955547254a8f62",
+    "METHOD_SUPERVISOR_RECOVERY_AUDIT.md": "49afcf5d3cc1f12c61f634ca3e6eb2608fa71e041968cb59dfcc2a328bc43bf4",
+    "UNSEEN_CERTIFICATE_VERIFIER_AUDIT.md": "2df35ee9395861ec4baf7886fcb01a40fbcf2e484d3a000ac4cff07904d1bf17",
+    "results/method_holdout_readiness/integration_evidence.json": "cc57091657132eea0e768aac7c55cfbe38a1921adb59557b38d2806464ba25ca",
+    "results/method_holdout_readiness/statistics_dry_run.json": "8e6318fe5994ca4afb743155b8119b00d134f9ab0eab02f65f6d4b60bdef04c3",
+    "results/method_holdout_readiness/supervisor-recovery-_v7yu23k/evidence.json": "e31fad8766adbcd50438730342a317c5fa6d72de0606676a0b6558f4f33fdc5f",
+    "results/method_holdout_readiness/unseen_verifier_depth2_outside_grid.json": "ccce06a8b87c1fb648ed8850e52665ca8ac68b60b6239534598d6d10afe312e2",
+    "results/method_holdout_readiness/unseen_verifier_evidence.json": "de6383f29a211734ae4cadcfc43856f136417d0b70378301d04e5913d9d7a719"
+  },
+  "prepared_infrastructure_sha256_by_file": {
+    "results/method_holdout_readiness/check_holdout_integration.py": "174b6844c1623d03926e77809800341f5ef698ebb84dad72be8c430b66dd4eea",
+    "results/method_holdout_readiness/check_holdout_route.py": "6fd1cad3e86ab4a2ad482fa37d6caf569b0683b562eb6b388352f1a7193bb89c",
+    "results/method_holdout_readiness/check_supervisor_recovery.py": "b6353fcb98b37cc0afbc04759c9178beee6d62c25da7a66f3febb9bc99e10d02",
+    "results/method_holdout_readiness/check_unseen_additional_depth2.py": "cbdd53b5643ca1ecae0c60a2d629ab879e13851722ff22ff41f266ac597891a3",
+    "results/method_holdout_readiness/check_unseen_verifier.py": "fb7115fdcaf3fe8619b5300a401e698e131d82da951670704ac3fe708d891645",
+    "results/method_holdout_readiness/holdout_assets.py": "7dfd96a215afa671283017b744a8e51621432c8d36467a684fcac86e31719472",
+    "results/method_holdout_readiness/holdout_route.py": "983cc59091405f6c63e4630b4fd18c71ab555f7c90980e8a6077b735075da35c",
+    "results/method_holdout_readiness/holdout_runner.py": "0c9f12f5f4ec2a8ce752a1964a5db50b972223cc8819830dda48ea30014acd9b",
+    "results/method_holdout_readiness/holdout_statistics_adapter.py": "3637c1f9337011408c06e29e023a6713fbcb670b1aecf5ca85be9593b5253a64",
+    "results/method_holdout_readiness/holdout_supervisor.py": "1446def36935a3d226c836d75591d66233d583eedd16692120c728cbd11c3edd",
+    "results/method_holdout_readiness/holdout_transactions.py": "a39aaf591bc01cb90f8ab51ffbe0b80dce187691d9a27720da4b2749e8f5d8b2",
+    "results/method_holdout_readiness/holdout_worker.py": "44ae384dd832d09456913f0122868aad8c2ebdd9f2e52b72c822885d64a5615c",
+    "results/method_holdout_readiness/method_statistics.py": "a26251b3793ae074837d2704d8fab318568af77f9557ceef8a6c5149c4afe41e",
+    "results/method_holdout_readiness/prepare_method_holdout.py": "d42aaef7355fffaea41e409d71e0b4a57949ed184bce4971af97829e80917e66",
+    "results/method_holdout_readiness/test_method_statistics.py": "be6f099457c983a71a7f41e88e05d5b4aafdc48446785f9882e0673f41e7c710",
+    "results/method_holdout_readiness/unseen_verifier.py": "9cfc3cea5a67afe9b7a4706ff04cb93c2d4dcbcc47e8faa79e4be0e999296725"
+  },
+  "prepared_phase_counts": [
+    6720,
+    20160,
+    8640
+  ],
+  "remaining_blockers": [
+    "General rich depth3 certificate proof supply and engineering measurement of proof generation, validation and storage"
+  ],
+  "snapshot_sha256": "b11c320219c6de92d890040d3b97345271423a34de9ec0430240fde0cde7fe1a",
+  "stage": "METHOD-HOLDOUT-READINESS-CLOSE-01",
+  "status": "DRAFT_PREPARATION_ONLY",
+  "warm_online_budget_hours": 153.6
+}

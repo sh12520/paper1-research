@@ -1,0 +1,34 @@
+{
+  "status": "SMOKE-01_FAILED_MEMORY_GUARD",
+  "completed_main": 35,
+  "first_uncompleted_planned_instance": {
+    "configuration": {
+      "capability_richness": "sparse",
+      "composition_depth": 2,
+      "preference_conflict": "medium",
+      "resource_pressure": "high"
+    },
+    "family": "F1",
+    "instance_hash": "60b7fcb8f90b9928f1c3d23d97677193f73387b02e3d0ceca54344471f387151",
+    "instance_id": "F1__high__medium__sparse__d2__s1",
+    "private_hash": "e90abdb6f5f85e343134ecd1b0aedfe1c9e7e586b0d9eace967ee0bacbbd9eb2",
+    "public_hash": "ee41934e7d6c6fdd88fa0a7a476887e9f3659b8a942c343eb895ee6248bca763",
+    "seed_hex": "b84c2eaf6e310ce5701411d9d7ee5463a36a6676d54a91647d9857aa47a4cc22",
+    "seed_index": 1
+  },
+  "qualification": "First missing after last completed log; worker did not persist explicit in-flight ID, so cannot prove the instance had started.",
+  "last_main_log_line": "main 0 F1__high__medium__sparse__d2__s0 ok True",
+  "main_phase": {
+    "memory_abort": true,
+    "memory_samples": 75,
+    "peak_aggregate_worker_rss_sample_bytes": 726982656,
+    "peak_process_rss_bytes": 766025728,
+    "peak_system_physical_used_sample_bytes": 16335958016,
+    "phase": "main",
+    "returncodes": [
+      1
+    ],
+    "seconds": 74.77532170002814,
+    "workers": 1
+  }
+}

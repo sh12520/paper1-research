@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "query_count": 96,
+  "seal_sha256": "0ebbc04c6bbea25493b66fb152f61395b7db32e62c59b44c1cbfaecd4e9642fa",
+  "archived_seal_sha256": "bda74d57259dd16702fd159d989d2fc6a28c9f5caefe923e8a0608531827651c",
+  "archived_reference_evidence_sha256": "911edf5e29657fe1ad9d3e3bfa715cd95c1e4f3509d15c1558b2d69747e049e8",
+  "topk_and_protocol_checks": 384,
+  "exact_matches": 384,
+  "mismatches": 0,
+  "incomplete": 0,
+  "direct_flat": {
+    "compared": 384,
+    "source_sha256": "1cc3d47944a1f08caa3cfa80f88205a29f2a1e03514660db4c844f6f7259b797",
+    "graph_loaded": true,
+    "exact": 384,
+    "mismatches": 0,
+    "pass_checks": true
+  },
+  "measurements": {
+    "n": 96,
+    "median": 0.26407400000607595,
+    "p95": 0.8248922499915352,
+    "minimum": 0.05961869997554459,
+    "maximum": 1.5620434999873396
+  },
+  "archived_measurements_same_ids": {
+    "n": 96,
+    "median": 0.31138270000519697,
+    "p95": 0.7218498500005808,
+    "minimum": 0.06811050002579577,
+    "maximum": 1.7952198999992106
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "fixture": "F1__low__high__sparse__d2__s0",
+  "fixture_proof_sha256": "a3370aeb30ee860b3304b85da9df288b27332758c69f10a2f19c14c630558a95",
+  "snapshot_sha256": "b11c320219c6de92d890040d3b97345271423a34de9ec0430240fde0cde7fe1a",
+  "passed": [
+    "all_eight_method_labels_match_same_proven_prefix",
+    "missing_proof_blocks_native_exact",
+    "checkpoint_resource_cap_does_not_become_proof_success",
+    "post_cut_resource_cap_retains_parent_status",
+    "parent_preserved_prefix_checked_without_upgrading_limit",
+    "binary64_one_ulp_rejected",
+    "wrong_rank_rejected",
+    "false_short_domain_rejected",
+    "method_spoof_rejected",
+    "method_fingerprint_rejected",
+    "prior_snapshot_proof_cannot_match_new_binding",
+    "proof_bytes_mismatch_rejected",
+    "receipt_reuse_across_serialized_inputs_rejected",
+    "foreign_namespace_rejected",
+    "development_proof_cannot_fill_holdout_admission"
+  ],
+  "development_scope": "One staged supervised attempt envelope. No method run or input generation."
+}

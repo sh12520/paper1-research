@@ -1,0 +1,34 @@
+[
+  {
+    "task_id": "first",
+    "published_source": "edge",
+    "on_time": true,
+    "latency_ms": 353.775,
+    "result_sha256": "bc491e552e9a11655276eedd077e8b51904762cfe475e6030fd14eb822fee706",
+    "release_ns": 97736353878200,
+    "publish_ns": 97736707653200,
+    "pair_id": "0-2-c2_auth_query",
+    "method": "C2_AUTH_QUERY",
+    "condition": "clean",
+    "asset": "coffee.png",
+    "worker_pid": 35060,
+    "c2_state": "COMMITTED",
+    "application_slot_final": "RESULT"
+  },
+  {
+    "task_id": "next",
+    "published_source": "local",
+    "on_time": true,
+    "latency_ms": 575.3217,
+    "result_sha256": "0da1d366798933792e54510f75fa3d219a28888f72ffc16ba231d68847c55a30",
+    "release_ns": 97737254202700,
+    "publish_ns": 97737829524400,
+    "pair_id": "0-2-c2_auth_query",
+    "method": "C2_AUTH_QUERY",
+    "condition": "clean",
+    "asset": "astronaut.png",
+    "worker_pid": 35060,
+    "c2_state": "REJECTED",
+    "application_slot_final": "EXPIRED"
+  }
+]

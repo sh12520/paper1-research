@@ -1,0 +1,9 @@
+{
+  "completed_records": 432,
+  "event": "INTENTIONAL_STOP_AFTER_ALTERNATION_DEFECT",
+  "included_in_final_results": false,
+  "old_directory": "results\\method_dev_v1\\run_optimized",
+  "prior_guard_status": "ERROR reflects intentional termination",
+  "reason": "a skipped proposer invalidated parity-based next-turn reconstruction between batches; regenerate under corrected protocol",
+  "time": 1795006037.0780678
+}

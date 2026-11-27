@@ -1,0 +1,18 @@
+{
+  "task_id": "2-1-c2_confirm",
+  "method": "C2_CONFIRM",
+  "scenario": "commit_replies_lost",
+  "selected": "local",
+  "on_time": true,
+  "end_to_end_ms": 563.1912,
+  "edge_starts": 0,
+  "edge_grants": 1,
+  "unused_lease_ms": 397.0446,
+  "granted_slot_ms": 397.0446,
+  "output_side_pixels": 256,
+  "valid_output_sha256": "d5fa1153c8c823ce248ac0663fec2fa0d0e3f783a03e7233413dee45a4f5ab21",
+  "source_bytes": 139512,
+  "control_body_bytes": 8628,
+  "data_body_bytes": 0,
+  "rdinp_terminal": "UNKNOWN"
+}

@@ -1,0 +1,9 @@
+{
+  "sealed_cases": 4,
+  "seal_sha256": "f3ddd988035b72d977c3741869ecb0bfe2ed84d817a3cd3f0e85b9b9fe9935b7",
+  "reference_graph_loaded": true,
+  "topk_rows": 3604,
+  "agreement_rows": 2703,
+  "topk_mismatches": 0,
+  "agreement_mismatches": 0
+}

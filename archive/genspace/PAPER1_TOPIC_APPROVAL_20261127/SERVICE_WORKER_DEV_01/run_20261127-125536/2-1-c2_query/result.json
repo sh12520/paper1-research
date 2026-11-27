@@ -1,0 +1,18 @@
+{
+  "task_id": "2-1-c2_query",
+  "method": "C2_QUERY",
+  "scenario": "commit_replies_lost",
+  "selected": "edge",
+  "on_time": true,
+  "end_to_end_ms": 389.4524,
+  "edge_starts": 1,
+  "edge_grants": 1,
+  "unused_lease_ms": 0,
+  "granted_slot_ms": 181.1258,
+  "output_side_pixels": 512,
+  "valid_output_sha256": "e22988f18b19110bd677066bbcfdf45bd7970a5fd9be56b5e9be4edcedf744d9",
+  "source_bytes": 139512,
+  "control_body_bytes": 8893,
+  "data_body_bytes": 392661,
+  "rdinp_terminal": "UNKNOWN"
+}

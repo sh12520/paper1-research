@@ -1,0 +1,34 @@
+[
+  {
+    "task_id": "first",
+    "published_source": "edge",
+    "on_time": true,
+    "latency_ms": 100.9666,
+    "result_sha256": "e22988f18b19110bd677066bbcfdf45bd7970a5fd9be56b5e9be4edcedf744d9",
+    "release_ns": 97732323103000,
+    "publish_ns": 97732424069600,
+    "pair_id": "0-1-direct_lease",
+    "method": "DIRECT_LEASE",
+    "condition": "clean",
+    "asset": "camera.png",
+    "worker_pid": 35116,
+    "c2_state": null,
+    "application_slot_final": "RESULT"
+  },
+  {
+    "task_id": "next",
+    "published_source": "edge",
+    "on_time": true,
+    "latency_ms": 84.1972,
+    "result_sha256": "bc491e552e9a11655276eedd077e8b51904762cfe475e6030fd14eb822fee706",
+    "release_ns": 97733223476600,
+    "publish_ns": 97733307673800,
+    "pair_id": "0-1-direct_lease",
+    "method": "DIRECT_LEASE",
+    "condition": "clean",
+    "asset": "coffee.png",
+    "worker_pid": 35116,
+    "c2_state": null,
+    "application_slot_final": "RESULT"
+  }
+]

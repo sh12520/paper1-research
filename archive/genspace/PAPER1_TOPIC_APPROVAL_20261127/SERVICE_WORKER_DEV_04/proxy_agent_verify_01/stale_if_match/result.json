@@ -1,0 +1,17 @@
+{
+  "case": "stale_if_match",
+  "A_status": 412,
+  "before_A_same_etag": false,
+  "before_A_value": {
+    "dial": "127.0.0.1:9437"
+  },
+  "initial_value": {
+    "dial": "127.0.0.1:9435"
+  },
+  "final_backend": "B",
+  "final_sha256": "bc491e552e9a11655276eedd077e8b51904762cfe475e6030fd14eb822fee706",
+  "deadline_ns": null,
+  "A_sent_after_deadline": null,
+  "manager_rejected": false,
+  "matches_expected_control": true
+}

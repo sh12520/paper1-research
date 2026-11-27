@@ -1,0 +1,13 @@
+{
+  "instances": 901,
+  "generic_enabled": true,
+  "index_load_s": 0.5451424000057159,
+  "minimum_available_bytes": 2766843904,
+  "peak_worker_working_set_bytes": 774885376,
+  "generation_calls": {
+    "derive_seed": 0,
+    "generate_instance": 0
+  },
+  "replay_manifest_sha256": "18be1349180aa43914f4e064dd4a442399f23b01d718bb4198a23e9672e33062",
+  "elapsed_s": 906.5930510000035
+}

@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "fixture": "F1__low__high__sparse__d2__s0",
+  "snapshot_sha256": "b11c320219c6de92d890040d3b97345271423a34de9ec0430240fde0cde7fe1a",
+  "proof_sha256": "a3370aeb30ee860b3304b85da9df288b27332758c69f10a2f19c14c630558a95",
+  "windows_job_active_processes_after_cap": 0,
+  "attempts": [
+    {
+      "method": "GENERIC_ABSTRACT_BEST_FIRST",
+      "parent_status": "PROOF_PENDING",
+      "adjudicated_status": "EXACT_DOMAIN_EXHAUSTED_SHORT",
+      "terminal_reason": null,
+      "checkpoints": [
+        "EXACT_TOPK_FULL_LENGTH",
+        "EXACT_DOMAIN_EXHAUSTED_SHORT",
+        "EXACT_DOMAIN_EXHAUSTED_SHORT"
+      ],
+      "online_interval_ns": 152141200,
+      "worker_peak_rss_bytes": 40460288,
+      "authenticated_transaction_reread": true,
+      "statistics_adapter_evidence_verified": true,
+      "stale_snapshot_rejected": true
+    },
+    {
+      "method": "CURRENT_ON_DEMAND_GRAMMAR_SEARCH",
+      "parent_status": "NOT_CERTIFIED_RESOURCE_LIMIT",
+      "adjudicated_status": "NOT_CERTIFIED_RESOURCE_LIMIT",
+      "terminal_reason": "expanded_limit",
+      "checkpoints": [
+        "NOT_CERTIFIED_RESOURCE_LIMIT",
+        "NOT_CERTIFIED_RESOURCE_LIMIT",
+        "NOT_CERTIFIED_RESOURCE_LIMIT"
+      ],
+      "online_interval_ns": 59907600,
+      "worker_peak_rss_bytes": 40460288,
+      "authenticated_transaction_reread": true,
+      "statistics_adapter_evidence_verified": true,
+      "stale_snapshot_rejected": true
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "flat_resolved_same_instance": 1,
+  "interpretation": "Observed path/budget/proposal indicators are not unique or causal failure classifications. Without the full verified candidate pool and private acceptance history at each checkpoint, selection, ranking, negotiation and budget effects are not separately identifiable.",
+  "multi_group_unresolved": 0,
+  "multi_group_without_pair_stage": 0,
+  "random_resolved_same_instance": 1,
+  "reached_budget": 1,
+  "stage_cap_hit": 1,
+  "stage_counts": {
+    "B2": 1,
+    "C": 1,
+    "D": 1,
+    "D+C": 1,
+    "D+P": 1,
+    "P": 1,
+    "P+C": 1
+  },
+  "termination_reason_counts": {
+    "budget_exhausted": 1
+  },
+  "unresolved_instance_evidence": [
+    {
+      "family": "F3",
+      "first_mechanism": "D",
+      "flat_succeeds": true,
+      "instance_id": "F3__low__medium__sparse__d2__s9",
+      "path": [
+        "D",
+        "P",
+        "C",
+        "D+P",
+        "D+C",
+        "P+C"
+      ],
+      "proposals": 2309,
+      "random_succeeds": true,
+      "stage_details": [
+        {
+          "available": 27,
+          "cap_hit": false,
+          "public_feasible": 9,
+          "quota": 27,
+          "stage": "B2",
+          "verified": 27
+        },
+        {
+          "available": 54,
+          "cap_hit": false,
+          "public_feasible": 54,
+          "quota": 128,
+          "stage": "D",
+          "verified": 54
+        },
+        {
+          "available": 41580,
+          "cap_hit": true,
+          "public_feasible": 0,
+          "quota": 128,
+          "stage": "P",
+          "verified": 128
+        },
+        {
+          "available": 729,
+          "cap_hit": true,
+          "public_feasible": 0,
+          "quota": 128,
+          "stage": "C",
+          "verified": 128
+        },
+        {
+          "available": 3024,
+          "cap_hit": true,
+          "public_feasible": 1294,
+          "quota": 1600,
+          "stage": "D+P",
+          "verified": 1600
+        },
+        {
+          "available": 2160,
+          "cap_hit": true,
+          "public_feasible": 952,
+          "quota": 1600,
+          "stage": "D+C",
+          "verified": 1600
+        },
+        {
+          "available": 1180224,
+          "cap_hit": false,
+          "public_feasible": 0,
+          "quota": 1600,
+          "stage": "P+C",
+          "verified": 1463
+        }
+      ],
+      "successful_singleton_groups_offline": [
+        "P"
+      ],
+      "verification_calls": 5000
+    }
+  ],
+  "unresolved_recoverable": 1,
+  "with_one_or_more_proposals": 1
+}

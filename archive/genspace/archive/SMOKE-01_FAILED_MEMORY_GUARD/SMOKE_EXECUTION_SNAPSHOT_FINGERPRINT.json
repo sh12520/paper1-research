@@ -1,0 +1,51 @@
+{
+  "availability_index_sha256": {
+    "0": "220cb7f024f2a5c3262c92c975ccaf3641c1780d75d1a9b3a297c82de67a673c",
+    "16": "bfa2c096527d19c2aa4ef9c8e70b1d093bcf782966e7bc50a3b6e0274840d0b3",
+    "17": "59050bc56c3f7f2a7e8b012e6cd7eb5b9276ec95dd5b6878a76b6db5800b12a3",
+    "18": "eda1dc6b472fd344162f3f123d5f8c41cf8a7de1e38495c225b8f7d98a3ea0c4",
+    "19": "18c1adef87d273bafe1219a984c5d6d6e1107a4903aaf49378004a78e22300ff",
+    "20": "8916de6ec0e0c8f6f762f05ffa1d396588cea495706d5043eca8195eb30d80b6",
+    "21": "78f4b4e3f5b0d9e86bbf331dfc19dd2472d54b9fe6be226225c0e83957a88660",
+    "22": "85eedfd8c8290b267fe172b1192b63e66186d447ca378e4fb0fa99f6570d4c1a",
+    "23": "d6632a026d8996df54ab8b7fcd9a3fcdbf2aab41fc1f47b3235d8e8f54df975c",
+    "24": "dcfca4e3b3b8cac741100e0c2fb2e15aaee37babc4f6aaef6ef433da7f54d476",
+    "25": "ab30f11d3f428107e5f02244f326b2be93b107c17bea2454fed35b9f38b0f233",
+    "26": "6970a361e98e28a9036ef66eb826dedff7fddbf574297aca680f8e5572d044a0",
+    "27": "a08c2e45dccea61fcd4a2bc149dfd8a904dbb4a008dc6b1447dbe3d4532b4050",
+    "28": "9f26e9dbc4c450fd524280bd6e5f90c047c3dcf29d8f18c1f8a3bdad10cec31c",
+    "29": "abf44fedcc451af3a62b16cde7973c27b393bf19ca5c79050b79e3680edb0c03",
+    "30": "89e1cef705b88d18c39bdc928e55c7748be0147c46e9c2b05334ce7257638ec7",
+    "31": "1df07bc45156f4db652136286998563248de4b3ee61d5c9710b578c69253b371"
+  },
+  "availability_manifest_sha256": "0ffe3360afd73e63e57ba130ade9de703c68e2e69fc599f0da43d0cacaa441bf",
+  "config_sha256": "7b968f4023f2f543ad02dca9b038fb67bdc8b6951aee46b8cc16fc3a92da9a9b",
+  "dependency_fingerprint": "96109024ac85f991ef906cd8e95b601cb0d375eef20e0ad93877450a92e3995e",
+  "dependency_versions": {
+    "implementation": "CPython",
+    "numpy": "2.3.5",
+    "python": "3.12.14"
+  },
+  "execution_scope": "smoke",
+  "independent_reference_report_sha256": "3b7478e9cabd5b82d44770db06cb294470ec21213a485e4fc88b04137b743a68",
+  "model_fingerprint": "449502d2c2a80da7f1899f8827812f4fafc3a8c5145048b5977a4a4432ab6e40",
+  "python_version": "3.12.14",
+  "registry_fingerprint": "3b47f8575ed5ca0d506340e43786b21e1366c2c3e75f5314d113f19bad5cd231",
+  "runner_source_hash": "0067c4ebe37898090d134f491aa1f436dd759e0ea15ad11eec47210767aded4b",
+  "semantic_class_count": 1394064,
+  "semantic_core_source_hashes": {
+    "src/compact_dp.py": "f5ebb89eed2a3b6d50792210325ef14c62ec07e74f865157783d0b3a10439aa0",
+    "src/compact_graph.py": "623d6528aefd493df0d2b55f33e3bd39513b728a3378cb0ec823b062f79ed623",
+    "src/compact_semantics.py": "8291e74b00f2bf5fb0db2f23eda0db31009a4aff54968d618de2cf1a6f626620",
+    "src/engine.py": "477116089b011ed617f704861bce0dffd24885f77e2c0d935b66183ec1a44411",
+    "src/enumeration.py": "6eb44e1dd1697a122c01c9ce8de072a06cafb518e9321276cad35c092671763e",
+    "src/instances.py": "55b79ea592d4436038e6bdfd1535ca5d687d2b01d080c6d720cfec4053f246a7",
+    "src/models.py": "14f88bec9bd8563fdf98f6ff87dcfa704af962cfd80674b211cc23917c93369c",
+    "src/registry.py": "407ac57e975a797f2634eb1439cc97ba327717e044b1031a8d305e1cf78f9c22",
+    "src/state_machine.py": "f7d529a29eb7cb7f58f2a80448ce5eceff3ec4bcb60edd8f27cbba09a1bb7db9"
+  },
+  "semantic_library_format_version": "GENSPACE-GRAPH-v1",
+  "semantic_library_sha256": "11e84c86d15e58f64d8dcfc892e22a813cf1250c835a9d48fa96f22ea112f6fd",
+  "snapshot_version": 2,
+  "source_tree_sha256": "c239cef08e4256bdf27a9444bf4c535c030fd1b95938c456c1921db686030394"
+}

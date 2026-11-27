@@ -1,0 +1,29 @@
+{
+  "historical_manifest_count": 16415,
+  "audit_input_manifest_count": 72,
+  "distinct_files_checked": 16485,
+  "conflicting_expected_hashes": [],
+  "missing": [],
+  "changed": [],
+  "additional_historical_inputs": [],
+  "replay_manifest_changes": [],
+  "run_manifest_match": true,
+  "confirm_denied": true,
+  "frozen_config_exists": false,
+  "generation_calls": {
+    "derive_seed": 0,
+    "generate_instance": 0
+  },
+  "preserved": true,
+  "g5_status": "PASS",
+  "g5_evidence": [
+    "The builder reads the frozen semantic graph, public model and registry, original public scorer and existing availability masks. It does not open serialized PILOT cases or outcomes.",
+    "The cursor receives FLAT's sanitized PublicView, the bound public library, and the availability entry derived from public capabilities. Complete feature records and node bounds contain structural features and public costs only.",
+    "The audit harness selects the development cohort outside retrieval. It opens the historical FLAT outcome after the query and passes preferences only to the preserved bilateral protocol and offline witness verifier.",
+    "The replay harness guards the instance and seed generators and records their call counters."
+  ],
+  "comparison_description": "Both trees use deterministic range-based axis selection, median splitting, the same leaf limit and the same admissible FLAT score bound. The contract forest also groups equal depth-specific availability, active/offload masks and mechanism bits. Both variants apply the exact public eligibility check when needed.",
+  "counting_description": "For indexed prefixes, a candidate whose complete features were loaded for scoring is counted once. Bound-pruned candidates are eligible candidates left unscored at the returned cutoff. The count can fall for a longer prefix. FLAT metadata passes, leaf membership checks and internal-node pops have separate fields.",
+  "correctness_description": "The comparator calls the preserved FLAT make_plan and independently recomputes candidate scores with its original proxy. The indexed replay substitutes the B2 ID lookup and structural order provider in an in-memory copy of the V1 runner. The verifier, agent behavior and protocol come from V1.",
+  "preservation": "Source and artifact preservation verified for 16,485 distinct files. CONFIRM stayed disabled and FROZEN_CONFIG.yaml was absent."
+}

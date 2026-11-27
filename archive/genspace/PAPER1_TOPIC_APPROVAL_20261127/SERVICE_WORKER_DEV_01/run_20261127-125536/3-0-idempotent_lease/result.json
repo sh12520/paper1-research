@@ -1,0 +1,18 @@
+{
+  "task_id": "3-0-idempotent_lease",
+  "method": "IDEMPOTENT_LEASE",
+  "scenario": "commit_and_status_unavailable",
+  "selected": "local",
+  "on_time": true,
+  "end_to_end_ms": 565.1629,
+  "edge_starts": 0,
+  "edge_grants": 1,
+  "unused_lease_ms": 560.203,
+  "granted_slot_ms": 560.203,
+  "output_side_pixels": 256,
+  "valid_output_sha256": "0da1d366798933792e54510f75fa3d219a28888f72ffc16ba231d68847c55a30",
+  "source_bytes": 791555,
+  "control_body_bytes": 68,
+  "data_body_bytes": 0,
+  "rdinp_terminal": null
+}

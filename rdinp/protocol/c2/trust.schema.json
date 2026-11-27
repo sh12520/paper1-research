@@ -1,0 +1,43 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "urn:rdinp:a1:trust:2",
+ "type": "array",
+ "minItems": 2,
+ "maxItems": 2,
+ "uniqueItems": true,
+ "items": {
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+   "principal",
+   "role",
+   "revision",
+   "kid",
+   "publicKeyPem"
+  ],
+  "properties": {
+   "principal": {
+    "type": "string",
+    "pattern": "^[A-Za-z0-9_.:-]{1,128}$"
+   },
+   "role": {
+    "enum": [
+     "initiator",
+     "responder"
+    ]
+   },
+   "revision": {
+    "const": "RDINP-A1-CANDIDATE-2"
+   },
+   "kid": {
+    "type": "string",
+    "pattern": "^[A-Za-z0-9_.:-]{1,128}$"
+   },
+   "publicKeyPem": {
+    "type": "string",
+    "minLength": 50,
+    "maxLength": 4096
+   }
+  }
+ }
+}

@@ -1,0 +1,82 @@
+{
+  "evidence_scope": "development_only_cpu_loopback_injected_message_faults",
+  "deadline_ms": 800,
+  "local_budget_ms": 250,
+  "query_first_ms": 100,
+  "query_interval_ms": 60,
+  "scenarios": [
+    "clean",
+    "first_reply_lost",
+    "commit_replies_lost",
+    "commit_and_status_unavailable"
+  ],
+  "methods": [
+    "C2_CONFIRM",
+    "C2_QUERY",
+    "IDEMPOTENT_LEASE"
+  ],
+  "python": "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:09:58) [MSC v.1929 64 bit (AMD64)]",
+  "pillow": "12.0.0",
+  "sqlite": "3.51.0",
+  "platform": "Windows-11-10.0.26100-SP0",
+  "command": [
+    "run_study.py",
+    "--assets",
+    "D:/Anaconda3/Lib/site-packages/skimage/data",
+    "--out",
+    "run_20261127-125536"
+  ],
+  "sources": {
+    "audit_contract.py": "309daedd839802f62163e37113396bf262858bccd96886887e1ffb3f288aa205",
+    "audit_minimal_static.py": "eb1e69848a7c3ab663fa6ea74c057782708421f71f7d8eea00d6a9d3142d840b",
+    "authority.py": "3fdbc309089e0273786228b578b0d79fc2f6b6dc28bdbe2c4b384be69a0819b1",
+    "CONDITIONAL-PROOF.md": "e15b5d15ed197705af592851a64b1d258c23b5b6292594fdc3c72bd72f2a228e",
+    "CONTRACT.md": "f5b9d2e62b98cd7fb58933ffe4b6e95c538f476e86faee4a92f8797d92e12809",
+    "contracts.py": "d8a656b0625b04777a472b5294fbddc9ee789f1955ef989b05bd9b9ead2c0750",
+    "contracts.schema.json": "a84cb4dc58d30d7e1cf56c9d0389b4c34efc9abe04ac0d4e1597253aac0e1029",
+    "crash_initiator.py": "1103d484a66034475ca2bf475b1470e7499e6181ec85823fe3dfeba36d01ae44",
+    "crash_responder.py": "c99dc10931fbe6edf757feb840a3e738b498f230540caf1131d3cf1f35fab939",
+    "crypto.py": "6bf23f424e36049179a1c3893107046c8f450dbd0e44b262a2a39447b73289cd",
+    "endpoint.py": "936fd2a54bf4a7e7615ab4dbd4cf31f0333366d82851452f8e392133c1152ee1",
+    "events.py": "fe1710442f11d1c040506aed7cfb2c2e4ac3dffdb9386b0b0f776562a66869af",
+    "initiator.py": "60aacf7b4b966540e4d2cf6e2a599e47efd907c8a43982153553661955189acc",
+    "local_demo.py": "218969e9d66ff427a1743fe71dc34af8074459b4d21ce5c6a9f410cbf6db2ef4",
+    "message.schema.json": "8699c325f84960695070e58b2e07554587b2f3c2a19a84e537b003482941c6ac",
+    "openapi.json": "10c202ad92ebc31c3a1b98925df3e8fb5ff83d53d61105f9b7a1a581caac477f",
+    "requirements.txt": "05384a1e79c6a84f79489eb85678c2072c5034b06c5888e3fb3cb5b7de20f1b0",
+    "review_saved_run.py": "69b8c04278657d4e5d3047099b174eb64f715e09d81de72c37133262b042dfb7",
+    "run_validation.py": "5e0e0eec9f8fb5654770c0e489c6e1bc43df926b3dc877e6b466c00939b3ad64",
+    "RUNBOOK.md": "2c13f044b675d6c6e057e07c2e1c5545d4dadc86227b0b1187572c577c5d0b0d",
+    "seal_candidate.py": "56c283fc6fe48159975792086545bf328b22732ed0e531b142be884cf543a90a",
+    "SIGNING-AND-PREIMAGES.md": "0ce4f1469ed99f7fd752e35a3239d1a0aadc3199c47645de50d2c9bc4b1cab96",
+    "SOURCE-FILES.json": "bcdf83ce9dfd3c7ea47e4f019afe521522ef7d4efe08019e2c7dd512ddae068d",
+    "TEST-PLAN.md": "89c938152a14a556ed48d33fbecde177e0528a02da347e08d9848f2f86011bc7",
+    "test_candidate.py": "a7279be418cc09b6397fc59d48ebe3e6ccf08aab205ee5e023b1f5a54fdf4ac2",
+    "test_minimal_fixes.py": "491fe3e9f4b2cbd842cbb273712b0bb19bf5dad5fc21f241ffe55d6ec581afb2",
+    "trust.schema.json": "40d2ad79d03d6aa93127179195f039afcb9c3e42d23411bb5dcffe3235bcb04b"
+  },
+  "experiment_sources": {
+    "run_study.py": "8a8b49934404e556ac3d9a0cccc2dce3b37376043e43a358c1ab4c55c69087c6",
+    "edge_worker.py": "4d67822366b80e6f63689ba86f4492e95cda873ba28e323770ac36141085aa3b"
+  },
+  "assets": {
+    "astronaut.png": {
+      "source_sha256": "88431cd9653ccd539741b555fb0a46b61558b301d4110412b5bc28b5e3ea6cb5",
+      "bytes": 791555,
+      "edge_sha256": "dd13e1d063ed2a5e9c4551ccfd6949e0fe68ecf6684c1a6b9f338c0e0917798b",
+      "local_sha256": "0da1d366798933792e54510f75fa3d219a28888f72ffc16ba231d68847c55a30"
+    },
+    "camera.png": {
+      "source_sha256": "b0793d2adda0fa6ae899c03989482bff9a42d3d5690fc7e3648f2795d730c23a",
+      "bytes": 139512,
+      "edge_sha256": "e22988f18b19110bd677066bbcfdf45bd7970a5fd9be56b5e9be4edcedf744d9",
+      "local_sha256": "d5fa1153c8c823ce248ac0663fec2fa0d0e3f783a03e7233413dee45a4f5ab21"
+    },
+    "coffee.png": {
+      "source_sha256": "cc02f8ca188b167c775a7101b5d767d1e71792cf762c33d6fa15a4599b5a8de7",
+      "bytes": 466706,
+      "edge_sha256": "bc491e552e9a11655276eedd077e8b51904762cfe475e6030fd14eb822fee706",
+      "local_sha256": "52205ddbf62f6f544455488dcfbe05c5a53219127c5656205b076893bfdb3a41"
+    }
+  }
+}

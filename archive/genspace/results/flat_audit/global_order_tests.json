@@ -1,0 +1,42 @@
+[
+  {
+    "instance_id": "F1__low__high__rich__d1__s0",
+    "n": 1512,
+    "exact": true
+  },
+  {
+    "instance_id": "F1__low__high__rich__d2__s1",
+    "n": 1252611,
+    "exact": true
+  },
+  {
+    "instance_id": "F2__low__medium__rich__d1__s0",
+    "n": 1512,
+    "exact": true
+  },
+  {
+    "instance_id": "F2__low__medium__rich__d2__s0",
+    "n": 1252611,
+    "exact": true
+  },
+  {
+    "instance_id": "F3__low__medium__rich__d1__s2",
+    "n": 1512,
+    "exact": true
+  },
+  {
+    "instance_id": "F3__low__medium__rich__d2__s1",
+    "n": 1252611,
+    "exact": true
+  },
+  {
+    "instance_id": "F4__low__high__rich__d1__s1",
+    "n": 1512,
+    "exact": true
+  },
+  {
+    "instance_id": "F4__low__high__rich__d2__s1",
+    "n": 1252611,
+    "exact": true
+  }
+]

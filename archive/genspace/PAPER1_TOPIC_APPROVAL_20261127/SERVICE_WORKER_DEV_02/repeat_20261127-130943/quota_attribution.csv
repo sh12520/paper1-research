@@ -1,0 +1,13 @@
+pair_id,condition,method,first_granted,first_release_reason,first_released_before_next,first_observed_release_to_next_ms,first_original_commits,first_original_state,next_original_state,next_capacity_rejection_receipts,next_application_grant
+0-0-c2_auth_query,clean,C2_AUTH_QUERY,True,completed,True,555.3048,1,CONFIRMED,REJECTED,3,False
+0-0-direct_lease,clean,DIRECT_LEASE,True,completed,True,715.8,,,,0,True
+0-1-direct_lease,clean,DIRECT_LEASE,True,completed,True,807.0227,,,,0,True
+0-1-c2_auth_query,clean,C2_AUTH_QUERY,True,completed,True,573.3388,1,CONFIRMED,REJECTED,3,False
+0-2-c2_auth_query,clean,C2_AUTH_QUERY,True,completed,True,550.8882,1,CONFIRMED,REJECTED,3,False
+0-2-direct_lease,clean,DIRECT_LEASE,True,completed,True,742.7328,,,,0,True
+1-0-direct_lease,first_proof_blackout,DIRECT_LEASE,True,expired_unused,True,344.6882,,,,0,True
+1-0-c2_auth_query,first_proof_blackout,C2_AUTH_QUERY,True,expired_unused,True,338.2721,1,CONFIRMED,REJECTED,3,False
+1-1-c2_auth_query,first_proof_blackout,C2_AUTH_QUERY,True,expired_unused,True,329.8866,1,CONFIRMED,REJECTED,2,False
+1-1-direct_lease,first_proof_blackout,DIRECT_LEASE,True,expired_unused,True,335.429,,,,0,True
+1-2-direct_lease,first_proof_blackout,DIRECT_LEASE,True,expired_unused,True,336.3412,,,,0,True
+1-2-c2_auth_query,first_proof_blackout,C2_AUTH_QUERY,True,expired_unused,True,336.5287,1,CONFIRMED,REJECTED,3,False
