@@ -9,7 +9,7 @@
 | [`rdinp/`](../rdinp/) | C2 协议、JSON Schema、可运行实现、worker 与代理复现实验 | 运行协议或执行层检查 |
 | [`csods/`](../csods/) | 有限 DSL 合同搜索、方法说明、小型测试 | 审查搜索或复用正确性测试 |
 | [`literature/`](../literature/) | 核心 BibTeX、来源和 Zotero／Undermind 查找入口 | 引文交叉核对 |
-| [`research/`](../research/) | 其他工作机新增研究的约定与交接 | 审阅新研究分支 |
+| [`research/`](../research/) | 并行研究方向、复用工具及跨机交接 | 按方向定位证据或工作流 |
 | [`archive/genspace/`](../archive/genspace/) | CS-ODS、XR 基线、RDINP 近期研究与原始开发记录 | 查原论文、技术报告或逐例输出 |
 | [`archive/rdinp-history/`](../archive/rdinp-history/) | RDINP 老版本交付和证据边界 | 比较协议版本、复核早期结论 |
 | [`archive/v2x-development/`](../archive/v2x-development/) | OPV2V 回放、通信与计算测量、共享计算诊断 | 追溯车路协同数据和缺失证据 |

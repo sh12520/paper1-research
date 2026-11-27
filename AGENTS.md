@@ -10,9 +10,8 @@
 | 找目录、历史阶段或文件摘要 | [全局索引](docs/research-index.md) |
 | 查书目和原始文献 | [共享文献入口](literature/README.md) |
 | 接入其他电脑的研究 | [分支协作说明](research/README.md) |
-| 查项目技能、验证 harness 或接续 OPV2V 本机任务 | [跨机器工作导航](research/opv2v-deadline/autoresearch/NAVIGATION.md) |
 
-- 本机复现入口见 [RDINP](rdinp/README.md)、[CS-ODS](csods/README.md) 和 [OPV2V](research/opv2v-deadline/autoresearch/NAVIGATION.md)。逐实例目录适合按运行 ID、任务 ID 或查询 ID 精确查找。稀疏检出的补查方式见全局索引。
+- 本机复现从 [RDINP](rdinp/README.md) 或 [CS-ODS](csods/README.md) 进入。逐实例目录适合按运行 ID、任务 ID 或查询 ID 精确查找。稀疏检出的补查方式见全局索引。
 - 给出研究结论时，保留原报告的样本、条件和判定。分别标明受控工程验证、开发回放、未执行的确认实验和现场验证。看到准备就绪或批准待定时，以实际有效的运行授权为准。
 - 归档里的脚本、命令和旧提示词可用于追溯。执行范围以本次任务和现行授权为准。
 - 新记录写明日期、状态、证据路径和适用范围。更新状态时保留旧判定和来源；历史记录适合追加说明，避免覆盖原结果。

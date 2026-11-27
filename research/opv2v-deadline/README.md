@@ -5,10 +5,12 @@
 | 想找什么 | 入口 |
 | --- | --- |
 | 当前判断、适用边界和下一项决定性验证 | [CURRENT.md](CURRENT.md) |
-| R1 到 R2.6 的正负结果、数字和逐帧证据 | [EVIDENCE.md](EVIDENCE.md) · [历史路线](notes/local-history.md) |
-| 跨机复核、冻结输入、原计算源码 | [工作导航](autoresearch/NAVIGATION.md) · [最小复现](src/README.md) · [Autoresearch](autoresearch/README.md) |
+| R1 到 R2.6 的正负结果、数字和逐帧证据 | [EVIDENCE.md](EVIDENCE.md) |
+| 跨机复核、冻结输入、原计算源码 | [工作导航](autoresearch/NAVIGATION.md) |
 | 公开文献、两版 BlindMap 和数据来源 | [REFERENCES.md](REFERENCES.md) |
 | 从全局导航出发的实际找寻与断点 | [NAVIGATION_REVIEW.md](NAVIGATION_REVIEW.md) |
+
+历史路线与旁支见[历程笔记](notes/local-history.md)。
 
 仓库根目录运行 `python3 -B research/opv2v-deadline/src/check_packet_clock.py`，可核对一帧四种策略的原应用层字节与模型时间账本。标准库即可运行，无需模型、数据集或 GPU。
 
