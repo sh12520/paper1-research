@@ -2,6 +2,8 @@
 
 This subproject contains the graph-free contract-search implementation from the CS-ODS research branch. It enumerates an ordered prefix in a finite, capability-constrained communication-service contract language. The rank uses public inputs. The model covers three time steps and two public states and uses illustrative RAN, fronthaul, and edge capacities.
 
+For the manuscript, development results, and independent-proof evidence, see the [evidence index](../docs/evidence-index.md). The development record preserves the original route decisions and the confirmation authorization status.
+
 ## Quick start
 
 Run from this subproject directory with Python 3.10 or later. The demo and tests use the standard library. They need no input download.

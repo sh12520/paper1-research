@@ -2,6 +2,8 @@
 
 This research artifact includes the RDINP C2 negotiation prototype and four locally reproducible execution studies. The prototype uses signed HTTP messages and a single SQLite resource authority. The studies exercise a CPU worker, durable leases, stale-writer controls, and an actual Caddy reverse proxy.
 
+For the current study question and next evidence to collect, see [Current work](../docs/current-research.md). For archived run records, see the [evidence index](../docs/evidence-index.md).
+
 ## Quick start
 
 Run these commands from this directory. The export was tested with Python 3.13.9 and the pinned dependencies.
