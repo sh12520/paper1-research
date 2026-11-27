@@ -1,0 +1,40 @@
+{
+  "status": "blocked",
+  "finished_at": "2026-11-24T15:34:54.706896+00:00",
+  "thresholds": {
+    "free_mib": 16000,
+    "utilization": 10,
+    "temperature_c": 75
+  },
+  "ready_for_resource_check": false,
+  "gpu_leased": false,
+  "job_started": false,
+  "devices": [
+    {
+      "index": 0,
+      "free_mib": 11314,
+      "utilization": 100,
+      "temperature_c": 88,
+      "blockers": [
+        "existing_compute_processes",
+        "free_memory_below_limit",
+        "utilization_above_limit",
+        "temperature_above_limit"
+      ],
+      "compute_process_count": 2
+    },
+    {
+      "index": 1,
+      "free_mib": 12028,
+      "utilization": 100,
+      "temperature_c": 89,
+      "blockers": [
+        "existing_compute_processes",
+        "free_memory_below_limit",
+        "utilization_above_limit",
+        "temperature_above_limit"
+      ],
+      "compute_process_count": 2
+    }
+  ]
+}

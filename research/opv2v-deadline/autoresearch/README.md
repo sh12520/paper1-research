@@ -2,9 +2,19 @@
 
 本地工作流已用于训练例证据审计、冻结输入预检和 OPV2V 逐帧续跑。协作副本保留可移植的回执管理器、可核验的真实历史回执，以及 OPV2V 监督和文献收集流程的源码档案。原工作流与阶段入口见 [执行与归档](WORKFLOW.md)。交接、单变量实验和独立复核可复用 [角色提示模板](protocols/PROMPTS.md)。
 
+跨机器切换、项目技能和原机接续见 [工作导航](NAVIGATION.md) 与 [本地交接](local/README.md)。
+
 ## 最小验证
 
-Linux，Python 3.10 或更高版本，使用标准库。从仓库根目录执行：
+Linux、Python 3.10+ 和 GNU `sha256sum`。从仓库根目录运行统一只读检查。
+
+```bash
+python3 -B research/opv2v-deadline/autoresearch/scripts/check_shared_assets.py
+```
+
+统一入口验过 6 个原机交接文件和 11 个工作流文件的摘要、DAIR 封存回执、R1 一帧四策略包时钟，以及 16 份结果与 18 个截止表单元。本次 Ubuntu Python 3.10.12 实测墙钟 0.20 s、峰值 RSS 22,940 KiB，退出码 0。
+
+单项回执核对从仓库根目录执行。
 
 ```bash
 cd research/opv2v-deadline/autoresearch

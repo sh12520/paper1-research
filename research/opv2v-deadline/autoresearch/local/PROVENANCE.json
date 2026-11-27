@@ -1,0 +1,61 @@
+{
+  "schema": 1,
+  "files": [
+    {
+      "shared": "protocols/DAIR_FORMAL_VALIDATION.md",
+      "source": "configs/dair-v2x/FORMAL_VALIDATION.md",
+      "source_sha256": "54809f0805d29f56d10ea3bd784446bbaf3a94e3b2c5273f6facdfccbd3f77b3",
+      "shared_sha256": "54809f0805d29f56d10ea3bd784446bbaf3a94e3b2c5273f6facdfccbd3f77b3",
+      "projection": "byte-exact copy"
+    },
+    {
+      "shared": "protocols/OPV2V_R26_DEADLINE_FRONTIER.md",
+      "source": "configs/opv2v/R26_DEADLINE_FRONTIER.md",
+      "source_sha256": "14e8d0056c981df66164fe65a09ce7f624ba4a484ec6917e8f3541c1cb83c07e",
+      "shared_sha256": "14e8d0056c981df66164fe65a09ce7f624ba4a484ec6917e8f3541c1cb83c07e",
+      "projection": "byte-exact copy"
+    },
+    {
+      "shared": "audit_dair_validation_panel.py",
+      "source": "scripts/audit_dair_validation_panel.py",
+      "source_sha256": "f6ef64c8a1d9f6b45b7590f54fd9b570a7702853cb3562b9e78637e2e1f3ec8b",
+      "shared_sha256": "a839668af31d1ffe885329e8a5341ed6c750cf08e5709b5c58ffa7b655a14fb5",
+      "projection": "same availability inventory, with explicit frozen split and exclusive output"
+    },
+    {
+      "shared": "systemd/research-autoresearch.service.example",
+      "source": "experiments/autoresearch/research-autoresearch.service",
+      "source_sha256": "7fb34ba62be99d6ff5288de8a983ef0a7cb88efc520c98963fe9d143b6b5b854",
+      "shared_sha256": "733586afadf56acd5dc3a2314dc320336be8c4561322b90e04a8216a15ff8087",
+      "projection": "project and Python path placeholders"
+    },
+    {
+      "shared": "systemd/research-autoresearch.timer.example",
+      "source": "experiments/autoresearch/research-autoresearch.timer",
+      "source_sha256": "a252c0d8cbd06cece83ec94282bcf5cb2ecfa1d3a8503653103e3b884b77b56b",
+      "shared_sha256": "a252c0d8cbd06cece83ec94282bcf5cb2ecfa1d3a8503653103e3b884b77b56b",
+      "projection": "byte-exact copy, suffix marks a template"
+    },
+    {
+      "shared": "historical-gpu-preflight.json",
+      "source": "experiments/research-harness/gpu-preflight/20261124T153454412500Z-8976accd/gpu-readiness.json",
+      "source_sha256": "b59fddb8ce80bd66ac59e3d1764baf2c425e8ad3204201b1556d3679b1e15dc1",
+      "shared_sha256": "a20f6a321215230a7ff71ba5b4375c94247f4305d28d4377190cf7e913c206b4",
+      "projection": "projected original thresholds, metrics, status and blockers; hardware and process identifiers omitted"
+    }
+  ],
+  "reference_inputs_staying_local": [
+    {
+      "source": "configs/dair-v2x/val.json",
+      "source_sha256": "a0993520f5f91af282a96a2d542f3d837434b7a68392636f90bff050883fd832"
+    },
+    {
+      "source": "experiments/research-harness/gpu-preflight/20261124T153454412500Z-8976accd/receipt.json",
+      "source_sha256": "2a19cadbd0157f2669f7e0fb259343051a5e06edff751fd326b208bba04d9302"
+    },
+    {
+      "source": "experiments/autoresearch/SYSTEMD.md",
+      "source_sha256": "c510d313e3661f5ad3d1d6eb5f75d544748450e5b1166c18fd910bcb93e83051"
+    }
+  ]
+}

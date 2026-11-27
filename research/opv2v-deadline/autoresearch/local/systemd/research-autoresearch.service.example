@@ -1,0 +1,13 @@
+[Unit]
+Description=Advance the local OPV2V autoresearch workflow once
+ConditionPathExists=__SOURCE_ROOT__/scripts/autoresearch_opv2v.py
+
+[Service]
+Type=oneshot
+WorkingDirectory=__SOURCE_ROOT__
+ExecStart=__PYTHON__ -B -u __SOURCE_ROOT__/scripts/autoresearch_opv2v.py supervise
+Nice=10
+IOSchedulingClass=idle
+TimeoutStartSec=2min
+StandardOutput=append:__SOURCE_ROOT__/experiments/autoresearch/systemd-supervisor.log
+StandardError=inherit
