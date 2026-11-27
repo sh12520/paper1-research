@@ -4,6 +4,8 @@ Small, reproducible research examples for intent contracts and deadline-aware re
 
 本仓库集中维护论文 1 的两个研究方向。近期主线是 RDINP 的限时资源承诺及服务履约验证。较早的 CS-ODS 是能力约束合同搜索方向。分别从对应子目录运行。
 
+**从[论文 1 研究索引](docs/research-index.md)开始。** 索引按当前主线、关键证据和核验档案三层组织，附研究时间线。
+
 | Path | Contents |
 |---|---|
 | [`rdinp/`](rdinp/) | RDINP control-plane reference, local protocol checks and execution-layer diagnostics |
