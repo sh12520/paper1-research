@@ -1,0 +1,12 @@
+{
+  "reservation_sha256": "6974a50ee4e171ebd37f853793b3e6536eab8ff86343dc4068e068b91a5a57e4",
+  "finished_at": "2026-11-24T15:34:54.402051+00:00",
+  "result": {
+    "status": "passed",
+    "summary": "核对 138 条原始记录、366 条策略记录及 46 帧缓存一致性。范围为训练例。"
+  },
+  "outputs": {
+    "evidence-46.json": "cf62d285617beaf8df0db7c0258c7c4c56343d0e6f9b0ca894d959326712534b"
+  },
+  "receipt_sha256": "3c7cd10d16347dd8a24982e83634286d0ddf6be725a5e10bea37ebe2d072fa61"
+}

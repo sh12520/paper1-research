@@ -1,0 +1,300 @@
+{
+  "scope": "R1 modeled timing with original serialized application lengths; archive projection; no physical network or model rerun.",
+  "selection": "First frozen R1 sample by recorded ordinal, four original timing modes under 256 KiB / 100 Mbps / RTT 10 ms.",
+  "frame_key": "2021_08_18_19_48_05/000070/1045",
+  "source_path_in_original_checkout": "results/opv2v-formal/per-frame/0000.json",
+  "source_sha256": "abea3b6a1c7ceebcb7e84da3531abc704adf7904f51fafe7c99b4fceb1f20df7",
+  "original_module_sha256": "b7a34a7ea5bb419304c3fbce438803067631e1e51e1a03af92583ec1cecb8ed3",
+  "cases": [
+    {
+      "mode": "blindmap",
+      "budget_kib": 256,
+      "bandwidth_mbps": 100,
+      "rtt_ms": 10,
+      "channels": [
+        {
+          "sender": 1,
+          "first_bytes": 262026,
+          "extra_bytes": 0,
+          "request_bytes": 0
+        }
+      ],
+      "total_bytes": 262026,
+      "transmissions": [
+        {
+          "sender": 1,
+          "kind": "first",
+          "direction": "uplink",
+          "bytes": 262026,
+          "empty": false,
+          "select_start_ms": 5.0,
+          "ready_ms": 7.0,
+          "start_ms": 7.0,
+          "finish_ms": 27.96208,
+          "arrival_ms": 32.96208,
+          "fusion_start_ms": 32.96208,
+          "fusion_complete_ms": 35.96208
+        }
+      ],
+      "detection_stages": [
+        {
+          "start_ms": 5.0,
+          "ready_ms": 8.0,
+          "packets": []
+        },
+        {
+          "start_ms": 32.96208,
+          "ready_ms": 35.96208,
+          "packets": [
+            [
+              1,
+              "first"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "feedback",
+      "budget_kib": 256,
+      "bandwidth_mbps": 100,
+      "rtt_ms": 10,
+      "channels": [
+        {
+          "sender": 1,
+          "first_bytes": 261768,
+          "extra_bytes": 0,
+          "request_bytes": 272
+        }
+      ],
+      "total_bytes": 262040,
+      "transmissions": [
+        {
+          "sender": 1,
+          "kind": "request",
+          "direction": "downlink",
+          "bytes": 272,
+          "empty": false,
+          "select_start_ms": null,
+          "ready_ms": 5.0,
+          "start_ms": 5.0,
+          "finish_ms": 5.02176,
+          "arrival_ms": 10.02176,
+          "fusion_start_ms": null,
+          "fusion_complete_ms": null
+        },
+        {
+          "sender": 1,
+          "kind": "first",
+          "direction": "uplink",
+          "bytes": 261768,
+          "empty": false,
+          "select_start_ms": 11.02176,
+          "ready_ms": 13.02176,
+          "start_ms": 13.02176,
+          "finish_ms": 33.9632,
+          "arrival_ms": 38.9632,
+          "fusion_start_ms": 38.9632,
+          "fusion_complete_ms": 41.9632
+        }
+      ],
+      "detection_stages": [
+        {
+          "start_ms": 5.0,
+          "ready_ms": 8.0,
+          "packets": []
+        },
+        {
+          "start_ms": 38.9632,
+          "ready_ms": 41.9632,
+          "packets": [
+            [
+              1,
+              "first"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "parallel",
+      "budget_kib": 256,
+      "bandwidth_mbps": 100,
+      "rtt_ms": 10,
+      "channels": [
+        {
+          "sender": 1,
+          "first_bytes": 130732,
+          "extra_bytes": 130448,
+          "request_bytes": 272
+        }
+      ],
+      "total_bytes": 261452,
+      "transmissions": [
+        {
+          "sender": 1,
+          "kind": "request",
+          "direction": "downlink",
+          "bytes": 272,
+          "empty": false,
+          "select_start_ms": null,
+          "ready_ms": 5.0,
+          "start_ms": 5.0,
+          "finish_ms": 5.02176,
+          "arrival_ms": 10.02176,
+          "fusion_start_ms": null,
+          "fusion_complete_ms": null
+        },
+        {
+          "sender": 1,
+          "kind": "first",
+          "direction": "uplink",
+          "bytes": 130732,
+          "empty": false,
+          "select_start_ms": 5.0,
+          "ready_ms": 7.0,
+          "start_ms": 7.0,
+          "finish_ms": 17.45856,
+          "arrival_ms": 22.45856,
+          "fusion_start_ms": 22.45856,
+          "fusion_complete_ms": 25.45856
+        },
+        {
+          "sender": 1,
+          "kind": "extra",
+          "direction": "uplink",
+          "bytes": 130448,
+          "empty": false,
+          "select_start_ms": 11.02176,
+          "ready_ms": 13.02176,
+          "start_ms": 17.45856,
+          "finish_ms": 27.8944,
+          "arrival_ms": 32.8944,
+          "fusion_start_ms": 32.8944,
+          "fusion_complete_ms": 35.8944
+        }
+      ],
+      "detection_stages": [
+        {
+          "start_ms": 5.0,
+          "ready_ms": 8.0,
+          "packets": []
+        },
+        {
+          "start_ms": 22.45856,
+          "ready_ms": 25.45856,
+          "packets": [
+            [
+              1,
+              "first"
+            ]
+          ]
+        },
+        {
+          "start_ms": 32.8944,
+          "ready_ms": 35.8944,
+          "packets": [
+            [
+              1,
+              "first"
+            ],
+            [
+              1,
+              "extra"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "followup",
+      "budget_kib": 256,
+      "bandwidth_mbps": 100,
+      "rtt_ms": 10,
+      "channels": [
+        {
+          "sender": 1,
+          "first_bytes": 130732,
+          "extra_bytes": 130448,
+          "request_bytes": 272
+        }
+      ],
+      "total_bytes": 261452,
+      "transmissions": [
+        {
+          "sender": 1,
+          "kind": "first",
+          "direction": "uplink",
+          "bytes": 130732,
+          "empty": false,
+          "select_start_ms": 5.0,
+          "ready_ms": 7.0,
+          "start_ms": 7.0,
+          "finish_ms": 17.45856,
+          "arrival_ms": 22.45856,
+          "fusion_start_ms": 22.45856,
+          "fusion_complete_ms": 25.45856
+        },
+        {
+          "sender": 1,
+          "kind": "request",
+          "direction": "downlink",
+          "bytes": 272,
+          "empty": false,
+          "select_start_ms": null,
+          "ready_ms": 25.45856,
+          "start_ms": 25.45856,
+          "finish_ms": 25.48032,
+          "arrival_ms": 30.48032,
+          "fusion_start_ms": null,
+          "fusion_complete_ms": null
+        },
+        {
+          "sender": 1,
+          "kind": "extra",
+          "direction": "uplink",
+          "bytes": 130448,
+          "empty": false,
+          "select_start_ms": 31.48032,
+          "ready_ms": 33.48032,
+          "start_ms": 33.48032,
+          "finish_ms": 43.91616,
+          "arrival_ms": 48.91616,
+          "fusion_start_ms": 48.91616,
+          "fusion_complete_ms": 51.91616
+        }
+      ],
+      "detection_stages": [
+        {
+          "start_ms": 5.0,
+          "ready_ms": 8.0,
+          "packets": []
+        },
+        {
+          "start_ms": 22.45856,
+          "ready_ms": 25.45856,
+          "packets": [
+            [
+              1,
+              "first"
+            ]
+          ]
+        },
+        {
+          "start_ms": 48.91616,
+          "ready_ms": 51.91616,
+          "packets": [
+            [
+              1,
+              "first"
+            ],
+            [
+              1,
+              "extra"
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

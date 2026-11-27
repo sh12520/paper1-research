@@ -1,0 +1,849 @@
+#!/usr/bin/env python3
+"""Advance one checkpointed OPV2V research cycle or finish CPU-only reporting."""
+
+import argparse
+from datetime import datetime, timezone
+import fcntl
+import hashlib
+import json
+import os
+from pathlib import Path
+import subprocess
+import sys
+import time
+
+
+ROOT = Path(__file__).resolve().parents[1]
+STATE = ROOT / 'experiments/autoresearch'
+RESULTS = ROOT / 'results/autoresearch'
+FORMAL = ROOT / 'results/opv2v-formal'
+CONTROL = ROOT / 'results/opv2v-feedback-control'
+CONTROL_SMOKE = ROOT / 'results/opv2v-feedback-control-smoke'
+OPTIMIZED = ROOT / 'results/opv2v-sender-optimized'
+ORDINARY_35 = ROOT / 'results/opv2v-sender-deadline35'
+ORDINARY_35_SCRIPT = 'run_opv2v_sender_deadline_35.py'
+R2_PROTOCOL = ROOT / 'configs/opv2v/R2_PROGRESSIVE_TRANSMISSION.md'
+R21_PROTOCOL = ROOT / 'configs/opv2v/R2_1_FUSION_SCHEDULING.md'
+R22_PROTOCOL = ROOT / 'configs/opv2v/R22_INCREMENTAL_EVALUATION.md'
+R22_POSTPROCESS_PROTOCOL = ROOT / 'configs/opv2v/R22_POSTPROCESS_TIMING.md'
+R23_PROTOCOL = ROOT / 'configs/opv2v/R23_CANDIDATE_PREFILTER.md'
+R24_PROTOCOL = ROOT / 'configs/opv2v/R24_COALESCED_INFERENCE.md'
+R25_PROTOCOL = ROOT / 'configs/opv2v/R25_RECEIVE_COMPUTE_PIPELINE.md'
+R26_PROTOCOL = ROOT / 'configs/opv2v/R26_DEADLINE_FRONTIER.md'
+R2_ORDER = ROOT / 'results/opv2v-r2-order'
+R2_GRANULARITY = ROOT / 'results/opv2v-r2-granularity'
+R2_SCREEN = STATE / 'r2-granularity-screen.jsonl'
+R21_PROFILE = ROOT / 'results/opv2v-r21-profile'
+R21_FUSION = ROOT / 'results/opv2v-r21-fusion'
+R22_FUSION = ROOT / 'results/opv2v-r22-fusion'
+R22_POSTPROCESS = ROOT / 'results/opv2v-r22-postprocess'
+R23 = ROOT / 'results/opv2v-r23'
+R24 = ROOT / 'results/opv2v-r24'
+R25 = ROOT / 'results/opv2v-r25'
+R26 = ROOT / 'results/opv2v-r26'
+PANEL = ROOT / 'datasets/opv2v-test-official/panel.jsonl'
+PRIMARY = '256KiB_100Mbps_rtt10ms_d50ms'
+HISTORY = STATE / 'receipts'
+PROTOCOL = ROOT / 'configs/opv2v/FORMAL_VALIDATION.md'
+
+
+def utc():
+    return datetime.now(timezone.utc)
+
+
+def digest(path):
+    with path.open('rb') as stream:
+        return hashlib.file_digest(stream, 'sha256').hexdigest()
+
+
+def atomic(path, contents):
+    tmp = path.with_suffix(path.suffix + '.part')
+    tmp.write_text(json.dumps(contents, ensure_ascii=False, indent=2, allow_nan=False) + '\n')
+    os.replace(tmp, path)
+
+
+def read(path):
+    return json.loads(path.read_text()) if path.is_file() else {}
+
+
+def script(name, *args, capture=False):
+    return subprocess.run([sys.executable, '-B', '-u', str(ROOT / 'scripts' / name), *map(str, args)],
+                          cwd=ROOT, text=True, check=True, capture_output=capture).stdout
+
+
+def indexed_records(path):
+    return sum(1 for _ in path.glob('[0-9][0-9][0-9][0-9].json'))
+
+
+def frames(path):
+    return indexed_records(path / 'per-frame')
+
+
+def unit_state(unit):
+    process = subprocess.run(['systemctl', '--user', 'show', f'{unit}.service', '-p', 'ActiveState',
+                              '--value'], capture_output=True, text=True, check=False)
+    return process.stdout.strip() or 'inactive'
+
+
+def enqueue(unit, name, *args, nice=10):
+    state = unit_state(unit)
+    if state in {'active', 'activating', 'deactivating', 'reloading', 'failed'}:
+        return state
+    log = STATE / (unit + '.log')
+    subprocess.run(['systemd-run', '--user', '--quiet', '--unit=' + unit, f'--property=Nice={nice}',
+                    '--property=WorkingDirectory=' + str(ROOT), '--property=StandardOutput=append:' + str(log),
+                    '--property=StandardError=inherit', '--setenv=OMP_NUM_THREADS=2',
+                    '--setenv=PYTHONDONTWRITEBYTECODE=1', sys.executable, '-B', '-u', str(ROOT / 'scripts' / name),
+                    *map(str, args)], check=True)
+    return 'queued'
+
+
+def current_coverage():
+    completed, extra = frames(FORMAL), frames(CONTROL)
+    prior = read(STATE / 'status.json').get('coverage', {})
+    prior_summary = ROOT / prior.get('summary', '')
+    latest = sorted(RESULTS.glob('coverage-*/coverage.json'), reverse=True)
+    latest_relevant = read(latest[0]) if latest else {}
+    if prior.get('source_frame_counts') == [completed, extra] and 'status' in prior and prior_summary.is_file() and (
+            not latest or prior_summary == latest[0]):
+        return prior
+    formal_counts = latest_relevant.get('frame_counts', {})
+    control_counts = latest_relevant.get('exploratory', {}).get('frame_counts', {})
+    if latest and sum(formal_counts.get(key, 0) for key in ('audited', 'invalid')) == completed and (
+            sum(control_counts.get(key, 0) for key in ('audited', 'invalid')) == extra):
+        summary = latest[0]
+    else:
+        result = subprocess.run([sys.executable, '-B', str(ROOT / 'scripts/opv2v_autoresearch_coverage.py')],
+                                cwd=ROOT, text=True, capture_output=True)
+        if result.returncode not in (0, 2) or not result.stdout.strip():
+            raise RuntimeError(result.stderr.strip() or 'Coverage tool failed before saving a receipt')
+        summary = Path(json.loads(result.stdout.splitlines()[-1])['snapshot']) / 'coverage.json'
+    contents = read(summary)
+    return {'source_frame_counts': [completed, extra], 'summary': str(summary.relative_to(ROOT)),
+            'summary_sha256': digest(summary), 'frame_counts': contents['frame_counts'],
+            'frozen_schedule_detections': contents['frozen_schedule_detections'],
+            'status': contents['status'],
+            'exploratory': contents.get('exploratory'),
+            'formal_coverage_complete': contents['formal_coverage_complete']}
+
+
+def formal_complete():
+    base = FORMAL / 'reports'
+    if not read(base / (PRIMARY + '.json')).get('formal_result_allowed'):
+        return False
+    return read(base / 'diagnostics.json').get('formal_result_allowed') is True and (base / 'budget-and-deadline.png').is_file()
+
+
+def advance_r2(details):
+    details.update(r2_protocol_sha256=digest(R2_PROTOCOL), r2_order_frames=frames(R2_ORDER),
+                   r2_granularity_screen_frames=frames(R2_GRANULARITY / 'screen'))
+    order_smoke = R2_ORDER / 'smoke/verification.json'
+    gran_smoke = R2_GRANULARITY / 'smoke/verification.json'
+    dispatch = read(R2_ORDER / 'dispatch-ready.json')
+    for key, artifact in (
+            ('r2_path_audit', ROOT / 'results/opv2v-r2-audit/b-path-audit.json'),
+            ('r2_queue_preflight', ROOT / 'results/opv2v-r2-order-preflight/queue.json'),
+            ('r2_archived_50ms', ROOT / 'results/opv2v-r2-order-preflight/full-state-50ms.json'),
+            ('r2_receiver_service_probe', ROOT / 'results/opv2v-r2-order-preflight/receiver-service-sensitivity.json'),
+            ('r2_development_cpu_pilot', ROOT / 'results/opv2v-r2-order-cpu-dev/result.json'),
+            ('r2_development_cpu_repeat', ROOT / 'results/opv2v-r2-order-cpu-dev-repeat/report.json'),
+            ('r2_order_smoke', order_smoke), ('r2_granularity_smoke', gran_smoke)):
+        if artifact.is_file():
+            details[key] = str(artifact.relative_to(ROOT))
+    if R21_PROTOCOL.is_file():
+        return advance_r21(details, gran_smoke)
+    if not (R2_ORDER / 'completion.json').is_file():
+        order_runner = ROOT / 'scripts/run_opv2v_r2_order.py'
+        if (order_smoke.is_file() and dispatch.get('status') == 'verified'
+                and dispatch.get('runner_sha256') == digest(order_runner)
+                and dispatch.get('smoke_sha256') == digest(order_smoke)):
+            details['r2_order_worker'] = enqueue('research-opv2v-r2-order', 'autoresearch_opv2v.py', 'r2-order-run')
+            return 'r2_order_replay', details
+        return 'r2_order_codec_verification', details
+    order_report = RESULTS / 'r2-order.json'
+    if order_report.is_file():
+        details['r2_order_report'] = str(order_report.relative_to(ROOT))
+        details['r2_order_decision'] = read(order_report).get('decision')
+    else:
+        details['r2_order_report_worker'] = enqueue('research-opv2v-r2-order-report', 'report_opv2v_r2_order.py')
+    gran_summary = R2_GRANULARITY / 'screen/summary.json'
+    if gran_summary.is_file():
+        details['r2_granularity_screen'] = str(gran_summary.relative_to(ROOT))
+        gran_report = R2_GRANULARITY / 'granularity-report.json'
+        if gran_report.is_file():
+            details['r2_granularity_report'] = str(gran_report.relative_to(ROOT))
+        else:
+            details['r2_granularity_report_worker'] = enqueue('research-opv2v-r2-granularity-report',
+                'report_opv2v_r2_granularity.py')
+        runtime = ROOT / 'results/opv2v-r2-runtime'
+        if (runtime / 'gpu/completion.json').is_file():
+            details['r2_gpu_runtime_report'] = str((runtime / 'gpu/completion.json').relative_to(ROOT))
+        elif (runtime / 'cpu/completion.json').is_file() and unit_state('research-opv2v-r2-granularity') not in {'active', 'activating'}:
+            details['r2_gpu_runtime_worker'] = enqueue('research-opv2v-r2-runtime', 'autoresearch_opv2v.py', 'r2-runtime-run')
+    elif gran_smoke.is_file() and R2_SCREEN.is_file() and unit_state('research-opv2v-r2-order') not in {'active', 'activating'}:
+        details['r2_granularity_worker'] = enqueue('research-opv2v-r2-granularity', 'autoresearch_opv2v.py', 'r2-granularity-run')
+        return 'r2_granularity_replay', details
+    if order_report.is_file() and gran_summary.is_file():
+        return 'r2_screen_followup', details
+    return 'r2_order_analysis', details
+
+
+def advance_r21(details, gran_smoke):
+    details.update(r21_protocol_sha256=digest(R21_PROTOCOL),
+                   r2_full_order_dispatch='paused_by_r21', dynamic_send='HOLD', r3='HOLD')
+    if R22_PROTOCOL.is_file():
+        details['r22_protocol_sha256'] = digest(R22_PROTOCOL)
+        details['r22_fusion_frames'] = frames(R22_FUSION / 'screen')
+    for label, artifact in (
+            ('r21_order_pause', STATE / 'r21-order-pause.json'),
+            ('r21_packet_pipeline', ROOT / 'results/opv2v-r21-pipeline/summary.json'),
+            ('r21_archived_B35_hardware', ROOT / 'results/opv2v-r21-pipeline/archived-B35-hardware.json'),
+            ('r21_profile_cpu_acceptance', R21_PROFILE / 'cpu/completion.json'),
+            ('r21_fusion_cpu_acceptance', R21_FUSION / 'smoke/verification.json')):
+        if artifact.is_file():
+            details[label] = str(artifact.relative_to(ROOT))
+    if unit_state('research-opv2v-r2-order') in {'active', 'activating', 'deactivating', 'reloading'}:
+        return 'r21_waiting_for_order_release', details
+    gran_summary = R2_GRANULARITY / 'screen/summary.json'
+    if not gran_summary.is_file():
+        if gran_smoke.is_file() and R2_SCREEN.is_file():
+            details['r2_granularity_worker'] = enqueue('research-opv2v-r2-granularity', 'autoresearch_opv2v.py', 'r2-granularity-run')
+        return 'r21_granularity_screen', details
+    details['r2_granularity_screen'] = str(gran_summary.relative_to(ROOT))
+    report = R2_GRANULARITY / 'granularity-report.json'
+    if report.is_file():
+        details['r2_granularity_report'] = str(report.relative_to(ROOT))
+    else:
+        details['r2_granularity_report_worker'] = enqueue('research-opv2v-r2-granularity-report', 'report_opv2v_r2_granularity.py')
+    profile = R21_PROFILE / 'gpu/completion.json'
+    if not profile.is_file():
+        dispatch = read(R21_PROFILE / 'dispatch-ready.json')
+        smoke = R21_PROFILE / 'cpu/completion.json'
+        runner = ROOT / 'scripts/run_opv2v_r21_profile.py'
+        if (smoke.is_file() and dispatch.get('status') == 'verified'
+                and dispatch.get('runner_sha256') == digest(runner)
+                and dispatch.get('cpu_completion_sha256') == digest(smoke)
+                and dispatch.get('r21_protocol_sha256') == digest(R21_PROTOCOL)
+                and unit_state('research-opv2v-r2-granularity') not in {'active', 'activating'}):
+            details['r21_profile_worker'] = enqueue('research-opv2v-r21-profile', 'autoresearch_opv2v.py', 'r21-profile-run')
+        return 'r21_receiver_profile', details
+    details['r21_gpu_profile'] = str(profile.relative_to(ROOT))
+    if R22_PROTOCOL.is_file():
+        return advance_r22(details)
+    fusion = R21_FUSION / 'screen/summary.json'
+    if not fusion.is_file():
+        dispatch = read(R21_FUSION / 'dispatch-ready.json')
+        smoke = ROOT / dispatch.get('smoke_path', '')
+        protocol = ROOT / dispatch.get('protocol_path', '')
+        runner = ROOT / 'scripts/run_opv2v_r21_fusion.py'
+        if (smoke.is_relative_to(R21_FUSION) and smoke.is_file() and dispatch.get('status') == 'verified'
+                and dispatch.get('runner_sha256') == digest(runner)
+                and dispatch.get('smoke_sha256') == digest(smoke)
+                and protocol.is_file() and dispatch.get('protocol_sha256') == digest(protocol)
+                and unit_state('research-opv2v-r21-profile') not in {'active', 'activating'}):
+            details['r21_fusion_worker'] = enqueue('research-opv2v-r21-fusion', 'autoresearch_opv2v.py', 'r21-fusion-run')
+        return 'r21_controlled_fusion', details
+    details['r21_controlled_fusion'] = str(fusion.relative_to(ROOT))
+    decision = RESULTS / 'r21-decision.json'
+    report_runner = ROOT / 'scripts/report_opv2v_r21_decision.py'
+    if decision.is_file():
+        details['r21_decision'] = str(decision.relative_to(ROOT))
+        return 'r21_complete', details
+    if report.is_file() and report_runner.is_file():
+        details['r21_decision_worker'] = enqueue('research-opv2v-r21-decision', report_runner.name)
+    return 'r21_integrated_analysis', details
+
+
+def advance_r22(details):
+    smoke = R22_FUSION / 'smoke/verification.json'
+    telemetry = R22_FUSION / 'screen/telemetry-summary.json'
+    if not telemetry.is_file():
+        dispatch = read(R22_FUSION / 'dispatch-ready.json')
+        runner = ROOT / 'scripts/run_opv2v_r22_fusion.py'
+        reporter = ROOT / 'scripts/report_opv2v_r22_fusion.py'
+        if dispatch.get('smoke_path'):
+            smoke = ROOT / dispatch['smoke_path']
+        if (dispatch.get('status') == 'verified' and runner.is_file() and smoke.is_relative_to(R22_FUSION) and smoke.is_file()
+                and dispatch.get('runner_sha256') == digest(runner)
+                and dispatch.get('smoke_sha256') == digest(smoke)
+                and dispatch.get('r22_protocol_sha256') == digest(R22_PROTOCOL)
+                and reporter.is_file() and dispatch.get('reporter_sha256') == digest(reporter)
+                and unit_state('research-opv2v-r21-profile') not in {'active', 'activating'}):
+            details['r22_fusion_worker'] = enqueue('research-opv2v-r22-fusion', 'autoresearch_opv2v.py', 'r22-fusion-run')
+        return 'r22_controlled_fusion', details
+    details['r22_fusion_telemetry'] = str(telemetry.relative_to(ROOT))
+    replay = RESULTS / 'r22-serial-replay.json'
+    script_path = ROOT / 'scripts/report_opv2v_r22_serial_replay.py'
+    if replay.is_file():
+        details['r22_serial_replay'] = str(replay.relative_to(ROOT))
+        details['r22_next_focus'] = read(replay)['decision']
+        if (R22_POSTPROCESS_PROTOCOL.is_file()
+                and details['r22_next_focus']['next_focus'] == 'current_serial_compute_deadline_limit'):
+            return advance_r22_postprocess(details)
+        return 'r22_complete', details
+    if script_path.is_file():
+        details['r22_serial_replay_worker'] = enqueue('research-opv2v-r22-serial-replay', script_path.name)
+    return 'r22_serial_replay', details
+
+
+def advance_r22_postprocess(details):
+    runner = ROOT / 'scripts/run_opv2v_r22_postprocess.py'
+    details['r22_postprocess_protocol_sha256'] = digest(R22_POSTPROCESS_PROTOCOL)
+    timing = R22_POSTPROCESS / 'profile/completion.json'
+    if timing.is_file():
+        details['r22_postprocess_profile'] = str(timing.relative_to(ROOT))
+        if R23_PROTOCOL.is_file():
+            return advance_r23(details)
+        return 'r22_complete', details
+    capture = R22_POSTPROCESS / 'capture/completion.json'
+    if capture.is_file():
+        details['r22_postprocess_cpu_worker'] = enqueue('research-opv2v-r22-postprocess-cpu', runner.name, '--profile', nice=15)
+        return 'r22_cpu_postprocess_profile', details
+    verified = read(R22_POSTPROCESS / 'dispatch-ready.json')
+    if verified.get('status') == 'verified' and runner.is_file() and verified.get('runner_sha256') == digest(runner):
+        details['r22_postprocess_capture_worker'] = enqueue('research-opv2v-r22-postprocess-capture',
+                                                             'autoresearch_opv2v.py', 'r22-postprocess-capture')
+    return 'r22_postprocess_capture', details
+
+
+def advance_r23(details):
+    cpu = R23 / 'cpu-smoke/completion.json'
+    smoke = R23 / 'smoke/completion.json'
+    screen = R23 / 'screen/completion.json'
+    report = R23 / 'report.json'
+    budget = R23 / 'deadline-budget.json'
+    nms = R23 / 'nms-probe/completion.json'
+    incremental = R23 / 'incremental-control.json'
+    core = ROOT / 'scripts/opv2v_r23_prefilter.py'
+    runner = ROOT / 'scripts/run_opv2v_r23.py'
+    reporter = ROOT / 'scripts/report_opv2v_r23.py'
+    details.update(r23_protocol_sha256=digest(R23_PROTOCOL), r23_frames=frames(screen.parent),
+                   r23_full_input_frames=indexed_records(screen.parent / 'full-validation'))
+    for label, path in (('cpu_acceptance', cpu), ('gpu_acceptance', smoke), ('panel_completion', screen), ('report', report)):
+        if path.is_file():
+            details['r23_' + label] = str(path.relative_to(ROOT))
+    evidence = read(report)
+    if evidence.get('status') == 'failed_equivalence':
+        details['r23_decision'] = evidence.get('decision')
+        return 'r23_equivalence_failed', details
+    if evidence.get('status') == 'complete':
+        details['r23_decision'] = evidence.get('decision')
+        if read(budget).get('paired_report_sha256') != digest(report):
+            details['r23_deadline_budget_worker'] = enqueue('research-opv2v-r23-deadline-budget',
+                                                           'report_opv2v_r23_deadline_budget.py', nice=15)
+            return 'r23_deadline_budget', details
+        details['r23_deadline_budget'] = str(budget.relative_to(ROOT))
+        stages = evidence['timing']['per_scope']['cooperative']
+        post = stages.get('optimized.measurement.untraced_cpu_postprocess_wall_ms', {}).get('p50', 0)
+        nms_wall = stages.get('optimized.traced_cpu_stage_total_ms.rotated_nms', {}).get('p50', 0)
+        ratio = nms_wall / post if post else 0
+        details['r23_residual_nms_to_postprocess_p50_ratio'] = ratio
+        if ratio >= .30 and details['r23_decision'].get('largest_profiled_residual_cpu_postprocess_component') == 'rotated_nms':
+            if read(nms).get('paired_r23_report_sha256') == digest(report):
+                details['r23_residual_nms_probe'] = str(nms.relative_to(ROOT))
+            else:
+                nms_runner = ROOT / 'scripts/run_opv2v_r23_nms_probe.py'
+                if nms_runner.is_file():
+                    details['r23_residual_nms_worker'] = enqueue('research-opv2v-r23-nms-probe', nms_runner.name, nice=15)
+                return 'r23_residual_cpu_nms', details
+        if details['r23_decision'].get('next_focus') == 'validate_incremental_fusion_compute_budget':
+            if read(incremental).get('primary_report_sha256') == digest(report):
+                details['r23_incremental_control'] = str(incremental.relative_to(ROOT))
+            else:
+                control = ROOT / 'scripts/report_opv2v_r23_incremental_control.py'
+                if control.is_file():
+                    details['r23_incremental_control_worker'] = enqueue('research-opv2v-r23-incremental-control',
+                                                                      control.name, nice=15)
+                return 'r23_incremental_control', details
+        if R24_PROTOCOL.is_file():
+            return advance_r24(details)
+        return 'r23_complete', details
+    if screen.is_file():
+        if reporter.is_file():
+            details['r23_report_worker'] = enqueue('research-opv2v-r23-report', reporter.name, nice=15)
+        return 'r23_analysis', details
+    if not cpu.is_file() or not core.is_file() or not runner.is_file():
+        if (R23 / 'cpu-smoke/failure.json').is_file():
+            details['r23_cpu_mismatch'] = str((R23 / 'cpu-smoke/failure.json').relative_to(ROOT))
+            return 'r23_cpu_acceptance_blocked', details
+        return 'r23_prepare_cpu_acceptance', details
+    proof = read(cpu)
+    if (proof.get('status') != 'complete' or proof.get('all_exact') is not True or proof.get('states_verified') != 4
+            or proof.get('core_sha256') != digest(core)):
+        return 'r23_cpu_acceptance_blocked', details
+    if smoke.is_file():
+        accepted = read(smoke)
+        smoke_run = smoke.parent / 'run.json'
+        hashes = read(smoke_run).get('scripts_sha256', {})
+        if (accepted.get('status') != 'verified' or accepted.get('all_frames_verified') is not True
+                or not smoke_run.is_file() or accepted.get('run_sha256') != digest(smoke_run)
+                or hashes.get(core.name) != digest(core) or hashes.get(runner.name) != digest(runner)):
+            return 'r23_gpu_acceptance_failed', details
+        details['r23_panel_worker'] = enqueue('research-opv2v-r23-panel', 'autoresearch_opv2v.py', 'r23-panel')
+        return 'r23_panel', details
+    details['r23_gpu_acceptance_worker'] = enqueue('research-opv2v-r23-smoke', 'autoresearch_opv2v.py', 'r23-smoke')
+    return 'r23_gpu_acceptance', details
+
+
+def advance_r24(details):
+    screen = R24 / 'screen/completion.json'
+    dispatch = R24 / 'dispatch-ready.json'
+    report = R24 / 'report.json'
+    followup = R24 / 'mechanism.json'
+    rules = ROOT / 'scripts/opv2v_r24_schedule.py'
+    runner = ROOT / 'scripts/run_opv2v_r24.py'
+    reporter = ROOT / 'scripts/report_opv2v_r24.py'
+    details.update(r24_protocol_sha256=digest(R24_PROTOCOL), r24_frames=frames(screen.parent))
+    for label, path in (('dispatch', dispatch), ('panel_completion', screen), ('report', report), ('mechanism', followup)):
+        if path.is_file():
+            details['r24_' + label] = str(path.relative_to(ROOT))
+    evidence = read(report)
+    if evidence.get('status') == 'complete':
+        details['r24_decision'] = evidence.get('decision')
+        if read(followup).get('primary_report_sha256') == digest(report):
+            if R25_PROTOCOL.is_file():
+                return advance_r25(details)
+            return 'r24_complete', details
+        script_path = ROOT / 'scripts/report_opv2v_r24_mechanism.py'
+        if script_path.is_file():
+            details['r24_mechanism_worker'] = enqueue('research-opv2v-r24-mechanism', script_path.name, nice=15)
+        return 'r24_mechanism', details
+    if evidence.get('status') in {'failed_exactness', 'failed_equivalence', 'mismatch'}:
+        details['r24_decision'] = evidence.get('decision')
+        return 'r24_equivalence_failed', details
+    if screen.is_file():
+        if reporter.is_file():
+            details['r24_report_worker'] = enqueue('research-opv2v-r24-report', reporter.name, nice=15)
+        return 'r24_analysis', details
+    gate = read(dispatch)
+    if not gate:
+        return 'r24_prepare_dispatch', details
+    inputs = (R24_PROTOCOL, rules, runner, R24 / 'cpu-validation.json', R24 / 'requirements.json', R23 / 'report.json')
+    if gate.get('status') != 'verified' or any(not path.is_file() or gate.get('sha256', {}).get(
+            str(path.relative_to(ROOT))) != digest(path) for path in inputs):
+        return 'r24_dispatch_evidence_changed', details
+    details['r24_panel_worker'] = enqueue('research-opv2v-r24-panel', 'autoresearch_opv2v.py', 'r24-panel')
+    return 'r24_gpu_states', details
+
+
+def advance_r25(details):
+    gate_path = R25 / 'dispatch-ready.json'
+    cpu = R25 / 'cpu-equivalence.json'
+    graph = R25 / 'dependency-graph.json'
+    plan = R25 / 'requirements.json'
+    smoke = R25 / 'smoke.json'
+    overlap = R25 / 'live-overlap/completion.json'
+    screen = R25 / 'screen/completion.json'
+    report = R25 / 'report.json'
+    followup = R25 / 'tail-diagnostic.json'
+    scripts = ROOT / 'scripts'
+    core = scripts / 'opv2v_r25_pipeline.py'
+    runner = scripts / 'run_opv2v_r25.py'
+    reporter = scripts / 'report_opv2v_r25.py'
+    details.update(r25_protocol_sha256=digest(R25_PROTOCOL), r25_frames=frames(screen.parent))
+    for label, path in (('dependency_graph', graph), ('cpu_equivalence', cpu), ('plan', plan), ('smoke', smoke),
+                        ('live_overlap', overlap), ('panel_completion', screen), ('report', report),
+                        ('tail_diagnostic', followup), ('checkpoint_timing', R25 / 'checkpoint-latency.json'),
+                        ('cpu_waiting_frames', R25 / 'outstanding-cpu/completion.json'),
+                        ('compact_wire_probe', R25 / 'compact-wire-timing.json'),
+                        ('historical_dependency_floor', R25 / 'dependency-floor-historical.json'),
+                        ('pose_grid_probe', R25 / 'pose-grid-probe.json')):
+        if path.is_file():
+            details['r25_' + label] = str(path.relative_to(ROOT))
+    evidence = read(report)
+    if evidence.get('status') == 'complete':
+        details['r25_decision'] = evidence.get('decision')
+        if (details['r25_decision']['increased_complete_detection_coverage']
+                or read(followup).get('primary_report_sha256') == digest(report)):
+            if R26_PROTOCOL.is_file():
+                return advance_r26(details)
+            return 'r25_complete', details
+        details['r25_tail_worker'] = enqueue('research-opv2v-r25-tail', 'report_opv2v_r25_tail.py', nice=15)
+        return 'r25_tail_diagnostic', details
+    if evidence.get('status') in {'failed_exactness', 'failed_equivalence', 'mismatch'}:
+        return 'r25_equivalence_failed', details
+    for proof in (cpu, smoke, overlap):
+        if proof.is_file() and read(proof).get('status') != 'verified':
+            return 'r25_equivalence_failed', details
+    if screen.is_file():
+        if reporter.is_file():
+            details['r25_report_worker'] = enqueue('research-opv2v-r25-report', reporter.name, nice=15)
+        return 'r25_analysis', details
+    gate = read(gate_path)
+    if not gate:
+        return 'r25_prepare_dispatch', details
+    inputs = (R25_PROTOCOL, graph, cpu, plan, core, runner, reporter, scripts / 'run_opv2v_r25_overlap.py', R24 / 'report.json')
+    if gate.get('status') != 'verified' or any(not path.is_file() or gate.get('sha256', {}).get(
+            str(path.relative_to(ROOT))) != digest(path) for path in inputs):
+        return 'r25_dispatch_evidence_changed', details
+    if not smoke.is_file():
+        details['r25_smoke_worker'] = enqueue('research-opv2v-r25-smoke', 'autoresearch_opv2v.py', 'r25-smoke')
+        return 'r25_gpu_smoke', details
+    if not overlap.is_file():
+        details['r25_overlap_worker'] = enqueue('research-opv2v-r25-overlap', 'autoresearch_opv2v.py', 'r25-overlap')
+        return 'r25_live_overlap', details
+    details['r25_panel_worker'] = enqueue('research-opv2v-r25-panel', 'autoresearch_opv2v.py', 'r25-panel')
+    return 'r25_gpu_panel', details
+
+
+def advance_r26(details):
+    gate_path = R26 / 'dispatch-ready.json'
+    plan = R26 / 'requirements.json'
+    smoke = R26 / 'smoke.json'
+    screen = R26 / 'screen/completion.json'
+    report = R26 / 'report.json'
+    audit = R26 / 'independent-validation.md'
+    resource_study = R26 / 'resource-sensitivity.json'
+    scripts = ROOT / 'scripts'
+    runner = scripts / 'run_opv2v_r26.py'
+    reporter = scripts / 'report_opv2v_r26.py'
+    details.update(r26_protocol_sha256=digest(R26_PROTOCOL), r26_frames=frames(screen.parent))
+    for label, path in (('plan', plan), ('dispatch', gate_path), ('gpu_smoke', smoke), ('panel_completion', screen),
+                        ('report', report), ('independent_audit', audit), ('resource_sensitivity', resource_study)):
+        if path.is_file():
+            details['r26_' + label] = str(path.relative_to(ROOT))
+    evidence = read(report)
+    if evidence.get('status') == 'complete':
+        details['r26_decision'] = evidence.get('decision')
+        if read(resource_study).get('primary_report_sha256') != digest(report):
+            followup = scripts / 'report_opv2v_r26_resources.py'
+            if followup.is_file():
+                details['r26_resource_worker'] = enqueue('research-opv2v-r26-resources', followup.name, nice=15)
+            return 'r26_resource_sensitivity', details
+        return ('r26_complete' if audit.is_file() else 'r26_independent_audit_pending'), details
+    if evidence.get('status') in {'failed_exactness', 'failed_equivalence', 'mismatch'}:
+        return 'r26_equivalence_failed', details
+    if screen.is_file():
+        if reporter.is_file():
+            details['r26_report_worker'] = enqueue('research-opv2v-r26-report', reporter.name, nice=15)
+        return 'r26_analysis', details
+    if smoke.is_file() and read(smoke).get('status') != 'verified':
+        return 'r26_equivalence_failed', details
+    gate = read(gate_path)
+    if not gate:
+        return 'r26_prepare_dispatch', details
+    inputs = (R26_PROTOCOL, plan, runner, R25 / 'screen/completion.json', R25 / 'report.json',
+              R25 / 'compact-wire-timing.json', scripts / 'opv2v_r25_pipeline.py')
+    if gate.get('status') != 'verified' or any(not path.is_file() or gate.get('sha256', {}).get(
+            str(path.relative_to(ROOT))) != digest(path) for path in inputs):
+        return 'r26_dispatch_evidence_changed', details
+    if not smoke.is_file():
+        details['r26_smoke_worker'] = enqueue('research-opv2v-r26-smoke', 'autoresearch_opv2v.py', 'r26-smoke')
+        return 'r26_gpu_smoke', details
+    details['r26_panel_worker'] = enqueue('research-opv2v-r26-panel', 'autoresearch_opv2v.py', 'r26-panel')
+    return 'r26_gpu_panel', details
+
+
+def advance(coverage):
+    formal = unit_state('research-opv2v-evaluate')
+    if coverage.get('status') == 'invalid_formal_artifacts' or coverage['frame_counts']['invalid']:
+        return 'formal_artifact_review', {'formal_worker': formal}
+    if not coverage['formal_coverage_complete']:
+        return 'formal_inference', {'formal_worker': enqueue('research-opv2v-evaluate', 'complete_opv2v_evaluation.py')}
+    if not formal_complete():
+        if formal in {'active', 'activating', 'deactivating'}:
+            return 'formal_statistics', {'formal_worker': formal}
+        return 'formal_statistics', {'report_worker': enqueue('research-opv2v-formal-reports', 'autoresearch_opv2v.py', 'formal-reports')}
+    if not (CONTROL_SMOKE / 'verification.json').is_file():
+        return 'control_verification', {'verification_worker': enqueue('research-opv2v-control-verification',
+                'run_opv2v_feedback_control.py', CONTROL_SMOKE, '--reference', FORMAL, '--verify-smoke', '--gpu', 'cpu')}
+    smoke = read(CONTROL_SMOKE / 'verification.json')
+    if (smoke.get('smoke_excluded') is not True
+            or smoke.get('runner_sha256') != digest(ROOT / 'scripts/run_opv2v_feedback_control.py')
+            or smoke.get('reference_sha256') != digest(ROOT / 'results/opv2v-budget-guard-smoke/verification.json')
+            or not smoke.get('record', {}).get('exact_application_packet_roundtrips')):
+        return 'control_provenance_review', {'verification_receipt': str((CONTROL_SMOKE / 'verification.json').relative_to(ROOT))}
+    if not (CONTROL / 'detections.jsonl').is_file():
+        return 'matched_feedback_control', {'control_worker': enqueue('research-opv2v-feedback-control',
+                'autoresearch_opv2v.py', 'control-run')}
+    if (coverage['exploratory'] or {}).get('coverage_complete') is not True:
+        return 'control_artifact_review', {'artifact_status': coverage['exploratory']}
+    report = RESULTS / 'feedback-attribution.json'
+    details = {'bilateral_prototype': 'HOLD'}
+    if not report.is_file():
+        details['attribution_worker'] = enqueue('research-opv2v-feedback-attribution',
+                                               'report_opv2v_feedback_attribution.py', '--output', report)
+    abc = RESULTS / 'marginal-abc.json'
+    if not abc.is_file():
+        details['marginal_abc_worker'] = enqueue('research-opv2v-marginal-abc', 'report_opv2v_marginal.py',
+                                                '--abc-only', '--output', abc)
+    else:
+        details['marginal_abc'] = str(abc.relative_to(ROOT))
+    bc_targets = RESULTS / 'r1d-bc-target-transitions/summary.json'
+    if bc_targets.is_file():
+        details['r1d_bc_target_transitions'] = str(bc_targets.relative_to(ROOT))
+    elif abc.is_file() and report.is_file() and (ROOT / 'scripts/report_opv2v_bc_transitions.py').is_file():
+        details['r1d_bc_target_worker'] = enqueue('research-opv2v-r1d-bc-transitions',
+            'report_opv2v_bc_transitions.py')
+    clock_only = RESULTS / 'feedback-clock-only.json'
+    if not clock_only.is_file():
+        details['feedback_clock_worker'] = enqueue('research-opv2v-feedback-clock',
+                                                   'report_opv2v_marginal_followup.py', '--clock-only', '--output', clock_only)
+    else:
+        details['feedback_clock_evidence'] = str(clock_only.relative_to(ROOT))
+    sender_deadline = RESULTS / 'ordinary-sender-deadline.json'
+    if sender_deadline.is_file():
+        details['ordinary_sender_deadline'] = str(sender_deadline.relative_to(ROOT))
+    elif report.is_file():
+        feedback_contrast = read(report)['settings'][PRIMARY]['comparisons']['parallel_minus_parallel_no_feedback']
+        if feedback_contrast['interval_95']['upper']['ap70'] <= 0:
+            details['ordinary_sender_deadline_worker'] = enqueue('research-opv2v-ordinary-deadline',
+                'report_opv2v_marginal_followup.py', '--sender-deadline-only', '--output', sender_deadline)
+    d_smoke = read(OPTIMIZED / 'smoke/verification.json')
+    executable = ROOT / 'scripts/run_opv2v_sender_optimized.py'
+    if (d_smoke.get('smoke_excluded') is not True or not executable.is_file()
+            or d_smoke.get('executable_identity', {}).get(executable.name) != digest(executable)
+            or d_smoke.get('control_sha256') != digest(CONTROL_SMOKE / 'verification.json')):
+        return 'sender_optimized_verification', details
+    b35_plan = ORDINARY_35 / 'plan.json'
+    b35_smoke = ORDINARY_35 / 'smoke/verification.json'
+    if b35_plan.is_file():
+        plan = read(b35_plan)
+        details['ordinary_35_plan'] = str(b35_plan.relative_to(ROOT))
+        details['ordinary_35_frames'] = frames(ORDINARY_35)
+        details['ordinary_35_cached_before_gpu'] = plan['frame_count'] - plan['counts']['needs_new_gpu_fusion']
+        details['d_selection_frames'] = indexed_records(ORDINARY_35 / 'd-selection')
+    details['sender_optimized_frames'] = frames(OPTIMIZED)
+    if not (OPTIMIZED / 'detections.jsonl').is_file():
+        details['sender_optimized_worker'] = enqueue('research-opv2v-sender-optimized', 'autoresearch_opv2v.py', 'optimized-run')
+        return 'sender_optimized', details
+    if b35_plan.is_file():
+        if not (ORDINARY_35 / 'completion.json').is_file() and b35_smoke.is_file():
+            details['ordinary_35_worker'] = enqueue('research-opv2v-r1d-ordinary35',
+                'autoresearch_opv2v.py', 'ordinary-35-run')
+        elif (ORDINARY_35 / 'completion.json').is_file():
+            b35_report = RESULTS / 'r1d-ordinary-35-complete.json'
+            if not b35_report.is_file():
+                details['ordinary_35_report_worker'] = enqueue('research-opv2v-r1d-ordinary35-report',
+                    'report_opv2v_marginal_followup.py', '--sender-deadline-complete', '--output', b35_report)
+            else:
+                details['ordinary_35_complete'] = str(b35_report.relative_to(ROOT))
+            selected = ORDINARY_35 / 'd-selection/completion.json'
+            if not selected.is_file() and unit_state('research-opv2v-r1d-ordinary35') not in {'active', 'activating'}:
+                details['d_selection_worker'] = enqueue('research-opv2v-r1d-d-selection',
+                    'autoresearch_opv2v.py', 'd-selection-run')
+            elif selected.is_file():
+                details['d_selection_receipt'] = str(selected.relative_to(ROOT))
+    abcd = RESULTS / 'marginal-abcd.json'
+    if not abcd.is_file():
+        details['marginal_worker'] = enqueue('research-opv2v-marginal-abcd', 'report_opv2v_marginal.py', '--output', abcd)
+        return 'four_group_marginal_statistics', details
+    details['marginal_report'] = str(abcd.relative_to(ROOT))
+    next_r1d = RESULTS / 'r1d-next.json'
+    next_script = 'report_opv2v_r1d_next.py'
+    if next_r1d.is_file():
+        details['r1d_next_experiment'] = str(next_r1d.relative_to(ROOT))
+    elif (ROOT / 'scripts' / next_script).is_file():
+        details['r1d_next_worker'] = enqueue('research-opv2v-r1d-next', next_script, '--output', next_r1d)
+    downstream = RESULTS / 'marginal-deadline-followup.json'
+    if not downstream.is_file():
+        details['deadline_followup_worker'] = enqueue('research-opv2v-marginal-deadline',
+                                                       'report_opv2v_marginal_followup.py', '--output', downstream)
+        return 'deadline_mechanism_followup', details
+    phase = 'r1d_paired_mechanisms' if next_r1d.is_file() else 'r1d_branch_experiment'
+    if 'ordinary_35_worker' in details or 'ordinary_35_report_worker' in details:
+        phase = 'r1d_ordinary35_completion'
+    if 'd_selection_worker' in details and 'ordinary_35_complete' in details:
+        phase = 'r1d_d_selection_export'
+    if next_r1d.is_file() and 'ordinary_35_complete' in details and 'd_selection_receipt' in details:
+        phase = 'r1d_complete'
+    decision = read(next_r1d).get('decision') if next_r1d.is_file() else read(abcd).get('decision')
+    details.update(next_scientific_test=decision, deadline_followup=str(downstream.relative_to(ROOT)))
+    if phase == 'r1d_complete' and R2_PROTOCOL.is_file():
+        return advance_r2(details)
+    return phase, details
+
+
+def supervise():
+    for path in (STATE, RESULTS, HISTORY):
+        path.mkdir(parents=True, exist_ok=True)
+    with (STATE / '.supervisor.lock').open('a') as lock:
+        try:
+            fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        except BlockingIOError:
+            return
+        coverage = current_coverage()
+        phase, details = advance(coverage)
+        stable = {'phase': phase, 'coverage': coverage, **details, 'protocol_sha256': digest(PROTOCOL)}
+        for label, artifact in (
+                ('archived_first_stage', RESULTS / 'first-only-archive-reuse-0397.json'),
+                ('control_verification', CONTROL_SMOKE / 'verification.json')):
+            if artifact.is_file():
+                stable[label] = {'path': str(artifact.relative_to(ROOT)), 'sha256': digest(artifact)}
+        path = STATE / 'status.json'
+        before = read(path)
+        if {key: value for key, value in before.items() if key != 'updated_utc'} != stable:
+            now = utc()
+            record = {**stable, 'updated_utc': now.isoformat()}
+            atomic(HISTORY / (now.strftime('%Y%m%dT%H%M%S%fZ') + '.json'), record)
+            atomic(path, record)
+        print(f"{phase}, {coverage['frame_counts']['audited']}/2169 audited formal frames", flush=True)
+
+
+def formal_reports():
+    # A reboot after the last frame can land here with no active accelerator.
+    with (FORMAL / '.run.lock').open('a') as lock:
+        fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        result = script('opv2v_autoresearch_coverage.py', capture=True)
+        summary = Path(json.loads(result.splitlines()[-1])['snapshot']) / 'coverage.json'
+        if not read(summary)['formal_coverage_complete']:
+            raise RuntimeError('CPU reporting requires all audited formal frames')
+        target = FORMAL / 'detections.jsonl'
+        if not target.is_file():
+            tmp = target.with_suffix('.jsonl.part')
+            with tmp.open('w') as stream:
+                for index, line in enumerate(PANEL.read_text().splitlines()):
+                    record = read(FORMAL / 'per-frame' / f'{index:04d}.json')
+                    if record.get('frame_key') != json.loads(line)['frame_key']:
+                        raise RuntimeError('Frozen frame changed after audit')
+                    for row in record['detections']:
+                        stream.write(json.dumps(row, allow_nan=False) + '\n')
+            os.replace(tmp, target)
+        script('complete_opv2v_evaluation.py', '--reports-only')
+
+
+def control_run():
+    while True:
+        result = subprocess.run([sys.executable, '-B', '-u', str(ROOT / 'scripts/run_opv2v_feedback_control.py'),
+                                 str(CONTROL), '--reference', str(FORMAL), '--gpu', 'auto', '--wait'], cwd=ROOT)
+        if result.returncode != 75:
+            sys.exit(result.returncode)
+        time.sleep(45)
+
+
+def optimized_run():
+    while True:
+        result = subprocess.run([sys.executable, '-B', '-u', str(ROOT / 'scripts/run_opv2v_sender_optimized.py'),
+                                 str(OPTIMIZED), '--control', str(CONTROL), '--gpu', 'auto', '--wait'], cwd=ROOT)
+        if result.returncode != 75:
+            sys.exit(result.returncode)
+        time.sleep(45)
+
+
+def ordinary_35_run(selection_only=False):
+    args = ['--selection-only'] if selection_only else []
+    while True:
+        call = [sys.executable, '-B', '-u', str(ROOT / 'scripts' / ORDINARY_35_SCRIPT), str(ORDINARY_35),
+                '--gpu', 'auto', '--wait', '--export-d-selection', *args]
+        result = subprocess.run(call, cwd=ROOT)
+        if result.returncode != 75:
+            sys.exit(result.returncode)
+        time.sleep(45)
+
+
+def r2_run(granularity=False):
+    if granularity:
+        runner = 'run_opv2v_r2_granularity.py'
+        inputs = ['--panel', str(R2_SCREEN), '--output', str(R2_GRANULARITY / 'screen')]
+    else:
+        runner = 'run_opv2v_r2_order.py'
+        inputs = [str(R2_ORDER)]
+    while True:
+        call = [sys.executable, '-B', '-u', str(ROOT / 'scripts' / runner), *inputs, '--gpu', 'auto', '--wait']
+        result = subprocess.run(call, cwd=ROOT)
+        if result.returncode != 75:
+            sys.exit(result.returncode)
+        time.sleep(45)
+
+
+def r2_runtime_run():
+    call = [sys.executable, '-B', '-u', str(ROOT / 'scripts/run_opv2v_r2_runtime.py'),
+            '--device', 'gpu', '--gpu', 'auto']
+    while True:
+        result = subprocess.run(call, cwd=ROOT)
+        if result.returncode != 75:
+            sys.exit(result.returncode)
+        time.sleep(45)
+
+
+def r21_gpu_run(profile=False):
+    runner = 'run_opv2v_r21_profile.py' if profile else 'run_opv2v_r21_fusion.py'
+    inputs = ['--device', 'gpu', '--threads', '2'] if profile else ['--screen']
+    call = [sys.executable, '-B', '-u', str(ROOT / 'scripts' / runner), *inputs, '--gpu', 'auto']
+    while True:
+        result = subprocess.run(call, cwd=ROOT)
+        if result.returncode != 75:
+            sys.exit(result.returncode)
+        time.sleep(45)
+
+
+def r22_fusion_run():
+    call = [sys.executable, '-B', '-u', str(ROOT / 'scripts/run_opv2v_r22_fusion.py'), '--screen', '--gpu', 'auto']
+    environment = {**os.environ, 'PYTHONHASHSEED': '303'}
+    while True:
+        result = subprocess.run(call, cwd=ROOT, env=environment)
+        if result.returncode != 75:
+            sys.exit(result.returncode)
+        time.sleep(45)
+
+
+def r22_postprocess_capture():
+    call = [sys.executable, '-B', '-u', str(ROOT / 'scripts/run_opv2v_r22_postprocess.py'), '--capture', '--gpu', 'auto']
+    while True:
+        result = subprocess.run(call, cwd=ROOT)
+        if result.returncode != 75:
+            sys.exit(result.returncode)
+        time.sleep(45)
+
+
+def r23_run(smoke=False):
+    runner = ROOT / 'scripts/run_opv2v_r23.py'
+    result = subprocess.run([sys.executable, '-B', '-u', str(runner), '--smoke' if smoke else '--screen',
+                             '--gpu', 'auto'], cwd=ROOT, env={**os.environ, 'PYTHONHASHSEED': '303'})
+    if result.returncode != 75:
+        sys.exit(result.returncode)
+    print('R2.3 yielded to the GPU guard. The systemd timer will retry from the saved checkpoints.', flush=True)
+
+
+def r24_run():
+    runner = ROOT / 'scripts/run_opv2v_r24.py'
+    result = subprocess.run([sys.executable, '-B', '-u', str(runner), '--gpu', 'auto'], cwd=ROOT,
+                            env={**os.environ, 'PYTHONHASHSEED': '303'})
+    if result.returncode != 75:
+        sys.exit(result.returncode)
+    print('R2.4 yielded to the GPU guard. The systemd timer will retry from the saved checkpoints.', flush=True)
+
+
+def r25_run(mode):
+    from run_opv2v_feedback_control import available_gpu
+
+    name = 'run_opv2v_r25_overlap.py' if mode == 'overlap' else 'run_opv2v_r25.py'
+    extra = ['--smoke'] if mode == 'smoke' else []
+    preferred = '1' if available_gpu('1', False) else 'auto'
+    result = subprocess.run([sys.executable, '-B', '-u', str(ROOT / 'scripts' / name), '--gpu', preferred, *extra],
+                            cwd=ROOT, env={**os.environ, 'PYTHONHASHSEED': '303'})
+    if result.returncode != 75:
+        sys.exit(result.returncode)
+    print('R2.5 yielded to the GPU guard. The systemd timer will retry from the saved checkpoints.', flush=True)
+
+
+def r26_run(smoke=False):
+    from run_opv2v_feedback_control import available_gpu
+
+    preferred = '1' if available_gpu('1', False) else 'auto'
+    runner = ROOT / 'scripts/run_opv2v_r26.py'
+    extra = ['--smoke'] if smoke else []
+    result = subprocess.run([sys.executable, '-B', '-u', str(runner), '--gpu', preferred, *extra], cwd=ROOT,
+                            env={**os.environ, 'PYTHONHASHSEED': '303'})
+    if result.returncode != 75:
+        sys.exit(result.returncode)
+    print('R2.6 yielded to the GPU guard. The systemd timer will retry from the saved checkpoints.', flush=True)
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('action', choices=('supervise', 'formal-reports', 'control-run', 'optimized-run',
+                                           'ordinary-35-run', 'd-selection-run', 'r2-order-run', 'r2-granularity-run',
+                                           'r2-runtime-run', 'r21-profile-run', 'r21-fusion-run', 'r22-fusion-run',
+                                           'r22-postprocess-capture', 'r23-smoke', 'r23-panel', 'r24-panel',
+                                           'r25-smoke', 'r25-overlap', 'r25-panel', 'r26-smoke', 'r26-panel'))
+    {'supervise': supervise, 'formal-reports': formal_reports, 'control-run': control_run,
+     'optimized-run': optimized_run, 'ordinary-35-run': ordinary_35_run,
+     'd-selection-run': lambda: ordinary_35_run(selection_only=True), 'r2-order-run': r2_run,
+     'r2-granularity-run': lambda: r2_run(granularity=True), 'r2-runtime-run': r2_runtime_run,
+     'r21-profile-run': lambda: r21_gpu_run(profile=True), 'r21-fusion-run': r21_gpu_run,
+     'r22-fusion-run': r22_fusion_run, 'r22-postprocess-capture': r22_postprocess_capture,
+     'r23-smoke': lambda: r23_run(smoke=True), 'r23-panel': r23_run, 'r24-panel': r24_run,
+     'r25-smoke': lambda: r25_run('smoke'), 'r25-overlap': lambda: r25_run('overlap'),
+     'r25-panel': lambda: r25_run('panel'), 'r26-smoke': lambda: r26_run(smoke=True),
+     'r26-panel': r26_run}[parser.parse_args().action]()

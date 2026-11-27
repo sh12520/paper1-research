@@ -1,0 +1,116 @@
+{
+  "r1-marginal-abcd.json": {
+    "method": "byte-identical",
+    "sha256": "92d71ca5b3260678eddfea3d367828079db5390c06e355b4214eeb8ac4c68d2c",
+    "source_sha256": {
+      "results/autoresearch/marginal-abcd.json": "92d71ca5b3260678eddfea3d367828079db5390c06e355b4214eeb8ac4c68d2c"
+    }
+  },
+  "r1-b-deadline35.json": {
+    "method": "byte-identical",
+    "sha256": "0c5634c11b8b7a26d202d590561f1a86cd99c650df28ce3fc113ab330151ac2f",
+    "source_sha256": {
+      "results/autoresearch/r1d-ordinary-35-complete.json": "0c5634c11b8b7a26d202d590561f1a86cd99c650df28ce3fc113ab330151ac2f"
+    }
+  },
+  "r2-order-cpu-repeat.json": {
+    "method": "byte-identical",
+    "sha256": "0386dfffe540f9e7477ba14ee83cd5ca83f0b4725e4c231af7eed674d6c4d663",
+    "source_sha256": {
+      "results/opv2v-r2-order-cpu-dev-repeat/report.json": "0386dfffe540f9e7477ba14ee83cd5ca83f0b4725e4c231af7eed674d6c4d663"
+    }
+  },
+  "r23-incremental-control.json": {
+    "method": "byte-identical",
+    "sha256": "b36a734460dd6cd35aa4cd3d4cc8341ebce6a1884c470b3f099b323ca657303b",
+    "source_sha256": {
+      "results/opv2v-r23/incremental-control.json": "b36a734460dd6cd35aa4cd3d4cc8341ebce6a1884c470b3f099b323ca657303b"
+    }
+  },
+  "r23-nms-probe.json": {
+    "method": "byte-identical",
+    "sha256": "7099eb98c3268cdd10deb27f156bd17efb27518b98a81b2bc5e53a237a0dcaaa",
+    "source_sha256": {
+      "results/opv2v-r23/nms-probe/completion.json": "7099eb98c3268cdd10deb27f156bd17efb27518b98a81b2bc5e53a237a0dcaaa"
+    }
+  },
+  "r25-compact-wire.json": {
+    "method": "byte-identical",
+    "sha256": "7c2466bf66e7a677b2bb5d37d038bd275b67a0de785ca59d3e4d22081a5aabf1",
+    "source_sha256": {
+      "results/opv2v-r25/compact-wire-timing.json": "7c2466bf66e7a677b2bb5d37d038bd275b67a0de785ca59d3e4d22081a5aabf1"
+    }
+  },
+  "r25-pose-grid-probe.json": {
+    "method": "byte-identical",
+    "sha256": "a3f0bc7f4a2eda1103e40000ecfba19c1e13b37e69f4b61bf4be67fc65355175",
+    "source_sha256": {
+      "results/opv2v-r25/pose-grid-probe.json": "a3f0bc7f4a2eda1103e40000ecfba19c1e13b37e69f4b61bf4be67fc65355175"
+    }
+  },
+  "r26-completion-seal.json": {
+    "method": "byte-identical",
+    "sha256": "c62d1af7686375cc115b7376eccec9ea5ad6610af094397496fcfc9f18486178",
+    "source_sha256": {
+      "results/opv2v-r26/screen/completion.json": "c62d1af7686375cc115b7376eccec9ea5ad6610af094397496fcfc9f18486178"
+    }
+  },
+  "r26-deadline-complete-rate.png": {
+    "method": "byte-identical",
+    "sha256": "92ecbadd09eda9f7fd9d31765d4fa7e668d7777d46e5dadafbaa2bfdd2ec6a91",
+    "source_sha256": {
+      "results/opv2v-r26/figures/deadline-complete-rate.png": "92ecbadd09eda9f7fd9d31765d4fa7e668d7777d46e5dadafbaa2bfdd2ec6a91"
+    }
+  },
+  "dair-official-panel-inputs.json": {
+    "method": "projection: local dataset path omitted",
+    "sha256": "e49f581ecb743592d870549f7563c2f1e8e58fdaf46752b8530e5ecdcd673e47",
+    "source_sha256": {
+      "results/dair-tmc-validation-preflight/official-panel-inputs.json": "f45294c89a67740758ed540029b05a02bcc51c06990c8494d0cca24ec9f8bde1"
+    }
+  },
+  "r23-prefilter-timing.json": {
+    "method": "projection: seal and stage-level measured timing, excluding per-frame cutoff outputs",
+    "sha256": "6596f85f27c9c1dfe52319cd3d4b37441c22b9db298668bf2fd3f2990c4699c5",
+    "source_sha256": {
+      "results/opv2v-r23/report.json": "444b259a3115c4769a79fe986722d9e6dca21e50679ea9845326a29bd4c22b90"
+    }
+  },
+  "r24-coalescing-summary.json": {
+    "method": "projection: exactness, scope, decisions and aggregate/paired outcomes",
+    "sha256": "4578118913a47b8f4abab422987f636c031d756b967b776a17332a6790057dbf",
+    "source_sha256": {
+      "results/opv2v-r24/report.json": "5da4c400ec6d41d0d7022f02865aebbe00d1765dd9e54bce967c9b82e9802978"
+    }
+  },
+  "r25-pipeline-decision.json": {
+    "method": "projection: exactness, scope and published decision metrics",
+    "sha256": "e589357b9c530ef39d8c9807266cac83de8e2aab1bb861455820f1a024d561bc",
+    "source_sha256": {
+      "results/opv2v-r25/report.json": "13e09a27e3f2473a044f6a755bf1f77d8aa901a03b653a0ff5a07cb306ed4d9d"
+    }
+  },
+  "r26-deadline-summary.json": {
+    "method": "projection: aggregate deadline, scope, uncertainty and decision records; GPU UUID omitted",
+    "sha256": "43c082a668b78d0974bfd266afb2289a06e2c5bb10a08a742d727f8f9ca486a6",
+    "source_sha256": {
+      "results/opv2v-r26/report.json": "9a7f7d7b4b9e22269e942799ce7c35b63bd6591e87351d16634e2b1fc1e12d2f"
+    }
+  },
+  "r26-deadline-table.csv": {
+    "method": "projection: 6 deadlines × 3 arms",
+    "sha256": "bcca249bc85dad3528cdba84bdc433923972f628fb1f75c4d1791c9058d6c5af",
+    "source_sha256": {
+      "results/opv2v-r26/report.json": "9a7f7d7b4b9e22269e942799ce7c35b63bd6591e87351d16634e2b1fc1e12d2f"
+    }
+  },
+  "r26-frame-1332.json": {
+    "method": "projection: sealed frame identity, per-arm replay and compact service timings",
+    "sha256": "65d0a89557e45beaa73526470ed4ffdb0fb4a134f3535bb47f42942b494a6e08",
+    "source_sha256": {
+      "results/opv2v-r26/screen/per-frame/1332.json": "b28aecbfdda201a1c4fc1d2484004fc489729352678d8ab987347b3ff2c74767",
+      "results/opv2v-r26/report.json": "9a7f7d7b4b9e22269e942799ce7c35b63bd6591e87351d16634e2b1fc1e12d2f",
+      "results/opv2v-r26/screen/completion.json": "c62d1af7686375cc115b7376eccec9ea5ad6610af094397496fcfc9f18486178"
+    }
+  }
+}

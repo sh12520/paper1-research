@@ -1,0 +1,350 @@
+{
+  "status": "verified",
+  "scope": "One real archived excluded OPV2V frame, remote weighted features only. CPU-only geometry and warp, no backbone, GPU, final fusion or AP measurement.",
+  "frame_key": "2021_08_18_19_48_05/000068/1045",
+  "actor_ids": [
+    "1045",
+    "1054"
+  ],
+  "torch_version": "2.15.0+cu132",
+  "cpu_threads": 2,
+  "process_nice": 15,
+  "warmups": 5,
+  "paired_repeats": 20,
+  "network_apply": "none",
+  "grid_dependency": "Fixed affine, receiver/source roster, output height and width, dtype/device, align_corners=False.",
+  "pose_affine_values": [
+    [
+      [
+        0.9993943481422011,
+        -0.03479815252729402,
+        -0.4800413080023317
+      ],
+      [
+        0.03479814674640562,
+        0.9993943603371271,
+        -0.0769646413188801
+      ]
+    ]
+  ],
+  "source_sha256": {
+    "scripts/audit_opv2v_r25_pose_grid.py": "15bf6c1e4b4250b0e278a085b5c33ee52568469d0ac7b4f98cee2039085c428c",
+    "models/blindmap-tmc/opv2v/lidar_heterogeneous/config.yaml": "063be1a4f39145cc36cd7a4a057d638eee4577c77d657b79086cf9a64bad8c07",
+    "results/opv2v-r22-fusion/smoke/verification.json": "c3bfc307b5a3bfc394bc46acf316d9abd016208621ddf407a09c24b85e5feb33",
+    "results/opv2v-r22-fusion/smoke/per-frame/0000.json": "6a8e71976b9bd28f469a97f73009a93e0a1295262c84b76da318d67dbabc7675",
+    "datasets/opv2v-official-supplement/test/2021_08_18_19_48_05/1045/000068.yaml": "19330462fccb88a13837374e12ad945493dad79476460b4799a899c669e30d89",
+    "datasets/opv2v-official-supplement/test/2021_08_18_19_48_05/1054/000068.yaml": "ae44f784408cb2d0b990cb4d17a810766018f89c7ba4f9a453cdc5cdf4aae48c",
+    "baselines/blindmap-tmc-checkpoint/opencood/models/sub_modules/torch_transformation_utils.py": "c831566bc4882d35983275719def1f5e94d74216c38c1abf0f6a685bebdefce4"
+  },
+  "wire_sha256": "7cf3d83a0a1de2b11d70aae1da48b4a23286d82a5a67b089beccb7ba3f342edc",
+  "states": {
+    "partial": {
+      "packets": 8,
+      "levels": [
+        {
+          "input_shape": [
+            1,
+            64,
+            256,
+            256
+          ],
+          "grid_shape": [
+            1,
+            256,
+            256,
+            2
+          ],
+          "dtype": "torch.float32",
+          "bitwise": true,
+          "max_abs_error": 0.0
+        },
+        {
+          "input_shape": [
+            1,
+            128,
+            128,
+            128
+          ],
+          "grid_shape": [
+            1,
+            128,
+            128,
+            2
+          ],
+          "dtype": "torch.float32",
+          "bitwise": true,
+          "max_abs_error": 0.0
+        },
+        {
+          "input_shape": [
+            1,
+            256,
+            64,
+            64
+          ],
+          "grid_shape": [
+            1,
+            64,
+            64,
+            2
+          ],
+          "dtype": "torch.float32",
+          "bitwise": true,
+          "max_abs_error": 0.0
+        }
+      ],
+      "cpu_serial_three_level_wall_ms": {
+        "native_warp": {
+          "p50": 42.289683,
+          "p90": 57.97816660000001,
+          "p95": 59.85532135,
+          "max": 60.075424,
+          "n": 20
+        },
+        "cached_grid_warp": {
+          "p50": 39.9309845,
+          "p90": 55.6318171,
+          "p95": 55.954131950000004,
+          "max": 56.823267,
+          "n": 20
+        },
+        "grid_generation_only": {
+          "p50": 1.4447595,
+          "p90": 2.6353952000000005,
+          "p95": 2.8397118999999997,
+          "max": 2.947725,
+          "n": 20
+        }
+      },
+      "paired_native_minus_cached_ms": {
+        "p50": 1.8613640000000018,
+        "p90": 4.174597399999996,
+        "p95": 4.538759500000002,
+        "max": 10.164839999999998,
+        "n": 20
+      },
+      "raw_trials_ms": {
+        "native_warp": [
+          59.843737,
+          46.68933,
+          60.075424,
+          46.536033,
+          57.770881,
+          46.6733,
+          42.020085,
+          33.585064,
+          42.063065,
+          33.148423,
+          42.801303,
+          33.074696,
+          42.516301,
+          33.29612,
+          42.636384,
+          33.123577,
+          41.333987,
+          33.197279,
+          42.850733,
+          33.292618
+        ],
+        "cached_grid_warp": [
+          55.601087,
+          44.55436,
+          55.908388,
+          44.574778,
+          56.823267,
+          36.50846,
+          43.110419,
+          31.823591,
+          39.286146,
+          31.894753,
+          39.945265,
+          31.78746,
+          39.991689,
+          31.800226,
+          40.001082,
+          31.821141,
+          40.52876,
+          31.661976,
+          39.916704,
+          31.727751
+        ],
+        "grid_generation_only": [
+          2.05754,
+          1.3852,
+          2.834027,
+          1.354916,
+          2.947725,
+          1.192435,
+          2.613325,
+          0.882126,
+          2.126812,
+          0.908544,
+          1.629536,
+          0.987236,
+          1.651111,
+          0.965204,
+          1.665146,
+          1.032334,
+          2.110337,
+          0.998854,
+          1.504319,
+          0.976259
+        ]
+      }
+    },
+    "complete": {
+      "packets": 16,
+      "levels": [
+        {
+          "input_shape": [
+            1,
+            64,
+            256,
+            256
+          ],
+          "grid_shape": [
+            1,
+            256,
+            256,
+            2
+          ],
+          "dtype": "torch.float32",
+          "bitwise": true,
+          "max_abs_error": 0.0
+        },
+        {
+          "input_shape": [
+            1,
+            128,
+            128,
+            128
+          ],
+          "grid_shape": [
+            1,
+            128,
+            128,
+            2
+          ],
+          "dtype": "torch.float32",
+          "bitwise": true,
+          "max_abs_error": 0.0
+        },
+        {
+          "input_shape": [
+            1,
+            256,
+            64,
+            64
+          ],
+          "grid_shape": [
+            1,
+            64,
+            64,
+            2
+          ],
+          "dtype": "torch.float32",
+          "bitwise": true,
+          "max_abs_error": 0.0
+        }
+      ],
+      "cpu_serial_three_level_wall_ms": {
+        "native_warp": {
+          "p50": 37.686562499999994,
+          "p90": 41.0719712,
+          "p95": 41.1046227,
+          "max": 41.244286,
+          "n": 20
+        },
+        "cached_grid_warp": {
+          "p50": 32.307886,
+          "p90": 33.4101261,
+          "p95": 33.4234047,
+          "max": 33.599244,
+          "n": 20
+        },
+        "grid_generation_only": {
+          "p50": 0.8610075,
+          "p90": 0.9885057,
+          "p95": 1.0258799,
+          "max": 1.028785,
+          "n": 20
+        }
+      },
+      "paired_native_minus_cached_ms": {
+        "p50": 5.258695499999998,
+        "p90": 7.783156799999999,
+        "p95": 7.8457874,
+        "max": 8.184736000000001,
+        "n": 20
+      },
+      "raw_trials_ms": {
+        "native_warp": [
+          41.244286,
+          34.32548,
+          41.06916,
+          34.558862,
+          40.940369,
+          34.225761,
+          41.097272,
+          34.480747,
+          40.895853,
+          34.324112,
+          40.826254,
+          34.354096,
+          40.826904,
+          34.087051,
+          40.814263,
+          34.374484,
+          40.846021,
+          34.21018,
+          40.879529,
+          34.389648
+        ],
+        "cached_grid_warp": [
+          33.05955,
+          31.556222,
+          33.599244,
+          31.461667,
+          33.162189,
+          31.418844,
+          33.409679,
+          31.490987,
+          33.067905,
+          31.492924,
+          33.406058,
+          31.390074,
+          33.080228,
+          31.395598,
+          33.376337,
+          31.318295,
+          33.08849,
+          31.437877,
+          33.41415,
+          31.478707
+        ],
+        "grid_generation_only": [
+          0.782097,
+          0.98437,
+          0.81796,
+          1.025727,
+          0.790779,
+          0.972354,
+          0.810126,
+          0.905513,
+          0.793921,
+          0.904055,
+          0.806941,
+          0.983877,
+          0.785357,
+          0.934304,
+          0.815653,
+          0.972196,
+          0.771899,
+          0.97084,
+          0.801707,
+          1.028785
+        ]
+      }
+    }
+  }
+}

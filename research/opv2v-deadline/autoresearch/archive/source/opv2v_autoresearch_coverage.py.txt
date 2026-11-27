@@ -1,0 +1,532 @@
+#!/usr/bin/env python3
+"""Snapshot frozen OPV2V result coverage from sealed per-frame receipts."""
+
+import argparse
+from collections import Counter, defaultdict
+import csv
+from datetime import datetime, timezone
+import hashlib
+import json
+import math
+from pathlib import Path
+import re
+import tempfile
+from uuid import uuid4
+
+from audit_opv2v_budgets import DEADLINES, LIMITS, LINKS, MODES, PANEL, ROOT, SETTING, audit_frame
+from opv2v_network import schedule
+
+
+SNAPSHOTS = ROOT / "results/autoresearch"
+CONTROL = ROOT / "results/opv2v-feedback-control"
+ARCHIVE_REUSE = SNAPSHOTS / "first-only-archive-reuse-0397.json"
+EXPLORATORY = ("parallel_first_only", "parallel_no_feedback")
+FORMAL = tuple(sorted(MODES))
+EXCLUDED = ("2021_08_18_19_48_05", "000068")
+FIELDS = (
+    "scene", "timestamp", "receiver", "frame_key", "frame_index",
+    "strategy", "analysis_scope", "budget_kib", "budget_rule", "application_cap_bytes",
+    "coverage_status", "expected_schedule_detections", "audited_schedule_detections",
+    "expected_unconstrained_references", "audited_unconstrained_references",
+    "archived_reusable_schedule_detections", "archived_reusable_settings",
+    "max_audited_application_bytes", "record_file",
+)
+
+
+def clock():
+    return datetime.now(timezone.utc).isoformat()
+
+
+def sha(data):
+    return hashlib.sha256(data).hexdigest()
+
+
+def identity(item):
+    values = tuple(item.get(name) for name in ("scene", "timestamp", "receiver"))
+    if not all(isinstance(value, str) and value and "/" not in value for value in values):
+        raise ValueError("The scenario, timestamp and receiver must be exact strings")
+    if item.get("frame_key") != "/".join(values) or values[:2] == EXCLUDED:
+        raise ValueError(f"Unexpected frame identity or excluded timestamp: {item.get('frame_key')}")
+    return values
+
+
+def exact_frame_audit(blob, item):
+    record = json.loads(blob)
+    expected = identity(item)
+    for row in record["detections"]:
+        if identity(row) != expected:
+            raise ValueError(f"Detection row changed identity: {row.get('frame_key')}")
+    totals = audit_frame(record, item)
+    for row in record["detections"]:
+        if row["mode"] == "native_threshold":
+            totals[None, "native_threshold"] = row["packet_bytes"]
+    return totals, record
+
+
+def audit_controls(blob, item, reference, reference_sha, run_sha):
+    from run_opv2v_feedback_control import blind_supplement_schedule, first_clocks
+
+    def require(condition, message):
+        if not condition:
+            raise ValueError(message)
+
+    record = json.loads(blob)
+    expected = identity(item)
+    require(record.get("frame_key") == item["frame_key"] and record.get("exploratory_only") is True
+            and record.get("reference_sha256") == reference_sha and record.get("run_sha256") == run_sha
+            and record.get("feature_message_mask_roundtrips") is True
+            and record["device"].split(":")[0] == reference["device"].split(":")[0],
+            "Control receipt does not bind to the exact audited frame and control manifest")
+    reference_timings = {(row["mode"], row["budget_kib"], row["bandwidth_mbps"], row["rtt_ms"]): row
+                         for row in reference["timing"] if row["mode"] in ("parallel", "followup")}
+    packets = {}
+    for block in record["shared_packets"]:
+        budget = block["budget_kib"]
+        require(budget in LIMITS and budget not in packets, "Unexpected or duplicate shared-packet budget")
+        senders = block["senders"]
+        require(len(senders) == len(reference["agents"]) - 1, "Shared packets omit a formal collaborator")
+        quota, remainder = divmod(LIMITS[budget], len(senders)) if senders else (0, 0)
+        for index, sender in enumerate(senders, 1):
+            cap = quota + (index <= remainder)
+            request = sender["reserved_request_bytes"]
+            require(sender["sender"] == index and sender["agent"] == reference["agents"][index]
+                    and sender["quota_bytes"] == cap and type(request) is int and 0 <= request <= cap,
+                    "Shared packet sender, quota or request reservation differs")
+            require(sender["first_packet_cap_bytes"] == ((cap - request) // 2 if request else 0),
+                    "Shared first-packet allowance differs")
+            for phase in ("first", "feedback_extra", "blind_extra"):
+                payload = sender[phase]
+                size, count = payload["bytes"], payload["fine_cells"]
+                require(type(size) is int and type(count) is int and size >= 0 and 0 <= count <= 65_536
+                        and (size >= 16 if count else size == 0)
+                        and re.fullmatch(r"[0-9a-f]{64}", payload["sha256"]),
+                        "Shared packet fingerprint, byte size or fine-grid count is invalid")
+            first = sender["first"]["bytes"]
+            require(first <= sender["first_packet_cap_bytes"]
+                    and first + sender["blind_extra"]["bytes"] <= cap
+                    and first + sender["feedback_extra"]["bytes"] + request <= cap,
+                    "Shared packet contents exceed their sender allowance")
+        packets[budget] = senders
+    require(packets.keys() == LIMITS.keys(), "Control receipt is missing a shared-packet budget")
+
+    timings = {}
+    totals = defaultdict(int)
+    for row in record["timing"]:
+        mode = row["mode"]
+        link = tuple(row[key] for key in ("budget_kib", "bandwidth_mbps", "rtt_ms"))
+        budget, rate, rtt = link
+        key = (mode, *link)
+        require(mode in EXPLORATORY and link in LINKS and key not in timings,
+                "Unexpected or duplicate control timing ledger")
+        archived = reference_timings["parallel", *link]
+        followup = reference_timings["followup", *link]
+        senders = packets[budget]
+        archived_channels = [{
+            "sender": sender["sender"], "first_bytes": sender["first"]["bytes"],
+            "extra_bytes": sender["feedback_extra"]["bytes"], "request_bytes": sender["reserved_request_bytes"],
+        } for sender in senders]
+        require(archived_channels == archived["channels"] == followup["channels"]
+                and archived["demand_sha256"] == followup["demand_sha256"]
+                and first_clocks(archived) == first_clocks(followup),
+                "Reconstructed packet lengths, staged recipe or first clocks differ from the frozen reference")
+        channels = [{
+            "sender": sender["sender"], "first_bytes": sender["first"]["bytes"], "request_bytes": 0,
+            "extra_bytes": sender["blind_extra"]["bytes"] if mode == "parallel_no_feedback" else 0,
+        } for sender in senders]
+        require(row["channels"] == channels and row.get("shared_first_send_and_arrival_verified") is True
+                and first_clocks(row) == first_clocks(archived),
+                "Control receipt changed a shared first packet length, selection time, send time or arrival time")
+        simulated = (blind_supplement_schedule(rate, rtt, channels) if mode == "parallel_no_feedback"
+                     else schedule("blindmap", rate, rtt, channels))
+        require(all(json.dumps(row[field], sort_keys=True) == json.dumps(value, sort_keys=True)
+                    for field, value in simulated.items()),
+                "Recorded control transport or fusion clock differs from the reproducible schedule")
+        require(type(row["total_bytes"]) is int and 0 <= row["total_bytes"] <= LIMITS[budget],
+                "Control application bytes exceed the frozen budget")
+        timings[key] = row
+        totals[budget, mode] = max(totals[budget, mode], row["total_bytes"])
+    require(set(timings) == {(mode, *link) for mode in EXPLORATORY for link in LINKS},
+            "Incomplete control network timing coverage")
+
+    by_role = {(row["setting"], row["mode"]): row for row in reference["detections"]}
+    truth = reference["detections"][0]["gt_8x3"]
+    seen = set()
+    for row in record["detections"]:
+        match = SETTING.fullmatch(row["setting"])
+        require(identity(row) == expected and match, "Unexpected control detection identity or setting")
+        budget, rate, rtt, deadline = map(int, match.groups())
+        key = (row["mode"], budget, rate, rtt, deadline)
+        require(key not in seen and key[:4] in timings and deadline in DEADLINES,
+                "Unexpected or duplicate control detection")
+        seen.add(key)
+        timing = timings[key[:4]]
+        stage = max((stage for stage in timing["detection_stages"] if stage["ready_ms"] <= deadline),
+                    key=lambda stage: stage["ready_ms"])
+        require(row["packet_bytes"] == timing["total_bytes"] and row["ready_ms"] == stage["ready_ms"]
+                and row["used_packets"] == stage["packets"] and row["fell_back"] is (not stage["packets"]),
+                "Control detection uses the wrong deadline stage or byte ledger")
+        require(row["gt_8x3"] == truth and len(row["boxes_8x3"]) == len(row["scores"])
+                and all(math.isfinite(score) for score in row["scores"]),
+                "Control detection has incompatible ground truth or scores")
+        if row["detection_source"] == "reused_validated_reference_state":
+            reused = by_role[row["reference_setting"], row["reference_mode"]]
+            require(reused["mode"] in ("local", "parallel", "followup")
+                    and reused["setting"].startswith(f"{budget}KiB_")
+                    and all(row[field] == reused[field] for field in ("gt_8x3", "boxes_8x3", "scores"))
+                    and sorted(row["used_packets"]) == sorted(reused["used_packets"]),
+                    "Reused control detection differs from its archived packet state")
+            if reused["mode"] in ("parallel", "followup"):
+                sender_map = {sender["sender"]: sender for sender in packets[budget]}
+                require(all(phase == "first" or
+                            sender_map[sender]["blind_extra"]["sha256"] ==
+                            sender_map[sender]["feedback_extra"]["sha256"]
+                            for sender, phase in reused["used_packets"]),
+                        "Control used a reused feedback supplement with a different packet fingerprint")
+        else:
+            require(row["detection_source"] == "new_decoded_feature_model_forward",
+                    "Unknown control detection provenance")
+    require(seen == {(*key, deadline) for key in timings for deadline in DEADLINES},
+            "Incomplete control detection coverage across deadlines")
+    return totals
+
+
+def audit_archived_reuse(mapping, reference, reference_sha):
+    from run_opv2v_feedback_control import first_clocks, stage_key
+
+    if mapping.get("reference_sha256") != reference_sha:
+        raise ValueError("First-only reuse links to a different official frame record")
+    timings = {(r["mode"], r["budget_kib"], r["bandwidth_mbps"], r["rtt_ms"]): r for r in reference["timing"]}
+    detections = {(r["setting"], r["mode"]): r for r in reference["detections"]}
+    settings = defaultdict(list)
+    schedules = {}
+    for label, item in mapping["archived_first_only_detections"].items():
+        pattern = SETTING.fullmatch(label)
+        if not pattern:
+            raise ValueError(f"Unknown first-only setting {label}")
+        budget, rate, rtt, deadline = map(int, pattern.groups())
+        link = budget, rate, rtt
+        if link not in LINKS or deadline not in DEADLINES:
+            raise ValueError(f"First-only setting is outside the frozen schedule: {label}")
+        if link not in schedules:
+            archived = timings["parallel", *link]
+            followup = timings["followup", *link]
+            if archived["channels"] != followup["channels"] or archived["demand_sha256"] != followup["demand_sha256"]:
+                raise ValueError(f"The archived staged policies differ at {label}")
+            channels = [{**channel, "extra_bytes": 0, "request_bytes": 0} for channel in archived["channels"]]
+            timing = schedule("blindmap", rate, rtt, channels)
+            if first_clocks(timing) != first_clocks(archived):
+                raise ValueError(f"The archived first-packet timeline differs at {label}")
+            schedules[link] = timing["detection_stages"]
+        stage = max((stage for stage in schedules[link] if stage["ready_ms"] <= deadline),
+                    key=lambda stage: stage["ready_ms"])
+        source_mode, source_setting = item["reference_mode"], item["reference_setting"]
+        source = detections[source_setting, source_mode]
+        if (source_mode not in ("parallel", "followup", "local") or not source_setting.startswith(f"{budget}KiB_")
+                or item["first_only_ready_ms"] != stage["ready_ms"]
+                or stage_key(item["used_packets"]) != stage_key(stage["packets"])
+                or stage_key(source["used_packets"]) != stage_key(stage["packets"])
+                or any(phase != "first" for _, phase in source["used_packets"])
+                or source["gt_8x3"] != detections[label, "local"]["gt_8x3"]):
+            raise ValueError(f"Frame record does not support exact first-only detection reuse at {label}")
+        settings[budget].append(label)
+    return settings
+
+
+def cap_for(strategy, budget):
+    if strategy == "local":
+        return "zero_communication", 0
+    if strategy in ("dense", "native_threshold"):
+        return "uncapped_reference", None
+    return "shared_application_cap", LIMITS[budget]
+
+
+def strategy_specs():
+    for strategy in (*FORMAL, *EXPLORATORY):
+        for budget in sorted(LIMITS):
+            scope = "exploratory_control" if strategy in EXPLORATORY else "frozen_schedule"
+            schedules = sum(link[0] == budget for link in LINKS) * len(DEADLINES)
+            references = int(scope == "frozen_schedule" and budget == 256)
+            yield strategy, scope, budget, schedules, references
+    yield "native_threshold", "native_reference", None, 0, 1
+
+
+def create_snapshot(run_dir, control_dir=CONTROL, archive_path=ARCHIVE_REUSE):
+    started = clock()
+    panel_blob = PANEL.read_bytes()
+    panel_hash = sha(panel_blob)
+    panel = [json.loads(line) for line in panel_blob.splitlines() if line.strip()]
+    identities = {identity(item) for item in panel}
+    if len(panel) != len(identities) or len(panel) != 2169 or len({key[0] for key in identities}) != 16:
+        raise ValueError("Expected 2,169 unique locked frames across 16 official scenes")
+    run_blob = (run_dir / "run.json").read_bytes()
+    run = json.loads(run_blob)
+    if run.get("panel_sha256") != panel_hash:
+        raise ValueError("The inference run uses a different panel")
+    run_hash = sha(run_blob)
+    control_files = {path.name: path for path in (control_dir / "per-frame").glob("*.json") if path.is_file()}
+    control_manifest = control_dir / "run.json"
+    control_manifest_hash, control_issue = None, None
+    if control_manifest.is_file():
+        blob = control_manifest.read_bytes()
+        control_manifest_hash = sha(blob)
+        try:
+            manifest = json.loads(blob)
+            fixed = ("panel_sha256", "protocol_sha256", "archive_sha256", "checkpoint_sha256", "revision", "seed")
+            if (manifest.get("exploratory_only") is not True or manifest.get("reference_run_sha256") != run_hash
+                    or any(manifest.get(field) != run[field] for field in fixed)):
+                raise ValueError("Control manifest differs from the frozen run or its matching inputs")
+        except (ValueError, AttributeError) as exc:
+            control_issue = str(exc)
+    if control_files and control_manifest_hash is None:
+        control_issue = "Observed control records without a manifest"
+    record_dir = run_dir / "per-frame"
+    observed_files = {path.name: path for path in record_dir.glob("*.json") if path.is_file()}
+    expected_names = {f"{i:04d}.json" for i in range(len(panel))}
+    foreign_names = sorted(observed_files.keys() - expected_names)
+    foreign_controls = sorted(control_files.keys() - expected_names)
+    captured = clock()
+
+    reuse_hash, reuse_issue, reuse, reuse_claims, reuse_counts = None, None, {}, {}, Counter()
+    if archive_path.is_file():
+        blob = archive_path.read_bytes()
+        reuse_hash = sha(blob)
+        try:
+            archive = json.loads(blob)
+            reuse = archive["per_frame"]
+            if (archive.get("status") != "descriptive_archive_reuse" or not isinstance(reuse, dict)
+                    or archive.get("full_panel_frames") != len(panel)
+                    or archive.get("audited_reference_frames") != len(reuse)):
+                raise ValueError("First-only archive map has an unexpected scope or frame count")
+            reuse_claims = {label: values.get("archived_reusable", 0)
+                            for label, values in archive["per_setting"].items()}
+        except (ValueError, TypeError, AttributeError, KeyError) as exc:
+            reuse_issue, reuse = str(exc), {}
+    reuse_errors = {}
+    reuse_covered = set()
+
+    prefix_path = run_dir / "budget-prefix-audit.json"
+    prefix_hash, legacy, prefix_issue = None, {}, None
+    if prefix_path.is_file():
+        blob = prefix_path.read_bytes()
+        prefix_hash = sha(blob)
+        receipt = json.loads(blob)
+        if (receipt.get("status") == "passed" and receipt.get("panel_sha256") == panel_hash
+                and receipt.get("original_run_sha256") == run_hash):
+            legacy = receipt["frame_sha256"]
+        else:
+            prefix_issue = "Existing prefix receipt does not certify this panel and run marker."
+
+    scenes = defaultdict(Counter)
+    groups = defaultdict(Counter)
+    records, control_records = {}, {}
+    specs = tuple(strategy_specs())
+    SNAPSHOTS.mkdir(parents=True, exist_ok=True)
+    name = f"coverage-{datetime.now(timezone.utc):%Y%m%dT%H%M%S%fZ}-{uuid4().hex[:8]}"
+    destination = SNAPSHOTS / name
+    with tempfile.TemporaryDirectory(prefix=f".{name}-", dir=SNAPSHOTS) as directory:
+        stage = Path(directory)
+        with (stage / "coverage-matrix.csv").open("w", encoding="utf-8", newline="") as stream:
+            writer = csv.DictWriter(stream, fieldnames=FIELDS)
+            writer.writeheader()
+            for index, item in enumerate(panel):
+                key, scene = item["frame_key"], item["scene"]
+                filename = f"{index:04d}.json"
+                path = observed_files.get(filename)
+                totals, control_totals, reference = {}, {}, None
+                status = "missing"
+                if path is not None:
+                    entry = {"status": "invalid", "frame_key": key}
+                    try:
+                        blob = path.read_bytes()
+                        digest = sha(blob)
+                        entry.update(sha256=digest, bytes=len(blob))
+                        if filename in legacy and digest != legacy[filename]:
+                            raise ValueError("The sealed record changed since the migration audit")
+                        totals, reference = exact_frame_audit(blob, item)
+                    except (ValueError, TypeError, KeyError, IndexError, AttributeError, OSError) as exc:
+                        entry["error"] = str(exc)
+                        status = "invalid"
+                    else:
+                        status = "audited"
+                        entry["status"] = status
+                        entry["migration_hash_matched"] = filename in legacy
+                    records[filename] = entry
+                control_status = "not_executed"
+                control_path = control_files.get(filename)
+                if control_path is not None:
+                    entry = {"status": "invalid", "frame_key": key}
+                    try:
+                        blob = control_path.read_bytes()
+                        entry.update(sha256=sha(blob), bytes=len(blob))
+                        if control_issue or reference is None:
+                            raise ValueError(control_issue or "Control does not have an audited formal reference")
+                        control_totals = audit_controls(blob, item, reference, records[filename]["sha256"],
+                                                       control_manifest_hash)
+                    except (ValueError, TypeError, KeyError, IndexError, AttributeError, OSError) as exc:
+                        entry["error"] = str(exc)
+                        control_status = "invalid"
+                    else:
+                        control_status = "audited"
+                        entry.update(status=control_status, reference_sha256=records[filename]["sha256"])
+                    control_records[filename] = entry
+                archived_settings = {}
+                if key in reuse:
+                    reuse_covered.add(key)
+                    try:
+                        if reference is None:
+                            raise ValueError("First-only reuse lacks an audited official frame")
+                        archived_settings = audit_archived_reuse(reuse[key], reference, records[filename]["sha256"])
+                    except (ValueError, TypeError, KeyError, IndexError, AttributeError) as exc:
+                        reuse_errors[key] = str(exc)
+                    else:
+                        for labels in archived_settings.values():
+                            reuse_counts.update(labels)
+                scenes[scene]["expected_frames"] += 1
+                scenes[scene][f"{status}_frames"] += 1
+                scenes[scene][f"{control_status}_control_frames"] += 1
+                for strategy, scope, budget, schedules, references in specs:
+                    group = groups[strategy, budget]
+                    exploratory = scope == "exploratory_control"
+                    row_status = control_status if exploratory else status
+                    audited = row_status == "audited"
+                    budget_rule, cap = cap_for(strategy, budget)
+                    maximum = (control_totals if exploratory else totals)[budget, strategy] if audited else None
+                    reused = archived_settings.get(budget, []) if strategy == "parallel_first_only" else []
+                    group.update(expected_matrix_cells=1, expected_schedule_detections=schedules,
+                                 expected_unconstrained_references=references,
+                                 archived_reusable_schedule_detections=len(reused))
+                    if reused:
+                        scenes[scene]["archived_reusable_first_only_detections"] += len(reused)
+                    group[row_status] += 1
+                    if audited:
+                        group["audited_schedule_detections"] += schedules
+                        group["audited_unconstrained_references"] += references
+                        group["max_audited_application_bytes"] = max(
+                            group["max_audited_application_bytes"], maximum)
+                    if scope == "frozen_schedule":
+                        scenes[scene]["expected_frozen_schedule_detections"] += schedules
+                        scenes[scene]["audited_frozen_schedule_detections"] += schedules if audited else 0
+                    if exploratory:
+                        scenes[scene]["expected_control_schedule_detections"] += schedules
+                        scenes[scene]["audited_control_schedule_detections"] += schedules if audited else 0
+                    writer.writerow({
+                        **item, "frame_index": index, "strategy": strategy, "analysis_scope": scope,
+                        "budget_kib": budget, "budget_rule": budget_rule, "application_cap_bytes": cap,
+                        "coverage_status": row_status, "expected_schedule_detections": schedules,
+                        "audited_schedule_detections": schedules if audited else 0,
+                        "expected_unconstrained_references": references,
+                        "audited_unconstrained_references": references if audited else 0,
+                        "archived_reusable_schedule_detections": len(reused),
+                        "archived_reusable_settings": "|".join(sorted(reused)),
+                        "max_audited_application_bytes": maximum,
+                        "record_file": filename if (control_path if exploratory else path) else "",
+                    })
+        frame_counts = Counter(row["status"] for row in records.values())
+        frame_counts["missing"] = len(panel) - len(records)
+        complete = frame_counts["audited"] == len(panel) and not foreign_names and prefix_issue is None
+        malformed = bool(frame_counts["invalid"] or foreign_names or prefix_issue)
+        control_count = Counter(row["status"] for row in control_records.values())
+        control_count["not_executed"] = len(panel) - len(control_records)
+        valid_controls = not (control_count["invalid"] or foreign_controls or control_issue)
+        control_complete = control_count["audited"] == len(panel) and valid_controls
+        matrix = [{
+            "strategy": strategy, "analysis_scope": scope, "budget_kib": budget,
+            "budget_rule": cap_for(strategy, budget)[0], "application_cap_bytes": cap_for(strategy, budget)[1],
+            **{key: groups[strategy, budget][key] for key in (
+                "expected_matrix_cells", "audited", "missing", "invalid", "not_executed",
+                "expected_schedule_detections", "audited_schedule_detections",
+                "expected_unconstrained_references", "audited_unconstrained_references",
+                "archived_reusable_schedule_detections",
+            )},
+            "max_audited_application_bytes": groups[strategy, budget].get("max_audited_application_bytes"),
+        } for strategy, scope, budget, _, _ in specs]
+        control_matrix = [row for row in matrix if row["analysis_scope"] == "exploratory_control"]
+        frozen_matrix = [row for row in matrix if row["analysis_scope"] == "frozen_schedule"]
+        archived_expected = {f"{kib}KiB_{rate}Mbps_rtt{rtt}ms_d{deadline}ms"
+                             for kib, rate, rtt in LINKS for deadline in DEADLINES}
+        verified_reuse_frames = len(reuse_covered) - len(reuse_errors)
+        unknown_reuse_frames = sorted(reuse.keys() - reuse_covered)
+        if not (reuse_issue or reuse_errors or unknown_reuse_frames) and reuse_hash is not None:
+            if reuse_claims != {label: reuse_counts[label] for label in archived_expected}:
+                reuse_issue = "First-only archive aggregate does not match its verified frame-to-setting map"
+        archive_available = bool(reuse_hash is not None and not (reuse_issue or reuse_errors or unknown_reuse_frames))
+        summary = {
+            "status": ("complete_formal_coverage" if complete else
+                       "invalid_formal_artifacts" if malformed else "partial_formal_coverage"),
+            "formal_coverage_complete": complete,
+            "capture_utc": captured, "audit_started_utc": started, "audit_completed_utc": clock(),
+            "panel": {"path": str(PANEL), "sha256": panel_hash, "expected_frames": len(panel),
+                      "expected_scenes": len(scenes)},
+            "source": {"run_directory": str(run_dir), "run_json_sha256": run_hash,
+                       "budget_prefix_audit_sha256": prefix_hash, "budget_prefix_audit_issue": prefix_issue,
+                       "unexpected_record_filenames": foreign_names},
+            "frame_counts": {key: frame_counts[key] for key in ("audited", "missing", "invalid")},
+            "frozen_schedule_detections": {
+                "expected": sum(row["expected_schedule_detections"] for row in frozen_matrix),
+                "audited": sum(row["audited_schedule_detections"] for row in frozen_matrix),
+            },
+            "exploratory": {
+                "status": ("invalid_exploratory_artifacts" if not valid_controls else
+                           "complete_exploratory_coverage" if control_complete else
+                           "partial_exploratory_coverage" if control_count["audited"] else "not_executed"),
+                "coverage_complete": control_complete, "strategies": list(EXPLORATORY),
+                "frame_counts": {key: control_count[key] for key in ("audited", "not_executed", "invalid")},
+                "expected_schedule_detections": sum(row["expected_schedule_detections"] for row in control_matrix),
+                "audited_schedule_detections": sum(row["audited_schedule_detections"] for row in control_matrix),
+                "unrun_frame_budget_cells": sum(row["not_executed"] for row in control_matrix),
+                "source": {"run_directory": str(control_dir), "run_sha256": control_manifest_hash,
+                           "manifest_issue": control_issue, "unexpected_record_filenames": foreign_controls},
+                "scope": "Controls use separate receipts. Archived packet lengths and clocks are checked. "
+                         "Historical frames do not contain independent fingerprints of the original packet bytes.",
+            },
+            "archived_first_only_reuse": {
+                "status": ("verified_descriptive_reuse" if archive_available else
+                           "invalid_archive_reuse" if reuse_hash is not None else "not_available"),
+                "source": {"path": str(archive_path), "sha256": reuse_hash},
+                "manifest_issue": reuse_issue, "unknown_frames": unknown_reuse_frames, "invalid_frames": reuse_errors,
+                "verified_reference_frames": verified_reuse_frames,
+                "archived_reusable_schedule_detections": sum(reuse_counts.values()),
+                "per_setting": {label: {"archived_reusable": reuse_counts[label],
+                                        "unavailable_within_verified_references": verified_reuse_frames - reuse_counts[label],
+                                        "panel_frames": len(panel)} for label in sorted(archived_expected)},
+                "scope": "Exact archived first-packet states. Counts do not advance persisted exploratory receipts.",
+            },
+            "scenes": {name: dict(scenes[name]) for name in sorted(scenes)},
+            "strategy_budget": matrix,
+            "observed_records": records,
+            "observed_control_records": control_records,
+            "counting": {
+                "schedule": "Each frozen strategy has one detection per configured network-link/deadline pair.",
+                "budget": "Dense is indexed under each tested schedule and carries no application cap.",
+                "snapshot": "Only finalized per-frame JSON names seen at capture time were considered.",
+            },
+            "matrix_csv_sha256": sha((stage / "coverage-matrix.csv").read_bytes()),
+        }
+        (stage / "coverage.json").write_text(json.dumps(summary, indent=2, ensure_ascii=False) + "\n",
+                                            encoding="utf-8")
+        stage.rename(destination)
+    return destination, summary
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--run-dir", type=Path, default=ROOT / "results/opv2v-formal")
+    parser.add_argument("--control-dir", type=Path, default=CONTROL)
+    parser.add_argument("--archive-reuse", type=Path, default=ARCHIVE_REUSE)
+    args = parser.parse_args()
+    run_dir, control_dir, archive_path = args.run_dir.resolve(), args.control_dir.resolve(), args.archive_reuse.resolve()
+    if not all(path.is_relative_to(ROOT / "results") for path in (run_dir, control_dir, archive_path)):
+        parser.error("Input paths must be inside project results")
+    destination, summary = create_snapshot(run_dir, control_dir, archive_path)
+    print(json.dumps({"snapshot": str(destination), "status": summary["status"],
+                      "frame_counts": summary["frame_counts"],
+                      "frozen_schedule_detections": summary["frozen_schedule_detections"],
+                      "exploratory": summary["exploratory"],
+                      "archived_first_only_reuse": summary["archived_first_only_reuse"]}, ensure_ascii=False))
+    invalid = (summary["status"] == "invalid_formal_artifacts"
+               or summary["exploratory"]["status"] == "invalid_exploratory_artifacts")
+    return 2 if invalid else 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

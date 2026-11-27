@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "task": "evidence-46",
+  "attempt": "20261124T153454170423Z-3541052b",
+  "reserved_at": "2026-11-24T15:34:54.170525+00:00",
+  "pid": 1345115,
+  "identity": "518f58c2ba7bfe83fa0919ce6875585b25b0c3dfab991bcb5e9c00b7d53dde5b",
+  "inputs": {
+    "files": {
+      "configs/dair-v2x/sample-train-pairs.json": "30e50f9063e10a7aef3f23e7a481b8e608d5d03916ec94144acbe8095b4a6cd2",
+      "configs/dair-v2x/train.json": "7c0d5ffd13de7682cc4e6672748c8f4178a6f4811993db641bc2da2588e2df54",
+      "configs/dair-v2x/val.json": "a0993520f5f91af282a96a2d542f3d837434b7a68392636f90bff050883fd832",
+      "experiments/dair-tmc-budget-continuation/config.json": "f37e9ccbdfa2660b9bdbd91e2eb10acdeeeec502749ef0170318027e28c03a3f",
+      "experiments/dair-tmc-budget-continuation/detections.jsonl": "132bb7a2156fc9a1ddbad7f960238b6261a64f4e70bdea3c1a8d32873264e965",
+      "experiments/dair-tmc-budget-last-frame/config.json": "99b16e14bdfd45232c39b691a671d3a91489e1a17d8ac34c3b2dea6989fd0fd2",
+      "experiments/dair-tmc-budget-last-frame/detections.jsonl": "b4bbe9aadd8520c4b515b976c365289f48673bfa4091c5eb75cc4e86a08d8550",
+      "experiments/dair-tmc-budget-prefix/config.json": "684b542d751e7537cbbc525be0b8a2b19bf3d43d50c719beed34660065ecc1bb",
+      "experiments/dair-tmc-budget-prefix/detections.jsonl": "ac107ebe1f0baa57c82292a6b90005154345997bdaeee5f0223556e91a77e926",
+      "experiments/dair-tmc-budget-prefix-resume/config.json": "e134eece86d7bbfb06ddbc4fe4d8604951fdb6b0cc56893b116d0dae3c9fd901",
+      "experiments/dair-tmc-budget-prefix-resume/detections.jsonl": "52b40e10ae1e39027d666c8f46f56ebba1e1195de847d64b97bed861ef09d7be",
+      "experiments/dair-tmc-pilot-02/detections.jsonl": "778742af6212423d2a2edd90a5a2ba749a8486376bd0f7fca9c8040d7441e100",
+      "experiments/dair-tmc-pilot-02/summary.json": "8efe11ae76b85e33c58f5608e384a6a6aa9451cd156d0dc0fcc8cc2f85dcad63",
+      "results/dair-tmc-budget/coverage.json": "6f498ae5ceecd89e3258953efca9afc6409da8374254738b1654555551d3313d",
+      "results/dair-tmc-budget/paired-1024.json": "bf28a28bc80a0789e0c1885ab9cb54d537600779fd14149eb0345fa0e9d182f9",
+      "results/dair-tmc-budget/reproduction-versions.txt": "425c93fe5bd18bb70c36dc7951a98118d9701cd4ef3382e75415eaeb0ddc6351",
+      "scripts/research_harness.py": "27057b1bc91f6c703b9759ccbdae7578ab9681c576fe855890e0f4d90c9761ef",
+      "scripts/research_harness_tasks.py": "36ba858410df914f9202b64e2fde0c4e9825897e35c6e3d7a23c42d2149ca8a3"
+    },
+    "python": "3.14.10"
+  }
+}

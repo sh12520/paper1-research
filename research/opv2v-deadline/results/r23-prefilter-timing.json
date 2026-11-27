@@ -1,0 +1,2957 @@
+{
+  "status": "complete",
+  "equivalence_gate": {
+    "planned_frames": 80,
+    "planned_scenes": 16,
+    "retained_frame_receipts": 80,
+    "expected_unique_states_across_frames": 1045,
+    "retained_unique_states_across_frames": 1045,
+    "complete_input_unique_states": 160,
+    "max_abs_box_error_if_gate_passed": 0.0,
+    "max_abs_score_error_if_gate_passed": 0.0,
+    "passed": true,
+    "errors": []
+  },
+  "timing": {
+    "scope": "Whole receiver durations from the same cached input, direct and synchronized. Stage measurements are independent diagnostics and can overlap. Paired savings use identically indexed repeats. Within-category CPU helper-call totals sum only disjoint calls in the same trial. A stage skipped on an empty-candidate trial has no measured duration. Each state is counted once per panel entry, including distinct actual wire states with equal decoded content.",
+    "total_anchors_decoded_once_per_state": {
+      "full": {
+        "original": 20971520,
+        "optimized": 13040,
+        "fraction_omitted": 0.9993782043457031
+      },
+      "cooperative": {
+        "original": 126484480,
+        "optimized": 76833,
+        "fraction_omitted": 0.9993925499792544
+      },
+      "all_states": {
+        "original": 136970240,
+        "optimized": 82215,
+        "fraction_omitted": 0.999399760123075
+      },
+      "local": {
+        "original": 10485760,
+        "optimized": 5382,
+        "fraction_omitted": 0.9994867324829102
+      },
+      "partial": {
+        "original": 105512960,
+        "optimized": 63793,
+        "fraction_omitted": 0.9993954012853018
+      }
+    },
+    "per_scope": {
+      "all_states": {
+        "optimized.candidate_count_per_state": {
+          "n": 1045,
+          "p50": 78.0,
+          "p90": 125.0,
+          "p95": 132.79999999999995,
+          "max": 144.0,
+          "min": 9.0
+        },
+        "optimized.decoded_count_per_state": {
+          "n": 1045,
+          "p50": 78.0,
+          "p90": 125.0,
+          "p95": 132.79999999999995,
+          "max": 144.0,
+          "min": 9.0
+        },
+        "optimized.detector_head_cuda_ms": {
+          "n": 965,
+          "p50": 0.34303999692201614,
+          "p90": 0.34508800506591797,
+          "p95": 0.3481599986553192,
+          "max": 0.7096319943666458,
+          "min": 0.3389439955353737
+        },
+        "optimized.head_d2h_bytes": {
+          "n": 3135,
+          "p50": 5242880.0,
+          "p90": 5242880.0,
+          "p95": 5242880.0,
+          "max": 5242880.0,
+          "min": 5242880.0
+        },
+        "optimized.measurement.cuda_stage_event_ms.cls_head": {
+          "n": 965,
+          "p50": 0.10956799983978271,
+          "p90": 0.10956799983978271,
+          "p95": 0.10976000130176544,
+          "max": 0.2088959962129593,
+          "min": 0.10841599851846695
+        },
+        "optimized.measurement.cuda_stage_event_ms.dir_head": {
+          "n": 965,
+          "p50": 0.11059200018644333,
+          "p90": 0.11078400164842606,
+          "p95": 0.11161600053310394,
+          "max": 0.477183997631073,
+          "min": 0.1085439994931221
+        },
+        "optimized.measurement.cuda_stage_event_ms.heads_to_host": {
+          "n": 1045,
+          "p50": 0.4851199984550476,
+          "p90": 0.6108288049697876,
+          "p95": 0.6767296075820917,
+          "max": 1.2401280403137207,
+          "min": 0.4421440064907074
+        },
+        "optimized.measurement.cuda_stage_event_ms.receiver_fusion_and_heads": {
+          "n": 1045,
+          "p50": 8.643424034118652,
+          "p90": 10.199859619140625,
+          "p95": 10.556211471557617,
+          "max": 12.017663955688477,
+          "min": 0.09270399808883667
+        },
+        "optimized.measurement.cuda_stage_event_ms.reg_head": {
+          "n": 965,
+          "p50": 0.12390399724245071,
+          "p90": 0.12492799758911133,
+          "p95": 0.12595200538635254,
+          "max": 0.22630399465560913,
+          "min": 0.11980800330638885
+        },
+        "optimized.measurement.cuda_stage_event_ms.wire_masks": {
+          "n": 1045,
+          "p50": 0.35388800501823425,
+          "p90": 0.7539392232894897,
+          "p95": 0.81217280626297,
+          "max": 1.5396480560302734,
+          "min": 0.01283199992030859
+        },
+        "optimized.measurement.host_stage_wall_ms.cls_head": {
+          "n": 965,
+          "p50": 0.045802,
+          "p90": 0.051292800000000006,
+          "p95": 0.05851339999999995,
+          "max": 0.09169,
+          "min": 0.041101
+        },
+        "optimized.measurement.host_stage_wall_ms.dir_head": {
+          "n": 965,
+          "p50": 0.033798,
+          "p90": 0.036565600000000004,
+          "p95": 0.043934799999999975,
+          "max": 0.071208,
+          "min": 0.031043
+        },
+        "optimized.measurement.host_stage_wall_ms.heads_to_host": {
+          "n": 1045,
+          "p50": 6.494248,
+          "p90": 7.0613496,
+          "p95": 7.301259,
+          "max": 8.231406,
+          "min": 0.435764
+        },
+        "optimized.measurement.host_stage_wall_ms.receiver_fusion_and_heads": {
+          "n": 1045,
+          "p50": 2.533999,
+          "p90": 3.8034266000000003,
+          "p95": 4.0372742,
+          "max": 5.967945,
+          "min": 0.077835
+        },
+        "optimized.measurement.host_stage_wall_ms.reg_head": {
+          "n": 965,
+          "p50": 0.041136,
+          "p90": 0.044816800000000004,
+          "p95": 0.05223499999999998,
+          "max": 0.121535,
+          "min": 0.036667
+        },
+        "optimized.measurement.host_stage_wall_ms.wire_masks": {
+          "n": 1045,
+          "p50": 0.325615,
+          "p90": 0.725103,
+          "p95": 0.7838399999999999,
+          "max": 1.491723,
+          "min": 0.001919
+        },
+        "optimized.measurement.traced_cpu_postprocess_stage_ms.anchor_decode": {
+          "n": 1045,
+          "p50": 0.209838,
+          "p90": 0.22772,
+          "p95": 0.23704559999999997,
+          "max": 0.352079,
+          "min": 0.182801
+        },
+        "optimized.measurement.traced_cpu_postprocess_stage_ms.candidate_filter": {
+          "n": 2090,
+          "p50": 0.1363255,
+          "p90": 0.40224010000000004,
+          "p95": 0.43969804999999995,
+          "max": 0.878962,
+          "min": 0.003607
+        },
+        "optimized.measurement.traced_cpu_postprocess_stage_ms.candidate_regression_gather": {
+          "n": 1045,
+          "p50": 0.082893,
+          "p90": 0.0933778,
+          "p95": 0.10071759999999996,
+          "max": 0.161163,
+          "min": 0.066322
+        },
+        "optimized.measurement.traced_cpu_postprocess_stage_ms.classification": {
+          "n": 1045,
+          "p50": 0.276362,
+          "p90": 0.3300614,
+          "p95": 0.353828,
+          "max": 1.42168,
+          "min": 0.152856
+        },
+        "optimized.measurement.traced_cpu_postprocess_stage_ms.direction": {
+          "n": 1045,
+          "p50": 0.244474,
+          "p90": 0.3166102,
+          "p95": 0.34419599999999995,
+          "max": 0.479477,
+          "min": 0.198155
+        },
+        "optimized.measurement.traced_cpu_postprocess_stage_ms.final_range_filter": {
+          "n": 1045,
+          "p50": 0.085737,
+          "p90": 0.093145,
+          "p95": 0.10613199999999999,
+          "max": 0.149788,
+          "min": 0.075827
+        },
+        "optimized.measurement.traced_cpu_postprocess_stage_ms.geometry_filter": {
+          "n": 1045,
+          "p50": 0.458033,
+          "p90": 0.5195088,
+          "p95": 0.554348,
+          "max": 0.770069,
+          "min": 0.376757
+        },
+        "optimized.measurement.traced_cpu_postprocess_stage_ms.postprocess_total": {
+          "n": 1045,
+          "p50": 8.98973,
+          "p90": 14.1077258,
+          "p95": 15.261732799999997,
+          "max": 20.049908,
+          "min": 2.20644
+        },
+        "optimized.measurement.traced_cpu_postprocess_stage_ms.rotated_nms": {
+          "n": 1045,
+          "p50": 7.139512,
+          "p90": 11.991541600000001,
+          "p95": 13.1945444,
+          "max": 17.279583,
+          "min": 0.735111
+        },
+        "optimized.measurement.untraced_cpu_postprocess_wall_ms": {
+          "n": 3135,
+          "p50": 9.015396,
+          "p90": 14.1258302,
+          "p95": 15.239179799999997,
+          "max": 20.37596,
+          "min": 2.1365
+        },
+        "optimized.serial_receiver_wall_ms": {
+          "n": 3135,
+          "p50": 18.464119,
+          "p90": 24.716423799999998,
+          "p95": 26.09367819999999,
+          "max": 34.478922,
+          "min": 2.755486
+        },
+        "optimized.traced_cpu_stage_total_ms.anchor_decode": {
+          "n": 1045,
+          "p50": 0.209838,
+          "p90": 0.22772,
+          "p95": 0.23704559999999997,
+          "max": 0.352079,
+          "min": 0.182801
+        },
+        "optimized.traced_cpu_stage_total_ms.candidate_filter": {
+          "n": 1045,
+          "p50": 0.35667499999999996,
+          "p90": 0.4451286,
+          "p95": 0.48431619999999975,
+          "max": 0.884549,
+          "min": 0.26530499999999996
+        },
+        "optimized.traced_cpu_stage_total_ms.candidate_regression_gather": {
+          "n": 1045,
+          "p50": 0.082893,
+          "p90": 0.0933778,
+          "p95": 0.10071759999999996,
+          "max": 0.161163,
+          "min": 0.066322
+        },
+        "optimized.traced_cpu_stage_total_ms.classification": {
+          "n": 1045,
+          "p50": 0.276362,
+          "p90": 0.3300614,
+          "p95": 0.353828,
+          "max": 1.42168,
+          "min": 0.152856
+        },
+        "optimized.traced_cpu_stage_total_ms.direction": {
+          "n": 1045,
+          "p50": 0.244474,
+          "p90": 0.3166102,
+          "p95": 0.34419599999999995,
+          "max": 0.479477,
+          "min": 0.198155
+        },
+        "optimized.traced_cpu_stage_total_ms.final_range_filter": {
+          "n": 1045,
+          "p50": 0.085737,
+          "p90": 0.093145,
+          "p95": 0.10613199999999999,
+          "max": 0.149788,
+          "min": 0.075827
+        },
+        "optimized.traced_cpu_stage_total_ms.geometry_filter": {
+          "n": 1045,
+          "p50": 0.458033,
+          "p90": 0.5195088,
+          "p95": 0.554348,
+          "max": 0.770069,
+          "min": 0.376757
+        },
+        "optimized.traced_cpu_stage_total_ms.postprocess_total": {
+          "n": 1045,
+          "p50": 8.98973,
+          "p90": 14.1077258,
+          "p95": 15.261732799999997,
+          "max": 20.049908,
+          "min": 2.20644
+        },
+        "optimized.traced_cpu_stage_total_ms.rotated_nms": {
+          "n": 1045,
+          "p50": 7.139512,
+          "p90": 11.991541600000001,
+          "p95": 13.1945444,
+          "max": 17.279583,
+          "min": 0.735111
+        },
+        "original.candidate_count_per_state": {
+          "n": 1045,
+          "p50": 78.0,
+          "p90": 125.0,
+          "p95": 132.79999999999995,
+          "max": 144.0,
+          "min": 9.0
+        },
+        "original.decoded_count_per_state": {
+          "n": 1045,
+          "p50": 131072.0,
+          "p90": 131072.0,
+          "p95": 131072.0,
+          "max": 131072.0,
+          "min": 131072.0
+        },
+        "original.detector_head_cuda_ms": {
+          "n": 965,
+          "p50": 0.34303999692201614,
+          "p90": 0.34508799761533737,
+          "p95": 0.34634880125522616,
+          "max": 0.4689920023083687,
+          "min": 0.3389440029859543
+        },
+        "original.head_d2h_bytes": {
+          "n": 3135,
+          "p50": 5242880.0,
+          "p90": 5242880.0,
+          "p95": 5242880.0,
+          "max": 5242880.0,
+          "min": 5242880.0
+        },
+        "original.measurement.cuda_stage_event_ms.cls_head": {
+          "n": 965,
+          "p50": 0.10956799983978271,
+          "p90": 0.10956799983978271,
+          "p95": 0.10956799983978271,
+          "max": 0.21094399690628052,
+          "min": 0.10847999900579453
+        },
+        "original.measurement.cuda_stage_event_ms.dir_head": {
+          "n": 965,
+          "p50": 0.11059200018644333,
+          "p90": 0.11075200140476227,
+          "p95": 0.11161600053310394,
+          "max": 0.19046400487422943,
+          "min": 0.10956799983978271
+        },
+        "original.measurement.cuda_stage_event_ms.heads_to_host": {
+          "n": 1045,
+          "p50": 0.4842880070209503,
+          "p90": 0.6128511786460876,
+          "p95": 0.6745920181274412,
+          "max": 1.2392640113830566,
+          "min": 0.44464001059532166
+        },
+        "original.measurement.cuda_stage_event_ms.receiver_fusion_and_heads": {
+          "n": 1045,
+          "p50": 8.62822437286377,
+          "p90": 10.186111640930175,
+          "p95": 10.443238449096679,
+          "max": 11.927552223205566,
+          "min": 0.08774399757385254
+        },
+        "original.measurement.cuda_stage_event_ms.reg_head": {
+          "n": 965,
+          "p50": 0.12316799908876419,
+          "p90": 0.12492799758911133,
+          "p95": 0.12595200538635254,
+          "max": 0.24063999950885773,
+          "min": 0.12083200365304947
+        },
+        "original.measurement.cuda_stage_event_ms.wire_masks": {
+          "n": 1045,
+          "p50": 0.3487359881401062,
+          "p90": 0.7555840015411377,
+          "p95": 0.8183104276657104,
+          "max": 1.1888320446014404,
+          "min": 0.012480000033974648
+        },
+        "original.measurement.host_stage_wall_ms.cls_head": {
+          "n": 965,
+          "p50": 0.044881,
+          "p90": 0.0499038,
+          "p95": 0.057960399999999926,
+          "max": 0.101875,
+          "min": 0.039681
+        },
+        "original.measurement.host_stage_wall_ms.dir_head": {
+          "n": 965,
+          "p50": 0.03334,
+          "p90": 0.036679,
+          "p95": 0.04319739999999997,
+          "max": 0.070848,
+          "min": 0.030354
+        },
+        "original.measurement.host_stage_wall_ms.heads_to_host": {
+          "n": 1045,
+          "p50": 6.529683,
+          "p90": 7.1248946,
+          "p95": 7.3515293999999995,
+          "max": 8.182858,
+          "min": 0.435842
+        },
+        "original.measurement.host_stage_wall_ms.receiver_fusion_and_heads": {
+          "n": 1045,
+          "p50": 2.513605,
+          "p90": 3.7698476,
+          "p95": 3.9794948,
+          "max": 6.255727,
+          "min": 0.073827
+        },
+        "original.measurement.host_stage_wall_ms.reg_head": {
+          "n": 965,
+          "p50": 0.03999,
+          "p90": 0.0443896,
+          "p95": 0.053361399999999996,
+          "max": 0.103852,
+          "min": 0.035282
+        },
+        "original.measurement.host_stage_wall_ms.wire_masks": {
+          "n": 1045,
+          "p50": 0.319322,
+          "p90": 0.7251540000000001,
+          "p95": 0.7872121999999999,
+          "max": 1.128324,
+          "min": 0.001819
+        },
+        "original.measurement.traced_cpu_postprocess_stage_ms.anchor_decode": {
+          "n": 1045,
+          "p50": 13.448709,
+          "p90": 16.6026356,
+          "p95": 17.462571399999998,
+          "max": 20.49771,
+          "min": 9.689961
+        },
+        "original.measurement.traced_cpu_postprocess_stage_ms.candidate_filter": {
+          "n": 3135,
+          "p50": 0.324198,
+          "p90": 2.4853739999999998,
+          "p95": 2.7020128,
+          "max": 6.099639,
+          "min": 0.064254
+        },
+        "original.measurement.traced_cpu_postprocess_stage_ms.classification": {
+          "n": 1045,
+          "p50": 0.191049,
+          "p90": 0.22510560000000002,
+          "p95": 0.2420142,
+          "max": 0.322514,
+          "min": 0.0832
+        },
+        "original.measurement.traced_cpu_postprocess_stage_ms.final_range_filter": {
+          "n": 1045,
+          "p50": 0.052358,
+          "p90": 0.058710200000000004,
+          "p95": 0.06421859999999999,
+          "max": 0.088018,
+          "min": 0.04162
+        },
+        "original.measurement.traced_cpu_postprocess_stage_ms.geometry_filter": {
+          "n": 5225,
+          "p50": 0.070961,
+          "p90": 0.18020540000000002,
+          "p95": 0.19639520000000002,
+          "max": 0.322868,
+          "min": 0.029304
+        },
+        "original.measurement.traced_cpu_postprocess_stage_ms.postprocess_total": {
+          "n": 1045,
+          "p50": 25.299495,
+          "p90": 34.189677800000005,
+          "p95": 35.7256558,
+          "max": 45.744469,
+          "min": 14.591592
+        },
+        "original.measurement.traced_cpu_postprocess_stage_ms.rotated_nms": {
+          "n": 1045,
+          "p50": 7.210275,
+          "p90": 12.0739122,
+          "p95": 13.0924708,
+          "max": 17.564914,
+          "min": 0.794328
+        },
+        "original.measurement.untraced_cpu_postprocess_wall_ms": {
+          "n": 3135,
+          "p50": 25.243608,
+          "p90": 33.8632188,
+          "p95": 35.588797299999996,
+          "max": 46.133946,
+          "min": 14.66873
+        },
+        "original.serial_receiver_wall_ms": {
+          "n": 3135,
+          "p50": 34.686548,
+          "p90": 44.588467200000004,
+          "p95": 46.470033699999995,
+          "max": 59.602041,
+          "min": 15.273034
+        },
+        "original.traced_cpu_stage_total_ms.anchor_decode": {
+          "n": 1045,
+          "p50": 13.448709,
+          "p90": 16.6026356,
+          "p95": 17.462571399999998,
+          "max": 20.49771,
+          "min": 9.689961
+        },
+        "original.traced_cpu_stage_total_ms.candidate_filter": {
+          "n": 1045,
+          "p50": 2.6769309999999997,
+          "p90": 3.2677588,
+          "p95": 3.874041199999996,
+          "max": 6.401878,
+          "min": 1.793078
+        },
+        "original.traced_cpu_stage_total_ms.classification": {
+          "n": 1045,
+          "p50": 0.191049,
+          "p90": 0.22510560000000002,
+          "p95": 0.2420142,
+          "max": 0.322514,
+          "min": 0.0832
+        },
+        "original.traced_cpu_stage_total_ms.final_range_filter": {
+          "n": 1045,
+          "p50": 0.052358,
+          "p90": 0.058710200000000004,
+          "p95": 0.06421859999999999,
+          "max": 0.088018,
+          "min": 0.04162
+        },
+        "original.traced_cpu_stage_total_ms.geometry_filter": {
+          "n": 1045,
+          "p50": 0.434457,
+          "p90": 0.4968848,
+          "p95": 0.5274394,
+          "max": 0.73532,
+          "min": 0.353086
+        },
+        "original.traced_cpu_stage_total_ms.postprocess_total": {
+          "n": 1045,
+          "p50": 25.299495,
+          "p90": 34.189677800000005,
+          "p95": 35.7256558,
+          "max": 45.744469,
+          "min": 14.591592
+        },
+        "original.traced_cpu_stage_total_ms.rotated_nms": {
+          "n": 1045,
+          "p50": 7.210275,
+          "p90": 12.0739122,
+          "p95": 13.0924708,
+          "max": 17.564914,
+          "min": 0.794328
+        },
+        "paired_detector_head_cuda_saved_ms": {
+          "n": 965,
+          "p50": 0.0,
+          "p90": 0.003072001039981842,
+          "p95": 0.005094397068023676,
+          "max": 0.12624000757932663,
+          "min": -0.36454399675130844
+        },
+        "paired_postprocess_saved_ms": {
+          "n": 3135,
+          "p50": 16.277341,
+          "p90": 20.337727799999996,
+          "p95": 21.394883199999995,
+          "max": 26.244418999999997,
+          "min": 11.425442999999998
+        },
+        "paired_whole_saved_fraction": {
+          "n": 3135,
+          "p50": 0.4686081384899257,
+          "p90": 0.5506223674351747,
+          "p95": 0.62354334840365,
+          "max": 0.8480808529667827,
+          "min": 0.34792814734655214
+        },
+        "paired_whole_saved_ms": {
+          "n": 3135,
+          "p50": 16.288794999999997,
+          "p90": 20.369468400000002,
+          "p95": 21.381352999999994,
+          "max": 26.113662,
+          "min": 11.304127000000001
+        }
+      },
+      "cooperative": {
+        "optimized.candidate_count_per_state": {
+          "n": 965,
+          "p50": 80.0,
+          "p90": 125.0,
+          "p95": 133.0,
+          "max": 144.0,
+          "min": 12.0
+        },
+        "optimized.decoded_count_per_state": {
+          "n": 965,
+          "p50": 80.0,
+          "p90": 125.0,
+          "p95": 133.0,
+          "max": 144.0,
+          "min": 12.0
+        },
+        "optimized.detector_head_cuda_ms": {
+          "n": 965,
+          "p50": 0.34303999692201614,
+          "p90": 0.34508800506591797,
+          "p95": 0.3481599986553192,
+          "max": 0.7096319943666458,
+          "min": 0.3389439955353737
+        },
+        "optimized.head_d2h_bytes": {
+          "n": 2895,
+          "p50": 5242880.0,
+          "p90": 5242880.0,
+          "p95": 5242880.0,
+          "max": 5242880.0,
+          "min": 5242880.0
+        },
+        "optimized.measurement.cuda_stage_event_ms.cls_head": {
+          "n": 965,
+          "p50": 0.10956799983978271,
+          "p90": 0.10956799983978271,
+          "p95": 0.10976000130176544,
+          "max": 0.2088959962129593,
+          "min": 0.10841599851846695
+        },
+        "optimized.measurement.cuda_stage_event_ms.dir_head": {
+          "n": 965,
+          "p50": 0.11059200018644333,
+          "p90": 0.11078400164842606,
+          "p95": 0.11161600053310394,
+          "max": 0.477183997631073,
+          "min": 0.1085439994931221
+        },
+        "optimized.measurement.cuda_stage_event_ms.heads_to_host": {
+          "n": 965,
+          "p50": 0.4837760031223297,
+          "p90": 0.6102848172187805,
+          "p95": 0.6635584235191339,
+          "max": 1.2401280403137207,
+          "min": 0.4421440064907074
+        },
+        "optimized.measurement.cuda_stage_event_ms.receiver_fusion_and_heads": {
+          "n": 965,
+          "p50": 8.768511772155762,
+          "p90": 10.25919361114502,
+          "p95": 10.637900733947752,
+          "max": 12.017663955688477,
+          "min": 7.594751834869385
+        },
+        "optimized.measurement.cuda_stage_event_ms.reg_head": {
+          "n": 965,
+          "p50": 0.12390399724245071,
+          "p90": 0.12492799758911133,
+          "p95": 0.12595200538635254,
+          "max": 0.22630399465560913,
+          "min": 0.11980800330638885
+        },
+        "optimized.measurement.cuda_stage_event_ms.wire_masks": {
+          "n": 965,
+          "p50": 0.3928000032901764,
+          "p90": 0.762009596824646,
+          "p95": 0.8210239768028259,
+          "max": 1.5396480560302734,
+          "min": 0.12019199877977371
+        },
+        "optimized.measurement.host_stage_wall_ms.cls_head": {
+          "n": 965,
+          "p50": 0.045802,
+          "p90": 0.051292800000000006,
+          "p95": 0.05851339999999995,
+          "max": 0.09169,
+          "min": 0.041101
+        },
+        "optimized.measurement.host_stage_wall_ms.dir_head": {
+          "n": 965,
+          "p50": 0.033798,
+          "p90": 0.036565600000000004,
+          "p95": 0.043934799999999975,
+          "max": 0.071208,
+          "min": 0.031043
+        },
+        "optimized.measurement.host_stage_wall_ms.heads_to_host": {
+          "n": 965,
+          "p50": 6.555606,
+          "p90": 7.087918800000001,
+          "p95": 7.353034799999999,
+          "max": 8.231406,
+          "min": 5.901542
+        },
+        "optimized.measurement.host_stage_wall_ms.receiver_fusion_and_heads": {
+          "n": 965,
+          "p50": 2.67662,
+          "p90": 3.8278734,
+          "p95": 4.052229,
+          "max": 5.967945,
+          "min": 1.70107
+        },
+        "optimized.measurement.host_stage_wall_ms.reg_head": {
+          "n": 965,
+          "p50": 0.041136,
+          "p90": 0.044816800000000004,
+          "p95": 0.05223499999999998,
+          "max": 0.121535,
+          "min": 0.036667
+        },
+        "optimized.measurement.host_stage_wall_ms.wire_masks": {
+          "n": 965,
+          "p50": 0.360622,
+          "p90": 0.7317358,
+          "p95": 0.7914584,
+          "max": 1.491723,
+          "min": 0.098095
+        },
+        "optimized.measurement.traced_cpu_postprocess_stage_ms.anchor_decode": {
+          "n": 965,
+          "p50": 0.210268,
+          "p90": 0.22773880000000002,
+          "p95": 0.2365784,
+          "max": 0.352079,
+          "min": 0.185817
+        },
+        "optimized.measurement.traced_cpu_postprocess_stage_ms.candidate_filter": {
+          "n": 1930,
+          "p50": 0.13744150000000002,
+          "p90": 0.40569210000000006,
+          "p95": 0.44220889999999996,
+          "max": 0.878962,
+          "min": 0.003607
+        },
+        "optimized.measurement.traced_cpu_postprocess_stage_ms.candidate_regression_gather": {
+          "n": 965,
+          "p50": 0.083088,
+          "p90": 0.0933638,
+          "p95": 0.09982059999999993,
+          "max": 0.161163,
+          "min": 0.067721
+        },
+        "optimized.measurement.traced_cpu_postprocess_stage_ms.classification": {
+          "n": 965,
+          "p50": 0.279494,
+          "p90": 0.33160880000000004,
+          "p95": 0.35443800000000003,
+          "max": 1.42168,
+          "min": 0.167588
+        },
+        "optimized.measurement.traced_cpu_postprocess_stage_ms.direction": {
+          "n": 965,
+          "p50": 0.24676,
+          "p90": 0.3183806,
+          "p95": 0.348646,
+          "max": 0.479477,
+          "min": 0.205698
+        },
+        "optimized.measurement.traced_cpu_postprocess_stage_ms.final_range_filter": {
+          "n": 965,
+          "p50": 0.085946,
+          "p90": 0.0931926,
+          "p95": 0.10490679999999976,
+          "max": 0.149788,
+          "min": 0.075997
+        },
+        "optimized.measurement.traced_cpu_postprocess_stage_ms.geometry_filter": {
+          "n": 965,
+          "p50": 0.459688,
+          "p90": 0.5203616,
+          "p95": 0.5529942,
+          "max": 0.770069,
+          "min": 0.38131
+        },
+        "optimized.measurement.traced_cpu_postprocess_stage_ms.postprocess_total": {
+          "n": 965,
+          "p50": 9.113191,
+          "p90": 14.1838306,
+          "p95": 15.3293276,
+          "max": 20.049908,
+          "min": 2.692769
+        },
+        "optimized.measurement.traced_cpu_postprocess_stage_ms.rotated_nms": {
+          "n": 965,
+          "p50": 7.299745,
+          "p90": 12.125833400000001,
+          "p95": 13.267733599999998,
+          "max": 17.279583,
+          "min": 1.106631
+        },
+        "optimized.measurement.untraced_cpu_postprocess_wall_ms": {
+          "n": 2895,
+          "p50": 9.106598,
+          "p90": 14.2213156,
+          "p95": 15.343104499999999,
+          "max": 20.37596,
+          "min": 2.569255
+        },
+        "optimized.serial_receiver_wall_ms": {
+          "n": 2895,
+          "p50": 18.993869,
+          "p90": 24.984096199999996,
+          "p95": 26.265895699999998,
+          "max": 34.478922,
+          "min": 10.920818
+        },
+        "optimized.traced_cpu_stage_total_ms.anchor_decode": {
+          "n": 965,
+          "p50": 0.210268,
+          "p90": 0.22773880000000002,
+          "p95": 0.2365784,
+          "max": 0.352079,
+          "min": 0.185817
+        },
+        "optimized.traced_cpu_stage_total_ms.candidate_filter": {
+          "n": 965,
+          "p50": 0.363185,
+          "p90": 0.44743780000000005,
+          "p95": 0.48931919999999995,
+          "max": 0.884549,
+          "min": 0.26762100000000005
+        },
+        "optimized.traced_cpu_stage_total_ms.candidate_regression_gather": {
+          "n": 965,
+          "p50": 0.083088,
+          "p90": 0.0933638,
+          "p95": 0.09982059999999993,
+          "max": 0.161163,
+          "min": 0.067721
+        },
+        "optimized.traced_cpu_stage_total_ms.classification": {
+          "n": 965,
+          "p50": 0.279494,
+          "p90": 0.33160880000000004,
+          "p95": 0.35443800000000003,
+          "max": 1.42168,
+          "min": 0.167588
+        },
+        "optimized.traced_cpu_stage_total_ms.direction": {
+          "n": 965,
+          "p50": 0.24676,
+          "p90": 0.3183806,
+          "p95": 0.348646,
+          "max": 0.479477,
+          "min": 0.205698
+        },
+        "optimized.traced_cpu_stage_total_ms.final_range_filter": {
+          "n": 965,
+          "p50": 0.085946,
+          "p90": 0.0931926,
+          "p95": 0.10490679999999976,
+          "max": 0.149788,
+          "min": 0.075997
+        },
+        "optimized.traced_cpu_stage_total_ms.geometry_filter": {
+          "n": 965,
+          "p50": 0.459688,
+          "p90": 0.5203616,
+          "p95": 0.5529942,
+          "max": 0.770069,
+          "min": 0.38131
+        },
+        "optimized.traced_cpu_stage_total_ms.postprocess_total": {
+          "n": 965,
+          "p50": 9.113191,
+          "p90": 14.1838306,
+          "p95": 15.3293276,
+          "max": 20.049908,
+          "min": 2.692769
+        },
+        "optimized.traced_cpu_stage_total_ms.rotated_nms": {
+          "n": 965,
+          "p50": 7.299745,
+          "p90": 12.125833400000001,
+          "p95": 13.267733599999998,
+          "max": 17.279583,
+          "min": 1.106631
+        },
+        "original.candidate_count_per_state": {
+          "n": 965,
+          "p50": 80.0,
+          "p90": 125.0,
+          "p95": 133.0,
+          "max": 144.0,
+          "min": 12.0
+        },
+        "original.decoded_count_per_state": {
+          "n": 965,
+          "p50": 131072.0,
+          "p90": 131072.0,
+          "p95": 131072.0,
+          "max": 131072.0,
+          "min": 131072.0
+        },
+        "original.detector_head_cuda_ms": {
+          "n": 965,
+          "p50": 0.34303999692201614,
+          "p90": 0.34508799761533737,
+          "p95": 0.34634880125522616,
+          "max": 0.4689920023083687,
+          "min": 0.3389440029859543
+        },
+        "original.head_d2h_bytes": {
+          "n": 2895,
+          "p50": 5242880.0,
+          "p90": 5242880.0,
+          "p95": 5242880.0,
+          "max": 5242880.0,
+          "min": 5242880.0
+        },
+        "original.measurement.cuda_stage_event_ms.cls_head": {
+          "n": 965,
+          "p50": 0.10956799983978271,
+          "p90": 0.10956799983978271,
+          "p95": 0.10956799983978271,
+          "max": 0.21094399690628052,
+          "min": 0.10847999900579453
+        },
+        "original.measurement.cuda_stage_event_ms.dir_head": {
+          "n": 965,
+          "p50": 0.11059200018644333,
+          "p90": 0.11075200140476227,
+          "p95": 0.11161600053310394,
+          "max": 0.19046400487422943,
+          "min": 0.10956799983978271
+        },
+        "original.measurement.cuda_stage_event_ms.heads_to_host": {
+          "n": 965,
+          "p50": 0.48316800594329834,
+          "p90": 0.6125632047653198,
+          "p95": 0.6702655911445615,
+          "max": 1.2229440212249756,
+          "min": 0.44464001059532166
+        },
+        "original.measurement.cuda_stage_event_ms.receiver_fusion_and_heads": {
+          "n": 965,
+          "p50": 8.769536018371582,
+          "p90": 10.230771255493163,
+          "p95": 10.582015991210936,
+          "max": 11.927552223205566,
+          "min": 7.540736198425293
+        },
+        "original.measurement.cuda_stage_event_ms.reg_head": {
+          "n": 965,
+          "p50": 0.12316799908876419,
+          "p90": 0.12492799758911133,
+          "p95": 0.12595200538635254,
+          "max": 0.24063999950885773,
+          "min": 0.12083200365304947
+        },
+        "original.measurement.cuda_stage_event_ms.wire_masks": {
+          "n": 965,
+          "p50": 0.3834559917449951,
+          "p90": 0.7599551916122437,
+          "p95": 0.8236095786094664,
+          "max": 1.1888320446014404,
+          "min": 0.11353600025177002
+        },
+        "original.measurement.host_stage_wall_ms.cls_head": {
+          "n": 965,
+          "p50": 0.044881,
+          "p90": 0.0499038,
+          "p95": 0.057960399999999926,
+          "max": 0.101875,
+          "min": 0.039681
+        },
+        "original.measurement.host_stage_wall_ms.dir_head": {
+          "n": 965,
+          "p50": 0.03334,
+          "p90": 0.036679,
+          "p95": 0.04319739999999997,
+          "max": 0.070848,
+          "min": 0.030354
+        },
+        "original.measurement.host_stage_wall_ms.heads_to_host": {
+          "n": 965,
+          "p50": 6.578773,
+          "p90": 7.1726652,
+          "p95": 7.3722422,
+          "max": 8.182858,
+          "min": 5.949312
+        },
+        "original.measurement.host_stage_wall_ms.receiver_fusion_and_heads": {
+          "n": 965,
+          "p50": 2.621032,
+          "p90": 3.79357,
+          "p95": 3.9939677999999996,
+          "max": 6.255727,
+          "min": 1.650354
+        },
+        "original.measurement.host_stage_wall_ms.reg_head": {
+          "n": 965,
+          "p50": 0.03999,
+          "p90": 0.0443896,
+          "p95": 0.053361399999999996,
+          "max": 0.103852,
+          "min": 0.035282
+        },
+        "original.measurement.host_stage_wall_ms.wire_masks": {
+          "n": 965,
+          "p50": 0.352604,
+          "p90": 0.7292956,
+          "p95": 0.793249,
+          "max": 1.128324,
+          "min": 0.093931
+        },
+        "original.measurement.traced_cpu_postprocess_stage_ms.anchor_decode": {
+          "n": 965,
+          "p50": 13.649456,
+          "p90": 16.631945599999998,
+          "p95": 17.491699999999998,
+          "max": 20.49771,
+          "min": 9.780354
+        },
+        "original.measurement.traced_cpu_postprocess_stage_ms.candidate_filter": {
+          "n": 2895,
+          "p50": 0.327678,
+          "p90": 2.5086426,
+          "p95": 2.7142565,
+          "max": 6.099639,
+          "min": 0.064458
+        },
+        "original.measurement.traced_cpu_postprocess_stage_ms.classification": {
+          "n": 965,
+          "p50": 0.191964,
+          "p90": 0.2265816,
+          "p95": 0.2425358,
+          "max": 0.322514,
+          "min": 0.09632
+        },
+        "original.measurement.traced_cpu_postprocess_stage_ms.final_range_filter": {
+          "n": 965,
+          "p50": 0.052501,
+          "p90": 0.058753,
+          "p95": 0.06395479999999999,
+          "max": 0.088018,
+          "min": 0.042155
+        },
+        "original.measurement.traced_cpu_postprocess_stage_ms.geometry_filter": {
+          "n": 4825,
+          "p50": 0.071189,
+          "p90": 0.18097660000000002,
+          "p95": 0.1968824,
+          "max": 0.322868,
+          "min": 0.030009
+        },
+        "original.measurement.traced_cpu_postprocess_stage_ms.postprocess_total": {
+          "n": 965,
+          "p50": 25.67786,
+          "p90": 34.3715972,
+          "p95": 35.827710599999996,
+          "max": 45.744469,
+          "min": 14.765516
+        },
+        "original.measurement.traced_cpu_postprocess_stage_ms.rotated_nms": {
+          "n": 965,
+          "p50": 7.336389,
+          "p90": 12.2268344,
+          "p95": 13.268941199999999,
+          "max": 17.564914,
+          "min": 1.101743
+        },
+        "original.measurement.untraced_cpu_postprocess_wall_ms": {
+          "n": 2895,
+          "p50": 25.426427,
+          "p90": 33.974146,
+          "p95": 35.6286933,
+          "max": 46.133946,
+          "min": 14.757408
+        },
+        "original.serial_receiver_wall_ms": {
+          "n": 2895,
+          "p50": 35.460066,
+          "p90": 44.8325698,
+          "p95": 46.705039299999996,
+          "max": 59.602041,
+          "min": 22.964341
+        },
+        "original.traced_cpu_stage_total_ms.anchor_decode": {
+          "n": 965,
+          "p50": 13.649456,
+          "p90": 16.631945599999998,
+          "p95": 17.491699999999998,
+          "max": 20.49771,
+          "min": 9.780354
+        },
+        "original.traced_cpu_stage_total_ms.candidate_filter": {
+          "n": 965,
+          "p50": 2.7117289999999996,
+          "p90": 3.2757072,
+          "p95": 4.033639399999998,
+          "max": 6.401878,
+          "min": 1.793078
+        },
+        "original.traced_cpu_stage_total_ms.classification": {
+          "n": 965,
+          "p50": 0.191964,
+          "p90": 0.2265816,
+          "p95": 0.2425358,
+          "max": 0.322514,
+          "min": 0.09632
+        },
+        "original.traced_cpu_stage_total_ms.final_range_filter": {
+          "n": 965,
+          "p50": 0.052501,
+          "p90": 0.058753,
+          "p95": 0.06395479999999999,
+          "max": 0.088018,
+          "min": 0.042155
+        },
+        "original.traced_cpu_stage_total_ms.geometry_filter": {
+          "n": 965,
+          "p50": 0.435915,
+          "p90": 0.497207,
+          "p95": 0.5258791999999998,
+          "max": 0.73532,
+          "min": 0.359495
+        },
+        "original.traced_cpu_stage_total_ms.postprocess_total": {
+          "n": 965,
+          "p50": 25.67786,
+          "p90": 34.3715972,
+          "p95": 35.827710599999996,
+          "max": 45.744469,
+          "min": 14.765516
+        },
+        "original.traced_cpu_stage_total_ms.rotated_nms": {
+          "n": 965,
+          "p50": 7.336389,
+          "p90": 12.2268344,
+          "p95": 13.268941199999999,
+          "max": 17.564914,
+          "min": 1.101743
+        },
+        "paired_detector_head_cuda_saved_ms": {
+          "n": 965,
+          "p50": 0.0,
+          "p90": 0.003072001039981842,
+          "p95": 0.005094397068023676,
+          "max": 0.12624000757932663,
+          "min": -0.36454399675130844
+        },
+        "paired_postprocess_saved_ms": {
+          "n": 2895,
+          "p50": 16.334357,
+          "p90": 20.3396102,
+          "p95": 21.3745783,
+          "max": 26.244418999999997,
+          "min": 11.642636
+        },
+        "paired_whole_saved_fraction": {
+          "n": 2895,
+          "p50": 0.4656197557486132,
+          "p90": 0.5133834072389648,
+          "p95": 0.5296301137411127,
+          "max": 0.6288728648568938,
+          "min": 0.34792814734655214
+        },
+        "paired_whole_saved_ms": {
+          "n": 2895,
+          "p50": 16.335502999999996,
+          "p90": 20.374201400000004,
+          "p95": 21.3363849,
+          "max": 26.113662,
+          "min": 11.304127000000001
+        }
+      },
+      "full": {
+        "optimized.candidate_count_per_state": {
+          "n": 160,
+          "p50": 83.0,
+          "p90": 131.1,
+          "p95": 139.04999999999998,
+          "max": 144.0,
+          "min": 19.0
+        },
+        "optimized.decoded_count_per_state": {
+          "n": 160,
+          "p50": 83.0,
+          "p90": 131.1,
+          "p95": 139.04999999999998,
+          "max": 144.0,
+          "min": 19.0
+        },
+        "optimized.detector_head_cuda_ms": {
+          "n": 160,
+          "p50": 0.34303999692201614,
+          "p90": 0.34613440558314323,
+          "p95": 0.3529215998947618,
+          "max": 0.46796800196170807,
+          "min": 0.3392320051789284
+        },
+        "optimized.head_d2h_bytes": {
+          "n": 480,
+          "p50": 5242880.0,
+          "p90": 5242880.0,
+          "p95": 5242880.0,
+          "max": 5242880.0,
+          "min": 5242880.0
+        },
+        "optimized.measurement.cuda_stage_event_ms.cls_head": {
+          "n": 160,
+          "p50": 0.10956799983978271,
+          "p90": 0.10956799983978271,
+          "p95": 0.10964160040020943,
+          "max": 0.20377600193023682,
+          "min": 0.1085439994931221
+        },
+        "optimized.measurement.cuda_stage_event_ms.dir_head": {
+          "n": 160,
+          "p50": 0.11059200018644333,
+          "p90": 0.11161600053310394,
+          "p95": 0.11366400122642517,
+          "max": 0.16179199516773224,
+          "min": 0.10956799983978271
+        },
+        "optimized.measurement.cuda_stage_event_ms.heads_to_host": {
+          "n": 160,
+          "p50": 0.4792480021715164,
+          "p90": 0.9767360270023345,
+          "p95": 0.9990464091300958,
+          "max": 1.1593600511550903,
+          "min": 0.4448319971561432
+        },
+        "optimized.measurement.cuda_stage_event_ms.receiver_fusion_and_heads": {
+          "n": 160,
+          "p50": 9.515376091003418,
+          "p90": 10.832761287689209,
+          "p95": 11.371929836273193,
+          "max": 12.017663955688477,
+          "min": 7.662591934204102
+        },
+        "optimized.measurement.cuda_stage_event_ms.reg_head": {
+          "n": 160,
+          "p50": 0.1228799968957901,
+          "p90": 0.12492799758911133,
+          "p95": 0.12595200538635254,
+          "max": 0.1802240014076233,
+          "min": 0.12083200365304947
+        },
+        "optimized.measurement.cuda_stage_event_ms.wire_masks": {
+          "n": 160,
+          "p50": 0.694896012544632,
+          "p90": 0.9089536011219024,
+          "p95": 1.0964079558849333,
+          "max": 1.5396480560302734,
+          "min": 0.1857600063085556
+        },
+        "optimized.measurement.host_stage_wall_ms.cls_head": {
+          "n": 160,
+          "p50": 0.045964000000000005,
+          "p90": 0.06791019999999999,
+          "p95": 0.0760865,
+          "max": 0.09169,
+          "min": 0.041101
+        },
+        "optimized.measurement.host_stage_wall_ms.dir_head": {
+          "n": 160,
+          "p50": 0.0336095,
+          "p90": 0.0492833,
+          "p95": 0.05140174999999999,
+          "max": 0.063934,
+          "min": 0.031559
+        },
+        "optimized.measurement.host_stage_wall_ms.heads_to_host": {
+          "n": 160,
+          "p50": 6.5666595,
+          "p90": 7.191959799999999,
+          "p95": 7.558076549999999,
+          "max": 7.947529,
+          "min": 5.901542
+        },
+        "optimized.measurement.host_stage_wall_ms.receiver_fusion_and_heads": {
+          "n": 160,
+          "p50": 3.6351125,
+          "p90": 4.439335499999999,
+          "p95": 5.5801264999999995,
+          "max": 5.967945,
+          "min": 1.873663
+        },
+        "optimized.measurement.host_stage_wall_ms.reg_head": {
+          "n": 160,
+          "p50": 0.040921,
+          "p90": 0.061676,
+          "p95": 0.06411579999999997,
+          "max": 0.121535,
+          "min": 0.036667
+        },
+        "optimized.measurement.host_stage_wall_ms.wire_masks": {
+          "n": 160,
+          "p50": 0.656844,
+          "p90": 0.8817486,
+          "p95": 1.0450788999999998,
+          "max": 1.491723,
+          "min": 0.158974
+        },
+        "optimized.measurement.traced_cpu_postprocess_stage_ms.anchor_decode": {
+          "n": 160,
+          "p50": 0.21303149999999998,
+          "p90": 0.2906589,
+          "p95": 0.29889874999999994,
+          "max": 0.329054,
+          "min": 0.191824
+        },
+        "optimized.measurement.traced_cpu_postprocess_stage_ms.candidate_filter": {
+          "n": 320,
+          "p50": 0.152023,
+          "p90": 0.42081690000000005,
+          "p95": 0.44073715,
+          "max": 0.46817,
+          "min": 0.003754
+        },
+        "optimized.measurement.traced_cpu_postprocess_stage_ms.candidate_regression_gather": {
+          "n": 160,
+          "p50": 0.08344750000000001,
+          "p90": 0.1209988,
+          "p95": 0.13403709999999996,
+          "max": 0.151412,
+          "min": 0.070813
+        },
+        "optimized.measurement.traced_cpu_postprocess_stage_ms.classification": {
+          "n": 160,
+          "p50": 0.29553799999999997,
+          "p90": 0.3442174,
+          "p95": 0.38127855,
+          "max": 0.41969,
+          "min": 0.208224
+        },
+        "optimized.measurement.traced_cpu_postprocess_stage_ms.direction": {
+          "n": 160,
+          "p50": 0.2530235,
+          "p90": 0.336288,
+          "p95": 0.35064645,
+          "max": 0.479477,
+          "min": 0.216324
+        },
+        "optimized.measurement.traced_cpu_postprocess_stage_ms.final_range_filter": {
+          "n": 160,
+          "p50": 0.086814,
+          "p90": 0.12658049999999998,
+          "p95": 0.13576385000000002,
+          "max": 0.149788,
+          "min": 0.078177
+        },
+        "optimized.measurement.traced_cpu_postprocess_stage_ms.geometry_filter": {
+          "n": 160,
+          "p50": 0.47511000000000003,
+          "p90": 0.6265903,
+          "p95": 0.6728949999999999,
+          "max": 0.770069,
+          "min": 0.389439
+        },
+        "optimized.measurement.traced_cpu_postprocess_stage_ms.postprocess_total": {
+          "n": 160,
+          "p50": 9.6324055,
+          "p90": 15.386635100000001,
+          "p95": 15.914115799999998,
+          "max": 20.049908,
+          "min": 3.170394
+        },
+        "optimized.measurement.traced_cpu_postprocess_stage_ms.rotated_nms": {
+          "n": 160,
+          "p50": 7.5281695,
+          "p90": 13.2837053,
+          "p95": 13.72594225,
+          "max": 17.279583,
+          "min": 1.538496
+        },
+        "optimized.measurement.untraced_cpu_postprocess_wall_ms": {
+          "n": 480,
+          "p50": 9.6107105,
+          "p90": 15.4171934,
+          "p95": 15.951441899999999,
+          "max": 20.37596,
+          "min": 3.099614
+        },
+        "optimized.serial_receiver_wall_ms": {
+          "n": 480,
+          "p50": 19.814107,
+          "p90": 26.8292626,
+          "p95": 27.6322443,
+          "max": 34.478922,
+          "min": 11.921838
+        },
+        "optimized.traced_cpu_stage_total_ms.anchor_decode": {
+          "n": 160,
+          "p50": 0.21303149999999998,
+          "p90": 0.2906589,
+          "p95": 0.29889874999999994,
+          "max": 0.329054,
+          "min": 0.191824
+        },
+        "optimized.traced_cpu_stage_total_ms.candidate_filter": {
+          "n": 160,
+          "p50": 0.3837555,
+          "p90": 0.4458793,
+          "p95": 0.45652415,
+          "max": 0.473888,
+          "min": 0.300712
+        },
+        "optimized.traced_cpu_stage_total_ms.candidate_regression_gather": {
+          "n": 160,
+          "p50": 0.08344750000000001,
+          "p90": 0.1209988,
+          "p95": 0.13403709999999996,
+          "max": 0.151412,
+          "min": 0.070813
+        },
+        "optimized.traced_cpu_stage_total_ms.classification": {
+          "n": 160,
+          "p50": 0.29553799999999997,
+          "p90": 0.3442174,
+          "p95": 0.38127855,
+          "max": 0.41969,
+          "min": 0.208224
+        },
+        "optimized.traced_cpu_stage_total_ms.direction": {
+          "n": 160,
+          "p50": 0.2530235,
+          "p90": 0.336288,
+          "p95": 0.35064645,
+          "max": 0.479477,
+          "min": 0.216324
+        },
+        "optimized.traced_cpu_stage_total_ms.final_range_filter": {
+          "n": 160,
+          "p50": 0.086814,
+          "p90": 0.12658049999999998,
+          "p95": 0.13576385000000002,
+          "max": 0.149788,
+          "min": 0.078177
+        },
+        "optimized.traced_cpu_stage_total_ms.geometry_filter": {
+          "n": 160,
+          "p50": 0.47511000000000003,
+          "p90": 0.6265903,
+          "p95": 0.6728949999999999,
+          "max": 0.770069,
+          "min": 0.389439
+        },
+        "optimized.traced_cpu_stage_total_ms.postprocess_total": {
+          "n": 160,
+          "p50": 9.6324055,
+          "p90": 15.386635100000001,
+          "p95": 15.914115799999998,
+          "max": 20.049908,
+          "min": 3.170394
+        },
+        "optimized.traced_cpu_stage_total_ms.rotated_nms": {
+          "n": 160,
+          "p50": 7.5281695,
+          "p90": 13.2837053,
+          "p95": 13.72594225,
+          "max": 17.279583,
+          "min": 1.538496
+        },
+        "original.candidate_count_per_state": {
+          "n": 160,
+          "p50": 83.0,
+          "p90": 131.1,
+          "p95": 139.04999999999998,
+          "max": 144.0,
+          "min": 19.0
+        },
+        "original.decoded_count_per_state": {
+          "n": 160,
+          "p50": 131072.0,
+          "p90": 131072.0,
+          "p95": 131072.0,
+          "max": 131072.0,
+          "min": 131072.0
+        },
+        "original.detector_head_cuda_ms": {
+          "n": 160,
+          "p50": 0.34303999692201614,
+          "p90": 0.34508799761533737,
+          "p95": 0.3472896054387092,
+          "max": 0.39526399970054626,
+          "min": 0.3389440029859543
+        },
+        "original.head_d2h_bytes": {
+          "n": 480,
+          "p50": 5242880.0,
+          "p90": 5242880.0,
+          "p95": 5242880.0,
+          "max": 5242880.0,
+          "min": 5242880.0
+        },
+        "original.measurement.cuda_stage_event_ms.cls_head": {
+          "n": 160,
+          "p50": 0.10956799983978271,
+          "p90": 0.10956799983978271,
+          "p95": 0.10956799983978271,
+          "max": 0.11673600226640701,
+          "min": 0.1085439994931221
+        },
+        "original.measurement.cuda_stage_event_ms.dir_head": {
+          "n": 160,
+          "p50": 0.11059200018644333,
+          "p90": 0.11059200018644333,
+          "p95": 0.11085600182414053,
+          "max": 0.12902399897575378,
+          "min": 0.10956799983978271
+        },
+        "original.measurement.cuda_stage_event_ms.heads_to_host": {
+          "n": 160,
+          "p50": 0.48176001012325287,
+          "p90": 0.9799167811870575,
+          "p95": 1.0133984446525572,
+          "max": 1.1518720388412476,
+          "min": 0.4481920003890991
+        },
+        "original.measurement.cuda_stage_event_ms.receiver_fusion_and_heads": {
+          "n": 160,
+          "p50": 9.509376049041748,
+          "p90": 10.996956539154052,
+          "p95": 11.515852737426757,
+          "max": 11.927552223205566,
+          "min": 7.654399871826172
+        },
+        "original.measurement.cuda_stage_event_ms.reg_head": {
+          "n": 160,
+          "p50": 0.12355199828743935,
+          "p90": 0.12492799758911133,
+          "p95": 0.12507040575146675,
+          "max": 0.16998399794101715,
+          "min": 0.12083200365304947
+        },
+        "original.measurement.cuda_stage_event_ms.wire_masks": {
+          "n": 160,
+          "p50": 0.6516160070896149,
+          "p90": 0.9058719873428344,
+          "p95": 1.0906335651874541,
+          "max": 1.1888320446014404,
+          "min": 0.17744000256061554
+        },
+        "original.measurement.host_stage_wall_ms.cls_head": {
+          "n": 160,
+          "p50": 0.045774499999999996,
+          "p90": 0.0665093,
+          "p95": 0.07374484999999997,
+          "max": 0.101875,
+          "min": 0.039716
+        },
+        "original.measurement.host_stage_wall_ms.dir_head": {
+          "n": 160,
+          "p50": 0.0332485,
+          "p90": 0.0492627,
+          "p95": 0.05223404999999999,
+          "max": 0.065,
+          "min": 0.030354
+        },
+        "original.measurement.host_stage_wall_ms.heads_to_host": {
+          "n": 160,
+          "p50": 6.6208995,
+          "p90": 7.1022264,
+          "p95": 7.583001599999999,
+          "max": 7.891297,
+          "min": 6.07557
+        },
+        "original.measurement.host_stage_wall_ms.receiver_fusion_and_heads": {
+          "n": 160,
+          "p50": 3.5571729999999997,
+          "p90": 4.5102272999999995,
+          "p95": 5.434503199999999,
+          "max": 6.255727,
+          "min": 1.807275
+        },
+        "original.measurement.host_stage_wall_ms.reg_head": {
+          "n": 160,
+          "p50": 0.039960999999999997,
+          "p90": 0.0579501,
+          "p95": 0.06593175,
+          "max": 0.103852,
+          "min": 0.035282
+        },
+        "original.measurement.host_stage_wall_ms.wire_masks": {
+          "n": 160,
+          "p50": 0.614933,
+          "p90": 0.8740214999999999,
+          "p95": 1.0388762999999999,
+          "max": 1.128324,
+          "min": 0.153444
+        },
+        "original.measurement.traced_cpu_postprocess_stage_ms.anchor_decode": {
+          "n": 160,
+          "p50": 14.776249499999999,
+          "p90": 17.503555000000002,
+          "p95": 17.745547099999996,
+          "max": 20.49771,
+          "min": 11.358657
+        },
+        "original.measurement.traced_cpu_postprocess_stage_ms.candidate_filter": {
+          "n": 480,
+          "p50": 0.337733,
+          "p90": 2.6339336,
+          "p95": 2.9199859499999983,
+          "max": 4.182157,
+          "min": 0.076073
+        },
+        "original.measurement.traced_cpu_postprocess_stage_ms.classification": {
+          "n": 160,
+          "p50": 0.206226,
+          "p90": 0.24705850000000001,
+          "p95": 0.25541115,
+          "max": 0.305526,
+          "min": 0.128123
+        },
+        "original.measurement.traced_cpu_postprocess_stage_ms.final_range_filter": {
+          "n": 160,
+          "p50": 0.0544145,
+          "p90": 0.07637069999999999,
+          "p95": 0.07983749999999999,
+          "max": 0.087586,
+          "min": 0.046231
+        },
+        "original.measurement.traced_cpu_postprocess_stage_ms.geometry_filter": {
+          "n": 800,
+          "p50": 0.074419,
+          "p90": 0.1860287,
+          "p95": 0.20276965,
+          "max": 0.313596,
+          "min": 0.030494
+        },
+        "original.measurement.traced_cpu_postprocess_stage_ms.postprocess_total": {
+          "n": 160,
+          "p50": 27.620053499999997,
+          "p90": 36.1388544,
+          "p95": 37.34110934999999,
+          "max": 45.744469,
+          "min": 17.53032
+        },
+        "original.measurement.traced_cpu_postprocess_stage_ms.rotated_nms": {
+          "n": 160,
+          "p50": 7.574076,
+          "p90": 13.362755799999999,
+          "p95": 13.859750449999998,
+          "max": 17.564914,
+          "min": 1.600182
+        },
+        "original.measurement.untraced_cpu_postprocess_wall_ms": {
+          "n": 480,
+          "p50": 28.389749000000002,
+          "p90": 36.5265618,
+          "p95": 38.24639434999999,
+          "max": 46.133946,
+          "min": 17.520043
+        },
+        "original.serial_receiver_wall_ms": {
+          "n": 480,
+          "p50": 38.7471185,
+          "p90": 47.8190168,
+          "p95": 49.20378755,
+          "max": 59.602041,
+          "min": 28.295603
+        },
+        "original.traced_cpu_stage_total_ms.anchor_decode": {
+          "n": 160,
+          "p50": 14.776249499999999,
+          "p90": 17.503555000000002,
+          "p95": 17.745547099999996,
+          "max": 20.49771,
+          "min": 11.358657
+        },
+        "original.traced_cpu_stage_total_ms.candidate_filter": {
+          "n": 160,
+          "p50": 2.9168225,
+          "p90": 4.2808107,
+          "p95": 4.602850900000001,
+          "max": 4.900939,
+          "min": 2.199484
+        },
+        "original.traced_cpu_stage_total_ms.classification": {
+          "n": 160,
+          "p50": 0.206226,
+          "p90": 0.24705850000000001,
+          "p95": 0.25541115,
+          "max": 0.305526,
+          "min": 0.128123
+        },
+        "original.traced_cpu_stage_total_ms.final_range_filter": {
+          "n": 160,
+          "p50": 0.0544145,
+          "p90": 0.07637069999999999,
+          "p95": 0.07983749999999999,
+          "max": 0.087586,
+          "min": 0.046231
+        },
+        "original.traced_cpu_stage_total_ms.geometry_filter": {
+          "n": 160,
+          "p50": 0.4486495,
+          "p90": 0.5999117999999999,
+          "p95": 0.64795975,
+          "max": 0.73532,
+          "min": 0.375302
+        },
+        "original.traced_cpu_stage_total_ms.postprocess_total": {
+          "n": 160,
+          "p50": 27.620053499999997,
+          "p90": 36.1388544,
+          "p95": 37.34110934999999,
+          "max": 45.744469,
+          "min": 17.53032
+        },
+        "original.traced_cpu_stage_total_ms.rotated_nms": {
+          "n": 160,
+          "p50": 7.574076,
+          "p90": 13.362755799999999,
+          "p95": 13.859750449999998,
+          "max": 17.564914,
+          "min": 1.600182
+        },
+        "paired_detector_head_cuda_saved_ms": {
+          "n": 160,
+          "p50": 0.0,
+          "p90": 0.00333120226860046,
+          "p95": 0.004198401421308483,
+          "max": 0.05116800218820572,
+          "min": -0.12390400469303131
+        },
+        "paired_postprocess_saved_ms": {
+          "n": 480,
+          "p50": 19.057739500000004,
+          "p90": 22.5341568,
+          "p95": 23.413796400000003,
+          "max": 26.244418999999997,
+          "min": 13.832861000000001
+        },
+        "paired_whole_saved_fraction": {
+          "n": 480,
+          "p50": 0.4797592589285876,
+          "p90": 0.5629827463440069,
+          "p95": 0.5848651655808546,
+          "max": 0.6288728648568938,
+          "min": 0.38648110347058395
+        },
+        "paired_whole_saved_ms": {
+          "n": 480,
+          "p50": 19.06467,
+          "p90": 22.4829839,
+          "p95": 23.480629049999994,
+          "max": 26.113662,
+          "min": 14.022327
+        }
+      },
+      "local": {
+        "optimized.candidate_count_per_state": {
+          "n": 80,
+          "p50": 68.5,
+          "p90": 110.20000000000002,
+          "p95": 117.05,
+          "max": 131.0,
+          "min": 9.0
+        },
+        "optimized.decoded_count_per_state": {
+          "n": 80,
+          "p50": 68.5,
+          "p90": 110.20000000000002,
+          "p95": 117.05,
+          "max": 131.0,
+          "min": 9.0
+        },
+        "optimized.detector_head_cuda_ms": {
+          "n": 0
+        },
+        "optimized.head_d2h_bytes": {
+          "n": 240,
+          "p50": 5242880.0,
+          "p90": 5242880.0,
+          "p95": 5242880.0,
+          "max": 5242880.0,
+          "min": 5242880.0
+        },
+        "optimized.measurement.cuda_stage_event_ms.heads_to_host": {
+          "n": 80,
+          "p50": 0.5039840042591095,
+          "p90": 0.6378880023956299,
+          "p95": 1.0652351677417755,
+          "max": 1.1884479522705078,
+          "min": 0.46025601029396057
+        },
+        "optimized.measurement.cuda_stage_event_ms.receiver_fusion_and_heads": {
+          "n": 80,
+          "p50": 0.166703999042511,
+          "p90": 0.23355200290679934,
+          "p95": 0.25740641355514526,
+          "max": 0.2882559895515442,
+          "min": 0.09270399808883667
+        },
+        "optimized.measurement.cuda_stage_event_ms.wire_masks": {
+          "n": 80,
+          "p50": 0.015104000456631184,
+          "p90": 0.018752000667154795,
+          "p95": 0.02036960031837225,
+          "max": 0.02319999970495701,
+          "min": 0.01283199992030859
+        },
+        "optimized.measurement.host_stage_wall_ms.heads_to_host": {
+          "n": 80,
+          "p50": 0.47702049999999996,
+          "p90": 0.6099303,
+          "p95": 1.0148072000000001,
+          "max": 1.133718,
+          "min": 0.435764
+        },
+        "optimized.measurement.host_stage_wall_ms.receiver_fusion_and_heads": {
+          "n": 80,
+          "p50": 0.150501,
+          "p90": 0.21524669999999999,
+          "p95": 0.2403489,
+          "max": 0.262593,
+          "min": 0.077835
+        },
+        "optimized.measurement.host_stage_wall_ms.wire_masks": {
+          "n": 80,
+          "p50": 0.00232,
+          "p90": 0.0029124000000000016,
+          "p95": 0.00344535,
+          "max": 0.007523,
+          "min": 0.001919
+        },
+        "optimized.measurement.traced_cpu_postprocess_stage_ms.anchor_decode": {
+          "n": 80,
+          "p50": 0.204231,
+          "p90": 0.22286660000000003,
+          "p95": 0.28528000000000003,
+          "max": 0.31266,
+          "min": 0.182801
+        },
+        "optimized.measurement.traced_cpu_postprocess_stage_ms.candidate_filter": {
+          "n": 160,
+          "p50": 0.13578700000000002,
+          "p90": 0.3165541,
+          "p95": 0.33363725,
+          "max": 0.401355,
+          "min": 0.003733
+        },
+        "optimized.measurement.traced_cpu_postprocess_stage_ms.candidate_regression_gather": {
+          "n": 80,
+          "p50": 0.081976,
+          "p90": 0.0936314,
+          "p95": 0.12470344999999998,
+          "max": 0.147258,
+          "min": 0.066322
+        },
+        "optimized.measurement.traced_cpu_postprocess_stage_ms.classification": {
+          "n": 80,
+          "p50": 0.175929,
+          "p90": 0.27208,
+          "p95": 0.30007615,
+          "max": 0.393993,
+          "min": 0.152856
+        },
+        "optimized.measurement.traced_cpu_postprocess_stage_ms.direction": {
+          "n": 80,
+          "p50": 0.22072399999999998,
+          "p90": 0.247286,
+          "p95": 0.32247619999999994,
+          "max": 0.385816,
+          "min": 0.198155
+        },
+        "optimized.measurement.traced_cpu_postprocess_stage_ms.final_range_filter": {
+          "n": 80,
+          "p50": 0.0837505,
+          "p90": 0.0913849,
+          "p95": 0.12850319999999998,
+          "max": 0.140636,
+          "min": 0.075827
+        },
+        "optimized.measurement.traced_cpu_postprocess_stage_ms.geometry_filter": {
+          "n": 80,
+          "p50": 0.44449,
+          "p90": 0.4978539,
+          "p95": 0.6379419,
+          "max": 0.729768,
+          "min": 0.376757
+        },
+        "optimized.measurement.traced_cpu_postprocess_stage_ms.postprocess_total": {
+          "n": 80,
+          "p50": 7.6016585,
+          "p90": 11.7870778,
+          "p95": 12.863291949999999,
+          "max": 15.578626,
+          "min": 2.20644
+        },
+        "optimized.measurement.traced_cpu_postprocess_stage_ms.rotated_nms": {
+          "n": 80,
+          "p50": 5.976934,
+          "p90": 10.0393843,
+          "p95": 11.08793175,
+          "max": 13.722033,
+          "min": 0.735111
+        },
+        "optimized.measurement.untraced_cpu_postprocess_wall_ms": {
+          "n": 240,
+          "p50": 7.653238,
+          "p90": 11.9437929,
+          "p95": 12.796829399999998,
+          "max": 14.504789,
+          "min": 2.1365
+        },
+        "optimized.serial_receiver_wall_ms": {
+          "n": 240,
+          "p50": 8.361005500000001,
+          "p90": 12.803731,
+          "p95": 13.470282349999998,
+          "max": 15.191065,
+          "min": 2.755486
+        },
+        "optimized.traced_cpu_stage_total_ms.anchor_decode": {
+          "n": 80,
+          "p50": 0.204231,
+          "p90": 0.22286660000000003,
+          "p95": 0.28528000000000003,
+          "max": 0.31266,
+          "min": 0.182801
+        },
+        "optimized.traced_cpu_stage_total_ms.candidate_filter": {
+          "n": 80,
+          "p50": 0.281629,
+          "p90": 0.3377301,
+          "p95": 0.3520474,
+          "max": 0.41181300000000004,
+          "min": 0.26530499999999996
+        },
+        "optimized.traced_cpu_stage_total_ms.candidate_regression_gather": {
+          "n": 80,
+          "p50": 0.081976,
+          "p90": 0.0936314,
+          "p95": 0.12470344999999998,
+          "max": 0.147258,
+          "min": 0.066322
+        },
+        "optimized.traced_cpu_stage_total_ms.classification": {
+          "n": 80,
+          "p50": 0.175929,
+          "p90": 0.27208,
+          "p95": 0.30007615,
+          "max": 0.393993,
+          "min": 0.152856
+        },
+        "optimized.traced_cpu_stage_total_ms.direction": {
+          "n": 80,
+          "p50": 0.22072399999999998,
+          "p90": 0.247286,
+          "p95": 0.32247619999999994,
+          "max": 0.385816,
+          "min": 0.198155
+        },
+        "optimized.traced_cpu_stage_total_ms.final_range_filter": {
+          "n": 80,
+          "p50": 0.0837505,
+          "p90": 0.0913849,
+          "p95": 0.12850319999999998,
+          "max": 0.140636,
+          "min": 0.075827
+        },
+        "optimized.traced_cpu_stage_total_ms.geometry_filter": {
+          "n": 80,
+          "p50": 0.44449,
+          "p90": 0.4978539,
+          "p95": 0.6379419,
+          "max": 0.729768,
+          "min": 0.376757
+        },
+        "optimized.traced_cpu_stage_total_ms.postprocess_total": {
+          "n": 80,
+          "p50": 7.6016585,
+          "p90": 11.7870778,
+          "p95": 12.863291949999999,
+          "max": 15.578626,
+          "min": 2.20644
+        },
+        "optimized.traced_cpu_stage_total_ms.rotated_nms": {
+          "n": 80,
+          "p50": 5.976934,
+          "p90": 10.0393843,
+          "p95": 11.08793175,
+          "max": 13.722033,
+          "min": 0.735111
+        },
+        "original.candidate_count_per_state": {
+          "n": 80,
+          "p50": 68.5,
+          "p90": 110.20000000000002,
+          "p95": 117.05,
+          "max": 131.0,
+          "min": 9.0
+        },
+        "original.decoded_count_per_state": {
+          "n": 80,
+          "p50": 131072.0,
+          "p90": 131072.0,
+          "p95": 131072.0,
+          "max": 131072.0,
+          "min": 131072.0
+        },
+        "original.detector_head_cuda_ms": {
+          "n": 0
+        },
+        "original.head_d2h_bytes": {
+          "n": 240,
+          "p50": 5242880.0,
+          "p90": 5242880.0,
+          "p95": 5242880.0,
+          "max": 5242880.0,
+          "min": 5242880.0
+        },
+        "original.measurement.cuda_stage_event_ms.heads_to_host": {
+          "n": 80,
+          "p50": 0.5076639950275421,
+          "p90": 0.6367615818977357,
+          "p95": 1.0585312008857728,
+          "max": 1.2392640113830566,
+          "min": 0.4565120041370392
+        },
+        "original.measurement.cuda_stage_event_ms.receiver_fusion_and_heads": {
+          "n": 80,
+          "p50": 0.15003199875354767,
+          "p90": 0.22227199673652653,
+          "p95": 0.25747679769992826,
+          "max": 0.2808319926261902,
+          "min": 0.08774399757385254
+        },
+        "original.measurement.cuda_stage_event_ms.wire_masks": {
+          "n": 80,
+          "p50": 0.015168000012636185,
+          "p90": 0.01775999926030636,
+          "p95": 0.0182015998288989,
+          "max": 0.02304000034928322,
+          "min": 0.012480000033974648
+        },
+        "original.measurement.host_stage_wall_ms.heads_to_host": {
+          "n": 80,
+          "p50": 0.477544,
+          "p90": 0.6120164,
+          "p95": 1.00661415,
+          "max": 1.173227,
+          "min": 0.435842
+        },
+        "original.measurement.host_stage_wall_ms.receiver_fusion_and_heads": {
+          "n": 80,
+          "p50": 0.1337805,
+          "p90": 0.20579140000000004,
+          "p95": 0.23710204999999998,
+          "max": 0.265109,
+          "min": 0.073827
+        },
+        "original.measurement.host_stage_wall_ms.wire_masks": {
+          "n": 80,
+          "p50": 0.0022855,
+          "p90": 0.0029626,
+          "p95": 0.0030672999999999994,
+          "max": 0.003814,
+          "min": 0.001819
+        },
+        "original.measurement.traced_cpu_postprocess_stage_ms.anchor_decode": {
+          "n": 80,
+          "p50": 10.5178905,
+          "p90": 12.8669246,
+          "p95": 13.53076945,
+          "max": 14.558077,
+          "min": 9.689961
+        },
+        "original.measurement.traced_cpu_postprocess_stage_ms.candidate_filter": {
+          "n": 240,
+          "p50": 0.2756375,
+          "p90": 2.1155139,
+          "p95": 2.2768412499999995,
+          "max": 3.705628,
+          "min": 0.064254
+        },
+        "original.measurement.traced_cpu_postprocess_stage_ms.classification": {
+          "n": 80,
+          "p50": 0.1282275,
+          "p90": 0.21277410000000002,
+          "p95": 0.21661234999999998,
+          "max": 0.247406,
+          "min": 0.0832
+        },
+        "original.measurement.traced_cpu_postprocess_stage_ms.final_range_filter": {
+          "n": 80,
+          "p50": 0.050111,
+          "p90": 0.056177000000000005,
+          "p95": 0.07224235,
+          "max": 0.083922,
+          "min": 0.04162
+        },
+        "original.measurement.traced_cpu_postprocess_stage_ms.geometry_filter": {
+          "n": 400,
+          "p50": 0.067805,
+          "p90": 0.17230240000000002,
+          "p95": 0.19247615,
+          "max": 0.296935,
+          "min": 0.029304
+        },
+        "original.measurement.traced_cpu_postprocess_stage_ms.postprocess_total": {
+          "n": 80,
+          "p50": 20.4395155,
+          "p90": 28.0404023,
+          "p95": 28.5856291,
+          "max": 32.878417,
+          "min": 14.591592
+        },
+        "original.measurement.traced_cpu_postprocess_stage_ms.rotated_nms": {
+          "n": 80,
+          "p50": 6.014711,
+          "p90": 10.0694126,
+          "p95": 10.809444849999998,
+          "max": 12.632182,
+          "min": 0.794328
+        },
+        "original.measurement.untraced_cpu_postprocess_wall_ms": {
+          "n": 240,
+          "p50": 22.7303025,
+          "p90": 31.577542499999996,
+          "p95": 33.686087699999995,
+          "max": 37.400529,
+          "min": 14.66873
+        },
+        "original.serial_receiver_wall_ms": {
+          "n": 240,
+          "p50": 23.366612500000002,
+          "p90": 32.678012800000005,
+          "p95": 34.8827497,
+          "max": 38.351889,
+          "min": 15.273034
+        },
+        "original.traced_cpu_stage_total_ms.anchor_decode": {
+          "n": 80,
+          "p50": 10.5178905,
+          "p90": 12.8669246,
+          "p95": 13.53076945,
+          "max": 14.558077,
+          "min": 9.689961
+        },
+        "original.traced_cpu_stage_total_ms.candidate_filter": {
+          "n": 80,
+          "p50": 2.275352,
+          "p90": 2.7612939,
+          "p95": 3.4993146999999993,
+          "max": 4.22929,
+          "min": 1.825825
+        },
+        "original.traced_cpu_stage_total_ms.classification": {
+          "n": 80,
+          "p50": 0.1282275,
+          "p90": 0.21277410000000002,
+          "p95": 0.21661234999999998,
+          "max": 0.247406,
+          "min": 0.0832
+        },
+        "original.traced_cpu_stage_total_ms.final_range_filter": {
+          "n": 80,
+          "p50": 0.050111,
+          "p90": 0.056177000000000005,
+          "p95": 0.07224235,
+          "max": 0.083922,
+          "min": 0.04162
+        },
+        "original.traced_cpu_stage_total_ms.geometry_filter": {
+          "n": 80,
+          "p50": 0.4184185,
+          "p90": 0.47420270000000003,
+          "p95": 0.5925693,
+          "max": 0.664878,
+          "min": 0.353086
+        },
+        "original.traced_cpu_stage_total_ms.postprocess_total": {
+          "n": 80,
+          "p50": 20.4395155,
+          "p90": 28.0404023,
+          "p95": 28.5856291,
+          "max": 32.878417,
+          "min": 14.591592
+        },
+        "original.traced_cpu_stage_total_ms.rotated_nms": {
+          "n": 80,
+          "p50": 6.014711,
+          "p90": 10.0694126,
+          "p95": 10.809444849999998,
+          "max": 12.632182,
+          "min": 0.794328
+        },
+        "paired_detector_head_cuda_saved_ms": {
+          "n": 0
+        },
+        "paired_postprocess_saved_ms": {
+          "n": 240,
+          "p50": 15.395190500000002,
+          "p90": 20.0238647,
+          "p95": 21.707850049999998,
+          "max": 24.812324000000004,
+          "min": 11.425442999999998
+        },
+        "paired_whole_saved_fraction": {
+          "n": 240,
+          "p50": 0.6463772100374139,
+          "p90": 0.7805479876247386,
+          "p95": 0.8088106993659414,
+          "max": 0.8480808529667827,
+          "min": 0.5223045522256894
+        },
+        "paired_whole_saved_ms": {
+          "n": 240,
+          "p50": 15.358597999999999,
+          "p90": 19.992512899999998,
+          "p95": 21.73883465,
+          "max": 24.759908,
+          "min": 11.405519
+        }
+      },
+      "partial": {
+        "optimized.candidate_count_per_state": {
+          "n": 805,
+          "p50": 80.0,
+          "p90": 124.0,
+          "p95": 130.0,
+          "max": 144.0,
+          "min": 12.0
+        },
+        "optimized.decoded_count_per_state": {
+          "n": 805,
+          "p50": 80.0,
+          "p90": 124.0,
+          "p95": 130.0,
+          "max": 144.0,
+          "min": 12.0
+        },
+        "optimized.detector_head_cuda_ms": {
+          "n": 805,
+          "p50": 0.34303999692201614,
+          "p90": 0.34508799761533737,
+          "p95": 0.3463359996676445,
+          "max": 0.7096319943666458,
+          "min": 0.3389439955353737
+        },
+        "optimized.head_d2h_bytes": {
+          "n": 2415,
+          "p50": 5242880.0,
+          "p90": 5242880.0,
+          "p95": 5242880.0,
+          "max": 5242880.0,
+          "min": 5242880.0
+        },
+        "optimized.measurement.cuda_stage_event_ms.cls_head": {
+          "n": 805,
+          "p50": 0.10956799983978271,
+          "p90": 0.10956799983978271,
+          "p95": 0.10976000130176544,
+          "max": 0.2088959962129593,
+          "min": 0.10841599851846695
+        },
+        "optimized.measurement.cuda_stage_event_ms.dir_head": {
+          "n": 805,
+          "p50": 0.11059200018644333,
+          "p90": 0.11075200140476227,
+          "p95": 0.11161600053310394,
+          "max": 0.477183997631073,
+          "min": 0.1085439994931221
+        },
+        "optimized.measurement.cuda_stage_event_ms.heads_to_host": {
+          "n": 805,
+          "p50": 0.48441600799560547,
+          "p90": 0.6017472267150878,
+          "p95": 0.6174015879631043,
+          "max": 1.2401280403137207,
+          "min": 0.4421440064907074
+        },
+        "optimized.measurement.cuda_stage_event_ms.receiver_fusion_and_heads": {
+          "n": 805,
+          "p50": 8.676351547241211,
+          "p90": 10.024959945678711,
+          "p95": 10.397651481628417,
+          "max": 11.86508846282959,
+          "min": 7.594751834869385
+        },
+        "optimized.measurement.cuda_stage_event_ms.reg_head": {
+          "n": 805,
+          "p50": 0.12390399724245071,
+          "p90": 0.12492799758911133,
+          "p95": 0.12595200538635254,
+          "max": 0.22630399465560913,
+          "min": 0.11980800330638885
+        },
+        "optimized.measurement.cuda_stage_event_ms.wire_masks": {
+          "n": 805,
+          "p50": 0.3683519959449768,
+          "p90": 0.7044095993041992,
+          "p95": 0.7484160184860229,
+          "max": 1.048799991607666,
+          "min": 0.12019199877977371
+        },
+        "optimized.measurement.host_stage_wall_ms.cls_head": {
+          "n": 805,
+          "p50": 0.045753,
+          "p90": 0.050344400000000004,
+          "p95": 0.05426999999999999,
+          "max": 0.083478,
+          "min": 0.041153
+        },
+        "optimized.measurement.host_stage_wall_ms.dir_head": {
+          "n": 805,
+          "p50": 0.033814,
+          "p90": 0.035938200000000003,
+          "p95": 0.0388426,
+          "max": 0.071208,
+          "min": 0.031043
+        },
+        "optimized.measurement.host_stage_wall_ms.heads_to_host": {
+          "n": 805,
+          "p50": 6.553837,
+          "p90": 7.072668,
+          "p95": 7.286816399999999,
+          "max": 8.231406,
+          "min": 5.955018
+        },
+        "optimized.measurement.host_stage_wall_ms.receiver_fusion_and_heads": {
+          "n": 805,
+          "p50": 2.609674,
+          "p90": 3.6659218,
+          "p95": 3.8063806,
+          "max": 5.842971,
+          "min": 1.70107
+        },
+        "optimized.measurement.host_stage_wall_ms.reg_head": {
+          "n": 805,
+          "p50": 0.041175,
+          "p90": 0.0442378,
+          "p95": 0.04653459999999998,
+          "max": 0.083292,
+          "min": 0.037142
+        },
+        "optimized.measurement.host_stage_wall_ms.wire_masks": {
+          "n": 805,
+          "p50": 0.339394,
+          "p90": 0.673968,
+          "p95": 0.7170509999999999,
+          "max": 0.997766,
+          "min": 0.098095
+        },
+        "optimized.measurement.traced_cpu_postprocess_stage_ms.anchor_decode": {
+          "n": 805,
+          "p50": 0.209753,
+          "p90": 0.22600720000000002,
+          "p95": 0.2302744,
+          "max": 0.352079,
+          "min": 0.185817
+        },
+        "optimized.measurement.traced_cpu_postprocess_stage_ms.candidate_filter": {
+          "n": 1610,
+          "p50": 0.13744150000000002,
+          "p90": 0.40240070000000006,
+          "p95": 0.44297024999999995,
+          "max": 0.878962,
+          "min": 0.003607
+        },
+        "optimized.measurement.traced_cpu_postprocess_stage_ms.candidate_regression_gather": {
+          "n": 805,
+          "p50": 0.082847,
+          "p90": 0.092819,
+          "p95": 0.09572239999999999,
+          "max": 0.161163,
+          "min": 0.067721
+        },
+        "optimized.measurement.traced_cpu_postprocess_stage_ms.classification": {
+          "n": 805,
+          "p50": 0.275067,
+          "p90": 0.329604,
+          "p95": 0.35167879999999996,
+          "max": 1.42168,
+          "min": 0.167588
+        },
+        "optimized.measurement.traced_cpu_postprocess_stage_ms.direction": {
+          "n": 805,
+          "p50": 0.245736,
+          "p90": 0.3118242,
+          "p95": 0.34324520000000003,
+          "max": 0.45414,
+          "min": 0.205698
+        },
+        "optimized.measurement.traced_cpu_postprocess_stage_ms.final_range_filter": {
+          "n": 805,
+          "p50": 0.085786,
+          "p90": 0.0923952,
+          "p95": 0.09477219999999999,
+          "max": 0.148949,
+          "min": 0.075997
+        },
+        "optimized.measurement.traced_cpu_postprocess_stage_ms.geometry_filter": {
+          "n": 805,
+          "p50": 0.457221,
+          "p90": 0.517001,
+          "p95": 0.5332152,
+          "max": 0.759173,
+          "min": 0.38131
+        },
+        "optimized.measurement.traced_cpu_postprocess_stage_ms.postprocess_total": {
+          "n": 805,
+          "p50": 9.040648,
+          "p90": 14.056263600000001,
+          "p95": 14.7955316,
+          "max": 19.023497,
+          "min": 2.692769
+        },
+        "optimized.measurement.traced_cpu_postprocess_stage_ms.rotated_nms": {
+          "n": 805,
+          "p50": 7.22653,
+          "p90": 11.862640200000001,
+          "p95": 12.593166799999999,
+          "max": 16.345192,
+          "min": 1.106631
+        },
+        "optimized.measurement.untraced_cpu_postprocess_wall_ms": {
+          "n": 2415,
+          "p50": 9.067126,
+          "p90": 14.0394996,
+          "p95": 14.912887799999998,
+          "max": 19.358633,
+          "min": 2.569255
+        },
+        "optimized.serial_receiver_wall_ms": {
+          "n": 2415,
+          "p50": 18.823462,
+          "p90": 24.435256199999998,
+          "p95": 25.718245699999994,
+          "max": 29.903385,
+          "min": 10.920818
+        },
+        "optimized.traced_cpu_stage_total_ms.anchor_decode": {
+          "n": 805,
+          "p50": 0.209753,
+          "p90": 0.22600720000000002,
+          "p95": 0.2302744,
+          "max": 0.352079,
+          "min": 0.185817
+        },
+        "optimized.traced_cpu_stage_total_ms.candidate_filter": {
+          "n": 805,
+          "p50": 0.35838699999999996,
+          "p90": 0.44782800000000006,
+          "p95": 0.5117609999999998,
+          "max": 0.884549,
+          "min": 0.26762100000000005
+        },
+        "optimized.traced_cpu_stage_total_ms.candidate_regression_gather": {
+          "n": 805,
+          "p50": 0.082847,
+          "p90": 0.092819,
+          "p95": 0.09572239999999999,
+          "max": 0.161163,
+          "min": 0.067721
+        },
+        "optimized.traced_cpu_stage_total_ms.classification": {
+          "n": 805,
+          "p50": 0.275067,
+          "p90": 0.329604,
+          "p95": 0.35167879999999996,
+          "max": 1.42168,
+          "min": 0.167588
+        },
+        "optimized.traced_cpu_stage_total_ms.direction": {
+          "n": 805,
+          "p50": 0.245736,
+          "p90": 0.3118242,
+          "p95": 0.34324520000000003,
+          "max": 0.45414,
+          "min": 0.205698
+        },
+        "optimized.traced_cpu_stage_total_ms.final_range_filter": {
+          "n": 805,
+          "p50": 0.085786,
+          "p90": 0.0923952,
+          "p95": 0.09477219999999999,
+          "max": 0.148949,
+          "min": 0.075997
+        },
+        "optimized.traced_cpu_stage_total_ms.geometry_filter": {
+          "n": 805,
+          "p50": 0.457221,
+          "p90": 0.517001,
+          "p95": 0.5332152,
+          "max": 0.759173,
+          "min": 0.38131
+        },
+        "optimized.traced_cpu_stage_total_ms.postprocess_total": {
+          "n": 805,
+          "p50": 9.040648,
+          "p90": 14.056263600000001,
+          "p95": 14.7955316,
+          "max": 19.023497,
+          "min": 2.692769
+        },
+        "optimized.traced_cpu_stage_total_ms.rotated_nms": {
+          "n": 805,
+          "p50": 7.22653,
+          "p90": 11.862640200000001,
+          "p95": 12.593166799999999,
+          "max": 16.345192,
+          "min": 1.106631
+        },
+        "original.candidate_count_per_state": {
+          "n": 805,
+          "p50": 80.0,
+          "p90": 124.0,
+          "p95": 130.0,
+          "max": 144.0,
+          "min": 12.0
+        },
+        "original.decoded_count_per_state": {
+          "n": 805,
+          "p50": 131072.0,
+          "p90": 131072.0,
+          "p95": 131072.0,
+          "max": 131072.0,
+          "min": 131072.0
+        },
+        "original.detector_head_cuda_ms": {
+          "n": 805,
+          "p50": 0.34303999692201614,
+          "p90": 0.34508799761533737,
+          "p95": 0.3462656050920486,
+          "max": 0.4689920023083687,
+          "min": 0.3389440029859543
+        },
+        "original.head_d2h_bytes": {
+          "n": 2415,
+          "p50": 5242880.0,
+          "p90": 5242880.0,
+          "p95": 5242880.0,
+          "max": 5242880.0,
+          "min": 5242880.0
+        },
+        "original.measurement.cuda_stage_event_ms.cls_head": {
+          "n": 805,
+          "p50": 0.10956799983978271,
+          "p90": 0.10956799983978271,
+          "p95": 0.10956799983978271,
+          "max": 0.21094399690628052,
+          "min": 0.10847999900579453
+        },
+        "original.measurement.cuda_stage_event_ms.dir_head": {
+          "n": 805,
+          "p50": 0.11059200018644333,
+          "p90": 0.11084800213575363,
+          "p95": 0.11161600053310394,
+          "max": 0.19046400487422943,
+          "min": 0.10956799983978271
+        },
+        "original.measurement.cuda_stage_event_ms.heads_to_host": {
+          "n": 805,
+          "p50": 0.4833280146121979,
+          "p90": 0.6094144225120545,
+          "p95": 0.6300991892814635,
+          "max": 1.2229440212249756,
+          "min": 0.44464001059532166
+        },
+        "original.measurement.cuda_stage_event_ms.receiver_fusion_and_heads": {
+          "n": 805,
+          "p50": 8.648703575134277,
+          "p90": 10.01185302734375,
+          "p95": 10.301030540466309,
+          "max": 11.725600242614746,
+          "min": 7.540736198425293
+        },
+        "original.measurement.cuda_stage_event_ms.reg_head": {
+          "n": 805,
+          "p50": 0.1231359988451004,
+          "p90": 0.12492799758911133,
+          "p95": 0.12595200538635254,
+          "max": 0.24063999950885773,
+          "min": 0.12083200365304947
+        },
+        "original.measurement.cuda_stage_event_ms.wire_masks": {
+          "n": 805,
+          "p50": 0.3722879886627197,
+          "p90": 0.7061823844909668,
+          "p95": 0.7522879838943481,
+          "max": 1.042464017868042,
+          "min": 0.11353600025177002
+        },
+        "original.measurement.host_stage_wall_ms.cls_head": {
+          "n": 805,
+          "p50": 0.044736,
+          "p90": 0.0493528,
+          "p95": 0.0515152,
+          "max": 0.097494,
+          "min": 0.039681
+        },
+        "original.measurement.host_stage_wall_ms.dir_head": {
+          "n": 805,
+          "p50": 0.033366,
+          "p90": 0.0360686,
+          "p95": 0.040979199999999986,
+          "max": 0.070848,
+          "min": 0.030566
+        },
+        "original.measurement.host_stage_wall_ms.heads_to_host": {
+          "n": 805,
+          "p50": 6.556819,
+          "p90": 7.1726652,
+          "p95": 7.3515293999999995,
+          "max": 8.182858,
+          "min": 5.949312
+        },
+        "original.measurement.host_stage_wall_ms.receiver_fusion_and_heads": {
+          "n": 805,
+          "p50": 2.57345,
+          "p90": 3.621068,
+          "p95": 3.7873865999999996,
+          "max": 5.22825,
+          "min": 1.650354
+        },
+        "original.measurement.host_stage_wall_ms.reg_head": {
+          "n": 805,
+          "p50": 0.04002,
+          "p90": 0.0438194,
+          "p95": 0.045827599999999996,
+          "max": 0.07071,
+          "min": 0.035824
+        },
+        "original.measurement.host_stage_wall_ms.wire_masks": {
+          "n": 805,
+          "p50": 0.342801,
+          "p90": 0.678445,
+          "p95": 0.7193544,
+          "max": 0.997501,
+          "min": 0.093931
+        },
+        "original.measurement.traced_cpu_postprocess_stage_ms.anchor_decode": {
+          "n": 805,
+          "p50": 13.439836,
+          "p90": 16.564572000000002,
+          "p95": 16.964277399999997,
+          "max": 19.642505,
+          "min": 9.780354
+        },
+        "original.measurement.traced_cpu_postprocess_stage_ms.candidate_filter": {
+          "n": 2415,
+          "p50": 0.324452,
+          "p90": 2.4705866000000003,
+          "p95": 2.6883758999999996,
+          "max": 6.099639,
+          "min": 0.064458
+        },
+        "original.measurement.traced_cpu_postprocess_stage_ms.classification": {
+          "n": 805,
+          "p50": 0.189143,
+          "p90": 0.2197806,
+          "p95": 0.23515699999999998,
+          "max": 0.322514,
+          "min": 0.09632
+        },
+        "original.measurement.traced_cpu_postprocess_stage_ms.final_range_filter": {
+          "n": 805,
+          "p50": 0.052155,
+          "p90": 0.058247600000000004,
+          "p95": 0.0597756,
+          "max": 0.088018,
+          "min": 0.042155
+        },
+        "original.measurement.traced_cpu_postprocess_stage_ms.geometry_filter": {
+          "n": 4025,
+          "p50": 0.070644,
+          "p90": 0.1794884,
+          "p95": 0.19579419999999995,
+          "max": 0.322868,
+          "min": 0.030009
+        },
+        "original.measurement.traced_cpu_postprocess_stage_ms.postprocess_total": {
+          "n": 805,
+          "p50": 25.330704,
+          "p90": 34.03268020000001,
+          "p95": 35.5117578,
+          "max": 43.762427,
+          "min": 14.765516
+        },
+        "original.measurement.traced_cpu_postprocess_stage_ms.rotated_nms": {
+          "n": 805,
+          "p50": 7.298999,
+          "p90": 11.9241308,
+          "p95": 12.801915199999993,
+          "max": 16.41057,
+          "min": 1.101743
+        },
+        "original.measurement.untraced_cpu_postprocess_wall_ms": {
+          "n": 2415,
+          "p50": 24.867312,
+          "p90": 33.2912376,
+          "p95": 34.8648189,
+          "max": 43.754244,
+          "min": 14.757408
+        },
+        "original.serial_receiver_wall_ms": {
+          "n": 2415,
+          "p50": 34.689103,
+          "p90": 43.979321999999996,
+          "p95": 45.6286846,
+          "max": 54.035431,
+          "min": 22.964341
+        },
+        "original.traced_cpu_stage_total_ms.anchor_decode": {
+          "n": 805,
+          "p50": 13.439836,
+          "p90": 16.564572000000002,
+          "p95": 16.964277399999997,
+          "max": 19.642505,
+          "min": 9.780354
+        },
+        "original.traced_cpu_stage_total_ms.candidate_filter": {
+          "n": 805,
+          "p50": 2.67294,
+          "p90": 3.233921,
+          "p95": 3.4041297999999998,
+          "max": 6.401878,
+          "min": 1.793078
+        },
+        "original.traced_cpu_stage_total_ms.classification": {
+          "n": 805,
+          "p50": 0.189143,
+          "p90": 0.2197806,
+          "p95": 0.23515699999999998,
+          "max": 0.322514,
+          "min": 0.09632
+        },
+        "original.traced_cpu_stage_total_ms.final_range_filter": {
+          "n": 805,
+          "p50": 0.052155,
+          "p90": 0.058247600000000004,
+          "p95": 0.0597756,
+          "max": 0.088018,
+          "min": 0.042155
+        },
+        "original.traced_cpu_stage_total_ms.geometry_filter": {
+          "n": 805,
+          "p50": 0.433417,
+          "p90": 0.4941392,
+          "p95": 0.5095698,
+          "max": 0.717829,
+          "min": 0.359495
+        },
+        "original.traced_cpu_stage_total_ms.postprocess_total": {
+          "n": 805,
+          "p50": 25.330704,
+          "p90": 34.03268020000001,
+          "p95": 35.5117578,
+          "max": 43.762427,
+          "min": 14.765516
+        },
+        "original.traced_cpu_stage_total_ms.rotated_nms": {
+          "n": 805,
+          "p50": 7.298999,
+          "p90": 11.9241308,
+          "p95": 12.801915199999993,
+          "max": 16.41057,
+          "min": 1.101743
+        },
+        "paired_detector_head_cuda_saved_ms": {
+          "n": 805,
+          "p50": 0.0,
+          "p90": 0.003072001039981842,
+          "p95": 0.005094397068023676,
+          "max": 0.12624000757932663,
+          "min": -0.36454399675130844
+        },
+        "paired_postprocess_saved_ms": {
+          "n": 2415,
+          "p50": 15.933454,
+          "p90": 19.5595894,
+          "p95": 20.469293899999997,
+          "max": 24.692515,
+          "min": 11.642636
+        },
+        "paired_whole_saved_fraction": {
+          "n": 2415,
+          "p50": 0.4634304444206863,
+          "p90": 0.5062321582735048,
+          "p95": 0.5178540231563269,
+          "max": 0.6223074290344973,
+          "min": 0.34792814734655214
+        },
+        "paired_whole_saved_ms": {
+          "n": 2415,
+          "p50": 15.906461999999998,
+          "p90": 19.6007848,
+          "p95": 20.494330899999994,
+          "max": 24.661436000000002,
+          "min": 11.304127000000001
+        }
+      }
+    },
+    "cooperative_savings_ms_by_scene": {
+      "2021_08_18_19_48_05": {
+        "n": 150,
+        "p50": 16.851069000000003,
+        "p90": 21.328431600000002,
+        "p95": 22.1114263,
+        "max": 24.145545999999996,
+        "min": 12.597264000000001
+      },
+      "2021_08_20_21_10_24": {
+        "n": 177,
+        "p50": 18.904503000000002,
+        "p90": 21.7749104,
+        "p95": 22.668960799999997,
+        "max": 24.661436000000002,
+        "min": 14.409050999999998
+      },
+      "2021_08_21_09_28_12": {
+        "n": 204,
+        "p50": 15.575467499999997,
+        "p90": 17.4202964,
+        "p95": 18.401062300000003,
+        "max": 21.484769999999997,
+        "min": 12.343424000000002
+      },
+      "2021_08_22_07_52_02": {
+        "n": 240,
+        "p50": 18.368998499999996,
+        "p90": 20.6589558,
+        "p95": 21.417772,
+        "max": 23.544413,
+        "min": 14.005451
+      },
+      "2021_08_22_09_08_29": {
+        "n": 162,
+        "p50": 14.463445499999999,
+        "p90": 19.575280699999997,
+        "p95": 20.386642899999995,
+        "max": 21.474005000000005,
+        "min": 11.549529000000001
+      },
+      "2021_08_22_21_41_24": {
+        "n": 180,
+        "p50": 15.650725,
+        "p90": 18.207730899999998,
+        "p95": 18.890567599999997,
+        "max": 23.390909999999998,
+        "min": 11.547674999999998
+      },
+      "2021_08_23_12_58_19": {
+        "n": 150,
+        "p50": 16.101465000000005,
+        "p90": 19.0375593,
+        "p95": 19.90491179999999,
+        "max": 23.186787000000002,
+        "min": 12.033241999999998
+      },
+      "2021_08_23_15_19_19": {
+        "n": 159,
+        "p50": 14.585736,
+        "p90": 16.702312400000004,
+        "p95": 17.9645295,
+        "max": 21.017233,
+        "min": 11.304127000000001
+      },
+      "2021_08_23_16_06_26": {
+        "n": 186,
+        "p50": 16.080751,
+        "p90": 21.488416,
+        "p95": 22.932295250000003,
+        "max": 26.050434999999997,
+        "min": 12.072939
+      },
+      "2021_08_23_17_22_47": {
+        "n": 177,
+        "p50": 17.573544,
+        "p90": 20.579638399999997,
+        "p95": 22.729740800000002,
+        "max": 26.113662,
+        "min": 12.112896999999998
+      },
+      "2021_08_23_21_07_10": {
+        "n": 186,
+        "p50": 16.288815999999997,
+        "p90": 18.5202435,
+        "p95": 19.994256749999998,
+        "max": 21.777031,
+        "min": 11.957369
+      },
+      "2021_08_23_21_47_19": {
+        "n": 189,
+        "p50": 18.980314,
+        "p90": 21.1487816,
+        "p95": 21.7706304,
+        "max": 24.065306999999997,
+        "min": 15.475607999999998
+      },
+      "2021_08_24_07_45_41": {
+        "n": 222,
+        "p50": 18.721795,
+        "p90": 21.2128336,
+        "p95": 21.8043199,
+        "max": 25.932769,
+        "min": 13.134402000000001
+      },
+      "2021_08_24_11_37_54": {
+        "n": 198,
+        "p50": 14.479932,
+        "p90": 16.3472851,
+        "p95": 17.403765849999985,
+        "max": 22.255688,
+        "min": 11.896552999999999
+      },
+      "2021_08_24_20_09_18": {
+        "n": 159,
+        "p50": 13.955292000000002,
+        "p90": 15.766824600000005,
+        "p95": 16.740735700000002,
+        "max": 21.122373,
+        "min": 12.277987
+      },
+      "2021_08_24_20_49_54": {
+        "n": 156,
+        "p50": 13.9145015,
+        "p90": 19.6848585,
+        "p95": 20.842782,
+        "max": 25.567502999999995,
+        "min": 12.008367
+      }
+    }
+  },
+  "scope": "Frozen 80-frame OPV2V exploratory panel with audited, exact packet states. Both paths reuse the frozen trigger trace. Measured replays use the per-state median paired-run receiver wall, with original packet arrivals and local fallback assumed ready. GPU measurements are single-frame and serial. This does not time the physical network, batch throughput, or a complete sender-to-receiver system."
+}

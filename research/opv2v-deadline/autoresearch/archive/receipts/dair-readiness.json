@@ -1,0 +1,14 @@
+{
+  "ready_frames": 0,
+  "requested_frames": 1783,
+  "ready_scenes": 0,
+  "missing_metadata": [
+    "cooperative/data_info.json",
+    "infrastructure-side/data_info.json",
+    "vehicle-side/data_info.json"
+  ],
+  "ready_frames_missing_native_occlusion": 0,
+  "frozen_panel_complete": false,
+  "native_entry_data_ready": false,
+  "formal_evaluation_started": false
+}

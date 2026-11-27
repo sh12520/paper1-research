@@ -1,0 +1,25 @@
+{
+  "panel": "DAIR official example training split, single infrastructure batch",
+  "independent_validation_frames": 0,
+  "model_rerun": false,
+  "ap_recomputed": false,
+  "seed": 303,
+  "recorded_model_revision": "075b2c7120277a619f41bc49a58e3905ffad7aa7",
+  "recorded_checkpoint_sha256": "10511d4a9419f42051f01be2b9e6313b6718b2843f74795b5d9ceac7b200f7f5",
+  "native_detection_records": 138,
+  "replay_policy_records": 366,
+  "complete_packed_1024_frames": 46,
+  "complete_budget_sweep_frames": 3,
+  "verified_cache_frames": 46,
+  "recorded_cache_events": 47,
+  "max_abs_head_error": {
+    "cls_preds": 0.0,
+    "dir_preds": 0.0,
+    "reg_preds": 0.0
+  },
+  "separate_diagnostic_records": {
+    "sender_only": 2,
+    "hindsight_patch": 12
+  },
+  "archived_paired_summary": "results/dair-tmc-budget/paired-1024.json"
+}

@@ -1,0 +1,12 @@
+{
+  "split_sha256": "a0993520f5f91af282a96a2d542f3d837434b7a68392636f90bff050883fd832",
+  "requested_frames": 1783,
+  "missing_tables": [
+    "cooperative/data_info.json",
+    "infrastructure-side/data_info.json",
+    "vehicle-side/data_info.json"
+  ],
+  "ready": [],
+  "excluded": [],
+  "ready_by_scene": {}
+}

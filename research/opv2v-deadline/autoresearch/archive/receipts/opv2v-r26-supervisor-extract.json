@@ -1,0 +1,131 @@
+{
+  "scope": "Selected fields from archived local supervisor receipts; source paths are origin-project-relative.",
+  "records": [
+    {
+      "local_source": "experiments/autoresearch/receipts/20261126T151816765672Z.json",
+      "local_source_sha256": "2c69bf42efd8c78d7aa8b79afa035a44299600033e1b4a0bae9c25ed2d0227e0",
+      "selected_fields": {
+        "phase": "r26_gpu_smoke",
+        "updated_utc": "2026-11-26T15:18:16.765672+00:00",
+        "bilateral_prototype": "HOLD",
+        "r2_order_frames": 273,
+        "r2_full_order_dispatch": "paused_by_r21",
+        "r23_frames": 80,
+        "r24_frames": 80,
+        "r25_frames": 80,
+        "r26_frames": 0,
+        "r26_smoke_worker": "queued",
+        "coverage": {
+          "frame_counts": {
+            "audited": 2169,
+            "missing": 0,
+            "invalid": 0
+          },
+          "formal_coverage_complete": true
+        }
+      }
+    },
+    {
+      "local_source": "experiments/autoresearch/receipts/20261126T151940395737Z.json",
+      "local_source_sha256": "0fe993d103dcd0c6587d32dda7009f66a9a76b6b7ba1d8b0570b8c2a74b0b653",
+      "selected_fields": {
+        "phase": "r26_gpu_panel",
+        "updated_utc": "2026-11-26T15:19:40.395737+00:00",
+        "bilateral_prototype": "HOLD",
+        "r2_order_frames": 273,
+        "r2_full_order_dispatch": "paused_by_r21",
+        "r23_frames": 80,
+        "r24_frames": 80,
+        "r25_frames": 80,
+        "r26_frames": 1,
+        "r26_panel_worker": "queued",
+        "coverage": {
+          "frame_counts": {
+            "audited": 2169,
+            "missing": 0,
+            "invalid": 0
+          },
+          "formal_coverage_complete": true
+        }
+      }
+    },
+    {
+      "local_source": "experiments/autoresearch/receipts/20261126T152013993340Z.json",
+      "local_source_sha256": "57fa3cef7f174aaf92f8bb0bbeb62200ba7b9afff9fa923195399b7b0b642ddf",
+      "selected_fields": {
+        "phase": "r26_gpu_panel",
+        "updated_utc": "2026-11-26T15:20:13.993340+00:00",
+        "bilateral_prototype": "HOLD",
+        "r2_order_frames": 273,
+        "r2_full_order_dispatch": "paused_by_r21",
+        "r23_frames": 80,
+        "r24_frames": 80,
+        "r25_frames": 80,
+        "r26_frames": 23,
+        "r26_panel_worker": "active",
+        "coverage": {
+          "frame_counts": {
+            "audited": 2169,
+            "missing": 0,
+            "invalid": 0
+          },
+          "formal_coverage_complete": true
+        }
+      }
+    },
+    {
+      "local_source": "experiments/autoresearch/receipts/20261126T152310301650Z.json",
+      "local_source_sha256": "89da5cb07e2bc7d1b20183512af6987701f52ef35a211a80b07d482061ec7327",
+      "selected_fields": {
+        "phase": "r26_resource_sensitivity",
+        "updated_utc": "2026-11-26T15:23:10.301650+00:00",
+        "bilateral_prototype": "HOLD",
+        "r2_order_frames": 273,
+        "r2_full_order_dispatch": "paused_by_r21",
+        "r23_frames": 80,
+        "r24_frames": 80,
+        "r25_frames": 80,
+        "r26_frames": 80,
+        "r26_resource_worker": "queued",
+        "r26_panel_completion": "results/opv2v-r26/screen/completion.json",
+        "r26_report": "results/opv2v-r26/report.json",
+        "r26_independent_audit": "results/opv2v-r26/independent-validation.md",
+        "coverage": {
+          "frame_counts": {
+            "audited": 2169,
+            "missing": 0,
+            "invalid": 0
+          },
+          "formal_coverage_complete": true
+        }
+      }
+    },
+    {
+      "local_source": "experiments/autoresearch/receipts/20261126T152428511047Z.json",
+      "local_source_sha256": "0e501fdfbc0fd8c16473f014f58de305616bd6e151d7b9e655eee88fb1f831c2",
+      "selected_fields": {
+        "phase": "r26_complete",
+        "updated_utc": "2026-11-26T15:24:28.511047+00:00",
+        "bilateral_prototype": "HOLD",
+        "r2_order_frames": 273,
+        "r2_full_order_dispatch": "paused_by_r21",
+        "r23_frames": 80,
+        "r24_frames": 80,
+        "r25_frames": 80,
+        "r26_frames": 80,
+        "r26_panel_completion": "results/opv2v-r26/screen/completion.json",
+        "r26_report": "results/opv2v-r26/report.json",
+        "r26_resource_sensitivity": "results/opv2v-r26/resource-sensitivity.json",
+        "r26_independent_audit": "results/opv2v-r26/independent-validation.md",
+        "coverage": {
+          "frame_counts": {
+            "audited": 2169,
+            "missing": 0,
+            "invalid": 0
+          },
+          "formal_coverage_complete": true
+        }
+      }
+    }
+  ]
+}

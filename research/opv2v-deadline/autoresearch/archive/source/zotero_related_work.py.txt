@@ -1,0 +1,238 @@
+#!/usr/bin/env python3
+"""Collect the project's allowlisted Related Work via Zotero or official PDF URLs."""
+
+import argparse
+from concurrent.futures import ThreadPoolExecutor
+from datetime import datetime, timezone
+import fcntl
+import hashlib
+import json
+import os
+from pathlib import Path
+import re
+import shutil
+import subprocess
+import sys
+import tempfile
+import unicodedata
+from urllib.parse import unquote, urlsplit
+
+
+ROOT = Path(__file__).resolve().parents[1]
+CATALOG = ROOT / "configs/research-harness/related-work.json"
+OUTPUT = ROOT / "papers/related-work"
+PLUGIN = Path.home() / ".codex/plugins/cache/openai-curated-remote/zotero"
+MAX_PDF_BYTES = 50 * 1024 * 1024
+
+
+def zotero_helper():
+    candidates = list(PLUGIN.glob("*/skills/zotero/scripts/zotero.py"))
+    versions = [p for p in candidates if re.fullmatch(r"\d+\.\d+\.\d+", p.parents[3].name)]
+    return max(versions, key=lambda p: tuple(map(int, p.parents[3].name.split("."))), default=None)
+
+
+def command(args, timeout=20):
+    return subprocess.run(args, capture_output=True, text=True, check=True, timeout=timeout)
+
+
+def invoke(helper, *args):
+    return command([sys.executable, str(helper), *args]).stdout.strip()
+
+
+def connection(helper):
+    if helper is None:
+        return {"api_running": False, "reason": "Zotero plugin helper not found"}
+    try:
+        result = json.loads(invoke(helper, "status", "--json"))
+    except (OSError, ValueError, subprocess.SubprocessError) as error:
+        return {"api_running": False, "reason": str(error)}
+    return {k: result.get(k) for k in ("api_running", "api_error", "local_api_enabled_pref",
+                                       "connector_running", "zotero_version", "base_url")}
+
+
+def normalized(value):
+    return "".join(ch for ch in unicodedata.normalize("NFKD", value).casefold() if ch.isalnum())
+
+
+def pdf_identity(path, expected_title):
+    if not path.is_file() or not 0 < path.stat().st_size <= MAX_PDF_BYTES:
+        raise ValueError("missing, empty or oversized PDF")
+    with path.open("rb") as file:
+        if file.read(5) != b"%PDF-":
+            raise ValueError("response is not a PDF")
+        file.seek(max(0, path.stat().st_size - 4096))
+        if b"%%EOF" not in file.read():
+            raise ValueError("PDF termination marker is missing")
+        file.seek(0)
+        sha256 = hashlib.file_digest(file, "sha256").hexdigest()
+    first_pages = command(["pdftotext", "-f", "1", "-l", "2", str(path), "-"]).stdout
+    if normalized(expected_title) not in normalized(first_pages):
+        raise ValueError("paper title could not be verified on the first two pages")
+    return {"sha256": sha256, "bytes": path.stat().st_size, "title_verified": True}
+
+
+def zotero_matches(helper, paper):
+    query = paper["title"].split(":", 1)[0]
+    found = json.loads(invoke(helper, "search", query, "--json"))
+    return [row for row in found if isinstance(row.get("title"), str)
+            and normalized(row["title"]) == normalized(paper["title"])]
+
+
+def attachment_candidates(helper, item):
+    if not re.fullmatch(r"[A-Z0-9]{8}", item.get("key") or ""):
+        return
+    children = json.loads(invoke(helper, "children", item["key"], "--json"))
+    for child in children:
+        key = child.get("key") or ""
+        if child.get("itemType") != "attachment" or not re.fullmatch(r"[A-Z0-9]{8}", key):
+            continue
+        location = urlsplit(invoke(helper, "file-url", key))
+        if location.scheme == "file" and location.netloc in ("", "localhost"):
+            path = Path(unquote(location.path))
+            if path.is_file() and 0 < path.stat().st_size <= MAX_PDF_BYTES:
+                yield key, path
+
+
+def acquire(paper, helper, fetch, prior):
+    target = OUTPUT / (paper["key"] + ".pdf")
+    record = {k: paper[k] for k in ("key", "title", "year", "url", "role")}
+    record["errors"] = []
+    matches = []
+    if helper:
+        try:
+            matches = zotero_matches(helper, paper)
+        except (OSError, ValueError, subprocess.SubprocessError) as error:
+            record["errors"].append(f"Zotero search: {error}")
+    record["zotero_item_keys"] = [row["key"] for row in matches if row.get("key")]
+    provenance = {k: prior[k] for k in ("source", "version", "retrieved_utc", "sha256") if k in prior}
+    record.update({k: prior[k] for k in ("last_fetch_utc", "last_fetch_errors") if k in prior})
+
+    def existing():
+        result = pdf_identity(target, paper["title"])
+        if prior.get("sha256") and prior["sha256"] != result["sha256"]:
+            raise ValueError("existing PDF hash differs from previous record")
+        return {**record, **provenance, **result, "status": "verified", "file": target.name}
+
+    if target.exists() or target.is_symlink():
+        try:
+            if target.is_symlink():
+                raise ValueError("PDF output must be a regular local file")
+            return existing()
+        except (OSError, ValueError, subprocess.SubprocessError) as error:
+            return {**record, **provenance, "status": "failed", "file": target.name,
+                    "errors": record["errors"] + [str(error)]}
+
+    if fetch:
+        with tempfile.TemporaryDirectory(prefix=".pdf-", dir=OUTPUT) as directory:
+            partial = Path(directory) / "paper.pdf"
+            errors = record["errors"]
+            record["last_fetch_utc"] = datetime.now(timezone.utc).isoformat()
+            record["last_fetch_errors"] = errors
+
+            def publish(source, version):
+                identity = pdf_identity(partial, paper["title"])
+                os.link(partial, target)
+                return {**record, **identity, "status": "verified", "file": target.name,
+                        "source": source, "version": version,
+                        "retrieved_utc": datetime.now(timezone.utc).isoformat()}
+
+            if len(matches) == 1:
+                try:
+                    for key, path in attachment_candidates(helper, matches[0]):
+                        shutil.copyfile(path, partial)
+                        try:
+                            return publish(f"zotero:{matches[0]['key']}/{key}", "local attachment")
+                        except (ValueError, subprocess.SubprocessError) as error:
+                            record["errors"].append(f"Zotero attachment {key}: {error}")
+                except (OSError, ValueError, subprocess.SubprocessError) as error:
+                    record["errors"].append(f"Zotero attachment: {error}")
+
+            for source in paper["pdf_sources"]:
+                try:
+                    if urlsplit(source["url"]).scheme != "https":
+                        raise ValueError("only catalogued HTTPS links are accepted")
+                    partial.unlink(missing_ok=True)
+                    command(["curl", "--fail", "--silent", "--show-error", "--location",
+                             "--proto", "=https", "--proto-redir", "=https", "--retry", "1",
+                             "--connect-timeout", "8", "--max-time", "35", "--max-filesize",
+                             str(MAX_PDF_BYTES), "--output", str(partial), source["url"]], timeout=80)
+                    return publish(source["url"], source["version"])
+                except subprocess.CalledProcessError as error:
+                    record["errors"].append(f"{source['url']}: {error.stderr.strip()}")
+                except (OSError, ValueError, subprocess.SubprocessError) as error:
+                    record["errors"].append(f"{source['url']}: {error}")
+
+    if not paper["pdf_sources"]:
+        return {**record, "status": "metadata_only", "reason": paper["access_note"]}
+    return {**record, "status": "failed" if fetch else "pending"}
+
+
+def bibliography(papers):
+    entries = []
+    for paper in papers:
+        authors = " and ".join(paper["authors"])
+        fields = {"title": "{" + paper["title"] + "}", "author": authors, "year": str(paper["year"]),
+                  "url": paper["url"]}
+        if paper["type"] == "inproceedings":
+            fields["booktitle"] = paper["venue"]
+        elif paper["type"] == "article":
+            fields["journal"] = paper["venue"]
+            fields.update({key: paper[key] for key in ("volume", "number", "pages") if key in paper})
+        else:
+            fields["note"] = paper["venue"]
+        if paper.get("doi"):
+            fields["doi"] = paper["doi"]
+        if paper.get("arxiv"):
+            fields.update(eprint=paper["arxiv"], archivePrefix="arXiv")
+        body = ",\n".join(f"  {key} = {{{value}}}" for key, value in fields.items())
+        entries.append(f"@{paper['type']}{{{paper['key']},\n{body}\n}}")
+    return "\n\n".join(entries) + "\n"
+
+
+def publish_text(path, value):
+    with tempfile.NamedTemporaryFile("w", encoding="utf-8", dir=path.parent, delete=False) as temporary:
+        temporary.write(value)
+        tmp = Path(temporary.name)
+    try:
+        os.replace(tmp, path)
+    finally:
+        tmp.unlink(missing_ok=True)
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("action", choices=("status", "sync"))
+    parser.add_argument("--download", action="store_true", help="Fetch missing PDFs from approved sources")
+    args = parser.parse_args()
+    helper = zotero_helper()
+    status = connection(helper)
+    if args.action == "status":
+        if args.download:
+            parser.error("--download requires sync")
+        print(json.dumps(status, ensure_ascii=False, indent=2))
+        return 0 if status["api_running"] else 2
+
+    papers = json.loads(CATALOG.read_text(encoding="utf-8"))
+    keys = [paper["key"] for paper in papers]
+    if len(set(keys)) != len(keys) or not all(re.fullmatch(r"[a-z0-9]+", key) for key in keys):
+        raise ValueError("catalogue needs unique alphanumeric keys")
+    if OUTPUT.resolve() != OUTPUT:
+        raise ValueError("library output must stay in the project")
+    OUTPUT.mkdir(parents=True, exist_ok=True)
+    with (OUTPUT / ".sync.lock").open("a") as lock:
+        fcntl.flock(lock, fcntl.LOCK_EX)
+        manifest = OUTPUT / "manifest.json"
+        old = json.loads(manifest.read_text()) if manifest.exists() else {}
+        prior = {row["key"]: row for row in old.get("papers", [])}
+        active = helper if status["api_running"] else None
+        with ThreadPoolExecutor(max_workers=4) as pool:
+            rows = list(pool.map(lambda p: acquire(p, active, args.download, prior.get(p["key"], {})), papers))
+        report = {"zotero": status, "catalogue": str(CATALOG.relative_to(ROOT)), "papers": rows}
+        publish_text(manifest, json.dumps(report, ensure_ascii=False, indent=2) + "\n")
+        publish_text(OUTPUT / "references.bib", bibliography(papers))
+    print(json.dumps(report, ensure_ascii=False, indent=2))
+    return int(any(row["status"] == "failed" for row in rows))
+
+
+if __name__ == "__main__":
+    sys.exit(main())

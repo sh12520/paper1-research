@@ -1,0 +1,257 @@
+{
+  "status": "verified",
+  "run_sha256": "01e49982e82a62038c4cf9507e450b1f173003e7ac3692f81d5c2fec4f71739e",
+  "paired_r23_report_sha256": "444b259a3115c4769a79fe986722d9e6dca21e50679ea9845326a29bd4c22b90",
+  "states": {
+    "0088-B35": {
+      "status": "verified",
+      "sha256": "ef4f8f6fb8aa0e5c80d3007e0721e71ceef63044efdeb575fdd901908d1597a6",
+      "anchor_candidate_count": 70,
+      "iou_candidate_pair_counts": [
+        558,
+        558
+      ],
+      "timing_summary": {
+        "untraced_postprocess_wall_ms": {
+          "per_path": {
+            "native_repeated_union": {
+              "samples": 30,
+              "p50_ms": 7.153249,
+              "p90_ms": 7.2377919,
+              "p95_ms": 7.2480808,
+              "max_ms": 7.324349
+            },
+            "one_union_per_pair": {
+              "samples": 30,
+              "p50_ms": 5.922742,
+              "p90_ms": 5.9718753,
+              "p95_ms": 6.0124599,
+              "max_ms": 6.040134
+            }
+          },
+          "paired_saved_ms": {
+            "samples": 30,
+            "p50_ms": 1.2537695000000002,
+            "p90_ms": 1.3233591000000002,
+            "p95_ms": 1.3378121,
+            "max_ms": 1.3779089999999998
+          }
+        },
+        "traced_rotated_nms_wall_ms": {
+          "per_path": {
+            "native_repeated_union": {
+              "samples": 30,
+              "p50_ms": 5.6537815,
+              "p90_ms": 5.7099185,
+              "p95_ms": 5.7364106999999995,
+              "max_ms": 6.043636
+            },
+            "one_union_per_pair": {
+              "samples": 30,
+              "p50_ms": 4.462401,
+              "p90_ms": 4.5146347,
+              "p95_ms": 4.52866755,
+              "max_ms": 4.535239
+            }
+          },
+          "paired_saved_ms": {
+            "samples": 30,
+            "p50_ms": 1.2045279999999998,
+            "p90_ms": 1.2545503999999998,
+            "p95_ms": 1.2925049,
+            "max_ms": 1.563142
+          }
+        }
+      }
+    },
+    "0088-B50": {
+      "status": "verified",
+      "sha256": "cc5d8df8abc26512fa7ec5308061279083b3042e39f6113c1d10687e6cadf1da",
+      "anchor_candidate_count": 75,
+      "iou_candidate_pair_counts": [
+        636,
+        636
+      ],
+      "timing_summary": {
+        "untraced_postprocess_wall_ms": {
+          "per_path": {
+            "native_repeated_union": {
+              "samples": 30,
+              "p50_ms": 7.670682,
+              "p90_ms": 7.7090422,
+              "p95_ms": 7.72256245,
+              "max_ms": 7.824109
+            },
+            "one_union_per_pair": {
+              "samples": 30,
+              "p50_ms": 6.304913,
+              "p90_ms": 6.3419172,
+              "p95_ms": 6.543111899999999,
+              "max_ms": 6.722618
+            }
+          },
+          "paired_saved_ms": {
+            "samples": 30,
+            "p50_ms": 1.3530190000000002,
+            "p90_ms": 1.4073617000000003,
+            "p95_ms": 1.4465250499999998,
+            "max_ms": 1.561376
+          }
+        },
+        "traced_rotated_nms_wall_ms": {
+          "per_path": {
+            "native_repeated_union": {
+              "samples": 30,
+              "p50_ms": 6.1923375,
+              "p90_ms": 6.2607349,
+              "p95_ms": 6.265529,
+              "max_ms": 6.27414
+            },
+            "one_union_per_pair": {
+              "samples": 30,
+              "p50_ms": 4.8504545,
+              "p90_ms": 4.8996532,
+              "p95_ms": 4.93413375,
+              "max_ms": 5.347333
+            }
+          },
+          "paired_saved_ms": {
+            "samples": 30,
+            "p50_ms": 1.3455020000000002,
+            "p90_ms": 1.3893880000000003,
+            "p95_ms": 1.4236143,
+            "max_ms": 1.4339680000000001
+          }
+        }
+      }
+    },
+    "0664-B35": {
+      "status": "verified",
+      "sha256": "ef2ef02c4539d09dcaef17edb903d90243c448cab1f6603799358b8db3dc81e8",
+      "anchor_candidate_count": 53,
+      "iou_candidate_pair_counts": [
+        309,
+        309
+      ],
+      "timing_summary": {
+        "untraced_postprocess_wall_ms": {
+          "per_path": {
+            "native_repeated_union": {
+              "samples": 30,
+              "p50_ms": 5.240157,
+              "p90_ms": 5.2635262,
+              "p95_ms": 5.27691525,
+              "max_ms": 5.288105
+            },
+            "one_union_per_pair": {
+              "samples": 30,
+              "p50_ms": 4.499753,
+              "p90_ms": 4.5391003,
+              "p95_ms": 4.5547479,
+              "max_ms": 4.573953
+            }
+          },
+          "paired_saved_ms": {
+            "samples": 30,
+            "p50_ms": 0.7298565000000004,
+            "p90_ms": 0.7913818000000002,
+            "p95_ms": 0.8088606999999999,
+            "max_ms": 0.8223700000000003
+          }
+        },
+        "traced_rotated_nms_wall_ms": {
+          "per_path": {
+            "native_repeated_union": {
+              "samples": 30,
+              "p50_ms": 3.810906,
+              "p90_ms": 3.8324226,
+              "p95_ms": 3.8396327,
+              "max_ms": 4.021312
+            },
+            "one_union_per_pair": {
+              "samples": 30,
+              "p50_ms": 3.0715130000000004,
+              "p90_ms": 3.1029033,
+              "p95_ms": 3.1037819,
+              "max_ms": 3.219902
+            }
+          },
+          "paired_saved_ms": {
+            "samples": 30,
+            "p50_ms": 0.7333105,
+            "p90_ms": 0.7691401000000002,
+            "p95_ms": 0.7905299000000001,
+            "max_ms": 0.8106210000000003
+          }
+        }
+      }
+    },
+    "0664-B50": {
+      "status": "verified",
+      "sha256": "1200a8fbc98705bac4bd1927938abd257970ef5d5dd49e2bcbcae21f1b946cc9",
+      "anchor_candidate_count": 57,
+      "iou_candidate_pair_counts": [
+        366,
+        366
+      ],
+      "timing_summary": {
+        "untraced_postprocess_wall_ms": {
+          "per_path": {
+            "native_repeated_union": {
+              "samples": 30,
+              "p50_ms": 5.547926,
+              "p90_ms": 5.5810624,
+              "p95_ms": 5.5914914,
+              "max_ms": 5.611259
+            },
+            "one_union_per_pair": {
+              "samples": 30,
+              "p50_ms": 4.758731,
+              "p90_ms": 4.7950804,
+              "p95_ms": 4.88372335,
+              "max_ms": 5.066569
+            }
+          },
+          "paired_saved_ms": {
+            "samples": 30,
+            "p50_ms": 0.7937660000000002,
+            "p90_ms": 0.8521669999999996,
+            "p95_ms": 0.8581532500000002,
+            "max_ms": 0.8888940000000005
+          }
+        },
+        "traced_rotated_nms_wall_ms": {
+          "per_path": {
+            "native_repeated_union": {
+              "samples": 30,
+              "p50_ms": 4.1052005,
+              "p90_ms": 4.1261167,
+              "p95_ms": 4.13689635,
+              "max_ms": 4.145076
+            },
+            "one_union_per_pair": {
+              "samples": 30,
+              "p50_ms": 3.298778,
+              "p90_ms": 3.3254605,
+              "p95_ms": 3.32716785,
+              "max_ms": 3.329646
+            }
+          },
+          "paired_saved_ms": {
+            "samples": 30,
+            "p50_ms": 0.795685,
+            "p90_ms": 0.8290722000000003,
+            "p95_ms": 0.8536208999999999,
+            "max_ms": 0.9036539999999995
+          }
+        }
+      }
+    }
+  },
+  "verified_states": 4,
+  "actual_cuda_work": "none; frozen GPU head tensors already captured",
+  "runtime": {
+    "torch": "2.15.0+cu132",
+    "shapely": "2.2.0"
+  }
+}

@@ -1,0 +1,200 @@
+[
+  {
+    "key": "yu2022dairv2x",
+    "title": "DAIR-V2X: A Large-Scale Dataset for Vehicle-Infrastructure Cooperative 3D Object Detection",
+    "authors": [
+      "Haibao Yu", "Yizhen Luo", "Mao Shu", "Yiyi Huo", "Zebang Yang", "Yifeng Shi",
+      "Zhenglong Guo", "Hanyu Li", "Xing Hu", "Jirui Yuan", "Zaiqing Nie"
+    ],
+    "venue": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+    "year": 2022,
+    "type": "inproceedings",
+    "doi": "10.1109/CVPR52688.2022.02067",
+    "arxiv": "2204.05575",
+    "url": "https://openaccess.thecvf.com/content/CVPR2022/html/Yu_DAIR-V2X_A_Large-Scale_Dataset_for_Vehicle-Infrastructure_Cooperative_3D_Object_Detection_CVPR_2022_paper.html",
+    "pdf_sources": [
+      {
+        "version": "CVF proceedings",
+        "url": "https://openaccess.thecvf.com/content/CVPR2022/papers/Yu_DAIR-V2X_A_Large-Scale_Dataset_for_Vehicle-Infrastructure_Cooperative_3D_Object_Detection_CVPR_2022_paper.pdf"
+      },
+      {
+        "version": "arXiv preprint",
+        "url": "https://arxiv.org/pdf/2204.05575"
+      }
+    ],
+    "role": "独立场景、原始配对数据和评价划分"
+  },
+  {
+    "key": "hu2022where2comm",
+    "title": "Where2comm: Communication-Efficient Collaborative Perception via Spatial Confidence Maps",
+    "authors": [
+      "Yue Hu",
+      "Shaoheng Fang",
+      "Zixing Lei",
+      "Yiqi Zhong",
+      "Siheng Chen"
+    ],
+    "venue": "Advances in Neural Information Processing Systems",
+    "year": 2022,
+    "type": "inproceedings",
+    "doi": "10.52202/068431-0352",
+    "arxiv": "2209.12836",
+    "url": "https://papers.neurips.cc/paper_files/paper/2022/hash/1f5c5cd01b864d53cc5fa0a3472e152e-Abstract-Conference.html",
+    "pdf_sources": [
+      {
+        "version": "NeurIPS proceedings",
+        "url": "https://papers.neurips.cc/paper_files/paper/2022/file/1f5c5cd01b864d53cc5fa0a3472e152e-Paper-Conference.pdf"
+      }
+    ],
+    "role": "空间置信度与需求响应的官方基线"
+  },
+  {
+    "key": "zhu2026blindmap",
+    "title": "BlindMap: Explicit Blind-Area Prediction and Request-Free Communication for Efficient Cooperative Perception",
+    "authors": [
+      "Zhenhan Zhu",
+      "Yihang Jiang",
+      "Yanchao Zhao"
+    ],
+    "venue": "IEEE INFOCOM",
+    "year": 2026,
+    "type": "inproceedings",
+    "doi": "10.1109/INFOCOM59046.2026.11571528",
+    "url": "https://ieeexplore.ieee.org/abstract/document/11571528/",
+    "pdf_sources": [],
+    "access_note": "官方书目已核实；未核实公开 PDF，机构授权入口可用时再补全文。",
+    "role": "主动免请求通信与截止时间对照"
+  },
+  {
+    "key": "zhu2026deadline",
+    "title": "Deadline-Aware Collaborative Perception via Receiver-Conditioned Utility Modeling",
+    "authors": [
+      "Zhenhan Zhu",
+      "Yanchao Zhao",
+      "Yihang Jiang",
+      "Hao Han",
+      "Jie Wu"
+    ],
+    "venue": "Manuscript under review, as described by the official implementation",
+    "year": 2026,
+    "type": "unpublished",
+    "url": "https://github.com/NUAA-SmartSensing/BlindMap#citation",
+    "pdf_sources": [],
+    "access_note": "官方仓库给出稿件题名与引用，未验证公开全文或正式 DOI。与 INFOCOM 论文分别登记。",
+    "role": "当前实验所用后续 TMC 分支的机制与来源"
+  },
+  {
+    "key": "yang2023how2comm",
+    "title": "How2comm: Communication-Efficient and Collaboration-Pragmatic Multi-Agent Perception",
+    "authors": [
+      "Dingkang Yang",
+      "Kun Yang",
+      "Yuzheng Wang",
+      "Jing Liu",
+      "Zhi Xu",
+      "Rongbin Yin",
+      "Peng Zhai",
+      "Lihua Zhang"
+    ],
+    "venue": "Advances in Neural Information Processing Systems",
+    "year": 2023,
+    "type": "inproceedings",
+    "doi": "10.52202/075280-1093",
+    "url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/4f31327e046913c7238d5b671f5d820e-Abstract.html",
+    "pdf_sources": [
+      {
+        "version": "NeurIPS proceedings",
+        "url": "https://proceedings.neurips.cc/paper_files/paper/2023/file/4f31327e046913c7238d5b671f5d820e-Paper-Conference.pdf"
+      }
+    ],
+    "role": "信息价值筛选及时间异步补偿的机制对照"
+  },
+  {
+    "key": "lu2024heal",
+    "title": "An Extensible Framework for Open Heterogeneous Collaborative Perception",
+    "authors": [
+      "Yifan Lu", "Yue Hu", "Yiqi Zhong", "Dequan Wang", "Yanfeng Wang", "Siheng Chen"
+    ],
+    "venue": "International Conference on Learning Representations",
+    "year": 2024,
+    "type": "inproceedings",
+    "arxiv": "2401.13964",
+    "url": "https://arxiv.org/abs/2401.13964",
+    "pdf_sources": [
+      {
+        "version": "ICLR proceedings",
+        "url": "https://proceedings.iclr.cc/paper_files/paper/2024/file/c247c31884eda37a48330b9df5adb174-Paper-Conference.pdf"
+      }
+    ],
+    "role": "异构骨干与融合对照"
+  },
+  {
+    "key": "yan2026sec",
+    "title": "Where Demand Meets Supply: Spatial Elastic Consensus for Low-Bandwidth Collaborative Perception",
+    "authors": ["Linshan Yan"],
+    "venue": "arXiv",
+    "year": 2026,
+    "type": "misc",
+    "doi": "10.48550/arXiv.2611.22439",
+    "arxiv": "2611.22439",
+    "url": "https://arxiv.org/abs/2611.22439v1",
+    "pdf_sources": [{"version": "arXiv v1", "url": "https://arxiv.org/pdf/2611.22439v1"}],
+    "role": "低预算需求与供给的单轮匹配，核查预算口径、排序和消融"
+  },
+  {
+    "key": "xu2025cosdh",
+    "title": "CoSDH: Communication-Efficient Collaborative Perception via Supply-Demand Awareness and Intermediate-Late Hybridization",
+    "authors": ["Junhao Xu", "Yanan Zhang", "Zhi Cai", "Di Huang"],
+    "venue": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+    "year": 2025,
+    "type": "inproceedings",
+    "doi": "10.1109/CVPR52734.2025.00641",
+    "arxiv": "2503.03430",
+    "url": "https://arxiv.org/abs/2503.03430",
+    "pdf_sources": [
+      {"version": "CVF proceedings", "url": "https://openaccess.thecvf.com/content/CVPR2025/papers/Xu_CoSDH_Communication-Efficient_Collaborative_Perception_via_Supply-Demand_Awareness_and_Intermediate-Late_Hybridization_CVPR_2025_paper.pdf"},
+      {"version": "arXiv preprint", "url": "https://arxiv.org/pdf/2503.03430"}
+    ],
+    "role": "接收方点云密度反馈的消融与开源对照"
+  },
+  {
+    "key": "lee2024causality",
+    "title": "Causality-Sensitive Scheduling to Reduce Latency in Vehicle-to-Vehicle Interactions",
+    "authors": ["Hojeong Lee", "Seungmo Kang", "Hyogon Kim"],
+    "venue": "Sensors",
+    "volume": "24",
+    "number": "22",
+    "pages": "7142",
+    "year": 2024,
+    "type": "article",
+    "doi": "10.3390/s24227142",
+    "url": "https://doi.org/10.3390/s24227142",
+    "pdf_sources": [{"version": "Sensors publisher PDF", "url": "https://mdpi-res.com/d_attachment/sensors/sensors-24-07142/article_deploy/sensors-24-07142-v2.pdf"}],
+    "role": "5G-V2X 实测请求响应调度与固定 RTT 模型的适用边界"
+  },
+  {
+    "key": "xu2026semrdv2x",
+    "title": "SemRD-V2X: Closure-Guided Communication with Bounded Inference for Cooperative Perception",
+    "authors": ["Hu Xu", "Chun Li", "Siyuan Qiu", "Zeyan Li", "Jianfeng Xu"],
+    "venue": "arXiv",
+    "year": 2026,
+    "type": "misc",
+    "doi": "10.48550/arXiv.2609.34353",
+    "arxiv": "2609.34353",
+    "url": "https://arxiv.org/abs/2609.34353v1",
+    "pdf_sources": [{"version": "arXiv v1", "url": "https://arxiv.org/pdf/2609.34353v1"}],
+    "role": "接收端可推导信息与发送方新增证据的区分"
+  },
+  {
+    "key": "zhao2026evaluation",
+    "title": "How Evaluation Choices Change the Measured Benefit of Cooperative Perception: Evidence from Three V2X Benchmarks",
+    "authors": ["Pincan Zhao", "Yili Tang", "Xinrui Zhang"],
+    "venue": "arXiv",
+    "year": 2026,
+    "type": "misc",
+    "arxiv": "2610.01010",
+    "url": "https://arxiv.org/abs/2610.01010v1",
+    "pdf_sources": [{"version": "arXiv v1", "url": "https://arxiv.org/pdf/2610.01010v1"}],
+    "role": "连续簇、划分和评估定义对协同增益的敏感性"
+  }
+]

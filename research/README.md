@@ -9,3 +9,7 @@
 - `NAVIGATION_REVIEW.md` 记录从全局入口实际完成的查找，包括跳转断点和补充建议。
 
 已有路线见[全局目录](../docs/research-index.md)。自主整理、上传与验收见[第二台电脑的 Codex 提示词](../docs/SECOND_COMPUTER_AGENT_PROMPT.md)。
+
+## 已整理方向
+
+- [OPV2V 通信与接收计算时限](opv2v-deadline/README.md) 汇集 R1–R2.6 的实验判定、实际依据、并发争用缺口和跨机器核验入口。

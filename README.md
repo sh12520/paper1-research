@@ -10,6 +10,7 @@
 | 找目录、阶段或归档范围 | [全局目录与时间线](docs/research-index.md) |
 | 找引文或原始文献 | [文献导航与 BibTeX](literature/README.md) |
 | 接入另一台电脑的研究分支 | [协作目录](research/README.md) · [Codex 提示词](docs/SECOND_COMPUTER_AGENT_PROMPT.md) |
+| 复核 OPV2V 时限结果与工作流 | [通信与接收计算时限](research/opv2v-deadline/README.md) |
 
 可运行代码在 [RDINP](rdinp/) 和 [CS-ODS](csods/)。原始资料与历史结果见[归档说明](archive/README.md)。协作者可参阅 [AGENTS.md](AGENTS.md) 和 [CONTRIBUTING.md](CONTRIBUTING.md)。
 

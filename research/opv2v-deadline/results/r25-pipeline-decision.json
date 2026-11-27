@@ -1,0 +1,49 @@
+{
+  "status": "complete",
+  "exactness_gate": {
+    "passed": true,
+    "expected_frames": 80,
+    "accepted_frames": 80,
+    "scenes": 16,
+    "receiver_states": 240,
+    "errors": []
+  },
+  "decision": {
+    "conclusion": "retain_engineering_tail_reduction_measure_dependency_floor",
+    "main_deadline_ms": 35,
+    "primary_comparison": "B minus A on identical fragment stream",
+    "remaining_full_path_mean_delta_ms": -3.2866561250000004,
+    "remaining_full_path_median_delta_ms": -3.1575024999999997,
+    "remaining_full_path_mean_scene_ci95_ms": [
+      -3.5267083381249997,
+      -3.058373395937502
+    ],
+    "release_only_remaining_full_path_mean_delta_ms": -3.949298200000002,
+    "complete_detection_fraction_delta": 0.0,
+    "complete_detection_fraction_scene_ci95": [
+      0.0,
+      0.0
+    ],
+    "significant_tail_reduction": true,
+    "increased_complete_detection_coverage": false,
+    "AP70_latest_delta": 0.0,
+    "AP70_scientific_effect_threshold": 0.01,
+    "AP70_numerical_gain_gate": false,
+    "falls_short_of_complete_detection_throughout_panel": true,
+    "bilateral_negotiation": "HOLD",
+    "R3": "HOLD"
+  },
+  "scope": {
+    "panel": "Frozen 80 frames and 16 scenes, exploratory OPV2V development screen.",
+    "network": "Identical 16 KiB application messages and modeled packet arrival times across all arms. The 256 KiB total application cap, 100 Mbps shared uplink and 10 ms RTT remain frozen.",
+    "service": "Whole hardware wall and associated CUDA milestones from the same median trial per exact state. The CUDA lane is a conservative nonpreemptive reservation shared by independent packet materialization and detector GPU service (including launch/synchronization wall). CPU parse/postprocess share a single CPU lane. Reservations are reported as interval unions. The GPU lane occupancy is a replay property, not hardware profiler utilization. This replay does not alter transmission, detect an unmeasured state, or model physical traffic.",
+    "control": "The B delayed-start timing arm uses identical cached operations, packet profile, and full tail, with all packet-processing releases postponed to the original last arrival.",
+    "detections": "All pooled AP columns span all 80 frames with the frozen local fallback when their corresponding cooperative output was unavailable at cutoff. First detects the first finished nonempty cooperative state, latest is the newest finished state, latest_partial is restricted to partial state, and full_only is restricted to full state. Full fusion, full heads, and fully postprocessed detection have independent milestones.",
+    "statistics": {
+      "paired_cluster": "scene",
+      "draws": 2000,
+      "seed": 303,
+      "confidence_interval": "95% percentile bootstrap"
+    }
+  }
+}
