@@ -8,6 +8,8 @@
 | [`docs/`](./) | 状态、[证据索引](evidence-index.md)、[历史经验](research-lessons.md)及[研究关系](research-map.md) | 确定工作范围和资料链 |
 | [`rdinp/`](../rdinp/) | C2 协议、JSON Schema、可运行实现、worker 与代理复现实验 | 运行协议或执行层检查 |
 | [`csods/`](../csods/) | 有限 DSL 合同搜索、方法说明、小型测试 | 审查搜索或复用正确性测试 |
+| [`literature/`](../literature/) | 核心 BibTeX、来源和 Zotero／Undermind 查找入口 | 引文交叉核对 |
+| [`research/`](../research/) | 其他工作机新增研究的约定与交接 | 审阅新研究分支 |
 | [`archive/genspace/`](../archive/genspace/) | CS-ODS、XR 基线、RDINP 近期研究与原始开发记录 | 查原论文、技术报告或逐例输出 |
 | [`archive/rdinp-history/`](../archive/rdinp-history/) | RDINP 老版本交付和证据边界 | 比较协议版本、复核早期结论 |
 | [`archive/v2x-development/`](../archive/v2x-development/) | OPV2V 回放、通信与计算测量、共享计算诊断 | 追溯车路协同数据和缺失证据 |
@@ -39,7 +41,7 @@ REORCH 是并行的历史路线。其归档报告保留 [`REORCH_GAP_WEAK`](../a
 ```bash
 git clone --filter=blob:none --sparse git@github.com:sh12520/paper1-research.git
 cd paper1-research
-git sparse-checkout set docs rdinp csods
+git sparse-checkout set docs literature research rdinp csods
 ```
 
 从索引选中目录后，可用 `git sparse-checkout add archive/genspace/PAPER1_TOPIC_APPROVAL_20261127` 补取当前档案。只读一份文件时可运行 `git show HEAD:archive/genspace/PILOT_REPORT.md`。完整备份可使用普通克隆，或运行 `git sparse-checkout disable`。

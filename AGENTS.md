@@ -8,6 +8,8 @@
 | 查某条结论、数字和适用范围 | [关键证据索引](docs/evidence-index.md) |
 | 排查做过的尝试、寻找可证伪的问题 | [历史经验与研究机会](docs/research-lessons.md) |
 | 找目录、历史阶段或文件摘要 | [全局索引](docs/research-index.md) |
+| 查书目和原始文献 | [共享文献入口](literature/README.md) |
+| 接入其他电脑的研究 | [分支协作说明](research/README.md) |
 
 - 本机复现从 [RDINP](rdinp/README.md) 或 [CS-ODS](csods/README.md) 进入。逐实例目录适合按运行 ID、任务 ID 或查询 ID 精确查找。稀疏检出的补查方式见全局索引。
 - 给出研究结论时，保留原报告的样本、条件和判定。分别标明受控工程验证、开发回放、未执行的确认实验和现场验证。看到准备就绪或批准待定时，以实际有效的运行授权为准。
