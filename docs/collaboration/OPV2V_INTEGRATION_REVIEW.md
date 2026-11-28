@@ -9,8 +9,8 @@
 
 ## 接入与导航决策
 
-- 保留证据、负结果、可运行复核工具、按需项目技能和原机交接记录。原机环境和数据要求由 [本地交接](../research/opv2v-deadline/autoresearch/local/README.md) 说明。服务和定时器示例作为档案保留。
-- 全局只提供一个方向入口，具体证据和工作流从 [OPV2V 方向首页](../research/opv2v-deadline/README.md) 下钻。 [当前推进](current-research.md) 保留 RDINP 的优先验证位置。
+- 保留证据、负结果、可运行复核工具、按需项目技能和原机交接记录。原机环境和数据要求由 [本地交接](../../research/opv2v-deadline/autoresearch/local/README.md) 说明。服务和定时器示例作为档案保留。
+- 全局只提供一个方向入口，具体证据和工作流从 [OPV2V 方向首页](../../research/opv2v-deadline/README.md) 下钻。 [当前推进](../current-research.md) 保留 RDINP 的优先验证位置。
 - R1 的历史说明限于已测反馈策略 C 的总效果。请求成本、等待和内容同时变化。OPV2V 的数据是独立开发证据，可为后续严肃对照提供工程基线。
 
 ## 本机复核
@@ -18,4 +18,6 @@
 - 远端两笔提交的 61 个变更路径约 3.52 MB。变更范围遵循 OPV2V、相关技能与导航。常见密钥和用户绝对路径模式扫描未命中；此检查限于所查模式。
 - 独立核验 6 份原机交接文件、11 份工作流文件及 DAIR 训练示例回执。复跑单帧包时钟四种策略。复核 16 份结果与 18 个截止表单元。
 - 本机为 Windows，无已安装的 WSL 发行版。原统一复核入口依赖 POSIX 的 `fcntl` 和 GNU `sha256sum`。Windows 上采用独立摘要检查及标准库证据脚本。原机 GPU、数据集、自动化服务和新实验均不在该复核范围内。
-- OPV2V 多任务共享仍缺实际并发负载。DAIR 官方验证和 RDINP 实网履约仍缺输入。详见 [OPV2V 当前判断](../research/opv2v-deadline/CURRENT.md)。
+- OPV2V 多任务共享仍缺实际并发负载。DAIR 官方验证和 RDINP 实网履约仍缺输入。详见 [OPV2V 当前判断](../../research/opv2v-deadline/CURRENT.md)。
+
+现行 Windows 与 Ubuntu 的共享证据核验可从[研究工具与方向](../../research/README.md)进入。上面的本机复核保留合并时的环境与结果。

@@ -6,10 +6,12 @@
 | --- | --- | --- |
 | [`AGENTS.md`](../AGENTS.md) | 面向协作 Agent 的入口与取证方法 | 新会话或交接 |
 | [`docs/`](./) | 状态、[证据索引](evidence-index.md)、[历史经验](research-lessons.md)及[研究关系](research-map.md) | 确定工作范围和资料链 |
+| [开题与研究目标审阅](proposals/README.md) | 现行 GOAL、开题稿与 G1-A 判定证据 | 导师或独立专家评审 |
 | [RDINP](../rdinp/README.md) | C2 协议、JSON Schema、边缘 worker 和代理原型 | 复现协议或执行层检查 |
 | [CS-ODS](../csods/README.md) | 有限 DSL 合同搜索、方法说明、小型测试 | 审查搜索或复用正确性测试 |
 | [`literature/`](../literature/) | 核心 BibTeX、来源和 Zotero／Undermind 查找入口 | 引文交叉核对 |
 | [研究工具与方向](../research/README.md) | 共享证据核验工具、Agent 技能、并行研究及跨机交接 | 按任务找到验收入口或原机运行说明 |
+| [协作记录](collaboration/) | 跨机交接提示词、OPV2V 合并审查 | 继续其他工作树或追溯接入过程 |
 | [归档](../archive/README.md) | GENSPACE、RDINP 历史、OPV2V 与 REORCH，含[目录检索表](../archive/DIRECTORY_INDEX.tsv)和[摘要清单](../archive/MANIFEST.tsv) | 追溯原论文、报告、逐例输出和历史执行条件 |
 
 四个归档方向合计约 668 MiB。PILOT、DG-PCE V1 和论文开发比较三批结果共 16,065 份。体量和历史引用限制见[归档说明](../archive/README.md)。
@@ -26,6 +28,7 @@
 | 2026-11-24 至 11-27 | [协同感知问题审查](../archive/genspace/AGENT_COMMUNICATION_PROBLEM_REVIEW.md)保留 `PROBLEM_GAP_UNPROVEN`。OPV2V 资源敏感性有开发回放，共享计算诊断仍缺真实并发轨迹。 [OPV2V 档案](../archive/v2x-development/README.md) |
 | 2026-11-27 | 形成 RDINP 拟题。本地开发验证推进到实际 Caddy 代理控制。 |
 | 2026-11-28 | [G1-A](../rdinp/experiments/durable-worker/G1A_DECISION_REPORT.md) 完成固定配对，判定证据不足，等待人工决定。 [开题初稿](proposals/RDINP_硕士学位论文开题报告_初稿.md) |
+| 2026-11-28 | 形成[开题评审入口](proposals/README.md)，汇集阶段目标、现行报告与下一步决策证据。 |
 
 REORCH 是并行的历史路线。其归档报告保留 [`REORCH_GAP_WEAK`](../archive/reorch/GATE_REPORT.md)，此处按主题保留。
 

@@ -50,4 +50,4 @@ python -B research/harness.py verify opv2v-evidence --attempt ATTEMPT_ID
 
 接入共享核验时，保留研究代码和证据原路径，编写一个以退出码表示核验结果的只读脚本，然后在 [任务清单](harness.py)登记任务名、核验脚本和证据输入。新任务由共用入口运行，自动获得输入记录、锁和可复核回执。需要 GPU、采集新数据或持出确认的运行仍按对应方向的授权和执行条件接续。
 
-跨机整理、上传与验收见[第二台电脑的 Codex 提示词](../docs/SECOND_COMPUTER_AGENT_PROMPT.md)。
+跨机整理、上传和验收见[第二台电脑的 Codex 提示词](../docs/collaboration/SECOND_COMPUTER_AGENT_PROMPT.md)。此前的证据验收和范围见[OPV2V 接入审查](../docs/collaboration/OPV2V_INTEGRATION_REVIEW.md)。

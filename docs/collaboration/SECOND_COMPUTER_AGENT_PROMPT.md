@@ -14,7 +14,7 @@
 我已把第二台电脑的 SSH 公钥添加到 GitHub。先验明本机工作目录和已有改动，然后用 `git ls-remote git@github.com:sh12520/paper1-research.git refs/heads/main` 验证本机已有的身份和仓库访问。连接报错时先核对目标账号、远端和本机已登记密钥的选择。密钥材料保留在各设备上。
 
 - 已有此仓库副本时先 `git fetch origin`，从最新 `origin/main` 建立 `research/<方向短名>` 分支。已有本机开发分支或未提交改动时，用独立工作树或检出整理，保留现有工作。
-- 尚无副本时，可用 `git clone --filter=blob:none --sparse git@github.com:sh12520/paper1-research.git`，再用 `git sparse-checkout set docs literature research rdinp csods` 取导航和代码。查具体原始记录时按全局索引补取所需路径。
+- 尚无副本时，可用 `git clone --filter=blob:none --sparse git@github.com:sh12520/paper1-research.git`，再用 `git sparse-checkout set --cone .agents docs literature research rdinp csods` 取得项目技能、导航和代码。查具体原始记录时按全局索引补取所需路径。
 
 ## 3. 用你认为合适的方式整理
 

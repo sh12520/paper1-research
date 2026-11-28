@@ -1,6 +1,6 @@
 # 当前推进
 
-2026-11-28。唯一主线是 **RDINP 限时意图协商与边缘服务履约**。GOAL-1 处于 G1-A 人工门禁，状态为 blocked。[开题报告评审版](proposals/RDINP_硕士学位论文开题报告_评审版.md)记录研究方案与并发预研边界，[开题初稿](proposals/RDINP_硕士学位论文开题报告_初稿.md)保留首版，[G1-A 判定报告](../rdinp/experiments/durable-worker/G1A_DECISION_REPORT.md)记录其实验阶段结果。
+2026-11-28。唯一主线是 **RDINP 限时意图协商与边缘服务履约**。GOAL-1 处于 G1-A 人工门禁，状态为 blocked。研究目标、开题评审版和判定材料从[开题与研究目标审阅](proposals/README.md)进入。
 
 ## 问题与已验证边界
 
