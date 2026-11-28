@@ -13,7 +13,7 @@
 ## 按需查阅
 
 - 复用跨平台 Harness、项目技能和 OPV2V 工程资产。 [研究工具与方向](research/README.md)
-- 查 CS-ODS、XR、REORCH 等历史试验、负结果和旧稿。 [全局目录与时间线](docs/research-index.md) · [历史经验](docs/research-lessons.md)
+- 查 CS-ODS、XR、REORCH 等历史试验及负结果。 [全局目录与时间线](docs/research-index.md) · [历史经验](docs/research-lessons.md) · [本地原始结果索引](archive/README.md#本地原始结果)
 - 核对文献、来源和协作约定。 [文献导航](literature/README.md) · [AGENTS.md](AGENTS.md) · [CONTRIBUTING.md](CONTRIBUTING.md)
 
 尚未选择公开再分发许可证。各子项目的 README 记录运行环境、依赖和复现边界。

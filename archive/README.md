@@ -1,20 +1,22 @@
 # 论文 1 研究档案
 
-此目录收录原始材料的逐字节副本。可独立运行的示例和协作入口在仓库根目录的 [RDINP](../rdinp/) 和 [CS-ODS](../csods/)。
+这里保留云端可查的历史报告、源码、汇总、图表和与主线有关的实证材料。按问题和阶段从[全局目录](../docs/research-index.md)进入，按结论从[关键证据索引](../docs/evidence-index.md)下钻。
 
-按研究阶段和用途查阅时，从[全局目录](../docs/research-index.md)进入。核对某条结论时，优先用[关键证据索引](../docs/evidence-index.md)定位报告与原始记录。
-
-| 目录 | 内容 |
+| 目录 | 当前可查内容 |
 | --- | --- |
-| [`genspace/`](genspace/) | GENSPACE-FAIL-01 研究源码、预注册材料、诊断与方法开发报告、论文稿件、已完成的 PILOT 与其他开发实验记录 |
-| [`reorch/`](reorch/) | 运行期协商分组方向的源码、结果表和图 |
-| [`rdinp-history/`](rdinp-history/) | RDINP 历史阶段的交付说明、验证记录和证据摘要 |
-| [`v2x-development/`](v2x-development/) | OPV2V 通信计算敏感性与队列诊断，含逐帧和配对任务记录 |
+| [`genspace/`](genspace/) | GENSPACE 研究方案、诊断报告、论文稿件，以及 PILOT、方法开发和 Depth 3 的摘要与关键对照表 |
+| [`reorch/`](reorch/) | 动态分组方向的源码、判定报告、配对统计与图表 |
+| [`rdinp-history/`](rdinp-history/) | RDINP 历史阶段的交付说明和验证摘要 |
+| [`v2x-development/`](v2x-development/) | OPV2V 通信计算敏感性、配对结果和队列诊断 |
 
-[DIRECTORY_INDEX.tsv](DIRECTORY_INDEX.tsv) 按目录列出归档文件数量和大小。当前共有 34 行。各行互斥，可加总。`direct` 只统计该目录直属文件，`recursive` 统计该目录及其子目录。与当前清单的同步状态可用 `python tools/research_archive_index.py` 从仓库根目录检查。
+[DIRECTORY_INDEX.tsv](DIRECTORY_INDEX.tsv) 按互斥目录列出云端收录数量和原始字节。`direct` 统计直属材料，`recursive` 包括子目录。[MANIFEST.tsv](MANIFEST.tsv) 记录云端历史原件的相对路径、大小和 SHA-256。[archive_inventory.json](archive_inventory.json) 给出总量。运行 `python tools/research_archive_index.py` 可核对目录索引与清单是否一致。
 
-[MANIFEST.tsv](MANIFEST.tsv) 记录原样收录的 18,790 份文件及 SHA256，共 700,270,516 字节。[archive_inventory.json](archive_inventory.json) 给出按方向汇总的文件体量。原始项目仍可用于复核依赖机器路径或额外资产的历史运行。
+## 本地原始结果
 
-PILOT、DG-PCE V1 和论文开发比较三批结果占其中 16,065 份。初始导入在本机的 Git pack 约 46 MiB。历史文档可能引用原机路径或未随档案复制的中间文件。
+PILOT 大型逐实例表、序列化实例、逐次交易与遥测，DG-PCE 的多批逐例运行，语法搜索的逐查询明细，以及 REORCH 的完整原始运行表，已按原仓库路径移交本地。每批文件数和字节数见 [LOCAL_ARCHIVE_INDEX.tsv](LOCAL_ARCHIVE_INDEX.tsv)。
 
-原始凭证、实验令牌、未启用的持出确认材料、第三方可执行依赖、大型压缩包、环境目录和渲染缓存留在本地。已归档的开发结果保留其原有证据阶段和结论。
+本机入口位于 `论文1/本地资料/历史交接/论文1_历史原始结果_666a39fa/`。其中 `LOCAL_FILES.tsv` 可按原路径查 SHA-256；`original_manifest/` 保存整理前的完整归档清单。所有移出的原文件均已在本地副本中逐项核验 SHA-256。
+
+原报告中的路径按当时的目录保存。遇到已迁出的结果，先从本地目录取原件。具有 Git 历史时也可用 `git show 666a39fac685d0576849de7776a0c35d70d83e7f:归档原路径` 查看。发布标识 `666a39fa` 对应整理前的快照。
+
+现行 RDINP 的 [论文、图表与原版复现包](../docs/proposals/README.md)、前期执行证据以及 5G-LENA 前传轨迹继续由当前仓库提供。

@@ -12,9 +12,9 @@
 | [`literature/`](../literature/) | 核心 BibTeX、来源和 Zotero／Undermind 查找入口 | 引文交叉核对 |
 | [研究工具与方向](../research/README.md) | 共享证据核验工具、Agent 技能、并行研究及跨机交接 | 按任务找到验收入口或原机运行说明 |
 | [协作记录](collaboration/) | 跨机交接提示词、OPV2V 合并审查 | 继续其他工作树或追溯接入过程 |
-| [归档](../archive/README.md) | GENSPACE、RDINP 历史、OPV2V 与 REORCH，含[目录检索表](../archive/DIRECTORY_INDEX.tsv)和[摘要清单](../archive/MANIFEST.tsv) | 追溯原论文、报告、逐例输出和历史执行条件 |
+| [归档](../archive/README.md) | GENSPACE、RDINP 历史、OPV2V 与 REORCH，含[云端目录检索表](../archive/DIRECTORY_INDEX.tsv)和[本地明细索引](../archive/LOCAL_ARCHIVE_INDEX.tsv) | 追溯原论文、报告与历史执行条件，按需定位本地逐例输出 |
 
-四个归档方向合计约 668 MiB。PILOT、DG-PCE V1 和论文开发比较三批结果共 16,065 份。体量和历史引用限制见[归档说明](../archive/README.md)。
+四条历史路线的报告、判定、源码和关键汇总可直接浏览。大批量逐例结果按原路径收在[本地原始结果](../archive/README.md#本地原始结果)，可按目录、原文件名和 SHA-256 查找。
 
 ## 时间线
 
@@ -27,7 +27,7 @@
 | 2026-11-23 | [XR 前传基线重审](../archive/genspace/PAPER1-PROBLEM-BASELINE-RESET/PAPER1_PROBLEM_BASELINE_RESET.md)保留 `RESEARCH_DIRECTION_NOT_YET_JUSTIFIED`。 |
 | 2026-11-24 至 11-27 | [协同感知问题审查](../archive/genspace/AGENT_COMMUNICATION_PROBLEM_REVIEW.md)保留 `PROBLEM_GAP_UNPROVEN`。OPV2V 资源敏感性有开发回放，共享计算诊断仍缺真实并发轨迹。 [OPV2V 档案](../archive/v2x-development/README.md) |
 | 2026-11-27 | 形成 RDINP 拟题。本地开发验证推进到实际 Caddy 代理控制。 |
-| 2026-11-28 | [G1-A](../rdinp/experiments/durable-worker/G1A_DECISION_REPORT.md) 完成固定配对，判定证据不足，等待人工决定。 [开题初稿](proposals/RDINP_硕士学位论文开题报告_初稿.md) |
+| 2026-11-28 | [G1-A](../rdinp/experiments/durable-worker/G1A_DECISION_REPORT.md) 完成固定配对，按原判定保留证据不足的结论，支线已封存。 [开题初稿](proposals/RDINP_硕士学位论文开题报告_初稿.md) |
 | 2026-11-28 | 形成[开题评审入口](proposals/README.md)，汇集阶段目标、现行报告与下一步决策证据。 |
 
 REORCH 是并行的历史路线。其归档报告保留 [`REORCH_GAP_WEAK`](../archive/reorch/GATE_REPORT.md)，此处按主题保留。

@@ -1,12 +1,18 @@
 {
-  "selected_files": 18790,
-  "copied_files": 18790,
-  "total_bytes": 700270516,
+  "selected_files": 1100,
+  "copied_files": 1100,
+  "total_bytes": 43056812,
   "bytes_by_line": {
-    "genspace": 617834123,
+    "genspace": 35620077,
     "rdinp-history": 844059,
-    "reorch": 75098879,
+    "reorch": 99221,
     "v2x-development": 6493455
   },
-  "omitted": []
+  "omitted": [],
+  "moved_to_local_archive": {
+    "files": 17690,
+    "total_bytes": 657213704,
+    "source_commit": "666a39fac685d0576849de7776a0c35d70d83e7f",
+    "index": "LOCAL_ARCHIVE_INDEX.tsv"
+  }
 }

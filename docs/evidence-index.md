@@ -1,6 +1,6 @@
 # 关键证据与原始记录
 
-按结论找报告，按报告找表，再按任务或实例 ID 定位原始记录。历史文件中的本机链接可能指向原始工作盘；下表提供仓库内可追溯的副本。
+按结论找报告，按报告找表，再按任务或实例 ID 定位原始记录。下表定位仓库内可查证据和已移交本地的原始明细。历史材料中保留了当时的文件路径。
 
 ## RDINP 主线
 
@@ -29,11 +29,11 @@ Step 2 的会话许可实测、五类问题及门禁见 [原型实测报告](../
 
 | 要核查的结论 | 成立范围及状态 | 从报告到记录 |
 | --- | --- | --- |
-| **GENSPACE PILOT**，结构合同空间的存在性差异 | 1,920 个探索性实例，用于分布和机制诊断。 | [PILOT 报告](../archive/genspace/PILOT_REPORT.md) → [按 family 汇总](../archive/genspace/results/pilot/family_summary.csv) → [逐实例方法输出](../archive/genspace/results/pilot/raw_results.csv)，按 `instance_id` 和 `method` 对齐 |
+| **GENSPACE PILOT**，结构合同空间的存在性差异 | 1,920 个探索性实例，用于分布和机制诊断。 | [PILOT 报告](../archive/genspace/PILOT_REPORT.md) → [按 family 汇总](../archive/genspace/results/pilot/family_summary.csv) → [本地逐实例方法输出](../archive/README.md#本地原始结果)，原路径为 `archive/genspace/results/pilot/raw_results.csv`，按 `instance_id` 和 `method` 对齐 |
 | **CS-ODS**，与同域通用 best-first 的搜索比较 | 开发集。共同获证子集的时延只能作条件比较。 | [第三轮稿件](../archive/genspace/PAPER1_ROUND3/PAPER1_ROUND3_REVISED.md) · [方法开发比较](../archive/genspace/PAPER_DEVELOPMENT_COMPARISON.md) → [比较汇总](../archive/genspace/results/paper_method_dev/comparison_summary.csv) · [消融汇总](../archive/genspace/results/paper_method_dev/ablation_summary.csv) → [逐查询表](../archive/genspace/results/paper_method_dev/per_query.csv)，按 `instance_id`、`effective_depth`、`method` 和 `k` 对齐。稿件中的时延比另见 [共同获证配对表](../archive/genspace/PAPER1_ROUND3/Supplementary_Materials/S2_paired_k500_comparisons.csv) |
 | **Depth 3**，精确前缀、短域穷尽和独立覆盖证明 | 原始 `DEPTH3_PARTIAL` 保留。后续独立裁判核对开发检查点。确认授权待定。 | [原门槛解释](../archive/genspace/DEPTH3_GATE_INTERPRETATION.md) · [证明审计](../archive/genspace/DEPTH3_INDEPENDENT_PROOF_AUDIT.md) → [逐查询证明与计时](../archive/genspace/results/depth3_proof/per_query.csv) · [三阶段成本配对汇总](../archive/genspace/PAPER1_ROUND3/Supplementary_Materials/S9_depth3_audited_stage_summary.json) · [批准状态](../archive/genspace/METHOD_FINAL_APPROVAL_PACKET.md) |
 | **XR 前传**，双边协商必要性仍缺证据 | 已测 T1 强基线及已有业务要求。 | [问题与强基线重审](../archive/genspace/PAPER1-PROBLEM-BASELINE-RESET/PAPER1_PROBLEM_BASELINE_RESET.md) → [TFH 证据与原入口](../archive/genspace/PAPER1-PROBLEM-BASELINE-RESET/TFH_ARCHIVED_EVIDENCE.md) |
-| **REORCH**，动态分组未稳定优于强静态比较 | 固定仿真条件和该诊断策略，保留 `REORCH_GAP_WEAK`。 | [判定报告](../archive/reorch/GATE_REPORT.md) → [配对统计表](../archive/reorch/results/paired_effects.csv) → [原始运行表](../archive/reorch/results/raw_results.csv) |
+| **REORCH**，动态分组未稳定优于强静态比较 | 固定仿真条件和该诊断策略，保留 `REORCH_GAP_WEAK`。 | [判定报告](../archive/reorch/GATE_REPORT.md) → [配对统计表](../archive/reorch/results/paired_effects.csv) → [本地原始运行表](../archive/README.md#本地原始结果)，原路径为 `archive/reorch/results/raw_results.csv` |
 
 ## G1-A 逐任务核验
 
@@ -41,10 +41,10 @@ Step 2 的会话许可实测、五类问题及门禁见 [原型实测报告](../
 
 ## 按实例核对的示例
 
-先用 PILOT 的 family 汇总确定查哪个问题。已有实例 ID 时，可从 Git 中只取对应行。这个命令也可用于未检出原文件的稀疏工作区。
+先用 PILOT 的 family 汇总确定查哪个问题。原始逐例表已转入本地归档。已有实例 ID 且拥有该提交的 Git 历史时，可从历史版本直接提取对应行。
 
 ```bash
-git grep -n -m 4 -F 'F1__medium__high__rich__d2__s0' HEAD -- archive/genspace/results/pilot/raw_results.csv
+git grep -n -m 4 -F 'F1__medium__high__rich__d2__s0' 666a39fac685d0576849de7776a0c35d70d83e7f -- archive/genspace/results/pilot/raw_results.csv
 ```
 
-写下引用的报告、表、筛选条件和对应 Git 提交。需要字节级核对时，再按文件名查询[原始归档清单](../archive/MANIFEST.tsv)。
+写下引用的报告、表、筛选条件和对应 Git 提交。核对字节时，现行文件查[云端清单](../archive/MANIFEST.tsv)，已迁出的文件通过[本地明细入口](../archive/README.md#本地原始结果)按路径查 SHA-256。
