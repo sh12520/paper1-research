@@ -10,7 +10,7 @@
 | 4 | [Step 1 修正复算与归因](../../rdinp/experiments/structured-fast-slow/STEP1_REVIEW.md) | 配对仿真、紧截止期下的效用差值与同菜单对照 |
 | 5 | [硕士开题报告评审版](RDINP_硕士学位论文开题报告_评审版.md) | 既有题目、研究基础与待按新主线修改的实验计划 |
 
-从[原型复现入口](../../rdinp/experiments/permit-prototype/README.md)核对实测口径和运行步骤。冻结 ZIP 在 Git 快照之外，快照已跟踪构建所需的源码、证据、初稿与图表。仿真原始输出只收录 [Step 1 r02 五份封存输入](../../rdinp/experiments/structured-fast-slow/runs/step1-20261128-r02/COMPLETE.json)，后续临时运行仍遵循 Git 忽略规则。从仓库根可生成一份新的 ZIP，不启动实验。
+从[原型复现入口](../../rdinp/experiments/permit-prototype/README.md)核对实测口径和运行步骤。[原版冻结复现包](../../rdinp/experiments/permit-prototype/paper/RDINP_GOAL1_REPRO_20261128.zip)随 Git 快照交付，包含源码、证据、初稿与图表。仿真原始输出只收录 [Step 1 r02 五份封存输入](../../rdinp/experiments/structured-fast-slow/runs/step1-20261128-r02/COMPLETE.json)，后续临时运行仍遵循 Git 忽略规则。从仓库根可生成一份新的 ZIP，不启动实验。
 
 ~~~bash
 python -B rdinp/experiments/permit-prototype/freeze_bundle.py --paper rdinp/experiments/permit-prototype/paper --out RDINP_GOAL1_REPRO_20261128.zip

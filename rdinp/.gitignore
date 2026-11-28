@@ -14,6 +14,8 @@ __pycache__/
 .pytest_cache/
 *.exe
 *.zip
+# Frozen GOAL-1 delivery for review snapshots.
+!/experiments/permit-prototype/paper/RDINP_GOAL1_REPRO_20261128.zip
 *.tar.gz
 
 # Credentials and editor state.

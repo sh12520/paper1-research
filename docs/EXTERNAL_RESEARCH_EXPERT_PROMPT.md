@@ -12,7 +12,7 @@
 | 4 | [Step 1 修正复算与快切归因](../rdinp/experiments/structured-fast-slow/STEP1_REVIEW.md) | 四组仿真、同菜单归因与链路模型边界 |
 | 5 | [现行研究目标](proposals/GOAL.md) · [硕士开题评审版](proposals/RDINP_硕士学位论文开题报告_评审版.md) | 小论文范围与开题需要按现有证据调整之处 |
 
-复核数字时，可按需打开 [逐任务表](../rdinp/experiments/permit-prototype/evidence/step2-20261128-r01/pairs/per_task.csv)、[配对计划](../rdinp/experiments/permit-prototype/evidence/step2-20261128-r01/pairs/plan.json)、[安全矩阵](../rdinp/experiments/permit-prototype/evidence/step2-20261128-r01/safety/safety.json)、[上传前后切档余量](../rdinp/experiments/permit-prototype/evidence/step2-20261128-r01/pairs/headroom.json)、[C2 四阶段开销](../rdinp/experiments/permit-prototype/evidence/step2-20261128-r01/c2/c2_cost.json)和[图表](../rdinp/experiments/permit-prototype/paper/figures/)。
+复核数字时，可按需打开 [逐任务表](../rdinp/experiments/permit-prototype/evidence/step2-20261128-r01/pairs/per_task.csv)、[配对计划](../rdinp/experiments/permit-prototype/evidence/step2-20261128-r01/pairs/plan.json)、[安全矩阵](../rdinp/experiments/permit-prototype/evidence/step2-20261128-r01/safety/safety.json)、[上传前后切档余量](../rdinp/experiments/permit-prototype/evidence/step2-20261128-r01/pairs/headroom.json)、[C2 四阶段开销](../rdinp/experiments/permit-prototype/evidence/step2-20261128-r01/c2/c2_cost.json)和[图表](../rdinp/experiments/permit-prototype/paper/figures/)。需要本地校验时，可用[原版冻结复现包](../rdinp/experiments/permit-prototype/paper/RDINP_GOAL1_REPRO_20261128.zip)。
 
 ## 当前证据
 
