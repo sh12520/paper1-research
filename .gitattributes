@@ -1,2 +1,5 @@
 * text=auto eol=lf
 archive/** -text
+
+# Recognize CRLF in byte-preserved Step 2 transcripts.
+rdinp/experiments/permit-prototype/evidence/step2-20261128-r01/** whitespace=cr-at-eol

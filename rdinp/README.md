@@ -1,10 +1,12 @@
 # RDINP protocol and execution diagnostics
 
-This research artifact includes the RDINP C2 negotiation prototype and execution studies through the G1-A paired decision. The prototype uses signed HTTP messages and a single SQLite resource authority. The studies exercise a CPU worker, durable leases, stale-writer controls, and an actual Caddy reverse proxy.
+Current work studies reusable signed multi-tier permits for deadline-bound delivery. Start with the [permit specification](protocol/permit-v1/README.md), [paired prototype measurements and reproduction](experiments/permit-prototype/README.md), and [Chinese paper draft](experiments/permit-prototype/paper/RDINP_中文小论文初稿.md).
+
+The archived RDINP C2 prototype and studies through the G1-A decision use signed HTTP messages and a single SQLite resource authority. They cover a CPU worker, durable leases, stale-writer controls, and a Caddy reverse proxy.
 
 For the current study question and next evidence to collect, see [Current work](../docs/current-research.md). For archived run records, see the [evidence index](../docs/evidence-index.md).
 
-## Quick start
+## Archived C2 quick start
 
 Run these commands from this directory. The export was tested with Python 3.13.9 and the pinned dependencies.
 

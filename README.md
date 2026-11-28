@@ -1,13 +1,13 @@
 # 论文 1 研究仓库
 
-当前主线是动态无线与边缘算力下的结构化限时意图协商与快慢环履约。已完成[首批四组配对仿真](docs/current-research.md)。原单机 G1-A 已封存，可查[原判定报告](rdinp/experiments/durable-worker/G1A_DECISION_REPORT.md)。
+当前主线是动态无线与边缘算力下的结构化限时意图协商与快慢环履约。已完成配对仿真、400 ms 会话许可原型实测和中文小论文初稿。原单机 G1-A 已封存，可查[原判定报告](rdinp/experiments/durable-worker/G1A_DECISION_REPORT.md)。
 
 ## 当前主线
 
 | 任务 | 从这里开始 |
 | --- | --- |
 | 接手当前研究 | [当前推进](docs/current-research.md) |
-| 评审研究目标、开题报告及现有证据 | [开题与研究目标审阅](docs/proposals/README.md) |
+| 审阅小论文、开题报告及下一步取舍 | [专家审阅提示词](docs/EXTERNAL_RESEARCH_EXPERT_PROMPT.md) · [开题与研究目标审阅](docs/proposals/README.md) |
 | 核对 RDINP 的证据 | [关键证据与原始记录](docs/evidence-index.md#rdinp-主线) |
 
 ## 按需查阅

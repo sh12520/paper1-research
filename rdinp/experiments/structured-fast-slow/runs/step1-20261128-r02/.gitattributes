@@ -1,0 +1,2 @@
+# Preserve exact bytes of the five sealed Step 1 inputs.
+* -text whitespace=cr-at-eol
