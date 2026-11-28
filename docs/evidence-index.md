@@ -4,7 +4,7 @@
 
 ## RDINP 主线
 
-现行四组配对仿真见[当前推进](current-research.md)。下表供核对开题中的前期数据与已封存的原型和诊断。
+现行四组对照、修正复算和快切归因见 [Step 1 复核报告](../rdinp/experiments/structured-fast-slow/STEP1_REVIEW.md)。下表供核对开题中的前期数据与已封存的原型和诊断。
 
 | 要核查的结论 | 成立范围及状态 | 从报告到记录 |
 | --- | --- | --- |

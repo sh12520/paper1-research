@@ -114,6 +114,8 @@ def main():
     parser.add_argument("--calibration", type=Path, default=HERE / "calibration.json")
     parser.add_argument("--trace", type=Path, default=TRACE)
     parser.add_argument("--probe", action="store_true", help="one seed, one scenario for an engineering check")
+    parser.add_argument("--causal-resource-view", action="store_true",
+                        help="use receipt snapshots, corrected head wait, and cached Reactive inputs")
     args = parser.parse_args()
     profiles, scale = profiles_from_calibration(args.calibration, NOMINAL_EDGE_MS)
     capacity = read_capacity(args.trace)
@@ -126,6 +128,7 @@ def main():
     args.out.mkdir(parents=True, exist_ok=False)
     provenance = {
         "status": "STARTED", "scope": "RDINP-FAST-SLOW-STEP1-DEVELOPMENT",
+        "causal_resource_view": args.causal_resource_view,
         "python": sys.version, "seeds": seeds, "duration_ms": DURATION_MS,
         "terminals": TERMINALS, "slots": SLOTS, "methods": METHODS,
         "scenario_grid": [asdict(scenario) for scenario in scenarios],
@@ -160,11 +163,13 @@ def main():
                 # Rotate policy order independently of outcomes.
                 shift = seed % len(METHODS)
                 for method in METHODS[shift:] + METHODS[:shift]:
-                    sim = Simulation(inputs, method, profiles)
+                    sim = Simulation(inputs, method, profiles, causal_resource_view=args.causal_resource_view)
                     tasks = sim.run()
                     rows = [task_row(task, scenario, seed, inputs.input_hash, method) for task in tasks]
                     task_writer.writerows(rows)
                     summary = summarize(sim, rows, scenario, seed, inputs.input_hash)
+                    if args.causal_resource_view:
+                        summary["cached_dispatches"] = sim.cached_dispatches
                     if run_writer is None:
                         run_writer = csv.DictWriter(run_file, fieldnames=summary)
                         run_writer.writeheader()

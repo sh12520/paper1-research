@@ -1,0 +1,11 @@
+{
+  "status": "COMPLETE",
+  "task_method_rows": 301320,
+  "paired_runs": 810,
+  "run_rows": 3240,
+  "sha256": {
+    "per_run.csv": "f77dc5166096e26c79a0dfc7e9cb05706839b50aa292faf8c128ee6d5ed151a1",
+    "per_task.csv.gz": "a616eb8d99e87f4045b061888ad2b21e4fa66f1861781fdc33eed43c7216f23d",
+    "plan.json": "8fb9b162a742b2e1c83ea817b9b89e5b3bed9ea185713f63d8ba9e5676e62160"
+  }
+}

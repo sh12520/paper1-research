@@ -1,0 +1,12 @@
+{
+  "pairs": 810,
+  "method_runs": 3240,
+  "structured_exact_replay": 810,
+  "released_per_variant": 75330,
+  "sha256": {
+    "per_run.csv": "e338425d3d5fd9d75f10fa9ca0a179eb5465e93adbfded0e365033e7c67fd772",
+    "summary.csv": "ec45a547a022cbb234c006b87bb792d985cd46a9d98a0e066dd8b242d05a79f9",
+    "contrasts.csv": "7ebecbcf1b6abd96c4e782dca8a33ec122a59f99de4281ca0fd455f280c5c7b0",
+    "plan.json": "46530d65234fe80d90a21b4380f21dbf03f4214f53eafb103495bb677f332239"
+  }
+}

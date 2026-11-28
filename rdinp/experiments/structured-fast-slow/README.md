@@ -1,6 +1,6 @@
 # RDINP 结构化限时意图仿真
 
-第一步使用 Python 离散事件模型比较四种策略。结果属于开发对照。原 G1-A 按原判定封存，正式多档消息和状态机留待下一阶段验证。首批结果、趋势及限制见 [首批报告](STEP1_REPORT.md)。
+第一步使用 Python 离散事件模型比较四种策略。结果属于开发对照。原 G1-A 按原判定封存，正式多档消息和状态机留待下一阶段验证。当前结果见[修正复算与快切归因](STEP1_REVIEW.md)，首批对照见[历史报告](STEP1_REPORT.md)。
 
 ## 复现
 
@@ -14,6 +14,26 @@ python -B rdinp/experiments/structured-fast-slow/analysis.py rdinp/experiments/s
 ~~~
 
 [标定程序](calibrate.py)在传入历史三张样图的目录后执行 CPU 测量。[标定数据](calibration.json)附源图摘要、环境、预处理和逐次计时。复现开发对照直接使用这份标定数据，避免计时抖动改变输入。
+
+## 首批复核与机制对照
+
+历史 r01 的源码与证据保存在提交 6954a87d。其四组结果采用实时队列近似。复核遇到三项会影响比较的模型差异。
+
+- 按 FIFO 找到可用执行槽后，队首任务的等待为零。后续任务保留在队列中，继续占用各自的未来执行时段。
+- 终端依据已收到回执携带的队列快照作切档判断。快照在边缘处理提交时采样，回执加计 32 字节。各方法使用同一带延迟的无线速率观测。
+- 被动重协商在边缘持有完整主档输入时，可以复用同任务图像。终端收到新代际回执后经同一链路发送 64 字节启动令牌，链路计入实际发送及重传。此路径跳过重新上传和预处理。
+
+修正组仍使用全部 810 个原配对输入。运行和检查如下。
+
+~~~bash
+python -B rdinp/experiments/structured-fast-slow/test_resource_views.py -v
+python -B rdinp/experiments/structured-fast-slow/run.py --causal-resource-view --out rdinp/experiments/structured-fast-slow/runs/step1-causal-repeat
+python -B rdinp/experiments/structured-fast-slow/audit.py rdinp/experiments/structured-fast-slow/runs/step1-causal-repeat
+python -B rdinp/experiments/structured-fast-slow/analysis.py rdinp/experiments/structured-fast-slow/runs/step1-causal-repeat
+python -B rdinp/experiments/structured-fast-slow/run_attribution.py rdinp/experiments/structured-fast-slow/runs/step1-causal-repeat --out rdinp/experiments/structured-fast-slow/runs/step1-attribution-repeat
+~~~
+
+归因比较将初始轻量档准入和承诺后切档分别置为开或关，形成四个组合。所有组合保留结构化控制消息大小、本地预留、同一任务与代际守卫。主要对照是完整方案与仅靠初始准入选档的方案。按全部任务汇总，并报告 400、600、800 ms 各截止期的配对差异。其他三个差值及交互项用于判断两项机制是否叠加。复算完整结构化方案时，要求逐运行汇总与该版本四组首批结果完全一致。原场景与种子用于工程归因，区间用于描述稳定性。
 
 ## 输入与参数
 

@@ -25,6 +25,8 @@ BASE_TRANSIT_MS = 4.0
 CONTROL_SERVICE_MS = 1.0
 NOMINAL_EDGE_MS = 145.0
 LOCAL_RESERVE_MS = 55.0
+RESOURCE_HINT_BYTES = 32
+CACHED_DISPATCH_BYTES = 64
 
 
 @dataclass(frozen=True)
@@ -135,6 +137,15 @@ class Clock:
             callback(*args)
 
 
+@dataclass(frozen=True)
+class ResourceHint:
+    edge_wait_ms: float
+    up_bytes: int
+    down_bytes: int
+    fh_bytes: int
+    cached_main: bool
+
+
 @dataclass
 class Task:
     release: Release
@@ -163,6 +174,7 @@ class Task:
     requests: int = 0
     reason: str = "deadline"
     local_finished: bool = False
+    cached_main: bool = False
 
 
 @dataclass
@@ -303,7 +315,8 @@ class Network:
 
 
 class Simulation:
-    def __init__(self, inputs, method, profiles):
+    def __init__(self, inputs, method, profiles, *, menu_admission=True, fast_switch=True,
+                 causal_resource_view=False):
         if method not in METHODS:
             raise ValueError(method)
         self.clock = Clock()
@@ -311,6 +324,10 @@ class Simulation:
         self.inputs = inputs
         self.method = method
         self.menu = method == "Structured-RDINP"
+        self.menu_admission = self.menu and menu_admission
+        self.fast_switch = self.menu and fast_switch
+        self.causal_resource_view = causal_resource_view
+        self.cached_dispatches = 0
         self.reactive = method == "Reactive-ReNeg"
         self.allow_local = method != "Fixed-Intent"
         self.free_at = [0.0] * inputs.slots
@@ -345,20 +362,27 @@ class Simulation:
             heapq.heappush(availability, start + waiting.tiers[grade].service)
         return availability[0] - now
 
-    def fits(self, task, grade, input_needed=True, control_ms=0):
+    def resource_hint(self, task, dispatching=False):
+        waiting = self.network.queued_bytes
+        # The selected FCFS head already owns the next free slot.
+        edge_wait = 0 if dispatching and self.causal_resource_view else self.predicted_wait(task)
+        return ResourceHint(edge_wait, waiting["up"], waiting["down"], waiting["fh"], task.cached_main)
+
+    def fits(self, task, grade, input_needed=True, control_ms=0, hint=None, dispatching=False):
         tier = task.tiers[grade]
+        view = hint if hint is not None else self.resource_hint(task, dispatching)
         packet_ms = 0
         for direction, size in (("up", tier.upload if input_needed else 0), ("down", tier.download)):
             if size:
-                queued = self.network.queued_bytes[direction]
+                queued = view.up_bytes if direction == "up" else view.down_bytes
                 rate = self.network.observed(direction)
                 if direction == "down":
-                    queued += self.network.queued_bytes["fh"]
+                    queued += view.fh_bytes
                     fh_rate = self.network.rate("fh", max(0.0, self.clock.now - 10))[0]
-                    packet_ms += (size + self.network.queued_bytes["fh"]) * 0.008 / fh_rate
+                    packet_ms += (size + view.fh_bytes) * 0.008 / fh_rate
                 packet_ms += (queued + size) * 0.008 / rate + BASE_TRANSIT_MS + 1.5
         return (
-            self.clock.now + control_ms + packet_ms + tier.service + self.predicted_wait(task)
+            self.clock.now + control_ms + packet_ms + tier.service + view.edge_wait_ms
             + (tier.prepare if input_needed else 0) < self.cutoff(task)
         )
 
@@ -413,8 +437,9 @@ class Simulation:
             self.on_decision(task, epoch, None, False)
             return
         # This grant check runs at the edge after request delivery.
-        accepted = offered if self.fits(task, offered, control_ms=3 * BASE_TRANSIT_MS) else None
-        if not accepted and self.menu and self.fits(task, LIGHT, control_ms=3 * BASE_TRANSIT_MS):
+        needs_input = not (self.causal_resource_view and self.reactive and offered == LIGHT and task.cached_main)
+        accepted = offered if self.fits(task, offered, needs_input, control_ms=3 * BASE_TRANSIT_MS) else None
+        if not accepted and self.menu_admission and self.fits(task, LIGHT, control_ms=3 * BASE_TRANSIT_MS):
             accepted = LIGHT
         self.clock.schedule(
             self.clock.now + CONTROL_SERVICE_MS, self.control, task, "down",
@@ -441,12 +466,14 @@ class Simulation:
         if epoch <= task.edge_epoch:
             raise AssertionError("commit delivered twice or out of order")
         task.edge_epoch = epoch
+        hint = self.resource_hint(task) if self.causal_resource_view else None
+        reply_bytes = 384 + (RESOURCE_HINT_BYTES if hint is not None else 0)
         self.clock.schedule(
-            self.clock.now + CONTROL_SERVICE_MS, self.control, task, "down", 384,
-            lambda delivered: self.on_receipt(task, epoch, grade, delivered),
+            self.clock.now + CONTROL_SERVICE_MS, self.control, task, "down", reply_bytes,
+            lambda delivered: self.on_receipt(task, epoch, grade, delivered, hint),
         )
 
-    def on_receipt(self, task, epoch, grade, ok):
+    def on_receipt(self, task, epoch, grade, ok, hint=None):
         if not self.alive(task, epoch):
             return
         self.close_negotiation(task)
@@ -456,11 +483,18 @@ class Simulation:
         task.grants += 1
         if grade == LIGHT:
             task.grant_light += 1
-        if grade == MAIN and not self.fits(task, MAIN):
+        if self.causal_resource_view and hint is None:
+            raise AssertionError("successful receipt must carry its resource snapshot")
+        if self.reactive and grade == LIGHT and hint is not None and hint.cached_main:
+            self.cached_dispatches += 1
+            self.control(task, "up", CACHED_DISPATCH_BYTES,
+                         lambda delivered: self.receive_input(task, epoch, grade, delivered))
+            return
+        if grade == MAIN and not self.fits(task, MAIN, hint=hint):
             if self.reactive and epoch == 1:
                 self.start_negotiation(task, LIGHT)
                 return
-            if self.menu and self.fits(task, LIGHT):
+            if self.fast_switch and self.fits(task, LIGHT, hint=hint):
                 grade = LIGHT
                 task.switch_upload += 1
         self.clock.schedule(
@@ -480,6 +514,8 @@ class Simulation:
             return
         if task.edge_epoch != epoch or self.clock.now >= self.cutoff(task):
             return
+        if grade == MAIN:
+            task.cached_main = True
         if all(free > self.clock.now for free in self.free_at):
             task.busy += 1
         self.pending.append((task, epoch, grade))
@@ -495,12 +531,12 @@ class Simulation:
             task, epoch, grade = self.pending.popleft()
             if task.edge_epoch != epoch or self.cutoff(task) <= now:
                 continue
-            if grade == MAIN and not self.fits(task, MAIN, input_needed=False):
+            if grade == MAIN and not self.fits(task, MAIN, input_needed=False, dispatching=True):
                 if self.reactive and epoch == 1:
                     self.control(task, "down", 224,
                                  lambda ok, task=task, epoch=epoch: self.on_revision_needed(task, epoch, ok))
                     continue
-                if self.menu and self.fits(task, LIGHT, input_needed=False):
+                if self.fast_switch and self.fits(task, LIGHT, input_needed=False, dispatching=True):
                     grade = LIGHT
                     task.switch_edge += 1
             if task.edge_started_epoch >= epoch:
@@ -545,4 +581,3 @@ class Simulation:
             if task.negotiation_open is not None:
                 raise AssertionError("negotiation missing terminal accounting")
         return self.tasks
-

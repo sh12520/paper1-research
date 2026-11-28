@@ -3,4 +3,5 @@
 /run.py -text whitespace=cr-at-eol,-blank-at-eof
 /calibrate.py -text whitespace=cr-at-eol
 /calibration.json -text whitespace=cr-at-eol
-/evidence/step1-20261128-r01/plan.json -text whitespace=cr-at-eol
+/evidence/*/plan.json -text whitespace=cr-at-eol
+/evidence/step1-attribution-20261128-r02/*.csv -text whitespace=cr-at-eol
