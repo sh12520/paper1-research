@@ -1,0 +1,12 @@
+{
+  "pair_count": 12,
+  "method_runs": 24,
+  "task_rows": 384,
+  "structured_style": "auto",
+  "sha256": {
+    "plan.json": "77f5e2a65b8938f836eae278ca119d7b736c37799eb3c94f87ed010349875bee",
+    "headroom.json": "8237476303abd4e099140f47c84b9a9f3bb7ed0cb712e7f920115d1d70c65780",
+    "per_task.csv": "99c6fa31fc7f9bca57316c779ee668adf6879199c7ece330204423f65211e3b1",
+    "per_arm.csv": "c5e633bf9f447bcb26a65521119a1a0ca6c8e4acec72176ee05ceb7827339e0f"
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "effects": 9,
+  "next_offset": null,
+  "starts": 9,
+  "status": "AUDIT",
+  "task_count": 9,
+  "tasks": [
+    {
+      "effects": 1,
+      "generation": 1,
+      "input_sha256": "5357e9100c540dd45600f34c81f707f8db0e7a51c4f44aba91e31ac46933e9b4",
+      "principal": "terminal-a",
+      "result_sha256": "bc2454861c970238c10cd88254bedd4cb0d759509c19de70f466ab5cc45d14b0",
+      "session": "session-0",
+      "starts": 1,
+      "state": "complete",
+      "task_id": "headroom-0"
+    },
+    {
+      "effects": 1,
+      "generation": 1,
+      "input_sha256": "4038c96fd5ef2064862b84303a438bc87a798cfaa63bbd5ad983190fb5fc0587",
+      "principal": "terminal-a",
+      "result_sha256": "30e10d72854119856081d8cac19749c2464bb5ebd4876f80fb6ac4f11aa7ba72",
+      "session": "session-0",
+      "starts": 1,
+      "state": "complete",
+      "task_id": "headroom-1"
+    },
+    {
+      "effects": 1,
+      "generation": 2,
+      "input_sha256": "985d90bdfecd61415c593fafe3bef812b6c61378d7c27fd851dd20f3be1a4240",
+      "principal": "terminal-a",
+      "result_sha256": "f57530a2888e7608f2e8d44bbedfd21e302fbbd60b171904302fa211271dd326",
+      "session": "session-0",
+      "starts": 1,
+      "state": "complete",
+      "task_id": "headroom-2"
+    },
+    {
+      "effects": 1,
+      "generation": 2,
+      "input_sha256": "5357e9100c540dd45600f34c81f707f8db0e7a51c4f44aba91e31ac46933e9b4",
+      "principal": "terminal-a",
+      "result_sha256": "bc2454861c970238c10cd88254bedd4cb0d759509c19de70f466ab5cc45d14b0",
+      "session": "session-0",
+      "starts": 1,
+      "state": "complete",
+      "task_id": "headroom-3"
+    },
+    {
+      "effects": 1,
+      "generation": 3,
+      "input_sha256": "4038c96fd5ef2064862b84303a438bc87a798cfaa63bbd5ad983190fb5fc0587",
+      "principal": "terminal-a",
+      "result_sha256": "30e10d72854119856081d8cac19749c2464bb5ebd4876f80fb6ac4f11aa7ba72",
+      "session": "session-0",
+      "starts": 1,
+      "state": "complete",
+      "task_id": "headroom-4"
+    },
+    {
+      "effects": 1,
+      "generation": 3,
+      "input_sha256": "985d90bdfecd61415c593fafe3bef812b6c61378d7c27fd851dd20f3be1a4240",
+      "principal": "terminal-a",
+      "result_sha256": "f57530a2888e7608f2e8d44bbedfd21e302fbbd60b171904302fa211271dd326",
+      "session": "session-0",
+      "starts": 1,
+      "state": "complete",
+      "task_id": "headroom-5"
+    },
+    {
+      "effects": 1,
+      "generation": 4,
+      "input_sha256": "5357e9100c540dd45600f34c81f707f8db0e7a51c4f44aba91e31ac46933e9b4",
+      "principal": "terminal-a",
+      "result_sha256": "bc2454861c970238c10cd88254bedd4cb0d759509c19de70f466ab5cc45d14b0",
+      "session": "session-0",
+      "starts": 1,
+      "state": "complete",
+      "task_id": "headroom-6"
+    },
+    {
+      "effects": 1,
+      "generation": 4,
+      "input_sha256": "4038c96fd5ef2064862b84303a438bc87a798cfaa63bbd5ad983190fb5fc0587",
+      "principal": "terminal-a",
+      "result_sha256": "30e10d72854119856081d8cac19749c2464bb5ebd4876f80fb6ac4f11aa7ba72",
+      "session": "session-0",
+      "starts": 1,
+      "state": "complete",
+      "task_id": "headroom-7"
+    },
+    {
+      "effects": 1,
+      "generation": 5,
+      "input_sha256": "985d90bdfecd61415c593fafe3bef812b6c61378d7c27fd851dd20f3be1a4240",
+      "principal": "terminal-a",
+      "result_sha256": "f57530a2888e7608f2e8d44bbedfd21e302fbbd60b171904302fa211271dd326",
+      "session": "session-0",
+      "starts": 1,
+      "state": "complete",
+      "task_id": "headroom-8"
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "effects": 7,
+  "next_offset": null,
+  "starts": 7,
+  "status": "AUDIT",
+  "task_count": 7,
+  "tasks": [
+    {
+      "effects": 1,
+      "generation": 1,
+      "input_sha256": "3cacc632df57dcc7488c2daf9d9521fc63e4236787ee1d9bc38cf675f8310041",
+      "principal": "terminal-a",
+      "result_sha256": "11a3f66c48bb9b3d2c0fce8caa5cab0a7c5cddec535c27eca672a3841984bda8",
+      "session": "session-0",
+      "starts": 1,
+      "state": "complete",
+      "task_id": "t-00"
+    },
+    {
+      "effects": 1,
+      "generation": 1,
+      "input_sha256": "4038c96fd5ef2064862b84303a438bc87a798cfaa63bbd5ad983190fb5fc0587",
+      "principal": "terminal-a",
+      "result_sha256": "30e10d72854119856081d8cac19749c2464bb5ebd4876f80fb6ac4f11aa7ba72",
+      "session": "session-0",
+      "starts": 1,
+      "state": "complete",
+      "task_id": "t-06"
+    },
+    {
+      "effects": 1,
+      "generation": 2,
+      "input_sha256": "fa112ab8ac70db141fe56d7fe3e7947cbbb34268e577c65322ae7c85e58d1a8c",
+      "principal": "terminal-a",
+      "result_sha256": "6a6d1fe840d3dddee117325263c8eedfb0d9e62a5b565eb58da5aca9ef62a8b4",
+      "session": "session-0",
+      "starts": 1,
+      "state": "complete",
+      "task_id": "t-08"
+    },
+    {
+      "effects": 1,
+      "generation": 2,
+      "input_sha256": "3cacc632df57dcc7488c2daf9d9521fc63e4236787ee1d9bc38cf675f8310041",
+      "principal": "terminal-a",
+      "result_sha256": "30e10d72854119856081d8cac19749c2464bb5ebd4876f80fb6ac4f11aa7ba72",
+      "session": "session-0",
+      "starts": 1,
+      "state": "complete",
+      "task_id": "t-14"
+    },
+    {
+      "effects": 1,
+      "generation": 1,
+      "input_sha256": "5357e9100c540dd45600f34c81f707f8db0e7a51c4f44aba91e31ac46933e9b4",
+      "principal": "terminal-b",
+      "result_sha256": "bc2454861c970238c10cd88254bedd4cb0d759509c19de70f466ab5cc45d14b0",
+      "session": "session-1",
+      "starts": 1,
+      "state": "complete",
+      "task_id": "t-01"
+    },
+    {
+      "effects": 1,
+      "generation": 1,
+      "input_sha256": "3cacc632df57dcc7488c2daf9d9521fc63e4236787ee1d9bc38cf675f8310041",
+      "principal": "terminal-b",
+      "result_sha256": "30e10d72854119856081d8cac19749c2464bb5ebd4876f80fb6ac4f11aa7ba72",
+      "session": "session-1",
+      "starts": 1,
+      "state": "complete",
+      "task_id": "t-07"
+    },
+    {
+      "effects": 1,
+      "generation": 2,
+      "input_sha256": "e2a26310220b3286b6262608e390d39938253fad26281b69739a39ff706b2149",
+      "principal": "terminal-b",
+      "result_sha256": "bc2454861c970238c10cd88254bedd4cb0d759509c19de70f466ab5cc45d14b0",
+      "session": "session-1",
+      "starts": 1,
+      "state": "complete",
+      "task_id": "t-15"
+    }
+  ]
+}

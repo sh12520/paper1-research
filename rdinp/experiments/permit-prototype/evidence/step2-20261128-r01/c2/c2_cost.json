@@ -1,0 +1,2261 @@
+{
+  "scope": "REAL_SOFTWARE_LOOPBACK_FOUR_PHASE_CONTROL_ONLY",
+  "request_byte_boundary": "SEND_ACTUAL HTTP body, cross-checked against actual edge ingress",
+  "response_byte_boundary": "successful server RESPONSE_EGRESS HTTP body",
+  "trial_count": 24,
+  "confirmed_count": 24,
+  "statuses": {
+    "COMMITTED": 24
+  },
+  "elapsed_release_to_terminal_ms": {
+    "n": 24,
+    "p50": 180.397,
+    "p95": 521.2967,
+    "max": 619.5979
+  },
+  "confirmed_elapsed_release_to_terminal_ms": {
+    "n": 24,
+    "p50": 180.397,
+    "p95": 521.2967,
+    "max": 619.5979
+  },
+  "elapsed_protocol_only_ms": {
+    "n": 24,
+    "p50": 170.95350000000002,
+    "p95": 515.581,
+    "max": 586.9444
+  },
+  "all_attempt_body_bytes": {
+    "n": 24,
+    "p50": 9250.0,
+    "p95": 21050,
+    "max": 23443
+  },
+  "winning_body_bytes_confirmed": {
+    "n": 24,
+    "p50": 9250.0,
+    "p95": 9250,
+    "max": 9250
+  },
+  "actual_body_bytes_per_released_task": 11196.791666666666,
+  "requests_without_peer_ingress": 0,
+  "complete_within_400ms_control_only": 21,
+  "sign_verify_ms": {
+    "terminal_sign": {
+      "n": 116,
+      "p50": 0.97095,
+      "p95": 5.5805,
+      "max": 18.8436
+    },
+    "terminal_verify": {
+      "n": 116,
+      "p50": 4.18205,
+      "p95": 10.0672,
+      "max": 13.6997
+    },
+    "edge_sign": {
+      "n": 116,
+      "p50": 1.1545,
+      "p95": 3.0813,
+      "max": 5.2927
+    },
+    "edge_verify": {
+      "n": 116,
+      "p50": 2.8301499999999997,
+      "p95": 12.1256,
+      "max": 51.8763
+    }
+  },
+  "trials": [
+    {
+      "task_id": "cost-0000",
+      "status": "COMMITTED",
+      "confirmation_complete": true,
+      "release_to_terminal_ns": 447243200,
+      "protocol_elapsed_ns": 440725100,
+      "release_to_return_ns": 447258600,
+      "release_ns": 187612284736500,
+      "declared_deadline_met": true,
+      "initialization_ns": 6308300,
+      "request_sends": 9,
+      "reply_egresses": 9,
+      "all_attempt_body_bytes": 20573,
+      "peer_observed_body_bytes": 20573,
+      "winning_exchanges": {
+        "INTENT_INITIAL": {
+          "request_body_bytes": 937,
+          "reply_body_bytes": 1297,
+          "attempt": 0
+        },
+        "INTENT_REPLAY": {
+          "request_body_bytes": 936,
+          "reply_body_bytes": 1296,
+          "attempt": 0
+        },
+        "COMMIT_INITIAL": {
+          "request_body_bytes": 1033,
+          "reply_body_bytes": 1360,
+          "attempt": 0
+        },
+        "COMMIT_REPLAY": {
+          "request_body_bytes": 1032,
+          "reply_body_bytes": 1359,
+          "attempt": 0
+        }
+      },
+      "winning_body_bytes": 9250
+    },
+    {
+      "task_id": "cost-0001",
+      "status": "COMMITTED",
+      "confirmation_complete": true,
+      "release_to_terminal_ns": 180939900,
+      "protocol_elapsed_ns": 173354800,
+      "release_to_return_ns": 180979000,
+      "release_ns": 187612732304600,
+      "declared_deadline_met": true,
+      "initialization_ns": 7536500,
+      "request_sends": 4,
+      "reply_egresses": 4,
+      "all_attempt_body_bytes": 9250,
+      "peer_observed_body_bytes": 9250,
+      "winning_exchanges": {
+        "INTENT_INITIAL": {
+          "request_body_bytes": 937,
+          "reply_body_bytes": 1297,
+          "attempt": 0
+        },
+        "INTENT_REPLAY": {
+          "request_body_bytes": 936,
+          "reply_body_bytes": 1296,
+          "attempt": 0
+        },
+        "COMMIT_INITIAL": {
+          "request_body_bytes": 1033,
+          "reply_body_bytes": 1360,
+          "attempt": 0
+        },
+        "COMMIT_REPLAY": {
+          "request_body_bytes": 1032,
+          "reply_body_bytes": 1359,
+          "attempt": 0
+        }
+      },
+      "winning_body_bytes": 9250
+    },
+    {
+      "task_id": "cost-0002",
+      "status": "COMMITTED",
+      "confirmation_complete": true,
+      "release_to_terminal_ns": 201295000,
+      "protocol_elapsed_ns": 190383900,
+      "release_to_return_ns": 201309700,
+      "release_ns": 187612913575500,
+      "declared_deadline_met": true,
+      "initialization_ns": 10863200,
+      "request_sends": 4,
+      "reply_egresses": 4,
+      "all_attempt_body_bytes": 9250,
+      "peer_observed_body_bytes": 9250,
+      "winning_exchanges": {
+        "INTENT_INITIAL": {
+          "request_body_bytes": 937,
+          "reply_body_bytes": 1297,
+          "attempt": 0
+        },
+        "INTENT_REPLAY": {
+          "request_body_bytes": 936,
+          "reply_body_bytes": 1296,
+          "attempt": 0
+        },
+        "COMMIT_INITIAL": {
+          "request_body_bytes": 1033,
+          "reply_body_bytes": 1360,
+          "attempt": 0
+        },
+        "COMMIT_REPLAY": {
+          "request_body_bytes": 1032,
+          "reply_body_bytes": 1359,
+          "attempt": 0
+        }
+      },
+      "winning_body_bytes": 9250
+    },
+    {
+      "task_id": "cost-0003",
+      "status": "COMMITTED",
+      "confirmation_complete": true,
+      "release_to_terminal_ns": 208128500,
+      "protocol_elapsed_ns": 202838200,
+      "release_to_return_ns": 208171000,
+      "release_ns": 187613115035500,
+      "declared_deadline_met": true,
+      "initialization_ns": 5260200,
+      "request_sends": 4,
+      "reply_egresses": 4,
+      "all_attempt_body_bytes": 9250,
+      "peer_observed_body_bytes": 9250,
+      "winning_exchanges": {
+        "INTENT_INITIAL": {
+          "request_body_bytes": 937,
+          "reply_body_bytes": 1297,
+          "attempt": 0
+        },
+        "INTENT_REPLAY": {
+          "request_body_bytes": 936,
+          "reply_body_bytes": 1296,
+          "attempt": 0
+        },
+        "COMMIT_INITIAL": {
+          "request_body_bytes": 1033,
+          "reply_body_bytes": 1360,
+          "attempt": 0
+        },
+        "COMMIT_REPLAY": {
+          "request_body_bytes": 1032,
+          "reply_body_bytes": 1359,
+          "attempt": 0
+        }
+      },
+      "winning_body_bytes": 9250
+    },
+    {
+      "task_id": "cost-0004",
+      "status": "COMMITTED",
+      "confirmation_complete": true,
+      "release_to_terminal_ns": 252910800,
+      "protocol_elapsed_ns": 223410300,
+      "release_to_return_ns": 252925700,
+      "release_ns": 187613325556200,
+      "declared_deadline_met": true,
+      "initialization_ns": 29220600,
+      "request_sends": 4,
+      "reply_egresses": 4,
+      "all_attempt_body_bytes": 9250,
+      "peer_observed_body_bytes": 9250,
+      "winning_exchanges": {
+        "INTENT_INITIAL": {
+          "request_body_bytes": 937,
+          "reply_body_bytes": 1297,
+          "attempt": 0
+        },
+        "INTENT_REPLAY": {
+          "request_body_bytes": 936,
+          "reply_body_bytes": 1296,
+          "attempt": 0
+        },
+        "COMMIT_INITIAL": {
+          "request_body_bytes": 1033,
+          "reply_body_bytes": 1360,
+          "attempt": 0
+        },
+        "COMMIT_REPLAY": {
+          "request_body_bytes": 1032,
+          "reply_body_bytes": 1359,
+          "attempt": 0
+        }
+      },
+      "winning_body_bytes": 9250
+    },
+    {
+      "task_id": "cost-0005",
+      "status": "COMMITTED",
+      "confirmation_complete": true,
+      "release_to_terminal_ns": 176017900,
+      "protocol_elapsed_ns": 169920300,
+      "release_to_return_ns": 176065200,
+      "release_ns": 187613578640400,
+      "declared_deadline_met": true,
+      "initialization_ns": 6060200,
+      "request_sends": 4,
+      "reply_egresses": 4,
+      "all_attempt_body_bytes": 9250,
+      "peer_observed_body_bytes": 9250,
+      "winning_exchanges": {
+        "INTENT_INITIAL": {
+          "request_body_bytes": 937,
+          "reply_body_bytes": 1297,
+          "attempt": 0
+        },
+        "INTENT_REPLAY": {
+          "request_body_bytes": 936,
+          "reply_body_bytes": 1296,
+          "attempt": 0
+        },
+        "COMMIT_INITIAL": {
+          "request_body_bytes": 1033,
+          "reply_body_bytes": 1360,
+          "attempt": 0
+        },
+        "COMMIT_REPLAY": {
+          "request_body_bytes": 1032,
+          "reply_body_bytes": 1359,
+          "attempt": 0
+        }
+      },
+      "winning_body_bytes": 9250
+    },
+    {
+      "task_id": "cost-0006",
+      "status": "COMMITTED",
+      "confirmation_complete": true,
+      "release_to_terminal_ns": 151965000,
+      "protocol_elapsed_ns": 145859000,
+      "release_to_return_ns": 151987800,
+      "release_ns": 187613755058500,
+      "declared_deadline_met": true,
+      "initialization_ns": 6073500,
+      "request_sends": 4,
+      "reply_egresses": 4,
+      "all_attempt_body_bytes": 9250,
+      "peer_observed_body_bytes": 9250,
+      "winning_exchanges": {
+        "INTENT_INITIAL": {
+          "request_body_bytes": 937,
+          "reply_body_bytes": 1297,
+          "attempt": 0
+        },
+        "INTENT_REPLAY": {
+          "request_body_bytes": 936,
+          "reply_body_bytes": 1296,
+          "attempt": 0
+        },
+        "COMMIT_INITIAL": {
+          "request_body_bytes": 1033,
+          "reply_body_bytes": 1360,
+          "attempt": 0
+        },
+        "COMMIT_REPLAY": {
+          "request_body_bytes": 1032,
+          "reply_body_bytes": 1359,
+          "attempt": 0
+        }
+      },
+      "winning_body_bytes": 9250
+    },
+    {
+      "task_id": "cost-0007",
+      "status": "COMMITTED",
+      "confirmation_complete": true,
+      "release_to_terminal_ns": 159717600,
+      "protocol_elapsed_ns": 150935000,
+      "release_to_return_ns": 159745000,
+      "release_ns": 187613907284600,
+      "declared_deadline_met": true,
+      "initialization_ns": 8742500,
+      "request_sends": 4,
+      "reply_egresses": 4,
+      "all_attempt_body_bytes": 9250,
+      "peer_observed_body_bytes": 9250,
+      "winning_exchanges": {
+        "INTENT_INITIAL": {
+          "request_body_bytes": 937,
+          "reply_body_bytes": 1297,
+          "attempt": 0
+        },
+        "INTENT_REPLAY": {
+          "request_body_bytes": 936,
+          "reply_body_bytes": 1296,
+          "attempt": 0
+        },
+        "COMMIT_INITIAL": {
+          "request_body_bytes": 1033,
+          "reply_body_bytes": 1360,
+          "attempt": 0
+        },
+        "COMMIT_REPLAY": {
+          "request_body_bytes": 1032,
+          "reply_body_bytes": 1359,
+          "attempt": 0
+        }
+      },
+      "winning_body_bytes": 9250
+    },
+    {
+      "task_id": "cost-0008",
+      "status": "COMMITTED",
+      "confirmation_complete": true,
+      "release_to_terminal_ns": 180469900,
+      "protocol_elapsed_ns": 171438400,
+      "release_to_return_ns": 180493300,
+      "release_ns": 187614067225100,
+      "declared_deadline_met": true,
+      "initialization_ns": 8994200,
+      "request_sends": 4,
+      "reply_egresses": 4,
+      "all_attempt_body_bytes": 9250,
+      "peer_observed_body_bytes": 9250,
+      "winning_exchanges": {
+        "INTENT_INITIAL": {
+          "request_body_bytes": 937,
+          "reply_body_bytes": 1297,
+          "attempt": 0
+        },
+        "INTENT_REPLAY": {
+          "request_body_bytes": 936,
+          "reply_body_bytes": 1296,
+          "attempt": 0
+        },
+        "COMMIT_INITIAL": {
+          "request_body_bytes": 1033,
+          "reply_body_bytes": 1360,
+          "attempt": 0
+        },
+        "COMMIT_REPLAY": {
+          "request_body_bytes": 1032,
+          "reply_body_bytes": 1359,
+          "attempt": 0
+        }
+      },
+      "winning_body_bytes": 9250
+    },
+    {
+      "task_id": "cost-0009",
+      "status": "COMMITTED",
+      "confirmation_complete": true,
+      "release_to_terminal_ns": 170341300,
+      "protocol_elapsed_ns": 162337000,
+      "release_to_return_ns": 170353600,
+      "release_ns": 187614247964400,
+      "declared_deadline_met": true,
+      "initialization_ns": 7975300,
+      "request_sends": 4,
+      "reply_egresses": 4,
+      "all_attempt_body_bytes": 9250,
+      "peer_observed_body_bytes": 9250,
+      "winning_exchanges": {
+        "INTENT_INITIAL": {
+          "request_body_bytes": 937,
+          "reply_body_bytes": 1297,
+          "attempt": 0
+        },
+        "INTENT_REPLAY": {
+          "request_body_bytes": 936,
+          "reply_body_bytes": 1296,
+          "attempt": 0
+        },
+        "COMMIT_INITIAL": {
+          "request_body_bytes": 1033,
+          "reply_body_bytes": 1360,
+          "attempt": 0
+        },
+        "COMMIT_REPLAY": {
+          "request_body_bytes": 1032,
+          "reply_body_bytes": 1359,
+          "attempt": 0
+        }
+      },
+      "winning_body_bytes": 9250
+    },
+    {
+      "task_id": "cost-0010",
+      "status": "COMMITTED",
+      "confirmation_complete": true,
+      "release_to_terminal_ns": 521296700,
+      "protocol_elapsed_ns": 515581000,
+      "release_to_return_ns": 521338400,
+      "release_ns": 187614418482300,
+      "declared_deadline_met": true,
+      "initialization_ns": 5677400,
+      "request_sends": 9,
+      "reply_egresses": 9,
+      "all_attempt_body_bytes": 21050,
+      "peer_observed_body_bytes": 21050,
+      "winning_exchanges": {
+        "INTENT_INITIAL": {
+          "request_body_bytes": 937,
+          "reply_body_bytes": 1297,
+          "attempt": 0
+        },
+        "INTENT_REPLAY": {
+          "request_body_bytes": 936,
+          "reply_body_bytes": 1296,
+          "attempt": 0
+        },
+        "COMMIT_INITIAL": {
+          "request_body_bytes": 1033,
+          "reply_body_bytes": 1360,
+          "attempt": 0
+        },
+        "COMMIT_REPLAY": {
+          "request_body_bytes": 1032,
+          "reply_body_bytes": 1359,
+          "attempt": 0
+        }
+      },
+      "winning_body_bytes": 9250
+    },
+    {
+      "task_id": "cost-0011",
+      "status": "COMMITTED",
+      "confirmation_complete": true,
+      "release_to_terminal_ns": 619597900,
+      "protocol_elapsed_ns": 586944400,
+      "release_to_return_ns": 619618900,
+      "release_ns": 187615039573400,
+      "declared_deadline_met": true,
+      "initialization_ns": 32472600,
+      "request_sends": 10,
+      "reply_egresses": 10,
+      "all_attempt_body_bytes": 23443,
+      "peer_observed_body_bytes": 23443,
+      "winning_exchanges": {
+        "INTENT_INITIAL": {
+          "request_body_bytes": 937,
+          "reply_body_bytes": 1297,
+          "attempt": 0
+        },
+        "INTENT_REPLAY": {
+          "request_body_bytes": 936,
+          "reply_body_bytes": 1296,
+          "attempt": 0
+        },
+        "COMMIT_INITIAL": {
+          "request_body_bytes": 1033,
+          "reply_body_bytes": 1360,
+          "attempt": 0
+        },
+        "COMMIT_REPLAY": {
+          "request_body_bytes": 1032,
+          "reply_body_bytes": 1359,
+          "attempt": 0
+        }
+      },
+      "winning_body_bytes": 9250
+    },
+    {
+      "task_id": "cost-0012",
+      "status": "COMMITTED",
+      "confirmation_complete": true,
+      "release_to_terminal_ns": 180324100,
+      "protocol_elapsed_ns": 170468600,
+      "release_to_return_ns": 180344200,
+      "release_ns": 187615666789800,
+      "declared_deadline_met": true,
+      "initialization_ns": 9819000,
+      "request_sends": 4,
+      "reply_egresses": 4,
+      "all_attempt_body_bytes": 9250,
+      "peer_observed_body_bytes": 9250,
+      "winning_exchanges": {
+        "INTENT_INITIAL": {
+          "request_body_bytes": 937,
+          "reply_body_bytes": 1297,
+          "attempt": 0
+        },
+        "INTENT_REPLAY": {
+          "request_body_bytes": 936,
+          "reply_body_bytes": 1296,
+          "attempt": 0
+        },
+        "COMMIT_INITIAL": {
+          "request_body_bytes": 1033,
+          "reply_body_bytes": 1360,
+          "attempt": 0
+        },
+        "COMMIT_REPLAY": {
+          "request_body_bytes": 1032,
+          "reply_body_bytes": 1359,
+          "attempt": 0
+        }
+      },
+      "winning_body_bytes": 9250
+    },
+    {
+      "task_id": "cost-0013",
+      "status": "COMMITTED",
+      "confirmation_complete": true,
+      "release_to_terminal_ns": 152188300,
+      "protocol_elapsed_ns": 146085300,
+      "release_to_return_ns": 152208500,
+      "release_ns": 187615847351600,
+      "declared_deadline_met": true,
+      "initialization_ns": 6068600,
+      "request_sends": 4,
+      "reply_egresses": 4,
+      "all_attempt_body_bytes": 9250,
+      "peer_observed_body_bytes": 9250,
+      "winning_exchanges": {
+        "INTENT_INITIAL": {
+          "request_body_bytes": 937,
+          "reply_body_bytes": 1297,
+          "attempt": 0
+        },
+        "INTENT_REPLAY": {
+          "request_body_bytes": 936,
+          "reply_body_bytes": 1296,
+          "attempt": 0
+        },
+        "COMMIT_INITIAL": {
+          "request_body_bytes": 1033,
+          "reply_body_bytes": 1360,
+          "attempt": 0
+        },
+        "COMMIT_REPLAY": {
+          "request_body_bytes": 1032,
+          "reply_body_bytes": 1359,
+          "attempt": 0
+        }
+      },
+      "winning_body_bytes": 9250
+    },
+    {
+      "task_id": "cost-0014",
+      "status": "COMMITTED",
+      "confirmation_complete": true,
+      "release_to_terminal_ns": 159912500,
+      "protocol_elapsed_ns": 151855400,
+      "release_to_return_ns": 159925000,
+      "release_ns": 187615999796800,
+      "declared_deadline_met": true,
+      "initialization_ns": 8015400,
+      "request_sends": 4,
+      "reply_egresses": 4,
+      "all_attempt_body_bytes": 9250,
+      "peer_observed_body_bytes": 9250,
+      "winning_exchanges": {
+        "INTENT_INITIAL": {
+          "request_body_bytes": 937,
+          "reply_body_bytes": 1297,
+          "attempt": 0
+        },
+        "INTENT_REPLAY": {
+          "request_body_bytes": 936,
+          "reply_body_bytes": 1296,
+          "attempt": 0
+        },
+        "COMMIT_INITIAL": {
+          "request_body_bytes": 1033,
+          "reply_body_bytes": 1360,
+          "attempt": 0
+        },
+        "COMMIT_REPLAY": {
+          "request_body_bytes": 1032,
+          "reply_body_bytes": 1359,
+          "attempt": 0
+        }
+      },
+      "winning_body_bytes": 9250
+    },
+    {
+      "task_id": "cost-0015",
+      "status": "COMMITTED",
+      "confirmation_complete": true,
+      "release_to_terminal_ns": 139883100,
+      "protocol_elapsed_ns": 132179700,
+      "release_to_return_ns": 139905000,
+      "release_ns": 187616159886200,
+      "declared_deadline_met": true,
+      "initialization_ns": 7667500,
+      "request_sends": 4,
+      "reply_egresses": 4,
+      "all_attempt_body_bytes": 9250,
+      "peer_observed_body_bytes": 9250,
+      "winning_exchanges": {
+        "INTENT_INITIAL": {
+          "request_body_bytes": 937,
+          "reply_body_bytes": 1297,
+          "attempt": 0
+        },
+        "INTENT_REPLAY": {
+          "request_body_bytes": 936,
+          "reply_body_bytes": 1296,
+          "attempt": 0
+        },
+        "COMMIT_INITIAL": {
+          "request_body_bytes": 1033,
+          "reply_body_bytes": 1360,
+          "attempt": 0
+        },
+        "COMMIT_REPLAY": {
+          "request_body_bytes": 1032,
+          "reply_body_bytes": 1359,
+          "attempt": 0
+        }
+      },
+      "winning_body_bytes": 9250
+    },
+    {
+      "task_id": "cost-0016",
+      "status": "COMMITTED",
+      "confirmation_complete": true,
+      "release_to_terminal_ns": 181863100,
+      "protocol_elapsed_ns": 176079400,
+      "release_to_return_ns": 181888200,
+      "release_ns": 187616300026600,
+      "declared_deadline_met": true,
+      "initialization_ns": 5742200,
+      "request_sends": 4,
+      "reply_egresses": 4,
+      "all_attempt_body_bytes": 9250,
+      "peer_observed_body_bytes": 9250,
+      "winning_exchanges": {
+        "INTENT_INITIAL": {
+          "request_body_bytes": 937,
+          "reply_body_bytes": 1297,
+          "attempt": 0
+        },
+        "INTENT_REPLAY": {
+          "request_body_bytes": 936,
+          "reply_body_bytes": 1296,
+          "attempt": 0
+        },
+        "COMMIT_INITIAL": {
+          "request_body_bytes": 1033,
+          "reply_body_bytes": 1360,
+          "attempt": 0
+        },
+        "COMMIT_REPLAY": {
+          "request_body_bytes": 1032,
+          "reply_body_bytes": 1359,
+          "attempt": 0
+        }
+      },
+      "winning_body_bytes": 9250
+    },
+    {
+      "task_id": "cost-0017",
+      "status": "COMMITTED",
+      "confirmation_complete": true,
+      "release_to_terminal_ns": 148949600,
+      "protocol_elapsed_ns": 143343600,
+      "release_to_return_ns": 148973300,
+      "release_ns": 187616482145700,
+      "declared_deadline_met": true,
+      "initialization_ns": 5570700,
+      "request_sends": 4,
+      "reply_egresses": 4,
+      "all_attempt_body_bytes": 9250,
+      "peer_observed_body_bytes": 9250,
+      "winning_exchanges": {
+        "INTENT_INITIAL": {
+          "request_body_bytes": 937,
+          "reply_body_bytes": 1297,
+          "attempt": 0
+        },
+        "INTENT_REPLAY": {
+          "request_body_bytes": 936,
+          "reply_body_bytes": 1296,
+          "attempt": 0
+        },
+        "COMMIT_INITIAL": {
+          "request_body_bytes": 1033,
+          "reply_body_bytes": 1360,
+          "attempt": 0
+        },
+        "COMMIT_REPLAY": {
+          "request_body_bytes": 1032,
+          "reply_body_bytes": 1359,
+          "attempt": 0
+        }
+      },
+      "winning_body_bytes": 9250
+    },
+    {
+      "task_id": "cost-0018",
+      "status": "COMMITTED",
+      "confirmation_complete": true,
+      "release_to_terminal_ns": 315691700,
+      "protocol_elapsed_ns": 308600200,
+      "release_to_return_ns": 315718400,
+      "release_ns": 187616631347400,
+      "declared_deadline_met": true,
+      "initialization_ns": 7050400,
+      "request_sends": 6,
+      "reply_egresses": 6,
+      "all_attempt_body_bytes": 14032,
+      "peer_observed_body_bytes": 14032,
+      "winning_exchanges": {
+        "INTENT_INITIAL": {
+          "request_body_bytes": 937,
+          "reply_body_bytes": 1297,
+          "attempt": 0
+        },
+        "INTENT_REPLAY": {
+          "request_body_bytes": 936,
+          "reply_body_bytes": 1296,
+          "attempt": 0
+        },
+        "COMMIT_INITIAL": {
+          "request_body_bytes": 1033,
+          "reply_body_bytes": 1360,
+          "attempt": 0
+        },
+        "COMMIT_REPLAY": {
+          "request_body_bytes": 1032,
+          "reply_body_bytes": 1359,
+          "attempt": 1
+        }
+      },
+      "winning_body_bytes": 9250
+    },
+    {
+      "task_id": "cost-0019",
+      "status": "COMMITTED",
+      "confirmation_complete": true,
+      "release_to_terminal_ns": 189437800,
+      "protocol_elapsed_ns": 173333000,
+      "release_to_return_ns": 189496100,
+      "release_ns": 187616948783500,
+      "declared_deadline_met": true,
+      "initialization_ns": 16055500,
+      "request_sends": 4,
+      "reply_egresses": 4,
+      "all_attempt_body_bytes": 9250,
+      "peer_observed_body_bytes": 9250,
+      "winning_exchanges": {
+        "INTENT_INITIAL": {
+          "request_body_bytes": 937,
+          "reply_body_bytes": 1297,
+          "attempt": 0
+        },
+        "INTENT_REPLAY": {
+          "request_body_bytes": 936,
+          "reply_body_bytes": 1296,
+          "attempt": 0
+        },
+        "COMMIT_INITIAL": {
+          "request_body_bytes": 1033,
+          "reply_body_bytes": 1360,
+          "attempt": 0
+        },
+        "COMMIT_REPLAY": {
+          "request_body_bytes": 1032,
+          "reply_body_bytes": 1359,
+          "attempt": 0
+        }
+      },
+      "winning_body_bytes": 9250
+    },
+    {
+      "task_id": "cost-0020",
+      "status": "COMMITTED",
+      "confirmation_complete": true,
+      "release_to_terminal_ns": 174521800,
+      "protocol_elapsed_ns": 168563400,
+      "release_to_return_ns": 174545100,
+      "release_ns": 187617139022100,
+      "declared_deadline_met": true,
+      "initialization_ns": 5934500,
+      "request_sends": 4,
+      "reply_egresses": 4,
+      "all_attempt_body_bytes": 9250,
+      "peer_observed_body_bytes": 9250,
+      "winning_exchanges": {
+        "INTENT_INITIAL": {
+          "request_body_bytes": 937,
+          "reply_body_bytes": 1297,
+          "attempt": 0
+        },
+        "INTENT_REPLAY": {
+          "request_body_bytes": 936,
+          "reply_body_bytes": 1296,
+          "attempt": 0
+        },
+        "COMMIT_INITIAL": {
+          "request_body_bytes": 1033,
+          "reply_body_bytes": 1360,
+          "attempt": 0
+        },
+        "COMMIT_REPLAY": {
+          "request_body_bytes": 1032,
+          "reply_body_bytes": 1359,
+          "attempt": 0
+        }
+      },
+      "winning_body_bytes": 9250
+    },
+    {
+      "task_id": "cost-0021",
+      "status": "COMMITTED",
+      "confirmation_complete": true,
+      "release_to_terminal_ns": 324778500,
+      "protocol_elapsed_ns": 313271700,
+      "release_to_return_ns": 324818000,
+      "release_ns": 187617313875100,
+      "declared_deadline_met": true,
+      "initialization_ns": 11451600,
+      "request_sends": 5,
+      "reply_egresses": 5,
+      "all_attempt_body_bytes": 11643,
+      "peer_observed_body_bytes": 11643,
+      "winning_exchanges": {
+        "INTENT_INITIAL": {
+          "request_body_bytes": 937,
+          "reply_body_bytes": 1297,
+          "attempt": 0
+        },
+        "INTENT_REPLAY": {
+          "request_body_bytes": 936,
+          "reply_body_bytes": 1296,
+          "attempt": 0
+        },
+        "COMMIT_INITIAL": {
+          "request_body_bytes": 1033,
+          "reply_body_bytes": 1360,
+          "attempt": 0
+        },
+        "COMMIT_REPLAY": {
+          "request_body_bytes": 1032,
+          "reply_body_bytes": 1359,
+          "attempt": 0
+        }
+      },
+      "winning_body_bytes": 9250
+    },
+    {
+      "task_id": "cost-0022",
+      "status": "COMMITTED",
+      "confirmation_complete": true,
+      "release_to_terminal_ns": 113432100,
+      "protocol_elapsed_ns": 107342700,
+      "release_to_return_ns": 113445200,
+      "release_ns": 187617639460900,
+      "declared_deadline_met": true,
+      "initialization_ns": 6061800,
+      "request_sends": 4,
+      "reply_egresses": 4,
+      "all_attempt_body_bytes": 9250,
+      "peer_observed_body_bytes": 9250,
+      "winning_exchanges": {
+        "INTENT_INITIAL": {
+          "request_body_bytes": 937,
+          "reply_body_bytes": 1297,
+          "attempt": 0
+        },
+        "INTENT_REPLAY": {
+          "request_body_bytes": 936,
+          "reply_body_bytes": 1296,
+          "attempt": 0
+        },
+        "COMMIT_INITIAL": {
+          "request_body_bytes": 1033,
+          "reply_body_bytes": 1360,
+          "attempt": 0
+        },
+        "COMMIT_REPLAY": {
+          "request_body_bytes": 1032,
+          "reply_body_bytes": 1359,
+          "attempt": 0
+        }
+      },
+      "winning_body_bytes": 9250
+    },
+    {
+      "task_id": "cost-0023",
+      "status": "COMMITTED",
+      "confirmation_complete": true,
+      "release_to_terminal_ns": 168346200,
+      "protocol_elapsed_ns": 163096200,
+      "release_to_return_ns": 168368200,
+      "release_ns": 187617753064200,
+      "declared_deadline_met": true,
+      "initialization_ns": 5221700,
+      "request_sends": 5,
+      "reply_egresses": 5,
+      "all_attempt_body_bytes": 11482,
+      "peer_observed_body_bytes": 11482,
+      "winning_exchanges": {
+        "INTENT_INITIAL": {
+          "request_body_bytes": 937,
+          "reply_body_bytes": 1297,
+          "attempt": 0
+        },
+        "INTENT_REPLAY": {
+          "request_body_bytes": 936,
+          "reply_body_bytes": 1296,
+          "attempt": 0
+        },
+        "COMMIT_INITIAL": {
+          "request_body_bytes": 1033,
+          "reply_body_bytes": 1360,
+          "attempt": 0
+        },
+        "COMMIT_REPLAY": {
+          "request_body_bytes": 1032,
+          "reply_body_bytes": 1359,
+          "attempt": 0
+        }
+      },
+      "winning_body_bytes": 9250
+    }
+  ],
+  "attempts": [
+    {
+      "task_id": "cost-0000",
+      "phase": "INTENT_INITIAL",
+      "attempt": 0,
+      "request_sha256": "3220a60727fab4f7cc18d0ac4f7947e25566064dae60d1384e489e3d19046eb6",
+      "request_submission_body_bytes": 937,
+      "request_edge_ingress_body_bytes": 937,
+      "reply_body_bytes": 1297,
+      "reply_sha256": "fab38c47094fd9fd292542a18b06c03c7595e9de875ab3749e0df6e580b6d979",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0000",
+      "phase": "INTENT_INITIAL",
+      "attempt": 1,
+      "request_sha256": "dc3c64a9d53ff22d9c7470d4fdaf8df2dc86be4367a23d8d182f6fcd038502a0",
+      "request_submission_body_bytes": 937,
+      "request_edge_ingress_body_bytes": 937,
+      "reply_body_bytes": 1297,
+      "reply_sha256": "053dfa8b050faec07b97640a85b2062a0e84b8034aef36882c70484378f3ad50",
+      "won_phase": false
+    },
+    {
+      "task_id": "cost-0000",
+      "phase": "INTENT_REPLAY",
+      "attempt": 0,
+      "request_sha256": "3b08d642d59d8e9698fdb33f390966315bfb437d3db1c86978227b27bb86fa1f",
+      "request_submission_body_bytes": 936,
+      "request_edge_ingress_body_bytes": 936,
+      "reply_body_bytes": 1296,
+      "reply_sha256": "063c812f292f5d5397a682aac2657efc9556f1883b37b927524d15bb44e89139",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0000",
+      "phase": "INTENT_REPLAY",
+      "attempt": 1,
+      "request_sha256": "e0c781b0fbe7bea841fb400360a10befd3234f513521d1237d1c4b6da1f54b73",
+      "request_submission_body_bytes": 936,
+      "request_edge_ingress_body_bytes": 936,
+      "reply_body_bytes": 1296,
+      "reply_sha256": "dd24e77fe7bcf091a7fc8222b1e6b391571a8f1d96bee0f6a756071ccb0a6d5c",
+      "won_phase": false
+    },
+    {
+      "task_id": "cost-0000",
+      "phase": "INTENT_REPLAY",
+      "attempt": 2,
+      "request_sha256": "070ca7f004e013649a66394a929e7e3c464f6579420f78c607b186afd046f665",
+      "request_submission_body_bytes": 936,
+      "request_edge_ingress_body_bytes": 936,
+      "reply_body_bytes": 1296,
+      "reply_sha256": "ea3225385fdd378ac344d7de24fd3627fe234e942a80306c9ef47b6058fd656d",
+      "won_phase": false
+    },
+    {
+      "task_id": "cost-0000",
+      "phase": "INTENT_REPLAY",
+      "attempt": 3,
+      "request_sha256": "171734f063276b62d62cd73a932c13e3caa72a7fae1b92ad0ba78e74a5b70ae6",
+      "request_submission_body_bytes": 936,
+      "request_edge_ingress_body_bytes": 936,
+      "reply_body_bytes": 1296,
+      "reply_sha256": "0a8cf05d1b5a7acd715e9a36cd8fd7553cc0a2cb14200b255a60c9d658af5031",
+      "won_phase": false
+    },
+    {
+      "task_id": "cost-0000",
+      "phase": "COMMIT_INITIAL",
+      "attempt": 0,
+      "request_sha256": "5a66026af24bf943d82c25e36d3281eff947c1fc78c3fcf38f98098ab5890bf7",
+      "request_submission_body_bytes": 1033,
+      "request_edge_ingress_body_bytes": 1033,
+      "reply_body_bytes": 1360,
+      "reply_sha256": "82db07f0700dcdbde53a1fd5b3030170969409c217667d2d23cbca7f5d3dd4ad",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0000",
+      "phase": "COMMIT_INITIAL",
+      "attempt": 1,
+      "request_sha256": "374bdd3a9a55401d8070fc403a3162714bb9ccdcf5383781867a07dbe33db71e",
+      "request_submission_body_bytes": 1033,
+      "request_edge_ingress_body_bytes": 1033,
+      "reply_body_bytes": 1360,
+      "reply_sha256": "cea9e1efaf3cc33a7a904f2a54be4f0265232dde0bcacdb39e482e12f3bb0989",
+      "won_phase": false
+    },
+    {
+      "task_id": "cost-0000",
+      "phase": "COMMIT_REPLAY",
+      "attempt": 0,
+      "request_sha256": "04068053e3bd8975ddd7d4e524b16589b9d9f44fbe4bebcba45401e90e03a367",
+      "request_submission_body_bytes": 1032,
+      "request_edge_ingress_body_bytes": 1032,
+      "reply_body_bytes": 1359,
+      "reply_sha256": "d9808d86e3e5c0648f97e5df0b69044b383c9ae6c8e059d31abf385e346a2349",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0001",
+      "phase": "INTENT_INITIAL",
+      "attempt": 0,
+      "request_sha256": "c78795d0001c444610871e2c960c2adec4659df25e5c65559448b6805cc79944",
+      "request_submission_body_bytes": 937,
+      "request_edge_ingress_body_bytes": 937,
+      "reply_body_bytes": 1297,
+      "reply_sha256": "ac64445ca15269b3ce6b0c9f97b43f376b5f70e8f452e43176d7ec195d6a1518",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0001",
+      "phase": "INTENT_REPLAY",
+      "attempt": 0,
+      "request_sha256": "6d7e49983d23c719f28bc60f20d4f91c6837f524460d3e68fc1ee1aec24b55cf",
+      "request_submission_body_bytes": 936,
+      "request_edge_ingress_body_bytes": 936,
+      "reply_body_bytes": 1296,
+      "reply_sha256": "bba5e575e695bc2b0578e7b4aa761fcb9d278f8aff3f0c72ed92e20955214850",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0001",
+      "phase": "COMMIT_INITIAL",
+      "attempt": 0,
+      "request_sha256": "5e024325635d24e6a9b4e03ad4015e1237139e00a02ff4fec23b28e17eab90f7",
+      "request_submission_body_bytes": 1033,
+      "request_edge_ingress_body_bytes": 1033,
+      "reply_body_bytes": 1360,
+      "reply_sha256": "91593658aec51a81194ab034b5517898feb4f1bb286186175182cfe2ae8eee94",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0001",
+      "phase": "COMMIT_REPLAY",
+      "attempt": 0,
+      "request_sha256": "4542de453b3d93e7e066619f547fb4dfddbd132326d57c95d1b67ba6b7261f07",
+      "request_submission_body_bytes": 1032,
+      "request_edge_ingress_body_bytes": 1032,
+      "reply_body_bytes": 1359,
+      "reply_sha256": "fe7ea2294be6d20ea0cb5c6c8a459789660fa24162399eadd42055a7a2ae338f",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0002",
+      "phase": "INTENT_INITIAL",
+      "attempt": 0,
+      "request_sha256": "0bbfd16632a7c269e4c63338c198be8f0f4829479e098db9d7150c6212764a53",
+      "request_submission_body_bytes": 937,
+      "request_edge_ingress_body_bytes": 937,
+      "reply_body_bytes": 1297,
+      "reply_sha256": "cd7a5ebf46315905a038e4ecc49d565782f6347b5359b360fff4e583ae8897b5",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0002",
+      "phase": "INTENT_REPLAY",
+      "attempt": 0,
+      "request_sha256": "79548024372ebdd571b865a15a74c8bf87fc8daa3c041ad23f54c86eca54ec18",
+      "request_submission_body_bytes": 936,
+      "request_edge_ingress_body_bytes": 936,
+      "reply_body_bytes": 1296,
+      "reply_sha256": "204e7eaf466fb7ae55a11fe08c6f6bf1921acff5130816e58ad7c409da19c6e0",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0002",
+      "phase": "COMMIT_INITIAL",
+      "attempt": 0,
+      "request_sha256": "ef8f2dfe0dfb4d4f96e532641cac95032be5ca1cbcc0b180dc92011ba8eba2b8",
+      "request_submission_body_bytes": 1033,
+      "request_edge_ingress_body_bytes": 1033,
+      "reply_body_bytes": 1360,
+      "reply_sha256": "4059a1633f69ae3aa50e3be3c3db6f177a9dd01042c2a488191ce1795c4f2256",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0002",
+      "phase": "COMMIT_REPLAY",
+      "attempt": 0,
+      "request_sha256": "51917e0a1dbdb75085b7206dcc4597b1d9925fe4fe3065baa5a786bd186fcd91",
+      "request_submission_body_bytes": 1032,
+      "request_edge_ingress_body_bytes": 1032,
+      "reply_body_bytes": 1359,
+      "reply_sha256": "69682b99d46205a66a359c954bfe1176d517199ff162556ca92cea61635fe14d",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0003",
+      "phase": "INTENT_INITIAL",
+      "attempt": 0,
+      "request_sha256": "936d034c1a83d3e57b992cda63d348d012a0541b8dcfbd88bbb94958307a6762",
+      "request_submission_body_bytes": 937,
+      "request_edge_ingress_body_bytes": 937,
+      "reply_body_bytes": 1297,
+      "reply_sha256": "7826b41d6dd9b3e67d08b1830b4f163a846a1a7e57a0de4fbf6a4ee3e2067aae",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0003",
+      "phase": "INTENT_REPLAY",
+      "attempt": 0,
+      "request_sha256": "b29927d146dc49140a1f7dcaefcf07db5ac353be16f5db6531ebb17937d56484",
+      "request_submission_body_bytes": 936,
+      "request_edge_ingress_body_bytes": 936,
+      "reply_body_bytes": 1296,
+      "reply_sha256": "4fe0fe1c25ee939413c2dc88d41180870ac00212f53b4d7371145b241813aa68",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0003",
+      "phase": "COMMIT_INITIAL",
+      "attempt": 0,
+      "request_sha256": "e76ae96888ad086ca439b6ee91fcfe5adca3ad60556f4612a989fb04360a0e16",
+      "request_submission_body_bytes": 1033,
+      "request_edge_ingress_body_bytes": 1033,
+      "reply_body_bytes": 1360,
+      "reply_sha256": "134e9dc76b38954b2a81596ef0bdf2e6ff0c2a674f297de36a7b945bf3267494",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0003",
+      "phase": "COMMIT_REPLAY",
+      "attempt": 0,
+      "request_sha256": "cd4278ea78e773eade103abe6c2a89b2ce1055d46309f118525108fb8e4cfa71",
+      "request_submission_body_bytes": 1032,
+      "request_edge_ingress_body_bytes": 1032,
+      "reply_body_bytes": 1359,
+      "reply_sha256": "deab8fde2513f4dc8bd99bf51e61a969051733e4db3ea6b73b9cadf1af9fc9b7",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0004",
+      "phase": "INTENT_INITIAL",
+      "attempt": 0,
+      "request_sha256": "910f7328d8ce4bff8c35cc92a68a8e97c1878290d9f4b985f1e8157095f8099c",
+      "request_submission_body_bytes": 937,
+      "request_edge_ingress_body_bytes": 937,
+      "reply_body_bytes": 1297,
+      "reply_sha256": "648300c1e12926c8a4be9daf6133a872cec61bcce9e720cf87b93bb4081c48a6",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0004",
+      "phase": "INTENT_REPLAY",
+      "attempt": 0,
+      "request_sha256": "7c0e64ae022c34de480e0ab15c72f1fa7fe143f4e902aadd087ca71d80a391ed",
+      "request_submission_body_bytes": 936,
+      "request_edge_ingress_body_bytes": 936,
+      "reply_body_bytes": 1296,
+      "reply_sha256": "be51f932821e33435e8dc8625b0b28dc55f080b124dcbc09b683e1c3d650488d",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0004",
+      "phase": "COMMIT_INITIAL",
+      "attempt": 0,
+      "request_sha256": "ba536b9ba98823625c93cbeaa5bad445b6690365ee50ccd62e37776aff99b408",
+      "request_submission_body_bytes": 1033,
+      "request_edge_ingress_body_bytes": 1033,
+      "reply_body_bytes": 1360,
+      "reply_sha256": "dc3c128af2d8c8d186543da40c126db600e94c60b38fe3f0e7e99c17f9e99fe2",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0004",
+      "phase": "COMMIT_REPLAY",
+      "attempt": 0,
+      "request_sha256": "d4729e464e9aeb80fe0a81af77159975a8e6f49133b4e92b3ac85483214f9fb1",
+      "request_submission_body_bytes": 1032,
+      "request_edge_ingress_body_bytes": 1032,
+      "reply_body_bytes": 1359,
+      "reply_sha256": "577001a5a8de4d447bbfe1111840e142bc2006e4ccb0d4a8c189b4f4391d47b3",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0005",
+      "phase": "INTENT_INITIAL",
+      "attempt": 0,
+      "request_sha256": "5c7ae9c2ee2bee0cb72458430dbc3fdc40bd54a48da95bf80430371a04fdd681",
+      "request_submission_body_bytes": 937,
+      "request_edge_ingress_body_bytes": 937,
+      "reply_body_bytes": 1297,
+      "reply_sha256": "995a8d4d4c96ae6290eb22413745cefa41c7d2e7adb3d9c71f6bd38dbd8f15a5",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0005",
+      "phase": "INTENT_REPLAY",
+      "attempt": 0,
+      "request_sha256": "1c14a89796aa4f1ef0859b1fb000fc71c1c2c3f4156fe38444e5df909262b4ee",
+      "request_submission_body_bytes": 936,
+      "request_edge_ingress_body_bytes": 936,
+      "reply_body_bytes": 1296,
+      "reply_sha256": "b13acb90dded2c32cebe93dc9ecddcc946936a52037f7853d13cc7a5c13b643f",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0005",
+      "phase": "COMMIT_INITIAL",
+      "attempt": 0,
+      "request_sha256": "9321b0f1ce3f6716a3320c3de68e61857389d747e7a6759d90487eca3ac5b3a9",
+      "request_submission_body_bytes": 1033,
+      "request_edge_ingress_body_bytes": 1033,
+      "reply_body_bytes": 1360,
+      "reply_sha256": "a16f7c097f6f04bebd9c528bb7645004d1114082fa987ed9efc0378631e6d269",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0005",
+      "phase": "COMMIT_REPLAY",
+      "attempt": 0,
+      "request_sha256": "b8699559746bead2bbe7fda8c635f9472365debfb9e66ce1fc838b5765abe33c",
+      "request_submission_body_bytes": 1032,
+      "request_edge_ingress_body_bytes": 1032,
+      "reply_body_bytes": 1359,
+      "reply_sha256": "379c4e11c46e2af07bdddcf2a741bb8258e62e464223702a69056c0c515346b1",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0006",
+      "phase": "INTENT_INITIAL",
+      "attempt": 0,
+      "request_sha256": "9099832c52ae61870be41a3de4366803be7aafc833b3cedaae6e89a38f2c08a8",
+      "request_submission_body_bytes": 937,
+      "request_edge_ingress_body_bytes": 937,
+      "reply_body_bytes": 1297,
+      "reply_sha256": "7f5f41e2a99aca1de3c15885ead4c8b10701865e6be150b085beace01364eef9",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0006",
+      "phase": "INTENT_REPLAY",
+      "attempt": 0,
+      "request_sha256": "94b43578dc099aaba3490414b97e27d94a5dd2ab0a352e2ec91fd75d07d8f194",
+      "request_submission_body_bytes": 936,
+      "request_edge_ingress_body_bytes": 936,
+      "reply_body_bytes": 1296,
+      "reply_sha256": "2729a2ff3d7719a8f156d52b9c6215aa73508455ad97fd8a83ab2ec78d1c6d2a",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0006",
+      "phase": "COMMIT_INITIAL",
+      "attempt": 0,
+      "request_sha256": "99a38cb884d1aa06e5cfe8400a280d5932ed6e2c70e930a73ac7dfc1abd256d9",
+      "request_submission_body_bytes": 1033,
+      "request_edge_ingress_body_bytes": 1033,
+      "reply_body_bytes": 1360,
+      "reply_sha256": "38232e94e0bfc0ff6702cebefd1ed37b0347d6f8760a1c6bb073313453e997f2",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0006",
+      "phase": "COMMIT_REPLAY",
+      "attempt": 0,
+      "request_sha256": "5d2d98ab6dd2ce8ca550c84f749fcd0e6712d9d109fe47d83a943f326b793133",
+      "request_submission_body_bytes": 1032,
+      "request_edge_ingress_body_bytes": 1032,
+      "reply_body_bytes": 1359,
+      "reply_sha256": "0e8a0c8982e294e94498ca5ab23a46ca755bf28976d6a2599ef48118bae4094e",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0007",
+      "phase": "INTENT_INITIAL",
+      "attempt": 0,
+      "request_sha256": "c96540ed45bc7240d0930482cadaaaaf5575262c1a7506fcc81ac9d1af490633",
+      "request_submission_body_bytes": 937,
+      "request_edge_ingress_body_bytes": 937,
+      "reply_body_bytes": 1297,
+      "reply_sha256": "ccc8e5fad8a3d580db23c838e7f6de0322a35e06972fb7867404f7cb58d1dd52",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0007",
+      "phase": "INTENT_REPLAY",
+      "attempt": 0,
+      "request_sha256": "6b53de358bbe722e8232af12082ef159044c1d9c8c63ff0a5f9e3c7e7ab89b83",
+      "request_submission_body_bytes": 936,
+      "request_edge_ingress_body_bytes": 936,
+      "reply_body_bytes": 1296,
+      "reply_sha256": "01b3aef746fcbc1fa5b28dc39fe24a3836e6a7474c2bfd9309f06d62c6c300c2",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0007",
+      "phase": "COMMIT_INITIAL",
+      "attempt": 0,
+      "request_sha256": "7b8cbbfead6efa13b4f5e6e23dd6554c120e290cefadbb3b00c08df1f1f442a1",
+      "request_submission_body_bytes": 1033,
+      "request_edge_ingress_body_bytes": 1033,
+      "reply_body_bytes": 1360,
+      "reply_sha256": "6402399db95fccbedb73454018e534dd848883fdf410f64b2f6325b6966ad04f",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0007",
+      "phase": "COMMIT_REPLAY",
+      "attempt": 0,
+      "request_sha256": "d1d2fdfa9004e14ec5d4f49a660ba658d7c22b783385d76bfd0e563bc5c68438",
+      "request_submission_body_bytes": 1032,
+      "request_edge_ingress_body_bytes": 1032,
+      "reply_body_bytes": 1359,
+      "reply_sha256": "2eeb4f61619ddc1d9730f3540b722e0102f05e13bde1c2abf61cd505db8a1567",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0008",
+      "phase": "INTENT_INITIAL",
+      "attempt": 0,
+      "request_sha256": "82523aa7ad55bfc3d72f2ff32746f71215e6968df85a9d5e2476124e5e4265bc",
+      "request_submission_body_bytes": 937,
+      "request_edge_ingress_body_bytes": 937,
+      "reply_body_bytes": 1297,
+      "reply_sha256": "2fda6730425daaafc9a32e3881979918dad2dca3acbd86abb90aa9f58e5902a7",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0008",
+      "phase": "INTENT_REPLAY",
+      "attempt": 0,
+      "request_sha256": "a6a4cb8e944fe8e2c8462844aa4a46c3455b84d502d866bb849087391a028f91",
+      "request_submission_body_bytes": 936,
+      "request_edge_ingress_body_bytes": 936,
+      "reply_body_bytes": 1296,
+      "reply_sha256": "91ce4e20d444423292fd02c8536ff0f473df149c8ad6ee2128ec3d4d5bcd5444",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0008",
+      "phase": "COMMIT_INITIAL",
+      "attempt": 0,
+      "request_sha256": "23f1d546169fe18e4edf7c2ca7e371b0bc43aafd40a79020ca0ce14ea69555f8",
+      "request_submission_body_bytes": 1033,
+      "request_edge_ingress_body_bytes": 1033,
+      "reply_body_bytes": 1360,
+      "reply_sha256": "9c658ce3e547decad2cbeebe81b9d90302f0d007c7f27f7ec9a82ff1ac348ec0",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0008",
+      "phase": "COMMIT_REPLAY",
+      "attempt": 0,
+      "request_sha256": "0c56134ee84c5ed1cd0689ed8430e5d00868c8d7366ef5b6ba7e4e0a1fa7798c",
+      "request_submission_body_bytes": 1032,
+      "request_edge_ingress_body_bytes": 1032,
+      "reply_body_bytes": 1359,
+      "reply_sha256": "cdfd02542e6b9f63efab7781bcf93b7ba27ea08ea24189b3418e45be130327a4",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0009",
+      "phase": "INTENT_INITIAL",
+      "attempt": 0,
+      "request_sha256": "d8c0f2465b463bb0d18ca5c82117590d1af52ca147fae4535467db10dc4cf96a",
+      "request_submission_body_bytes": 937,
+      "request_edge_ingress_body_bytes": 937,
+      "reply_body_bytes": 1297,
+      "reply_sha256": "1f6e8e7e5dbe40e46001eb94a5793c1252aa20306ef9673bb2f634b8164d7eca",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0009",
+      "phase": "INTENT_REPLAY",
+      "attempt": 0,
+      "request_sha256": "9601b6be21c25a57a8cd11a253ed5546f17ea1f5321cb18aa480743b93e4d3f0",
+      "request_submission_body_bytes": 936,
+      "request_edge_ingress_body_bytes": 936,
+      "reply_body_bytes": 1296,
+      "reply_sha256": "94d52fbc916c1763a8f9dcae9738d7212a620fb452d157e1400b3ee9c570e2c8",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0009",
+      "phase": "COMMIT_INITIAL",
+      "attempt": 0,
+      "request_sha256": "134265ff1f09583e95828495942947f224c492e00f6c9be11da36c71886d90f2",
+      "request_submission_body_bytes": 1033,
+      "request_edge_ingress_body_bytes": 1033,
+      "reply_body_bytes": 1360,
+      "reply_sha256": "f2fdb2c73a37d2cb44e389606fe2bc5b9e79810b9130a832b658a0dc6a87959d",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0009",
+      "phase": "COMMIT_REPLAY",
+      "attempt": 0,
+      "request_sha256": "7189d63c78259538f0e1b077faa5c4f2da5a65f5cddf6e0bfa6caf6dd1e7d916",
+      "request_submission_body_bytes": 1032,
+      "request_edge_ingress_body_bytes": 1032,
+      "reply_body_bytes": 1359,
+      "reply_sha256": "aa31b8657c1210222736d74353acdefe957897fbe26c6c3243f6590bbc6e3e3a",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0010",
+      "phase": "INTENT_INITIAL",
+      "attempt": 0,
+      "request_sha256": "255cec55b618015d4b3da3b76fb4d5f599d61e6989dc711a0d29bcc655e25b03",
+      "request_submission_body_bytes": 937,
+      "request_edge_ingress_body_bytes": 937,
+      "reply_body_bytes": 1297,
+      "reply_sha256": "0bb8392426c3538e9d82b35dc4a1b6fcc6df23dd47b54e22dc1fa219aa1507ec",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0010",
+      "phase": "INTENT_REPLAY",
+      "attempt": 0,
+      "request_sha256": "1951fcafd8ca9b05d4e7f4d132aa092dcc9c6eb4acba6c487b4a7303e16bd3cb",
+      "request_submission_body_bytes": 936,
+      "request_edge_ingress_body_bytes": 936,
+      "reply_body_bytes": 1296,
+      "reply_sha256": "1b9bda5db38ab3aea1cf24f7ebe4b9692456cb6935d82003f425de73f4e37bb0",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0010",
+      "phase": "INTENT_REPLAY",
+      "attempt": 1,
+      "request_sha256": "1775f1aa35be6d3bb941f2bc27f8c2d97dfaa39fad8c96d5e868d139054168a5",
+      "request_submission_body_bytes": 936,
+      "request_edge_ingress_body_bytes": 936,
+      "reply_body_bytes": 1296,
+      "reply_sha256": "52e8048317b9540ee4c8ce345b8dd376e29c2357a019e9dfd8c704ffbb0fb7e2",
+      "won_phase": false
+    },
+    {
+      "task_id": "cost-0010",
+      "phase": "COMMIT_INITIAL",
+      "attempt": 0,
+      "request_sha256": "3cc63e598791c836ba5d066ec3813a49f7057ca16d8659f12afcb4cbe8850c2e",
+      "request_submission_body_bytes": 1033,
+      "request_edge_ingress_body_bytes": 1033,
+      "reply_body_bytes": 1360,
+      "reply_sha256": "dca54466be1d1fdd2165e47017338c2ffdf241d07b3f37d8adc1f47c608f7b69",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0010",
+      "phase": "COMMIT_INITIAL",
+      "attempt": 1,
+      "request_sha256": "b75415589168de7c9f4e6ae6fd300245dc0fa4a5fb2debac36252d89e9534775",
+      "request_submission_body_bytes": 1033,
+      "request_edge_ingress_body_bytes": 1033,
+      "reply_body_bytes": 1360,
+      "reply_sha256": "4a020e2abb776de3f4b6be0549556cabe76e20751fea557a091732dbb3871246",
+      "won_phase": false
+    },
+    {
+      "task_id": "cost-0010",
+      "phase": "COMMIT_INITIAL",
+      "attempt": 2,
+      "request_sha256": "4cc493b1201151f4114d3398d2df8e6429d23b13fd50e57f459b7c6d863ef45e",
+      "request_submission_body_bytes": 1033,
+      "request_edge_ingress_body_bytes": 1033,
+      "reply_body_bytes": 1360,
+      "reply_sha256": "52f1535f5704ad87a945477490b349f78a21370924c0ac26818935dda6fce91e",
+      "won_phase": false
+    },
+    {
+      "task_id": "cost-0010",
+      "phase": "COMMIT_REPLAY",
+      "attempt": 0,
+      "request_sha256": "062ea5ecc1f5f11ea54d30d08b3e1b3ff54375f4a2125f9966cc744829920ce9",
+      "request_submission_body_bytes": 1032,
+      "request_edge_ingress_body_bytes": 1032,
+      "reply_body_bytes": 1359,
+      "reply_sha256": "63bb3a2e874695501727fa20828d074e7162bcc277a7061db994093fe997bba6",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0010",
+      "phase": "COMMIT_REPLAY",
+      "attempt": 1,
+      "request_sha256": "e82af1d5099c6a01405811a36a67fceb4bdac7aeaaf560866485d62456288417",
+      "request_submission_body_bytes": 1032,
+      "request_edge_ingress_body_bytes": 1032,
+      "reply_body_bytes": 1359,
+      "reply_sha256": "8bf4bf3696a2e88e0dc1de8aafdc34b82782bb975097cef189b52eb35281f5df",
+      "won_phase": false
+    },
+    {
+      "task_id": "cost-0010",
+      "phase": "COMMIT_REPLAY",
+      "attempt": 2,
+      "request_sha256": "505959efca7218bb4bcf41c082df48db314a8b1ac79fa4dc2cae0d6c1bb23c3f",
+      "request_submission_body_bytes": 1032,
+      "request_edge_ingress_body_bytes": 1032,
+      "reply_body_bytes": 1359,
+      "reply_sha256": "986af310381a44d9b13a1cb5657eb7660fe714d6168f0d0c23adcf5dd69b1ed1",
+      "won_phase": false
+    },
+    {
+      "task_id": "cost-0011",
+      "phase": "INTENT_INITIAL",
+      "attempt": 0,
+      "request_sha256": "34840e19f9ebada298a82904150a1fa41d5e5351f367572dc9a7894d8b199346",
+      "request_submission_body_bytes": 937,
+      "request_edge_ingress_body_bytes": 937,
+      "reply_body_bytes": 1297,
+      "reply_sha256": "af410335426303dcb76be58426c211717e3b5c261e2cd544472cdaae008c0243",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0011",
+      "phase": "INTENT_INITIAL",
+      "attempt": 1,
+      "request_sha256": "207e52282b5ce5cb93fed84a19df05b2e4f852e508b1b854cbd56afcfb79934e",
+      "request_submission_body_bytes": 937,
+      "request_edge_ingress_body_bytes": 937,
+      "reply_body_bytes": 1297,
+      "reply_sha256": "83f8123b813c99462806e2199586109630ea7485d5edbd48dab1de5d89c5dcb1",
+      "won_phase": false
+    },
+    {
+      "task_id": "cost-0011",
+      "phase": "INTENT_REPLAY",
+      "attempt": 0,
+      "request_sha256": "2f75e5622954d72ffd9ed3b78e526a901d86f8f96e7dabb435ebf01ed2dd7bc4",
+      "request_submission_body_bytes": 936,
+      "request_edge_ingress_body_bytes": 936,
+      "reply_body_bytes": 1296,
+      "reply_sha256": "3bb517ac71a0e1b2ccf86f5dc830f4fe7fef10ab1791eb3e431d49da7366ed6c",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0011",
+      "phase": "COMMIT_INITIAL",
+      "attempt": 0,
+      "request_sha256": "b041aa2d451054a242657e0c1cc92a5c363cae4de6ad8100e482e19e93e4ef97",
+      "request_submission_body_bytes": 1033,
+      "request_edge_ingress_body_bytes": 1033,
+      "reply_body_bytes": 1360,
+      "reply_sha256": "e6522081f97589d8537c949707d71dca0cd293886446bf5d0e224ce06aa4bf70",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0011",
+      "phase": "COMMIT_INITIAL",
+      "attempt": 1,
+      "request_sha256": "469ac22b00446f3350fafe32350aa27d0e3e2e73cbd8e5af6d3f166ff2310891",
+      "request_submission_body_bytes": 1033,
+      "request_edge_ingress_body_bytes": 1033,
+      "reply_body_bytes": 1360,
+      "reply_sha256": "15609635df62816d5fefd816d474fe1753d8d6628b2d6b40512173c3e8a976aa",
+      "won_phase": false
+    },
+    {
+      "task_id": "cost-0011",
+      "phase": "COMMIT_INITIAL",
+      "attempt": 2,
+      "request_sha256": "eb1b8b73b5996135cdbe5dcafbccc6a31ea89f9c495b5aa96c86bfab09f05fde",
+      "request_submission_body_bytes": 1033,
+      "request_edge_ingress_body_bytes": 1033,
+      "reply_body_bytes": 1360,
+      "reply_sha256": "c5d7f4a3d949b307e4d93acd613846c7f2739d6fc0fb45a4b6592a9b3fb99e6f",
+      "won_phase": false
+    },
+    {
+      "task_id": "cost-0011",
+      "phase": "COMMIT_REPLAY",
+      "attempt": 0,
+      "request_sha256": "4d76447da05fe73e82c388b21dec1113ceb950fcce9ac95a87c78daf36073fca",
+      "request_submission_body_bytes": 1032,
+      "request_edge_ingress_body_bytes": 1032,
+      "reply_body_bytes": 1359,
+      "reply_sha256": "3aa2c27a2562be8e6976d237700e7ada2050cbb0e2a5d8a4fb4cf8c79de6d81a",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0011",
+      "phase": "COMMIT_REPLAY",
+      "attempt": 1,
+      "request_sha256": "55e34ac8efcbe71a0720d3f335b5cc7a122fb5803abc28cc65c9439856a22273",
+      "request_submission_body_bytes": 1032,
+      "request_edge_ingress_body_bytes": 1032,
+      "reply_body_bytes": 1359,
+      "reply_sha256": "1bac865d3811cc7c3796ae4b1c90a8a58529337543a3bb3a4aaa89a42d1e8eff",
+      "won_phase": false
+    },
+    {
+      "task_id": "cost-0011",
+      "phase": "COMMIT_REPLAY",
+      "attempt": 2,
+      "request_sha256": "7a5a1ca2fcccd5bb0c4e2b4630946d96d9d4f77e9c6a0eccc1de7f88335db887",
+      "request_submission_body_bytes": 1032,
+      "request_edge_ingress_body_bytes": 1032,
+      "reply_body_bytes": 1359,
+      "reply_sha256": "718918802fe9540021679727b075e89b926d095a1dd0d1dfa265743b15f95bb9",
+      "won_phase": false
+    },
+    {
+      "task_id": "cost-0011",
+      "phase": "COMMIT_REPLAY",
+      "attempt": 3,
+      "request_sha256": "4a051a643dbba54c14fd83142a742c47526bd253911a04d6e8c903a6e6e37185",
+      "request_submission_body_bytes": 1032,
+      "request_edge_ingress_body_bytes": 1032,
+      "reply_body_bytes": 1359,
+      "reply_sha256": "faff51c95ec57867652ae2f409fa7ef67bb43f3ea77fa30bcc785449c5001104",
+      "won_phase": false
+    },
+    {
+      "task_id": "cost-0012",
+      "phase": "INTENT_INITIAL",
+      "attempt": 0,
+      "request_sha256": "3440ccf76af1c19ad82332e8d4f4e009e51ef1ef7dbe0bbb31490b9814224234",
+      "request_submission_body_bytes": 937,
+      "request_edge_ingress_body_bytes": 937,
+      "reply_body_bytes": 1297,
+      "reply_sha256": "7e8de9d0cd5069a15b1f77664ff823ffcf4097e76842e9b93cd5e73a0856f841",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0012",
+      "phase": "INTENT_REPLAY",
+      "attempt": 0,
+      "request_sha256": "ea5c297b6718242e7891b26f61b760d865e3e79e71db39c910390292f57a2b83",
+      "request_submission_body_bytes": 936,
+      "request_edge_ingress_body_bytes": 936,
+      "reply_body_bytes": 1296,
+      "reply_sha256": "849b027dab473de45dfd20a79df781161ff5b416e6e468d913b292a0583165a5",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0012",
+      "phase": "COMMIT_INITIAL",
+      "attempt": 0,
+      "request_sha256": "9119aaff0e30fbed225123582d536e3d947e79f5577cc3faae27bb286d383792",
+      "request_submission_body_bytes": 1033,
+      "request_edge_ingress_body_bytes": 1033,
+      "reply_body_bytes": 1360,
+      "reply_sha256": "30864f7e188f7cefabbd8c69dd4e6b710e59c99ed22310697688c4c43cdb0e75",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0012",
+      "phase": "COMMIT_REPLAY",
+      "attempt": 0,
+      "request_sha256": "7e915fa4a7de3d41027d8f17684577240bf68fe02139b733c08a3e987b494ff8",
+      "request_submission_body_bytes": 1032,
+      "request_edge_ingress_body_bytes": 1032,
+      "reply_body_bytes": 1359,
+      "reply_sha256": "db92ceaa4ed37c7d028f5fb5a24a81618e320ec0da85d22bf5d94ce96167b86e",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0013",
+      "phase": "INTENT_INITIAL",
+      "attempt": 0,
+      "request_sha256": "78de7a2d61291eaa5f5754b4c1d88eacaa332c99ce03c376f02d0978e73ab0d5",
+      "request_submission_body_bytes": 937,
+      "request_edge_ingress_body_bytes": 937,
+      "reply_body_bytes": 1297,
+      "reply_sha256": "cac66bc0191afd53a5526752a857d4c2bf98a965acefc5f0831858ab4d9f6199",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0013",
+      "phase": "INTENT_REPLAY",
+      "attempt": 0,
+      "request_sha256": "f02571007b34172777baa217da1075f27de5450ffc7f40df21de6023e64ba629",
+      "request_submission_body_bytes": 936,
+      "request_edge_ingress_body_bytes": 936,
+      "reply_body_bytes": 1296,
+      "reply_sha256": "8741d75e2131359ecbc12ff5e649cacc67aaf49967ae37f904c9b82ae2603f1a",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0013",
+      "phase": "COMMIT_INITIAL",
+      "attempt": 0,
+      "request_sha256": "5604f21356c5580b4185e10f4ba8345bb4d1736a2d5cd0dc0fa69ba16ebfcd2c",
+      "request_submission_body_bytes": 1033,
+      "request_edge_ingress_body_bytes": 1033,
+      "reply_body_bytes": 1360,
+      "reply_sha256": "d8703de2ee1be3b46918680a154f2bc97c6d72532b68d06be995a9d4d2d7e0a4",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0013",
+      "phase": "COMMIT_REPLAY",
+      "attempt": 0,
+      "request_sha256": "48c14613de07b147df23c43cc0081c988f674fcc10f24c6b2c3b651c664e4cdc",
+      "request_submission_body_bytes": 1032,
+      "request_edge_ingress_body_bytes": 1032,
+      "reply_body_bytes": 1359,
+      "reply_sha256": "14415c32b1fc7f7dbda1f315b5fb1b076f10088c455e9f42c82a1fb7c86c6c24",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0014",
+      "phase": "INTENT_INITIAL",
+      "attempt": 0,
+      "request_sha256": "571c54ff328537a426af6e39168a4f07d959b527953daf5cfd429e8357a1167f",
+      "request_submission_body_bytes": 937,
+      "request_edge_ingress_body_bytes": 937,
+      "reply_body_bytes": 1297,
+      "reply_sha256": "a6b464cacb693176d2704229e9e3a9903d5fb73d654d6a11350566e1e8505c45",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0014",
+      "phase": "INTENT_REPLAY",
+      "attempt": 0,
+      "request_sha256": "ab891de0142adff3236a9efbb3abaa50dcf7595ebbf5f914e412c62e79caf341",
+      "request_submission_body_bytes": 936,
+      "request_edge_ingress_body_bytes": 936,
+      "reply_body_bytes": 1296,
+      "reply_sha256": "58604aa1dca7726c35189b66eaf095d211312bdd5c1c811c2893b00f37efe95a",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0014",
+      "phase": "COMMIT_INITIAL",
+      "attempt": 0,
+      "request_sha256": "047e6a2e1786a1f39820269f4b27371513e9c0072c724c3b8fe581768832b114",
+      "request_submission_body_bytes": 1033,
+      "request_edge_ingress_body_bytes": 1033,
+      "reply_body_bytes": 1360,
+      "reply_sha256": "46c7e0ca10d93524912c78f7a1cbf9ab8c5b3af7f837cdff18004022540bb7e0",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0014",
+      "phase": "COMMIT_REPLAY",
+      "attempt": 0,
+      "request_sha256": "2b0e8427a9863585153f0adedd5340f814347b09dea2f55e3297084bb0fd56c8",
+      "request_submission_body_bytes": 1032,
+      "request_edge_ingress_body_bytes": 1032,
+      "reply_body_bytes": 1359,
+      "reply_sha256": "10405b346a4d9098dd41193e157b7cb18a26e57ebae445b33f4f5d0de70a373b",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0015",
+      "phase": "INTENT_INITIAL",
+      "attempt": 0,
+      "request_sha256": "4e3f588e20d8f6b6704bf073fc4ead9af5344e1da947149941a79efa1be64899",
+      "request_submission_body_bytes": 937,
+      "request_edge_ingress_body_bytes": 937,
+      "reply_body_bytes": 1297,
+      "reply_sha256": "5593e94ca96c2cb1abc03e50551ae8f735c7d481c01aa1f83b388e3d11f3bac7",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0015",
+      "phase": "INTENT_REPLAY",
+      "attempt": 0,
+      "request_sha256": "8e1ba58c19d387de1a1a49fcd65c2009ecb72c0588cac0f8b67a6f37894400bd",
+      "request_submission_body_bytes": 936,
+      "request_edge_ingress_body_bytes": 936,
+      "reply_body_bytes": 1296,
+      "reply_sha256": "aaec5a54ef6c86d051a0b4dd83f26aa47fbdf52b8f0628ab802354f78000a6d9",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0015",
+      "phase": "COMMIT_INITIAL",
+      "attempt": 0,
+      "request_sha256": "2bba3ec0a0fda6fffa87a6cf5856c6c8b1fa089f29189429b507d7a1e0ff3d88",
+      "request_submission_body_bytes": 1033,
+      "request_edge_ingress_body_bytes": 1033,
+      "reply_body_bytes": 1360,
+      "reply_sha256": "32057d443895725c90b958b24899320da7ef0e257857f4ac50b437fbeba8447a",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0015",
+      "phase": "COMMIT_REPLAY",
+      "attempt": 0,
+      "request_sha256": "f22a8dfdc8886e32b21dfd9bd301b0fc92c787832ee7402ca67a1bf31b259266",
+      "request_submission_body_bytes": 1032,
+      "request_edge_ingress_body_bytes": 1032,
+      "reply_body_bytes": 1359,
+      "reply_sha256": "97259ce8f1a6486f6e4775eca399e6adad4eba7371129397628fbaa7a4d90152",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0016",
+      "phase": "INTENT_INITIAL",
+      "attempt": 0,
+      "request_sha256": "4f1201d147d2daabfb774f66a11954f29c3a59b8720684b998fa9717590b052c",
+      "request_submission_body_bytes": 937,
+      "request_edge_ingress_body_bytes": 937,
+      "reply_body_bytes": 1297,
+      "reply_sha256": "877cb6b6fc87b5458684aa5600c9be04c8ad62cfa4e558ae83e90247a0af7592",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0016",
+      "phase": "INTENT_REPLAY",
+      "attempt": 0,
+      "request_sha256": "f73f3230874b4b4735a6b13103722d922b884d9e1da7c15515a08224234e210e",
+      "request_submission_body_bytes": 936,
+      "request_edge_ingress_body_bytes": 936,
+      "reply_body_bytes": 1296,
+      "reply_sha256": "81dcb199397ad2c716306b9d32b3cebd435af3aa06cb0af82c5b8114431716c3",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0016",
+      "phase": "COMMIT_INITIAL",
+      "attempt": 0,
+      "request_sha256": "2a8e53e9056e21af19ae510fc4cf946fbf617c8ca72fa262960d266fc8cdacfd",
+      "request_submission_body_bytes": 1033,
+      "request_edge_ingress_body_bytes": 1033,
+      "reply_body_bytes": 1360,
+      "reply_sha256": "3575259f6a068edca4db700147967e1a464b686e467c96d578050a122a6c6b9d",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0016",
+      "phase": "COMMIT_REPLAY",
+      "attempt": 0,
+      "request_sha256": "3792bf84ffee2690d55591ee81dfe11fe0e38c31578b162e28e5663f5363857f",
+      "request_submission_body_bytes": 1032,
+      "request_edge_ingress_body_bytes": 1032,
+      "reply_body_bytes": 1359,
+      "reply_sha256": "76a3ea4dfa69401a4d75fe07c17721a17e06f97b5f0870f74fbcfc3fcf9a9dca",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0017",
+      "phase": "INTENT_INITIAL",
+      "attempt": 0,
+      "request_sha256": "e5abef29d8e820d071771a37e48c96e43626e7a4acf92b06b6927a55c0cb2bff",
+      "request_submission_body_bytes": 937,
+      "request_edge_ingress_body_bytes": 937,
+      "reply_body_bytes": 1297,
+      "reply_sha256": "6f948109b392f21967a0efaba29c10ea13cdffe1db99f81b2cc1ed70fd37d612",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0017",
+      "phase": "INTENT_REPLAY",
+      "attempt": 0,
+      "request_sha256": "7c67ff4e7663c1f130301b5eaa168d3e19118f4d2d8953ab1db485697ae08726",
+      "request_submission_body_bytes": 936,
+      "request_edge_ingress_body_bytes": 936,
+      "reply_body_bytes": 1296,
+      "reply_sha256": "2e158e8cf06553838b1ba0123d50f4d6d34831de762217e730b25877df18758a",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0017",
+      "phase": "COMMIT_INITIAL",
+      "attempt": 0,
+      "request_sha256": "33ab560675d2c300f2cb7397daa52755f879ef28b8c457ea4b11e0d497073812",
+      "request_submission_body_bytes": 1033,
+      "request_edge_ingress_body_bytes": 1033,
+      "reply_body_bytes": 1360,
+      "reply_sha256": "db1aa8d8fa66874ebcd71b6b288eb02dbf1a4dfea6053471cc151414d8696e67",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0017",
+      "phase": "COMMIT_REPLAY",
+      "attempt": 0,
+      "request_sha256": "63002b978c82608453cff1075b825820e43e1d0ced9383477ad0a9638f2b1bc7",
+      "request_submission_body_bytes": 1032,
+      "request_edge_ingress_body_bytes": 1032,
+      "reply_body_bytes": 1359,
+      "reply_sha256": "8b9f26fa6d846279067b0b45108015cfad1bbc5297d910664862eaee1cf6df85",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0018",
+      "phase": "INTENT_INITIAL",
+      "attempt": 0,
+      "request_sha256": "502d0a4522c210a48ebd3ef27b844a012709c90e6e47d3c1b0a51c3339ccde17",
+      "request_submission_body_bytes": 937,
+      "request_edge_ingress_body_bytes": 937,
+      "reply_body_bytes": 1297,
+      "reply_sha256": "c3094ef3e791d51c7a071b96f8d3152c1c9079c9eb6afdb30368d1dea2fac5dd",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0018",
+      "phase": "INTENT_REPLAY",
+      "attempt": 0,
+      "request_sha256": "e2486d1988017d69c7e3d7048753cbe52afeb65891c2d5558a1865bce3d32eaa",
+      "request_submission_body_bytes": 936,
+      "request_edge_ingress_body_bytes": 936,
+      "reply_body_bytes": 1296,
+      "reply_sha256": "e213270f7b3b07d7a1a01b9cea9f5b4d48d4b4ce46babcffef11fc03574c2b9f",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0018",
+      "phase": "COMMIT_INITIAL",
+      "attempt": 0,
+      "request_sha256": "931c4ec20295f66abf5261317cb8115515165c8da250fe7e7b97f7067b455421",
+      "request_submission_body_bytes": 1033,
+      "request_edge_ingress_body_bytes": 1033,
+      "reply_body_bytes": 1360,
+      "reply_sha256": "245f6dde2b76801fdc40613667525f493fce64e40c68b9fd0bd1f65b23c63f24",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0018",
+      "phase": "COMMIT_REPLAY",
+      "attempt": 1,
+      "request_sha256": "4fd30b856ba12eb36c686e08bc2a49aa605c65893c8f777c56bf7107f85969f4",
+      "request_submission_body_bytes": 1032,
+      "request_edge_ingress_body_bytes": 1032,
+      "reply_body_bytes": 1359,
+      "reply_sha256": "5bf5c793086b855fc353e4a084c6e83ac654989a986e53cb86b2037cd94675e9",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0018",
+      "phase": "COMMIT_REPLAY",
+      "attempt": 0,
+      "request_sha256": "37b0aba2112ccb3804626f37ca69e298136d6ff511126c257faeeb7e22d458f9",
+      "request_submission_body_bytes": 1032,
+      "request_edge_ingress_body_bytes": 1032,
+      "reply_body_bytes": 1359,
+      "reply_sha256": "fff43e63ba1775a1e38a655e6d414b7a8402bbd37076059d840935c7609446fa",
+      "won_phase": false
+    },
+    {
+      "task_id": "cost-0018",
+      "phase": "COMMIT_REPLAY",
+      "attempt": 2,
+      "request_sha256": "5314c12ea605c140ef3a8b6127867e42e6f3b00b550d18820e0cf11d067694de",
+      "request_submission_body_bytes": 1032,
+      "request_edge_ingress_body_bytes": 1032,
+      "reply_body_bytes": 1359,
+      "reply_sha256": "eb654eaaad3eb078af4f0a39a5130a69c08dbb71ab9ed92692a02f4b5e15f8fe",
+      "won_phase": false
+    },
+    {
+      "task_id": "cost-0019",
+      "phase": "INTENT_INITIAL",
+      "attempt": 0,
+      "request_sha256": "37d84aaee0c29f470af6758b4d926960be19c1c5e481fb7e37a91e0261ca65c1",
+      "request_submission_body_bytes": 937,
+      "request_edge_ingress_body_bytes": 937,
+      "reply_body_bytes": 1297,
+      "reply_sha256": "6880632e7d27af927afd52c6846e865cbae6f126e37c88c50b36d46bc12c35ec",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0019",
+      "phase": "INTENT_REPLAY",
+      "attempt": 0,
+      "request_sha256": "62bfb7ea2311c107c2be8d72b0a0f9111f0f3dc51399ae325f2d09baf45a718c",
+      "request_submission_body_bytes": 936,
+      "request_edge_ingress_body_bytes": 936,
+      "reply_body_bytes": 1296,
+      "reply_sha256": "a6a6d43e6eebf7b00cddbae13ee46f09d867a48163ee7eb769e68b4b422f0583",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0019",
+      "phase": "COMMIT_INITIAL",
+      "attempt": 0,
+      "request_sha256": "c1ee0e852c98e99196f50c95863e2acd1cf53f22c72c61a7114ff0f7eff9e8a3",
+      "request_submission_body_bytes": 1033,
+      "request_edge_ingress_body_bytes": 1033,
+      "reply_body_bytes": 1360,
+      "reply_sha256": "79893b71a32023d9260507d3106d0701215619c073771abf09c99a0018c6537c",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0019",
+      "phase": "COMMIT_REPLAY",
+      "attempt": 0,
+      "request_sha256": "30b9ec1e8e14ad6e21427a568f0d9840dfcd824bb8a3945dbc3e3731c3e662d6",
+      "request_submission_body_bytes": 1032,
+      "request_edge_ingress_body_bytes": 1032,
+      "reply_body_bytes": 1359,
+      "reply_sha256": "316159657c0c54aeb14b8f52a845615893b2cb2456a68e484864de5d658133ee",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0020",
+      "phase": "INTENT_INITIAL",
+      "attempt": 0,
+      "request_sha256": "c2b975fc69cdf28ad9b372ef84fed00b6b79fcc3bfd61c50d1e353f926df3e42",
+      "request_submission_body_bytes": 937,
+      "request_edge_ingress_body_bytes": 937,
+      "reply_body_bytes": 1297,
+      "reply_sha256": "289e51d331d6ea6b09805945c564afaa81072a898173ac44a0e60a47e500c8de",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0020",
+      "phase": "INTENT_REPLAY",
+      "attempt": 0,
+      "request_sha256": "69e7d25d1385489acfd57e5c12598c89d8b5e666bf709f4929a09f0894b80a52",
+      "request_submission_body_bytes": 936,
+      "request_edge_ingress_body_bytes": 936,
+      "reply_body_bytes": 1296,
+      "reply_sha256": "1159319928ebc4ea2a0f7e429ad651375b53e85f1a055a0fce1bbe9f468c22d8",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0020",
+      "phase": "COMMIT_INITIAL",
+      "attempt": 0,
+      "request_sha256": "2bdeb06ee12eb617dc34f8870cef742ba4243bab365d3a66cf7f36e6698b7c06",
+      "request_submission_body_bytes": 1033,
+      "request_edge_ingress_body_bytes": 1033,
+      "reply_body_bytes": 1360,
+      "reply_sha256": "14476b1ed387e617e1def1d89d39a69901446354952a67e68cfbadfad9187d91",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0020",
+      "phase": "COMMIT_REPLAY",
+      "attempt": 0,
+      "request_sha256": "f66915413fd37fd278d1128d3a01f2d340067e51486cd2d51150a3c4c1155ea7",
+      "request_submission_body_bytes": 1032,
+      "request_edge_ingress_body_bytes": 1032,
+      "reply_body_bytes": 1359,
+      "reply_sha256": "ecd036c4c5230136cd8817f6dc5fbcb983d467c1eceaa850e8a174fa52ba46f1",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0021",
+      "phase": "INTENT_INITIAL",
+      "attempt": 0,
+      "request_sha256": "ea960d3e232323cb42a27be48ac7bcba67e60a355c61acd9d0d6309c38919c89",
+      "request_submission_body_bytes": 937,
+      "request_edge_ingress_body_bytes": 937,
+      "reply_body_bytes": 1297,
+      "reply_sha256": "b8c033e9e01e3d5212292c153e0c1a5a82c87d06ae74c4a8d73dd138495e79f4",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0021",
+      "phase": "INTENT_REPLAY",
+      "attempt": 0,
+      "request_sha256": "13fd9b81d796c5294708764f3b674114917ccbc777c4f0a2b3694ad5c9828b65",
+      "request_submission_body_bytes": 936,
+      "request_edge_ingress_body_bytes": 936,
+      "reply_body_bytes": 1296,
+      "reply_sha256": "ffc5ab7506221f1b039fdf4584b07b7823a00d09477357d77454d2c67872431a",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0021",
+      "phase": "COMMIT_INITIAL",
+      "attempt": 0,
+      "request_sha256": "8f54633fc5ac476754f57aafec0a6ecaab7c55b2c279a97f380bfe325386f43d",
+      "request_submission_body_bytes": 1033,
+      "request_edge_ingress_body_bytes": 1033,
+      "reply_body_bytes": 1360,
+      "reply_sha256": "9e642a12c46019c3d0fd33129df924ae80fd9d19d1867c1abcfe2fbc73a4de1c",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0021",
+      "phase": "COMMIT_INITIAL",
+      "attempt": 1,
+      "request_sha256": "0d41126f06d479fe81b71a643cc8bc69482d8b665a8779cd91cb4f4f03f496af",
+      "request_submission_body_bytes": 1033,
+      "request_edge_ingress_body_bytes": 1033,
+      "reply_body_bytes": 1360,
+      "reply_sha256": "39d7e05e057a136f919917cbc4762402be327625b395ba29b859abb21aaec62b",
+      "won_phase": false
+    },
+    {
+      "task_id": "cost-0021",
+      "phase": "COMMIT_REPLAY",
+      "attempt": 0,
+      "request_sha256": "d9d165af8ec8003fbecc73dd7b720b26fde16e4f67045af2b6bac8cdd2ba4484",
+      "request_submission_body_bytes": 1032,
+      "request_edge_ingress_body_bytes": 1032,
+      "reply_body_bytes": 1359,
+      "reply_sha256": "624d357bc6cced427a8f32fd946996dde6ad7aad2e025a215214d87e9653342e",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0022",
+      "phase": "INTENT_INITIAL",
+      "attempt": 0,
+      "request_sha256": "bbe1ee84d21f0576482e6496216521a71cddbb5b9091aa54ffe6d5c2cd70bd56",
+      "request_submission_body_bytes": 937,
+      "request_edge_ingress_body_bytes": 937,
+      "reply_body_bytes": 1297,
+      "reply_sha256": "e21c60dee93aaf1647c24e9167c56f4443b2b0e47a65f98db83540399bdd3241",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0022",
+      "phase": "INTENT_REPLAY",
+      "attempt": 0,
+      "request_sha256": "51c785f014941d8fc7cb76dd5fa9380aecce93d523a0a19d206503c0b6715180",
+      "request_submission_body_bytes": 936,
+      "request_edge_ingress_body_bytes": 936,
+      "reply_body_bytes": 1296,
+      "reply_sha256": "4e72756ba84587020fcbd0556f458f20635f6dade054792f8e7c605ba5f5cb41",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0022",
+      "phase": "COMMIT_INITIAL",
+      "attempt": 0,
+      "request_sha256": "29623a2e5c66b020795934f119b3b213161bbafac67f841542646015ebd1a28e",
+      "request_submission_body_bytes": 1033,
+      "request_edge_ingress_body_bytes": 1033,
+      "reply_body_bytes": 1360,
+      "reply_sha256": "7a7628981fa25fa9af6206adb2c74afb578cac6d062a18d77dbfde87da58e9a3",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0022",
+      "phase": "COMMIT_REPLAY",
+      "attempt": 0,
+      "request_sha256": "c1ea819dcaaf57e05be30e91fef1914b94223f8735768fe04309600c44dfede1",
+      "request_submission_body_bytes": 1032,
+      "request_edge_ingress_body_bytes": 1032,
+      "reply_body_bytes": 1359,
+      "reply_sha256": "ba9fddf89549d14a41e6c344334f55a4febb536171ab915cd8e0fa92edd681c9",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0023",
+      "phase": "INTENT_INITIAL",
+      "attempt": 0,
+      "request_sha256": "32398bb4f8433956a798724dc2da4a5f5023a185e452597646ccd164f74f6c91",
+      "request_submission_body_bytes": 937,
+      "request_edge_ingress_body_bytes": 937,
+      "reply_body_bytes": 1297,
+      "reply_sha256": "72da5fb654b9a757c972a08d96cff398fc3de03604590486f9a40940fbbcae62",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0023",
+      "phase": "INTENT_REPLAY",
+      "attempt": 0,
+      "request_sha256": "075fe115a57c4a16518ff677950208fcea468b407620853987c719c9a225e9fb",
+      "request_submission_body_bytes": 936,
+      "request_edge_ingress_body_bytes": 936,
+      "reply_body_bytes": 1296,
+      "reply_sha256": "9b60b0e455686d6eb73c2a300e887602447fa438bca5322ebebc3f5681e2b746",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0023",
+      "phase": "INTENT_REPLAY",
+      "attempt": 1,
+      "request_sha256": "f4bda32191763f99d59dc3cfddb8014eeb88370a66cf9eac028877b05d4250c8",
+      "request_submission_body_bytes": 936,
+      "request_edge_ingress_body_bytes": 936,
+      "reply_body_bytes": 1296,
+      "reply_sha256": "c65e4fd3e8aea6fb1c48a0ef0c59103c23ab5d5d47f3d17d31fa2ccf07d10818",
+      "won_phase": false
+    },
+    {
+      "task_id": "cost-0023",
+      "phase": "COMMIT_INITIAL",
+      "attempt": 0,
+      "request_sha256": "5a8acb34a96da35003455450ef078a0e7e161898e959b71d63e47d04b0614da5",
+      "request_submission_body_bytes": 1033,
+      "request_edge_ingress_body_bytes": 1033,
+      "reply_body_bytes": 1360,
+      "reply_sha256": "e06bfc17842f2e8209184656e8df6ba4c237ddffb62d4a60ec6763ebfd92ce82",
+      "won_phase": true
+    },
+    {
+      "task_id": "cost-0023",
+      "phase": "COMMIT_REPLAY",
+      "attempt": 0,
+      "request_sha256": "432b760f6dac7be0aba984dd8f4c86e65c4a646361b48c4d0f793b1172560fe9",
+      "request_submission_body_bytes": 1032,
+      "request_edge_ingress_body_bytes": 1032,
+      "reply_body_bytes": 1359,
+      "reply_sha256": "f56cb5845f5c9209a1a456875141eaa31b04aaa97e2d618e3da29fe8dc2720be",
+      "won_phase": true
+    }
+  ]
+}

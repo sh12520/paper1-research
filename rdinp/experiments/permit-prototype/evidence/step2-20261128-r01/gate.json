@@ -1,0 +1,758 @@
+{
+  "decision": "PROCEED_STEP3",
+  "scientific_gate_evaluated": true,
+  "utility_definition": "mean paired structured-minus-reactive adopted quality over all released tasks; lateness or failure is zero; measured protocol waiting already affects timeliness",
+  "interval_scope": "exploratory 4000-draw percentile interval over paired seed clusters; not a gate",
+  "old_generation_pollution": 0,
+  "duplicate_effects": 0,
+  "safety": {
+    "scope": "signatures, durable task effects, independent loopback authority, controlled receipt faults",
+    "fixture_input_sha256": "427805e7e1c9dc54a4459cf1c05c4ca1dce3deed673030327e7014c2dc7f697c",
+    "source_sha256": {
+      "protocol/permit-v1/permit.py": "8f04f1b595402e0ad81d4f8cae0ddd39fc4d4db6b9e7933dd1d20c0a51fe5dc8",
+      "protocol/permit-v1/permit_server.py": "d67b7e04a8280d94b9327a436fc5d1f2929a74c9f85642c292cd66f6fa6e54ac",
+      "protocol/permit-v1/permit_wire.py": "b53f7601b1d4b7fb7b2ae26a468abaca5b267df9c651ff3ee99f045283b703af",
+      "protocol/permit-v1/permit.schema.json": "3b8175d483a1e593cb05acbbbd7ff039088f8f23ee6f868eb946137819d09b37",
+      "protocol/c2/contracts.py": "d8a656b0625b04777a472b5294fbddc9ee789f1955ef989b05bd9b9ead2c0750",
+      "protocol/c2/crypto.py": "6bf23f424e36049179a1c3893107046c8f450dbd0e44b262a2a39447b73289cd",
+      "protocol/c2/trust.schema.json": "40d2ad79d03d6aa93127179195f039afcb9c3e42d23411bb5dcffe3235bcb04b",
+      "experiments/service-worker/image_workload.py": "d1131ae5263e5b757693e9893fe3e455fa09c14ebe9f90ddf403c5fe7e72a545",
+      "experiments/permit-prototype/check_protocol.py": "94eab6a4c0e85f05ee869fc3447d944b03d6dd014f09c3be751f22202fbd3ca5",
+      "experiments/permit-prototype/adoption.py": "36b78d9d5fedf106b16e697a5dd8195f969eb9acb56c8691ba9b724f6644f711"
+    },
+    "source_unchanged": true,
+    "python": "3.11.0",
+    "clock": "perf_counter_ns (shared local host)",
+    "deadline_ms": 400,
+    "local_reserve_ms": 55,
+    "status": "PASS",
+    "expected_cases": 6,
+    "cases": [
+      {
+        "case": "clean_control",
+        "status": "PASS",
+        "accepted": true,
+        "worker_starts": 1,
+        "effects": 1
+      },
+      {
+        "case": "receipt_lost",
+        "status": "PASS",
+        "faulted_receipt_bytes": 1833,
+        "late_valid_tokens_observed": 0,
+        "generation_after_follow_up_issue": 2,
+        "fallback_adopted_ms": 347.4746,
+        "edge_worker_starts": 0,
+        "edge_effects": 0
+      },
+      {
+        "case": "receipt_delayed",
+        "status": "PASS",
+        "faulted_receipt_bytes": 1836,
+        "late_valid_tokens_observed": 1,
+        "generation_after_follow_up_issue": 2,
+        "fallback_adopted_ms": 360.0925,
+        "edge_worker_starts": 0,
+        "edge_effects": 0
+      },
+      {
+        "case": "late_result",
+        "status": "PASS",
+        "signed_result_delivered_ms": 511.0313,
+        "fallback_adopted_ms": 349.6585,
+        "late_rejections": 1,
+        "effect_count": 1,
+        "guard": {
+          "late": 1
+        }
+      },
+      {
+        "case": "old_generation_result",
+        "status": "PASS",
+        "prior_generation": 1,
+        "current_generation": 2,
+        "signed_result_presentation_ms": 66.6818,
+        "stale_generation_rejections": 1,
+        "effect_count": 1,
+        "guard": {
+          "old_generation": 1
+        }
+      },
+      {
+        "case": "duplicate_commit_across_renewal",
+        "status": "PASS",
+        "same_generation_statuses": [
+          "RESULT",
+          "REJECT"
+        ],
+        "renewed_duplicate_status": "REJECT",
+        "worker_starts_for_reused_id": 1,
+        "effects_for_reused_id": 1,
+        "duplicate_adoption_rejections": 1,
+        "guard": {
+          "adopted": 1,
+          "duplicate": 1
+        },
+        "fresh_task_under_renewed_permit": "RESULT"
+      }
+    ],
+    "old_generation_pollution": 0,
+    "duplicate_effects": 0
+  },
+  "c2_control_only": {
+    "scope": "REAL_SOFTWARE_LOOPBACK_FOUR_PHASE_CONTROL_ONLY",
+    "trial_count": 24,
+    "confirmed_count": 24,
+    "request_byte_boundary": "SEND_ACTUAL HTTP body, cross-checked against actual edge ingress",
+    "response_byte_boundary": "successful server RESPONSE_EGRESS HTTP body",
+    "elapsed_release_to_terminal_ms": {
+      "n": 24,
+      "p50": 180.397,
+      "p95": 521.2967,
+      "max": 619.5979
+    },
+    "confirmed_elapsed_release_to_terminal_ms": {
+      "n": 24,
+      "p50": 180.397,
+      "p95": 521.2967,
+      "max": 619.5979
+    },
+    "elapsed_protocol_only_ms": {
+      "n": 24,
+      "p50": 170.95350000000002,
+      "p95": 515.581,
+      "max": 586.9444
+    },
+    "winning_body_bytes_confirmed": {
+      "n": 24,
+      "p50": 9250.0,
+      "p95": 9250,
+      "max": 9250
+    },
+    "actual_body_bytes_per_released_task": 11196.791666666666,
+    "complete_within_400ms_control_only": 21,
+    "sign_verify_ms": {
+      "terminal_sign": {
+        "n": 116,
+        "p50": 0.97095,
+        "p95": 5.5805,
+        "max": 18.8436
+      },
+      "terminal_verify": {
+        "n": 116,
+        "p50": 4.18205,
+        "p95": 10.0672,
+        "max": 13.6997
+      },
+      "edge_sign": {
+        "n": 116,
+        "p50": 1.1545,
+        "p95": 3.0813,
+        "max": 5.2927
+      },
+      "edge_verify": {
+        "n": 116,
+        "p50": 2.8301499999999997,
+        "p95": 12.1256,
+        "max": 51.8763
+      }
+    }
+  },
+  "net_utility_delta": 0.004009307220388096,
+  "paired_seed_cluster_ci95": [
+    -0.013938511258522973,
+    0.01725585495035978
+  ],
+  "counts": {
+    "pairs": 12,
+    "seed_clusters": 4,
+    "method_runs": 24,
+    "task_rows": 384,
+    "per_method": 192
+  },
+  "headroom": [
+    {
+      "upload": "light",
+      "released": 9,
+      "timely_light_adoptions": 9,
+      "margin_p95_ms": 64.84032000000002
+    },
+    {
+      "upload": "main",
+      "released": 9,
+      "timely_light_adoptions": 9,
+      "margin_p95_ms": 9.075679999999977
+    }
+  ],
+  "structured_style": "auto",
+  "methods": {
+    "Structured-RDINP": {
+      "main": 39,
+      "light": 25,
+      "local": 127,
+      "missed": 1,
+      "released": 192,
+      "edge_adopted": 64,
+      "timely_adopted": 191,
+      "edge_adoption_rate": 0.3333333333333333,
+      "timely_adoption_rate": 0.9947916666666666,
+      "mean_utility": 0.6596129534070929,
+      "end_to_end_ms": {
+        "n": 192,
+        "p50": 353.78395,
+        "p95": 372.22951499999994
+      },
+      "edge_observed_ms": {
+        "queue_ns": {
+          "n": 64,
+          "p50": 8.56345,
+          "p95": 14.179059999999998
+        },
+        "service_ns": {
+          "n": 64,
+          "p50": 13.1479,
+          "p95": 20.715484999999997
+        }
+      },
+      "cost": {
+        "permit_total_elapsed_ns": 1855466500,
+        "permit_total_control_bytes": 127344,
+        "permit_confirmed": 48,
+        "terminal_sign_total_ns": 390223300,
+        "terminal_verify_total_ns": 617808900,
+        "control_body_bytes": 854932,
+        "control_body_attempted_bytes": 909845,
+        "data_body_bytes": 37391562,
+        "issue_requests": 48,
+        "extra_select_requests": 0,
+        "request_rounds_observed": 392,
+        "snapshot_requests": 192,
+        "task_requests": 152,
+        "actual_loopback_requests": 365,
+        "audit_starts": 85,
+        "audit_effects": 85,
+        "control_body_bytes_per_released": 4452.770833333333,
+        "control_body_attempted_bytes_per_released": 4738.776041666667,
+        "data_body_bytes_per_released": 194747.71875,
+        "permit_total_control_bytes_per_released": 663.25,
+        "request_rounds_observed_per_released": 2.0416666666666665,
+        "actual_loopback_requests_per_released": 1.9010416666666667,
+        "extra_select_requests_per_released": 0.0,
+        "amortized_permit_ms_per_released": 9.663888020833333,
+        "terminal_sign_ms_per_released": 2.0324130208333333,
+        "terminal_verify_ms_per_released": 3.2177546875
+      }
+    },
+    "Reactive-ReNeg": {
+      "main": 41,
+      "light": 11,
+      "local": 140,
+      "missed": 0,
+      "released": 192,
+      "edge_adopted": 52,
+      "timely_adopted": 192,
+      "edge_adoption_rate": 0.2708333333333333,
+      "timely_adoption_rate": 1.0,
+      "mean_utility": 0.6556036461867049,
+      "end_to_end_ms": {
+        "n": 192,
+        "p50": 354.30805,
+        "p95": 370.71655
+      },
+      "edge_observed_ms": {
+        "queue_ns": {
+          "n": 52,
+          "p50": 9.432099999999998,
+          "p95": 16.057374999999997
+        },
+        "service_ns": {
+          "n": 52,
+          "p50": 13.6073,
+          "p95": 20.01343
+        }
+      },
+      "cost": {
+        "permit_total_elapsed_ns": 1710874800,
+        "permit_total_control_bytes": 127344,
+        "permit_confirmed": 48,
+        "terminal_sign_total_ns": 416029500,
+        "terminal_verify_total_ns": 616922200,
+        "control_body_bytes": 912764,
+        "control_body_attempted_bytes": 982054,
+        "data_body_bytes": 36597204,
+        "issue_requests": 48,
+        "extra_select_requests": 25,
+        "request_rounds_observed": 422,
+        "snapshot_requests": 192,
+        "task_requests": 157,
+        "actual_loopback_requests": 387,
+        "audit_starts": 63,
+        "audit_effects": 63,
+        "control_body_bytes_per_released": 4753.979166666667,
+        "control_body_attempted_bytes_per_released": 5114.864583333333,
+        "data_body_bytes_per_released": 190610.4375,
+        "permit_total_control_bytes_per_released": 663.25,
+        "request_rounds_observed_per_released": 2.1979166666666665,
+        "actual_loopback_requests_per_released": 2.015625,
+        "extra_select_requests_per_released": 0.13020833333333334,
+        "amortized_permit_ms_per_released": 8.91080625,
+        "terminal_sign_ms_per_released": 2.1668203125,
+        "terminal_verify_ms_per_released": 3.213136458333333
+      }
+    }
+  },
+  "by_condition": {
+    "dynamic": {
+      "Structured-RDINP": {
+        "main": 5,
+        "light": 10,
+        "local": 48,
+        "missed": 1,
+        "released": 64,
+        "edge_adopted": 15,
+        "timely_adopted": 63,
+        "edge_adoption_rate": 0.234375,
+        "timely_adoption_rate": 0.984375,
+        "mean_utility": 0.601885344106484,
+        "end_to_end_ms": {
+          "n": 64,
+          "p50": 354.56285,
+          "p95": 384.59538999999995
+        },
+        "edge_observed_ms": {
+          "queue_ns": {
+            "n": 15,
+            "p50": 8.9639,
+            "p95": 13.543709999999995
+          },
+          "service_ns": {
+            "n": 15,
+            "p50": 11.3828,
+            "p95": 19.481370000000002
+          }
+        },
+        "cost": {
+          "permit_total_elapsed_ns": 574121100,
+          "permit_total_control_bytes": 42448,
+          "permit_confirmed": 16,
+          "terminal_sign_total_ns": 133288100,
+          "terminal_verify_total_ns": 190637900,
+          "control_body_bytes": 264202,
+          "control_body_attempted_bytes": 288606,
+          "data_body_bytes": 10133865,
+          "issue_requests": 16,
+          "extra_select_requests": 0,
+          "request_rounds_observed": 127,
+          "snapshot_requests": 64,
+          "task_requests": 47,
+          "actual_loopback_requests": 115,
+          "audit_starts": 25,
+          "audit_effects": 25,
+          "control_body_bytes_per_released": 4128.15625,
+          "control_body_attempted_bytes_per_released": 4509.46875,
+          "data_body_bytes_per_released": 158341.640625,
+          "permit_total_control_bytes_per_released": 663.25,
+          "request_rounds_observed_per_released": 1.984375,
+          "actual_loopback_requests_per_released": 1.796875,
+          "extra_select_requests_per_released": 0.0,
+          "amortized_permit_ms_per_released": 8.9706421875,
+          "terminal_sign_ms_per_released": 2.0826265625,
+          "terminal_verify_ms_per_released": 2.9787171875
+        }
+      },
+      "Reactive-ReNeg": {
+        "main": 4,
+        "light": 4,
+        "local": 56,
+        "missed": 0,
+        "released": 64,
+        "edge_adopted": 8,
+        "timely_adopted": 64,
+        "edge_adoption_rate": 0.125,
+        "timely_adoption_rate": 1.0,
+        "mean_utility": 0.5878447009134422,
+        "end_to_end_ms": {
+          "n": 64,
+          "p50": 356.06735000000003,
+          "p95": 374.43753499999997
+        },
+        "edge_observed_ms": {
+          "queue_ns": {
+            "n": 8,
+            "p50": 8.1134,
+            "p95": 13.139285
+          },
+          "service_ns": {
+            "n": 8,
+            "p50": 12.2988,
+            "p95": 21.604094999999997
+          }
+        },
+        "cost": {
+          "permit_total_elapsed_ns": 621053000,
+          "permit_total_control_bytes": 42448,
+          "permit_confirmed": 16,
+          "terminal_sign_total_ns": 140404600,
+          "terminal_verify_total_ns": 187248200,
+          "control_body_bytes": 272965,
+          "control_body_attempted_bytes": 303103,
+          "data_body_bytes": 8672819,
+          "issue_requests": 16,
+          "extra_select_requests": 7,
+          "request_rounds_observed": 134,
+          "snapshot_requests": 64,
+          "task_requests": 47,
+          "actual_loopback_requests": 119,
+          "audit_starts": 14,
+          "audit_effects": 14,
+          "control_body_bytes_per_released": 4265.078125,
+          "control_body_attempted_bytes_per_released": 4735.984375,
+          "data_body_bytes_per_released": 135512.796875,
+          "permit_total_control_bytes_per_released": 663.25,
+          "request_rounds_observed_per_released": 2.09375,
+          "actual_loopback_requests_per_released": 1.859375,
+          "extra_select_requests_per_released": 0.109375,
+          "amortized_permit_ms_per_released": 9.703953125,
+          "terminal_sign_ms_per_released": 2.193821875,
+          "terminal_verify_ms_per_released": 2.925753125
+        }
+      }
+    },
+    "half": {
+      "Structured-RDINP": {
+        "main": 0,
+        "light": 15,
+        "local": 49,
+        "missed": 0,
+        "released": 64,
+        "edge_adopted": 15,
+        "timely_adopted": 64,
+        "edge_adoption_rate": 0.234375,
+        "timely_adoption_rate": 1.0,
+        "mean_utility": 0.5873174343608386,
+        "end_to_end_ms": {
+          "n": 64,
+          "p50": 354.2523,
+          "p95": 377.094885
+        },
+        "edge_observed_ms": {
+          "queue_ns": {
+            "n": 15,
+            "p50": 7.4138,
+            "p95": 11.776909999999996
+          },
+          "service_ns": {
+            "n": 15,
+            "p50": 8.6297,
+            "p95": 10.85183
+          }
+        },
+        "cost": {
+          "permit_total_elapsed_ns": 654485400,
+          "permit_total_control_bytes": 42448,
+          "permit_confirmed": 16,
+          "terminal_sign_total_ns": 116135000,
+          "terminal_verify_total_ns": 180410700,
+          "control_body_bytes": 273471,
+          "control_body_attempted_bytes": 287708,
+          "data_body_bytes": 8114547,
+          "issue_requests": 16,
+          "extra_select_requests": 0,
+          "request_rounds_observed": 126,
+          "snapshot_requests": 64,
+          "task_requests": 46,
+          "actual_loopback_requests": 119,
+          "audit_starts": 17,
+          "audit_effects": 17,
+          "control_body_bytes_per_released": 4272.984375,
+          "control_body_attempted_bytes_per_released": 4495.4375,
+          "data_body_bytes_per_released": 126789.796875,
+          "permit_total_control_bytes_per_released": 663.25,
+          "request_rounds_observed_per_released": 1.96875,
+          "actual_loopback_requests_per_released": 1.859375,
+          "extra_select_requests_per_released": 0.0,
+          "amortized_permit_ms_per_released": 10.226334375,
+          "terminal_sign_ms_per_released": 1.814609375,
+          "terminal_verify_ms_per_released": 2.8189171875
+        }
+      },
+      "Reactive-ReNeg": {
+        "main": 1,
+        "light": 7,
+        "local": 56,
+        "missed": 0,
+        "released": 64,
+        "edge_adopted": 8,
+        "timely_adopted": 64,
+        "edge_adoption_rate": 0.125,
+        "timely_adoption_rate": 1.0,
+        "mean_utility": 0.5749075907824871,
+        "end_to_end_ms": {
+          "n": 64,
+          "p50": 354.49014999999997,
+          "p95": 367.74089
+        },
+        "edge_observed_ms": {
+          "queue_ns": {
+            "n": 8,
+            "p50": 9.17605,
+            "p95": 15.01175
+          },
+          "service_ns": {
+            "n": 8,
+            "p50": 8.3951,
+            "p95": 11.373299999999999
+          }
+        },
+        "cost": {
+          "permit_total_elapsed_ns": 552182200,
+          "permit_total_control_bytes": 42448,
+          "permit_confirmed": 16,
+          "terminal_sign_total_ns": 129032500,
+          "terminal_verify_total_ns": 191540800,
+          "control_body_bytes": 282600,
+          "control_body_attempted_bytes": 306246,
+          "data_body_bytes": 7325741,
+          "issue_requests": 16,
+          "extra_select_requests": 9,
+          "request_rounds_observed": 135,
+          "snapshot_requests": 64,
+          "task_requests": 46,
+          "actual_loopback_requests": 123,
+          "audit_starts": 10,
+          "audit_effects": 10,
+          "control_body_bytes_per_released": 4415.625,
+          "control_body_attempted_bytes_per_released": 4785.09375,
+          "data_body_bytes_per_released": 114464.703125,
+          "permit_total_control_bytes_per_released": 663.25,
+          "request_rounds_observed_per_released": 2.109375,
+          "actual_loopback_requests_per_released": 1.921875,
+          "extra_select_requests_per_released": 0.140625,
+          "amortized_permit_ms_per_released": 8.627846875,
+          "terminal_sign_ms_per_released": 2.0161328125,
+          "terminal_verify_ms_per_released": 2.992825
+        }
+      }
+    },
+    "plain": {
+      "Structured-RDINP": {
+        "main": 34,
+        "light": 0,
+        "local": 30,
+        "missed": 0,
+        "released": 64,
+        "edge_adopted": 34,
+        "timely_adopted": 64,
+        "edge_adoption_rate": 0.53125,
+        "timely_adoption_rate": 1.0,
+        "mean_utility": 0.7896360817539562,
+        "end_to_end_ms": {
+          "n": 64,
+          "p50": 342.14325,
+          "p95": 361.33889500000004
+        },
+        "edge_observed_ms": {
+          "queue_ns": {
+            "n": 34,
+            "p50": 9.03755,
+            "p95": 14.435639999999998
+          },
+          "service_ns": {
+            "n": 34,
+            "p50": 15.29265,
+            "p95": 22.493164999999994
+          }
+        },
+        "cost": {
+          "permit_total_elapsed_ns": 626860000,
+          "permit_total_control_bytes": 42448,
+          "permit_confirmed": 16,
+          "terminal_sign_total_ns": 140800200,
+          "terminal_verify_total_ns": 246760300,
+          "control_body_bytes": 317259,
+          "control_body_attempted_bytes": 333531,
+          "data_body_bytes": 19143150,
+          "issue_requests": 16,
+          "extra_select_requests": 0,
+          "request_rounds_observed": 139,
+          "snapshot_requests": 64,
+          "task_requests": 59,
+          "actual_loopback_requests": 131,
+          "audit_starts": 43,
+          "audit_effects": 43,
+          "control_body_bytes_per_released": 4957.171875,
+          "control_body_attempted_bytes_per_released": 5211.421875,
+          "data_body_bytes_per_released": 299111.71875,
+          "permit_total_control_bytes_per_released": 663.25,
+          "request_rounds_observed_per_released": 2.171875,
+          "actual_loopback_requests_per_released": 2.046875,
+          "extra_select_requests_per_released": 0.0,
+          "amortized_permit_ms_per_released": 9.7946875,
+          "terminal_sign_ms_per_released": 2.200003125,
+          "terminal_verify_ms_per_released": 3.8556296875
+        }
+      },
+      "Reactive-ReNeg": {
+        "main": 36,
+        "light": 0,
+        "local": 28,
+        "missed": 0,
+        "released": 64,
+        "edge_adopted": 36,
+        "timely_adopted": 64,
+        "edge_adoption_rate": 0.5625,
+        "timely_adoption_rate": 1.0,
+        "mean_utility": 0.8040586468641852,
+        "end_to_end_ms": {
+          "n": 64,
+          "p50": 338.7917,
+          "p95": 369.88351499999993
+        },
+        "edge_observed_ms": {
+          "queue_ns": {
+            "n": 36,
+            "p50": 9.61915,
+            "p95": 16.60335
+          },
+          "service_ns": {
+            "n": 36,
+            "p50": 14.7076,
+            "p95": 19.995150000000002
+          }
+        },
+        "cost": {
+          "permit_total_elapsed_ns": 537639600,
+          "permit_total_control_bytes": 42448,
+          "permit_confirmed": 16,
+          "terminal_sign_total_ns": 146592400,
+          "terminal_verify_total_ns": 238133200,
+          "control_body_bytes": 357199,
+          "control_body_attempted_bytes": 372705,
+          "data_body_bytes": 20598644,
+          "issue_requests": 16,
+          "extra_select_requests": 9,
+          "request_rounds_observed": 153,
+          "snapshot_requests": 64,
+          "task_requests": 64,
+          "actual_loopback_requests": 145,
+          "audit_starts": 39,
+          "audit_effects": 39,
+          "control_body_bytes_per_released": 5581.234375,
+          "control_body_attempted_bytes_per_released": 5823.515625,
+          "data_body_bytes_per_released": 321853.8125,
+          "permit_total_control_bytes_per_released": 663.25,
+          "request_rounds_observed_per_released": 2.390625,
+          "actual_loopback_requests_per_released": 2.265625,
+          "extra_select_requests_per_released": 0.140625,
+          "amortized_permit_ms_per_released": 8.40061875,
+          "terminal_sign_ms_per_released": 2.29050625,
+          "terminal_verify_ms_per_released": 3.72083125
+        }
+      }
+    }
+  },
+  "evidence_sha256": {
+    "plan.json": "77f5e2a65b8938f836eae278ca119d7b736c37799eb3c94f87ed010349875bee",
+    "headroom.json": "8237476303abd4e099140f47c84b9a9f3bb7ed0cb712e7f920115d1d70c65780",
+    "per_task.csv": "99c6fa31fc7f9bca57316c779ee668adf6879199c7ece330204423f65211e3b1",
+    "per_arm.csv": "c5e633bf9f447bcb26a65521119a1a0ca6c8e4acec72176ee05ceb7827339e0f",
+    "pair-dynamic-0/Structured-RDINP/authority-audit.json": "6d8516f85b4a200070fde98b8fe305ec8ea53ffa95584b3211fcb71f2d4f6d96",
+    "pair-dynamic-0/Structured-RDINP/tasks.json": "6f824e7a728456178724028e55a75a705e5d7729c454c59e27a5675fead2d31d",
+    "pair-dynamic-0/Structured-RDINP/wire.jsonl.gz": "0db3bef4df273cd408de414733a3fed36399cd614fb43cd3dc2dbc8d149a43b3",
+    "pair-dynamic-0/Structured-RDINP/rpc.jsonl.gz": "b7e9ca1323ddf31c50686ff7a05d23be6b9da9ae12e0d2e9e143dac2779bd8b8",
+    "pair-dynamic-0/Reactive-ReNeg/authority-audit.json": "9dc981efdc94435ef1381af37d18a74f51fbc3e73ec05d5ec8ca2399ba82e4de",
+    "pair-dynamic-0/Reactive-ReNeg/tasks.json": "de535ec44e9be435c07439dbe8217874451c4afd696a17e521877ee3bad7cb9f",
+    "pair-dynamic-0/Reactive-ReNeg/wire.jsonl.gz": "badae0bfc4bcc95a22427d2e094fe164e8e737b8ae7d703b4a1f6e7a4c388421",
+    "pair-dynamic-0/Reactive-ReNeg/rpc.jsonl.gz": "bcaa913d3a91bf892f390bcd4e19a4a9543c229d704e6875b7cb868448fe9d8d",
+    "pair-dynamic-1/Structured-RDINP/authority-audit.json": "041d35a0e2dcbdadba1fc8da71608144a0386089f9ba64dffa6662380ca76cb2",
+    "pair-dynamic-1/Structured-RDINP/tasks.json": "819ed20913864395deb3077fcac246f246ac8348b28d877bdf69eaae1d06913f",
+    "pair-dynamic-1/Structured-RDINP/wire.jsonl.gz": "9ac20cb2326815831480ce0aa679cc7ae70eab0b0ec182e6e2270956b813e643",
+    "pair-dynamic-1/Structured-RDINP/rpc.jsonl.gz": "ad121cf3835983c2db590390e6f02b2410b17b378f3ed7e447b804a806ef8bb6",
+    "pair-dynamic-1/Reactive-ReNeg/authority-audit.json": "6a654124a2a60a8dc66b394742fcaacd1c355c97cd1208e758070aec619d729e",
+    "pair-dynamic-1/Reactive-ReNeg/tasks.json": "c9c857b70cccff65c3637ac44163ffd8dbff7a4be93a8c93e849f7751571ffac",
+    "pair-dynamic-1/Reactive-ReNeg/wire.jsonl.gz": "057e89c7eb0be37b4cfcc34daecfc21597b2fbe5eb7e7d54652ed2ace6fc436e",
+    "pair-dynamic-1/Reactive-ReNeg/rpc.jsonl.gz": "e11a2919e11230c1197b1090458ad4e9b88571a6853954348a3c38d56350804f",
+    "pair-dynamic-2/Structured-RDINP/authority-audit.json": "e3c7c2b431c209ba09754c235db9752fd5852ec9d9667a5a3344ad2a142c73de",
+    "pair-dynamic-2/Structured-RDINP/tasks.json": "92016cf0b873a50d145d65fadb748f3e8da81ef7565f510b2cf5d59a8e54855d",
+    "pair-dynamic-2/Structured-RDINP/wire.jsonl.gz": "a4ed31fa8009e0f4ccd95a4be3e7c100333656cf27385b431154e3874230bd7f",
+    "pair-dynamic-2/Structured-RDINP/rpc.jsonl.gz": "a0a70e893e12e17cc3a9c1448bd74936fd9f2fb2a9a4af9fd0695f781c42964a",
+    "pair-dynamic-2/Reactive-ReNeg/authority-audit.json": "dd56ce9f52a525accf0d103b804a43e55d830f74c5363fbac3adaa965da95b00",
+    "pair-dynamic-2/Reactive-ReNeg/tasks.json": "445d915e2a6d633fc31e9236947bcc8e8b255d259dced97b5f2e6d248f11998f",
+    "pair-dynamic-2/Reactive-ReNeg/wire.jsonl.gz": "3b0874a91d1112aefed78df3f8ea384c06e034d96a4ddecf2976e95212d36800",
+    "pair-dynamic-2/Reactive-ReNeg/rpc.jsonl.gz": "fd6943a1d9ca1ed8c77001d4b249db558763826643ed5248c6a342f8c853fe77",
+    "pair-dynamic-3/Structured-RDINP/authority-audit.json": "b84d18736b6206dfd305bdea1fc6f8f9a44f5226d83cec8215aedaf2be513446",
+    "pair-dynamic-3/Structured-RDINP/tasks.json": "715b91f3d4ec596011bc981a806a8c9024e7ad25b44abc99f1aea51c48147c74",
+    "pair-dynamic-3/Structured-RDINP/wire.jsonl.gz": "99dad114f6a3088a0aa503f2be40a93d481cecfd66578af686c9cdb403de9c3c",
+    "pair-dynamic-3/Structured-RDINP/rpc.jsonl.gz": "97ca8ae292d05ae47ba209588ff383011d19f765817252f3e940c068c5368900",
+    "pair-dynamic-3/Reactive-ReNeg/authority-audit.json": "d0d8e4882c05536853cfe6674c6f8a8992a294653febefcad1557e4b4e250e45",
+    "pair-dynamic-3/Reactive-ReNeg/tasks.json": "e435b78e6286d889fa28d627a8aadcdee68def08614c8bc24bdbd84ac3536045",
+    "pair-dynamic-3/Reactive-ReNeg/wire.jsonl.gz": "1be03093eb96c3c531e8e5f94fdb2d1c594096ae935e48eb060fa99691317e4d",
+    "pair-dynamic-3/Reactive-ReNeg/rpc.jsonl.gz": "e8545ee45dd6569e7ba16dae2072f498062ef77161f31addf985e0ea786ba717",
+    "pair-half-0/Structured-RDINP/authority-audit.json": "078c335d7ee16f89f7e8601d24d178c292d36dc4a3af4ce55e2cf2d3a55fd22d",
+    "pair-half-0/Structured-RDINP/tasks.json": "f67a25d952aa4c488fa97fc97da1f8cab0b2868b85733b147192616c80c28971",
+    "pair-half-0/Structured-RDINP/wire.jsonl.gz": "54747fe6ef0ad7c0757220e0b3457fb1cf9080db1893f007ada64c213d68eb75",
+    "pair-half-0/Structured-RDINP/rpc.jsonl.gz": "8b859a0e454ea4073ca999710691900ba412820260a26ac0296f42397d2c022d",
+    "pair-half-0/Reactive-ReNeg/authority-audit.json": "5cf6640691a4971a685d7e631c6dc4eb3935905c6d00d00838c0788597f3d698",
+    "pair-half-0/Reactive-ReNeg/tasks.json": "e24626a01e6b9182902ba0ea418d10f0e0e22c930bf0a194b5c3e783b583eca5",
+    "pair-half-0/Reactive-ReNeg/wire.jsonl.gz": "84411f9b8d3bb35bc83f633f9828a6e88c97b8608348701f3c68546e20c8fcfb",
+    "pair-half-0/Reactive-ReNeg/rpc.jsonl.gz": "8a226e201b710abd8fb5d26522c221f9efc8586d5c9afdc9ac461f4d37ddd6ad",
+    "pair-half-1/Structured-RDINP/authority-audit.json": "48895cc0f952ba3dfeb30fdf80ffc97d001fd48d90dc44b1b4b27db5ea57a92c",
+    "pair-half-1/Structured-RDINP/tasks.json": "d8f6f6a3f6f2868997a6e8410a677a555c875c883d504d6c93a3c240b34e7f96",
+    "pair-half-1/Structured-RDINP/wire.jsonl.gz": "02be535d108c3ed4344a57949b57cde66b2735801ae121bf94f5026c59f71d95",
+    "pair-half-1/Structured-RDINP/rpc.jsonl.gz": "3376baaa3d41be5786d85b2084dd9b7e5a8dad69fd7ff4919adfa8f7f07f3018",
+    "pair-half-1/Reactive-ReNeg/authority-audit.json": "19a3a99437cf92d85e317bbf5c9e84b0eaf50d72e206743d656876dc63ee7a49",
+    "pair-half-1/Reactive-ReNeg/tasks.json": "f6d25298971988021068b68bdbff419ec5b0a84f177885725d71a69e554d026a",
+    "pair-half-1/Reactive-ReNeg/wire.jsonl.gz": "bff395b751dc1c8e83c822b6e3005941626c51dbd9a218a2596b94bbc33ee7c4",
+    "pair-half-1/Reactive-ReNeg/rpc.jsonl.gz": "280feca4b64a4f9bd686af4fd94048ba24e041ac420b3a429fb5cdaef1abf669",
+    "pair-half-2/Structured-RDINP/authority-audit.json": "4ad1308e57ced9892fcd9cdae7df56c9642cae46c5f83e4c378ca58fb6f6b8cf",
+    "pair-half-2/Structured-RDINP/tasks.json": "d3945d8d129aae5c8433e1f4233d8cedeaca2c86eb4a394adc9a763c24b2a7a7",
+    "pair-half-2/Structured-RDINP/wire.jsonl.gz": "6f076b979b6e1b9b67879048680d576440ce1ec490e252739299135e04e36fe4",
+    "pair-half-2/Structured-RDINP/rpc.jsonl.gz": "bd17675675fdf5b6fbec4730ac7da7d32f11a0c3686b42344ccbae2dc1ea0643",
+    "pair-half-2/Reactive-ReNeg/authority-audit.json": "5865f4633cbdd4a1a37a0ef6328dcd02841f932f8f3145069d6dc7b4f43d8184",
+    "pair-half-2/Reactive-ReNeg/tasks.json": "5bc038b84f46f6417cd4f4c74a3e00bbf0f0547ffbf517f571b4c97ba060895a",
+    "pair-half-2/Reactive-ReNeg/wire.jsonl.gz": "57027b94293d675e6b23dc98c13ad1c515b373aca67837e5c6ff35ca96957ae3",
+    "pair-half-2/Reactive-ReNeg/rpc.jsonl.gz": "b804a285408f3149c07654d16479c173186e57258ac3308a6f37fed21f56292d",
+    "pair-half-3/Structured-RDINP/authority-audit.json": "cd0570e8dd1cf4947c70e49bd431da45093bfec5a49a04a6d6dd9a16ce34d4d7",
+    "pair-half-3/Structured-RDINP/tasks.json": "842a82d8cf64feffff64d39c541a0d3fe7eea175e1c5ff5c945405a6f7f18512",
+    "pair-half-3/Structured-RDINP/wire.jsonl.gz": "07bd05e184f334ca48d748300447d51977747cd60e1f183f42c630212b69def3",
+    "pair-half-3/Structured-RDINP/rpc.jsonl.gz": "2ad8f73d7090fb6656fb6043a9571cc7f83adbea919f6ac16da3e385b415db7c",
+    "pair-half-3/Reactive-ReNeg/authority-audit.json": "94d75a8bd507ca2dca1d7ad8337b95fd2c179a46fa5e3c9e3b63cb05235a33d4",
+    "pair-half-3/Reactive-ReNeg/tasks.json": "02aa7d3f9be971fabf256d80d70818da670cd45938e894d5642c2a07ece70893",
+    "pair-half-3/Reactive-ReNeg/wire.jsonl.gz": "4bd0e6dad00d059bddb6ff6ff75d8399fd98da36a85a1bcf845a99c9bee99666",
+    "pair-half-3/Reactive-ReNeg/rpc.jsonl.gz": "0b398455ef7e4c0383974bb75248d5d90c870162d3babc79694f274cd4498ba9",
+    "pair-plain-0/Structured-RDINP/authority-audit.json": "00ca1a1f342a54fb33c42afb7e649d26868e7752665c50bcf8e4882acf60bba6",
+    "pair-plain-0/Structured-RDINP/tasks.json": "14e75f7421118530fa6c6d4035e76c48c4638fb7a5a17827cb3fdd773012ddfa",
+    "pair-plain-0/Structured-RDINP/wire.jsonl.gz": "2755eb46654eeceb8449767bc0b4fea857b40d1c12f3cb4bb197bd0af11a360b",
+    "pair-plain-0/Structured-RDINP/rpc.jsonl.gz": "355dae9b9329aded76f8b568a3f557c8732691efa851e53a189f0551e34d0420",
+    "pair-plain-0/Reactive-ReNeg/authority-audit.json": "0d70763dff6149be66713b75cc27b05e3b334c57933deb7f18b74814b5a0c173",
+    "pair-plain-0/Reactive-ReNeg/tasks.json": "c503343bbfd19635de1106ca0a03114c5a5aa433039729fd1efc1a524113cf59",
+    "pair-plain-0/Reactive-ReNeg/wire.jsonl.gz": "a4502c754b3d53ab0eb003e7021d4d15deec2ac13a128b790bb64346bd8ecd63",
+    "pair-plain-0/Reactive-ReNeg/rpc.jsonl.gz": "cf01f52615270e8c7f5ccc274bca85e65d0213e2161f3b12b99496168325c666",
+    "pair-plain-1/Structured-RDINP/authority-audit.json": "bb7be26a8284ba181211898c9b9226fb14ad9cb69efb056dea47508a057365e1",
+    "pair-plain-1/Structured-RDINP/tasks.json": "8e9f58699b890b4e34c42c1a9d2a50c6f97c042b6bb38c3b9b04c2b5aa881ada",
+    "pair-plain-1/Structured-RDINP/wire.jsonl.gz": "1c992c8017343c6ad774909380e731e5d427df495baba0d7da2e5ecbff55f2be",
+    "pair-plain-1/Structured-RDINP/rpc.jsonl.gz": "32bdb6afae7f995dd5cd92b61731af21e069e71417722bb4f239874700b8a454",
+    "pair-plain-1/Reactive-ReNeg/authority-audit.json": "a26b9baa9af84e0b04afd34f5de8c6490082a75fc550025dba0ede09bf40ba62",
+    "pair-plain-1/Reactive-ReNeg/tasks.json": "dae17acc3f7899f1fb1be7fd5709ebd438f0361813b2f79e88b1f3f88737aa2d",
+    "pair-plain-1/Reactive-ReNeg/wire.jsonl.gz": "ec04b32363d2d8e73cbb150f260823c23e2211c039edcc36a7d44213e58a3b6a",
+    "pair-plain-1/Reactive-ReNeg/rpc.jsonl.gz": "d83da0d8e679ccd457515abf38934b0f65bd74d6fa99c6938b4f2f583330a920",
+    "pair-plain-2/Structured-RDINP/authority-audit.json": "48c6e567255d26e959b435ae2a52e704c6a025f1854c8f373d27744b749b0f46",
+    "pair-plain-2/Structured-RDINP/tasks.json": "60b60684ebb89e75ef67146225ca7c8aa6c60101bd7be02815d96435c05a4d0b",
+    "pair-plain-2/Structured-RDINP/wire.jsonl.gz": "b5cf3d27f862dc53fa7c938912c26ff2fbede7dd4f761e5f74c77a9194b60184",
+    "pair-plain-2/Structured-RDINP/rpc.jsonl.gz": "4bb01206c00a9deac92223bfa4bb3130741da25ee9c6e16dc3529539cb65c576",
+    "pair-plain-2/Reactive-ReNeg/authority-audit.json": "41344eaf3532655d78aa7bd98cc5a9c8bb7a681af4c091d43396c9ee137de9c7",
+    "pair-plain-2/Reactive-ReNeg/tasks.json": "f10c42ed32cc3902aa6ec32ae4922ec16f88925cdd2e6d49b1cec8ba2964c0f8",
+    "pair-plain-2/Reactive-ReNeg/wire.jsonl.gz": "548f3c7f3a1fff3b668746e9280c444ef2cefab7d024b42db3f8f732bae89bfc",
+    "pair-plain-2/Reactive-ReNeg/rpc.jsonl.gz": "0c6edf39bc738cd40b80aeafd486d9cd767ae96f889935ec3a71e349ac7a238d",
+    "pair-plain-3/Structured-RDINP/authority-audit.json": "6bbf3451c1f64b82e33d58e050862e6dde6f227b7726831939fae5a3bb8650d6",
+    "pair-plain-3/Structured-RDINP/tasks.json": "5a1ef33b007fb237d84010f49cb131bdc6e27ffb2d5e554f6a77514dcddf340b",
+    "pair-plain-3/Structured-RDINP/wire.jsonl.gz": "eb414d9dbb097517c84ee2855304d9bb5f1a036131614418ee8489f03598cefe",
+    "pair-plain-3/Structured-RDINP/rpc.jsonl.gz": "c5413647f1482a108407bbb7cf8fbe281426366d9a3054f628bf7c6134649aa1",
+    "pair-plain-3/Reactive-ReNeg/authority-audit.json": "29e0ccdf3f46d565e2325785536b2f04f7e56dc93a89c080efb3193e44c9a3f9",
+    "pair-plain-3/Reactive-ReNeg/tasks.json": "b66ecb67abec4bd9c30b3d5b394f3a7cddefb448ab37264d41e0b2514387a7ed",
+    "pair-plain-3/Reactive-ReNeg/wire.jsonl.gz": "5bd7599252742ead61da63f1c834afa1c4b1cbb49621a7b3edab5ef073127e4e",
+    "pair-plain-3/Reactive-ReNeg/rpc.jsonl.gz": "db8cc5a017013f8d47fe68ba0c8fee288804300b054cb751b5ee393f32b33eb4"
+  },
+  "matrix_sha256": "e83f63d72f80a828bb1317fc2d101021a627be74c5fea6d8b500dd810d2dfb12",
+  "c2_sha256": "8fe685283f53ac11a756465cb3504988cedb3cfa4ee05a6031f04f19bc1c6b37"
+}

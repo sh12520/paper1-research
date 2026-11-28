@@ -1,6 +1,6 @@
 # 当前推进
 
-2026-11-28 作者已将 GOAL-1 转向 **动态无线与边缘算力下的结构化限时意图协商和快慢环履约**。第一步完成 810 组四方法配对与同菜单机制归因。带本地兜底的三组均按期交付。修正复算后，快切相对同菜单下的固定档提高了平均效用，紧截止期条件下更明显。协议原型接入待作者审阅。[复算与归因报告](../rdinp/experiments/structured-fast-slow/STEP1_REVIEW.md) · [现行 GOAL](proposals/GOAL.md) · [专家审阅提示词](EXTERNAL_RESEARCH_EXPERT_PROMPT.md)
+2026-11-28，GOAL-1 完成两阶段实验与中文小论文初稿。Step 1 保留 810 组仿真配对，Step 2 完成会话级多档许可的 12 组真实协议配对。400 ms 工况的平均净效用差为 +0.0040，探索性区间跨零，安全验收 6/6。按预定门禁已流转到 Step 3。扩展至 GOAL-2 由作者另行确认。[Step 2 结果](../rdinp/experiments/permit-prototype/evidence/step2-20261128-r01/RESULTS.md) · [中文初稿](../rdinp/experiments/permit-prototype/paper/RDINP_中文小论文初稿.md) · [Word 阅读版](../rdinp/experiments/permit-prototype/paper/RDINP_中文小论文初稿.docx) · [现行 GOAL](proposals/GOAL.md)
 
 ## 本阶段的复用入口
 

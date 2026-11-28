@@ -1,0 +1,2 @@
+# Preserve exact evidence bytes covered by checksums.
+* -text whitespace=cr-at-eol

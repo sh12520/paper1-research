@@ -1,0 +1,75 @@
+{
+  "effects": 6,
+  "next_offset": null,
+  "starts": 6,
+  "status": "AUDIT",
+  "task_count": 6,
+  "tasks": [
+    {
+      "effects": 1,
+      "generation": 1,
+      "input_sha256": "4038c96fd5ef2064862b84303a438bc87a798cfaa63bbd5ad983190fb5fc0587",
+      "principal": "terminal-a",
+      "result_sha256": "30e10d72854119856081d8cac19749c2464bb5ebd4876f80fb6ac4f11aa7ba72",
+      "session": "session-0",
+      "starts": 1,
+      "state": "complete",
+      "task_id": "t-00"
+    },
+    {
+      "effects": 1,
+      "generation": 1,
+      "input_sha256": "4038c96fd5ef2064862b84303a438bc87a798cfaa63bbd5ad983190fb5fc0587",
+      "principal": "terminal-a",
+      "result_sha256": "30e10d72854119856081d8cac19749c2464bb5ebd4876f80fb6ac4f11aa7ba72",
+      "session": "session-0",
+      "starts": 1,
+      "state": "complete",
+      "task_id": "t-06"
+    },
+    {
+      "effects": 1,
+      "generation": 2,
+      "input_sha256": "fa112ab8ac70db141fe56d7fe3e7947cbbb34268e577c65322ae7c85e58d1a8c",
+      "principal": "terminal-a",
+      "result_sha256": "9479dae8210593664961c09e3e0eb2050766786ae1cc12c9b81937f4bf2db25a",
+      "session": "session-0",
+      "starts": 1,
+      "state": "complete",
+      "task_id": "t-08"
+    },
+    {
+      "effects": 1,
+      "generation": 2,
+      "input_sha256": "4038c96fd5ef2064862b84303a438bc87a798cfaa63bbd5ad983190fb5fc0587",
+      "principal": "terminal-a",
+      "result_sha256": "30e10d72854119856081d8cac19749c2464bb5ebd4876f80fb6ac4f11aa7ba72",
+      "session": "session-0",
+      "starts": 1,
+      "state": "complete",
+      "task_id": "t-14"
+    },
+    {
+      "effects": 1,
+      "generation": 1,
+      "input_sha256": "4038c96fd5ef2064862b84303a438bc87a798cfaa63bbd5ad983190fb5fc0587",
+      "principal": "terminal-b",
+      "result_sha256": "30e10d72854119856081d8cac19749c2464bb5ebd4876f80fb6ac4f11aa7ba72",
+      "session": "session-1",
+      "starts": 1,
+      "state": "complete",
+      "task_id": "t-07"
+    },
+    {
+      "effects": 1,
+      "generation": 2,
+      "input_sha256": "5357e9100c540dd45600f34c81f707f8db0e7a51c4f44aba91e31ac46933e9b4",
+      "principal": "terminal-b",
+      "result_sha256": "bc2454861c970238c10cd88254bedd4cb0d759509c19de70f466ab5cc45d14b0",
+      "session": "session-1",
+      "starts": 1,
+      "state": "complete",
+      "task_id": "t-15"
+    }
+  ]
+}

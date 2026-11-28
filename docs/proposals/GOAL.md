@@ -8,7 +8,8 @@
 
 1. **先做 Python 离散事件对照。** 使用 5G-LENA 前传容量事件、单独设置的无线突发丢包／抖动和边缘多槽队列。在共同任务、链路与资源输入上比较 Fixed-Intent、Reactive Re-Negotiation、Static Local Fallback 和 Structured Fast-Slow RDINP。前传容量事件作为前传预算使用。原始测量与开发模型参数分开标注。
 2. **交付首批趋势供作者确认。** 扫描链路扰动、并发负载和截止紧迫度。以全部释放任务为分母，报告按期完成与各档占比、有效效用、期限违约、控制字节、协商轮次及其耗时。反应式方案使用相同可执行档位，协议时延与控制流量按共用链路记账。
-3. **结果确认后接原型。** 在新版本 RDINP Schema 与执行状态机中接入多档条款，验证消息校验、条件切换和代际保护。原协议工件保留用于复现。
+3. **Step 2 原型与实测门禁。** 作者已授权连续推进。独立版本实现会话租期、多档许可、即时准入和跨代际去重。在固定 400 ms 配对任务上，平均净效用差 +0.0040，六项安全验收通过，进入 Step 3。[原型规范](../../rdinp/protocol/permit-v1/README.md) · [原型实测](../../rdinp/experiments/permit-prototype/evidence/step2-20261128-r01/RESULTS.md)
+4. **Step 3 中文初稿与复现。** 论文分开陈述仿真和真实协议实测。主要实测效应的探索性配对区间跨零，保留失期样本和分工况结果。[中文初稿](../../rdinp/experiments/permit-prototype/paper/RDINP_中文小论文初稿.md) · [复现入口](../../rdinp/experiments/permit-prototype/README.md)
 
 ## 已冻结的原 G1-A 支线
 
