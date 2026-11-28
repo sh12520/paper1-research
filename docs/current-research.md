@@ -1,6 +1,6 @@
 # 当前推进
 
-2026-11-28 作者已将 GOAL-1 转向 **动态无线与边缘算力下的结构化限时意图协商和快慢环履约**。第一步完成 810 组四方法配对与同菜单机制归因。带本地兜底的三组均按期交付。修正复算后，快切相对同菜单下的固定档提高了平均效用，紧截止期条件下更明显。协议原型接入待作者审阅。[复算与归因报告](../rdinp/experiments/structured-fast-slow/STEP1_REVIEW.md) · [现行 GOAL](proposals/GOAL.md)
+2026-11-28 作者已将 GOAL-1 转向 **动态无线与边缘算力下的结构化限时意图协商和快慢环履约**。第一步完成 810 组四方法配对与同菜单机制归因。带本地兜底的三组均按期交付。修正复算后，快切相对同菜单下的固定档提高了平均效用，紧截止期条件下更明显。协议原型接入待作者审阅。[复算与归因报告](../rdinp/experiments/structured-fast-slow/STEP1_REVIEW.md) · [现行 GOAL](proposals/GOAL.md) · [专家审阅提示词](EXTERNAL_RESEARCH_EXPERT_PROMPT.md)
 
 ## 本阶段的复用入口
 

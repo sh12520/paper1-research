@@ -42,7 +42,7 @@ python -B research/harness.py verify opv2v-evidence --attempt ATTEMPT_ID
 
 | 方向 | 入口与运行条件 |
 | --- | --- |
-| RDINP | [协议、边缘执行与代理原型](../rdinp/README.md)。后续实验按 [G1-A 判定](../rdinp/experiments/durable-worker/G1A_DECISION_REPORT.md)及相应授权执行。 |
+| RDINP | [协议、边缘执行与代理原型](../rdinp/README.md)。现行状态见[当前推进](../docs/current-research.md)。[G1-A](../rdinp/experiments/durable-worker/G1A_DECISION_REPORT.md)用于复核已封存证据。 |
 | CS-ODS | [合同搜索代码与小型测试](../csods/README.md)。需要全量实验资料时按[证据索引](../docs/evidence-index.md)定位。 |
 | OPV2V／DAIR | [车路协同方向](opv2v-deadline/README.md)内保存 R1–R2.6 开发证据。Linux 原机执行涉及固定模型、数据和逐帧回执，详见[原机交接](opv2v-deadline/autoresearch/local/README.md)。 |
 
