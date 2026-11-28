@@ -1,0 +1,6025 @@
+{
+  "phase": "independent 16-seed engineering expansion",
+  "deadline_ms": 400,
+  "fallback_reserve_ms": 55,
+  "slots": 2,
+  "permit_ttl_ms": 900,
+  "trace": {
+    "plain": [
+      [
+        0,
+        24,
+        36
+      ]
+    ],
+    "half": [
+      [
+        0,
+        12,
+        18
+      ]
+    ],
+    "dynamic": [
+      [
+        0,
+        24,
+        36
+      ],
+      [
+        104,
+        12,
+        18
+      ],
+      [
+        658,
+        24,
+        36
+      ],
+      [
+        1010,
+        12,
+        18
+      ],
+      [
+        1540,
+        24,
+        36
+      ]
+    ]
+  },
+  "seeds": [
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115
+  ],
+  "methods": [
+    "Structured-RDINP",
+    "Reactive-ReNeg",
+    "Same-Permit-No-Switch"
+  ],
+  "styles": {
+    "Structured-RDINP": "auto",
+    "Reactive-ReNeg": "offer",
+    "Same-Permit-No-Switch": "none"
+  },
+  "post_upload_light_extra_tail_ns": 12000000,
+  "snapshot_max_age_ns": 55000000,
+  "python": "3.11.0",
+  "host": "Windows-10-10.0.26100-SP0",
+  "dependencies": {
+    "attrs": "25.4.0",
+    "cffi": "2.0.0",
+    "cryptography": "46.0.3",
+    "jsonschema": "4.25.0",
+    "jsonschema-specifications": "2025.9.1",
+    "pillow": "12.0.0",
+    "pycparser": "2.23",
+    "referencing": "0.37.0",
+    "rpds-py": "0.28.0",
+    "typing_extensions": "4.16.0"
+  },
+  "asset_sha256": {
+    "astronaut.png": "88431cd9653ccd539741b555fb0a46b61558b301d4110412b5bc28b5e3ea6cb5",
+    "camera.png": "b0793d2adda0fa6ae899c03989482bff9a42d3d5690fc7e3648f2795d730c23a",
+    "coffee.png": "cc02f8ca188b167c775a7101b5d767d1e71792cf762c33d6fa15a4599b5a8de7"
+  },
+  "source_sha256": {
+    "experiments/permit-prototype/run_pairs.py": "64b998b15992eac55a972c69f2c711f89ccf7588c7a5c2ef3086cec50285db0d",
+    "experiments/permit-prototype/adoption.py": "36b78d9d5fedf106b16e697a5dd8195f969eb9acb56c8691ba9b724f6644f711",
+    "requirements.txt": "4cf0c6768f2e5ec3a181897c8293291332bdf756b3bfea87d4b6183de628e8a7",
+    "protocol/permit-v1/permit.py": "8f04f1b595402e0ad81d4f8cae0ddd39fc4d4db6b9e7933dd1d20c0a51fe5dc8",
+    "protocol/permit-v1/permit_server.py": "d67b7e04a8280d94b9327a436fc5d1f2929a74c9f85642c292cd66f6fa6e54ac",
+    "protocol/permit-v1/permit_wire.py": "b53f7601b1d4b7fb7b2ae26a468abaca5b267df9c651ff3ee99f045283b703af",
+    "protocol/permit-v1/permit.schema.json": "3b8175d483a1e593cb05acbbbd7ff039088f8f23ee6f868eb946137819d09b37",
+    "protocol/c2/contracts.py": "d8a656b0625b04777a472b5294fbddc9ee789f1955ef989b05bd9b9ead2c0750",
+    "protocol/c2/crypto.py": "6bf23f424e36049179a1c3893107046c8f450dbd0e44b262a2a39447b73289cd",
+    "protocol/c2/trust.schema.json": "40d2ad79d03d6aa93127179195f039afcb9c3e42d23411bb5dcffe3235bcb04b",
+    "experiments/service-worker/image_workload.py": "d1131ae5263e5b757693e9893fe3e455fa09c14ebe9f90ddf403c5fe7e72a545",
+    "experiments/structured-fast-slow/calibrate.py": "2c1c8de21ce2bdd9b653816dfe898e0ce327bccb37bf69ca9690ff247f2c7425",
+    "experiments/structured-fast-slow/calibration.json": "034452e43b3f3c8c13f5defa87c90c5beddac2045cbd0455de720a9304d3e6fc",
+    "experiments/permit-prototype/run_expansion.py": "bca0632baedaf6d3c46aa57432903131a66a9eb15eb35e29a792503e61d2e222",
+    "experiments/permit-prototype/EXPANSION_PLAN.md": "e1d4debaaba3d57f3c4f6c050440d1a13f86cf41ab779aed665f031820c85185",
+    "protocol/permit-v1/permit_guarded.py": "d9e8680f33fc4c0ce3337781f09b294fb82701a346b744d2280f1003073ead51",
+    "experiments/permit-prototype/check_protocol.py": "94eab6a4c0e85f05ee869fc3447d944b03d6dd014f09c3be751f22202fbd3ca5",
+    "experiments/permit-prototype/gate.py": "feebbc5a8936e8dcd9cce93e5ac60877a080d32d0d666a50d7f25178086f824a"
+  },
+  "cases": [
+    {
+      "condition": "plain",
+      "seed": 100,
+      "method_order": [
+        "Structured-RDINP",
+        "Reactive-ReNeg",
+        "Same-Permit-No-Switch"
+      ],
+      "tasks": [
+        {
+          "task_id": "t-00",
+          "release_ms": 1,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-01",
+          "release_ms": 34,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-02",
+          "release_ms": 88,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-03",
+          "release_ms": 117,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-04",
+          "release_ms": 188,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-05",
+          "release_ms": 259,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-06",
+          "release_ms": 404,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-07",
+          "release_ms": 518,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-08",
+          "release_ms": 921,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-09",
+          "release_ms": 948,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-10",
+          "release_ms": 997,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-11",
+          "release_ms": 1075,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-12",
+          "release_ms": 1148,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-13",
+          "release_ms": 1209,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-14",
+          "release_ms": 1365,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-15",
+          "release_ms": 1445,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        }
+      ]
+    },
+    {
+      "condition": "half",
+      "seed": 100,
+      "method_order": [
+        "Structured-RDINP",
+        "Same-Permit-No-Switch",
+        "Reactive-ReNeg"
+      ],
+      "tasks": [
+        {
+          "task_id": "t-00",
+          "release_ms": 1,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-01",
+          "release_ms": 34,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-02",
+          "release_ms": 88,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-03",
+          "release_ms": 117,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-04",
+          "release_ms": 188,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-05",
+          "release_ms": 259,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-06",
+          "release_ms": 404,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-07",
+          "release_ms": 518,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-08",
+          "release_ms": 921,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-09",
+          "release_ms": 948,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-10",
+          "release_ms": 997,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-11",
+          "release_ms": 1075,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-12",
+          "release_ms": 1148,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-13",
+          "release_ms": 1209,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-14",
+          "release_ms": 1365,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-15",
+          "release_ms": 1445,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        }
+      ]
+    },
+    {
+      "condition": "dynamic",
+      "seed": 100,
+      "method_order": [
+        "Reactive-ReNeg",
+        "Structured-RDINP",
+        "Same-Permit-No-Switch"
+      ],
+      "tasks": [
+        {
+          "task_id": "t-00",
+          "release_ms": 1,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-01",
+          "release_ms": 34,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-02",
+          "release_ms": 88,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-03",
+          "release_ms": 117,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-04",
+          "release_ms": 188,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-05",
+          "release_ms": 259,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-06",
+          "release_ms": 404,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-07",
+          "release_ms": 518,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-08",
+          "release_ms": 921,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-09",
+          "release_ms": 948,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-10",
+          "release_ms": 997,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-11",
+          "release_ms": 1075,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-12",
+          "release_ms": 1148,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-13",
+          "release_ms": 1209,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-14",
+          "release_ms": 1365,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-15",
+          "release_ms": 1445,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        }
+      ]
+    },
+    {
+      "condition": "plain",
+      "seed": 101,
+      "method_order": [
+        "Structured-RDINP",
+        "Same-Permit-No-Switch",
+        "Reactive-ReNeg"
+      ],
+      "tasks": [
+        {
+          "task_id": "t-00",
+          "release_ms": 6,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-01",
+          "release_ms": 29,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-02",
+          "release_ms": 89,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-03",
+          "release_ms": 118,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-04",
+          "release_ms": 190,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-05",
+          "release_ms": 258,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-06",
+          "release_ms": 404,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-07",
+          "release_ms": 516,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-08",
+          "release_ms": 920,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-09",
+          "release_ms": 950,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-10",
+          "release_ms": 997,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-11",
+          "release_ms": 1073,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-12",
+          "release_ms": 1145,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-13",
+          "release_ms": 1207,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-14",
+          "release_ms": 1369,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-15",
+          "release_ms": 1446,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        }
+      ]
+    },
+    {
+      "condition": "dynamic",
+      "seed": 101,
+      "method_order": [
+        "Reactive-ReNeg",
+        "Same-Permit-No-Switch",
+        "Structured-RDINP"
+      ],
+      "tasks": [
+        {
+          "task_id": "t-00",
+          "release_ms": 6,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-01",
+          "release_ms": 29,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-02",
+          "release_ms": 89,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-03",
+          "release_ms": 118,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-04",
+          "release_ms": 190,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-05",
+          "release_ms": 258,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-06",
+          "release_ms": 404,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-07",
+          "release_ms": 516,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-08",
+          "release_ms": 920,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-09",
+          "release_ms": 950,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-10",
+          "release_ms": 997,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-11",
+          "release_ms": 1073,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-12",
+          "release_ms": 1145,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-13",
+          "release_ms": 1207,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-14",
+          "release_ms": 1369,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-15",
+          "release_ms": 1446,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        }
+      ]
+    },
+    {
+      "condition": "half",
+      "seed": 101,
+      "method_order": [
+        "Reactive-ReNeg",
+        "Structured-RDINP",
+        "Same-Permit-No-Switch"
+      ],
+      "tasks": [
+        {
+          "task_id": "t-00",
+          "release_ms": 6,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-01",
+          "release_ms": 29,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-02",
+          "release_ms": 89,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-03",
+          "release_ms": 118,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-04",
+          "release_ms": 190,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-05",
+          "release_ms": 258,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-06",
+          "release_ms": 404,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-07",
+          "release_ms": 516,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-08",
+          "release_ms": 920,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-09",
+          "release_ms": 950,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-10",
+          "release_ms": 997,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-11",
+          "release_ms": 1073,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-12",
+          "release_ms": 1145,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-13",
+          "release_ms": 1207,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-14",
+          "release_ms": 1369,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-15",
+          "release_ms": 1446,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        }
+      ]
+    },
+    {
+      "condition": "half",
+      "seed": 102,
+      "method_order": [
+        "Reactive-ReNeg",
+        "Same-Permit-No-Switch",
+        "Structured-RDINP"
+      ],
+      "tasks": [
+        {
+          "task_id": "t-00",
+          "release_ms": 3,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-01",
+          "release_ms": 34,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-02",
+          "release_ms": 88,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-03",
+          "release_ms": 118,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-04",
+          "release_ms": 185,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-05",
+          "release_ms": 256,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-06",
+          "release_ms": 404,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-07",
+          "release_ms": 521,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-08",
+          "release_ms": 919,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-09",
+          "release_ms": 955,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-10",
+          "release_ms": 996,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-11",
+          "release_ms": 1074,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-12",
+          "release_ms": 1145,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-13",
+          "release_ms": 1207,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-14",
+          "release_ms": 1368,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-15",
+          "release_ms": 1442,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        }
+      ]
+    },
+    {
+      "condition": "plain",
+      "seed": 102,
+      "method_order": [
+        "Reactive-ReNeg",
+        "Structured-RDINP",
+        "Same-Permit-No-Switch"
+      ],
+      "tasks": [
+        {
+          "task_id": "t-00",
+          "release_ms": 3,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-01",
+          "release_ms": 34,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-02",
+          "release_ms": 88,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-03",
+          "release_ms": 118,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-04",
+          "release_ms": 185,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-05",
+          "release_ms": 256,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-06",
+          "release_ms": 404,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-07",
+          "release_ms": 521,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-08",
+          "release_ms": 919,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-09",
+          "release_ms": 955,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-10",
+          "release_ms": 996,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-11",
+          "release_ms": 1074,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-12",
+          "release_ms": 1145,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-13",
+          "release_ms": 1207,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-14",
+          "release_ms": 1368,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-15",
+          "release_ms": 1442,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        }
+      ]
+    },
+    {
+      "condition": "dynamic",
+      "seed": 102,
+      "method_order": [
+        "Same-Permit-No-Switch",
+        "Structured-RDINP",
+        "Reactive-ReNeg"
+      ],
+      "tasks": [
+        {
+          "task_id": "t-00",
+          "release_ms": 3,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-01",
+          "release_ms": 34,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-02",
+          "release_ms": 88,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-03",
+          "release_ms": 118,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-04",
+          "release_ms": 185,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-05",
+          "release_ms": 256,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-06",
+          "release_ms": 404,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-07",
+          "release_ms": 521,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-08",
+          "release_ms": 919,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-09",
+          "release_ms": 955,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-10",
+          "release_ms": 996,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-11",
+          "release_ms": 1074,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-12",
+          "release_ms": 1145,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-13",
+          "release_ms": 1207,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-14",
+          "release_ms": 1368,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-15",
+          "release_ms": 1442,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        }
+      ]
+    },
+    {
+      "condition": "half",
+      "seed": 103,
+      "method_order": [
+        "Same-Permit-No-Switch",
+        "Structured-RDINP",
+        "Reactive-ReNeg"
+      ],
+      "tasks": [
+        {
+          "task_id": "t-00",
+          "release_ms": 1,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-01",
+          "release_ms": 32,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-02",
+          "release_ms": 88,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-03",
+          "release_ms": 118,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-04",
+          "release_ms": 187,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-05",
+          "release_ms": 262,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-06",
+          "release_ms": 406,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-07",
+          "release_ms": 522,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-08",
+          "release_ms": 917,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-09",
+          "release_ms": 953,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-10",
+          "release_ms": 1000,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-11",
+          "release_ms": 1073,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-12",
+          "release_ms": 1142,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-13",
+          "release_ms": 1207,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-14",
+          "release_ms": 1368,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-15",
+          "release_ms": 1442,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        }
+      ]
+    },
+    {
+      "condition": "dynamic",
+      "seed": 103,
+      "method_order": [
+        "Same-Permit-No-Switch",
+        "Reactive-ReNeg",
+        "Structured-RDINP"
+      ],
+      "tasks": [
+        {
+          "task_id": "t-00",
+          "release_ms": 1,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-01",
+          "release_ms": 32,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-02",
+          "release_ms": 88,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-03",
+          "release_ms": 118,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-04",
+          "release_ms": 187,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-05",
+          "release_ms": 262,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-06",
+          "release_ms": 406,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-07",
+          "release_ms": 522,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-08",
+          "release_ms": 917,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-09",
+          "release_ms": 953,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-10",
+          "release_ms": 1000,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-11",
+          "release_ms": 1073,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-12",
+          "release_ms": 1142,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-13",
+          "release_ms": 1207,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-14",
+          "release_ms": 1368,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-15",
+          "release_ms": 1442,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        }
+      ]
+    },
+    {
+      "condition": "plain",
+      "seed": 103,
+      "method_order": [
+        "Reactive-ReNeg",
+        "Same-Permit-No-Switch",
+        "Structured-RDINP"
+      ],
+      "tasks": [
+        {
+          "task_id": "t-00",
+          "release_ms": 1,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-01",
+          "release_ms": 32,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-02",
+          "release_ms": 88,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-03",
+          "release_ms": 118,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-04",
+          "release_ms": 187,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-05",
+          "release_ms": 262,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-06",
+          "release_ms": 406,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-07",
+          "release_ms": 522,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-08",
+          "release_ms": 917,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-09",
+          "release_ms": 953,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-10",
+          "release_ms": 1000,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-11",
+          "release_ms": 1073,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-12",
+          "release_ms": 1142,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-13",
+          "release_ms": 1207,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-14",
+          "release_ms": 1368,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-15",
+          "release_ms": 1442,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        }
+      ]
+    },
+    {
+      "condition": "dynamic",
+      "seed": 104,
+      "method_order": [
+        "Structured-RDINP",
+        "Reactive-ReNeg",
+        "Same-Permit-No-Switch"
+      ],
+      "tasks": [
+        {
+          "task_id": "t-00",
+          "release_ms": 1,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-01",
+          "release_ms": 34,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-02",
+          "release_ms": 89,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-03",
+          "release_ms": 119,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-04",
+          "release_ms": 190,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-05",
+          "release_ms": 257,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-06",
+          "release_ms": 402,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-07",
+          "release_ms": 519,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-08",
+          "release_ms": 922,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-09",
+          "release_ms": 953,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-10",
+          "release_ms": 1002,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-11",
+          "release_ms": 1076,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-12",
+          "release_ms": 1143,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-13",
+          "release_ms": 1212,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-14",
+          "release_ms": 1372,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-15",
+          "release_ms": 1445,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        }
+      ]
+    },
+    {
+      "condition": "plain",
+      "seed": 104,
+      "method_order": [
+        "Same-Permit-No-Switch",
+        "Structured-RDINP",
+        "Reactive-ReNeg"
+      ],
+      "tasks": [
+        {
+          "task_id": "t-00",
+          "release_ms": 1,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-01",
+          "release_ms": 34,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-02",
+          "release_ms": 89,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-03",
+          "release_ms": 119,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-04",
+          "release_ms": 190,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-05",
+          "release_ms": 257,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-06",
+          "release_ms": 402,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-07",
+          "release_ms": 519,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-08",
+          "release_ms": 922,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-09",
+          "release_ms": 953,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-10",
+          "release_ms": 1002,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-11",
+          "release_ms": 1076,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-12",
+          "release_ms": 1143,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-13",
+          "release_ms": 1212,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-14",
+          "release_ms": 1372,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-15",
+          "release_ms": 1445,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        }
+      ]
+    },
+    {
+      "condition": "half",
+      "seed": 104,
+      "method_order": [
+        "Same-Permit-No-Switch",
+        "Reactive-ReNeg",
+        "Structured-RDINP"
+      ],
+      "tasks": [
+        {
+          "task_id": "t-00",
+          "release_ms": 1,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-01",
+          "release_ms": 34,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-02",
+          "release_ms": 89,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-03",
+          "release_ms": 119,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-04",
+          "release_ms": 190,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-05",
+          "release_ms": 257,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-06",
+          "release_ms": 402,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-07",
+          "release_ms": 519,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-08",
+          "release_ms": 922,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-09",
+          "release_ms": 953,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-10",
+          "release_ms": 1002,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-11",
+          "release_ms": 1076,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-12",
+          "release_ms": 1143,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-13",
+          "release_ms": 1212,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-14",
+          "release_ms": 1372,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-15",
+          "release_ms": 1445,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        }
+      ]
+    },
+    {
+      "condition": "dynamic",
+      "seed": 105,
+      "method_order": [
+        "Structured-RDINP",
+        "Same-Permit-No-Switch",
+        "Reactive-ReNeg"
+      ],
+      "tasks": [
+        {
+          "task_id": "t-00",
+          "release_ms": 1,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-01",
+          "release_ms": 30,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-02",
+          "release_ms": 93,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-03",
+          "release_ms": 119,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-04",
+          "release_ms": 185,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-05",
+          "release_ms": 259,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-06",
+          "release_ms": 403,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-07",
+          "release_ms": 518,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-08",
+          "release_ms": 915,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-09",
+          "release_ms": 948,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-10",
+          "release_ms": 1001,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-11",
+          "release_ms": 1073,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-12",
+          "release_ms": 1149,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-13",
+          "release_ms": 1207,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-14",
+          "release_ms": 1365,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-15",
+          "release_ms": 1443,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        }
+      ]
+    },
+    {
+      "condition": "half",
+      "seed": 105,
+      "method_order": [
+        "Structured-RDINP",
+        "Reactive-ReNeg",
+        "Same-Permit-No-Switch"
+      ],
+      "tasks": [
+        {
+          "task_id": "t-00",
+          "release_ms": 1,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-01",
+          "release_ms": 30,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-02",
+          "release_ms": 93,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-03",
+          "release_ms": 119,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-04",
+          "release_ms": 185,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-05",
+          "release_ms": 259,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-06",
+          "release_ms": 403,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-07",
+          "release_ms": 518,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-08",
+          "release_ms": 915,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-09",
+          "release_ms": 948,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-10",
+          "release_ms": 1001,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-11",
+          "release_ms": 1073,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-12",
+          "release_ms": 1149,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-13",
+          "release_ms": 1207,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-14",
+          "release_ms": 1365,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-15",
+          "release_ms": 1443,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        }
+      ]
+    },
+    {
+      "condition": "plain",
+      "seed": 105,
+      "method_order": [
+        "Same-Permit-No-Switch",
+        "Reactive-ReNeg",
+        "Structured-RDINP"
+      ],
+      "tasks": [
+        {
+          "task_id": "t-00",
+          "release_ms": 1,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-01",
+          "release_ms": 30,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-02",
+          "release_ms": 93,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-03",
+          "release_ms": 119,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-04",
+          "release_ms": 185,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-05",
+          "release_ms": 259,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-06",
+          "release_ms": 403,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-07",
+          "release_ms": 518,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-08",
+          "release_ms": 915,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-09",
+          "release_ms": 948,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-10",
+          "release_ms": 1001,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-11",
+          "release_ms": 1073,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-12",
+          "release_ms": 1149,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-13",
+          "release_ms": 1207,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-14",
+          "release_ms": 1365,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-15",
+          "release_ms": 1443,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        }
+      ]
+    },
+    {
+      "condition": "plain",
+      "seed": 106,
+      "method_order": [
+        "Structured-RDINP",
+        "Reactive-ReNeg",
+        "Same-Permit-No-Switch"
+      ],
+      "tasks": [
+        {
+          "task_id": "t-00",
+          "release_ms": 0,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-01",
+          "release_ms": 34,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-02",
+          "release_ms": 91,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-03",
+          "release_ms": 121,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-04",
+          "release_ms": 186,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-05",
+          "release_ms": 260,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-06",
+          "release_ms": 406,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-07",
+          "release_ms": 521,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-08",
+          "release_ms": 921,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-09",
+          "release_ms": 955,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-10",
+          "release_ms": 998,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-11",
+          "release_ms": 1072,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-12",
+          "release_ms": 1145,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-13",
+          "release_ms": 1212,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-14",
+          "release_ms": 1370,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-15",
+          "release_ms": 1444,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        }
+      ]
+    },
+    {
+      "condition": "half",
+      "seed": 106,
+      "method_order": [
+        "Structured-RDINP",
+        "Same-Permit-No-Switch",
+        "Reactive-ReNeg"
+      ],
+      "tasks": [
+        {
+          "task_id": "t-00",
+          "release_ms": 0,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-01",
+          "release_ms": 34,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-02",
+          "release_ms": 91,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-03",
+          "release_ms": 121,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-04",
+          "release_ms": 186,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-05",
+          "release_ms": 260,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-06",
+          "release_ms": 406,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-07",
+          "release_ms": 521,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-08",
+          "release_ms": 921,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-09",
+          "release_ms": 955,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-10",
+          "release_ms": 998,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-11",
+          "release_ms": 1072,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-12",
+          "release_ms": 1145,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-13",
+          "release_ms": 1212,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-14",
+          "release_ms": 1370,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-15",
+          "release_ms": 1444,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        }
+      ]
+    },
+    {
+      "condition": "dynamic",
+      "seed": 106,
+      "method_order": [
+        "Reactive-ReNeg",
+        "Structured-RDINP",
+        "Same-Permit-No-Switch"
+      ],
+      "tasks": [
+        {
+          "task_id": "t-00",
+          "release_ms": 0,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-01",
+          "release_ms": 34,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-02",
+          "release_ms": 91,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-03",
+          "release_ms": 121,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-04",
+          "release_ms": 186,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-05",
+          "release_ms": 260,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-06",
+          "release_ms": 406,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-07",
+          "release_ms": 521,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-08",
+          "release_ms": 921,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-09",
+          "release_ms": 955,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-10",
+          "release_ms": 998,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-11",
+          "release_ms": 1072,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-12",
+          "release_ms": 1145,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-13",
+          "release_ms": 1212,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-14",
+          "release_ms": 1370,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-15",
+          "release_ms": 1444,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        }
+      ]
+    },
+    {
+      "condition": "plain",
+      "seed": 107,
+      "method_order": [
+        "Structured-RDINP",
+        "Same-Permit-No-Switch",
+        "Reactive-ReNeg"
+      ],
+      "tasks": [
+        {
+          "task_id": "t-00",
+          "release_ms": 1,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-01",
+          "release_ms": 32,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-02",
+          "release_ms": 92,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-03",
+          "release_ms": 121,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-04",
+          "release_ms": 186,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-05",
+          "release_ms": 261,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-06",
+          "release_ms": 407,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-07",
+          "release_ms": 522,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-08",
+          "release_ms": 921,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-09",
+          "release_ms": 954,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-10",
+          "release_ms": 995,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-11",
+          "release_ms": 1073,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-12",
+          "release_ms": 1145,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-13",
+          "release_ms": 1206,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-14",
+          "release_ms": 1370,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-15",
+          "release_ms": 1444,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        }
+      ]
+    },
+    {
+      "condition": "dynamic",
+      "seed": 107,
+      "method_order": [
+        "Reactive-ReNeg",
+        "Same-Permit-No-Switch",
+        "Structured-RDINP"
+      ],
+      "tasks": [
+        {
+          "task_id": "t-00",
+          "release_ms": 1,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-01",
+          "release_ms": 32,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-02",
+          "release_ms": 92,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-03",
+          "release_ms": 121,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-04",
+          "release_ms": 186,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-05",
+          "release_ms": 261,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-06",
+          "release_ms": 407,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-07",
+          "release_ms": 522,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-08",
+          "release_ms": 921,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-09",
+          "release_ms": 954,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-10",
+          "release_ms": 995,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-11",
+          "release_ms": 1073,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-12",
+          "release_ms": 1145,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-13",
+          "release_ms": 1206,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-14",
+          "release_ms": 1370,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-15",
+          "release_ms": 1444,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        }
+      ]
+    },
+    {
+      "condition": "half",
+      "seed": 107,
+      "method_order": [
+        "Reactive-ReNeg",
+        "Structured-RDINP",
+        "Same-Permit-No-Switch"
+      ],
+      "tasks": [
+        {
+          "task_id": "t-00",
+          "release_ms": 1,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-01",
+          "release_ms": 32,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-02",
+          "release_ms": 92,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-03",
+          "release_ms": 121,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-04",
+          "release_ms": 186,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-05",
+          "release_ms": 261,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-06",
+          "release_ms": 407,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-07",
+          "release_ms": 522,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-08",
+          "release_ms": 921,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-09",
+          "release_ms": 954,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-10",
+          "release_ms": 995,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-11",
+          "release_ms": 1073,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-12",
+          "release_ms": 1145,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-13",
+          "release_ms": 1206,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-14",
+          "release_ms": 1370,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-15",
+          "release_ms": 1444,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        }
+      ]
+    },
+    {
+      "condition": "half",
+      "seed": 108,
+      "method_order": [
+        "Reactive-ReNeg",
+        "Same-Permit-No-Switch",
+        "Structured-RDINP"
+      ],
+      "tasks": [
+        {
+          "task_id": "t-00",
+          "release_ms": 6,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-01",
+          "release_ms": 34,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-02",
+          "release_ms": 95,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-03",
+          "release_ms": 123,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-04",
+          "release_ms": 189,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-05",
+          "release_ms": 260,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-06",
+          "release_ms": 402,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-07",
+          "release_ms": 521,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-08",
+          "release_ms": 917,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-09",
+          "release_ms": 955,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-10",
+          "release_ms": 1001,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-11",
+          "release_ms": 1077,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-12",
+          "release_ms": 1142,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-13",
+          "release_ms": 1209,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-14",
+          "release_ms": 1368,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-15",
+          "release_ms": 1442,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        }
+      ]
+    },
+    {
+      "condition": "plain",
+      "seed": 108,
+      "method_order": [
+        "Reactive-ReNeg",
+        "Structured-RDINP",
+        "Same-Permit-No-Switch"
+      ],
+      "tasks": [
+        {
+          "task_id": "t-00",
+          "release_ms": 6,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-01",
+          "release_ms": 34,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-02",
+          "release_ms": 95,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-03",
+          "release_ms": 123,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-04",
+          "release_ms": 189,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-05",
+          "release_ms": 260,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-06",
+          "release_ms": 402,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-07",
+          "release_ms": 521,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-08",
+          "release_ms": 917,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-09",
+          "release_ms": 955,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-10",
+          "release_ms": 1001,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-11",
+          "release_ms": 1077,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-12",
+          "release_ms": 1142,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-13",
+          "release_ms": 1209,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-14",
+          "release_ms": 1368,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-15",
+          "release_ms": 1442,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        }
+      ]
+    },
+    {
+      "condition": "dynamic",
+      "seed": 108,
+      "method_order": [
+        "Same-Permit-No-Switch",
+        "Structured-RDINP",
+        "Reactive-ReNeg"
+      ],
+      "tasks": [
+        {
+          "task_id": "t-00",
+          "release_ms": 6,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-01",
+          "release_ms": 34,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-02",
+          "release_ms": 95,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-03",
+          "release_ms": 123,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-04",
+          "release_ms": 189,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-05",
+          "release_ms": 260,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-06",
+          "release_ms": 402,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-07",
+          "release_ms": 521,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-08",
+          "release_ms": 917,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-09",
+          "release_ms": 955,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-10",
+          "release_ms": 1001,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-11",
+          "release_ms": 1077,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-12",
+          "release_ms": 1142,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-13",
+          "release_ms": 1209,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-14",
+          "release_ms": 1368,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-15",
+          "release_ms": 1442,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        }
+      ]
+    },
+    {
+      "condition": "half",
+      "seed": 109,
+      "method_order": [
+        "Same-Permit-No-Switch",
+        "Structured-RDINP",
+        "Reactive-ReNeg"
+      ],
+      "tasks": [
+        {
+          "task_id": "t-00",
+          "release_ms": 6,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-01",
+          "release_ms": 36,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-02",
+          "release_ms": 89,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-03",
+          "release_ms": 122,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-04",
+          "release_ms": 190,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-05",
+          "release_ms": 255,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-06",
+          "release_ms": 407,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-07",
+          "release_ms": 517,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-08",
+          "release_ms": 917,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-09",
+          "release_ms": 948,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-10",
+          "release_ms": 1001,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-11",
+          "release_ms": 1072,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-12",
+          "release_ms": 1149,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-13",
+          "release_ms": 1212,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-14",
+          "release_ms": 1365,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-15",
+          "release_ms": 1443,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        }
+      ]
+    },
+    {
+      "condition": "dynamic",
+      "seed": 109,
+      "method_order": [
+        "Same-Permit-No-Switch",
+        "Reactive-ReNeg",
+        "Structured-RDINP"
+      ],
+      "tasks": [
+        {
+          "task_id": "t-00",
+          "release_ms": 6,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-01",
+          "release_ms": 36,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-02",
+          "release_ms": 89,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-03",
+          "release_ms": 122,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-04",
+          "release_ms": 190,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-05",
+          "release_ms": 255,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-06",
+          "release_ms": 407,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-07",
+          "release_ms": 517,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-08",
+          "release_ms": 917,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-09",
+          "release_ms": 948,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-10",
+          "release_ms": 1001,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-11",
+          "release_ms": 1072,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-12",
+          "release_ms": 1149,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-13",
+          "release_ms": 1212,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-14",
+          "release_ms": 1365,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-15",
+          "release_ms": 1443,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        }
+      ]
+    },
+    {
+      "condition": "plain",
+      "seed": 109,
+      "method_order": [
+        "Reactive-ReNeg",
+        "Same-Permit-No-Switch",
+        "Structured-RDINP"
+      ],
+      "tasks": [
+        {
+          "task_id": "t-00",
+          "release_ms": 6,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-01",
+          "release_ms": 36,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-02",
+          "release_ms": 89,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-03",
+          "release_ms": 122,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-04",
+          "release_ms": 190,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-05",
+          "release_ms": 255,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-06",
+          "release_ms": 407,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-07",
+          "release_ms": 517,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-08",
+          "release_ms": 917,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-09",
+          "release_ms": 948,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-10",
+          "release_ms": 1001,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-11",
+          "release_ms": 1072,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-12",
+          "release_ms": 1149,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-13",
+          "release_ms": 1212,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-14",
+          "release_ms": 1365,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-15",
+          "release_ms": 1443,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        }
+      ]
+    },
+    {
+      "condition": "dynamic",
+      "seed": 110,
+      "method_order": [
+        "Structured-RDINP",
+        "Reactive-ReNeg",
+        "Same-Permit-No-Switch"
+      ],
+      "tasks": [
+        {
+          "task_id": "t-00",
+          "release_ms": 1,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-01",
+          "release_ms": 34,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-02",
+          "release_ms": 89,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-03",
+          "release_ms": 122,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-04",
+          "release_ms": 191,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-05",
+          "release_ms": 258,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-06",
+          "release_ms": 403,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-07",
+          "release_ms": 521,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-08",
+          "release_ms": 922,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-09",
+          "release_ms": 951,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-10",
+          "release_ms": 1001,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-11",
+          "release_ms": 1073,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-12",
+          "release_ms": 1149,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-13",
+          "release_ms": 1212,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-14",
+          "release_ms": 1368,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-15",
+          "release_ms": 1447,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        }
+      ]
+    },
+    {
+      "condition": "plain",
+      "seed": 110,
+      "method_order": [
+        "Same-Permit-No-Switch",
+        "Structured-RDINP",
+        "Reactive-ReNeg"
+      ],
+      "tasks": [
+        {
+          "task_id": "t-00",
+          "release_ms": 1,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-01",
+          "release_ms": 34,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-02",
+          "release_ms": 89,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-03",
+          "release_ms": 122,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-04",
+          "release_ms": 191,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-05",
+          "release_ms": 258,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-06",
+          "release_ms": 403,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-07",
+          "release_ms": 521,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-08",
+          "release_ms": 922,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-09",
+          "release_ms": 951,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-10",
+          "release_ms": 1001,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-11",
+          "release_ms": 1073,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-12",
+          "release_ms": 1149,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-13",
+          "release_ms": 1212,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-14",
+          "release_ms": 1368,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-15",
+          "release_ms": 1447,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        }
+      ]
+    },
+    {
+      "condition": "half",
+      "seed": 110,
+      "method_order": [
+        "Same-Permit-No-Switch",
+        "Reactive-ReNeg",
+        "Structured-RDINP"
+      ],
+      "tasks": [
+        {
+          "task_id": "t-00",
+          "release_ms": 1,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-01",
+          "release_ms": 34,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-02",
+          "release_ms": 89,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-03",
+          "release_ms": 122,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-04",
+          "release_ms": 191,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-05",
+          "release_ms": 258,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-06",
+          "release_ms": 403,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-07",
+          "release_ms": 521,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-08",
+          "release_ms": 922,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-09",
+          "release_ms": 951,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-10",
+          "release_ms": 1001,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-11",
+          "release_ms": 1073,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-12",
+          "release_ms": 1149,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-13",
+          "release_ms": 1212,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-14",
+          "release_ms": 1368,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-15",
+          "release_ms": 1447,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        }
+      ]
+    },
+    {
+      "condition": "dynamic",
+      "seed": 111,
+      "method_order": [
+        "Structured-RDINP",
+        "Same-Permit-No-Switch",
+        "Reactive-ReNeg"
+      ],
+      "tasks": [
+        {
+          "task_id": "t-00",
+          "release_ms": 6,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-01",
+          "release_ms": 33,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-02",
+          "release_ms": 90,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-03",
+          "release_ms": 117,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-04",
+          "release_ms": 186,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-05",
+          "release_ms": 258,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-06",
+          "release_ms": 407,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-07",
+          "release_ms": 520,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-08",
+          "release_ms": 917,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-09",
+          "release_ms": 954,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-10",
+          "release_ms": 995,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-11",
+          "release_ms": 1071,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-12",
+          "release_ms": 1145,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-13",
+          "release_ms": 1209,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-14",
+          "release_ms": 1371,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-15",
+          "release_ms": 1447,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        }
+      ]
+    },
+    {
+      "condition": "half",
+      "seed": 111,
+      "method_order": [
+        "Structured-RDINP",
+        "Reactive-ReNeg",
+        "Same-Permit-No-Switch"
+      ],
+      "tasks": [
+        {
+          "task_id": "t-00",
+          "release_ms": 6,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-01",
+          "release_ms": 33,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-02",
+          "release_ms": 90,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-03",
+          "release_ms": 117,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-04",
+          "release_ms": 186,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-05",
+          "release_ms": 258,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-06",
+          "release_ms": 407,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-07",
+          "release_ms": 520,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-08",
+          "release_ms": 917,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-09",
+          "release_ms": 954,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-10",
+          "release_ms": 995,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-11",
+          "release_ms": 1071,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-12",
+          "release_ms": 1145,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-13",
+          "release_ms": 1209,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-14",
+          "release_ms": 1371,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-15",
+          "release_ms": 1447,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        }
+      ]
+    },
+    {
+      "condition": "plain",
+      "seed": 111,
+      "method_order": [
+        "Same-Permit-No-Switch",
+        "Reactive-ReNeg",
+        "Structured-RDINP"
+      ],
+      "tasks": [
+        {
+          "task_id": "t-00",
+          "release_ms": 6,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-01",
+          "release_ms": 33,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-02",
+          "release_ms": 90,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-03",
+          "release_ms": 117,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-04",
+          "release_ms": 186,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-05",
+          "release_ms": 258,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-06",
+          "release_ms": 407,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-07",
+          "release_ms": 520,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-08",
+          "release_ms": 917,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-09",
+          "release_ms": 954,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-10",
+          "release_ms": 995,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-11",
+          "release_ms": 1071,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-12",
+          "release_ms": 1145,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-13",
+          "release_ms": 1209,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-14",
+          "release_ms": 1371,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-15",
+          "release_ms": 1447,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        }
+      ]
+    },
+    {
+      "condition": "plain",
+      "seed": 112,
+      "method_order": [
+        "Structured-RDINP",
+        "Reactive-ReNeg",
+        "Same-Permit-No-Switch"
+      ],
+      "tasks": [
+        {
+          "task_id": "t-00",
+          "release_ms": 2,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-01",
+          "release_ms": 31,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-02",
+          "release_ms": 94,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-03",
+          "release_ms": 121,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-04",
+          "release_ms": 186,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-05",
+          "release_ms": 256,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-06",
+          "release_ms": 403,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-07",
+          "release_ms": 519,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-08",
+          "release_ms": 921,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-09",
+          "release_ms": 951,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-10",
+          "release_ms": 1001,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-11",
+          "release_ms": 1076,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-12",
+          "release_ms": 1147,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-13",
+          "release_ms": 1212,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-14",
+          "release_ms": 1368,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-15",
+          "release_ms": 1443,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        }
+      ]
+    },
+    {
+      "condition": "half",
+      "seed": 112,
+      "method_order": [
+        "Structured-RDINP",
+        "Same-Permit-No-Switch",
+        "Reactive-ReNeg"
+      ],
+      "tasks": [
+        {
+          "task_id": "t-00",
+          "release_ms": 2,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-01",
+          "release_ms": 31,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-02",
+          "release_ms": 94,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-03",
+          "release_ms": 121,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-04",
+          "release_ms": 186,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-05",
+          "release_ms": 256,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-06",
+          "release_ms": 403,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-07",
+          "release_ms": 519,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-08",
+          "release_ms": 921,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-09",
+          "release_ms": 951,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-10",
+          "release_ms": 1001,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-11",
+          "release_ms": 1076,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-12",
+          "release_ms": 1147,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-13",
+          "release_ms": 1212,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-14",
+          "release_ms": 1368,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-15",
+          "release_ms": 1443,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        }
+      ]
+    },
+    {
+      "condition": "dynamic",
+      "seed": 112,
+      "method_order": [
+        "Reactive-ReNeg",
+        "Structured-RDINP",
+        "Same-Permit-No-Switch"
+      ],
+      "tasks": [
+        {
+          "task_id": "t-00",
+          "release_ms": 2,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-01",
+          "release_ms": 31,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-02",
+          "release_ms": 94,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-03",
+          "release_ms": 121,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-04",
+          "release_ms": 186,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-05",
+          "release_ms": 256,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-06",
+          "release_ms": 403,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-07",
+          "release_ms": 519,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-08",
+          "release_ms": 921,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-09",
+          "release_ms": 951,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-10",
+          "release_ms": 1001,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-11",
+          "release_ms": 1076,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-12",
+          "release_ms": 1147,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-13",
+          "release_ms": 1212,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-14",
+          "release_ms": 1368,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-15",
+          "release_ms": 1443,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        }
+      ]
+    },
+    {
+      "condition": "plain",
+      "seed": 113,
+      "method_order": [
+        "Structured-RDINP",
+        "Same-Permit-No-Switch",
+        "Reactive-ReNeg"
+      ],
+      "tasks": [
+        {
+          "task_id": "t-00",
+          "release_ms": 0,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-01",
+          "release_ms": 29,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-02",
+          "release_ms": 91,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-03",
+          "release_ms": 121,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-04",
+          "release_ms": 187,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-05",
+          "release_ms": 261,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-06",
+          "release_ms": 404,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-07",
+          "release_ms": 517,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-08",
+          "release_ms": 915,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-09",
+          "release_ms": 953,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-10",
+          "release_ms": 999,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-11",
+          "release_ms": 1073,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-12",
+          "release_ms": 1144,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-13",
+          "release_ms": 1208,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-14",
+          "release_ms": 1367,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-15",
+          "release_ms": 1447,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        }
+      ]
+    },
+    {
+      "condition": "dynamic",
+      "seed": 113,
+      "method_order": [
+        "Reactive-ReNeg",
+        "Same-Permit-No-Switch",
+        "Structured-RDINP"
+      ],
+      "tasks": [
+        {
+          "task_id": "t-00",
+          "release_ms": 0,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-01",
+          "release_ms": 29,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-02",
+          "release_ms": 91,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-03",
+          "release_ms": 121,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-04",
+          "release_ms": 187,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-05",
+          "release_ms": 261,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-06",
+          "release_ms": 404,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-07",
+          "release_ms": 517,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-08",
+          "release_ms": 915,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-09",
+          "release_ms": 953,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-10",
+          "release_ms": 999,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-11",
+          "release_ms": 1073,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-12",
+          "release_ms": 1144,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-13",
+          "release_ms": 1208,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-14",
+          "release_ms": 1367,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-15",
+          "release_ms": 1447,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        }
+      ]
+    },
+    {
+      "condition": "half",
+      "seed": 113,
+      "method_order": [
+        "Reactive-ReNeg",
+        "Structured-RDINP",
+        "Same-Permit-No-Switch"
+      ],
+      "tasks": [
+        {
+          "task_id": "t-00",
+          "release_ms": 0,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-01",
+          "release_ms": 29,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-02",
+          "release_ms": 91,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-03",
+          "release_ms": 121,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-04",
+          "release_ms": 187,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-05",
+          "release_ms": 261,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-06",
+          "release_ms": 404,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-07",
+          "release_ms": 517,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-08",
+          "release_ms": 915,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-09",
+          "release_ms": 953,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-10",
+          "release_ms": 999,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-11",
+          "release_ms": 1073,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-12",
+          "release_ms": 1144,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-13",
+          "release_ms": 1208,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-14",
+          "release_ms": 1367,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-15",
+          "release_ms": 1447,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        }
+      ]
+    },
+    {
+      "condition": "half",
+      "seed": 114,
+      "method_order": [
+        "Reactive-ReNeg",
+        "Same-Permit-No-Switch",
+        "Structured-RDINP"
+      ],
+      "tasks": [
+        {
+          "task_id": "t-00",
+          "release_ms": 1,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-01",
+          "release_ms": 30,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-02",
+          "release_ms": 89,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-03",
+          "release_ms": 124,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-04",
+          "release_ms": 187,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-05",
+          "release_ms": 256,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-06",
+          "release_ms": 403,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-07",
+          "release_ms": 517,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-08",
+          "release_ms": 922,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-09",
+          "release_ms": 953,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-10",
+          "release_ms": 996,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-11",
+          "release_ms": 1071,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-12",
+          "release_ms": 1142,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-13",
+          "release_ms": 1210,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-14",
+          "release_ms": 1369,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-15",
+          "release_ms": 1446,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        }
+      ]
+    },
+    {
+      "condition": "plain",
+      "seed": 114,
+      "method_order": [
+        "Reactive-ReNeg",
+        "Structured-RDINP",
+        "Same-Permit-No-Switch"
+      ],
+      "tasks": [
+        {
+          "task_id": "t-00",
+          "release_ms": 1,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-01",
+          "release_ms": 30,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-02",
+          "release_ms": 89,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-03",
+          "release_ms": 124,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-04",
+          "release_ms": 187,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-05",
+          "release_ms": 256,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-06",
+          "release_ms": 403,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-07",
+          "release_ms": 517,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-08",
+          "release_ms": 922,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-09",
+          "release_ms": 953,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-10",
+          "release_ms": 996,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-11",
+          "release_ms": 1071,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-12",
+          "release_ms": 1142,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-13",
+          "release_ms": 1210,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-14",
+          "release_ms": 1369,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-15",
+          "release_ms": 1446,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        }
+      ]
+    },
+    {
+      "condition": "dynamic",
+      "seed": 114,
+      "method_order": [
+        "Same-Permit-No-Switch",
+        "Structured-RDINP",
+        "Reactive-ReNeg"
+      ],
+      "tasks": [
+        {
+          "task_id": "t-00",
+          "release_ms": 1,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-01",
+          "release_ms": 30,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-02",
+          "release_ms": 89,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-03",
+          "release_ms": 124,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-04",
+          "release_ms": 187,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-05",
+          "release_ms": 256,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-06",
+          "release_ms": 403,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-07",
+          "release_ms": 517,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-08",
+          "release_ms": 922,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-09",
+          "release_ms": 953,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-10",
+          "release_ms": 996,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-11",
+          "release_ms": 1071,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-12",
+          "release_ms": 1142,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-13",
+          "release_ms": 1210,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-14",
+          "release_ms": 1369,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-15",
+          "release_ms": 1446,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        }
+      ]
+    },
+    {
+      "condition": "half",
+      "seed": 115,
+      "method_order": [
+        "Same-Permit-No-Switch",
+        "Structured-RDINP",
+        "Reactive-ReNeg"
+      ],
+      "tasks": [
+        {
+          "task_id": "t-00",
+          "release_ms": 6,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-01",
+          "release_ms": 32,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-02",
+          "release_ms": 91,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-03",
+          "release_ms": 123,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-04",
+          "release_ms": 191,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-05",
+          "release_ms": 257,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-06",
+          "release_ms": 408,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-07",
+          "release_ms": 519,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-08",
+          "release_ms": 920,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-09",
+          "release_ms": 948,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-10",
+          "release_ms": 995,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-11",
+          "release_ms": 1074,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-12",
+          "release_ms": 1148,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-13",
+          "release_ms": 1212,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-14",
+          "release_ms": 1372,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-15",
+          "release_ms": 1446,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        }
+      ]
+    },
+    {
+      "condition": "dynamic",
+      "seed": 115,
+      "method_order": [
+        "Same-Permit-No-Switch",
+        "Reactive-ReNeg",
+        "Structured-RDINP"
+      ],
+      "tasks": [
+        {
+          "task_id": "t-00",
+          "release_ms": 6,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-01",
+          "release_ms": 32,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-02",
+          "release_ms": 91,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-03",
+          "release_ms": 123,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-04",
+          "release_ms": 191,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-05",
+          "release_ms": 257,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-06",
+          "release_ms": 408,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-07",
+          "release_ms": 519,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-08",
+          "release_ms": 920,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-09",
+          "release_ms": 948,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-10",
+          "release_ms": 995,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-11",
+          "release_ms": 1074,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-12",
+          "release_ms": 1148,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-13",
+          "release_ms": 1212,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-14",
+          "release_ms": 1372,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-15",
+          "release_ms": 1446,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        }
+      ]
+    },
+    {
+      "condition": "plain",
+      "seed": 115,
+      "method_order": [
+        "Reactive-ReNeg",
+        "Same-Permit-No-Switch",
+        "Structured-RDINP"
+      ],
+      "tasks": [
+        {
+          "task_id": "t-00",
+          "release_ms": 6,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-01",
+          "release_ms": 32,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-02",
+          "release_ms": 91,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-03",
+          "release_ms": 123,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-04",
+          "release_ms": 191,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-05",
+          "release_ms": 257,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-06",
+          "release_ms": 408,
+          "terminal": 0,
+          "epoch_window": 0,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-07",
+          "release_ms": 519,
+          "terminal": 1,
+          "epoch_window": 0,
+          "image": "astronaut.png"
+        },
+        {
+          "task_id": "t-08",
+          "release_ms": 920,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-09",
+          "release_ms": 948,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-10",
+          "release_ms": 995,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-11",
+          "release_ms": 1074,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "coffee.png"
+        },
+        {
+          "task_id": "t-12",
+          "release_ms": 1148,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-13",
+          "release_ms": 1212,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-14",
+          "release_ms": 1372,
+          "terminal": 0,
+          "epoch_window": 1,
+          "image": "camera.png"
+        },
+        {
+          "task_id": "t-15",
+          "release_ms": 1446,
+          "terminal": 1,
+          "epoch_window": 1,
+          "image": "camera.png"
+        }
+      ]
+    }
+  ]
+}

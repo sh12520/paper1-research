@@ -2,6 +2,8 @@
 
 2026-11-28，GOAL-1 完成两阶段实验与中文小论文初稿。Step 1 保留 810 组仿真配对，Step 2 完成会话级多档许可的 12 组真实协议配对。400 ms 工况的平均净效用差为 +0.0040，探索性区间跨零，安全验收 6/6。按预定门禁已流转到 Step 3。扩展至 GOAL-2 由作者另行确认。[Step 2 结果](../rdinp/experiments/permit-prototype/evidence/step2-20261128-r01/RESULTS.md) · [中文初稿](../rdinp/experiments/permit-prototype/paper/RDINP_中文小论文初稿.md) · [Word 阅读版](../rdinp/experiments/permit-prototype/paper/RDINP_中文小论文初稿.docx) · [现行 GOAL](proposals/GOAL.md)
 
+16 个新种子的本机补测已完成，每法 768 项释放任务。动态降容的效用差为 +0.03708，95% 区间不跨零。持续降半和总体区间跨零，未达到两条受扰轨迹共同获益的判据。中文论文已按控制代价与适用边界收窄。 [补测报告](../rdinp/experiments/permit-prototype/evidence/step2-expansion-20261128-r01/RESULTS.md)
+
 ## 本阶段的复用入口
 
 - 网络侧按 [5G-LENA 前传容量事件](../archive/genspace/PAPER1-PROBLEM-BASELINE-RESET/native_replay/OptimizeRBs/capacity-events.csv)重放容量变化。无线突发丢包和抖动另行建模并标明参数。

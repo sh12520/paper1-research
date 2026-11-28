@@ -4,7 +4,7 @@
 
 ## RDINP 主线
 
-Step 2 的会话许可实测、五类问题及门禁见 [原型实测报告](../rdinp/experiments/permit-prototype/evidence/step2-20261128-r01/RESULTS.md)。四组仿真对照、修正复算和快切归因见 [Step 1 复核报告](../rdinp/experiments/structured-fast-slow/STEP1_REVIEW.md)。下表供核对开题中的前期数据与已封存的原型和诊断。
+最新会话许可的三组配对、超期定位及效用区间见[16 种子补测](../rdinp/experiments/permit-prototype/evidence/step2-expansion-20261128-r01/RESULTS.md)。初次 Step 2 的会话许可实测及门禁见 [原型实测报告](../rdinp/experiments/permit-prototype/evidence/step2-20261128-r01/RESULTS.md)。四组仿真对照、修正复算和快切归因见 [Step 1 复核报告](../rdinp/experiments/structured-fast-slow/STEP1_REVIEW.md)。下表供核对开题中的前期数据与已封存的原型和诊断。
 
 | 要核查的结论 | 成立范围及状态 | 从报告到记录 |
 | --- | --- | --- |

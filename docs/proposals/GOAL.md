@@ -11,6 +11,8 @@
 3. **Step 2 原型与实测门禁。** 作者已授权连续推进。独立版本实现会话租期、多档许可、即时准入和跨代际去重。在固定 400 ms 配对任务上，平均净效用差 +0.0040，六项安全验收通过，进入 Step 3。[原型规范](../../rdinp/protocol/permit-v1/README.md) · [原型实测](../../rdinp/experiments/permit-prototype/evidence/step2-20261128-r01/RESULTS.md)
 4. **Step 3 中文初稿与复现。** 论文分开陈述仿真和真实协议实测。主要实测效应的探索性配对区间跨零，保留失期样本和分工况结果。[中文初稿](../../rdinp/experiments/permit-prototype/paper/RDINP_中文小论文初稿.md) · [复现入口](../../rdinp/experiments/permit-prototype/README.md)
 
+5. **16 种子补测与定稿。** 完成三种固定链路和三种同许可策略的配对。动态降容的效用差区间为正，持续降半仍跨零，未达到两条受扰链路均获益的判据。定稿聚焦控制成本、条件切档和回退边界，并保留两轮试验原始结果。[补测报告](../../rdinp/experiments/permit-prototype/evidence/step2-expansion-20261128-r01/RESULTS.md)
+
 ## 已冻结的原 G1-A 支线
 
 原固定公开回退点的单机取消诊断保留历史原判 `INCONCLUSIVE_REQUIRES_MANUAL_REVIEW`、原判定规则和封存记录。作者已结束该支线的后续验证。私有提前放弃与 HTTP CANCEL、SQLite 释槽尾段及 Caddy 在途排空留作历史边界材料。原目标文本可在 `b560fa20` 查看。 [原 G1-A 判定](../../rdinp/experiments/durable-worker/G1A_DECISION_REPORT.md) · [原证据包说明](../../rdinp/experiments/durable-worker/evidence/g1a-20261128/README.md)

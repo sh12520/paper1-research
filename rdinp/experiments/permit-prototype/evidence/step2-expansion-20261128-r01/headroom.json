@@ -1,0 +1,14 @@
+[
+  {
+    "input_tier": "light",
+    "light_adopted": 9,
+    "measured_headroom_p95_ms": 73.22406000000001,
+    "n": 9
+  },
+  {
+    "input_tier": "main",
+    "light_adopted": 6,
+    "measured_headroom_p95_ms": -55.0,
+    "n": 9
+  }
+]

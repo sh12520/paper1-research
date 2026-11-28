@@ -1,0 +1,95 @@
+{
+  "scope": "signatures, durable task effects, independent loopback authority, controlled receipt faults",
+  "fixture_input_sha256": "427805e7e1c9dc54a4459cf1c05c4ca1dce3deed673030327e7014c2dc7f697c",
+  "source_sha256": {
+    "protocol/permit-v1/permit.py": "8f04f1b595402e0ad81d4f8cae0ddd39fc4d4db6b9e7933dd1d20c0a51fe5dc8",
+    "protocol/permit-v1/permit_guarded.py": "d9e8680f33fc4c0ce3337781f09b294fb82701a346b744d2280f1003073ead51",
+    "protocol/permit-v1/permit_server.py": "d67b7e04a8280d94b9327a436fc5d1f2929a74c9f85642c292cd66f6fa6e54ac",
+    "protocol/permit-v1/permit_wire.py": "b53f7601b1d4b7fb7b2ae26a468abaca5b267df9c651ff3ee99f045283b703af",
+    "protocol/permit-v1/permit.schema.json": "3b8175d483a1e593cb05acbbbd7ff039088f8f23ee6f868eb946137819d09b37",
+    "protocol/c2/contracts.py": "d8a656b0625b04777a472b5294fbddc9ee789f1955ef989b05bd9b9ead2c0750",
+    "protocol/c2/crypto.py": "6bf23f424e36049179a1c3893107046c8f450dbd0e44b262a2a39447b73289cd",
+    "protocol/c2/trust.schema.json": "40d2ad79d03d6aa93127179195f039afcb9c3e42d23411bb5dcffe3235bcb04b",
+    "experiments/service-worker/image_workload.py": "d1131ae5263e5b757693e9893fe3e455fa09c14ebe9f90ddf403c5fe7e72a545",
+    "experiments/permit-prototype/check_protocol.py": "94eab6a4c0e85f05ee869fc3447d944b03d6dd014f09c3be751f22202fbd3ca5",
+    "experiments/permit-prototype/adoption.py": "36b78d9d5fedf106b16e697a5dd8195f969eb9acb56c8691ba9b724f6644f711"
+  },
+  "source_unchanged": true,
+  "python": "3.11.0",
+  "clock": "perf_counter_ns (shared local host)",
+  "deadline_ms": 400,
+  "local_reserve_ms": 55,
+  "status": "PASS",
+  "expected_cases": 6,
+  "cases": [
+    {
+      "case": "clean_control",
+      "status": "PASS",
+      "accepted": true,
+      "worker_starts": 1,
+      "effects": 1
+    },
+    {
+      "case": "receipt_lost",
+      "status": "PASS",
+      "faulted_receipt_bytes": 1833,
+      "late_valid_tokens_observed": 0,
+      "generation_after_follow_up_issue": 2,
+      "fallback_adopted_ms": 349.0582,
+      "edge_worker_starts": 0,
+      "edge_effects": 0
+    },
+    {
+      "case": "receipt_delayed",
+      "status": "PASS",
+      "faulted_receipt_bytes": 1836,
+      "late_valid_tokens_observed": 1,
+      "generation_after_follow_up_issue": 2,
+      "fallback_adopted_ms": 354.2354,
+      "edge_worker_starts": 0,
+      "edge_effects": 0
+    },
+    {
+      "case": "late_result",
+      "status": "PASS",
+      "signed_result_delivered_ms": 512.7029,
+      "fallback_adopted_ms": 349.1448,
+      "late_rejections": 1,
+      "effect_count": 1,
+      "guard": {
+        "late": 1
+      }
+    },
+    {
+      "case": "old_generation_result",
+      "status": "PASS",
+      "prior_generation": 1,
+      "current_generation": 2,
+      "signed_result_presentation_ms": 65.8214,
+      "stale_generation_rejections": 1,
+      "effect_count": 1,
+      "guard": {
+        "old_generation": 1
+      }
+    },
+    {
+      "case": "duplicate_commit_across_renewal",
+      "status": "PASS",
+      "same_generation_statuses": [
+        "RESULT",
+        "REJECT"
+      ],
+      "renewed_duplicate_status": "REJECT",
+      "worker_starts_for_reused_id": 1,
+      "effects_for_reused_id": 1,
+      "duplicate_adoption_rejections": 1,
+      "guard": {
+        "adopted": 1,
+        "duplicate": 1
+      },
+      "fresh_task_under_renewed_permit": "RESULT"
+    }
+  ],
+  "old_generation_pollution": 0,
+  "duplicate_effects": 0
+}

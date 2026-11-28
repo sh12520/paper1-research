@@ -2,12 +2,14 @@
 
 我的硕士论文题目为《面向6G智能体网络的限时意图协商与服务履约保障机制研究》，导师选题为《面向6G智能体网络的意图协商协议与机制设计》。小论文聚焦《面向动态无线与边缘算力的结构化限时意图协商与快慢环履约机制》。请以通信网络和分布式系统研究者的视角，基于随附仓库快照独立审阅。优先判断现有证据能支持什么、哪一个补充对照最可能改变判断，以及这条主线是否值得继续。欢迎指出问题假设或贡献本身不成立的情形。本轮请只读审阅。
 
+已根据首轮专家建议完成 16 新种子补测。动态降容效用差为 +0.03708，95% 区间 [+0.01258, +0.06320]；持续降半区间跨零，整轮未达到双压力轨迹共同获益的事前判据。最新小论文据此聚焦控制代价与适用边界。下文保留首轮证据和原审阅问题，供追溯该次补测决策。 [16 种子补测](../rdinp/experiments/permit-prototype/evidence/step2-expansion-20261128-r01/RESULTS.md)
+
 ## 阅读入口
 
 | 顺序 | 材料 | 核对重点 |
 | --- | --- | --- |
 | 1 | [中文小论文初稿](../rdinp/experiments/permit-prototype/paper/RDINP_中文小论文初稿.md) · [Word 阅读版](../rdinp/experiments/permit-prototype/paper/RDINP_中文小论文初稿.docx) | 论文主张、模型、图表与局限 |
-| 2 | [Step 2 配对实测](../rdinp/experiments/permit-prototype/evidence/step2-20261128-r01/RESULTS.md) · [门禁与分工况结果](../rdinp/experiments/permit-prototype/evidence/step2-20261128-r01/gate.json) | 400 ms 数据、分母、区间及安全用例 |
+| 2 | [16 种子补测](../rdinp/experiments/permit-prototype/evidence/step2-expansion-20261128-r01/RESULTS.md) · [首次 Step 2 配对实测](../rdinp/experiments/permit-prototype/evidence/step2-20261128-r01/RESULTS.md) · [门禁与分工况结果](../rdinp/experiments/permit-prototype/evidence/step2-20261128-r01/gate.json) | 400 ms 数据、分母、区间及安全用例 |
 | 3 | [会话许可协议规格](../rdinp/protocol/permit-v1/README.md) · [边缘准入与选择实现](../rdinp/protocol/permit-v1/permit_server.py) | 两组共享的权限、观测、入队及签名确认差别 |
 | 4 | [Step 1 修正复算与快切归因](../rdinp/experiments/structured-fast-slow/STEP1_REVIEW.md) | 四组仿真、同菜单归因与链路模型边界 |
 | 5 | [现行研究目标](proposals/GOAL.md) · [硕士开题评审版](proposals/RDINP_硕士学位论文开题报告_评审版.md) | 小论文范围与开题需要按现有证据调整之处 |

@@ -6,11 +6,11 @@
 | --- | --- | --- |
 | 1 | [研究目标](GOAL.md) | 动态无线与边缘算力下的结构化限时协商与快慢环履约 |
 | 2 | [中文小论文初稿](../../rdinp/experiments/permit-prototype/paper/RDINP_中文小论文初稿.md) | 当前论文主张、图表与证据边界 |
-| 3 | [Step 2 配对实测](../../rdinp/experiments/permit-prototype/evidence/step2-20261128-r01/RESULTS.md) | 真实协议成本、400 ms 配对效用、探索区间和安全测试 |
+| 3 | [16 种子原型补测](../../rdinp/experiments/permit-prototype/evidence/step2-expansion-20261128-r01/RESULTS.md) · [首次 Step 2 配对实测](../../rdinp/experiments/permit-prototype/evidence/step2-20261128-r01/RESULTS.md) | 真实协议成本、400 ms 配对效用、探索区间和安全测试 |
 | 4 | [Step 1 修正复算与归因](../../rdinp/experiments/structured-fast-slow/STEP1_REVIEW.md) | 配对仿真、紧截止期下的效用差值与同菜单对照 |
 | 5 | [硕士开题报告评审版](RDINP_硕士学位论文开题报告_评审版.md) | 既有题目、研究基础与待按新主线修改的实验计划 |
 
-从[原型复现入口](../../rdinp/experiments/permit-prototype/README.md)核对实测口径和运行步骤。[原版冻结复现包](../../rdinp/experiments/permit-prototype/paper/RDINP_GOAL1_REPRO_20261128.zip)随 Git 快照交付，包含源码、证据、初稿与图表。仿真原始输出只收录 [Step 1 r02 五份封存输入](../../rdinp/experiments/structured-fast-slow/runs/step1-20261128-r02/COMPLETE.json)，后续临时运行仍遵循 Git 忽略规则。从仓库根可生成一份新的 ZIP，不启动实验。
+从[原型复现入口](../../rdinp/experiments/permit-prototype/README.md)核对实测口径和运行步骤。[原版冻结复现包](../../rdinp/experiments/permit-prototype/paper/RDINP_GOAL1_REPRO_20261128.zip)随 Git 快照交付，对应首次四种子实测及当时的论文。16 种子补测的数据、重放入口和校验见[补测报告](../../rdinp/experiments/permit-prototype/evidence/step2-expansion-20261128-r01/RESULTS.md)。仿真原始输出只收录 [Step 1 r02 五份封存输入](../../rdinp/experiments/structured-fast-slow/runs/step1-20261128-r02/COMPLETE.json)，后续临时运行仍遵循 Git 忽略规则。需要从源码重建原版包，可在原交付提交 `666a39fa` 的检出中执行以下命令。
 
 ~~~bash
 python -B rdinp/experiments/permit-prototype/freeze_bundle.py --paper rdinp/experiments/permit-prototype/paper --out RDINP_GOAL1_REPRO_20261128.zip
