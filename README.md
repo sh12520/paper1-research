@@ -1,6 +1,6 @@
 # 论文 1 研究仓库
 
-RDINP 限时意图协商与边缘服务履约是当前主线。G1-A 已形成[并发配对判定报告](rdinp/experiments/durable-worker/G1A_DECISION_REPORT.md)，下一步待人工决定。
+当前主线是动态无线与边缘算力下的结构化限时意图协商与快慢环履约。已完成[首批四组配对仿真](docs/current-research.md)。原单机 G1-A 已封存，可查[原判定报告](rdinp/experiments/durable-worker/G1A_DECISION_REPORT.md)。
 
 ## 当前主线
 

@@ -1,0 +1,6 @@
+# Run receipts bind the original bytes of these files across operating systems.
+/sim.py -text whitespace=cr-at-eol,-blank-at-eof
+/run.py -text whitespace=cr-at-eol,-blank-at-eof
+/calibrate.py -text whitespace=cr-at-eol
+/calibration.json -text whitespace=cr-at-eol
+/evidence/step1-20261128-r01/plan.json -text whitespace=cr-at-eol

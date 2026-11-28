@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "scenarios": 81,
+  "seed_count": 10,
+  "paired_runs": 810,
+  "method_runs": 3240,
+  "task_method_rows": 301320,
+  "checks": [
+    "artifact digests",
+    "complete grid",
+    "same task identities and input hash",
+    "all-release denominator",
+    "summaries recomputed from task rows",
+    "deadline and generation",
+    "allowed quality tiers and negotiation counts"
+  ]
+}

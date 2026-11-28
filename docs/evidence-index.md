@@ -4,11 +4,11 @@
 
 ## RDINP 主线
 
-优先核对 G1-A 的判定和缺失暴露。需要查开题中的前期数据时，再看后面的原型记录。
+现行四组配对仿真见[当前推进](current-research.md)。下表供核对开题中的前期数据与已封存的原型和诊断。
 
 | 要核查的结论 | 成立范围及状态 | 从报告到记录 |
 | --- | --- | --- |
-| **RDINP G1-A**，共享槽位假设证据不足 | 144 个同机配对。存在分向应用故障和回退，准入 BUSY 为零。人工门禁待确认。 | [判定报告](../rdinp/experiments/durable-worker/G1A_DECISION_REPORT.md) → [配对计划、任务表和机器判定](../rdinp/experiments/durable-worker/evidence/g1a-20261128/README.md) |
+| **RDINP G1-A**，共享槽位假设证据不足 | 144 个同机配对。存在分向应用故障和回退，准入 BUSY 为零。原判定保留，支线已按作者决定封存。 | [判定报告](../rdinp/experiments/durable-worker/G1A_DECISION_REPORT.md) → [配对计划、任务表和机器判定](../rdinp/experiments/durable-worker/evidence/g1a-20261128/README.md) |
 | **RDINP C2**，终端 `UNKNOWN` 可以对应不同的远端提交与配额状态 | 本地受控故障和逻辑账本。资源单位为逻辑配额。 | [首轮复现记录](../archive/genspace/PAPER1_TOPIC_APPROVAL_20261127/首轮实验与复现记录.md) → [协议的承诺与知识状态](../rdinp/protocol/c2/CONTRACT.md) → [复现步骤](../rdinp/docs/REPRODUCE.md) |
 | **RDINP DEV01–03**，本机 worker、持久恢复、过期和旧代际保护 | 受控 CPU、SQLite 和进程故障。余量参数来自试验条件。 | [单任务逐案表](../archive/genspace/PAPER1_TOPIC_APPROVAL_20261127/SERVICE_WORKER_DEV_01/run_20261127-125536/per_case.csv) · [顺序任务逐任务表](../archive/genspace/PAPER1_TOPIC_APPROVAL_20261127/SERVICE_WORKER_DEV_02/run_20261127-130601/per_task.csv) · [执行点报告](../archive/genspace/PAPER1_TOPIC_APPROVAL_20261127/SERVICE_WORKER_DEV_03/执行点保护与场景证据_诊断报告.md) → [逐案写入结果](../archive/genspace/PAPER1_TOPIC_APPROVAL_20261127/SERVICE_WORKER_DEV_03/effect_20261127-134638/summary.json) |
 | **RDINP DEV04**，管理确认、新路由读回、在途旧请求各有可观察时间 | 真实 Caddy 和 HTTP 后端，使用本机受控故障。 | [代理对照报告](../archive/genspace/PAPER1_TOPIC_APPROVAL_20261127/SERVICE_WORKER_DEV_04/业务代理执行对照与下一步证据.md) → [原生条件更新](../archive/genspace/PAPER1_TOPIC_APPROVAL_20261127/SERVICE_WORKER_DEV_04/native_proxy_20261127-135819/summary.json) · [转发延迟](../archive/genspace/PAPER1_TOPIC_APPROVAL_20261127/SERVICE_WORKER_DEV_04/forward_delay_20261127-140016/summary.json) · [在途请求](../archive/genspace/PAPER1_TOPIC_APPROVAL_20261127/SERVICE_WORKER_DEV_04/inflight_agent_01/summary.json) → [发送端检查个案](../archive/genspace/PAPER1_TOPIC_APPROVAL_20261127/SERVICE_WORKER_DEV_04/forward_delay_20261127-140016/sender_check_only/result.json) · [执行点守卫个案](../archive/genspace/PAPER1_TOPIC_APPROVAL_20261127/SERVICE_WORKER_DEV_04/forward_delay_20261127-140016/actuator_gate/result.json) |
