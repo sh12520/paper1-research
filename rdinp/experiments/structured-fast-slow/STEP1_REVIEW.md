@@ -37,3 +37,5 @@
 这样得到的原型验证重点是，在同一份已承诺的菜单里，队列或无线条件变化后能否少一轮交互、按期采用轻量档，且保持回执与代际校验。下一步是否接入正式 RDINP 由作者审阅首轮结果后确认。
 
 [快切效用差图](evidence/step1-attribution-20261128-r02/fast-switch-effect.png) · [四组合汇总](evidence/step1-attribution-20261128-r02/summary.csv) · [配对效应与区间](evidence/step1-attribution-20261128-r02/contrasts.csv)
+
+协议迁移前的证据核对见[四阶段控制面预算复核](STEP1_CONTROL_BUDGET.md)，其中将历史消息大小、旧软件耗时和理想链路计算分开列示。
