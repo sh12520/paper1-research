@@ -6,17 +6,11 @@
 | --- | --- | --- |
 | [`AGENTS.md`](../AGENTS.md) | 面向协作 Agent 的入口与取证方法 | 新会话或交接 |
 | [`docs/`](./) | 状态、[证据索引](evidence-index.md)、[历史经验](research-lessons.md)及[研究关系](research-map.md) | 确定工作范围和资料链 |
-| [`rdinp/`](../rdinp/) | C2 协议、JSON Schema、可运行实现、worker 与代理复现实验 | 运行协议或执行层检查 |
-| [`csods/`](../csods/) | 有限 DSL 合同搜索、方法说明、小型测试 | 审查搜索或复用正确性测试 |
+| [RDINP](../rdinp/README.md) | C2 协议、JSON Schema、边缘 worker 和代理原型 | 复现协议或执行层检查 |
+| [CS-ODS](../csods/README.md) | 有限 DSL 合同搜索、方法说明、小型测试 | 审查搜索或复用正确性测试 |
 | [`literature/`](../literature/) | 核心 BibTeX、来源和 Zotero／Undermind 查找入口 | 引文交叉核对 |
-| [`research/`](../research/) | 并行研究方向、复用工具及跨机交接 | 按方向定位证据或工作流 |
-| [`archive/genspace/`](../archive/genspace/) | CS-ODS、XR 基线、RDINP 近期研究与原始开发记录 | 查原论文、技术报告或逐例输出 |
-| [`archive/rdinp-history/`](../archive/rdinp-history/) | RDINP 老版本交付和证据边界 | 比较协议版本、复核早期结论 |
-| [`archive/v2x-development/`](../archive/v2x-development/) | OPV2V 回放、通信与计算测量、共享计算诊断 | 追溯车路协同数据和缺失证据 |
-| [`archive/reorch/`](../archive/reorch/) | 运行期分组对照、脚本和结论 | 审查动态重分组为何未超过强静态基线 |
-| [`archive/DIRECTORY_INDEX.tsv`](../archive/DIRECTORY_INDEX.tsv) | 可筛选的归档子目录、文件数、字节数 | 缩小到相关实验目录 |
-| [`tools/`](../tools/research_archive_index.py) | 从原归档清单复核或重建目录索引 | 归档有增量时 |
-| [`archive/MANIFEST.tsv`](../archive/MANIFEST.tsv) | 18,790 个原始归档路径及 SHA-256 | 核对具体文件或对象来源 |
+| [研究工具与方向](../research/README.md) | 共享证据核验工具、Agent 技能、并行研究及跨机交接 | 按任务找到验收入口或原机运行说明 |
+| [归档](../archive/README.md) | GENSPACE、RDINP 历史、OPV2V 与 REORCH，含[目录检索表](../archive/DIRECTORY_INDEX.tsv)和[摘要清单](../archive/MANIFEST.tsv) | 追溯原论文、报告、逐例输出和历史执行条件 |
 
 四个归档方向合计约 668 MiB。PILOT、DG-PCE V1 和论文开发比较三批结果共 16,065 份。体量和历史引用限制见[归档说明](../archive/README.md)。
 
@@ -42,7 +36,7 @@ REORCH 是并行的历史路线。其归档报告保留 [`REORCH_GAP_WEAK`](../a
 ```bash
 git clone --filter=blob:none --sparse git@github.com:sh12520/paper1-research.git
 cd paper1-research
-git sparse-checkout set docs literature research rdinp csods
+git sparse-checkout set --cone .agents docs literature research rdinp csods
 ```
 
 从索引选中目录后，可用 `git sparse-checkout add archive/genspace/PAPER1_TOPIC_APPROVAL_20261127` 补取当前档案。只读一份文件时可运行 `git show HEAD:archive/genspace/PILOT_REPORT.md`。完整备份可使用普通克隆，或运行 `git sparse-checkout disable`。

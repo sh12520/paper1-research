@@ -6,7 +6,7 @@
 | --- | --- | --- |
 | 接手论文 1 或核对方向优先级 | [全局当前推进](../../../docs/current-research.md) | 看 [OPV2V 当前判断](../CURRENT.md) 和各路线的授权边界 |
 | 找到数值出处或停止条件 | [OPV2V 证据](../EVIDENCE.md) | 沿报告、结果表和案例 ID 下钻。两条实走路径见 [导航走查](../NAVIGATION_REVIEW.md) |
-| 在另一台机器复核结果 | [Autoresearch 工作台](README.md) | 核验共享封存回执。计算与通信模型的最小复算见 [复现入口](../src/README.md) |
+| 在另一台机器复核结果 | [共享研究工具](../../README.md) | 在 Windows 或 Linux 核验共享封存回执。计算与通信模型的最小复算见 [复现入口](../src/README.md) |
 | 找原机状态或恢复已授权任务 | [本地运行交接](local/README.md) | 核对原项目目录、依赖、原输入哈希与最新回执。原实现见 [执行与归档](WORKFLOW.md) |
 | 让 Agent 按现有流程接续 | [导航技能](../../../.agents/skills/paper1-navigate/SKILL.md) · [harness 技能](../../../.agents/skills/paper1-research-harness/SKILL.md) | 使用 [角色提示模板](protocols/PROMPTS.md) 分开受领、执行和复核 |
 

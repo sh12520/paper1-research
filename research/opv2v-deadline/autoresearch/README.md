@@ -6,15 +6,15 @@
 
 ## 最小验证
 
-Linux、Python 3.10+ 和 GNU `sha256sum`。从仓库根目录运行统一只读检查。
+Windows 和 Linux 均可用 Python 3.10+。从仓库根目录进入[共享研究工具](../../README.md)，选择封存证据核验。
 
-```bash
-python3 -B research/opv2v-deadline/autoresearch/scripts/check_shared_assets.py
+```text
+python -B research/harness.py check opv2v-evidence
 ```
 
-统一入口验过 6 个原机交接文件和 11 个工作流文件的摘要、DAIR 封存回执、R1 一帧四策略包时钟，以及 16 份结果与 18 个截止表单元。本次 Ubuntu Python 3.10.12 实测墙钟 0.20 s、峰值 RSS 22,940 KiB，退出码 0。
+统一入口核对 6 个原机交接文件和 11 个工作流文件的摘要、DAIR 封存回执、R1 一帧四策略包时钟，以及 16 份结果与 18 个截止表单元。同机原接入验证使用 Ubuntu Python 3.10.12，历史墙钟 0.20 s、峰值 RSS 22,940 KiB，退出码 0。
 
-单项回执核对从仓库根目录执行。
+完整原工程的单项回执核对仍使用 Linux harness。从仓库根目录执行。
 
 ```bash
 cd research/opv2v-deadline/autoresearch
