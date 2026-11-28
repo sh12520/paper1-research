@@ -1,17 +1,20 @@
 # 请独立复核 RDINP 开题与 G1-A 后续决策
 
-请以无线通信与分布式系统研究者的视角，继续审阅我的硕士论文选题《面向6G智能体网络的限时意图协商与服务履约保障机制研究》。上一轮参考的是提交 `9f2c0440`，本轮请以 `sh12520/paper1-research` 的 `main@4988acab4cb119898d5ba925f706e2cf801eddec` 为准。RDINP 是开题与小论文的主线。请重点判断小论文应该补测共享槽位假设，收窄到另一个可执行的履约问题，还是暂缓机制研究，先补足业务证据。欢迎挑战现有问题设定和基线。
+请以无线通信与分布式系统研究者的视角，继续审阅我的硕士论文选题《面向6G智能体网络的限时意图协商与服务履约保障机制研究》。上一轮参考的是提交 `9f2c0440`，本轮请以 `sh12520/paper1-research` 的 `main@7b85dc1e878a341d82ff5be4e453014df8ee3608` 为准。RDINP 是开题与小论文的主线。请重点判断小论文应该补测共享槽位假设，收窄到另一个可执行的履约问题，还是暂缓机制研究，先补足业务证据。欢迎挑战现有问题设定和基线。
 
 ## 阅读顺序
 
+先从[开题与研究目标审阅入口](https://github.com/sh12520/paper1-research/blob/main/docs/proposals/README.md)开始。核心审阅对象是 GOAL-1 的后续决策与开题评审版，历史路线按需查证。
+
 | 材料 | 建议核对的内容 |
 | --- | --- |
-| [当前推进](https://github.com/sh12520/paper1-research/blob/4988acab4cb119898d5ba925f706e2cf801eddec/docs/current-research.md) | 本轮变化、人工判定门禁和可选分支 |
-| [G1-A 判定报告](https://github.com/sh12520/paper1-research/blob/4988acab4cb119898d5ba925f706e2cf801eddec/rdinp/experiments/durable-worker/G1A_DECISION_REPORT.md) · [配对计划与逐任务证据](https://github.com/sh12520/paper1-research/blob/4988acab4cb119898d5ba925f706e2cf801eddec/rdinp/experiments/durable-worker/evidence/g1a-20261128/README.md) | 读报告后按需下钻主终点、实际准入、回退与占槽 |
-| [公开回退点的条件论证](https://github.com/sh12520/paper1-research/blob/4988acab4cb119898d5ba925f706e2cf801eddec/rdinp/experiments/durable-worker/PUBLIC_FALLBACK_INFORMATION_LEMMA.md) · [冻结判定协议](https://github.com/sh12520/paper1-research/blob/4988acab4cb119898d5ba925f706e2cf801eddec/rdinp/experiments/durable-worker/G1A_DECISION_PROTOCOL.md) | 核对 B1 已有信息、释槽依据以及原 Go/Pivot 条件 |
-| [开题报告评审版](https://github.com/sh12520/paper1-research/blob/4988acab4cb119898d5ba925f706e2cf801eddec/docs/proposals/RDINP_%E7%A1%95%E5%A3%AB%E5%AD%A6%E4%BD%8D%E8%AE%BA%E6%96%87%E5%BC%80%E9%A2%98%E6%8A%A5%E5%91%8A_%E8%AF%84%E5%AE%A1%E7%89%88.md) · [证据索引](https://github.com/sh12520/paper1-research/blob/4988acab4cb119898d5ba925f706e2cf801eddec/docs/evidence-index.md) | 核对开题目标、前期基础、论断范围和目前仍待验证的假设 |
+| [研究目标与阶段门禁](https://github.com/sh12520/paper1-research/blob/7b85dc1e878a341d82ff5be4e453014df8ee3608/docs/proposals/GOAL.md) | 审查小论文与硕士论文扩展是否衔接，核对待决条件 |
+| [当前推进](https://github.com/sh12520/paper1-research/blob/7b85dc1e878a341d82ff5be4e453014df8ee3608/docs/current-research.md) | 本轮变化、人工判定门禁和可选分支 |
+| [G1-A 判定报告](https://github.com/sh12520/paper1-research/blob/7b85dc1e878a341d82ff5be4e453014df8ee3608/rdinp/experiments/durable-worker/G1A_DECISION_REPORT.md) · [配对计划与逐任务证据](https://github.com/sh12520/paper1-research/blob/7b85dc1e878a341d82ff5be4e453014df8ee3608/rdinp/experiments/durable-worker/evidence/g1a-20261128/README.md) | 读报告后按需下钻主终点、实际准入、回退与占槽 |
+| [公开回退点的条件论证](https://github.com/sh12520/paper1-research/blob/7b85dc1e878a341d82ff5be4e453014df8ee3608/rdinp/experiments/durable-worker/PUBLIC_FALLBACK_INFORMATION_LEMMA.md) · [冻结判定协议](https://github.com/sh12520/paper1-research/blob/7b85dc1e878a341d82ff5be4e453014df8ee3608/rdinp/experiments/durable-worker/G1A_DECISION_PROTOCOL.md) | 核对 B1 已有信息、释槽依据以及原 Go/Pivot 条件 |
+| [开题报告评审版](https://github.com/sh12520/paper1-research/blob/7b85dc1e878a341d82ff5be4e453014df8ee3608/docs/proposals/RDINP_%E7%A1%95%E5%A3%AB%E5%AD%A6%E4%BD%8D%E8%AE%BA%E6%96%87%E5%BC%80%E9%A2%98%E6%8A%A5%E5%91%8A_%E8%AF%84%E5%AE%A1%E7%89%88.md) · [证据索引](https://github.com/sh12520/paper1-research/blob/7b85dc1e878a341d82ff5be4e453014df8ee3608/docs/evidence-index.md) | 核对开题目标、前期基础、论断范围和目前仍待验证的假设 |
 
-需要比较下一步场景时，再看 [DEV04 软件代理对照](https://github.com/sh12520/paper1-research/blob/4988acab4cb119898d5ba925f706e2cf801eddec/archive/genspace/PAPER1_TOPIC_APPROVAL_20261127/SERVICE_WORKER_DEV_04/%E4%B8%9A%E5%8A%A1%E4%BB%A3%E7%90%86%E6%89%A7%E8%A1%8C%E5%AF%B9%E7%85%A7%E4%B8%8E%E4%B8%8B%E4%B8%80%E6%AD%A5%E8%AF%81%E6%8D%AE.md)、[OPV2V 当前判断](https://github.com/sh12520/paper1-research/blob/4988acab4cb119898d5ba925f706e2cf801eddec/research/opv2v-deadline/CURRENT.md) 和 [已核书目](https://github.com/sh12520/paper1-research/blob/4988acab4cb119898d5ba925f706e2cf801eddec/literature/README.md)。仓库为私有。若缺访问权限，请列出最少所需文件。原生事件封存包可按证据目录记录的摘要单独提供。引用结论时，请标明实际读过的文件及版本。
+需要比较下一步场景时，再看 [DEV04 软件代理对照](https://github.com/sh12520/paper1-research/blob/7b85dc1e878a341d82ff5be4e453014df8ee3608/archive/genspace/PAPER1_TOPIC_APPROVAL_20261127/SERVICE_WORKER_DEV_04/%E4%B8%9A%E5%8A%A1%E4%BB%A3%E7%90%86%E6%89%A7%E8%A1%8C%E5%AF%B9%E7%85%A7%E4%B8%8E%E4%B8%8B%E4%B8%80%E6%AD%A5%E8%AF%81%E6%8D%AE.md)、[OPV2V 当前判断](https://github.com/sh12520/paper1-research/blob/7b85dc1e878a341d82ff5be4e453014df8ee3608/research/opv2v-deadline/CURRENT.md) 和 [已核书目](https://github.com/sh12520/paper1-research/blob/7b85dc1e878a341d82ff5be4e453014df8ee3608/literature/README.md)。仓库为私有。若缺访问权限，请列出最少所需文件。原生事件封存包可按证据目录记录的摘要单独提供。引用结论时，请标明实际读过的文件及版本。
 
 ## 本轮要解释的证据
 
@@ -25,7 +28,7 @@
 
 1. **是否值得补测共享槽位。** 名义负载到有效授权的损耗、本地回退队列、以及没有后继准入争用，分别影响了哪个可检验命题？答复请先区分“原夹具下新增通知是否携带必要信息”和“实际出现后继准入争用时是否有可归因损失”。如建议补测，请给出一次最小、可配对的诊断。说明怎样度量有效授权、独立任务的就绪与占槽、回退启动及结果采用，怎样排除同机调度干扰，以及测到什么便应停止。请从可核验的业务负载或故障观测出发，说明参数依据。原 5 个百分点参照和已有判定保留。
 2. **如需收窄，选一个最有希望的履约问题。** 优先审查两条线索。其一是 DEV04 的旧执行者副作用或旧请求排空与新任务采用期限冲突。其二是真实业务上、接收端不可预知的多档质量与回退选择。请为推荐路径给出具体服务主体、SLA 或业务依据、可执行动作、可复现的失败链，以及能合理击败现有设想的强基线。进一步判断因果取消、持久状态重查、租约与代际保护、单边准入或降级是否已足以解决。若主张需要双方交互，请指出只有对方拥有的事实或动作、其过期条件，以及补发消息也需支付的时延与资源成本。允许提出更强的反例或同一 RDINP 主线内的更合适场景。
-3. **如何把结论落到开题和后续行动。** 建议保留开题主线所依赖的哪些已验证事实，改写或暂缓哪些机制主张？频谱资源先落在消息和约束 Schema，首轮实证聚焦边缘算力槽位，动态发现作为可选扩展。请指出开题前最该补的一项业务证据，小论文首个实验的继续条件和停点，以及多主机或无线链路验证放在哪个阶段合适。
+3. **如何把结论落到开题和后续行动。** 建议保留开题主线所依赖的哪些已验证事实，改写或暂缓哪些机制主张？请同时审查 GOAL-1 的验收和 GOAL-2 的扩展边界是否合适。频谱资源先落在消息和约束 Schema，首轮实证聚焦边缘算力槽位，动态发现作为可选扩展。请指出开题前最该补的一项业务证据，小论文首个实验的继续条件和停点，以及多主机或无线链路验证放在哪个阶段合适。
 
 OPV2V 可作为业务候选和单边强对照。当前开发记录尚缺独立任务在共享执行端的并发轨迹。请在取得任务 SLA 和同一任务 ID 的执行、采用、回退记录后再判断能否接入 RDINP。CS-ODS 及其独立确认暂不纳入本轮建议。
 
