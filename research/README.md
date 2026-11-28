@@ -2,6 +2,16 @@
 
 从这里进入共享核验工具、项目技能和跨机交接。课题状态与下一步证据要求见[当前推进](../docs/current-research.md)，历史材料按[全局目录](../docs/research-index.md)查找。
 
+## 工具来源与可用范围
+
+| 资产 | 来源 | 复用内容与入口 | 使用边界 |
+| --- | --- | --- | --- |
+| ResearchGate5 工作包与一键交接包 | 本机保留的五阶段工作包、2026-11-14 Auto Codex 交接包 | 五阶段包供参考阶段检查和反方审阅，交接包用于核对当时的门禁、证据和缺件。原件在本机 `论文1/本地资料/历史交接/ResearchGate5/`。 | 历史模板及状态快照。现行 RDINP 阶段与执行授权按 [GOAL](../docs/proposals/GOAL.md) 和[当前推进](../docs/current-research.md)判断。 |
+| `agents_final_tech` 同伴项目 | OPV2V 工作流记录的封存版本 `e70b222` | 借鉴多层分工、检查点、独立复核和失败归档，见[工作流的来源和判断](opv2v-deadline/autoresearch/WORKFLOW.md#工作流的来源和判断)及[角色提示](opv2v-deadline/autoresearch/protocols/PROMPTS.md)。 | 借鉴流程。原启动器与个人配置随原归档保存。 |
+| OPV2V／DAIR 原机 AutoResearch | 第二台电脑 Agent 的实际运行与交接 | 查阶段调度、GPU 预检、逐帧续跑、封存回执及 systemd 示例。 [原机交接](opv2v-deadline/autoresearch/local/README.md) · [执行与归档](opv2v-deadline/autoresearch/WORKFLOW.md) | 完整推理与续跑依赖原机 Linux、模型、数据、原始回执和现行授权。 |
+| 跨平台共享 Harness | 从远端 Harness 提炼的任务登记、输入摘要、任务锁和回执机制 | 用本页下方的 `list`、`check` 及回执命令。在 Windows 与 Ubuntu 实测通过两项任务的核验、回执和复用。 | 当前登记 OPV2V／DAIR 封存证据及 RDINP G1-A 导出核验。新实验用各方向的执行器和对应授权。 |
+| 仓库 Skills | 远端 Agent 交接，合入后补上跨平台入口 | [`paper1-navigate`](../.agents/skills/paper1-navigate/SKILL.md) 定位状态与证据，[`paper1-research-harness`](../.agents/skills/paper1-research-harness/SKILL.md) 指引核验、预检及已授权续跑。 | 作为项目内的 Agent 操作指南，实际执行按任务清单和当前授权。 |
+
 ## 共享核验入口
 
 在仓库根目录使用 Python 3.10 或更高版本。Windows PowerShell 和 Linux 可运行同一套命令。如果解释器命令为 `python3`，用它替换 `python`。
@@ -28,10 +38,7 @@ python -B research/harness.py verify opv2v-evidence --attempt ATTEMPT_ID
 
 使用本地文件系统保存回执。回执绑定输入摘要、Python 版本和平台，发布时保留已有文件。`verify` 给出记录状态和摘要核验结果，完整事件链和科研结论仍以各研究方向的原始记录为依据。
 
-## 项目技能与原机入口
-
-- 用 [`paper1-navigate`](../.agents/skills/paper1-navigate/SKILL.md) 从研究状态、证据索引下钻到具体运行。
-- 用 [`paper1-research-harness`](../.agents/skills/paper1-research-harness/SKILL.md) 选择共享核验、原机预检或已有授权的续跑。统筹、执行恢复与独立复核可沿用[角色提示](opv2v-deadline/autoresearch/protocols/PROMPTS.md)。
+## 各方向的原机入口
 
 | 方向 | 入口与运行条件 |
 | --- | --- |
