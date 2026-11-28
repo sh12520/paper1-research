@@ -8,6 +8,8 @@
 - The fixture generator creates three small geometric PNGs. It uses familiar filenames solely because the existing runners expect them. Users may provide independently obtained source images via `--assets`.
 - Caddy and Python libraries remain external dependencies. Their own distribution and licensing terms apply. This repository does not bundle those packages, images obtained from others, executables, private keys, or logs.
 
+The [G1-A export](../experiments/durable-worker/evidence/g1a-20261128/README.md) contains a controlled Ubuntu paired study with real CPU work and directional application fault windows. Its export includes task tables and audit metadata. Native event streams remain in the sealed evidence archive.
+
 ## Related sources
 
 Caddy's native ETag checks current scoped content, so this artifact separates current content, authorization epoch, dispatch deadline, and business readback. [Caddy API](https://caddyserver.com/docs/api#concurrent-config-changes)

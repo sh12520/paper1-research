@@ -36,6 +36,10 @@ python -B experiments/durable-worker/probe_supervised_reclaim.py experiments/dur
 
 The interruption probes terminate only child processes they started. They model controlled fault conditions and do not alter OS networking.
 
+## G1-A concurrent trials
+
+The [concurrent study guide](../experiments/durable-worker/CONCURRENT_STUDY_SPEC.md) lists commands from the repository root. Scored paired execution uses Ubuntu and the declared Python dependencies. The [decision evidence](../experiments/durable-worker/evidence/g1a-20261128/README.md) provides the frozen plans, task tables and archive digest for the original runs.
+
 ## Effect fencing and deadline
 
 ```sh

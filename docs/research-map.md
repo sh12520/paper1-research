@@ -4,7 +4,7 @@
 
 RDINP studies conditional bilateral resource commitment under message faults and deadlines. The reference controller gives an authoritative logical resource result and a separate client view. A lost response can leave the client with UNKNOWN while the authority has already committed.
 
-Local execution diagnostics distinguish control acknowledgement, a valid execution slot, a workload result and timely application adoption. The sequence of prototype checks covers one task, sequential reuse, durable recovery, stale writes and a software reverse-proxy actuator. Status queries, leases, supervision, epoch checks and deadline guards are baseline techniques. The local experiments describe controlled faults and software execution. Field wireless guarantees and independent superiority remain open.
+Local execution diagnostics distinguish control acknowledgement, a valid execution slot, a workload result and timely application adoption. The sequence of prototype checks covers one task, sequential reuse, durable recovery, stale writes and a software reverse-proxy actuator. Status queries, leases, supervision, epoch checks and deadline guards are baseline techniques. The local experiments describe controlled faults and software execution. Field wireless guarantees and independent superiority remain open. [G1-A](../rdinp/experiments/durable-worker/G1A_DECISION_REPORT.md) added controlled Ubuntu concurrency trials. It found no admission BUSY and remains at the manual decision gate.
 
 ## CS-ODS
 

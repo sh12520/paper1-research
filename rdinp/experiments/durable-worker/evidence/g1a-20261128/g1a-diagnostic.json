@@ -1,0 +1,177 @@
+{
+  "cohorts": {
+    "study-4x1": {
+      "arms": {
+        "B0": {
+          "counts": {
+            "app_busy": 0,
+            "app_grants": 0,
+            "edge_adoptions": 0,
+            "late_adoptions": 0,
+            "native_c2_messages_after_fallback": 0,
+            "released": 864
+          },
+          "delays": {},
+          "late_local_path": {}
+        },
+        "B1": {
+          "counts": {
+            "app_busy": 0,
+            "app_grants": 116,
+            "c2_authority_commit_observed": 548,
+            "c2_ready_before_fallback": 123,
+            "edge_adoptions": 67,
+            "late_adoptions": 546,
+            "native_c2_messages_after_fallback": 5372,
+            "released": 864
+          },
+          "delays": {
+            "fallback_trigger_lag": {
+              "median_ms": 8.140021,
+              "n": 797,
+              "p95_ms": 33.69011539999998
+            },
+            "local_compute_wall": {
+              "median_ms": 214.026178,
+              "n": 797,
+              "p95_ms": 408.0402904
+            },
+            "local_start_wait": {
+              "median_ms": 132.046009,
+              "n": 797,
+              "p95_ms": 406.39815579999987
+            }
+          },
+          "late_local_path": {
+            "adoption_after_deadline": 2,
+            "fallback_trigger_after_deadline": 1,
+            "local_complete_after_deadline": 372,
+            "local_start_after_deadline": 171
+          }
+        },
+        "B2-info": {
+          "counts": {
+            "app_busy": 0,
+            "app_grants": 116,
+            "c2_authority_commit_observed": 546,
+            "c2_ready_before_fallback": 125,
+            "edge_adoptions": 70,
+            "late_adoptions": 582,
+            "native_c2_messages_after_fallback": 5417,
+            "released": 864
+          },
+          "delays": {
+            "fallback_trigger_lag": {
+              "median_ms": 7.428989,
+              "n": 794,
+              "p95_ms": 31.88421004999999
+            },
+            "local_compute_wall": {
+              "median_ms": 213.1764945,
+              "n": 794,
+              "p95_ms": 413.1211323499997
+            },
+            "local_start_wait": {
+              "median_ms": 174.040573,
+              "n": 794,
+              "p95_ms": 549.2050496999998
+            }
+          },
+          "late_local_path": {
+            "adoption_after_deadline": 4,
+            "fallback_trigger_after_deadline": 1,
+            "local_complete_after_deadline": 306,
+            "local_start_after_deadline": 271
+          }
+        }
+      },
+      "service_ms": 148.2116295
+    },
+    "study-8x2-retry-01": {
+      "arms": {
+        "B0": {
+          "counts": {
+            "app_busy": 0,
+            "app_grants": 0,
+            "edge_adoptions": 0,
+            "late_adoptions": 0,
+            "native_c2_messages_after_fallback": 0,
+            "released": 864
+          },
+          "delays": {},
+          "late_local_path": {}
+        },
+        "B1": {
+          "counts": {
+            "app_busy": 0,
+            "app_grants": 13,
+            "c2_authority_commit_observed": 327,
+            "c2_ready_before_fallback": 27,
+            "edge_adoptions": 3,
+            "late_adoptions": 838,
+            "native_c2_messages_after_fallback": 5190,
+            "released": 864
+          },
+          "delays": {
+            "fallback_trigger_lag": {
+              "median_ms": 8.785104,
+              "n": 861,
+              "p95_ms": 38.10533
+            },
+            "local_compute_wall": {
+              "median_ms": 479.412445,
+              "n": 861,
+              "p95_ms": 709.294788
+            },
+            "local_start_wait": {
+              "median_ms": 393.346781,
+              "n": 861,
+              "p95_ms": 1028.491266
+            }
+          },
+          "late_local_path": {
+            "fallback_trigger_after_deadline": 5,
+            "local_complete_after_deadline": 130,
+            "local_start_after_deadline": 703
+          }
+        },
+        "B2-info": {
+          "counts": {
+            "app_busy": 0,
+            "app_grants": 11,
+            "c2_authority_commit_observed": 320,
+            "c2_ready_before_fallback": 25,
+            "edge_adoptions": 1,
+            "late_adoptions": 838,
+            "native_c2_messages_after_fallback": 5188,
+            "released": 864
+          },
+          "delays": {
+            "fallback_trigger_lag": {
+              "median_ms": 8.23219,
+              "n": 863,
+              "p95_ms": 39.849536699999994
+            },
+            "local_compute_wall": {
+              "median_ms": 445.059025,
+              "n": 863,
+              "p95_ms": 734.6638902
+            },
+            "local_start_wait": {
+              "median_ms": 530.232132,
+              "n": 863,
+              "p95_ms": 1193.5389566
+            }
+          },
+          "late_local_path": {
+            "fallback_trigger_after_deadline": 6,
+            "local_complete_after_deadline": 95,
+            "local_start_after_deadline": 737
+          }
+        }
+      },
+      "service_ms": 142.299414
+    }
+  },
+  "schema": "rdinp-g1a-observational-diagnostics-v1"
+}

@@ -8,7 +8,6 @@ import csv
 from concurrent.futures import ThreadPoolExecutor, TimeoutError
 import hashlib
 import http.client
-import io
 import json
 from pathlib import Path
 import platform
@@ -17,9 +16,10 @@ import sys
 import threading
 import time
 
-from PIL import Image, ImageFilter, __version__ as pillow_version
+from PIL import __version__ as pillow_version
 
 from edge_worker import EdgeEndpoint
+from image_workload import compute_edge, compute_local, detect_edges
 
 ROOT = Path(__file__).resolve().parent
 C2_PATH = ROOT.parent.parent / "protocol" / "c2"
@@ -52,23 +52,6 @@ def ms(duration_ns: int) -> float:
 
 def json_save(path: Path, value) -> None:
     path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-
-
-def detect_edges(payload: bytes, side: int) -> bytes:
-    with Image.open(io.BytesIO(payload)) as image:
-        gray = image.convert("L").resize((side, side), Image.Resampling.BILINEAR)
-    edge_map = gray.filter(ImageFilter.GaussianBlur(radius=1)).filter(ImageFilter.FIND_EDGES)
-    result = io.BytesIO()
-    edge_map.save(result, format="PNG", compress_level=1)
-    return result.getvalue()
-
-
-def compute_edge(payload: bytes) -> bytes:
-    return detect_edges(payload, 512)
-
-
-def compute_local(payload: bytes) -> bytes:
-    return detect_edges(payload, 256)
 
 
 class EventLog:

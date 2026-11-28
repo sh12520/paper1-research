@@ -1,0 +1,2 @@
+study-4x1/per_task.csv -text !eol whitespace=cr-at-eol
+study-8x2-retry-01/per_task.csv -text !eol whitespace=cr-at-eol

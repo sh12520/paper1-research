@@ -1,6 +1,6 @@
 # RDINP protocol and execution diagnostics
 
-This research artifact includes the RDINP C2 negotiation prototype and four locally reproducible execution studies. The prototype uses signed HTTP messages and a single SQLite resource authority. The studies exercise a CPU worker, durable leases, stale-writer controls, and an actual Caddy reverse proxy.
+This research artifact includes the RDINP C2 negotiation prototype and execution studies through the G1-A paired decision. The prototype uses signed HTTP messages and a single SQLite resource authority. The studies exercise a CPU worker, durable leases, stale-writer controls, and an actual Caddy reverse proxy.
 
 For the current study question and next evidence to collect, see [Current work](../docs/current-research.md). For archived run records, see the [evidence index](../docs/evidence-index.md).
 
@@ -33,6 +33,7 @@ python -B tools/smoke.py --caddy caddy
 | [Single worker](experiments/service-worker/STUDY_SPEC.md) | Actual CPU result, fallback and controlled lost replies |
 | [Durable worker](experiments/durable-worker/STUDY_SPEC.md) | Sequential tasks, retained quota, restart and execution lease |
 | [Effect fencing](docs/REPRODUCE.md#effect-fencing-and-deadline) | Controlled stale publisher, idempotence, expiry and interrupted commit |
+| [G1-A concurrency](experiments/durable-worker/CONCURRENT_STUDY_SPEC.md) | Frozen C2 authorization, concurrent CPU slots, paired baselines and the [manual decision gate](experiments/durable-worker/G1A_DECISION_REPORT.md) |
 | [Proxy](experiments/proxy-execution/STUDY_SPEC.md) | Native ETag, restored configuration, late forwarding and in-flight readback |
 
 See [reproduction commands](docs/REPRODUCE.md) and [scope and attribution](docs/SCOPE.md). The C2 modules and protocol documents keep their original bytes. The source inventory reflects the export subset and experiment paths were made relative. The bundled generator produces engineering fixtures for this checkout. It does not reproduce the original image corpus or its timing measurements.

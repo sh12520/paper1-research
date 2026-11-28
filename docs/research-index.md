@@ -1,6 +1,6 @@
 # 全局研究目录与时间线
 
-更新于 2026 年 11 月 27 日。日常以 [当前推进](current-research.md) 为起点。下表用于定位资料和追溯旧结果。
+更新于 2026-11-28。日常以 [当前推进](current-research.md) 为起点。下表用于定位资料和追溯旧结果。
 
 | 位置 | 放什么 | 何时打开 |
 | --- | --- | --- |
@@ -30,7 +30,8 @@
 | CS-ODS 第三轮审阅 | 形成[导师审阅稿](../archive/genspace/PAPER1_ROUND3/PAPER1_ROUND3_REVISED.docx)和[修订历史](../archive/genspace/PAPER1_ROUND3/ROUND3_REVISION_HISTORY.md)。 |
 | 2026-11-23 | [XR 前传基线重审](../archive/genspace/PAPER1-PROBLEM-BASELINE-RESET/PAPER1_PROBLEM_BASELINE_RESET.md)保留 `RESEARCH_DIRECTION_NOT_YET_JUSTIFIED`。 |
 | 2026-11-24 至 11-27 | [协同感知问题审查](../archive/genspace/AGENT_COMMUNICATION_PROBLEM_REVIEW.md)保留 `PROBLEM_GAP_UNPROVEN`。OPV2V 资源敏感性有开发回放，共享计算诊断仍缺真实并发轨迹。 [OPV2V 档案](../archive/v2x-development/README.md) |
-| 2026-11-27 | 形成[当前 RDINP 拟题](current-research.md)。本地开发验证推进到实际 Caddy 代理控制。 |
+| 2026-11-27 | 形成 RDINP 拟题。本地开发验证推进到实际 Caddy 代理控制。 |
+| 2026-11-28 | [G1-A](../rdinp/experiments/durable-worker/G1A_DECISION_REPORT.md) 完成固定配对，判定证据不足，等待人工决定。 [开题初稿](proposals/RDINP_硕士学位论文开题报告_初稿.md) |
 
 REORCH 是并行的历史路线。其归档报告保留 [`REORCH_GAP_WEAK`](../archive/reorch/GATE_REPORT.md)，此处按主题保留。
 
